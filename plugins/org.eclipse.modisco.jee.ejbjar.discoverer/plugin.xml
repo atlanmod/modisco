@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ <copyright>
+ Copyright (c) 2010 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Nicolas Guyomar (Mia-Software) - initial API and implementation
+ </copyright>
+
+ $Id$
+-->
+<plugin>
+   <extension
+         point="org.eclipse.gmt.modisco.discoverers">
+      <discoverer
+            class="org.eclipse.modisco.jee.ejbjar.discoverer.actions.EjbJarDiscoverer"
+            icon="icons/ejb.gif"
+            name="%discoverer.name">
+      </discoverer>
+   </extension>
+   <extension
+         point="org.eclipse.modisco.infra.discovery.core.discoverer">
+      <discoverer
+            class="org.eclipse.modisco.jee.ejbjar.discoverer.EjbJarDiscoverer2"
+            id="org.eclipse.modisco.jee.ejbjar.discoverer">
+      </discoverer>
+   </extension>
+</plugin>

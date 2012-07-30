@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.prefuse;singleton:=true
+Bundle-Version: 0.10.1.qualifier
+Bundle-Activator: org.eclipse.gmt.modisco.infra.prefuse.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.apache.lucene,
+ org.prefuse;bundle-version="0.1.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.gmt.modisco.infra.prefuse,
+ org.eclipse.gmt.modisco.infra.prefuse.examples.graphview,
+ org.eclipse.gmt.modisco.infra.prefuse.examples.radialgraphview,
+ org.eclipse.gmt.modisco.infra.prefuse.examples.treeview
+Bundle-Vendor: %Bundle-Vendor

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="jeeEjbAnnotations" description="QuerySet for Jee EJB Annotation's queries">
+  <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
+  <queries xsi:type="query:JavaModelQuery" name="IsApplicationException" description="Return true if the annotation is ApplicationException" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsApplicationException">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsAroundInvoke" description="Return true if the annotation is AroundInvoke" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsAroundInvoke">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsDeclareRoles" description="Return true if the annotation is DeclareRoles" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsDeclareRoles">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsDenyAll" description="Return true if the annotation is DenyAll" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsDenyAll">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsEJB" description="Return true if the annotation is EJB" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsEJB">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsEJBs" description="Return true if the annotation is EJBs" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsEJBs">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsExcludeClassInterceptors" description="Return true if the annotation is ExcludeClassInterceptors" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsExcludeClassInterceptors">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsInit" description="Return true if the annotation is Init" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsInit">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsInterceptors" description="Return true if the annotation is Interceptors" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsInterceptors">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsLocal" description="Return true if the annotation is Local" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsLocal">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsLocalHome" description="Return true if the annotation is LocalHome" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsLocalHome">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsMessageDriven" description="Return true if the annotation is MessageDriven" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsMessageDriven">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsPermitAll" description="Return true if the annotation is PermitAll" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsPermitAll">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsPostActivate" description="Return true if the annotation is PostActivate" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsPostActivate">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsPostConstruct" description="Return true if the annotation is PostConstruct" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsPostConstruct">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsPreDestroy" description="Return true if the annotation is PreDestroy" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsPreDestroy">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsPrePassivate" description="Return true if the annotation is PrePassivate" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsPrePassivate">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsRemote" description="Return true if the annotation is Remote" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsRemote">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsRemoteHome" description="Return true if the annotation is RemoteHome" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsRemoteHome">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsRemove" description="Return true if the annotation is Remove" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsRemove">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsResource" description="Return true if the annotation is Resource" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsResource">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsResources" description="Return true if the annotation is Resources" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsResources">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsRolesAllowed" description="Return true if the annotation is RolesAllowed" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsRolesAllowed">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsRunAs" description="Return true if the annotation is RunAs" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsRunAs">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsStateful" description="Return true if the annotation is Stateful" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsStateful">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsStateless" description="Return true if the annotation is Stateless" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsStateless">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsTimeout" description="Return true if the annotation is Timeout" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsTimeout">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsTransactionAttribute" description="Return true if the annotation is TransactionAttribute" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsTransactionAttribute">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsTransactionManagement" description="Return true if the annotation is TransactionManagement" implementationClassName="org.eclipse.modisco.jee.queries.annotations.ejb.IsTransactionManagement">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+  </queries>
+</query:ModelQuerySet>

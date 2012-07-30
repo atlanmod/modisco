@@ -1,0 +1,53 @@
+-- @atlcompiler atl2010
+
+-- @nsURI MM=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
+
+-- ******************************************************************************
+-- Copyright (c) 2012 INRIA & Ecole des Mines de Nantes. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	Hugo Bruneliere - Initial implementation
+--  
+-- ******************************************************************************
+
+
+module ModifyEntityClassNames;
+create OUT : Java refining IN : Java;
+
+
+rule modifyCompilationUnitName {
+	from
+		icu : Java!CompilationUnit (
+			icu.types->first().annotations->exists(a | a.type.type.name='Entity')
+		)
+	to
+		mocu : Java!CompilationUnit (
+			name <- icu.types->first().name + 'Entity.java'	
+		)
+}
+
+rule modifyClassName {
+	from
+		icd : Java!ClassDeclaration (
+			icd.annotations->exists(a | a.type.type.name='Entity')
+		)
+	to
+		mcd : Java!ClassDeclaration (
+			name <- icd.name + 'Entity'	
+		)
+}
+
+rule modifyConstructorName {
+	from
+		icd : Java!ConstructorDeclaration (
+			icd.abstractTypeDeclaration.annotations->exists(a | a.type.type.name='Entity')
+		)
+	to
+		mcd : Java!ConstructorDeclaration (
+			name <- icd.name + 'Entity'	
+		)
+}

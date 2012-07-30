@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ejbjar11"
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar11.util.EjbJar11ResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ejbjar20"
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar20.util.EjbJar20ResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ejbjar21"
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar21.util.EjbJar21ResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ejbjar30"
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar30.util.EjbJar30ResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ejbjar31"
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar31.util.EjbJar31ResourceFactoryImpl"/>
+   </extension>
+   <!-- see /model/Readme.txt -->
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/MoDisco/Javaee/ejb-jar_1_1.dtd"
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar11.EjbJar11Package"
+            genModel="model/ejbJar11.genmodel"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar20.EjbJar20Package"
+            genModel="model/ejbJar20.genmodel"
+            uri="http://www.eclipse.org/MoDisco/Javaee/ejb-jar_2_0.dtd">
+      </package>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar21.EjbJar21Package"
+            genModel="model/ejbJar21.genmodel"
+            uri="http://www.eclipse.org/MoDisco/Javaee/ejb-jar_2_1.xsd">
+      </package>
+   </extension>
+      <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar30.EjbJar30Package"
+            genModel="model/ejbJar30.genmodel"
+            uri="http://www.eclipse.org/MoDisco/Javaee/ejb-jar_3_0.xsd">
+      </package>
+   </extension>
+      <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.modisco.jee.ejbjar.EjbJar31.EjbJar31Package"
+            genModel="model/ejbJar31.genmodel"
+            uri="http://www.eclipse.org/MoDisco/Javaee/ejb-jar_3_1.xsd">
+      </package>
+   </extension>
+
+</plugin>

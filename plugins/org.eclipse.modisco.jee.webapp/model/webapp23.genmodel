@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ *  Copyright (c) 2010 Mia-Software.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *  
+ *      Nicolas Guyomar (Mia-Software) - initial API and implementation
+ -->
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="  Copyright (c) 2010 Mia-Software.&#xD;&#xA;  All rights reserved. This program and the accompanying materials&#xD;&#xA;  are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;  which accompanies this distribution, and is available at&#xD;&#xA;  http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;  &#xD;&#xA;  Contributors:&#xD;&#xA;  &#xD;&#xA;      Nicolas Guyomar (Mia-Software) - initial API and implementation"
+    modelDirectory="/org.eclipse.modisco.jee.webapp/src" modelPluginID="org.eclipse.modisco.jee.webapp"
+    modelName="Webapp23" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>webapp23.ecore</foreignModel>
+  <genPackages prefix="Webapp23" basePackage="org.eclipse.modisco.jee.webapp"
+      resource="XML" disposableProviderFactory="true" ecorePackage="webapp23.ecore#/">
+    <genClasses ecoreClass="webapp23.ecore#//AuthConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//AuthConstraintType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//AuthConstraintType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//AuthConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//AuthMethodType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//AuthMethodType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//AuthMethodType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ContextParamType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ContextParamType/paramName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ContextParamType/paramValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ContextParamType/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ContextParamType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//DescriptionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//DescriptionType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//DescriptionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//DisplayNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//DisplayNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//DisplayNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//DistributableType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//DistributableType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/authConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/authMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/contextParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/distributable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/ejbLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/ejbLocalRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/ejbRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/envEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/envEntryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/envEntryType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/envEntryValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/errorCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/errorPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/exceptionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/filter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/filterClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/filterMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/formErrorPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/formLoginConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/formLoginPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/httpMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/initParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/jspFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/largeIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/listener"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/listenerClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/loadOnStartup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/loginConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/mimeMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/mimeType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/paramName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/paramValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/realmName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resAuth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resourceEnvRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resourceEnvRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resourceEnvRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resSharingScope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/resType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/roleLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/runAs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/securityConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/securityRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/securityRoleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/servlet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/servletClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/servletMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/sessionConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/sessionTimeout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/taglib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/taglibLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/taglibUri"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/transportGuarantee"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/userDataConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/webApp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/webResourceCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/webResourceName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/welcomeFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//DocumentRoot/welcomeFileList"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EjbLinkType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbLinkType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbLinkType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EjbLocalRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbLocalRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbLocalRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbLocalRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbLocalRefType/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbLocalRefType/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbLocalRefType/ejbLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbLocalRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EjbRefNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbRefNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbRefNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EjbRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbRefType/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbRefType/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EjbRefType/ejbLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EjbRefTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbRefTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EjbRefTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EnvEntryNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EnvEntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EnvEntryType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EnvEntryType/envEntryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EnvEntryType/envEntryValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//EnvEntryType/envEntryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EnvEntryTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//EnvEntryValueType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryValueType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//EnvEntryValueType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ErrorCodeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ErrorCodeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ErrorCodeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ErrorPageType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ErrorPageType/errorCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ErrorPageType/exceptionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ErrorPageType/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ErrorPageType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ExceptionTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ExceptionTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ExceptionTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ExtensionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ExtensionType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ExtensionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FilterClassType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//FilterClassType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FilterClassType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FilterMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterMappingType/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterMappingType/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterMappingType/servletName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FilterMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FilterNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//FilterNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FilterNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FilterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterType/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterType/filterClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FilterType/initParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FilterType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FormErrorPageType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//FormErrorPageType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FormErrorPageType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FormLoginConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FormLoginConfigType/formLoginPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//FormLoginConfigType/formErrorPage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FormLoginConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//FormLoginPageType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//FormLoginPageType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//FormLoginPageType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//HomeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//HomeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//HomeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//HttpMethodType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//HttpMethodType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//HttpMethodType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//IconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//IconType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//IconType/largeIcon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//IconType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//InitParamType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//InitParamType/paramName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//InitParamType/paramValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//InitParamType/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//InitParamType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//JspFileType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//JspFileType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//JspFileType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//LargeIconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//LargeIconType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//LargeIconType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ListenerClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ListenerClass/listenerClass"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ListenerClassType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ListenerClassType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ListenerClassType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ListenerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ListenerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//LoadOnStartupType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//LoadOnStartupType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//LoadOnStartupType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//LocalHomeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//LocalHomeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//LocalHomeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//LocalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//LocalType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//LocalType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//LocationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//LocationType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//LocationType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//LoginConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//LoginConfigType/authMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//LoginConfigType/realmName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//LoginConfigType/formLoginConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//LoginConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//MimeMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//MimeMappingType/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//MimeMappingType/mimeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//MimeMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//MimeTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//MimeTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//MimeTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ParamNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ParamNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ParamNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ParamValueType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ParamValueType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ParamValueType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//RealmNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//RealmNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//RealmNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//RemoteType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//RemoteType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//RemoteType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResAuthType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResAuthType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResAuthType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResourceEnvRefNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResourceEnvRefNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResourceEnvRefNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResourceEnvRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceEnvRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceEnvRefType/resourceEnvRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceEnvRefType/resourceEnvRefType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResourceEnvRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResourceEnvRefTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResourceEnvRefTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResourceEnvRefTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResourceRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceRefType/resRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceRefType/resType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceRefType/resAuth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ResourceRefType/resSharingScope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResourceRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResRefNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResRefNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResRefNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResSharingScopeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResSharingScopeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResSharingScopeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ResTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ResTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//RoleLinkType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//RoleLinkType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//RoleLinkType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//RoleNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//RoleNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//RoleNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//RunAsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//RunAsType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//RunAsType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//RunAsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//SecurityConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityConstraintType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityConstraintType/webResourceCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityConstraintType/authConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityConstraintType/userDataConstraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//SecurityConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//SecurityRoleRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityRoleRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityRoleRefType/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityRoleRefType/roleLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//SecurityRoleRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//SecurityRoleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityRoleType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SecurityRoleType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//SecurityRoleType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ServletClassType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ServletClassType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ServletClassType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ServletMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletMappingType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletMappingType/urlPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ServletMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ServletNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//ServletNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ServletNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//ServletType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/servletClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/jspFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/initParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/loadOnStartup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/runAs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//ServletType/securityRoleRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//ServletType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//SessionConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//SessionConfigType/sessionTimeout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//SessionConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//SessionTimeoutType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//SessionTimeoutType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//SessionTimeoutType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//SmallIconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//SmallIconType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//SmallIconType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//TaglibLocationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//TaglibLocationType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//TaglibLocationType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//TaglibType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//TaglibType/taglibUri"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//TaglibType/taglibLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//TaglibType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//TaglibUriType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//TaglibUriType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//TaglibUriType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//TransportGuaranteeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//TransportGuaranteeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//TransportGuaranteeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//UrlPatternType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//UrlPatternType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//UrlPatternType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//UserDataConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//UserDataConstraintType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//UserDataConstraintType/transportGuarantee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//UserDataConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//WebAppType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/distributable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/contextParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/filter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/filterMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/listener"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/servlet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/servletMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/sessionConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/mimeMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/welcomeFileList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/errorPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/taglib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/resourceEnvRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/securityConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/loginConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/securityRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/envEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/ejbRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebAppType/ejbLocalRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//WebAppType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//WebResourceCollectionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebResourceCollectionType/webResourceName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebResourceCollectionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebResourceCollectionType/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WebResourceCollectionType/httpMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//WebResourceCollectionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//WebResourceNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//WebResourceNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//WebResourceNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//WelcomeFileListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp23.ecore#//WelcomeFileListType/welcomeFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//WelcomeFileListType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp23.ecore#//WelcomeFileType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp23.ecore#//WelcomeFileType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp23.ecore#//WelcomeFileType/id"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

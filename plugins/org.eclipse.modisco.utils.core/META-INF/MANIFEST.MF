@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.utils.core
+Bundle-Version: 0.10.0.qualifier
+Bundle-Activator: org.eclipse.modisco.utils.core.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.eclipse.modisco.utils.core
+Bundle-Vendor: %Bundle-Vendor

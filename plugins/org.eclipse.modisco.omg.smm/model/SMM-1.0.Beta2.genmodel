@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2010 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA; &#xD;&#xA; Contributors:&#xD;&#xA;     Nicolas Payneau (Mia-Software) - initial API and implementation"
+    modelDirectory="/org.eclipse.modisco.omg.smm/src" modelPluginID="org.eclipse.modisco.omg.smm"
+    modelName="SMM-1.0" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false">
+  <foreignModel>SMM-1.0.Beta2.ecore</foreignModel>
+  <genPackages prefix="Smm" basePackage="org.eclipse.modisco.omg" disposableProviderFactory="true"
+      ecorePackage="SMM-1.0.Beta2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SMM-1.0.Beta2.ecore#//Accumulator">
+      <genEnumLiterals ecoreEnumLiteral="SMM-1.0.Beta2.ecore#//Accumulator/sum"/>
+      <genEnumLiterals ecoreEnumLiteral="SMM-1.0.Beta2.ecore#//Accumulator/maximum"/>
+      <genEnumLiterals ecoreEnumLiteral="SMM-1.0.Beta2.ecore#//Accumulator/minimum"/>
+      <genEnumLiterals ecoreEnumLiteral="SMM-1.0.Beta2.ecore#//Accumulator/average"/>
+      <genEnumLiterals ecoreEnumLiteral="SMM-1.0.Beta2.ecore#//Accumulator/standardDeviation"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="SMM-1.0.Beta2.ecore#//Date"/>
+    <genDataTypes ecoreDataType="SMM-1.0.Beta2.ecore#//Timestamp"/>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//AbstractMeasureElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//AbstractMeasureElement/inCategory"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Annotation/text"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Argument/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Argument/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Attribute/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Attribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//AggregatedMeasurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//AggregatedMeasurement/isBaseSuppled"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//AggregatedMeasurement/baseMeasurement"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Base1MeasurementRelationship">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base1MeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base1MeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Base1MeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base1MeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base1MeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Base2MeasurementRelationship">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base2MeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base2MeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Base2MeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base2MeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Base2MeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//BaseMeasurementRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BaseMeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BaseMeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//BaseMeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BaseMeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BaseMeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//BinaryMeasure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//BinaryMeasure/functor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BinaryMeasure/baseMeasure1To"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BinaryMeasure/baseMeasure2To"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//BinaryMeasurement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BinaryMeasurement/baseMeasurement1To"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//BinaryMeasurement/baseMeasurement2To"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//BinaryMeasurement/isBaseSupplied"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//CategoryRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//CategoryRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//CategoryRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Characteristic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Characteristic/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//CollectiveMeasure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//CollectiveMeasure/accumulator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//CollectiveMeasure/baseMeasureTo"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//CollectiveMeasurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//CollectiveMeasurement/accumulator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//CollectiveMeasurement/isBaseSupplied"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//CollectiveMeasurement/baseMeasurementTo"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Count"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Counting"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//DimensionalMeasure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//DimensionalMeasure/unit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasure/baseMeasureFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasure/baseMeasure1From"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasure/baseMeasure2From"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasure/rescaleTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasure/rankingFrom"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//DimensionalMeasurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//DimensionalMeasurement/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasurement/baseMeasurementFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasurement/baseMeasurement1From"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasurement/baseMeasurement2From"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasurement/rescaleTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DimensionalMeasurement/rankingFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//DirectMeasure">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//DirectMeasure/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//DirectMeasurement"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//EquivalentMeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//EquivalentMeasureRelationship/mapping"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//EquivalentMeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//EquivalentMeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//EquivalentMeasurementRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//EquivalentMeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//EquivalentMeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Grade">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Grade/baseMeasurement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Grade/isBaseSupplied"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Grade/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Grade/rankingTo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//Measure">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/category"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/trait"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Measure/measureLabelFormat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/refinementTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/refinementFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/equivalentTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/equivalentFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/recursiveTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/recursiveFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Measure/measurementLabelFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Measure/visible"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/measureRelationships"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measure/defaultQuery"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//Measure/getArguments"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//Measure/getAllArguments"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//MeasureCategory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//MeasureCategory/category"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//MeasureCategory/categoryElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//MeasureCategory/categoryMeasure"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//MeasureLibrary">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//MeasureLibrary/measureElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//MeasureLibrary/categoryRelationships"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//MeasureLibrary/getOperations"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//MeasureLibrary/getOclOperations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//MeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//MeasureRelationship/measurandQuery"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//MeasureRelationship/getTo"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//MeasureRelationship/getFrom"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//Measurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Measurement/error"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/measurand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Measurement/breakValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/refinementTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/refinementFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/equivalentTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/equivalentFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/recursiveTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/recursiveFrom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Measurement/measurementRelationships"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//Measurement/getMeasureLabel"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//Measurement/getMeasurementLabel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//MeasurementRelationship">
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//MeasurementRelationship/getTo"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//MeasurementRelationship/getFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//NamedMeasure"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//NamedMeasurement"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Observation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Observation/observer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Observation/tool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Observation/whenObserved"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Observation/scopes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Observation/observedMeasures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Observation/requestedMeasures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Observation/measurementRelations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Observation/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//ObservationScope">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//ObservationScope/scopeUri"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//ObservedMeasure">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//ObservedMeasure/measure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//ObservedMeasure/measurements"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//ObservedMeasure/getMeasureRefimentsObservedMeasures"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//OCLOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//OCLOperation/context"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//OCLOperation/body"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Operation/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Operation/body"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//Operation/getParamStrings"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Ranking">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Ranking/interval"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Ranking/rankingTo"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RankingInterval">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RankingInterval/rank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RankingInterval/maximumEndpoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RankingInterval/maximumOpen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RankingInterval/minimumEndpoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RankingInterval/minimumOpen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RankingInterval/symbol"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RankingMeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RankingMeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RankingMeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RankingMeasurementRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RankingMeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RankingMeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RatioMeasure"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RatioMeasurement"/>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RecursiveMeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RecursiveMeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RecursiveMeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RecursiveMeasurementRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RecursiveMeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RecursiveMeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RefinementMeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RefinementMeasureRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RefinementMeasureRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RefinementMeasurementRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RefinementMeasurementRelationship/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RefinementMeasurementRelationship/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RescaledMeasure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RescaledMeasure/formula"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RescaledMeasure/rescaleFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RescaleMeasureRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RescaleMeasureRelationship/to"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RescaleMeasureRelationship/from"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RescaledMeasurement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//RescaledMeasurement/isBaseSupplied"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RescaledMeasurement/rescaleFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//RescaleMeasurementRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RescaleMeasurementRelationship/to"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//RescaleMeasurementRelationship/from"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//Scope">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//Scope/class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Scope/elements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Scope/recognizerQuery"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//Scope/breakCondition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//SmmElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//SmmElement/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//SmmElement/annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//SmmElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//SmmElement/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMM-1.0.Beta2.ecore#//SmmElement/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//SmmElement/requestedObservations"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//SmmElement/getInbound"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//SmmElement/getOutbound"/>
+    </genClasses>
+    <genClasses ecoreClass="SMM-1.0.Beta2.ecore#//SmmModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//SmmModel/observations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMM-1.0.Beta2.ecore#//SmmModel/librairies"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SMM-1.0.Beta2.ecore#//SmmRelationship">
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//SmmRelationship/getTo"/>
+      <genOperations ecoreOperation="SMM-1.0.Beta2.ecore#//SmmRelationship/getFrom"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

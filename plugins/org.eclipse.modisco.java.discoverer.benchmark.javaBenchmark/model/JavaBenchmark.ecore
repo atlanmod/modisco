@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="javaBenchmark"
+    nsURI="http://www.eclipse.org/MoDisco/JavaBenchmark/0.9.0/javaBenchmark" nsPrefix="javaBenchmark">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractCDODiscovery" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revisedLruCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentLruCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initTimeInSeconds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractJavaProject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageJavaClassesPerPackage"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" changeable="false"
+        volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaProject" eSuperTypes="#//AbstractJavaProject ../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Project"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaDiscoveredProject" eSuperTypes="#//AbstractJavaProject ../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//DiscoveredProject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CDODiscovery" eSuperTypes="#//AbstractCDODiscovery ../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CDOProjectDiscovery" eSuperTypes="#//AbstractCDODiscovery ../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//ProjectDiscovery"/>
+</ecore:EPackage>

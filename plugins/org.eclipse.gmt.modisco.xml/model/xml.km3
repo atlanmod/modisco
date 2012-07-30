@@ -1,0 +1,66 @@
+--
+-- *******************************************************************************
+-- Copyright (c) 2009 Mia-Software.
+-- All rights reserved. This program and the accompanying materials
+-- are made available under the terms of the Eclipse Public License v1.0
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors:
+-- 
+--     Fabien Giquel (Mia-Software) - initial API and implementation
+-- *******************************************************************************
+--
+--
+ 
+ package xml {
+
+	abstract class Node {
+		attribute name : String;
+		reference parent[0-1] : Element oppositeOf children;
+	}
+
+	class Attribute extends Node {
+		attribute value : String;
+	}
+
+	class Text extends Node {
+		
+	}
+
+	class Element extends Node {
+		reference children[*] ordered container : Node oppositeOf parent;
+	}
+
+	class Root extends Element {
+		reference namespaces[*] ordered container : Namespace;
+		reference dtd[0-1] container : DocumentTypeDeclaration;
+	}
+
+	class Namespace extends Attribute {
+		
+	}
+
+	class Comment extends Node {
+		
+	}
+
+	class DocumentTypeDeclaration extends Node {
+		attribute publicID[0-1] : String;
+		attribute systemID[0-1] : String;
+	}
+
+	class CDATA extends Text {
+		
+	}
+	
+	class ProcessingInstruction extends Node {
+		attribute data : String;
+	}
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}

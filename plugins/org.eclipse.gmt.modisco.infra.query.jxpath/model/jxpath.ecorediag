@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2009 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+	Frederic Madiot (Mia-Software) - Meta-model design
+    Gregoire DUPE (Mia-Software) - Meta-model design and implementation
+-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_IaDVoKEUEd6tWORKbf9Iow" type="EcoreTools" name="jxpath.ecorediag" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_IaWQkKEUEd6tWORKbf9Iow" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_IaWQk6EUEd6tWORKbf9Iow" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_IagBkKEUEd6tWORKbf9Iow" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_IagBmKEUEd6tWORKbf9Iow" type="2001">
+        <element xmi:type="ecore:EAttribute" href="jxpath.ecore#//JXPathModelQuery/query"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IagBmaEUEd6tWORKbf9Iow"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_IagBkaEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IagBkqEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IagBk6EUEd6tWORKbf9Iow"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_IagBlKEUEd6tWORKbf9Iow" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_IagBlaEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IagBlqEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IagBl6EUEd6tWORKbf9Iow"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_IaWQkaEUEd6tWORKbf9Iow" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="jxpath.ecore#//JXPathModelQuery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IaWQkqEUEd6tWORKbf9Iow" x="165" y="205"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Kq4v0KEUEd6tWORKbf9Iow" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Kq4v3KEUEd6tWORKbf9Iow" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Kq4v3aEUEd6tWORKbf9Iow" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_Kq4v06EUEd6tWORKbf9Iow" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Kq4v1KEUEd6tWORKbf9Iow" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Kq4v1aEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Kq4v1qEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Kq4v16EUEd6tWORKbf9Iow"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Kq4v2KEUEd6tWORKbf9Iow" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Kq4v2aEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Kq4v2qEUEd6tWORKbf9Iow"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Kq4v26EUEd6tWORKbf9Iow"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Kq4v0aEUEd6tWORKbf9Iow" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kq4v0qEUEd6tWORKbf9Iow" x="100" y="50"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_IaDVoaEUEd6tWORKbf9Iow"/>
+  <element xmi:type="ecore:EPackage" href="jxpath.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_KrfMwKEUEd6tWORKbf9Iow" type="3003" source="_IaWQkKEUEd6tWORKbf9Iow" target="_Kq4v0KEUEd6tWORKbf9Iow">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_KrfMwaEUEd6tWORKbf9Iow" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_KrfMwqEUEd6tWORKbf9Iow"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KrfMw6EUEd6tWORKbf9Iow" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KsFCoKEUEd6tWORKbf9Iow" id="(0.49606299212598426,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KsFCoaEUEd6tWORKbf9Iow" id="(0.4980392156862745,1.0)"/>
+  </edges>
+</notation:Diagram>

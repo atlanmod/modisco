@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ *  Copyright (c) 2010 Mia-Software.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *  
+ *      Nicolas Guyomar (Mia-Software) - initial API and implementation
+ -->
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2010 Mia-Software.&#xD;&#xA;   All rights reserved. This program and the accompanying materials&#xD;&#xA;   are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;   which accompanies this distribution, and is available at&#xD;&#xA;   http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;   &#xD;&#xA;   Contributors:&#xD;&#xA;   &#xD;&#xA;   &#x9;   Nicolas Guyomar (Mia-Software) - initial API and implementation"
+    modelDirectory="/org.eclipse.modisco.jee.ejbjar/src" modelPluginID="org.eclipse.modisco.jee.ejbjar"
+    modelName="EjbJar20" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>../../ejb_2_0/model/ejbJar20.ecore</foreignModel>
+  <genPackages prefix="EjbJar20" basePackage="org.eclipse.modisco.jee.ejbjar"
+      resource="XML" disposableProviderFactory="true" ecorePackage="ejbJar20.ecore#/">
+    <genClasses ecoreClass="ejbJar20.ecore#//AbstractSchemaNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//AbstractSchemaNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//AbstractSchemaNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//AcknowledgeModeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//AcknowledgeModeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//AcknowledgeModeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//AssemblyDescriptorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//AssemblyDescriptorType/securityRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//AssemblyDescriptorType/methodPermission"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//AssemblyDescriptorType/containerTransaction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//AssemblyDescriptorType/excludeList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//AssemblyDescriptorType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//CascadeDeleteType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CascadeDeleteType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//CmpFieldType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//CmpFieldType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//CmpFieldType/fieldName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmpFieldType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//CmpVersionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmpVersionType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmpVersionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//CmrFieldNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmrFieldNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmrFieldNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//CmrFieldType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//CmrFieldType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//CmrFieldType/cmrFieldName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//CmrFieldType/cmrFieldType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmrFieldType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//CmrFieldTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmrFieldTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//CmrFieldTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ContainerTransactionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ContainerTransactionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ContainerTransactionType/method"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ContainerTransactionType/transAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ContainerTransactionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//DescriptionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DescriptionType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DescriptionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//DestinationTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DestinationTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DestinationTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//DisplayNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DisplayNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DisplayNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/abstractSchemaName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/acknowledgeMode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/assemblyDescriptor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/cascadeDelete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/cmpField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/cmpVersion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/cmrField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/cmrFieldName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/cmrFieldType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/containerTransaction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/destinationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbClientJar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbJar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbLocalRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbQl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRelation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRelationName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRelationshipRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/ejbRelationshipRoleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/enterpriseBeans"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/entity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/envEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/envEntryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/envEntryType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/envEntryValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/excludeList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/fieldName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/largeIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/messageDriven"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/messageDrivenDestination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/messageSelector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/method"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/methodIntf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/methodName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/methodParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/methodParams"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/methodPermission"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/multiplicity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/persistenceType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/primKeyClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/primkeyField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/query"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/queryMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/reentrant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/relationshipRoleSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/relationships"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resAuth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resourceEnvRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resourceEnvRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resourceEnvRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resSharingScope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/resultTypeMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/roleLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/runAs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/securityIdentity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/securityRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/securityRoleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/session"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/sessionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/subscriptionDurability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/transactionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/transAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/unchecked"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//DocumentRoot/useCallerIdentity"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbClassType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbClassType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbClassType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbClientJarType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbClientJarType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbClientJarType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbJarType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/largeIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/enterpriseBeans"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/relationships"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/assemblyDescriptor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbJarType/ejbClientJar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbJarType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbLinkType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbLinkType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbLinkType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbLocalRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbLocalRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbLocalRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbLocalRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbLocalRefType/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbLocalRefType/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbLocalRefType/ejbLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbLocalRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbQlType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbQlType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbQlType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRefNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRefNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRefNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRefType/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRefType/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRefType/ejbLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRefTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRefTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRefTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRelationNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRelationNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRelationNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRelationshipRoleNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRelationshipRoleNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRelationshipRoleNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRelationshipRoleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationshipRoleType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationshipRoleType/ejbRelationshipRoleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationshipRoleType/multiplicity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationshipRoleType/cascadeDelete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationshipRoleType/relationshipRoleSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationshipRoleType/cmrField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRelationshipRoleType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EjbRelationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationType/ejbRelationName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationType/ejbRelationshipRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EjbRelationType/ejbRelationshipRole1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EjbRelationType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EnterpriseBeansType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnterpriseBeansType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnterpriseBeansType/session"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnterpriseBeansType/entity"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnterpriseBeansType/messageDriven"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnterpriseBeansType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EntityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/largeIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/ejbName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/ejbClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/persistenceType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/primKeyClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/reentrant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/cmpVersion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/abstractSchemaName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/cmpField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/primkeyField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/envEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/ejbRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/ejbLocalRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/securityRoleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/securityIdentity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/resourceEnvRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EntityType/query"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EntityType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EnvEntryNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EnvEntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnvEntryType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnvEntryType/envEntryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnvEntryType/envEntryType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//EnvEntryType/envEntryValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EnvEntryTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//EnvEntryValueType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryValueType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//EnvEntryValueType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ExcludeListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ExcludeListType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ExcludeListType/method"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ExcludeListType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//FieldNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//FieldNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//FieldNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//HomeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//HomeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//HomeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//LargeIconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//LargeIconType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//LargeIconType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//LocalHomeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//LocalHomeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//LocalHomeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//LocalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//LocalType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//LocalType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MessageDrivenDestinationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenDestinationType/destinationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenDestinationType/subscriptionDurability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MessageDrivenDestinationType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MessageDrivenType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/largeIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/ejbName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/ejbClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/transactionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/messageSelector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/acknowledgeMode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/messageDrivenDestination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/envEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/ejbRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/ejbLocalRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/securityIdentity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MessageDrivenType/resourceEnvRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MessageDrivenType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MessageSelectorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MessageSelectorType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MessageSelectorType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MethodIntfType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodIntfType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodIntfType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MethodNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MethodParamsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodParamsType/methodParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodParamsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MethodParamType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodParamType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodParamType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MethodPermissionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodPermissionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodPermissionType/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodPermissionType/unchecked"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodPermissionType/method"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodPermissionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MethodType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodType/ejbName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodType/methodIntf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodType/methodName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//MethodType/methodParams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MethodType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//MultiplicityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MultiplicityType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//MultiplicityType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//PersistenceTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//PersistenceTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//PersistenceTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//PrimKeyClassType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//PrimKeyClassType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//PrimKeyClassType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//PrimkeyFieldType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//PrimkeyFieldType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//PrimkeyFieldType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//QueryMethodType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//QueryMethodType/methodName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//QueryMethodType/methodParams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//QueryMethodType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//QueryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//QueryType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//QueryType/queryMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//QueryType/resultTypeMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//QueryType/ejbQl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//QueryType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ReentrantType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ReentrantType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ReentrantType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//RelationshipRoleSourceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//RelationshipRoleSourceType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//RelationshipRoleSourceType/ejbName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RelationshipRoleSourceType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//RelationshipsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//RelationshipsType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//RelationshipsType/ejbRelation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RelationshipsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//RemoteType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RemoteType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RemoteType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResAuthType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResAuthType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResAuthType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResourceEnvRefNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResourceEnvRefNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResourceEnvRefNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResourceEnvRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceEnvRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceEnvRefType/resourceEnvRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceEnvRefType/resourceEnvRefType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResourceEnvRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResourceEnvRefTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResourceEnvRefTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResourceEnvRefTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResourceRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceRefType/resRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceRefType/resType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceRefType/resAuth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//ResourceRefType/resSharingScope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResourceRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResRefNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResRefNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResRefNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResSharingScopeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResSharingScopeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResSharingScopeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//ResultTypeMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResultTypeMappingType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//ResultTypeMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//RoleLinkType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RoleLinkType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RoleLinkType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//RoleNameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RoleNameType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RoleNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//RunAsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//RunAsType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//RunAsType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//RunAsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SecurityIdentityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityIdentityType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityIdentityType/useCallerIdentity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityIdentityType/runAs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SecurityIdentityType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SecurityRoleRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityRoleRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityRoleRefType/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityRoleRefType/roleLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SecurityRoleRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SecurityRoleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityRoleType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SecurityRoleType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SecurityRoleType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SessionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/largeIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/ejbName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/ejbClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/sessionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/transactionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/envEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/ejbRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/ejbLocalRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/securityRoleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/securityIdentity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ejbJar20.ecore#//SessionType/resourceEnvRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SessionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SessionTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SessionTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SessionTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SmallIconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SmallIconType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SmallIconType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//SubscriptionDurabilityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SubscriptionDurabilityType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//SubscriptionDurabilityType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//TransactionTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//TransactionTypeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//TransactionTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//TransAttributeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//TransAttributeType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//TransAttributeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//UncheckedType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//UncheckedType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="ejbJar20.ecore#//UseCallerIdentityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ejbJar20.ecore#//UseCallerIdentityType/id"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.MethodcallsPackage"
+            genModel="model/MethodCalls.genmodel"
+            uri="http://www.eclipse.org/MoDisco/Modelfilter/MethodCalls/0.1.incubation/methodcalls">
+      </package>
+   </extension>
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.emf.ecore.xmi"
+            file-extensions="methodcalls"
+            id="org.eclipse.modisco.modelfilter.methodcalls.contenttype"
+            name="%content-type.name"
+            priority="normal">
+      </content-type>
+   </extension>
+</plugin>
+

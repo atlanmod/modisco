@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/JEE/EJB/Annotations">
+  <types metaclassName="jeeEjbAnnotations.TransactionManagement">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.TimeOut">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.RunAs">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Ejb">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Ejbs">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.PermitAll">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.TransactionAttribute">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.ApplicationException">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Stateful">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Stateless">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Resource">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Remove">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Resources">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.DenyAll">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.ExcludeClassInterceptors">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Interceptors">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.AroundInvoke">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.DeclareRoles">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Init">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Local">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.LocalHome">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.MessageDriven">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.PostActivate">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.PostConstruct">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.PreDestroy">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.PrePassivate">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.Remote">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.RemoteHome">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeEjbAnnotations.RolesAllowed">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/EJBS.png"/>
+    </customizedFeatures>
+  </types>
+</uicustom:MetamodelView>

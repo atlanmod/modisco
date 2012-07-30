@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/JEE/Servlet/Annotations">
+  <types metaclassName="jeeServletAnnotations.MultiPartConfig">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/servlet.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeServletAnnotations.WebFilter">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/servlet.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeServletAnnotations.WebInitParam">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/servlet.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeServletAnnotations.WebListener">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/servlet.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeServletAnnotations.WebServlet">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/servlet.png"/>
+    </customizedFeatures>
+  </types>
+</uicustom:MetamodelView>

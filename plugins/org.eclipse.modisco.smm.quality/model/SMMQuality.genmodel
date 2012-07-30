@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2010 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA; &#xD;&#xA; Contributors:&#xD;&#xA;     Nicolas Payneau (Mia-Software) - initial API and implementation"
+    modelDirectory="/org.eclipse.modisco.smm.quality/src" modelPluginID="org.eclipse.modisco.smm.quality"
+    modelName="SMMQuality" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.modisco.omg.smm/model/SMM-1.0.Beta2.genmodel#//smm">
+  <foreignModel>SMMQuality.ecore</foreignModel>
+  <genPackages prefix="Smmquality" basePackage="org.eclipse.modisco.quality" disposableProviderFactory="true"
+      ecorePackage="SMMQuality.ecore#/">
+    <genClasses ecoreClass="SMMQuality.ecore#//QualityScope">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMMQuality.ecore#//QualityScope/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMMQuality.ecore#//QualityScope/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="SMMQuality.ecore#//Measurand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMMQuality.ecore#//Measurand/qualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMMQuality.ecore#//Measurand/path"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

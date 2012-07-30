@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.utils.chart.metamodel;singleton:=true
+Bundle-Version: 0.10.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.modisco.utils.chart.metamodel,
+ org.eclipse.modisco.utils.chart.metamodel.chart,
+ org.eclipse.modisco.utils.chart.metamodel.chart.impl,
+ org.eclipse.modisco.utils.chart.metamodel.chart.util

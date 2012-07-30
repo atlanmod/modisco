@@ -1,0 +1,40 @@
+<!--
+/********************************************************************************
+ * Copyright (c) 2011 INRIA & Ecole des Mines de Nantes. 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors: 
+ *     Hugo Bruneliere - Initial implementation
+ *     
+ ******************************************************************************/
+-->
+
+<project name="ExtractXML" default="extract">
+
+	<!-- Workspace relative paths -->
+	<property name="XMLmodelPath" value="org.eclipse.modisco.usecase.java.samplemetrics/Models/Temp/metricsB-SVG-XML.xmi"/>
+	<property name="XMLdocumentPath" value="org.eclipse.modisco.usecase.java.samplemetrics/Results/metricsB.svg"/>
+
+	<target name="extract" depends="loadMetamodels">
+
+		<!-- Load the XML model -->
+		<atl.loadModel modelHandler="EMF" name="XMLmodel" metamodel="XML" path="${XMLmodelPath}"/>
+
+		<!-- Extract the XML model as an XML document -->
+		<atl.saveModel model="XMLmodel" path="${XMLdocumentPath}">
+			<extractor name="XML"/>
+		</atl.saveModel>
+
+	</target>
+
+	<target name="loadMetamodels">
+
+		<!-- Load XML metamodel -->
+		<atl.loadModel modelHandler="EMF" name="XML" metamodel="%EMF" path="org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/Metamodels/XML.ecore" />
+
+	</target>
+
+</project>

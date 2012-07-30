@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+/*******************************************************************************
+ * Copyright (c) 2009 Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Fabien Giquel (Mia-Software)
+ *    Gregoire DUPE (Mia-Software)
+ *******************************************************************************/
+-->
+<plugin>
+   <extension-point id="org.eclipse.gmt.modisco.common.core.builder.register" name="%extension-point.name" schema="schema/org.eclipse.gmt.modisco.common.core.builder.register.exsd"/>
+   <extension-point id="org.eclipse.gmt.modisco.common.core.protocolext" name="%extension-point.name.0" schema="schema/org.eclipse.gmt.modisco.common.core.protocolext.exsd"/>
+   <extension
+         id="org.eclipse.gmt.modisco.common.core.builder"
+         name="%extension.name"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            callOnEmptyDelta="true"
+            hasNature="true"
+            isConfigurable="false">
+         <run
+               class="org.eclipse.gmt.modisco.infra.common.core.internal.builder.ModiscoProjectBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="org.eclipse.gmt.modisco.common.ProjectNature"
+         name="%natures.projectNature.name"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.eclipse.gmt.modisco.infra.common.core.internal.MoDiscoProject">
+         </run>
+      </runtime>
+      <builder
+            id="org.eclipse.gmt.modisco.common.core.builder">
+      </builder>
+      <requires-nature id="org.eclipse.jdt.core.javanature"/>
+      <requires-nature id="org.eclipse.pde.PluginNature"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.protocol_parser">
+      <parser
+            class="org.eclipse.gmt.modisco.infra.common.core.internal.protocol.ModiscoResourceFactoryImpl"
+            protocolName="modisco">
+      </parser>
+   </extension>
+      <extension
+         id="org.eclipse.gmt.modisco.infra.common.core.EcoreBuilder"
+         name="%extension.name.0"
+         point="org.eclipse.gmt.modisco.common.core.builder.register">
+      <builder
+            class="org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.gmt.modisco.infra.common.core.internal.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   
+   <extension
+         id="problemmarker"
+         name="%problemmarker.extension.name.1"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+   </extension>
+   <extension
+         id="nameconflicts"
+         name="%problemmarker.extension.name.2"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.gmt.modisco.infra.common.core.problemmarker">
+      </super>
+   </extension>
+    <extension
+         id="brokenref"
+         name="%problemmarker.extension.name.3"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.gmt.modisco.infra.common.core.problemmarker">
+      </super>
+   </extension>
+  <extension
+         id="nbroots"
+         name="%problemmarker.extension.name.4"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.gmt.modisco.infra.common.core.problemmarker">
+      </super>
+   </extension>
+   <extension
+         id="wrongroots"
+         name="%problemmarker.extension.name.5"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.gmt.modisco.infra.common.core.problemmarker">
+      </super>
+   </extension>
+    <extension
+         id="nsuriconflict"
+         name="%problemmarker.extension.name.6"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.gmt.modisco.infra.common.core.problemmarker">
+      </super>
+   </extension>
+</plugin>

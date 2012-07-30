@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_AWLgoOMREd6P7cxVLIywIQ" type="EcoreTools" name="JavaBenchmark" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_gEnrgOMVEd6P7cxVLIywIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_gEnrg-MVEd6P7cxVLIywIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_gEnrhOMVEd6P7cxVLIywIQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gEnrheMVEd6P7cxVLIywIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gEnrhuMVEd6P7cxVLIywIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gEnrh-MVEd6P7cxVLIywIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gEnriOMVEd6P7cxVLIywIQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gEnrieMVEd6P7cxVLIywIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gEnriuMVEd6P7cxVLIywIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gEnri-MVEd6P7cxVLIywIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_gEnrgeMVEd6P7cxVLIywIQ" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="JavaBenchmark.ecore#//AbstractCDODiscovery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gEnrguMVEd6P7cxVLIywIQ" x="135" y="505"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_WlxjAF9jEeCRh-KR5YhL1g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_WlyKEF9jEeCRh-KR5YhL1g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_WlyKEV9jEeCRh-KR5YhL1g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_9f418F9dEeCRh-KR5YhL1g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="JavaBenchmark.ecore#//AbstractJavaProject/averageJavaClassesPerPackage"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9f418V9dEeCRh-KR5YhL1g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_WlyKEl9jEeCRh-KR5YhL1g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WlyKE19jEeCRh-KR5YhL1g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WlyKFF9jEeCRh-KR5YhL1g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WlyKFV9jEeCRh-KR5YhL1g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_WlyKFl9jEeCRh-KR5YhL1g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WlyxIF9jEeCRh-KR5YhL1g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WlyxIV9jEeCRh-KR5YhL1g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_WlxjAV9jEeCRh-KR5YhL1g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="JavaBenchmark.ecore#//AbstractJavaProject"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WlxjAl9jEeCRh-KR5YhL1g" x="660" y="510"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Ps_JQWGzEeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PtvXMGGzEeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PtwlUGGzEeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_PtCzoGGzEeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_PtDasGGzEeC1TNHURF5Phg" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_GqTuMGG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/dicoveryDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqTuMWG7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqTuMmG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/algorithmVariant"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqTuM2G7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqUVQGG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/discovererId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqUVQWG7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqUVQmG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/discovererClassName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqUVQ2G7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqUVRGG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/saveTimeInSeconds"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqUVRWG7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqUVRmG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/totalExecutionTimeInSeconds"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqUVR2G7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqU8UGG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/metaModelVariant"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqU8UWG7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqU8UmG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/maxUsedMemoryInBytes"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqU8U2G7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqU8VGG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/numberOfModelElements"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqU8VWG7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqVjYGG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/xmiSizeInBytes"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqVjYWG7EeC1TNHURF5Phg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GqVjYmG7EeC1TNHURF5Phg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GqVjY2G7EeC1TNHURF5Phg"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_PtDasWGzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_PtDasmGzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_PtDas2GzEeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_PtEBwGGzEeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_PtEBwWGzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_PtEBwmGzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_PtEBw2GzEeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Ps_JQmGzEeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Discovery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ps_JQ2GzEeC1TNHURF5Phg" x="300" y="-110"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_RAxFUGGzEeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RBCLEGGzEeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RBCLEWGzEeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_RAxsYGGzEeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_RAxsYWGzEeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_RAxsYmGzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_RAxsY2GzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_RAyTcGGzEeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_RAyTcWGzEeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_RAyTcmGzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_RAyTc2GzEeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_RAyTdGGzEeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_RAxFUWGzEeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Project"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RAxFUmGzEeC1TNHURF5Phg" x="630" y="265"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_SwJi0GG0EeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SwVJAGG0EeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SwVJAWG0EeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_SwKJ4GG0EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_SwKJ4WG0EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SwKJ4mG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SwKJ42G0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SwKJ5GG0EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SwKJ5WG0EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SwKw8GG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SwKw8WG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SwKw8mG0EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SwJi0WG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Benchmark"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SwJi0mG0EeC1TNHURF5Phg" x="45" y="55"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_UAGHwGG0EeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UARt8GG0EeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UARt8WG0EeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_UAGu0GG0EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_UAGu0WG0EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UAGu0mG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UAGu02G0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UAGu1GG0EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_UAHV4GG0EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UAHV4WG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UAHV4mG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UAHV42G0EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_UAGHwWG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//MultiDiscoveryBenchmark"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UAGHwmG0EeC1TNHURF5Phg" x="105" y="315" width="178"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_UW5eMGG0EeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UXEdUGG0EeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UXEdUWG0EeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_UW6FQWG0EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_UW6sUGG0EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UW6sUWG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UW6sUmG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UW6sU2G0EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_UW6sVGG0EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UW6sVWG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UW6sVmG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UW6sV2G0EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_UW5eMWG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//MultiProjectBenchmark"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UW6FQGG0EeC1TNHURF5Phg" x="80" y="435"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_WFE3QGG0EeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WFXLIGG0EeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WFXLIWG0EeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_WFE3Q2G0EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_WFFeUGG0EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_WFFeUWG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WFFeUmG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WFFeU2G0EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WFFeVGG0EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_WFFeVWG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WFFeVmG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WFFeV2G0EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_WFE3QWG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//ProjectDiscovery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WFE3QmG0EeC1TNHURF5Phg" x="380" y="310"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_WdCEQGG0EeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WdSi8GG0EeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WdSi8WG0EeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_WdCrUGG0EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_WdCrUWG0EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_WdCrUmG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WdCrU2G0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WdCrVGG0EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WdCrVWG0EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_WdCrVmG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WdCrV2G0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WdCrWGG0EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_WdCEQWG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//DiscoveredProject"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WdCEQmG0EeC1TNHURF5Phg" x="530" y="435"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_gaAqwGG0EeC1TNHURF5Phg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gaQiYGG0EeC1TNHURF5Phg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gaQiYWG0EeC1TNHURF5Phg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_gaBR0GG0EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_gaBR0WG0EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gaBR0mG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gaBR02G0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gaBR1GG0EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gaBR1WG0EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gaBR1mG0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gaBR12G0EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gaBR2GG0EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_gaAqwWG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//File"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gaAqwmG0EeC1TNHURF5Phg" x="915" y="260"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1UfR4GG6EeC1TNHURF5Phg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_1Uf48GG6EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_1Uf48WG6EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_1Uf48mG6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1Uf482G6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1Uf49GG6EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_1Uf49WG6EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_1Uf49mG6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1Uf492G6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1Uf4-GG6EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_1UfR4WG6EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="JavaBenchmark.ecore#//JavaProject"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1UfR4mG6EeC1TNHURF5Phg" x="865" y="605"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_225f0GG6EeC1TNHURF5Phg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_226G4GG6EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_226G4WG6EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_226G4mG6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_226G42G6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_226G5GG6EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_226G5WG6EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_226G5mG6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_226G52G6EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_226G6GG6EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_225f0WG6EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="JavaBenchmark.ecore#//JavaDiscoveredProject"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_225f0mG6EeC1TNHURF5Phg" x="620" y="600"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_RwKoUGG7EeC1TNHURF5Phg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_RwLPYGG7EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_RwLPYWG7EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_RwLPYmG7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_RwLPY2G7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_RwLPZGG7EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_RwLPZWG7EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_RwLPZmG7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_RwLPZ2G7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_RwLPaGG7EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_RwKoUWG7EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="JavaBenchmark.ecore#//CDODiscovery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RwKoUmG7EeC1TNHURF5Phg" x="130" y="660"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_UjwxUGG7EeC1TNHURF5Phg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_UjwxU2G7EeC1TNHURF5Phg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_UjxYYGG7EeC1TNHURF5Phg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UjxYYWG7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UjxYYmG7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UjxYY2G7EeC1TNHURF5Phg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_UjxYZGG7EeC1TNHURF5Phg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UjxYZWG7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UjxYZmG7EeC1TNHURF5Phg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UjxYZ2G7EeC1TNHURF5Phg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_UjwxUWG7EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="JavaBenchmark.ecore#//CDOProjectDiscovery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UjwxUmG7EeC1TNHURF5Phg" x="280" y="660"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_YuVkAGdQEeCGy4_0mymNkA" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YujmcGdQEeCGy4_0mymNkA" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YujmcWdQEeCGy4_0mymNkA" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_YuYAQGdQEeCGy4_0mymNkA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_YuYAQWdQEeCGy4_0mymNkA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_YuYAQmdQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YuYAQ2dQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YuYARGdQEeCGy4_0mymNkA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_YuYARWdQEeCGy4_0mymNkA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_YuYARmdQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YuYAR2dQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YuYASGdQEeCGy4_0mymNkA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_YuVkAWdQEeCGy4_0mymNkA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedMultiDiscoveryBenchmark"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YuVkAmdQEeCGy4_0mymNkA" x="145" y="150"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ZPrWgGdQEeCGy4_0mymNkA" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZP-4gGdQEeCGy4_0mymNkA" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZP-4gWdQEeCGy4_0mymNkA" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_ZPr9kGdQEeCGy4_0mymNkA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ZPr9kWdQEeCGy4_0mymNkA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ZPtywGdQEeCGy4_0mymNkA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedProjectDiscovery/averageExecutionTimeInSeconds"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZPtywWdQEeCGy4_0mymNkA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ZPtywmdQEeCGy4_0mymNkA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedProjectDiscovery/averageSaveTimeInSeconds"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZPtyw2dQEeCGy4_0mymNkA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ZPuZ0GdQEeCGy4_0mymNkA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedProjectDiscovery/executionTimeStandardDeviation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZPuZ0WdQEeCGy4_0mymNkA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ZPuZ0mdQEeCGy4_0mymNkA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedProjectDiscovery/saveTimeStandardDeviation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZPuZ02dQEeCGy4_0mymNkA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ZPr9kmdQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZPr9k2dQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZPr9lGdQEeCGy4_0mymNkA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ZPr9lWdQEeCGy4_0mymNkA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ZPr9lmdQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZPr9l2dQEeCGy4_0mymNkA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZPr9mGdQEeCGy4_0mymNkA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ZPrWgWdQEeCGy4_0mymNkA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedProjectDiscovery"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZPrWgmdQEeCGy4_0mymNkA" x="455" y="130"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_AWUqyuMREd6P7cxVLIywIQ"/>
+  <element xmi:type="ecore:EPackage" href="JavaBenchmark.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_UALnUGG0EeC1TNHURF5Phg" type="3003" source="_UAGHwGG0EeC1TNHURF5Phg" target="_SwJi0GG0EeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_UALnUWG0EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_UALnUmG0EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UALnU2G0EeC1TNHURF5Phg" points="[1, 0, -367, -79]$[276, 59, -92, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_UW-9wGG0EeC1TNHURF5Phg" type="3003" source="_UW5eMGG0EeC1TNHURF5Phg" target="_SwJi0GG0EeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_UW-9wWG0EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_UW-9wmG0EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UW-9w2G0EeC1TNHURF5Phg" points="[-66, -29, -52, 427]$[-66, -423, -52, 33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WFKW0GG0EeC1TNHURF5Phg" type="3002" source="_WFE3QGG0EeC1TNHURF5Phg" target="_RAxFUGGzEeC1TNHURF5Phg">
+    <children xmi:type="notation:Node" xmi:id="_WFLk8GG0EeC1TNHURF5Phg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WFLk8WG0EeC1TNHURF5Phg" x="-10" y="29"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WFMMAGG0EeC1TNHURF5Phg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WFMMAWG0EeC1TNHURF5Phg" x="5" y="13"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WFKW0WG0EeC1TNHURF5Phg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WFKW0mG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//ProjectDiscovery/projects"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WFKW02G0EeC1TNHURF5Phg" points="[1, 1, -642, -567]$[567, 501, -76, -67]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cN-vMGG0EeC1TNHURF5Phg" id="(0.9661016949152542,0.5166666666666667)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WFMzEGG0EeC1TNHURF5Phg" type="3003" source="_WFE3QGG0EeC1TNHURF5Phg" target="_Ps_JQWGzEeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WFMzEWG0EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WFMzEmG0EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WFMzE2G0EeC1TNHURF5Phg" points="[-3, -29, 7, 182]$[-3, -93, 7, 118]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WFOBMGG0EeC1TNHURF5Phg" type="3002" source="_UAGHwGG0EeC1TNHURF5Phg" target="_WFE3QGG0EeC1TNHURF5Phg">
+    <children xmi:type="notation:Node" xmi:id="_WFOBNGG0EeC1TNHURF5Phg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WFOBNWG0EeC1TNHURF5Phg" x="-19" y="37"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WFOoQGG0EeC1TNHURF5Phg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WFOoQWG0EeC1TNHURF5Phg" x="-4" y="20"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WFOBMWG0EeC1TNHURF5Phg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WFOBMmG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//MultiDiscoveryBenchmark/discoveries"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WFOBM2G0EeC1TNHURF5Phg" points="[88, 5, -152, 0]$[182, 5, -58, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WdG8wGG0EeC1TNHURF5Phg" type="3002" source="_WdCEQGG0EeC1TNHURF5Phg" target="_Ps_JQWGzEeC1TNHURF5Phg">
+    <children xmi:type="notation:Node" xmi:id="_WdHj0GG0EeC1TNHURF5Phg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WdHj0WG0EeC1TNHURF5Phg" x="13" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WdHj0mG0EeC1TNHURF5Phg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WdHj02G0EeC1TNHURF5Phg" x="20" y="15"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WdG8wWG0EeC1TNHURF5Phg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WdG8wmG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//DiscoveredProject/discoveries"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WdG8w2G0EeC1TNHURF5Phg" points="[3, 4, 227, 465]$[513, 4, 737, 465]$[513, -461, 737, 0]$[-95, -461, 129, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mcH-MGG0EeC1TNHURF5Phg" id="(0.9763779527559056,0.6)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WdIK4GG0EeC1TNHURF5Phg" type="3003" source="_WdCEQGG0EeC1TNHURF5Phg" target="_RAxFUGGzEeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WdIK4WG0EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WdIK4mG0EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WdIx8GG0EeC1TNHURF5Phg" points="[53, -29, -87, 103]$[53, -65, -87, 67]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WdJZAGG0EeC1TNHURF5Phg" type="3002" source="_UW5eMGG0EeC1TNHURF5Phg" target="_WdCEQGG0EeC1TNHURF5Phg">
+    <children xmi:type="notation:Node" xmi:id="_WdKAEGG0EeC1TNHURF5Phg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WdKAEWG0EeC1TNHURF5Phg" x="-19" y="-31"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WdKAEmG0EeC1TNHURF5Phg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WdKAE2G0EeC1TNHURF5Phg" x="-6" y="-16"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WdJZAWG0EeC1TNHURF5Phg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WdJZAmG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//MultiProjectBenchmark/projects"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WdJZA2G0EeC1TNHURF5Phg" points="[-63, -29, 404, 186]$[-466, -215, 1, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_gaH_gGG0EeC1TNHURF5Phg" type="3002" source="_RAxFUGGzEeC1TNHURF5Phg" target="_gaAqwGG0EeC1TNHURF5Phg">
+    <children xmi:type="notation:Node" xmi:id="_gaImkGG0EeC1TNHURF5Phg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gaImkWG0EeC1TNHURF5Phg" x="-6" y="23"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gaImkmG0EeC1TNHURF5Phg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gaImk2G0EeC1TNHURF5Phg" x="-1" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_gaH_gWG0EeC1TNHURF5Phg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_gaH_gmG0EeC1TNHURF5Phg" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//Project/files"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gaH_g2G0EeC1TNHURF5Phg" points="[-28, -67, 195, 471]$[-223, -537, 0, 1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kHgQMGG0EeC1TNHURF5Phg" id="(0.9565217391304348,0.5147058823529411)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_4VwDcGG6EeC1TNHURF5Phg" type="3003" source="_1UfR4GG6EeC1TNHURF5Phg" target="_WlxjAF9jEeCRh-KR5YhL1g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_4VwDcWG6EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_4VwDcmG6EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4VwDc2G6EeC1TNHURF5Phg" points="[-23, -9, 176, 77]$[-23, -55, 176, 31]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4VxRkGG6EeC1TNHURF5Phg" id="(0.43137254901960786,0.23255813953488372)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4VxRkWG6EeC1TNHURF5Phg" id="(0.18315018315018314,0.37254901960784315)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_42Ko4GG6EeC1TNHURF5Phg" type="3003" source="_225f0GG6EeC1TNHURF5Phg" target="_WlxjAF9jEeCRh-KR5YhL1g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_42Ko4WG6EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_42Ko4mG6EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_42Ko42G6EeC1TNHURF5Phg" points="[45, -20, -125, 66]$[45, -61, -125, 25]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_42MeEGG6EeC1TNHURF5Phg" id="(0.7582417582417582,0.5098039215686274)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_5st2YGG6EeC1TNHURF5Phg" type="3003" source="_1UfR4GG6EeC1TNHURF5Phg" target="_RAxFUGGzEeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_5st2YWG6EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_5st2YmG6EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5st2Y2G6EeC1TNHURF5Phg" points="[30, -20, 213, 273]$[30, -135, 213, 158]$[-95, -135, 88, 158]$[-95, -226, 88, 67]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BqNRYGG7EeC1TNHURF5Phg" type="3003" source="_225f0GG6EeC1TNHURF5Phg" target="_WdCEQGG0EeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_BqNRYWG7EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BqNRYmG7EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BqNRY2G7EeC1TNHURF5Phg" points="[-12, -12, 8, 160]$[-12, -139, 8, 33]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BqOfgGG7EeC1TNHURF5Phg" id="(0.11842105263157894,0.3023255813953488)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BqOfgWG7EeC1TNHURF5Phg" id="(0.8976377952755905,0.43333333333333335)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_V2K0YGG7EeC1TNHURF5Phg" type="3003" source="_RwKoUGG7EeC1TNHURF5Phg" target="_gEnrgOMVEd6P7cxVLIywIQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_V2K0YWG7EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_V2K0YmG7EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V2K0Y2G7EeC1TNHURF5Phg" points="[2, -4, 16, 64]$[2, -32, 16, 36]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V2MpkGG7EeC1TNHURF5Phg" id="(0.5714285714285714,0.11627906976744186)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V2MpkWG7EeC1TNHURF5Phg" id="(0.20512820512820512,0.7209302325581395)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WGCcYGG7EeC1TNHURF5Phg" type="3003" source="_UjwxUGG7EeC1TNHURF5Phg" target="_gEnrgOMVEd6P7cxVLIywIQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WGCcYWG7EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WGCcYmG7EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WGCcY2G7EeC1TNHURF5Phg" points="[-36, -20, 45, 65]$[-36, -78, 45, 7]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WGDqgGG7EeC1TNHURF5Phg" id="(0.7025641025641025,0.9457364341085271)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Xj3sUGG7EeC1TNHURF5Phg" type="3003" source="_UjwxUGG7EeC1TNHURF5Phg" target="_WFE3QGG0EeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Xj3sUWG7EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Xj3sUmG7EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Xj3sU2G7EeC1TNHURF5Phg" points="[42, -20, -4, 322]$[42, -312, -4, 30]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Xj5hgGG7EeC1TNHURF5Phg" id="(0.15254237288135594,0.48333333333333334)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_YU784GG7EeC1TNHURF5Phg" type="3003" source="_RwKoUGG7EeC1TNHURF5Phg" target="_Ps_JQWGzEeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_YU784WG7EeC1TNHURF5Phg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YU784mG7EeC1TNHURF5Phg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YU7842G7EeC1TNHURF5Phg" points="[-51, 1, -207, 660]$[-141, 1, -297, 660]$[-141, -701, -297, -42]$[129, -701, -27, -42]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YU9yEGG7EeC1TNHURF5Phg" id="(0.10810810810810811,0.6848739495798319)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Yuc4wGdQEeCGy4_0mymNkA" type="3003" source="_YuVkAGdQEeCGy4_0mymNkA" target="_SwJi0GG0EeC1TNHURF5Phg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Yudf0GdQEeCGy4_0mymNkA" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Yudf0WdQEeCGy4_0mymNkA" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Yudf0mdQEeCGy4_0mymNkA" points="[1, 0, -132, -74]$[73, 41, -60, -33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ZPzSUGdQEeCGy4_0mymNkA" type="3002" source="_ZPrWgGdQEeCGy4_0mymNkA" target="_WFE3QGG0EeC1TNHURF5Phg">
+    <children xmi:type="notation:Node" xmi:id="_ZPz5YGdQEeCGy4_0mymNkA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZPz5YWdQEeCGy4_0mymNkA" x="-38" y="-42"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ZPz5YmdQEeCGy4_0mymNkA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZPz5Y2dQEeCGy4_0mymNkA" x="-23" y="-16"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZPzSUWdQEeCGy4_0mymNkA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ZPzSUmdQEeCGy4_0mymNkA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedProjectDiscovery/occurrences"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZPzSU2dQEeCGy4_0mymNkA" points="[1, 0, -433, -210]$[376, 181, -58, -29]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qZsLcGdQEeCGy4_0mymNkA" id="(0.08896797153024912,0.8739495798319328)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qmqQcGdQEeCGy4_0mymNkA" id="(0.847457627118644,0.016666666666666666)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ZP0gcGdQEeCGy4_0mymNkA" type="3002" source="_YuVkAGdQEeCGy4_0mymNkA" target="_ZPrWgGdQEeCGy4_0mymNkA">
+    <children xmi:type="notation:Node" xmi:id="_ZP1HgGdQEeCGy4_0mymNkA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZP1HgWdQEeCGy4_0mymNkA" x="-15" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ZP1HgmdQEeCGy4_0mymNkA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZP1Hg2dQEeCGy4_0mymNkA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZP0gcWdQEeCGy4_0mymNkA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ZP0gcmdQEeCGy4_0mymNkA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.ecore#//AveragedMultiDiscoveryBenchmark/discoveries"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZP0gc2dQEeCGy4_0mymNkA" points="[-25, -29, 233, 274]$[-257, -302, 1, 1]"/>
+  </edges>
+</notation:Diagram>

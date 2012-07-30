@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2009, 2011 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Gregoire DUPE (Mia-Software) - initial API and implementation&#xD;&#xA;    Gregoire DUPE (Mia-Software) - Bug 341752 - Extract report metamodel from the benchmark plug-in to avoid Acceleo troubles.&#xD;&#xA;    Nicolas Bros (Mia-Software)&#xD;&#xA;"
+    modelDirectory="/org.eclipse.modisco.infra.discovery.benchmark/src" editDirectory="/org.eclipse.modisco.infra.discovery.benchmark.edit/src"
+    editorDirectory="/org.eclipse.modisco.infra.discovery.benchmark.editor/src" modelPluginID="org.eclipse.modisco.infra.discovery.benchmark"
+    modelName="benchmark" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="org.eclipse.modisco.infra.discovery.benchmark.edit"
+    editorPluginID="org.eclipse.modisco.infra.discovery.benchmark.editor" language="">
+  <foreignModel>benchmark.ecore</foreignModel>
+  <genPackages prefix="Benchmark" basePackage="org.eclipse.modisco.infra.discovery"
+      disposableProviderFactory="true" ecorePackage="benchmark.ecore#/">
+    <genClasses ecoreClass="benchmark.ecore#//Benchmark">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/jvmMaxHeapInMiB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/processorName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/processorDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/processorCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/processorCacheSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/systemMemory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/osName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/osVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Benchmark/osArchitecture"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//Discovery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/dicoveryDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/algorithmVariant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/discovererId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/discovererClassName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/saveTimeInSeconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/totalExecutionTimeInSeconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/metaModelVariant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/maxUsedMemoryInBytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/numberOfModelElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/xmiSizeInBytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Discovery/discoveryError"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Project/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Project/totalLines"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//Project/files"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Project/averageFileSizeInBytes"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Project/averageLinesPerFile"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//Project/totalSizeInBytes"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//File/sizeInBytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//File/lines"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//File/filepath"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//MultiProjectBenchmark">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//MultiProjectBenchmark/projects"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//MultiDiscoveryBenchmark">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//MultiDiscoveryBenchmark/discoveries"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//ProjectDiscovery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//ProjectDiscovery/projects"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//DiscoveredProject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//DiscoveredProject/discoveries"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//AveragedMultiDiscoveryBenchmark">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//AveragedMultiDiscoveryBenchmark/discoveries"/>
+    </genClasses>
+    <genClasses ecoreClass="benchmark.ecore#//AveragedProjectDiscovery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//AveragedProjectDiscovery/averageExecutionTimeInSeconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//AveragedProjectDiscovery/averageSaveTimeInSeconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//AveragedProjectDiscovery/executionTimeStandardDeviation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute benchmark.ecore#//AveragedProjectDiscovery/saveTimeStandardDeviation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference benchmark.ecore#//AveragedProjectDiscovery/occurrences"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

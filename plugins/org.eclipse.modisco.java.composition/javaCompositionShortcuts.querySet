@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="javaCompositionShortcuts">
+  <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
+  <associatedMetamodels href="http://www.eclipse.org/MoDisco/kdm/source#/"/>
+  <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/Composition/0.1.incubation/javaApplication#/"/>
+  <queries xsi:type="query:JavaModelQuery" name="getJavaSourceFile" implementationClassName="org.eclipse.modisco.java.composition.javaapplication.queries.GetJavaSourceFile">
+    <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/kdm/source#//SourceFile"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//CompilationUnit"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="getSourceFileCompilationUnit" description="" implementationClassName="org.eclipse.modisco.java.composition.javaapplication.queries.GetSourceFileCompilationUnit">
+    <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//CompilationUnit"/>
+    <scope href="http://www.eclipse.org/MoDisco/kdm/source#//SourceFile"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="getASTNodeSourceRegion" implementationClassName="org.eclipse.modisco.java.composition.javaapplication.queries.GetASTNodeSourceRegion">
+    <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/Composition/0.1.incubation/javaApplication#//JavaNodeSourceRegion"/>
+    <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ASTNode"/>
+  </queries>
+  <queries xsi:type="query:JavaModelQuery" name="IsJavaSourceFile" description="Return true if the SourceFile's name ends with .java" implementationClassName="org.eclipse.modisco.java.composition.javaapplication.queries.IsJavaSourceFile">
+    <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <scope href="http://www.eclipse.org/MoDisco/kdm/source#//SourceFile"/>
+  </queries>
+</query:ModelQuerySet>

@@ -1,0 +1,47 @@
+-- ******************************************************************************
+-- Copyright (c) 2012 INRIA & Ecole des Mines de Nantes. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	Hugo Bruneliere - Initial implementation
+--  
+-- ******************************************************************************
+
+
+module GenerateMetricsB;
+create OUT : Metrics from IN : Java;
+
+
+helper context Java!ClassDeclaration def: computePercentage(elementType : OclType) : Real =
+	self.bodyDeclarations
+		->select(d | d.oclIsTypeOf(elementType))->size()
+		*100
+		/self.bodyDeclarations->size();
+
+
+rule CreateMetric {
+	from
+		cd : Java!ClassDeclaration (
+			cd.annotations->exists(a | a.type.type.name='Entity')	
+		)
+	to
+		om : Metrics!Metric (
+			name <- 'Percentage of declaration/type in class "' + cd.name + '"',
+			values <- Sequence{mv1,mv2,mv3}
+		),
+		mv1 : Metrics!DoubleMetricValue (
+			tag <- 'Constructor',
+			value <- cd.computePercentage(Java!ConstructorDeclaration)
+		),
+		mv2 : Metrics!DoubleMetricValue (
+			tag <- 'Field',
+			value <- cd.computePercentage(Java!FieldDeclaration)
+		),
+		mv3 : Metrics!DoubleMetricValue (
+			tag <- 'Method',
+			value <- cd.computePercentage(Java!MethodDeclaration)
+		)
+}

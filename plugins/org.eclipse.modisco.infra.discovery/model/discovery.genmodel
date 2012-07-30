@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2011 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Fabien Giquel (Mia-Software) - design and implementation&#xD;&#xA;"
+    modelDirectory="/org.eclipse.modisco.infra.discovery/src" modelPluginID="org.eclipse.modisco.infra.discovery"
+    modelName="Discovery" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" runtimeVersion="2.6" usedGenPackages="platform:/plugin/org.eclipse.emf.facet.util.emf.catalog/model/catalog.genmodel#//catalog ../../org.eclipse.emf.facet.util.emf.core/model/serialization.genmodel#//serialization">
+  <foreignModel>discovery.ecore</foreignModel>
+  <genPackages prefix="Discovery" basePackage="org.eclipse.modisco.infra" disposableProviderFactory="true"
+      ecorePackage="discovery.ecore#/">
+    <nestedGenPackages prefix="Catalog" basePackage="org.eclipse.modisco.infra.discovery"
+        disposableProviderFactory="true" ecorePackage="discovery.ecore#//catalog">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="discovery.ecore#//catalog/DirectionKind">
+        <genEnumLiterals ecoreEnumLiteral="discovery.ecore#//catalog/DirectionKind/in"/>
+        <genEnumLiterals ecoreEnumLiteral="discovery.ecore#//catalog/DirectionKind/inout"/>
+        <genEnumLiterals ecoreEnumLiteral="discovery.ecore#//catalog/DirectionKind/out"/>
+      </genEnums>
+      <genDataTypes ecoreDataType="discovery.ecore#//catalog/EStringToObjectMapEntry"/>
+      <genDataTypes ecoreDataType="discovery.ecore#//catalog/Bundle"/>
+      <genDataTypes ecoreDataType="discovery.ecore#//catalog/Method"/>
+      <genDataTypes ecoreDataType="discovery.ecore#//catalog/Field"/>
+      <genClasses ecoreClass="discovery.ecore#//catalog/DiscovererDescription">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference discovery.ecore#//catalog/DiscovererDescription/parameterDefinitions"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererDescription/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererDescription/sourceType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererDescription/implementationType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererDescription/implementationBundle"/>
+        <genOperations ecoreOperation="discovery.ecore#//catalog/DiscovererDescription/getParameterDefinition">
+          <genParameters ecoreParameter="discovery.ecore#//catalog/DiscovererDescription/getParameterDefinition/parameterName"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="discovery.ecore#//catalog/DiscovererParameter">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference discovery.ecore#//catalog/DiscovererParameter/discoverer"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/direction"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/description"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/requiredInput"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/field"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/getter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/setter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//catalog/DiscovererParameter/initializer"/>
+      </genClasses>
+      <genClasses ecoreClass="discovery.ecore#//catalog/DiscovererCatalog">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference discovery.ecore#//catalog/DiscovererCatalog/installedDiscoverers"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Launch" basePackage="org.eclipse.modisco.infra.discovery"
+        disposableProviderFactory="true" ecorePackage="discovery.ecore#//launch">
+      <genClasses ecoreClass="discovery.ecore#//launch/LaunchConfiguration">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//launch/LaunchConfiguration/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference discovery.ecore#//launch/LaunchConfiguration/parameterValues"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference discovery.ecore#//launch/LaunchConfiguration/discoverer"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//launch/LaunchConfiguration/openModelAfterDiscovery"/>
+      </genClasses>
+      <genClasses ecoreClass="discovery.ecore#//launch/ParameterValue">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference discovery.ecore#//launch/ParameterValue/parameter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute discovery.ecore#//launch/ParameterValue/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="jeeEjbAnnotations" nsURI="http://www.eclipse.org/MoDisco/JEE/EJB/Annotations" nsPrefix="jeeEjbAnnotations">
+  <eClassifiers xsi:type="facet:Facet" name="ApplicationException" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsApplicationException"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AroundInvoke" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsAroundInvoke"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="DeclareRoles" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsDeclareRoles"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="DenyAll" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsDenyAll"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Ejb" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsEJB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Ejbs" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsEJBs"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ExcludeClassInterceptors" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsExcludeClassInterceptors"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Init" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsInit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Interceptors" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsInterceptors"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Local" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsLocal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="LocalHome" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsLocalHome"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MessageDriven" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsMessageDriven"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PermitAll" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsPermitAll"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PostActivate" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsPostActivate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PostConstruct" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsPostConstruct"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PreDestroy" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsPreDestroy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PrePassivate" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsPrePassivate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Remote" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsRemote"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="RemoteHome" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsRemoteHome"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Remove" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsRemove"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Resource" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Resources" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsResources"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="RolesAllowed" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsRolesAllowed"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="RunAs" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsRunAs"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Stateful" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsStateful"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Stateless" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsStateless"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TimeOut" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsTimeout"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TransactionAttribute" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsTransactionAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TransactionManagement" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeEjbAnnotations#IsTransactionAttribute"/>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
+</facet:FacetSet>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2009 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+	Frederic Madiot (Mia-Software) - Meta-model design
+    Gregoire DUPE (Mia-Software) - Meta-model design and implementation
+-->
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2009 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Gregoire DUPE (Mia-Software) - initial API and implementation&#xD;&#xA;"
+    modelDirectory="/org.eclipse.gmt.modisco.infra.query.jxpath/src" modelPluginID="org.eclipse.gmt.modisco.infra.query.jxpath"
+    modelName="Jxpath" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.genmodel#//query">
+  <foreignModel>jxpath.ecore</foreignModel>
+  <genPackages prefix="Jxpath" basePackage="org.eclipse.gmt.modisco.infra.query" disposableProviderFactory="true"
+      providerPackageSuffix="edit.provider" presentationPackageSuffix="editor.presentation"
+      ecorePackage="jxpath.ecore#/">
+    <genClasses ecoreClass="jxpath.ecore#//JXPathModelQuery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jxpath.ecore#//JXPathModelQuery/query"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2009, 2011 Mia-Software.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Gregoire DUPE (Mia-Software) - initial API and implementation
+     Gregoire DUPE (Mia-Software) - Bug 341752 - Extract report metamodel from the benchmark plug-in to avoid Acceleo troubles.
+     Nicolas Bros (Mia-Software)
+ 
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/MoDisco/Benchmark/0.9.0/benchmark"
+            class="org.eclipse.modisco.infra.discovery.benchmark.BenchmarkPackage"
+            genModel="model/benchmark.genmodel"/>
+   </extension>
+
+  <!-- define the contenttype based on the actual content -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+     <content-type
+           base-type="org.eclipse.emf.ecore.xmi"
+           file-extensions="xmi"
+           id="org.eclipse.modisco.infra.discovery.benchmark.contenttype"
+           name="%content-type.name"
+           priority="normal">
+        <describer
+              class="org.eclipse.emf.ecore.xmi.impl.RootXMLContentHandlerImpl$Describer">
+           <parameter
+                 name="namespacePattern"
+                 value="http://www\.eclipse\.org/MoDisco/Benchmark/0\.9\.0/benchmark">
+           </parameter>
+           <parameter
+                 name="kind"
+                 value="xmi">
+           </parameter>
+        </describer>
+     </content-type>
+  </extension>
+
+
+</plugin>

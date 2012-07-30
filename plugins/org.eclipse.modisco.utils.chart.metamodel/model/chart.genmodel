@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="*******************************************************************************&#xD;&#xA; * Copyright (c) 2012 INRIA. All rights reserved. This program and the&#xD;&#xA; * accompanying materials are made available under the terms of the Eclipse&#xD;&#xA; * Public License v1.0 which accompanies this distribution, and is available at&#xD;&#xA; * http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA; * &#xD;&#xA; * Contributors: Guillaume Doux - INRIA - Initial API and implementation&#xD;&#xA; * &#xD;&#xA; ******************************************************************************&#xD;&#xA;"
+    modelDirectory="/org.eclipse.modisco.utils.chart.metamodel/src" editDirectory="/org.eclipse.modisco.utils.chart.edit/src"
+    editorDirectory="/org.eclipse.modisco.utils.chart.editor/src" modelPluginID="org.eclipse.modisco.utils.chart.metamodel"
+    modelName="chart" testsDirectory="/org.eclipse.modisco.utils.chart.tests/src"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" editPluginID="org.eclipse.modisco.utils.chart.edit"
+    editorPluginID="org.eclipse.modisco.utils.chart.editor" testsPluginID="org.eclipse.modisco.utils.chart.tests">
+  <foreignModel>chart.ecore</foreignModel>
+  <genPackages prefix="chart" basePackage="org.eclipse.modisco.utils.chart.metamodel"
+      disposableProviderFactory="true" ecorePackage="chart.ecore#/">
+    <genClasses ecoreClass="chart.ecore#//Chart">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chart.ecore#//Chart/axes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chart.ecore#//Chart/series"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chart.ecore#//Chart/title"/>
+    </genClasses>
+    <genClasses ecoreClass="chart.ecore#//Axe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chart.ecore#//Axe/legend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chart.ecore#//Axe/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="chart.ecore#//Serie">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chart.ecore#//Serie/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chart.ecore#//Serie/points"/>
+    </genClasses>
+    <genClasses ecoreClass="chart.ecore#//Point">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference chart.ecore#//Point/serie"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chart.ecore#//Point/coordinates"/>
+    </genClasses>
+    <genClasses ecoreClass="chart.ecore#//Coordinate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chart.ecore#//Coordinate/axe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chart.ecore#//Coordinate/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

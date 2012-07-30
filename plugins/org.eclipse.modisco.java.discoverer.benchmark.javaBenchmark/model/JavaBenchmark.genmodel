@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2009, 2011 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Gregoire DUPE (Mia-Software) - initial API and implementation&#xD;&#xA;    Gregoire DUPE (Mia-Software) - Bug 341752 - Extract report metamodel from the benchmark plug-in to avoid Acceleo troubles.&#xD;&#xA;    Nicolas Bros (Mia-Software) - extracted Java benchmark"
+    modelDirectory="/org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark/src"
+    editDirectory="/org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.edit/src"
+    editorDirectory="/org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.editor/src"
+    modelPluginID="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark" modelName="JavaBenchmark"
+    testSuiteClass="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.tests.JavaBenchmarkAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    editPluginID="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.edit"
+    editorPluginID="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.editor"
+    language="" usedGenPackages="../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.genmodel#//benchmark">
+  <foreignModel>JavaBenchmark.ecore</foreignModel>
+  <genPackages prefix="JavaBenchmark" basePackage="org.eclipse.modisco.java.discoverer.benchmark"
+      disposableProviderFactory="true" fileExtensions="javaBenchmark" ecorePackage="JavaBenchmark.ecore#/">
+    <genClasses image="false" ecoreClass="JavaBenchmark.ecore#//AbstractCDODiscovery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractCDODiscovery/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractCDODiscovery/revisedLruCapacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractCDODiscovery/cacheType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractCDODiscovery/serverDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractCDODiscovery/currentLruCapacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractCDODiscovery/initTimeInSeconds"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="JavaBenchmark.ecore#//AbstractJavaProject">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute JavaBenchmark.ecore#//AbstractJavaProject/averageJavaClassesPerPackage"/>
+    </genClasses>
+    <genClasses ecoreClass="JavaBenchmark.ecore#//JavaProject"/>
+    <genClasses ecoreClass="JavaBenchmark.ecore#//JavaDiscoveredProject"/>
+    <genClasses ecoreClass="JavaBenchmark.ecore#//CDODiscovery"/>
+    <genClasses ecoreClass="JavaBenchmark.ecore#//CDOProjectDiscovery"/>
+  </genPackages>
+</genmodel:GenModel>

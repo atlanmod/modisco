@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?>
+
+<!--
+ <copyright>
+ Copyright (c) 2010 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Nicolas Guyomar (Mia-Software) - initial API and implementation
+ </copyright>
+
+ $Id$
+-->
+<plugin>
+   <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+      <facetset file="jeeEjbAnnotations.facetSet"/>
+   </extension>  
+    <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+      <facetset file="jeeJpaAnnotations.facetSet"/>
+   </extension>  
+    <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+      <facetset file="jeeServletAnnotations.facetSet"/>
+   </extension>
+   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+      <browserCustomization file="jeeEjbAnnotations.uiCustom"/>
+   </extension>    
+   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+      <browserCustomization file="jeeJpaAnnotations.uiCustom"/>
+   </extension>
+   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+      <browserCustomization file="jeeServletAnnotations.uiCustom"/>
+   </extension>
+</plugin>

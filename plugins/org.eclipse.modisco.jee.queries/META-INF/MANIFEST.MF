@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.jee.queries;singleton:=true
+Bundle-Version: 0.10.1.qualifier
+Bundle-Activator: org.eclipse.modisco.jee.queries.JEEQueriesActivator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gmt.modisco.infra.query.core;bundle-version="0.8.0",
+ org.eclipse.gmt.modisco.java;bundle-version="0.8.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: org.eclipse.modisco.jee.queries.annotations.ejb,
+ org.eclipse.modisco.jee.queries.annotations.jpa,
+ org.eclipse.modisco.jee.queries.annotations.servlet

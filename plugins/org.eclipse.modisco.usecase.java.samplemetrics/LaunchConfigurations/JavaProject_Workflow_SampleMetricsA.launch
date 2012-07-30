@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.modisco.workflow.launchType">
+<listAttribute key="serializedWorkflow">
+<listEntry value="1-JavaProject_Discovery"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.modisco.infra.discovery.launchConfigurationType"/>
+<listEntry value="2-GenerateMetricsA"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="3-GenerateMetricsA-Table"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="4-1-GenerateMetricsA-HTML"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="4-2-GenerateMetricsA-HTML-XML"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="4-3-build-ExtractXML_MetricsA-HTML.xml"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.ant.AntLaunchConfigurationType"/>
+<listEntry value="5-1-GenerateMetricsA-SVGBarChart"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="5-2-GenerateMetricsA-SVG-XML"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="5-3-build-ExtractXML_MetricsA-SVG.xml"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.ant.AntLaunchConfigurationType"/>
+</listAttribute>
+</launchConfiguration>

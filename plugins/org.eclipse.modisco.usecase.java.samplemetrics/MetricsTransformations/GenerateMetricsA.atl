@@ -1,0 +1,43 @@
+-- ******************************************************************************
+-- Copyright (c) 2012 INRIA & Ecole des Mines de Nantes. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	Hugo Bruneliere - Initial implementation
+--  
+-- ******************************************************************************
+
+
+module GenerateMetricsA;
+create OUT : Metrics from IN : Java;
+
+
+helper def: metric : Metrics!Metric = OclUndefined;
+
+entrypoint rule CreateMetric() {
+	to
+		om : Metrics!Metric (
+			name <- 'Number of methods per Entity class' 
+		)
+	do {
+		thisModule.metric <- om;
+	}
+}
+
+rule CreateMetricValue {
+	from 
+		cd : Java!ClassDeclaration (
+			cd.annotations->exists(a | a.type.type.name='Entity')	
+		)
+	to
+		mv : Metrics!IntegerMetricValue (
+			metric <- thisModule.metric,
+			tag <- cd.name,
+			value <- cd.bodyDeclarations
+				->select(bd | bd.oclIsKindOf(Java!AbstractMethodDeclaration))
+				->size()
+		)
+}
