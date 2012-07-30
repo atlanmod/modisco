@@ -1,0 +1,22 @@
+= Composition Discoverer API =
+
+Each MoDisco discoverer implements a normalized interface and can be called programmatically (see org.eclipse.modisco.infra.discovery.core.IDiscoverer<T>).
+
+First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
+* org.eclipse.modisco.java.composition
+* org.eclipse.modisco.kdm.source.extension
+* org.eclipse.modisco.java.composition.discoverer
+* org.eclipse.modisco.infra.discovery.core
+
+You can easily discover a Java application model programmatically. For example:
+<pre>
+DiscoverKDMSourceAndJavaModelFromJavaProject discoverer = new DiscoverKDMSourceAndJavaModelFromJavaProject();
+discoverer.discoverElement(javaProject, monitor);
+Resource javaApplicationModel = discoverer.getTargetModel();
+</pre>
+
+To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.
+
+As an example, you may checkout the code from the org.eclipse.modisco.java.composition.discoverer.tests project:
+
+https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/tests/trunk/org.eclipse.modisco.java.composition.discoverer.tests

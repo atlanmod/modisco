@@ -1,0 +1,19 @@
+==JSP Metamodel==
+
+The Modisco JSP MetaModel inherits from the Modisco XML one :
+
+[[Image:../../img/jsp/JSP_Metamodel.png]]
+
+
+The choice to extend the XML metamodel was made because JSP scripts use the same tag mechanism, attributes and comments, and contain well formed XML most of the time.
+
+According to the "Java Server Pages Specifications Version 1.2", JSP content is divided into 4 categories : 
+*JSP Scripts : 
+**JSP Scriplet : <code>   <% int variable = 0;%> </code> 
+**JSP Expression : <code><nowiki> <%= variable %> </nowiki> </code>
+**JSP Declaration :<code><nowiki> <%! int variable = 0; %> </nowiki> </code>
+*JSP Actions : <code><nowiki> <myPrefix:myAction arg1="value" /> </nowiki> </code>
+**JSP Standard Action : <code><nowiki>  <jsp:getProperty name="beanName" property="propertyNamef" /> </nowiki> </code>
+*JSP Directive :  <code><nowiki> <%@ include file="myFilePath" %> </nowiki> </code>
+**JSP TagLib : <code><nowiki> <%@ taglib prefix="myPrefix" uri="taglib/mytag.tld" %> </nowiki> </code>
+*Comments : <code><nowiki>  <%-- This is a JSP comment --%>  </nowiki> </code>

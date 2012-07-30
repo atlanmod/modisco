@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="Infrastructure Architecture" link_to="../org.eclipse.modisco.dev.doc/maintoc.xml#infrastructure.anchor">
+   <topic label="Facet Manager" href="mediawiki/facet_manager/archi.html"/>
+   <topic label="Query Manager" href="mediawiki/query_manager/archi.html"/>
+   <topic label="Model Browser" href="mediawiki/model_browser/archi.html"/>
+   <topic label="Workflow" href="mediawiki/workflow/archi.html"/>
+</toc>

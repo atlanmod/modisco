@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="OMG" link_to="../org.eclipse.modisco.doc/maintoc.xml#infrastructure.anchor.2">
+   <topic label="KDM" href="mediawiki/kdm/user.html">
+      <topic label="KDM Metamodel" href="mediawiki/kdm_metamodel/user.html"/>
+      <topic label="KDM Source Discoverer" href="mediawiki/kdm_source_discoverer/user.html">
+         <topic label="User Documentation" href="mediawiki/kdm_source_discoverer/user.html"/>
+         <topic label="Developer Documentation" href="mediawiki/kdm_source_discoverer/plugin_dev.html"/>
+      </topic>
+      <topic label="KDM To UML Converter" href="mediawiki/kdm_to_uml_converter/user.html">
+         <topic label="User Documentation" href="mediawiki/kdm_to_uml_converter/user.html"/>
+         <topic label="Developer Documentation" href="mediawiki/kdm_to_uml_converter/plugin_dev.html"/>
+      </topic>
+   </topic>
+   <topic label="SMM" href="mediawiki/smm/user.html">
+      <topic label="SMM Metamodel" href="mediawiki/smm_metamodel/user.html"/>
+   </topic>
+   <topic label="GASTM" href="mediawiki/gastm/user.html">
+      <topic label="GASTM Metamodel" href="mediawiki/gastm_metamodel/user.html"/>
+   </topic>
+</toc>

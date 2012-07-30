@@ -1,0 +1,171 @@
+== Overview ==
+The '''MoDisco Model Browser''' is a feature-rich Ecore model browser. You can use it to browse any Ecore model more easily than with the default Ecore editor. 
+
+[[Image:../../img/model_browser/MoDiscoModelBrowser0.8.png]]
+
+The browser surface is separated in two panes. The left one displays a list of meta-classes, and the right one shows instances of the selected meta-class (that is, model elements). 
+
+At the top of each pane, a toolbar allows you to quickly change display options relative to that pane. 
+
+== Features  ==
+
+=== Links  ===
+
+You can follow links between model elements by expanding the links tree nodes. Links appear for associations, aggregations and the EMF container. The tree representing the model is infinite. 
+
+An icon indicates the link type, and the number of instances under the link is displayed in parentheses. 
+
+{| cellspacing="10" border="0" style="text-align: left;" class="wikitable"
+|-
+! icon 
+! meaning
+|-
+| [[Image:../../img/model_browser/MoDisco_model_browser_-_link.gif]] 
+| bidirectional link
+|-
+| [[Image:../../img/model_browser/MoDisco_model_browser_-_unidirectional_link.gif]] 
+| unidirectional link
+|-
+| [[Image:../../img/model_browser/MoDisco_model_browser_-_Aggregation.gif]] 
+| bidirectional aggregation link
+|-
+| [[Image:../../img/model_browser/MoDisco_model_browser_-_unidirectional_aggregation.gif]] 
+| unidirectional aggregation link
+|-
+| [[Image:../../img/model_browser/MoDisco_model_browser_-_inverse_aggregation.gif]] 
+| bidirectional inverse aggregation link
+|-
+| [[Image:../../img/model_browser/MoDisco_model_browser_-_container_link.gif]] 
+| link to the EMF container of the element (eContainer); this link is not defined in the metamodel
+|}
+
+The source of the link is always its parent in the tree, and the targets are its children. 
+
+=== Display options  ===
+
+You can use the buttons at the top of the ''Instances'' panel to set the following options (click on the down-pointing arrow [[Image:../../img/model_browser/MoDiscoModelBrowser-View_menu.gif]] to see hidden options): 
+
+{| cellspacing="10" border="0" style="text-align: left;" class="wikitable"
+|-
+! icon 
+! description
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Sort.gif]] 
+| Sort instances by name 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Empty_links.gif]] 
+| Show empty links (containing no instances)
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Derived.gif]] 
+| Show derived links
+
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Sort_links.gif]] 
+| Sort links by name
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Sort_links_by_type.gif]] 
+| Sort links by type
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Full_name.gif]] 
+| Display full qualified meta-classes names 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Multiplicity.gif]] 
+| Display multiplicities on links
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Ordering.gif]] 
+| Show ordering
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Opposite_links.gif]] 
+| Show opposite links 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Container.gif]] 
+| Show a link to the container (which is not part of the metamodel definition)
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Attributes.gif]] 
+| Show attributes as tree elements (in addition to the Properties view) 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Empty_attributes.gif]] 
+| Show empty attributes
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Link_type.gif]] 
+| Show type of links
+|}
+
+=== Meta-class list  ===
+
+The ''Types'' panel displays all the meta-classes of the opened model, with the number of instances for each meta-class. When you click on a meta-class, its instances are displayed in the ''Instances'' panel. Multi-selection of meta-classes is also supported. 
+
+You can use the buttons at the top of the ''Types'' panel to set the following options (click on the down-pointing arrow [[Image:../../img/model_browser/MoDiscoModelBrowser-View_menu.gif]] to see hidden options):
+
+{| cellspacing="10" border="0" style="text-align: left;" class="wikitable"
+|-
+! icon 
+! description
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Zero.gif]] 
+| Show empty meta-classes 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Derived_instances.gif]] 
+| Display instances of subclasses (for example, when an abstract meta-class is selected, instances of its derived classes are displayed) 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Derivation_tree.gif]] 
+| Show derivation tree
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Sort.gif]] 
+| Sort by name 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Sort_num.gif]] 
+| Sort by instance count 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Full_name.gif]] 
+| Show full qualified names 
+|-
+| [[Image:../../img/model_browser/MoDiscoModelBrowser-Package.gif]] 
+| Group meta-classes by package 
+|}
+
+=== Browse  ===
+
+Right-click on a model element and select "Browse" to select the meta-class of this element in the ''Types'' panel and display this model element amongst its siblings of the same type. You can also press '''Enter''' while an element is selected to trigger this action. 
+
+[[Image:../../img/model_browser/MoDiscoModelBrowser-Browse.png]]
+
+=== Navigation history  ===
+
+When you navigate from one meta-class to another, or when you browse an instance, you can then go back and forth in navigation history by using the left and right arrows in the toolbar (or the '''Alt+Left''', '''Alt+Right''' shortcuts). 
+
+=== Search  ===
+
+Type some text in the search bar and type '''Enter''' to filter the currently displayed instances by name. Press '''Escape''' to restore the view. Only instances of the currently selected meta-class are filtered. 
+
+=== Attributes  ===
+
+Attributes of the selected element are displayed in the Properties view. To show this view, double-click on a model element or right-click and select '''Show Properties View'''.
+
+[[Image:../../img/model_browser/MoDisco_model_browser_-_Properties_view.png]] 
+
+You can also display attributes directly in the model tree by activating the "Show Attributes" option in the right toolbar. 
+
+=== Accessibility  ===
+
+The font size can easily be changed by the click of a button in the main toolbar. 
+
+[[Image:../../img/model_browser/MoDisco_model_browser_-_font_size.png]] 
+
+The first button makes the font larger, the second one smaller, and the third one restores the default font size. The base font is configurable in Eclipse preferences. 
+
+== Team  ==
+
+*Nicolas Bros ([http://www.mia-software.com Mia-Software]) 
+*Gabriel Barbier ([http://www.mia-software.com Mia-Software]) 
+*Grégoire Dupé ([http://www.mia-software.com Mia-Software]) 
+*Frédéric Madiot ([http://www.mia-software.com Mia-Software])
+*Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins ==
+* the main browser component : org.eclipse.gmt.modisco.infra.browser
+* re-usable browser components : org.eclipse.gmt.modisco.infra.browser.uicore
+* customization metamodel : org.eclipse.gmt.modisco.infra.browser.custom
+* customization core : org.eclipse.gmt.modisco.infra.browser.custom.core
+* customization metamodel editor : org.eclipse.gmt.modisco.infra.browser.custom.editor
+* customization UI components : org.eclipse.gmt.modisco.infra.browser.custom.ui

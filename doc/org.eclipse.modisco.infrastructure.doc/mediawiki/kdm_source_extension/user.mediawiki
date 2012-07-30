@@ -1,0 +1,179 @@
+== Overview ==
+This plug-in proposes a small framework for building weaving information between code models (Java, C++, ...) and physical resources (disk files and directories). Such a weaving information is convenient for client programs in order to access physical files. 
+
+For example, the [../model_browser/user.html MoDisco Model Browser] may use this information for displaying original code portions associated to [../../../org.eclipse.modisco.java.doc/mediawiki/user.html Java model] elements.
+
+This plug-in is an infrastructure component and it does not provide features to the MoDisco end-user. Only the contributor and adopter communities are concerned by this plug-in.
+
+This framework reuses the [../../../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html KDM] "Source" subpackage, which proposes a model for physical resources, known as "Inventory Model".
+
+The feature is in the scope of a larger issue: the composition of metamodels <!-- TODO : link to composition description page -->. Considering that the composition with kdm inventory metamodel is a recurrent composition case, providing a dedicated minimal framework was convenient.
+
+The MoDisco [../../../org.eclipse.modisco.java.doc/mediawiki/composition/user.html "Java Application"] is the reference metamodel and discoverer for illustrating the use of the KDM Source extension.
+
+
+== KDM.Source extension : a core metamodel for weaving Code models and KDM Inventory models ==
+
+The component proposes a small framework for building weaving information between code models (Java, C++, ...) and physical resources (disk files and directories).
+
+This framework reuses the [../../../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html KDM] "Source" subpackage, which proposes a model for physical resources, known as "Inventory Model" (see figure [../../../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html#Details here])
+
+The KDM inventory model also proposes <code>SourceRegion</code>/<code>SourceRef</code> concepts for weaving other kdm models (kdm code models, ...) with a physical representation. Some references exist from other KDM subpackages to the <code>SourceRef</code> concept.
+
+[[Image:../../img/kdm_source_extension/Kdmsourceregion.JPG|frame|center|KDM Source Metamodel subpart (from the KDM Specification v 1.1)]]
+
+MoDisco proposes to compose KDM inventory models with non-KDM models. For generic reuse reasons, a new metamodel extending KDM Source has been created.
+
+A subpart of the KDM Source model is extended for linking the <code>SourceRegion</code> concept with non-KDM elements, via the <code>ASTNodeSourceRegion</code> metaclass.
+
+Moreover a recurrent pattern, in such a model composition, is to link a KDM <code>SourceFile</code> with a code model element. Such a link is represented with the <code>CodeUnit2File</code> metaclass.
+
+[[Image:../../img/kdm_source_extension/Kdmsourceextension.png|frame|center|870x483|MoDisco KDM Source extension Metamodel]]
+
+This is a core metamodel that the developer should extend for describing a composition between a specific code metamodel and kdm.source.
+
+== How to create a composition metamodel between Code models and KDM Inventory models ==
+
+Given a particular code metamodel (such as the Java one), MoDisco proposes to extend KDMSourceExtension to define a metamodel composition between inventory models and code models.
+
+The <code>ASTNodeSourceRegion</code> should be subclassed, and a reference to one concrete code metaclass should "specialize" the <code>ASTNodeSourceRegion->node:EObject</code> reference (one simple way is to set the new reference as derived from the generic one).
+
+'''''(TODO : an opposite reference should be described for allowing navigation from code elements to the <code>SourceRegion</code> instances --> waiting for facet shortcut evolution to come)'''''
+
+In most cases the <code>CodeUnit2File</code> will be subclassed.
+
+A reference example of such a composition metamodel is the [../../../org.eclipse.modisco.java.doc/mediawiki/composition/user.html#Java_Composition_Metamodel Java Application example].
+
+[[Image:../../img/kdm_source_extension/Javakdmsourceregion.JPG|frame|center|Java and kdm composition metamodel (extract)]]
+
+== How to develop a discoverer for the composition between code and KDM inventory models ==
+
+=== Overview  ===
+
+After describing a composition metamodel, the contributor/adopter has to write an associated [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/discovery_manager/user.html discoverer]. Such a discoverer will instantiate elements for the ''composition metamodel'' described above (<code>SourceRegion</code>...) Such a discoverer will have to manipulate both the kdm.source model and the code model.
+
+A discoverer for the related code model is a prerequisite. The [../../../org.eclipse.modisco.java.doc/mediawiki/user.html#Java_Discoverer Java Discoverer] is an example. Such a discoverer is not supposed to instantiate SourceRegion subclasses. To avoid ambiguity, we will talk about it as a "leaf code discoverer". 
+
+The composite discoverer should, in most cases, invoke the leaf discoverers (kdm.source and code). Another way is to provide the leaf models as parameter values to the composite discoverer.
+
+A kdm.source model can be discovered using the [../../../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html#KDM_Source_Discoverer KDM Source discoverer]]. Note that such a discoverer only provides a representation of files/directories. It does not instantiate <code>SourceRegion</code> subclasses. 
+
+
+A reference example of such a composition dicoverer is the [../../../org.eclipse.modisco.java.doc/mediawiki/composition/user.html#Java_Composition_Discoverer|Java Application discoverer example] (Java class <code>org.eclipse.modisco.java.composition.discoverer.DiscoverKDMSourceAndJavaModelFromJavaProject</code>). 
+
+[[Image:../../img/kdm_source_extension/Codekdmdiscovery.JPG|frame|center|Composition discovery overview]]
+
+=== Using the abstract AbstractComposedKDMSourceDiscoverer2 discoverer Java class ===
+
+An abstract java class is proposed to facilitate and factorize some common code: <code>org.eclipse.modisco.kdm.source.extension.discovery.AbstractComposedKDMSourceDiscoverer2</code>.
+
+This abstract discoverer proposes a process with four steps: 
+#initialize the composite model (to implement) 
+#discover the kdm.source model (already implemented) 
+#discover the other leaf models (to implement). In most cases there is only one code model 
+#terminate the discovery (weaving or saving actions)
+
+Using the <code>AbstractComposedKDMSourceDiscoverer2</code> is not mandatory.
+
+=== Instrumenting the leaf code discoverers for retrieving visited source regions ===
+
+In most cases, code discoverers have access to the physical location of each portion of code that is modeled.
+
+There are two ways for a composite discoverer to retrieve such information when invoking the leaf discoverer :
+* subclass some leaf discoverer implementation classes.
+* add a listener to the leaf discoverer to listen for source regions visit events.
+
+The second way implies the leaf discoverer to implement the <code>org.eclipse.modisco.kdm.source.extension.discovery.ISourceRegionNotifier</code> class to support the registering of <code>org.eclipse.modisco.kdm.source.extension.discovery.SourceVisitListener</code>.
+
+<code>ISourceRegionNotifier#notifySourceRegionVisited</code> must be called when appropriate from inside the leaf discoverer.
+
+You may subclass the proposed abstract class <code>ISourceRegionNotifier</code> which already implements <code>ISourceRegionNotifier</code>, and inherits from <code>AbstractModelDiscoverer</code>. 
+
+The [../../../org.eclipse.modisco.java.doc/mediawiki/user.html#Java_Discoverer Java discoverer] implementation class illustrates the application of such a pattern.
+
+The following figure illustrates the architecture for leaf and composite discoverers related to a CSharp metamodel.
+
+[[Image:../../img/kdm_source_extension/Csharpkdmdiscovery2.JPG|frame|center|Applicative Architecture for CSharp leaf and composite discoverers example]]
+
+=== Instantiate source region nodes ===
+
+Once the composite discoverer has the capability to retrieve information about source regions visited and associated code model elements, it will instantiate the <code>SourceRegion</code>.
+
+=== Resource distribution and memory usage ===
+
+Creating one <code>SourceRegion</code> instance for each code model element may induce some memory usage issues. Considering a given code metamodel, it may be interesting to have a strategy for dispatching model elements (from the composition model) into more than one XMI resource file. 
+
+Thus, the EMF lazy resource loading mechanism enables opening and working with some subpart of the model.
+
+A reference implementation for this strategy is in the 
+[../../../org.eclipse.modisco.java.doc.archi/mediawiki/composition/archi.html#Benchmark Java Application discoverer].
+
+== KDM.Source extension UI : a source code synchronization framework  ==
+
+This component proposes a small framework for synchronizing model element with their source code. The idea is to be able to browse a model of any technology, and to have the possibility to directly navigate to its source code in the right editor.
+
+This framework uses the [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html#KDM.Source_extension_:_a_core_metamodel_for_weaving_Code_models_and_KDM_Inventory_models KDM Extension framework] which deals with weaving a model with its source code
+
+The component exposes two extension points for providing a synchronization strategy; those extensions are to be provided for every technology a code synchronization is needed for.
+[[Image:../../img/kdm_source_extension/MoDisco_SynchronizationStrategy.jpg|frame|center|Extension point for Strategies]]
+
+An example of what the result looks like has been implemented for Java. For more information on how to use it see the [../../../org.eclipse.modisco.java.doc/mediawiki/composition/user.html#Java_source_code_synchronization Java source code synchronization user manual]
+
+[[Image:../../img/kdm_source_extension/MoDisco-CodeSynchronizationDoubleClick.jpg|frame|center|Result of a code synchronization]]
+
+===SourceStrategy===
+This extension point aims at declaring strategies to resolve the ASTNodeSourceRegion of an element
+<pre>
+public interface SourceStrategy {	
+   public ASTNodeSourceRegion getASTNodeSourceRegion(final EObject eObject);	
+   public boolean isApplicableTo(final Notifier target);
+}
+</pre>
+
+* '''getASTNodeSourceRegion''' : Generic method to retrieve the <code>ASTNodeSourceRegion</code> of an element. Each strategy has to implement this method because depending on the technology, the <code>ASTNodeSourceRegion</code> information might be contained by the element itself, or by another model such as the MoDisco Composition one
+* '''isApplicableTo''' : Determines if the source object can be handled by this strategy. Each strategy has to implement this method with its own criteria (most of the time a verification of a metamodel URI will be enough)
+
+===RevealingStrategy===
+This extension point aims at declaring strategies to open the file which contains the element, and then to select it in its editor.
+<pre>
+public interface RevealingStrategy {
+   public void revealInTextEditor(final IFile file,final SourceRegion sourceRegion);
+   public void selectInTextEditor(final IEditorPart iEditorPart,final SourceRegion sourceRegion);
+   public boolean isApplicableTo(final Notifier target);
+}
+</pre>
+
+* '''revealInTextEditor''' : 
+** Parameter file : the file detected by the <code>SourceStrategy</code>
+*'''selectInTextEditor''' : select
+** Parameter iEditorPart : the editor in which the selection has to be done
+*'''isApplicableTo''' : Determines if the source object can be handled by this strategy. Each strategy has to implement this method with its own criteria (most of the time a verification of a metamodel URI will be enough)
+
+===ModelBrowserListener===
+This class only maps the event "doubleClick" in the browser in order to call the <code>openAndSelectEObjectInSourceFile</code> method without adding a dependency between the MoDisco Browser and kdm.source.extension.ui
+
+===SourceAccessAdapter===
+This class extends <code>AdapterImpl</code> to provide a convenient way to manage strategies (''Source/Revealing'') for a given element.
+A <code>SourceAccessAdapter</code> is added to each element which has to be synchronized with its source code.  Thanks to this adapter, strategies are resolved once for an element and then stored in the adapter.
+
+===SourceAccessAdapterFactory===
+This class extends <code>AdapterFactoryImpl</code> to provide the Adapter mechanism implemented to manage extensions.
+
+Available strategies extensions are stored in a singleton way in 2 static lists:
+<pre>
+private static List<SourceStrategy> listSourceStrategy;
+private static List<RevealingStrategy> listRevealingStrategy;
+</pre>
+
+Then each time we need a strategy we use the singleton pattern to get it.
+
+== Team ==
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+* Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins  ==
+
+* org.eclipse.modisco.kdm.source.extension
+* org.eclipse.modisco.kdm.source.extension.ui : code synchronization framework
+* org.eclipse.modisco.kdm.source.extension.ui.browser : connector between Model Browser and code synchronization
+

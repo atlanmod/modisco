@@ -1,0 +1,57 @@
+==JSP Discoverer==
+
+''Quality disclaimer: this JSP Discoverer was tested on many files, both well-formed and not well-formed.''
+
+===User Manual===
+The plug-in provides the user with a contextual menu to easily create JSP models.
+
+By right-clicking on a JSP Project in the Eclipse '''Package Explorer''' view and choosing '''Discovery > Discoverers > Discover JSP Model...''', you can quickly create the JSP model of your application:
+
+[[Image:../../img/jsp/MoDisco_DiscoverJSP_menu.png|frame|center|Menu in Eclipse to create a JSP model from a Java project]]
+
+You can also select one or several files to create a model for each one of them:
+
+[[Image:../../img/jsp/MoDisco_SeveralJSP_Menu.png|frame|center|Menu in Eclipse to create a JSP model from several JSP files]]
+
+A discovery parameters dialog opens to let you specify the parameters of the discovery:
+
+[[Image:../../img/jsp/MoDisco_Launching_discovery_org_eclipse_modisco_jee_jsp_discoverer_resource.png|frame|center|JSP discoverer parameters dialog]]
+
+* Set '''SERIALIZE_TARGET''' to true if you want to save the model to a file
+* You can define '''TARGET_URI''' to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.<br>'''Beware: the file will be overwritten if it already exists!'''
+
+Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:
+
+[[Image:../../img/jsp/MoDisco_discoverer_org_eclipse_modisco_jee_jsp_discoverer_javaElement_in_progress.png|frame|center|Progress dialog during model creation]]
+
+At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:
+
+[[Image:../../img/jsp/MoDisco_JSP_ModelInWorkspace.png|frame|center|JSP model in the Package Explorer]]
+
+And the model is opened in the default model browser if you selected '''Open model in editor after discovery''':
+
+[[Image:../../img/jsp/MoDisco_JSP_inModelBrowser.png|frame|center|JSP model in MoDisco model browser]]
+
+The JSP XMI files (with a filename ending in "_jsp.xmi" by convention) can be opened in any model browser:
+
+[[Image:../../img/jsp/MoDisco_JSP_OpenWith.png|frame|center|Opening a JSP model]]
+
+===Discovery Limitations===
+Because the JSP language is used to generate some content, JSP constructs can be placed almost anywhere in the file, which implies some limitations.
+
+This is why the "isTagFragment : EBoolean" attribute was added. In fact, everything contained in a tag declaration, as in its body, is considered as a children of this tag. It is indeed necessary to be able to differentiate whether the JSP tag is used to generate the tag description, or its body.
+
+Some ways of implementing JSP might cause some problems with the parser, especially for the evaluation of tag attributes. What was expected to be found is some kind of syntax like : 
+
+<code> name="value" </code> or <code> name='value' </code> or even <code> name=value </code>
+
+Sometimes we were faced with implementations like :
+<code><nowiki> <tag name=" <% if(condition){ %>  value1" <% }else{ %>  value2" <% } %> > </nowiki> </code>
+
+The parser finds the opening double quote for the attribute's value, then looks for the closing one. 
+
+The returned value will be:
+
+[[Image:../../img/jsp/JSP_Metamodel_Limit_1.png]]
+
+with an exception raised on the last double quote, because '=' is expected.

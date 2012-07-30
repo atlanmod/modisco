@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="Java" link_to="../org.eclipse.modisco.doc/maintoc.xml#technologies.anchor">
+   <topic label="Java" href="mediawiki/user.html">
+      <topic label="Java metamodel" href="mediawiki/java_metamodel/user.html"/>
+      <topic label="Java discoverer" href="mediawiki/java_discoverer/user.html">
+         <topic label="User documentation" href="mediawiki/java_discoverer/user.html"/>
+         <topic label="Developer Documentation" href="mediawiki/java_discoverer/plugin_dev.html"/>
+      </topic>
+      <topic label="Java generation" href="mediawiki/java_generation/user.html"/>
+      <topic label="Java discoverer benchmark" href="mediawiki/java_discoverer_benchmark/user.html"/>
+      <topic label="Java to KDM" href="mediawiki/java_to_kdm/user.html">
+         <topic label="User documentation" href="mediawiki/java_to_kdm/user.html"/>
+         <topic label="Developer Documentation" href="mediawiki/java_to_kdm/plugin_dev.html"/>
+      </topic>
+   </topic>
+   <topic label="Composition" href="mediawiki/composition/user.html">
+      <topic label="Composition metamodel" href="mediawiki/composition_metamodel/user.html"/>
+      <topic label="Composition discoverer" href="mediawiki/composition_discoverer/user.html">
+         <topic label="User Documentation" href="mediawiki/composition_discoverer/user.html"/>
+         <topic label="Developer Documentation" href="mediawiki/composition_discoverer/plugin_dev.html"/>
+      </topic>
+      <topic label="Java source code synchronization" href="mediawiki/composition_ui/user.html"/>
+   </topic>
+</toc>

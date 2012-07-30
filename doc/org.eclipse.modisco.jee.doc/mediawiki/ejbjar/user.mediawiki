@@ -1,0 +1,23 @@
+== Overview ==
+Reverse engineering use cases on Java/JEE applications require the retrieval of data, via models, for a combination of several established technologies : Java, JSP, xml configuration files, ..
+
+Considering old EJB based applications, some data is stored in EJB xml configuration files (and not as Java annotations), usually named ejb-jar.xml.
+The goal of the Ejb-Jar discoverer plug-in is to allow extraction of information from such ejb-jar.xml files.
+
+''Quality disclaimer: this EjbJar Discoverer was tested on many files, both well-formed and not well-formed.''
+
+== Components ==
+
+* [../ejbjar_metamodel/user.html EjbJar Metamodel]
+* [../ejbjar_discoverer/user.html EjbJar Discoverer]
+** [../ejbjar_discoverer/plugin_dev.html EjbJar Discoverer API]
+* [../ejbjar_generation/user.html EjbJar Generation]
+
+== Team ==
+* Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins ==
+
+* metamodel : org.eclipse.modisco.jee.ejbjar
+* discoverer : org.eclipse.modisco.jee.ejbjar.discoverer

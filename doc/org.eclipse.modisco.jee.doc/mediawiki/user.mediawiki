@@ -1,0 +1,15 @@
+== Overview ==
+This plug-in aims at analyzing project deployment files from the JEE technology. Because a lot of information is stored in those files, it seems really interesting to retrieve the most of it.
+
+The MoDisco project proposes a set of discoverers for JEE configuration files.
+
+Each discoverer targets a meta-model specific to the version of the discovered technology. This guarantees the integrity of the represented information.
+
+== Components ==
+* [jsp/user.html JSP]
+* [ejbjar/user.html EjbJar]
+* [webapp/user.html WebApp]
+
+== Team ==
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+* Nicolas Guyomar ([http://www.mia-software.com Mia-Software])

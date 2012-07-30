@@ -1,0 +1,22 @@
+== Overview ==
+This plug-in aims at analyzing files from Java Server Pages technology and providing a model describing the information found, conforming to the JSP Metamodel
+
+The provided JSP metamodel contains the abstract representation of a JSP file.
+
+[[Image:../../img/jsp/JSP_Browser.png]]
+
+== Components ==
+
+* [../jsp_metamodel/user.html JSP Metamodel]
+* [../jsp_discoverer/user.html JSP Discoverer]
+** [../jsp_discoverer/plugin_dev.html JSP Discoverer API]
+* [../jsp_generation/user.html JSP Generation]
+
+== Team ==
+* Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins ==
+
+* JSP metamodel : org.eclipse.modisco.jee.jsp
+* JSP discoverer : org.eclipse.modisco.jee.jsp.discoverer
+* JSP generator : org.eclipse.modisco.jee.jsp.generation

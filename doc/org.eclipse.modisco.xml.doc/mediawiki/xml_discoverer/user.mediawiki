@@ -1,0 +1,43 @@
+= XML Discoverer =
+
+The goal of the Generic XML Discoverer plug-in is to allow generic extractions of XML information from a XML file, without the need for a metamodel dedicated to a conforming Document Type Definition(DTD) or XML Schema Description (XSD).
+
+== Details ==
+
+Considering XML files conforming to DTD or XSD, it will be more convenient to have some dedicated metamodels to manipulate information. However, Generic XML Discoverer is an alternative for miscellaneous XML files (no or uncommon DTD/XSD).
+
+This plug-in aims at analyzing any XML file providing a model describing the information found, conforming to [../xml_metamodel/user.html#XML_Metamodel the Generic XML metamodel].
+Moreover, it allows to serialize the xml file back from the model. Thus, some M2M transformations might be used jointly to upgrade some xml files. 
+
+Since the metamodel is a subset of W3C XML concepts, the end user should be aware of some limitations in serializing back some advanced XML contents.
+
+== User manual ==
+
+=== Discovering and browsing from contextual menu ===
+
+Right-click on a XML file and select the XML discoverer ('''Discovery > Discoverers > Discover XML Model...'''):
+
+[[Image:../../img/MoDisco_XML_Discoverer_Menu.png|frame|center|Menu in Eclipse to discover a XML model]]
+
+A discovery parameters dialog opens to let you specify the parameters of the discovery:
+
+[[Image:../../img/MoDisco_Launching_discovery_org.eclipse.modisco.xml.discoverer.png]]
+
+* Set '''SERIALIZE_TARGET''' to true if you want to save the model to a file
+* You can define '''TARGET_URI''' to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file with a default name will be created in the project.<br> '''Beware: the file will be overwritten if it already exists!'''
+
+Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your file, the reverse engineering process might take some time to complete:
+
+[[Image:../../img/MoDisco_discoverer_org.eclipse.modisco.xml.discoverer_in_progress.png]]
+
+At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:
+
+[[Image:../../img/MoDisco_testXML_XMI.png|frame|center|XML model in the package explorer]] 
+
+And the model is opened in the default model browser if you selected '''Open model in editor after discovery''':
+
+[[Image:../../img/MoDisco_TestXML_ModelBrowser.png|frame|center|XML model viewed with the MoDisco model browser]]
+
+The model file for the XML file (with a filename ending in "_xml.xmi" by convention) can be opened in any model browser:
+
+[[Image:../../img/MoDisco_XML_XMI_OpenWith.png|frame|center|"Open With" on a XML model]]

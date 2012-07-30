@@ -1,0 +1,44 @@
+= KDM Source Discoverer =
+
+The goal of the KDM Source Discoverer plug-in is to allow practical extractions of KDM Source models from the file hierarchy of an application.
+
+''Quality disclaimer: this KDM Source discoverer has good test coverage compared to the complexity of the discovery process.''
+
+== Details ==
+
+This plug-in aims at analyzing the file system hierarchy of an application and providing a model describing the information found, conforming to the KDM Source sub package:
+
+[[Image:../../img/kdm/MoDisco-Kdm_Source_metamodel.png|frame|center|KDM Source Metamodel (from the KDM Specification v 1.1)]]
+
+The Source package defines a set of meta-model elements whose purpose is to represent the physical artifacts of the
+existing system, such as source files, images, configuration files, resource descriptions, etc.
+
+[[Image:../../img/kdm/MoDisco_KDMSourceDiscoverer_Overview.jpg|frame|center|Overview of the KDM Source Discoverer]]
+
+For an input folder, the KDM source discoverer visits each folder and file. For each file, it creates the appropriate sub-class of InventoryItem using the [[Resources]] content type API. This plugin defines its own content types to properly classify file types.
+
+== User manual ==
+
+Right-click on a project in the Eclipse '''Package Explorer''' view and choose '''Discovery > Discoverers > Discover KDM Source...''' to create the KDM Source model of your application:
+
+[[Image:../../img/kdm/MoDisco_KDM_Discoverer_menu.png|frame|center|Menu in Eclipse to create a KDM Source model from a Java project]]
+
+A discovery parameters dialog opens to let you specify the parameters of the discovery:
+
+[[Image:../../img/kdm/MoDisco_Launching_discovery_org.eclipse.modisco.kdm.source.discoverer.javaElement.png|frame|center|KDM discoverer parameters dialog]]
+
+* Set '''SERIALIZE_TARGET''' to true if you want to save the model to a file
+* You can define '''TARGET_URI''' to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.<br> '''Beware: the file will be overwritten if it already exists!'''
+
+Once launched, a progress dialog will appear as soon as the operation begins:
+
+[[Image:../../img/kdm/MoDisco_discoverer_org.eclipse.modisco.kdm.source.discoverer.javaElement_in_progress.png|frame|center|Progress dialog during model creation]]
+
+At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true, and the model is opened in the default model browser if you selected '''Open model in editor after discovery''':
+
+[[Image:../../img/kdm/MoDisco_KDMSource_DiscoveredModel_inModelBrowser.png|frame|center|KDM Source model in the MoDisco model browser]]
+
+The KDM XMI files (with a filename ending in "_kdm.xmi" by convention) can be opened in any model browser:
+
+[[Image:../../img/kdm/MoDisco_KDMSource_OpenWith.png|frame|center|Opening a KDM Source model]]
+

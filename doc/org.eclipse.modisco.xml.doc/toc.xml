@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="XML" link_to="../org.eclipse.modisco.doc/maintoc.xml#technologies.anchor">
+   <topic label="XML" href="mediawiki/user.html">
+      <topic label="XML Metamodel" href="mediawiki/xml_metamodel/user.html"/>
+      <topic label="XML Discoverer" href="mediawiki/xml_discoverer/user.html">
+         <topic label="User Documentation" href="mediawiki/xml_discoverer/user.html"/>
+         <topic label="Developer Documentation" href="mediawiki/xml_discoverer/plugin_dev.html"/>
+      </topic>
+      <topic label="XML Generation" href="mediawiki/xml_generation/user.html"/>
+   </topic>
+</toc>

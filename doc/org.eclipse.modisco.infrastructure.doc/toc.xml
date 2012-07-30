@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="Infrastructure" link_to="../org.eclipse.modisco.doc/maintoc.xml#infrastructure.anchor.1">
+   <topic label="Model Browser" href="mediawiki/model_browser/user.html">
+	   <topic href="mediawiki/model_browser/user.html" label="User Documentation"/>
+	   <topic href="mediawiki/model_browser/plugin_dev.html" label="Developer Documentation"/>
+   </topic>
+   <topic label="Customization" href="mediawiki/custom/user.html"/>
+   <topic label="Query Manager" href="mediawiki/query_manager/user.html">
+      <topic label="User Documentation" href="mediawiki/query_manager/user.html"/>
+      <topic label="Developer Documentation" href="mediawiki/query_manager/plugin_dev.html"/>
+   </topic>
+   <topic label="Facet Manager" href="mediawiki/facet_manager/user.html">
+      <topic label="User Documentation" href="mediawiki/facet_manager/user.html"/>
+      <topic label="Developer Documentation" href="mediawiki/facet_manager/plugin_dev.html"/>
+   </topic>
+   <topic label="Discovery Manager" href="mediawiki/discovery_manager/overview.html">
+      <topic label="User Documentation" href="mediawiki/discovery_manager/user.html"/>
+      <topic label="Developer Documentation" href="mediawiki/discovery_manager/plugin_dev.html"/>
+   </topic>
+   <topic label="Workflow" href="mediawiki/workflow/user.html">
+      <topic label="User Documentation" href="mediawiki/workflow/user.html"/>
+      <topic label="Developer Documentation" href="mediawiki/workflow/plugin_dev.html"/>
+   </topic>
+   <topic label="KDM Source Extension" href="mediawiki/kdm_source_extension/user.html"/>
+   <topic label="Metrics Visualization Builder" href="mediawiki/metrics_visualization_builder/user.html"/>
+</toc>

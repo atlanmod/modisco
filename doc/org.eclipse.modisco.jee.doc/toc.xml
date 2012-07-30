@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="JEE" link_to="../org.eclipse.modisco.doc/maintoc.xml#technologies.anchor">
+   <topic label="JEE" href="mediawiki/user.html">
+      <topic label="JSP" href="mediawiki/jsp/user.html">
+	      <topic label="JSP metamodel" href="mediawiki/jsp_metamodel/user.html"/>
+	      <topic label="JSP discoverer" href="mediawiki/jsp_discoverer/user.html">
+	         <topic label="User Documentation" href="mediawiki/jsp_discoverer/user.html"/>
+	         <topic label="Developer Documentation" href="mediawiki/jsp_discoverer/plugin_dev.html"/>
+	      </topic>
+	      <topic label="JSP Generation" href="mediawiki/jsp_generation/user.html"/>
+	  </topic>
+      <topic label="Ejbjar" href="mediawiki/ejbjar/user.html">
+	      <topic label="Ejbjar metamodel" href="mediawiki/ejbjar_metamodel/user.html"/>
+	      <topic label="Ejbjar discoverer" href="mediawiki/ejbjar_discoverer/user.html">
+	         <topic label="User Documentation" href="mediawiki/ejbjar_discoverer/user.html"/>
+	         <topic label="Developer Documentation" href="mediawiki/ejbjar_discoverer/plugin_dev.html"/>
+	      </topic>
+	      <topic label="Ejbjar Generation" href="mediawiki/ejbjar_generation/user.html"/>
+	  </topic>
+      <topic label="Webapp" href="mediawiki/webapp/user.html">
+	      <topic label="Webapp metamodel" href="mediawiki/webapp_metamodel/user.html"/>
+	      <topic label="Webapp discoverer" href="mediawiki/webapp_discoverer/user.html">
+	         <topic label="User Documentation" href="mediawiki/webapp_discoverer/user.html"/>
+	         <topic label="Developer Documentation" href="mediawiki/webapp_discoverer/plugin_dev.html"/>
+	      </topic>
+	      <topic label="Webapp Generation" href="mediawiki/webapp_generation/user.html"/>
+	  </topic>
+   </topic>
+</toc>

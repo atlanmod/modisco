@@ -1,0 +1,15 @@
+== prototype to avoid browser freezing with virtual tree ==
+
+Here is the description of a strategy that moves all computations previously done in the UI thread (in the content and label providers) into background jobs.
+It relies on the SWT.VIRTUAL style for the SWT Tree, that allows using a lazy content provider (ILazyTreeContentProvider).
+Together with a label provider that extends CellLabelProvider, that allows doing asynchronous updates (again, in order to not block the UI thread).
+
+It works like this: JFace asks for an update (through the content or label provider), that is enqueued on one of the Jobs (round-robin with the number of Jobs equal to the number of available processors).
+Once the information is computed, it is applied on the UI thread (mandatory with SWT).
+These updates are batched in order to minimize the number of switches to the UI thread.
+
+With this strategy implemented, the browser does not freeze anymore, but it is unfortunately a lot slower on Windows.
+This seems currently unavoidable on Windows (see [https://bugs.eclipse.org/bugs/show_bug.cgi?id=129457 Bug 129457] - Virtual Tree very slow).
+
+This prototype is available on a branch:<br/>
+[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/branches/browser_lazy]

@@ -1,0 +1,145 @@
+= Overview =
+The goal of the '''ModelFilter''' plug-in is to extract specific information from java projects, and to show it as UML models.
+
+* First application is to initialize a graph of dependencies from one selected element, with the level of recursion provided as a parameter.
+* Second application is to show method calls as a pseudo sequence diagram using dependencies between methods, numbered from 1 to n to indicate the order.
+* Third application is to represent the real type of properties when an interface has been used in java code.
+
+''Quality disclaimer: this discoverer is provided without any guarantee: it was only tested on a small number of projects of relatively small sizes. It may not be suitable for production environments.''
+
+=Description=
+
+To discover an application, you may use the [../../../org.eclipse.modisco.usecase.simpletransformationchain.doc/mediawiki/user.html simple transformation chain] to obtain a UML model which represents the whole application structure. Or you may use the '''ModelFilter''' plug-in to focus on different aspects. It could be represented by little models dedicated to one element, or a complete model but with added information. Depending on the complexity of the application and resulting UML model, you will have to select a different kind of model.
+
+The dependencies graph is clearly well fitted to show how several little models could be useful. Representation of method calls as a pseudo sequence could be done by little models or by one complete model; it has been implemented as one model to show how different diagrams have to be used to mask complexity of model elements. And representation of real type for properties show how a complete model could be improved with a few details.
+
+==Dependencies graph==
+
+From a selected class in a java application, you choose the recursion level of the search for dependencies and you will get a UML model which represents a dependencies graph from the selected class. Structural links, like association, inheritance, etc. are of course available, but we have added UML dependencies to show local uses of a type, or method parameters. It is very useful to detect usage of qualified types or usage of a type in the same package.
+
+[[Image:../img/MoDisco_DependenciesOfMapBean_PrefuseGraph.png|frame|center|Sample dependencies graph with local and method parameter dependencies.]]
+
+==Method calls==
+
+To represent method calls as pseudo sequence, we use UML dependencies from one method (caller) to other methods (callee). Each dependency is named with the name of the called method suffixed by a number which represents its order in the sequence of method calls.
+
+[[Image:../img/MoDisco_PetStore_MapBean_MethodCalls_PrefuseGraph.png|frame|center|Sample method calls graph]]
+
+==Real type of properties==
+
+When the type of a property is an interface, it is interesting to represent its real type as a dependency in a UML model:
+
+[[Image:../img/MoDisco_RealType_BidirectionalAssociation_UmlDiagramView.jpg|center|Sample of target UML model with real types as dependencies.]]
+
+=User manual=
+
+To illustrate the ModelFilter plugin and its features, we will use a sample inspired from the [http://java.sun.com/developer/technicalArticles/J2EE/petstore/ Pet Store Application].
+
+==Get and install use case==
+
+The models are available from the [http://wiki.eclipse.org/MoDisco/SVN MoDisco SVN] in subdirectory "examples/trunk/org.eclipse.gmt.modisco.usecase.modelfilter.sample" or from a downloadable archive. If you use a SVN client in Eclipse (Subversive or Subclipse), the project will be immediately available in your Eclipse workspace.
+
+Sources of the Pet Store application are  available here: http://www.oracle.com/technetwork/java/petstore1-3-1-02-139690.html
+
+You may have to download several libraries to obtain an eclipse project without errors (JPA, JTA, JSF-apis and Servlets-jsp-apis).
+A complete bundle is also available from [http://www.mia-software.com/html/miaStudio/download/modisco/examples/javapetstore-2.0-ea5.zip Mia-Software...]
+To view this application in your Eclipse workspace, you will have to extract the content of this archive, and use the "import" wizard (import project in workspace).
+
+==Dependencies graph==
+
+To get the dependencies graph of a particular class, you have to right-click on the class in the '''Package Explorer''', and select '''Discovery > Actions > Display Dependencies'''
+
+[[Image:../img/MoDisco_PetStore_MapBean_DisplayDependencies.png|frame|center|Contextual menu entry for Display Dependencies]]
+
+Then, a graph displaying the dependencies will open:
+
+[[Image:../img/MoDisco_DependenciesOfMapBean_PrefuseGraph.png|frame|center|Dependencies graph]]
+
+==Method calls==
+
+Right-click on a project and select '''Discovery > Actions > Display Method Calls'''. A graph displaying all the method calls will open:
+
+[[Image:../img/MoDisco_PetStore_MethodCalls_PrefuseGraph.png|frame|center|All method calls]]
+
+You will have a better look if we focus on a particular method. For example, the method <code>public List<SelectItem> getCategories()</code> in class MapBean located in package com.sun.javaee.blueprints.petstore.mapviewer.
+
+<pre>
+public List<SelectItem> getCategories() {
+    // return categories for a JSF radio button
+    ArrayList<SelectItem> arCats=new ArrayList<SelectItem>();
+    
+    // get the CatalogFacade for the app
+    FacesContext context=FacesContext.getCurrentInstance();
+    Map<String,Object> contextMap=context.getExternalContext().getApplicationMap();
+    CatalogFacade cf=(CatalogFacade)contextMap.get("CatalogFacade");
+    
+    // get the categories from the database
+    List<Category> catsx=cf.getCategories();
+    for(Category catx : catsx) {
+        // add categories to be displayed in a radio button
+        arCats.add(new SelectItem(catx.getCategoryID(), catx.getName()));
+    }
+    return arCats;
+}
+</pre>
+
+Right-click on the method in the '''Package Explorer''', and select '''Discovery > Actions > Display Method Calls''':
+
+[[Image:../img/MoDisco_DisplayMethodCalls_PetStore_MapBean_getCategories.png|frame|center|Displaying method calls from a single method]]
+
+[[Image:../img/MoDisco_PetStore_MapBean_MethodCalls_PrefuseGraph.png|center|A graph displaying method calls from method "getCategories"]]
+
+==Real type of properties==
+
+To get the UML model with real type of properties, right-click on the java project you would like to inspect, and select '''Discovery > Discoverers > Create UML model with real types information on associations''':
+
+[[Image:../img/MoDisco_CreateUMLModelWithRealTypesOnAssociations_menu.png|frame|center|Context menu item]]
+
+Then, you will have a complete UML model with the real types of Associations:
+
+[[Image:../img/MoDisco_PetStore_RealTypes_inModelBrowser.png|frame|center|UML model with real types of Associations]]
+
+You will have a better look if we focus on a particular association. For example, the properties 
+<pre>
+private Collection<Item> items
+</pre>
+in class Tag and 
+<pre>
+private Collection<Tag> tags
+</pre>
+in class Item both located in package com.sun.javaee.blueprints.petstore.model.
+
+[[Image:../img/MoDisco_RealType_BidirectionalAssociation_UmlDiagramView.jpg|center|A diagram built with Papyrus to show real types.]]
+
+=Current limitations=
+
+==Dependencies graph==
+
+* The dependencies gaph does not reflect some implicit dependencies, for example with nested method calls:
+<pre>
+String entryPagesParam = filterConfig.getServletContext().getInitParameter("entryPages");
+</pre>
+
+==Method calls==
+
+* Diagrams have to be built manually with Papyrus
+* Method calls should be represented with a uml sequence diagram
+
+==Real type of properties==
+
+* Diagrams have to be built manually with Papyrus
+* Initializations through parameters or local variable are not managed
+* Initializations through method calls are not managed
+
+= Team =
+
+* Gabriel Barbier ([http://www.mia-software.com Mia-Software])
+
+= Included Plug-ins =
+
+* org.eclipse.modisco.usecase.modelfilter
+* org.eclipse.modisco.usecase.modelfilter.dependencies.ui
+* org.eclipse.modisco.usecase.modelfilter.methodcalls
+* org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer
+* org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui
+* org.eclipse.modisco.usecase.modelfilter.ui

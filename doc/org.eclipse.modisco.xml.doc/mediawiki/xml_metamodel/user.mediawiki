@@ -1,0 +1,9 @@
+= XML Metamodel =
+
+== Definition ==
+
+[[Image:../../img/XML.ecorediag5.gif|frame|center|Ecore Generic XML metamodel definition]]
+
+Concepts are described in [http://www.w3.org/TR/2008/REC-xml-20081126/ W3C XML Recommendation] (document and logical structures sections).
+Concepts for Document Types Declarations are not managed here.
+Note : there is no composite 'ownedAttribute' reference between Element and Attribute type to avoid ambiguous duplicate owning possibilities considering 'chidren' reference.

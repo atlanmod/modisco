@@ -1,0 +1,29 @@
+<project default="all">
+	<target name="all">
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.infra.omg.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.infrastructure.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.infrastructure.doc.archi"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.java.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.java.doc.archi"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.jee.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.jee.doc.archi"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.usecase.modelfilter.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.usecase.simpletransformationchain.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" dir="../org.eclipse.modisco.xml.doc"/>
+	</target>
+	
+	<target name="clean">
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.infra.omg.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.infrastructure.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.infrastructure.doc.archi"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.java.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.java.doc.archi"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.jee.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.jee.doc.archi"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.usecase.modelfilter.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.usecase.simpletransformationchain.doc"/>
+		<ant antfile="${basedir}/doc-build.xml" target="clean" dir="../org.eclipse.modisco.xml.doc"/>
+	</target>
+</project>

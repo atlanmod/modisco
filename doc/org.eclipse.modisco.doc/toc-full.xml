@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the full table of contents, only used by the XSLT transformation -->
+<!-- When changing the table of contents of a documentation plug-in, copy&paste the changes here -->
+<!-- Then resolve the plugin-relative references by search&replace: "mediawiki/" to "../<plugin>/mediawiki/" -->
+
+<toc label="MoDisco User Guide">
+	<topic label="Infrastructure">
+		<!-- org.eclipse.modisco.infrastructure.doc -->
+		<topic label="Model Browser" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/user.html">
+			<topic href="../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/user.html" label="User Documentation"/>
+			<topic href="../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/plugin_dev.html" label="Developer Documentation"/>
+		</topic>
+		<topic label="Customization" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/custom/user.html"/>
+		<topic label="Query Manager" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/user.html">
+			<topic label="User Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/user.html"/>
+			<topic label="Developer Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/plugin_dev.html"/>
+		</topic>
+		<topic label="Facet Manager" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/facet_manager/user.html">
+			<topic label="User Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/facet_manager/user.html"/>
+			<topic label="Developer Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/facet_manager/plugin_dev.html"/>
+		</topic>
+		<topic label="Discovery Manager" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/discovery_manager/overview.html">
+			<topic label="User Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/discovery_manager/user.html"/>
+			<topic label="Developer Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/discovery_manager/plugin_dev.html"/>
+		</topic>
+		<topic label="Workflow" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/workflow/user.html">
+			<topic label="User Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/workflow/user.html"/>
+			<topic label="Developer Documentation" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/workflow/plugin_dev.html"/>
+		</topic>
+		<topic label="KDM Source Extension" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html"/>
+		<topic label="Metrics Visualization Builder" href="../org.eclipse.modisco.infrastructure.doc/mediawiki/metrics_visualization_builder/user.html"/>
+			
+		<!-- org.eclipse.modisco.infra.omg.doc -->
+		<topic label="KDM" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html">
+			<topic label="KDM Metamodel" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_metamodel/user.html"/>
+			<topic label="KDM Source Discoverer" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_source_discoverer/user.html">
+				 <topic label="User Documentation" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_source_discoverer/user.html"/>
+				 <topic label="Developer Documentation" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_source_discoverer/plugin_dev.html"/>
+			</topic>
+			<topic label="KDM To UML Converter" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_to_uml_converter/user.html">
+				 <topic label="User Documentation" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_to_uml_converter/user.html"/>
+				 <topic label="Developer Documentation" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm_to_uml_converter/plugin_dev.html"/>
+			</topic>
+		</topic>
+		<topic label="SMM" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/smm/user.html">
+			<topic label="SMM Metamodel" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/smm_metamodel/user.html"/>
+		</topic>
+		<topic label="GASTM" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/gastm/user.html">
+			<topic label="GASTM Metamodel" href="../org.eclipse.modisco.infrastructure.doc/../org.eclipse.modisco.infra.omg.doc/mediawiki/gastm_metamodel/user.html"/>
+		</topic>
+	</topic>
+	
+	<topic label="Technologies">
+		<!-- org.eclipse.modisco.java.doc -->
+		<topic label="Java" href="../org.eclipse.modisco.java.doc/mediawiki/user.html">
+			<topic label="Java metamodel" href="../org.eclipse.modisco.java.doc/mediawiki/java_metamodel/user.html"/>
+			<topic label="Java discoverer" href="../org.eclipse.modisco.java.doc/mediawiki/java_discoverer/user.html">
+				<topic label="User documentation" href="../org.eclipse.modisco.java.doc/mediawiki/java_discoverer/user.html"/>
+				<topic label="Developer Documentation" href="../org.eclipse.modisco.java.doc/mediawiki/java_discoverer/plugin_dev.html"/>
+			</topic>
+			<topic label="Java generation" href="../org.eclipse.modisco.java.doc/mediawiki/java_generation/user.html"/>
+			<topic label="Java discoverer benchmark" href="../org.eclipse.modisco.java.doc/mediawiki/java_discoverer_benchmark/user.html"/>
+			<topic label="Java to KDM" href="../org.eclipse.modisco.java.doc/mediawiki/java_to_kdm/user.html">
+				<topic label="User documentation" href="../org.eclipse.modisco.java.doc/mediawiki/java_to_kdm/user.html"/>
+				<topic label="Developer Documentation" href="../org.eclipse.modisco.java.doc/mediawiki/java_to_kdm/plugin_dev.html"/>
+			</topic>
+		</topic>
+		<topic label="Composition" href="../org.eclipse.modisco.java.doc/mediawiki/composition/user.html">
+			<topic label="Composition metamodel" href="../org.eclipse.modisco.java.doc/mediawiki/composition_metamodel/user.html"/>
+			<topic label="Composition discoverer" href="../org.eclipse.modisco.java.doc/mediawiki/composition_discoverer/user.html">
+				<topic label="User Documentation" href="../org.eclipse.modisco.java.doc/mediawiki/composition_discoverer/user.html"/>
+				<topic label="Developer Documentation" href="../org.eclipse.modisco.java.doc/mediawiki/composition_discoverer/plugin_dev.html"/>
+			</topic>
+			<topic label="Java source code synchronization" href="../org.eclipse.modisco.java.doc/mediawiki/composition_ui/user.html"/>
+		 </topic>
+		 
+		<!-- org.eclipse.modisco.jee.doc -->
+		<topic label="JEE" href="../org.eclipse.modisco.jee.doc/mediawiki/user.html">
+			<topic label="JSP" href="../org.eclipse.modisco.jee.doc/mediawiki/jsp/user.html">
+				<topic label="JSP metamodel" href="../org.eclipse.modisco.jee.doc/mediawiki/jsp_metamodel/user.html"/>
+				<topic label="JSP discoverer" href="../org.eclipse.modisco.jee.doc/mediawiki/jsp_discoverer/user.html">
+					 <topic label="User Documentation" href="../org.eclipse.modisco.jee.doc/mediawiki/jsp_discoverer/user.html"/>
+					 <topic label="Developer Documentation" href="../org.eclipse.modisco.jee.doc/mediawiki/jsp_discoverer/plugin_dev.html"/>
+				</topic>
+				<topic label="JSP Generation" href="../org.eclipse.modisco.jee.doc/mediawiki/jsp_generation/user.html"/>
+			</topic>
+			<topic label="Ejbjar" href="../org.eclipse.modisco.jee.doc/mediawiki/ejbjar/user.html">
+				<topic label="Ejbjar metamodel" href="../org.eclipse.modisco.jee.doc/mediawiki/ejbjar_metamodel/user.html"/>
+				<topic label="Ejbjar discoverer" href="../org.eclipse.modisco.jee.doc/mediawiki/ejbjar_discoverer/user.html">
+					<topic label="User Documentation" href="../org.eclipse.modisco.jee.doc/mediawiki/ejbjar_discoverer/user.html"/>
+					<topic label="Developer Documentation" href="../org.eclipse.modisco.jee.doc/mediawiki/ejbjar_discoverer/plugin_dev.html"/>
+				</topic>
+				<topic label="Ejbjar Generation" href="../org.eclipse.modisco.jee.doc/mediawiki/ejbjar_generation/user.html"/>
+			</topic>
+			<topic label="Webapp" href="../org.eclipse.modisco.jee.doc/mediawiki/webapp/user.html">
+				<topic label="Webapp metamodel" href="../org.eclipse.modisco.jee.doc/mediawiki/webapp_metamodel/user.html"/>
+				<topic label="Webapp discoverer" href="../org.eclipse.modisco.jee.doc/mediawiki/webapp_discoverer/user.html">
+					<topic label="User Documentation" href="../org.eclipse.modisco.jee.doc/mediawiki/webapp_discoverer/user.html"/>
+					<topic label="Developer Documentation" href="../org.eclipse.modisco.jee.doc/mediawiki/webapp_discoverer/plugin_dev.html"/>
+				</topic>
+				<topic label="Webapp Generation" href="../org.eclipse.modisco.jee.doc/mediawiki/webapp_generation/user.html"/>
+			</topic>
+		</topic>
+		
+		<!-- org.eclipse.modisco.xml.doc -->
+		<topic label="XML" href="../org.eclipse.modisco.xml.doc/mediawiki/user.html">
+			<topic label="XML Metamodel" href="../org.eclipse.modisco.xml.doc/mediawiki/xml_metamodel/user.html"/>
+			<topic label="XML Discoverer" href="../org.eclipse.modisco.xml.doc/mediawiki/xml_discoverer/user.html">
+				<topic label="User Documentation" href="../org.eclipse.modisco.xml.doc/mediawiki/xml_discoverer/user.html"/>
+				<topic label="Developer Documentation" href="../org.eclipse.modisco.xml.doc/mediawiki/xml_discoverer/plugin_dev.html"/>
+			</topic>
+			<topic label="XML Generation" href="../org.eclipse.modisco.xml.doc/mediawiki/xml_generation/user.html"/>
+		</topic>
+		
+	</topic>
+	
+	<topic label="Usecases">
+		<!-- org.eclipse.modisco.usecase.modelfilter.doc -->
+		<topic label="Modelfilter" href="../org.eclipse.modisco.usecase.modelfilter.doc/mediawiki/user.html"/>
+		<!-- org.eclipse.modisco.usecase.simpletransformationchain.doc -->
+		<topic label="Simple Transformation Chain" href="../org.eclipse.modisco.usecase.simpletransformationchain.doc/mediawiki/user.html">
+			<topic label="User Documentation" href="../org.eclipse.modisco.usecase.simpletransformationchain.doc/mediawiki/user.html"/>
+			<topic label="Developer Documentation" href="../org.eclipse.modisco.usecase.simpletransformationchain.doc/mediawiki/plugin_dev.html"/>
+		</topic>
+	 </topic>
+	 
+	 <topic label="Project Documents">
+	 	<topic href="mediawiki/new_and_noteworthy.html" label="New and Noteworthy"/>
+	 	<topic href="javadoc/index.html" label="API Reference"/>
+	 </topic>
+</toc>

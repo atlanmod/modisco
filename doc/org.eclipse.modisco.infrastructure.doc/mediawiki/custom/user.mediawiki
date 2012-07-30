@@ -1,0 +1,164 @@
+= Customization =
+
+MoDisco defines a customization mechanism, that can be used to define the appearance of model elements when viewed in an editor that supports this customization mechanism.
+
+For example, the MoDisco [../model_browser/user.html Model Browser] can be customized through the use of these customizations.
+
+== Description ==
+A MoDisco customization is a file contained in a MoDisco project inside your Eclipse Workspace, that has the '''uiCustom''' file extension.
+It can also be packaged inside a plug-in for distribution.
+
+Customizations are useful to modify the appearance of any element from its associated metamodel when shown in the Model Browser.
+
+For example, you could specify that all instances of a certain metaclass that have an attribute set to a given value should be displayed in bold with a specific icon.
+
+[[Image:../../img/custom/Customization_example.png]]
+
+=== How it works ===
+Each customizable feature (color, boldness, text font, label, visibility, etc.) can have a default value and a list of conditional values, each one predicated by a [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/user.html query]. The chosen value will be the one corresponding to the first condition that evaluated to "true", or the default value if all conditions were false or none was defined. 
+
+Furthermore, if no default value is provided for a feature, then a default default value will be used, which corresponds to the default behavior of the Model Browser. For example, if the "icon" feature is not customized, then the icon will be given by the "icon provider" extension point or a registered EMF adapter factory. If neither returned an icon, then a generated icon will be used.
+
+[[Image:../../img/custom/MoDisco_UiCustom_Flowchart.png]]
+
+Each value can itself be either a static value (a constant) or a value computed by a [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/user.html query].
+
+== Creating a customization ==
+To create a new MoDisco customization, select a MoDisco project and click on '''New > Other...'''. Then select '''MoDisco > Browser Customization''' in the wizard. Give a name to the customization file, select the metamodel to which the customization will apply, and optionally choose which query sets will be available to the customization.
+
+== Editing a customization ==
+To edit a customization, open its ''uiCustom'' file in Eclipse:
+
+[[Image:../../img/custom/MoDiscoCustomizationEditor.png]]
+
+The ''Types'' section presents a tree of metaclasses from the customized metamodel, each one containing its attributes and references. It is similar to the metaclass pane in the MoDisco Model Browser.
+
+When you select a metaclass, attribute or reference in the ''Types'' section, its customizable features are shown in the ''Customizations'' section.
+
+The right side of the editor presents a list of buttons used for modifying the customizations shown in the ''Customizations'' section.
+
+=== Editing a default value ===
+To edit the default value of a feature, click on the feature in the ''Customizations'' section, and then click on the '''Edit feature value...''' button. Alternatively, you can double-click on the feature.
+
+This opens a dialog where you can choose the value:
+
+[[Image:../../img/custom/MoDisco_uiCustomEditor_DefaultValueDialogs.png]]
+
+You can choose between:
+
+* Default value : remove the customization on the feature's default value
+* Static value : set the default value as a constant (which can be a boolean, a color, a font name, etc.)
+* Value computed by a query : the default value of the feature will be dynamically computed at runtime by the query you select
+
+=== Editing a conditional value ===
+To add a conditional value to a feature, click on the feature in the ''Customizations'' section, then click on the '''Add...''' button.
+You will be presented with the following dialog:
+
+[[Image:../../img/custom/MoDisco_uiCustomEditor_ConditionalValueDialogs.png|802px]]
+
+As for default values, you can choose (in the right pane) between either a static value or a query which will yield the value at runtime.
+
+In addition, you must select a query in the left pane that specifies the condition. This query must have a boolean return type, that will determine at runtime whether the value will be chosen or not.
+
+Once you have added a condition, you can then use the '''Edit...''' button to change it, the '''Remove''' button to remove it, and the '''Up''' and '''Down''' buttons to reorder the conditions.
+
+== What can be customized? ==
+
+{| cellspacing="10" border="0" style="text-align: left;" class="wikitable"
+|-
+! customization
+! description
+|-
+| Is Visible
+| Whether to display the element
+|-
+| Label
+| The text that appears for this element
+|-
+| Text Font Name
+| The font used to display the label
+|-
+| Text Color
+| The color of the Label
+|-
+| Background Color
+| The background color of the Label
+|-
+| Type Icon
+| A 16x16 image to display as icon for this element
+|-
+| Is Bold
+| Whether to display the label in bold
+|-
+| Is Italic
+| Whether to display the label in italic
+|-
+| Is Underlined
+| Whether to underline the label
+|-
+| Is Struckthrough
+| Whether to strike through the label
+|-
+| Hide Metaclass Name
+| Whether to display the metaclass of each element as a prefix of its label ("[Metaclass]")
+|-
+| Visible In Types Panel
+| Whether the metaclass is visible in the "Types" panel
+|-
+| Overlay Icon
+| A 8x8 image to display over the type icon (for Facets only)
+|-
+| Collapse Link
+| Hide the tree node corresponding to the reference. If true the model elements are directly contained by the parent model element. If false the model elements are contained by a link node which is itself contained by the parent model element.
+|}
+
+== Expected queries return types ==
+The queries are expected to return a value of the right type for the feature they customize:
+
+{| class="wikitable" border="1" cellpadding="10" cellspacing="0"
+!Feature 
+!Return type 
+!Example 
+!Comment
+|-
+| Bold, Italic, Struck-through, 
+Underlined, Visible, Hide Metaclass Name
+| Boolean
+| <code>true</code> or <code>false</code>
+| The value can depend on attributes of the model element
+|-
+| Text Color, Background Color
+| String
+| "(255,128,128)"
+| Encoded as (red, green, blue) with integer intensity values in the interval <nowiki>[0,255]</nowiki>
+|-
+| Icon
+| String
+| "/MyModiscoProject/icons/myIcon.gif"
+| A path to a resource relative to the Workspace root, or in an installed plug-in (the first segment is then the plug-in name)
+|-
+| Label
+| String
+| "MyClass (public, final) <nowiki>[proxy]</nowiki>"
+| Typically, the query can add information about attributes or references on the model element
+|}
+
+== How to customize a Facet ==
+
+A facet is a kind of meta-class (EClass) and a facet set a kind of meta-model (EPackage). The facet sets are represented in the meta-model list by their nsURI. To customize a facet set you just have to create a customization pointing to its nsURI. 
+
+[[Image:../../img/custom/MoDisco_FacetCustomization.png]]
+
+== Team  ==
+
+*Nicolas Bros ([http://www.mia-software.com Mia-Software]) 
+*Gabriel Barbier ([http://www.mia-software.com Mia-Software]) 
+*Grégoire Dupé ([http://www.mia-software.com Mia-Software]) 
+*Frédéric Madiot ([http://www.mia-software.com Mia-Software])
+*Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins ==
+* customization metamodel : org.eclipse.gmt.modisco.infra.browser.custom
+* customization core : org.eclipse.gmt.modisco.infra.browser.custom.core
+* customization metamodel editor : org.eclipse.gmt.modisco.infra.browser.custom.editor
+* customization UI components : org.eclipse.gmt.modisco.infra.browser.custom.ui

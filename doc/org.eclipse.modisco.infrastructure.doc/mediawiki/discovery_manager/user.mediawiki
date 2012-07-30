@@ -1,0 +1,24 @@
+= Discovery Manager User Documentation =
+
+== Launching a discoverer ==
+To launch a discoverer, right click on the element you want to discover. It can be a project or file in the Project Explorer for example.
+
+Then, in the MoDisco menu, you will see a list of discoverers applicable to your selection. Choose the one you want to launch:
+
+[[Image:../../img/discovery_manager/MoDisco_DiscovererUI_Menu.png]]
+
+Then, if the discoverer has input parameters, a dialog opens to let you enter these parameters:
+
+[[Image:../../img/discovery_manager/MoDisco_LaunchingDiscovery_Parameters.png]]
+
+Parameters that are marked with an asterisk are mandatory, and you won't be able to click '''OK''' to launch the discovery until you have filled them in.
+
+Single click the '''Value''' column of a parameter to edit it. Check "Open model in editor after discovery" if you want to browse the model immediately after the discovery.
+
+Then, click '''OK''' to start the discovery.
+
+== Discoverers View ==
+
+You can open a view that displays all registered discoverers : go in '''Window > Show View > Other...''' and select '''MoDisco > Discoverers''':
+
+[[Image:../../img/discovery_manager/MoDisco_DiscoverersView.png]]

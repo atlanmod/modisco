@@ -1,0 +1,25 @@
+= Overview =
+This component aims at analyzing Java source code compliant with version 3 of "Java Language Specification" from Oracle and providing a model describing the information found, conforming to the [../../../org.eclipse.modisco.java.doc/mediawiki/user.html#Java_Metamodel Java metamodel].
+
+A Java model contains the full abstract syntax tree of a Java program: each statement such as an attribute definition, method invocation or loop is described. In addition, links between elements are resolved (by resolved link we mean for instance a link between a method invocation and the declaration of this method, or between the usage of a variable and its declaration). The model can thus be seen as an abstract syntax graph (ASG).
+
+= Components =
+
+* [java_metamodel/user.html Java metamodel]
+* [java_discoverer/user.html Java discoverer]
+* [java_generation/user.html Java generation]
+* [java_discoverer_benchmark/user.html Java discoverer benchmark]
+* [java_to_kdm/user.html Java to KDM transformation]
+
+= Team =
+* Gabriel Barbier ([http://www.mia-software.com Mia-Software])
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+* Frédéric Madiot ([http://www.mia-software.com Mia-Software])
+* Romain Dervaux
+
+= Included Plug-ins  =
+
+* Java metamodel : org.eclipse.gmt.modisco.java
+* Java discoverer : org.eclipse.modisco.java.discoverer
+* KDM to UML discoverer : org.eclipse.modisco.kdm.uml2converter
+

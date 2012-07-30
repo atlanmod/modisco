@@ -1,0 +1,29 @@
+= Discoverer API =
+
+First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
+* org.eclipse.modisco.infra.discovery.core
+* org.eclipse.gmt.modisco.xml
+* org.eclipse.modisco.xml.discoverer
+
+You can launch the discovery of a XML model from a file programmatically, and get the resulting model:
+<pre>
+XMLModelDiscoverer discoverer = new XMLModelDiscoverer();
+// you can set some parameters
+discoverer.setIgnoreWhitespace(true);
+discoverer.setLightweightModel(false);
+// launch the discovery
+discoverer.discoverElement(xmlFile, monitor);
+// get the resulting resource containing the XML model
+Resource xmlResource = discoverer.getTargetModel();
+</pre>
+
+To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.
+
+Some options can be set for the discovery operation :
+
+* IGNORE_WHITESPACE : ignore white space in text portions
+* LIGHTWEIGHT : to minimize the memory size of the obtained model. If set to true : comments are ignored, text portions with only spaces and line delimiters are ignored.
+
+The XML content can be serialized back since the model elements are contained in a dedicated org.eclipse.emf.ecore.resource.Resource implementation.
+
+For more details see the java documentation on the XMLModelDiscoverer class.

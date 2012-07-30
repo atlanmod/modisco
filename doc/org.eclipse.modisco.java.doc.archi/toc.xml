@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="Java Architecture" link_to="../org.eclipse.modisco.dev.doc/maintoc.xml#technologies.anchor">
+   <topic label="Java" href="mediawiki/archi.html"/>
+   <topic label="Java Composition" href="mediawiki/composition/archi.html"/>
+</toc>

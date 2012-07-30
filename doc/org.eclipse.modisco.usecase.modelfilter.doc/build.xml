@@ -1,0 +1,5 @@
+<project default="all">
+	<target name="all">
+		<ant antfile="../org.eclipse.modisco.doc/doc-build.xml"></ant>
+	</target>
+</project>

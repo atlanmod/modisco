@@ -1,0 +1,36 @@
+<project default="all">
+	<property name="wikitext.standalone" value="" />
+
+	<path id="wikitext.classpath">
+		<fileset dir="../org.eclipse.modisco.doc/wikitext">
+			<include name="org.eclipse.mylyn.wikitext.*core*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef classpathref="wikitext.classpath" resource="org/eclipse/mylyn/wikitext/core/util/anttask/tasks.properties" />
+
+	<target name="generate-help">
+		<echo>generating help with Mylyn wikitext in basedir:${basedir}</echo>
+
+		<wikitext-to-html markupLanguage="MediaWiki" multipleOutputFiles="false" navigationImages="false" formatoutput="true" useinlinecssstyles="true">
+			<fileset dir="${basedir}">
+				<include name="**/*.mediawiki" />
+			</fileset>
+			<!--
+			<stylesheet url="styles/help.css" />
+			<stylesheet url="styles/main.css" />
+			-->
+		</wikitext-to-html>
+	</target>
+
+	<target name="clean">
+		<echo>deleting generated doc files in basedir:${basedir}</echo>
+		<delete>
+			<fileset dir="${basedir}/mediawiki">
+				<include name="**/*.html" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="all" depends="generate-help" />
+</project>
