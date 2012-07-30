@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xsm:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsm="http://www.eclipse.org/miraz/projects/momocs/momocs.ecore" xmlns:xsm.component="http://www.eclipse.org/miraz/projects/momocs/momocs.ecore#component" xmlns:xsm.information="http://www.eclipse.org/miraz/projects/momocs/momocs.ecore#information" xmlns:xsm.process="http://www.eclipse.org/miraz/projects/momocs/momocs.ecore#process" id="0" name="TravelAgency" description="">
+  <dataTypes xsi:type="xsm:NumberType" id="148" name="Integer"/>
+  <dataTypes xsi:type="xsm:CharacterType" id="149" name="String"/>
+  <tagtype id="3" name="Library" type="149"/>
+  <element xsi:type="xsm.component:Interface" id="5" required="24" offered="20" name="SQL"/>
+  <element xsi:type="xsm.component:Interface" id="6" required="31 34 64 68 72 76 80 121 133 146 174 205 209 213 217 224" offered="23" name="JPA"/>
+  <element xsi:type="xsm.component:Interface" id="7" required="30 35 63 67 71 75 79 175 206 210 214 218 225" offered="27" name="JSP"/>
+  <element xsi:type="xsm.component:Interface" id="8" required="33" offered="173" name="Login">
+    <method id="9" name="CheckAdmin"/>
+  </element>
+  <element xsi:type="xsm.component:Interface" id="10" name="ClientAuthentification"/>
+  <element xsi:type="xsm.component:Interface" id="11" required="83" offered="144" name="OrdersDetails"/>
+  <element xsi:type="xsm.component:Interface" id="12" required="84" offered="119" name="ClientDetailsInterface  "/>
+  <element xsi:type="xsm.component:Interface" id="13" required="82" offered="131" name="TravelList"/>
+  <element xsi:type="xsm.component:Interface" id="14" name="LabelInterface"/>
+  <element xsi:type="xsm.component:Interface" id="15" name="TableInterface"/>
+  <element xsi:type="xsm.component:Interface" id="16" required="81 102 226 227 228" offered="120 132 145" name="TableContentProvider"/>
+  <element xsi:type="xsm.component:Interface" id="17" required="85 104" offered="118" name="ContentProvider"/>
+  <element xsi:type="xsm.component:ComponentType" id="18" name="TravelAgency">
+    <subcomponents id="21" type="19" name="MySQL"/>
+    <subcomponents id="25" type="22" name="Hibernate"/>
+    <subcomponents id="28" type="26" name="TomCat5.0"/>
+    <subcomponents id="258" type="29" name="TravelAgencyWebAPP"/>
+    <connection id="259" offers="20" offersPart="21" requires="24" requiresPart="25"/>
+    <connection id="260" offers="23" offersPart="25" requires="31" requiresPart="258"/>
+    <connection id="261" offers="27" offersPart="28" requires="30" requiresPart="258"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="19" name="MySQL">
+    <offers id="20" to="5" name="port"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="22" name="Hibernate">
+    <offers id="23" to="6" name="port"/>
+    <requires id="24" name="port" to="5"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="26" name="TomCat5.0">
+    <offers id="27" to="7" name="port"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="29" name="TravelAgencyWebAPP">
+    <subcomponents id="171" type="32" name="ClientPart"/>
+    <subcomponents id="252" type="172" name="AdminPart"/>
+    <required id="253" internal="35" internalPart="171" external="30"/>
+    <required id="254" internal="175" internalPart="252" external="30"/>
+    <required id="255" internal="34" internalPart="171" external="31"/>
+    <required id="256" internal="174" internalPart="252" external="31"/>
+    <connection id="257" offers="173" offersPart="252" requires="33" requiresPart="171"/>
+    <requires id="30" name="port" to="7"/>
+    <requires id="31" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="32" name="ClientPart">
+    <behaviour id="36" name="ActivityDiagram " description="" startActivity="54">
+      <activity xsi:type="xsm.process:Activity" id="37" previous="39 40" name="login" description="login">
+        <next id="38" to="57"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="41" previous="43" name="subscribe" description="">
+        <next id="42" to="61"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="44" previous="46 47" name="dashboard" description="">
+        <next id="45" to="59"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="48" previous="50" name="ClientOrders" description="">
+        <next id="49" to="60"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="51" previous="53" name="ShowsClientOrderDetails" description="">
+        <next id="52" to="60"/>
+      </activity>
+      <activity xsi:type="xsm.process:StartActivity" id="54">
+        <next id="39" to="37"/>
+      </activity>
+      <activity xsi:type="xsm.process:EndActivity" id="55" previous="56"/>
+      <activity xsi:type="xsm.process:Decision" id="57" previous="38">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="40" to="37" condition="Authentification Failed"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="43" to="41" condition="New Client"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="58" to="61" condition="Authentification OK"/>
+      </activity>
+      <activity xsi:type="xsm.process:Decision" id="59" previous="45">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="50" to="48" condition="Choose Create ClientOrder"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="53" to="51" condition="ShowDetails"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="56" to="55" condition="ChooseLogOut"/>
+      </activity>
+      <activity xsi:type="xsm.process:Merge" id="60" previous="49 52" decision="59">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="46" to="44" condition=""/>
+      </activity>
+      <activity xsi:type="xsm.process:Merge" id="61" previous="58 42" decision="57">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="47" to="44" condition=""/>
+      </activity>
+    </behaviour>
+    <subcomponents id="65" type="62" name="ClientSubscribe"/>
+    <subcomponents id="69" type="66" name="ClientLogin"/>
+    <subcomponents id="73" type="70" name="ClientsOrderDetails"/>
+    <subcomponents id="77" type="74" name="ClientDetails"/>
+    <subcomponents id="116" type="78" name="ClientDashboard"/>
+    <subcomponents id="129" type="117" name="ClientBean"/>
+    <subcomponents id="142" type="130" name="TravelBean"/>
+    <subcomponents id="150" type="143" name="OrderBean"/>
+    <required id="151" internal="121" internalPart="129" external="34"/>
+    <required id="152" internal="133" internalPart="142" external="34"/>
+    <required id="153" internal="146" internalPart="150" external="34"/>
+    <required id="154" internal="80" internalPart="116" external="34"/>
+    <required id="155" internal="72" internalPart="73" external="34"/>
+    <required id="156" internal="68" internalPart="69" external="34"/>
+    <required id="157" internal="76" internalPart="77" external="34"/>
+    <required id="158" internal="64" internalPart="65" external="34"/>
+    <required id="159" internal="79" internalPart="116" external="35"/>
+    <required id="160" internal="67" internalPart="69" external="35"/>
+    <required id="161" internal="71" internalPart="73" external="35"/>
+    <required id="162" internal="75" internalPart="77" external="35"/>
+    <required id="163" internal="63" internalPart="65" external="35"/>
+    <connection id="164" offers="118" offersPart="129" requires="85" requiresPart="116"/>
+    <connection id="165" offers="119" offersPart="129" requires="84" requiresPart="116"/>
+    <connection id="166" offers="120" offersPart="129" requires="81" requiresPart="116"/>
+    <connection id="167" offers="131" offersPart="142" requires="82" requiresPart="116"/>
+    <connection id="168" offers="132" offersPart="142" requires="81" requiresPart="116"/>
+    <connection id="169" offers="144" offersPart="150" requires="83" requiresPart="116"/>
+    <connection id="170" offers="145" offersPart="150" requires="81" requiresPart="116"/>
+    <requires id="33" name="port" to="8"/>
+    <requires id="34" name="port" to="6"/>
+    <requires id="35" name="port" to="7"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="62" name="ClientSubscribe">
+    <requires id="63" name="port" to="7"/>
+    <requires id="64" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="66" name="ClientLogin">
+    <requires id="67" name="port" to="7"/>
+    <requires id="68" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="70" name="ClientsOrderDetails">
+    <requires id="71" name="port" to="7"/>
+    <requires id="72" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="74" name="ClientDetails">
+    <requires id="75" name="port" to="7"/>
+    <requires id="76" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="78" name="ClientDashboard">
+    <behaviour id="86" name="ActivityDiagram " description="">
+      <activity xsi:type="xsm.process:Activity" id="87" previous="89" name="getClientInformation" description="requires Client information">
+        <next id="88" to="99"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="90" previous="92" name="getTravel" description="Get travel list">
+        <next id="91" to="100"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="93" previous="95" name="getClientsOrders" description="get List of client orders">
+        <next id="94" to="100"/>
+      </activity>
+      <activity xsi:type="xsm.process:StartActivity" id="96">
+        <next id="89" to="87"/>
+      </activity>
+      <activity xsi:type="xsm.process:EndActivity" id="97" previous="98"/>
+      <activity xsi:type="xsm.process:Fork" id="99" previous="88">
+        <next id="92" to="90"/>
+        <next id="95" to="93"/>
+      </activity>
+      <activity xsi:type="xsm.process:Join" id="100" previous="91 94" fork="99">
+        <next id="98" to="97"/>
+      </activity>
+    </behaviour>
+    <subcomponents id="114" type="101" name="Table"/>
+    <required id="115" internal="102" internalPart="114" external="81"/>
+    <requires id="79" name="port" to="7"/>
+    <requires id="80" name="port" to="6"/>
+    <requires id="81" name="port" to="16"/>
+    <requires id="82" name="port" to="13"/>
+    <requires id="83" name="port" to="11"/>
+    <requires id="84" name="port" to="12"/>
+    <requires id="85" name="port" to="17"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="101" name="Table">
+    <tag id="113" name="Tomahawk" type="3">
+      <value xsi:type="xsm:Character" name="" value="JSF.jar"/>
+    </tag>
+    <subcomponents id="106" type="103" name="Label"/>
+    <subcomponents id="109" type="107" name="InputText"/>
+    <subcomponents id="112" type="110" name="Button"/>
+    <requires id="102" name="port" to="16"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="103" name="Label">
+    <tag id="105" name="Tomahawk" type="3">
+      <value xsi:type="xsm:Character" name="" value="JSF.jar"/>
+    </tag>
+    <requires id="104" name="port" to="17"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="107" name="InputText">
+    <tag id="108" name="Tomahawk" type="3">
+      <value xsi:type="xsm:Character" name="" value="JSF.jar"/>
+    </tag>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="110" name="Button">
+    <tag id="111" name="Tomahawk" type="3">
+      <value xsi:type="xsm:Character" name="" value="JSF.jar"/>
+    </tag>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="117" name="ClientBean">
+    <infotype xsi:type="xsm.information:Table" id="122" incoming="123" name="Client">
+      <attribute name="First Name" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <attribute name="LastName" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <attribute name="EMail" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <attribute name="Password" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <attribute name="Id" primaryKey="true" type="148">
+        <defaultValue xsi:type="xsm:Number" name=""/>
+      </attribute>
+    </infotype>
+    <offers id="118" to="17" name="port"/>
+    <offers id="119" to="12" name="port"/>
+    <offers id="120" to="16" name="port"/>
+    <requires id="121" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="130" name="TravelBean">
+    <infotype xsi:type="xsm.information:Table" id="134" incoming="135" name="Travel">
+      <attribute name="Id" primaryKey="true" type="148">
+        <defaultValue xsi:type="xsm:Number" name=""/>
+      </attribute>
+      <attribute name="Dest" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <attribute name="Date" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <attribute name="Price" type="148">
+        <defaultValue xsi:type="xsm:Number" name=""/>
+      </attribute>
+      <attribute name="Capacity" type="148">
+        <defaultValue xsi:type="xsm:Number" name=""/>
+      </attribute>
+      <attribute name="Description" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+    </infotype>
+    <offers id="131" to="13" name="port"/>
+    <offers id="132" to="16" name="port"/>
+    <requires id="133" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="143" name="OrderBean">
+    <infotype xsi:type="xsm.information:Table" id="147" name="Order">
+      <attribute name="Id" primaryKey="true" type="148">
+        <defaultValue xsi:type="xsm:Number" name=""/>
+      </attribute>
+      <attribute name="Number of Travellers" type="149">
+        <defaultValue xsi:type="xsm:Character" name="" value=""/>
+      </attribute>
+      <outgoing id="123" fromMult="ZeroOrMore" toMult="One" to="122"/>
+      <outgoing id="135" fromMult="ZeroOrMore" toMult="One" to="134"/>
+    </infotype>
+    <offers id="144" to="11" name="port"/>
+    <offers id="145" to="16" name="port"/>
+    <requires id="146" name="port" to="6"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="172" name="AdminPart">
+    <behaviour id="176" name="ActivityDiagram " description="" startActivity="196">
+      <activity xsi:type="xsm.process:Activity" id="177" previous="179" name="ClientLogin" description="">
+        <next id="178" to="201"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="180" previous="182 183" name="AdminDashboard" description="">
+        <next id="181" to="202"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="184" previous="186" name="AdminChooseTravel" description="">
+        <next id="185" to="203"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="187" previous="189" name="AdminChooseClient" description="">
+        <next id="188" to="203"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="190" previous="192" name="AdminAddClient" description="">
+        <next id="191" to="203"/>
+      </activity>
+      <activity xsi:type="xsm.process:Activity" id="193" previous="195" name="AdminAddTravel" description="">
+        <next id="194" to="203"/>
+      </activity>
+      <activity xsi:type="xsm.process:StartActivity" id="196">
+        <next id="179" to="177"/>
+      </activity>
+      <activity xsi:type="xsm.process:EndActivity" id="197" previous="198"/>
+      <activity xsi:type="xsm.process:EndActivity" id="199" previous="200"/>
+      <activity xsi:type="xsm.process:Decision" id="201" previous="178">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="198" to="197" condition="Login Failed"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="182" to="180" condition="Login Success"/>
+      </activity>
+      <activity xsi:type="xsm.process:Decision" id="202" previous="181">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="186" to="184" condition="ChooseTravel"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="189" to="187" condition="ChooseClient"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="192" to="190" condition="AddClient"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="195" to="193" condition="AddTravel"/>
+        <next xsi:type="xsm.process:FollowingWithGuard" id="200" to="199" condition="Log out"/>
+      </activity>
+      <activity xsi:type="xsm.process:Merge" id="203" previous="185 188 191 194" decision="202">
+        <next xsi:type="xsm.process:FollowingWithGuard" id="183" to="180" condition=""/>
+      </activity>
+    </behaviour>
+    <offers id="173" to="8" name="port"/>
+    <subcomponents id="207" type="204" name="AdminAddTravel"/>
+    <subcomponents id="211" type="208" name="AdminAddClient"/>
+    <subcomponents id="215" type="212" name="AdminChooseTravel"/>
+    <subcomponents id="219" type="216" name="AdminChooseClient"/>
+    <subcomponents id="220" type="117" name="ClientBean"/>
+    <subcomponents id="221" type="130" name="TravelBean"/>
+    <subcomponents id="222" type="143" name="OrderBean"/>
+    <subcomponents id="235" type="223" name="AdminDashBoard"/>
+    <required id="236" internal="205" internalPart="207" external="174"/>
+    <required id="237" internal="209" internalPart="211" external="174"/>
+    <required id="238" internal="217" internalPart="219" external="174"/>
+    <required id="239" internal="213" internalPart="215" external="174"/>
+    <required id="240" internal="224" internalPart="235" external="174"/>
+    <required id="241" internal="121" internalPart="220" external="174"/>
+    <required id="242" internal="133" internalPart="221" external="174"/>
+    <required id="243" internal="146" internalPart="222" external="174"/>
+    <required id="244" internal="225" internalPart="235" external="175"/>
+    <required id="245" internal="214" internalPart="215" external="175"/>
+    <required id="246" internal="218" internalPart="219" external="175"/>
+    <required id="247" internal="210" internalPart="211" external="175"/>
+    <required id="248" internal="206" internalPart="207" external="175"/>
+    <connection id="249" offers="120" offersPart="220" requires="226" requiresPart="235"/>
+    <connection id="250" offers="132" offersPart="221" requires="227" requiresPart="235"/>
+    <connection id="251" offers="145" offersPart="222" requires="228" requiresPart="235"/>
+    <requires id="174" name="port" to="6"/>
+    <requires id="175" name="port" to="7"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="204" name="AdminAddTravel">
+    <requires id="205" name="port" to="6"/>
+    <requires id="206" name="port" to="7"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="208" name="AdminAddClient">
+    <requires id="209" name="port" to="6"/>
+    <requires id="210" name="port" to="7"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="212" name="AdminChooseTravel">
+    <requires id="213" name="port" to="6"/>
+    <requires id="214" name="port" to="7"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="216" name="AdminChooseClient">
+    <requires id="217" name="port" to="6"/>
+    <requires id="218" name="port" to="7"/>
+  </element>
+  <element xsi:type="xsm.component:ComponentType" id="223" name="AdminDashBoard">
+    <subcomponents id="229" type="101" name="ClientTable"/>
+    <subcomponents id="230" type="101" name="OrderTable"/>
+    <subcomponents id="231" type="101" name="TravelTable"/>
+    <required id="232" internal="102" internalPart="229" external="226"/>
+    <required id="233" internal="102" internalPart="231" external="227"/>
+    <required id="234" internal="102" internalPart="230" external="228"/>
+    <requires id="224" name="port" to="6"/>
+    <requires id="225" name="port" to="7"/>
+    <requires id="226" name="port" to="16"/>
+    <requires id="227" name="port" to="16"/>
+    <requires id="228" name="port" to="16"/>
+  </element>
+</xsm:Model>

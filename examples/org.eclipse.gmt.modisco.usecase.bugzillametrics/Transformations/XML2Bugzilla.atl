@@ -1,0 +1,307 @@
+-- @atlcompiler atl2006
+
+-- ******************************************************************************
+-- Copyright (c) 2006 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@author Hugo Bruneliere (Hugo.Bruneliere <at> gmail.com)
+
+module XML2Bugzilla; -- Module Template
+create OUT : Bugzilla from IN : XML;
+
+helper context XML!Element def: getAttrVal(name : String) : String =
+	let attributes : Sequence(XML!Attribute) = self.children->select(a | a.oclIsKindOf(XML!Attribute) and a.name = name) in
+		if attributes->notEmpty() then
+			attributes->first().value
+		else
+			OclUndefined
+		endif;
+
+helper context XML!Element def: getElement(name : String) : XML!Element =
+	let elements : Sequence(XML!Element) = self.children->select(c | c.oclIsTypeOf(XML!Element) and c.name = name) in
+		if elements->notEmpty() then
+			elements->first()
+		else
+			OclUndefined
+		endif;
+
+helper context XML!Element def: getTextVal() : String =
+	if (self.children->select(c | c.oclIsKindOf(XML!Text))->size() > 0) then
+		self.children->select(c | c.oclIsKindOf(XML!Text))->first().value
+	else
+		''
+	endif;
+
+helper def: getPriority(p : String) : Bugzilla!PriorityType = 
+	if (p = 'P1') then
+		#pt_P1
+	else
+		if (p = 'P2') then
+			#pt_P2
+		else
+			if (p = 'P3') then
+				#pt_P3
+			else
+				if (p = 'P4') then
+					#pt_P4
+				else
+					if (p = 'P5') then
+						#pt_P5
+					else
+						#pt_null
+					endif
+				endif
+			endif
+		endif
+	endif;
+
+helper def: getSeverity(c : String) : Bugzilla!SeverityType = 
+	if (c = 'blocker') then
+		#st_blocker
+	else
+		if (c = 'critical') then
+			#st_critical
+		else
+			if (c = 'major') then
+				#st_major
+			else
+				if (c = 'normal') then
+					#st_normal
+				else
+					if (c = 'minor') then
+						#st_minor
+					else
+						if (c = 'trivial') then
+							#st_trivial
+						else
+							if (c = 'enhancement') then
+								#st_enhancement
+							else
+								#st_null
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif;
+	
+helper def: getStatus(s : String) : Bugzilla!StatusType =
+	if (s = 'UNCONFIRMED') then
+		#st_UNCONFIRMED
+	else
+		if (s = 'NEW') then
+			#st_NEW
+		else
+			if (s = 'ASSIGNED') then
+				#st_ASSIGNED
+			else
+				if (s = 'REOPENED') then
+					#st_REOPENED
+				else
+					if (s = 'RESOLVED') then
+						#st_RESOLVED
+					else 
+						if (s = 'VERIFIED') then
+							#st_VERIFIED
+						else
+							if (s = 'CLOSED') then
+								#st_CLOSED
+							else
+								#st_null
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif;
+
+helper def: getOS(o : String) : Bugzilla!OperatingSystemType =
+	if (o = 'Windows XP') then
+		#"ost_Windows XP"
+	else
+		if (o = 'Linux') then
+			#ost_Linux
+		else
+			if (o = 'Mac' and o = 'Mac OS') then
+				#"ost_Mac OS X 10.3"
+			else
+				if (o = 'All') then
+					#ost_all
+				else
+					#ost_null
+				endif
+			endif
+		endif
+	endif;
+
+helper def: getResolution(r : String) : Bugzilla!ResolutionType =
+	if (r = 'FIXED') then
+		#rt_FIXED
+	else 
+		if (r = 'INVALID') then
+			#rt_INVALID
+	 	else
+			if (r = 'WONTFIX') then
+				#rt_WONTFIX
+			else
+				if (r = 'LATER') then
+					#rt_LATER
+				else
+					if (r = 'REMIND') then
+						#rt_REMIND
+					else
+						if (r = 'DUPLICATE') then
+							#rt_DUPLICATE
+						else
+							if (r = 'WORKSFORME') then
+								#rt_WORKSFORME
+							else
+								if (r = 'MOVED') then
+									#rt_MOVED
+								else
+									#rt_null
+								endif
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif;
+
+helper def: getReportedPlatformType(rpt : String) : Bugzilla!ReportedPlatformType =
+	if (rpt = 'All') then
+		#rpt_all
+	else
+		if (rpt = 'DEC') then
+			#rpt_DEC
+		else
+			if (rpt = 'HP') then
+				#rpt_HP
+			else
+				if (rpt = 'Macintosh') then
+					#rpt_Macintosh
+				else
+					if (rpt = 'PC') then
+						#rpt_PC
+					else 
+						if (rpt = 'SGI') then
+							#rpt_SGI
+						else
+							if (rpt = 'Sun') then
+								#rpt_Sun
+							else
+								if (rpt = 'Other') then
+									#rpt_other
+								else
+									#rpt_null
+								endif
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif;
+
+
+		
+rule Root {
+	from
+		r : XML!Root
+	to
+		o : Bugzilla!BugzillaRoot (
+			bugs <- r.children->select(child | child.oclIsTypeOf(XML!Element) and child.name = 'bug')
+		)
+}
+
+rule CreateBug {
+	from
+		e : XML!Element (
+			e.name = 'bug'
+		)
+	to
+		b : Bugzilla!Bug (
+			bug_id <- e.getElement('bug_id').getTextVal(),
+			creation_ts <- e.getElement('creation_ts').getTextVal(),
+			short_desc <- e.getElement('short_desc').getTextVal(),
+			delta_ts <- e.getElement('delta_ts').getTextVal(),
+			product <- e.getElement('product').getTextVal(),
+			component <- e.getElement('component').getTextVal(),
+			version <- e.getElement('version').getTextVal(),
+			rep_platform <- thisModule.getReportedPlatformType(e.getElement('rep_platform').getTextVal()),
+			op_sys <- thisModule.getOS(e.getElement('op_sys').getTextVal()),
+			bug_status <- thisModule.getStatus(e.getElement('bug_status').getTextVal()),
+			priority <- thisModule.getPriority(e.getElement('priority').getTextVal()),
+			bug_severity <- thisModule.getSeverity(e.getElement('bug_severity').getTextVal()),
+			target_milestone <- e.getElement('target_milestone').getTextVal(),
+			reporter <- e.getElement('reporter').getTextVal(),
+			assigned_to <- e.getElement('assigned_to').getTextVal(),
+			resolution <-  let element : XML!Element = e.getElement('resolution') in
+							if not element.oclIsUndefined() then
+								thisModule.getResolution(element.getTextVal())
+							else
+								#rt_null
+							endif,
+			long_desc <- e.children->select(child | child.oclIsTypeOf(XML!Element) and child.name = 'long_desc'),
+			attachment <- e.children->select(child | child.oclIsTypeOf(XML!Element) and child.name = 'attachment')
+		)
+}
+
+rule CreateLongDesc {
+	from
+		e : XML!Element (
+			e.name = 'long_desc'
+		)
+	to
+		ld : Bugzilla!LongDesc (
+			isPrivate <- if e.getAttrVal('isprivate') = '1' then
+							true
+						else
+							false
+						endif,
+			who <- e.getElement('who').getTextVal(),
+			bug_when <- e.getElement('bug_when').getTextVal(),
+			thetext <- e.getElement('thetext').getTextVal()
+		)
+}
+
+rule CreateAttachment {
+	from
+		e : XML!Element (
+			e.name = 'attachment'
+		)
+	to
+		a : Bugzilla!Attachment (
+			isObsolete <- if e.getAttrVal('isobsolete') = '1' then
+							true
+						else
+							false
+						endif,
+			isPatch <- if e.getAttrVal('ispatch') = '1' then
+							true
+						else
+							false
+						endif,
+			isPrivate <- if e.getAttrVal('isprivate') = '1' then
+							true
+						else
+							false
+						endif,
+			id <- e.getElement('attachid').getTextVal(),
+			date <- e.getElement('date').getTextVal(),
+			desc <- e.getElement('desc').getTextVal(),
+			type <- e.getElement('type').getTextVal(),
+			data <- e.getElement('filename').getTextVal()
+		)
+}

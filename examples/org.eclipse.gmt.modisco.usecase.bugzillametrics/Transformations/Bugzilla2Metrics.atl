@@ -1,0 +1,137 @@
+-- @atlcompiler atl2006
+
+-- ******************************************************************************
+-- Copyright (c) 2006 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@author Hugo Bruneliere (Hugo.Bruneliere <at> gmail.com)
+
+module Bugzilla2Metrics; -- Module Template
+create OUT : Metrics from IN : Bugzilla;
+
+-------------------------------------------------------------------------------
+-- HELPERS --------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-- This helper computes the number of bugs of a given severity type
+-- CONTEXT:	Bugzilla!BugzillaRoot
+-- RETURN:	Integer
+helper context Bugzilla!BugzillaRoot def: NumberOfBugsOfSeverity(severity : Bugzilla!SeverityType) : Integer =
+	self.bugs->select(b | b.bug_severity = severity)->size();
+
+-- This helper computes the percentage of bug of a given severity type
+-- CONTEXT:	Bugzilla!BugzillaRoot
+-- RETURN:	Real
+helper context Bugzilla!BugzillaRoot def: PercentageOfBugsOfSeverity(nbOfBugs : Integer) : Real =
+	nbOfBugs * 100 / self.TotalNumberOfBugs;
+
+-- This helper computes the total number of bugs
+-- CONTEXT:	Bugzilla!BugzillaRoot
+-- RETURN:	Integer
+helper context Bugzilla!BugzillaRoot def: TotalNumberOfBugs : Integer =
+	self.bugs->size();
+
+
+-------------------------------------------------------------------------------
+-- RULES ----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-- Rule 'Bugzilla2SeverityMetric'
+-- This rule generates a metric for evaluating the number of bugs for each severity type.
+rule Bugzilla2SeverityMetric {
+	from
+		br : Bugzilla!BugzillaRoot
+	using {
+		nullMVOrNot : Sequence(Integer) =
+			let nbBugs : Integer = br.NumberOfBugsOfSeverity(#st_null)
+			in
+				if nbBugs = 0
+				then
+					Sequence{}
+				else
+					Sequence{nbBugs}
+				endif;
+	}
+	to
+		m1 : Metrics!Metric (
+			name <- 'Number of bugs per severity type',
+			values <- Sequence{nullMV1, blockerMV1, criticalMV1, majorMV1, normalMV1, minorMV1, trivialMV1, enhancementMV1}
+		),
+		nullMV1 : distinct Metrics!IntegerMetricValue foreach(nbNullBugs in nullMVOrNot) (
+			tag <- 'Null',
+			value <- nbNullBugs
+		),
+		blockerMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Blocker',
+			value <- br.NumberOfBugsOfSeverity(#st_blocker) 
+		), 
+		criticalMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Critical',
+			value <- br.NumberOfBugsOfSeverity(#st_critical)
+		),  
+		majorMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Major',
+			value <- br.NumberOfBugsOfSeverity(#st_major)
+		),
+		normalMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Normal',
+			value <- br.NumberOfBugsOfSeverity(#st_normal)
+		),  
+		minorMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Minor',
+			value <- br.NumberOfBugsOfSeverity(#st_minor)
+		), 
+		trivialMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Trivial',
+			value <- br.NumberOfBugsOfSeverity(#st_trivial)
+		),  
+		enhancementMV1 : Metrics!IntegerMetricValue (
+			tag <- 'Enhancement',
+			value <- br.NumberOfBugsOfSeverity(#st_enhancement)
+		),
+		
+		m2 : Metrics!Metric (
+			name <- 'Percentage of bugs per severity type',
+			values <- Sequence{nullMV2, blockerMV2, criticalMV2, majorMV2, normalMV2, minorMV2, trivialMV2, enhancementMV2}
+		),
+		nullMV2 : distinct Metrics!DoubleMetricValue foreach(nbNullBugs in nullMVOrNot) (
+			tag <- 'Null',
+			value <- br.PercentageOfBugsOfSeverity(nbNullBugs)
+		),
+		blockerMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Blocker',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_blocker))
+		), 
+		criticalMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Critical',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_critical))
+		),  
+		majorMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Major',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_major))
+		),
+		normalMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Normal',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_normal))
+		),  
+		minorMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Minor',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_minor))
+		), 
+		trivialMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Trivial',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_trivial))
+		),  
+		enhancementMV2 : Metrics!DoubleMetricValue (
+			tag <- 'Enhancement',
+			value <- br.PercentageOfBugsOfSeverity(br.NumberOfBugsOfSeverity(#st_enhancement))
+		)
+}

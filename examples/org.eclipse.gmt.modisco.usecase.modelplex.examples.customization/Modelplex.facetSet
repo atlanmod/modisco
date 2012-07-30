@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" name="Modelplex" nsURI="http://www.eclipse.org/MoDisco/examples/ModelplexRoles" nsPrefix="modelplex" facets="//InterfaceExtension //AbstractMethodInvocationExtension //AbstractMethodDeclarationExtension //TypeExtension //VariableDeclarationExtension //PackageExtension //NamedElementExtension">
+  <eClassifiers xsi:type="facet:Facet" name="InterfaceExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//InterfaceDeclaration"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="implementations" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetImplementations"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AbstractMethodInvocationExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodInvocation"/>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="invocationOrder" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#ComputeInvocationOrder"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="caller" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetCallerFromInvocation"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AbstractMethodDeclarationExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="calledMethods" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetCalledMethods"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="subMethods" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetSubMethods"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TypeExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="allSubTypes" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetAllSubTypes"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="subTypes" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetSubTypes"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="usedTypes" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetUsedTypes"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="VariableDeclarationExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//VariableDeclaration"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="allPotentialTypes" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetAllPotentialTypes"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="filteredPotentialTypes" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetFilteredPotentialTypes"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PackageExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Package"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="usedPackages" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Package"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/Modelplex#GetUsedPackages"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NamedElementExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//NamedElement"/>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="qualifiedName" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/textJavaQueries#getQualifiedName"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
+</facet:FacetSet>

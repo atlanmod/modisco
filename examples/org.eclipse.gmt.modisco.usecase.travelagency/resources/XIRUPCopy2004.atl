@@ -1,0 +1,850 @@
+-- ******************************************************************************
+-- Copyright (c) 2007 Txt e-Solutions. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	 Txt e-Solutions - Initial implementation
+--  
+-- ******************************************************************************
+
+--author: Marco Serina Txt e-Solutions
+-- generated with Transformation Tool v1.5
+module XirupCopy2004; -- Module Template
+create OUT : Xirup from IN : Xirup;
+
+--xsm package
+rule ExternalModelReference { 
+	from 
+		s : Xirup!ExternalModelReference
+	to
+		t : Xirup!ExternalModelReference (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			to<-s.to,
+			name<-s.name,
+			description<-s.description,
+			xpath<-s.xpath,
+			from<-s.from
+	)
+}
+
+rule ExternalModel { 
+	from 
+		s : Xirup!ExternalModel
+	to
+		t : Xirup!ExternalModel (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			name<-s.name,
+			type<-s.type,
+			document<-s.document
+	)
+}
+
+rule ExternalModelType{ 
+	from 
+		s : Xirup!ExternalModelType
+	to
+		t : Xirup!ExternalModelType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			name<-s.name,
+			description<-s.description
+	)
+}
+
+rule Metric { 
+	from 
+		s : Xirup!Metric
+	to
+		t : Xirup!Metric (
+			name<-s.name,
+			value<-s.value
+	)
+}
+
+rule Model { 
+	from 
+		s : Xirup!Model
+	to
+		t : Xirup!Model (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			dataTypes<-s.dataTypes,
+			name<-s.name,
+			description<-s.description,
+			tagtype<-s.tagtype,
+			element<-s.element
+	)
+}
+
+
+rule NumberType { 
+	from 
+		s : Xirup!NumberType
+	to
+		t : Xirup!NumberType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			length<-s.length,
+			floatprecision<-s.floatprecision
+	)
+}
+
+rule CharacterType { 
+	from 
+		s : Xirup!CharacterType
+	to
+		t : Xirup!CharacterType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			encoding<-s.encoding,
+			length<-s.length
+	)
+}
+
+
+rule ArrayType { 
+	from 
+		s : Xirup!ArrayType
+	to
+		t : Xirup!ArrayType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			type<-s.type,
+			length<-s.length
+	)
+}
+
+rule StructType { 
+	from 
+		s : Xirup!StructType
+	to
+		t : Xirup!StructType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			elements<-s.elements
+	)
+}
+
+
+rule StructPartType{ 
+	from 
+		s : Xirup!StructPartType
+	to
+		t : Xirup!StructPartType (
+			name<-s.name,
+			type<-s.type
+	)
+}
+
+
+rule Number { 
+	from 
+		s : Xirup!Number
+	to
+		t : Xirup!Number (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			value<-s.value
+	)
+}
+
+rule Character { 
+	from 
+		s : Xirup!Character
+	to
+		t : Xirup!Character (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			value<-s.value
+	)
+}
+
+
+rule Array { 
+	from 
+		s : Xirup!Array
+	to
+		t : Xirup!Array (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			values<-s.values
+	)
+}
+
+
+rule Struct { 
+	from 
+		s : Xirup!Struct
+	to
+		t : Xirup!Struct (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			elements<-s.elements
+	)
+}
+
+
+rule StructPart { 
+	from 
+		s : Xirup!StructPart
+	to
+		t : Xirup!StructPart (
+			value<-s.value,
+			name<-s.name
+	)
+}
+
+
+--xsm.tagging package
+
+
+rule TagType { 
+	from 
+		s : Xirup!TagType
+	to
+		t : Xirup!TagType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			name<-s.name,
+			type<-s.type
+	)
+}
+
+rule Tag { 
+	from 
+		s : Xirup!Tag
+	to
+		t : Xirup!Tag (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			type<-s.type,
+			value<-s.value
+	)
+}
+
+
+--xsm.constraint package
+
+rule Constraint { 
+	from 
+		s : Xirup!Constraint
+	to
+		t : Xirup!Constraint (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			description<-s.description,
+			language<-s.language,
+			expression<-s.expression,
+			severity<-s.severity,
+			constraint<-s.constraint,
+			type<-s.type
+	)
+}
+
+rule SimpleConstraintParameter { 
+	from 
+		s : Xirup!SimpleConstraintParameter
+	to
+		t : Xirup!SimpleConstraintParameter (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			name<-s.name,
+			description<-s.description,
+			type<-s.type,
+			defaultValue<-s.defaultValue
+	)
+}
+
+rule CompositeConstraintParameter { 
+	from 
+		s : Xirup!CompositeConstraintParameter
+	to
+		t : Xirup!CompositeConstraintParameter (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			name<-s.name,
+			description<-s.description,
+			type<-s.type,
+			variable<-s.variable,
+			expression<-s.expression
+	)
+}
+
+rule ConstraintTemplate { 
+	from 
+		s : Xirup!ConstraintTemplate
+	to
+		t : Xirup!ConstraintTemplate (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			description<-s.description,
+			language<-s.language,
+			expression<-s.expression,
+			severity<-s.severity,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			constraintparameter<-s.constraintparameter
+	)
+}
+
+--xsm.component package
+
+rule Interface { 
+	from 
+		s : Xirup!Interface
+	to
+		t : Xirup!Interface (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			required<-s.required,
+			offered<-s.offered,
+			attributetype<-s.attributetype,
+			name<-s.name,
+			method<-s.method
+	)
+}
+
+rule Requires { 
+	from 
+		s : Xirup!Requires
+	to
+		t : Xirup!Requires (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			from<-s.from,
+			name<-s.name,
+			to<-s.to
+	)
+}
+
+rule ComponentType { 
+	from 
+		s : Xirup!ComponentType
+	to
+		t : Xirup!ComponentType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			name<-s.name,
+			library<-s.library,
+			attributetype<-s.attributetype,
+			behaviour<-s.behaviour,
+			infotype<-s.infotype,
+			offers<-s.offers,
+			subcomponents<-s.subcomponents,
+			exposed<-s.exposed,
+			required<-s.required,
+			connection<-s.connection,
+			requires<-s.requires
+	)
+}
+
+rule AttributeType { 
+	from 
+		s : Xirup!AttributeType
+	to
+		t : Xirup!AttributeType (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			name<-s.name,
+			defaultValue<-s.defaultValue,
+			type<-s.type
+	)
+}
+
+rule Method { 
+	from 
+		s : Xirup!Method
+	to
+		t : Xirup!Method (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			inputParameter<-s.inputParameter,
+			outputParameter<-s.outputParameter
+	)
+}
+
+
+rule Offers { 
+	from 
+		s : Xirup!Offers
+	to
+		t : Xirup!Offers (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			to<-s.to,
+			showattribute<-s.showattribute,
+			name<-s.name,
+			from<-s.from
+	)
+}
+
+rule ShowAttribute { 
+	from 
+		s : Xirup!ShowAttribute
+	to
+		t : Xirup!ShowAttribute (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			to<-s.to,
+			from<-s.from
+	)
+}
+
+rule ComponentPart { 
+	from 
+		s : Xirup!ComponentPart
+	to
+		t : Xirup!ComponentPart (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			type<-s.type,
+			name<-s.name
+	)
+}
+
+rule Exposed { 
+	from 
+		s : Xirup!Exposed
+	to
+		t : Xirup!Exposed (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			internal<-s.internal,
+			internalPart<-s.internalPart,
+			external<-s.external
+	)
+}
+
+rule Required { 
+	from 
+		s : Xirup!Required
+	to
+		t : Xirup!Required (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			internal<-s.internal,
+			internalPart<-s.internalPart,
+			external<-s.external
+	)
+}
+
+rule Connection { 
+	from 
+		s : Xirup!Connection
+	to
+		t : Xirup!Connection (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			offers<-s.offers,
+			offersPart<-s.offersPart,
+			requires<-s.requires,
+			requiresPart<-s.requiresPart
+	)
+}
+
+rule ComponentInstance { 
+	from 
+		s : Xirup!ComponentInstance
+	to
+		t : Xirup!ComponentInstance (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			constraint<-s.constraint,
+			attribute<-s.attribute,
+			needs<-s.needs,
+			provides<-s.provides,
+			name<-s.name,
+			infoinstance<-s.infoinstance,
+			type<-s.type,
+			part<-s.part,
+			subComponents<-s.subComponents,
+			superComponent<-s.superComponent
+	)
+}
+
+rule Attribute { 
+	from 
+		s : Xirup!Attribute
+	to
+		t : Xirup!Attribute (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			constraint<-s.constraint,
+			type<-s.type,
+			value<-s.value
+	)
+}
+
+rule Needs { 
+	from 
+		s : Xirup!Needs
+	to
+		t : Xirup!Needs (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constraint<-s.constraint,
+			type<-s.type,
+			delegated<-s.delegated,
+			provider<-s.provider,
+			from<-s.from
+	)
+}
+
+rule Provides { 
+	from 
+		s : Xirup!Provides
+	to
+		t : Xirup!Provides (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constraint<-s.constraint,
+			from<-s.from,
+			type<-s.type,
+			exposed<-s.exposed
+	)
+}
+
+--xsm.process package
+
+rule Following { 
+	from 
+		s : Xirup!Following (not s.oclIsTypeOf(Xirup!FollowingWithGuard))
+	to
+		t : Xirup!Following (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			to<-s.to,
+			from<-s.from
+	)
+}
+
+rule StartActivity { 
+	from 
+		s : Xirup!StartActivity
+	to
+		t : Xirup!StartActivity (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram
+	)
+}
+
+rule EndActivity { 
+	from 
+		s : Xirup!EndActivity
+	to
+		t : Xirup!EndActivity (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram,
+			success<-s.success
+	)
+}
+
+rule Activity { 
+	from 
+		s : Xirup!Activity
+	to
+		t : Xirup!Activity (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram,
+			name<-s.name,
+			description<-s.description,
+			componenttype<-s.componenttype,
+			method<-s.method,
+			datamanipulation<-s.datamanipulation,
+			subactivity<-s.subactivity
+	)
+}
+
+rule DataManipulation { 
+	from 
+		s : Xirup!DataManipulation
+	to
+		t : Xirup!DataManipulation (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			to<-s.to,
+			operation<-s.operation,
+			from<-s.from
+	)
+}
+
+rule SubActivity { 
+	from 
+		s : Xirup!SubActivity
+	to
+		t : Xirup!SubActivity (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			to<-s.to,
+			from<-s.from
+	)
+}
+
+rule Decision { 
+	from 
+		s : Xirup!Decision
+	to
+		t : Xirup!Decision (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram
+	)
+}
+
+rule Merge { 
+	from 
+		s : Xirup!Merge
+	to
+		t : Xirup!Merge (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram,
+			decision<-s.decision
+	)
+}
+
+rule Fork { 
+	from 
+		s : Xirup!Fork
+	to
+		t : Xirup!Fork (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram
+	)
+}
+
+rule Join { 
+	from 
+		s : Xirup!Join
+	to
+		t : Xirup!Join (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			next<-s.next,
+			previous<-s.previous,
+			diagram<-s.diagram,
+			fork<-s.fork
+	)
+}
+
+rule FollowingWithGuard { 
+	from 
+		s : Xirup!FollowingWithGuard
+	to
+		t : Xirup!FollowingWithGuard (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			to<-s.to,
+			from<-s.from,
+			condition<-s.condition
+	)
+}
+
+rule ActivityDiagram { 
+	from 
+		s : Xirup!ActivityDiagram
+	to
+		t : Xirup!ActivityDiagram (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			activity<-s.activity,
+			name<-s.name,
+			description<-s.description,
+			startActivity<-s.startActivity
+	)
+}
+
+--xsm.information package
+
+rule Data { 
+	from 
+		s : Xirup!Data
+	to
+		t : Xirup!Data (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			constraint<-s.constraint,
+			type<-s.type,
+			host<-s.host,
+			database<-s.database,
+			catalog<-s.catalog,
+			table<-s.table
+	)
+}
+
+rule Table { 
+	from 
+		s : Xirup!Table
+	to
+		t : Xirup!Table (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			externalModelReference<-s.externalModelReference,
+			attribute<-s.attribute,
+			outgoing<-s.outgoing,
+			incoming<-s.incoming,
+			name<-s.name
+	)
+}
+
+rule Column { 
+	from 
+		s : Xirup!Column
+	to
+		t : Xirup!Column (
+			name<-s.name,
+			primaryKey<-s.primaryKey,
+			type<-s.type,
+			defaultValue<-s.defaultValue
+	)
+}
+
+rule Relationship { 
+	from 
+		s : Xirup!Relationship
+	to
+		t : Xirup!Relationship (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			fromMult<-s.fromMult,
+			toMult<-s.toMult,
+			to<-s.to,
+			from<-s.from
+	)
+}
+
+

@@ -1,0 +1,222 @@
+-- @atlcompiler atl2006
+
+-- ******************************************************************************
+-- Copyright (c) 2007 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@author Hugo Bruneliere (Hugo.Bruneliere <at> gmail.com)
+
+module RelationalDBContent2ClassicModels; -- Module Template
+create OUT : ClassicModels from IN : RelationalDBContent;
+
+-------------------------------------------------------------------------------
+-- HELPERS --------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-- This helper returns the tuples of a certain table that corresponds to a given id
+-- CONTEXT:	RelationalDBContent!DataBase
+-- RETURN:	Sequence(RelationalDBContent!Tuples)
+helper context RelationalDBContent!DataBase def: getTuplesFromTableAndIds(tableName : String, elementNumber : Integer, elementId : String) : Sequence(RelationalDBContent!Tuples) =
+	self.tables->select(t | t.name = tableName)->first().tuples
+		->select(t | t.elements->at(elementNumber).value = elementId);
+	
+
+-------------------------------------------------------------------------------
+-- RULES ----------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-- Rule 'DataBase2ClassicModels'
+-- This rule generates the ClassicModels root element from the DataBase one.
+rule DataBase2ClassicModels {
+	from
+		db : RelationalDBContent!DataBase
+	to
+		cm : ClassicModels!ClassicModels (
+			-- the different elements are adding to the root element by the following rules...
+			offices <- db.tables->select(t | t.name='offices')->first().tuples,
+			productLines <- db.tables->select(t | t.name='productlines')->first().tuples,
+			customers <- db.tables->select(t | t.name='customers')->first().tuples
+		)
+}
+
+-- Rule 'OfficeCreation'
+-- This rule generates an Office element from a Tuple element of the "offices" Table.
+rule OfficeCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'offices'
+		)
+	to
+		of : ClassicModels!Office (
+			code <- tuple.elements->at(1).value,
+			city <- tuple.elements->at(2).value,
+			phone <- tuple.elements->at(3).value,
+			addressLine1 <- tuple.elements->at(4).value,
+			addressLine2 <- tuple.elements->at(5).value,
+			state <- tuple.elements->at(6).value,
+			country <- tuple.elements->at(7).value,
+			postalCode <- tuple.elements->at(8).value,
+			territory <- tuple.elements->at(9).value
+		)
+}
+
+-- Rule 'EmployeeCreation'
+-- This rule generates an Employee element from a Tuple element of the "employees" Table.
+rule EmployeeCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'employees'
+		)
+	to
+		em : ClassicModels!Employee (
+			office <- tuple.owner.database.getTuplesFromTableAndIds('offices', 1, tuple.elements->at(6).value)->first(),	
+			number <- tuple.elements->at(1).value.toInteger(),
+			lastName <- tuple.elements->at(2).value,
+			firstName <- tuple.elements->at(3).value,
+			extension <- tuple.elements->at(4).value,
+			email <- tuple.elements->at(5).value,
+			reportsTo <- tuple.owner.database.getTuplesFromTableAndIds('employees', 1, tuple.elements->at(7).value)->first(),
+			jobTitle <- tuple.elements->at(8).value
+		)
+}
+
+-- Rule 'CustomerCreation'
+-- This rule generates a Customer element from a Tuple element of the "customers" Table.
+rule CustomerCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'customers'
+		) 
+	to
+		cu : ClassicModels!Customer (
+			number <- tuple.elements->at(1).value.toInteger(),
+			name <- tuple.elements->at(2).value,
+			contactLastName <- tuple.elements->at(3).value,
+			contactFirstName <- tuple.elements->at(4).value,
+			phone <- tuple.elements->at(5).value,
+			addressLine1 <- tuple.elements->at(6).value,
+			addressLine1 <- tuple.elements->at(7).value,
+			city <- tuple.elements->at(8).value,
+			state <- tuple.elements->at(9).value,
+			postalCode <- tuple.elements->at(10).value,
+			country <- tuple.elements->at(11).value,
+			salesRepEmployee <- tuple.owner.database.getTuplesFromTableAndIds('employees', 1, tuple.elements->at(12).value)->first(),
+			creditLimit <- tuple.elements->at(13).value.toReal()
+		)
+}
+
+-- Rule 'ProductLineCreation'
+-- This rule generates a ProductLine element from a Tuple element of the "productlines" Table.
+rule ProductLineCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'productlines'
+		)
+	to
+		pl : ClassicModels!ProductLine (
+			name <- tuple.elements->at(1).value,
+			textDescription <- tuple.elements->at(2).value,
+			htmlDescription <- tuple.elements->at(3).value
+		)
+}
+
+-- Rule 'ProductCreation'
+-- This rule generates a Product element from a Tuple element of the "products" Table.
+rule ProductCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'products'
+		)
+	to
+		pr : ClassicModels!Product (
+			productLine <- tuple.owner.database.getTuplesFromTableAndIds('productlines', 1, tuple.elements->at(3).value)->first(),	
+			code <- tuple.elements->at(1).value,
+			name <- tuple.elements->at(2).value,
+			scale <- tuple.elements->at(4).value,
+			vendor <- tuple.elements->at(5).value,
+			description <- tuple.elements->at(6).value,
+			quantityInStock <- tuple.elements->at(7).value.toInteger(),
+			buyPrice <- tuple.elements->at(8).value.toReal(),
+			MSRP <- tuple.elements->at(9).value.toReal()
+		)
+}
+
+-- Rule 'PaymentCreation'
+-- This rule generates a Payment element from a Tuple element of the "payments" Table.
+rule PaymentCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'payments'
+		)
+	to
+		pa : ClassicModels!Payment (
+			customer <- tuple.owner.database.getTuplesFromTableAndIds('customers', 1, tuple.elements->at(1).value)->first(),	
+			checkNumber <- tuple.elements->at(2).value,
+			date <- thisModule.DateCreation(tuple.elements->at(3).value),
+			amount <- tuple.elements->at(4).value.toReal()
+		)
+}
+
+-- Rule 'OrderCreation'
+-- This rule generates a Order element from a Tuple element of the "orders" Table.
+rule OrderCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'orders'
+		)
+	to
+		od : ClassicModels!Order (
+			customer <- tuple.owner.database.getTuplesFromTableAndIds('customers', 1, tuple.elements->at(7).value)->first(),	
+			number <- tuple.elements->at(1).value.toInteger(),
+			date <- thisModule.DateCreation(tuple.elements->at(2).value),
+			requiredDate <- thisModule.DateCreation(tuple.elements->at(3).value),
+			shippedDate <- if not tuple.elements->at(4).value.oclIsUndefined() then
+								thisModule.DateCreation(tuple.elements->at(4).value)
+						   else
+						   		ClassicModels!Date
+						   endif,
+			status <- tuple.elements->at(5).value,
+			comments <- tuple.elements->at(6).value,
+			orderDetails <- tuple.owner.database.getTuplesFromTableAndIds('orderdetails', 1, tuple.elements->at(1).value)
+								->sortedBy(t | t.elements->at(5).value.toInteger())
+								->collect(t | thisModule.resolveTemp(t,'odet'))->asSequence()
+		)
+}
+
+-- Rule 'OrderDetailCreation'
+-- This rule generates a OrderDetail element from a Tuple element of the "orderdetails" Table.
+rule OrderDetailCreation {
+	from
+		tuple : RelationalDBContent!"Tuple" (
+			tuple.owner.name = 'orderdetails'
+		)
+	to
+		odet : ClassicModels!OrderDetail (
+			product <- tuple.owner.database.getTuplesFromTableAndIds('products', 1, tuple.elements->at(2).value)->first(),
+			quantityOrdered <- tuple.elements->at(3).value.toInteger(),
+			priceEach <- tuple.elements->at(4).value.toReal()
+		)
+}
+
+
+-- Rule 'DateCreation'
+-- This rule generates a Date element from a String when it is explicitly called
+rule DateCreation(dateString : String) {
+	to
+		d : ClassicModels!Date (
+			year <- dateString.substring(1,4).toInteger(),
+			month <- dateString.substring(6,7).toInteger(),
+			day <- dateString.substring(9,10).toInteger()
+		)
+	do {
+		d;
+	}
+}

@@ -1,0 +1,46 @@
+<!--
+/********************************************************************************
+ * Copyright (c) 2007 INRIA. 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors: 
+ *     INRIA - Initial implementation
+ *     
+ ******************************************************************************/
+-->
+
+<!-- author: Hugo Bruneliere -->
+ 	
+<project name="BIRTSampleDB_MoDisco-UseCase" default="generateModel">
+
+	<target name="generateModel" depends="loadMetamodels">
+		
+		<!-- Load the RelationalDBContent model -->
+		<am3.loadModel modelHandler="EMF" name="BIRTSampleDB-content" metamodel="RelationalDBContent" path="Inputs/BIRTSampleDB-content.xmi"/>
+		
+		<!-- Generate the RelationalDBContent model from the ClassicModels model -->		
+		<am3.atl path="Transformations/RelationalDBContent2ClassicModels.atl">
+			<inModel name="IN" model="BIRTSampleDB-content"/>
+			<inModel name="RelationalDBContent" model="RelationalDBContent"/>
+			<inModel name="ClassicModels" model="ClassicModels"/>
+			<outModel name="OUT" model="BIRTSampleDB-classicModels" metamodel="ClassicModels"/>
+		</am3.atl>
+		<am3.saveModel model="BIRTSampleDB-classicModels" path="Outputs/BIRTSampleDB-classicModels.xmi"/>
+		
+	</target>
+	
+	
+	<target name="loadMetamodels">
+
+		<!-- Load RelationalDBContent metamodel -->
+		<am3.loadModel modelHandler="EMF" name="RelationalDBContent" metamodel="MOF" path="Metamodels/RelationalDBContent.ecore" />
+					
+		<!-- Load ClassicModels metamodel -->
+		<am3.loadModel modelHandler="EMF" name="ClassicModels" metamodel="MOF" path="Metamodels/ClassicModels.ecore" />
+		
+	</target>
+	
+</project>

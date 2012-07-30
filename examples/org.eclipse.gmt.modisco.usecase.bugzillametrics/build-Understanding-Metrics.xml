@@ -1,0 +1,46 @@
+<!--
+/********************************************************************************
+ * Copyright (c) 2007 INRIA. 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors: 
+ *     INRIA - Initial implementation
+ *     
+ ******************************************************************************/
+-->
+
+<!-- author: Hugo Bruneliere -->
+
+<project name="BugzillaModel-Understanding" default="understand">
+
+	<target name="understand" depends="loadMetamodels">
+		
+		<!-- Load the Bugzilla model -->
+		<am3.loadModel modelHandler="EMF" name="Bugs_GMT-Bugzilla" metamodel="Bugzilla" path="Outputs/Bugzilla/Bugs_GMT-Bugzilla.xmi"/>
+		
+		<!-- Generate the Metrics model from the Bugzilla model -->		
+		<am3.atl path="Transformations/Bugzilla2Metrics.atl">
+			<inModel name="IN" model="Bugs_GMT-Bugzilla"/>
+			<inModel name="Bugzilla" model="Bugzilla"/>
+			<inModel name="Metrics" model="Metrics"/>
+			<outModel name="OUT" model="Bugs_GMT-Metrics" metamodel="Metrics"/>
+		</am3.atl>
+		<am3.saveModel model="Bugs_GMT-Metrics" path="Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
+		
+	</target>
+	
+	
+	<target name="loadMetamodels">
+
+		<!-- Load Bugzilla metamodel -->
+		<am3.loadModel modelHandler="EMF" name="Bugzilla" metamodel="MOF" path="Metamodels/Bugzilla.ecore" />
+		
+		<!-- Load Metrics metamodel -->
+		<am3.loadModel modelHandler="EMF" name="Metrics" metamodel="MOF" path="/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/Metamodels/Metrics.ecore" />
+		
+	</target>
+	
+</project>

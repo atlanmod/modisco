@@ -1,0 +1,138 @@
+-- ******************************************************************************
+-- Copyright (c) 2007 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+-- @name		ClassicModels
+-- @version		1.0
+-- @domains		Database, Eclipse, Business reporting, BIRT
+-- @authors		Hugo Bruneliere (hugo.bruneliere <at> univ-nantes.fr)
+-- @date		2007/02/16
+-- @description	This metamodel simply describes the "ClassicModels" BIRT Sample database which is a simple example of typical business data such as customers, orders, order line items, products and so on.
+-- @see			The Eclipse BIRT project: http://www.eclipse.org/birt/phoenix/
+
+package ClassicModels {
+	
+	-- @begin  Utils
+	
+	abstract class AddressInfo {
+		attribute phone : String;
+		attribute addressLine1 : String;
+		attribute addressLine2 : String;
+		attribute city : String;
+		attribute state : String;
+		attribute postalCode : String;
+		attribute country : String;
+	}
+	
+	class Date {
+		attribute year : Integer;
+		attribute month : Integer;
+		attribute day : Integer;
+	}
+	
+	-- @end Utils
+	
+	
+	class ClassicModels {
+		reference offices[*] container : Office oppositeOf officeOwner;
+		reference productLines[*] container : ProductLine oppositeOf productLineOwner;
+		reference customers[*] container : Customer oppositeOf customerOwner;
+	}
+	
+	class ProductLine {
+		reference productLineOwner : ClassicModels oppositeOf productLines;
+		reference products[*] container : Product oppositeOf productLine;
+	
+		attribute name : String;
+		attribute textDescription : String;
+		attribute htmlDescription : String;
+	}
+	
+	class Product {
+		reference productLine : ProductLine oppositeOf products;
+		
+		attribute code : String;
+		attribute name : String;
+		attribute scale : String;
+		attribute vendor : String;
+		attribute description : String;
+		attribute quantityInStock : Integer;
+		attribute buyPrice : Double;
+		attribute MSRP : Double;
+	}
+	
+	class Office extends AddressInfo {
+		reference officeOwner : ClassicModels oppositeOf offices;
+		
+		attribute code : String;
+		reference employees[*] container : Employee oppositeOf office;
+		attribute territory : String;
+	}
+	
+	class Employee {
+		reference office : Office oppositeOf employees;
+		
+		attribute number : Integer;
+		reference employeeCustomers[*] : Customer oppositeOf salesRepEmployee;
+		attribute lastName : String;
+		attribute firstName : String;
+		attribute extension : String;
+		attribute email : String;
+		reference reportsTo : Employee;
+		attribute jobTitle : String;
+	}
+	
+	class Customer extends AddressInfo {
+		reference customerOwner : ClassicModels oppositeOf customers;
+		
+		attribute number : Integer;
+		reference "orders"[*] ordered container : Order oppositeOf customer;
+		reference payments[*] ordered container : Payment oppositeOf customer;
+		reference salesRepEmployee : Employee oppositeOf employeeCustomers;
+		attribute name : String;
+		attribute contactLastName : String;
+		attribute contactFirstName :String;
+		attribute creditLimit : Double; 
+	}
+	
+	class Payment {
+		reference customer : Customer oppositeOf payments;
+		attribute checkNumber : String;
+		reference date container : Date;
+		attribute amount : Double;
+	}
+	
+	class Order {
+		reference customer : Customer oppositeOf "orders";
+		reference orderDetails[*] ordered container : OrderDetail oppositeOf order;		
+		attribute number : Integer;
+		reference date container : Date;
+		reference requiredDate container : Date;
+		reference shippedDate[0-1] container : Date;
+		attribute status : String;
+		attribute comments : String;	
+	}
+	
+	class OrderDetail {
+		reference order : Order oppositeOf orderDetails;
+		
+		reference product : Product;
+		attribute quantityOrdered : Integer;
+		attribute priceEach : Double;
+	}
+	
+}
+
+package PrimitiveTypes {
+	datatype String;
+	datatype Integer;
+	datatype Double;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xsm:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsm="http://www.eclipse.org/miraz/projects/momocs/momocs.ecore" xmlns:xsm.component="http://www.eclipse.org/miraz/projects/momocs/momocs.ecore#component" id="0" name="Oracle" description="">
+  <element xsi:type="xsm.component:Interface" id="1" offered="3" name="SQL"/>
+  <element xsi:type="xsm.component:ComponentType" id="2" name="Oracle">
+    <metric name="Maximum Number of Connections" value="100.0"/>
+    <offers id="3" to="1" name="Offers  "/>
+  </element>
+</xsm:Model>
