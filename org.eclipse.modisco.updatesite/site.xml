@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Copyright (c) 2012 Mia-Software.
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html	
+
+Contributors:
+	Gregoire DUPE (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
+-->
+<site>
+   <feature url="features/org.eclipse.modisco.dev.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.dev.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.examples.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.examples.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.infra.cdo.derby.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.infra.cdo.derby.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.cdo"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.infra.discovery.benchmark.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.infra.omg.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.infra.omg.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.infrastructure.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.infrastructure.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.java.cdo.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.java.cdo.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.cdo"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.java.discoverer.benchmark.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.java.discoverer.benchmark.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.java.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.java.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.jee.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.jee.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.sdk.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.sdk.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.mian"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.tests.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.tests.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.usecase.modelfilter.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.usecase.modelfilter.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.usecases"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.usecase.simpletransformationschain.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.usecases"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.utils.chart.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.utils.chart.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature url="features/org.eclipse.modisco.xml.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.xml.feature" version="0.10.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <category-def name="org.eclipse.modisco.updatesite.infrastructure" label="Infrastrucutre"/>
+   <category-def name="org.eclipse.modisco.updatesite.technologies" label="Technologies"/>
+   <category-def name="org.eclipse.modisco.updatesite.cdo" label="CDO Adapters"/>
+   <category-def name="org.eclipse.modisco.updatesite.usecases" label="Usecases"/>
+   <category-def name="org.eclipse.modisco.updatesite.dev" label="MoDisco developpers tools"/>
+   <category-def name="org.eclipse.modisco.updatesite.mian" label="MoDisco"/>
+</site>
