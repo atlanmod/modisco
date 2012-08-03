@@ -30,9 +30,6 @@
    <feature url="features/org.eclipse.modisco.sdk.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.sdk.feature" version="0.10.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.mian"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.tests.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.tests.feature" version="0.10.1.qualifier">
-      <category name="org.eclipse.modisco.updatesite.dev"/>
-   </feature>
    <feature url="features/org.eclipse.modisco.usecase.modelfilter.feature_0.10.1.qualifier.jar" id="org.eclipse.modisco.usecase.modelfilter.feature" version="0.10.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.usecases"/>
    </feature>
