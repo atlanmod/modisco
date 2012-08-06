@@ -21,12 +21,10 @@ import org.eclipse.swt.widgets.Composite;
  */
 public class MultiIProjectCompositeFactory implements ICompositeEditorFactory<IProjectSet> {
 
-	@Override
 	public Class<IProjectSet> getHandledType() {
 		return IProjectSet.class;
 	}
 
-	@Override
 	public AbstractCellEditorComposite<IProjectSet> createCompositeEditor(
 			final Composite parent, final int style) {
 		return new MultiIProjectComposite(parent, style);

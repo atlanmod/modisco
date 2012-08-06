@@ -158,7 +158,6 @@ public class DiscovererListComposite extends AbstractCellEditorComposite<IDiscov
 		return this.parentControl;
 	}
 
-	@Override
 	public IDiscovererList getValue() {
 		return this.discoverers;
 	}
@@ -237,7 +236,6 @@ public class DiscovererListComposite extends AbstractCellEditorComposite<IDiscov
 	}
 
 
-	@Override
 	public void setValue(final IDiscovererList value) {
 		if (value != null) {
 			this.discoverers = value;

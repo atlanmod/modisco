@@ -20,12 +20,10 @@ import org.eclipse.swt.widgets.Composite;
  */
 public class DiscovererListCompositeFactory implements ICompositeEditorFactory<IDiscovererList> {
 
-	@Override
 	public Class<IDiscovererList> getHandledType() {
 		return IDiscovererList.class;
 	}
 
-	@Override
 	public DiscovererListComposite createCompositeEditor(
 			final Composite parent, final int style) {
 		return new DiscovererListComposite(parent, style);

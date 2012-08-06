@@ -144,7 +144,6 @@ public class MultiIProjectComposite extends AbstractCellEditorComposite<IProject
 		return this.parentControl;
 	}
 
-	@Override
 	public IProjectSet getValue() {
 		return this.projects;
 	}
@@ -186,7 +185,6 @@ public class MultiIProjectComposite extends AbstractCellEditorComposite<IProject
 		}
 	}
 
-	@Override
 	public void setValue(final IProjectSet value) {
 		this.projects = value;
 		if (this.projects == null) {
