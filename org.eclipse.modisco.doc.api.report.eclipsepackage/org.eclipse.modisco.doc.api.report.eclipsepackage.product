@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="0.10.1.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -194,21 +194,21 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="org.eclipse.uml2"/>
       <feature id="org.eclipse.swtbot"/>
       <feature id="org.eclipse.swtbot.eclipse"/>
-      <feature id="org.eclipse.modisco.all.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.examples.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.infra.cdo.derby.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.infra.omg.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.infrastructure.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.java.cdo.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.java.discoverer.benchmark.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.java.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.jee.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.sdk.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.usecase.modelfilter.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.utils.chart.feature" version="0.10.1.qualifier"/>
-      <feature id="org.eclipse.modisco.xml.feature" version="0.10.1.qualifier"/>
+      <feature id="org.eclipse.modisco.all.feature"/>
+      <feature id="org.eclipse.modisco.examples.feature"/>
+      <feature id="org.eclipse.modisco.infra.cdo.derby.feature"/>
+      <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature"/>
+      <feature id="org.eclipse.modisco.infra.omg.feature"/>
+      <feature id="org.eclipse.modisco.infrastructure.feature"/>
+      <feature id="org.eclipse.modisco.java.cdo.feature"/>
+      <feature id="org.eclipse.modisco.java.discoverer.benchmark.feature"/>
+      <feature id="org.eclipse.modisco.java.feature"/>
+      <feature id="org.eclipse.modisco.jee.feature"/>
+      <feature id="org.eclipse.modisco.sdk.feature"/>
+      <feature id="org.eclipse.modisco.usecase.modelfilter.feature"/>
+      <feature id="org.eclipse.modisco.usecase.simpletransformationschain.feature"/>
+      <feature id="org.eclipse.modisco.utils.chart.feature"/>
+      <feature id="org.eclipse.modisco.xml.feature"/>
    </features>
 
 
