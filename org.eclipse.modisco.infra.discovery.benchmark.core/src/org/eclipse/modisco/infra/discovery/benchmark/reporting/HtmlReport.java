@@ -280,7 +280,6 @@ public class HtmlReport extends AbstractAcceleoGenerator {
      * @generated
      * @since 3.1
      */
-    @Override
     public void addPropertiesFile(String propertiesFile) {
         this.propertiesFiles.add(propertiesFile);
     }

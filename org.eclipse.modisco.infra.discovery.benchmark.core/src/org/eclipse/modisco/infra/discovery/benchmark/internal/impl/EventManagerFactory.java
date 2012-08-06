@@ -21,7 +21,6 @@ import org.eclipse.modisco.infra.discovery.benchmark.api.IEventManagerFactory;
 public class EventManagerFactory implements IEventManagerFactory {
 
 	
-	@Override
 	public IEventManager createEventManager() {
 		return new EventManager();
 	}

@@ -49,7 +49,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#getDiscoverers()
 	 */
-	@Override
 	public List<Discovery> getDiscoverers() {
 		return this.discoverers;
 	}
@@ -57,7 +56,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#add(int, org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer)
 	 */
-	@Override
 	public void add(final int index, final Discovery element) {
 		this.discoverers.add(index, element);
 	}
@@ -65,7 +63,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#add(org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer)
 	 */
-	@Override
 	public boolean add(final Discovery e) {
 		return this.discoverers.add(e);
 	}
@@ -73,7 +70,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#addAll(java.util.Collection)
 	 */
-	@Override
 	public boolean addAll(final Collection<? extends Discovery> c) {
 		return this.discoverers.addAll(c);
 	}
@@ -81,7 +77,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#addAll(int, java.util.Collection)
 	 */
-	@Override
 	public boolean addAll(final int index, final Collection<? extends Discovery> c) {
 		return this.discoverers.addAll(index, c);
 	}
@@ -89,7 +84,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#clear()
 	 */
-	@Override
 	public void clear() {
 		this.discoverers.clear();
 	}
@@ -97,7 +91,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#contains(java.lang.Object)
 	 */
-	@Override
 	public boolean contains(final Object o) {
 		return this.discoverers.contains(o);
 	}
@@ -105,7 +98,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#containsAll(java.util.Collection)
 	 */
-	@Override
 	public boolean containsAll(final Collection<?> c) {
 		return this.discoverers.containsAll(c);
 	}
@@ -121,7 +113,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#get(int)
 	 */
-	@Override
 	public Discovery get(final int index) {
 		return this.discoverers.get(index);
 	}
@@ -137,7 +128,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#indexOf(java.lang.Object)
 	 */
-	@Override
 	public int indexOf(final Object o) {
 		return this.discoverers.indexOf(o);
 	}
@@ -145,7 +135,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#isEmpty()
 	 */
-	@Override
 	public boolean isEmpty() {
 		return this.discoverers.isEmpty();
 	}
@@ -153,7 +142,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#iterator()
 	 */
-	@Override
 	public Iterator<Discovery> iterator() {
 		return this.discoverers.iterator();
 	}
@@ -161,7 +149,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#lastIndexOf(java.lang.Object)
 	 */
-	@Override
 	public int lastIndexOf(final Object o) {
 		return this.discoverers.lastIndexOf(o);
 	}
@@ -169,7 +156,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#listIterator()
 	 */
-	@Override
 	public ListIterator<Discovery> listIterator() {
 		return this.discoverers.listIterator();
 	}
@@ -177,7 +163,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#listIterator(int)
 	 */
-	@Override
 	public ListIterator<Discovery> listIterator(final int index) {
 		return this.discoverers.listIterator(index);
 	}
@@ -185,7 +170,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#remove(int)
 	 */
-	@Override
 	public Discovery remove(final int index) {
 		return this.discoverers.remove(index);
 	}
@@ -193,7 +177,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#remove(java.lang.Object)
 	 */
-	@Override
 	public boolean remove(final Object o) {
 		return this.discoverers.remove(o);
 	}
@@ -201,7 +184,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#removeAll(java.util.Collection)
 	 */
-	@Override
 	public boolean removeAll(final Collection<?> c) {
 		return this.discoverers.removeAll(c);
 	}
@@ -209,7 +191,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#retainAll(java.util.Collection)
 	 */
-	@Override
 	public boolean retainAll(final Collection<?> c) {
 		return this.discoverers.retainAll(c);
 	}
@@ -217,7 +198,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#set(int, org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer)
 	 */
-	@Override
 	public Discovery set(final int index, final Discovery element) {
 		return this.discoverers.set(index, element);
 	}
@@ -225,7 +205,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#size()
 	 */
-	@Override
 	public int size() {
 		return this.discoverers.size();
 	}
@@ -233,7 +212,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#subList(int, int)
 	 */
-	@Override
 	public List<Discovery> subList(final int fromIndex, final int toIndex) {
 		return this.discoverers.subList(fromIndex, toIndex);
 	}
@@ -241,7 +219,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#toArray()
 	 */
-	@Override
 	public Object[] toArray() {
 		return this.discoverers.toArray();
 	}
@@ -249,7 +226,6 @@ public class DiscovererList implements IDiscovererList {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#toArray(T[])
 	 */
-	@Override
 	public <T> T[] toArray(final T[] a) {
 		return this.discoverers.toArray(a);
 	}

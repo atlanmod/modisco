@@ -21,7 +21,6 @@ public class ProjectSetFactory implements IProjectSetFactory {
 	/**
 	 * Create a new ProjectSet
 	 */
-	@Override
 	public IProjectSet createProjectSet() {
 		return new ProjectSet();
 	}

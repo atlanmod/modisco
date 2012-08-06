@@ -77,7 +77,6 @@ public class EventAndMemoryRecorder implements IEventListener {
 	 * Record an event
 	 * @param event: the event to record
 	 */
-	@Override
 	public void notifyEvent(final Event event) {		
 		this.events.add(event);
 

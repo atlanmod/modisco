@@ -23,7 +23,6 @@ public class DiscovererListFactory implements IDiscovererListFactory {
 	/**
 	 * Create a new DiscovererList
 	 */
-	@Override
 	public IDiscovererList createDiscovererList() {
 		return new DiscovererList();
 	}

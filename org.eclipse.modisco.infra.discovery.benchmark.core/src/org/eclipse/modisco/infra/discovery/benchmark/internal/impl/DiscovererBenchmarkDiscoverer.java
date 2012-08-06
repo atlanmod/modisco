@@ -759,7 +759,6 @@ implements IDiscovererBenchmarkDiscoverer {
 	/**
 	 * @see AbstractModelDiscoverer#isApplicableTo(Object)
 	 */
-	@Override
 	public boolean isApplicableTo(final IProjectSet sources) {
 		boolean result = true;
 		for (IProject source : sources.getProjects()) {
@@ -846,28 +845,23 @@ implements IDiscovererBenchmarkDiscoverer {
 		return super.getTargetURI();
 	}
 
-	@Override
 	public IDiscovererID getDiscovererID() {
 		return this.discovererID;
 	}
 
 
-	@Override
 	public int getIterations() {
 		return this.iterations;
 	}
 
-	@Override
 	public boolean isMeasureMemoryUse() {
 		return this.measureMemoryUse;
 	}
 
-	@Override
 	public int getMemoryPollingInterval() {
 		return this.memoryPollingInterval;
 	}
 
-	@Override
 	public boolean isGenerateHtmlReport() {
 		return this.generateHtmlReport;
 	}

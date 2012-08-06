@@ -56,7 +56,6 @@ public class EventManager implements IEventManager {
 	 * @see IEventManager#addListener(IEventListener)
 	 * @param eventListeners
 	 */
-	@Override
 	public void addListener(final IEventListener listener) {
 		if (!this.eventListeners.contains(listener)) {
 			this.eventListeners.add(listener);
@@ -67,7 +66,6 @@ public class EventManager implements IEventManager {
 	 * @see IEventManager#removeListener(IEventListener)
 	 * @param eventListeners
 	 */
-	@Override
 	public void removeListener(final IEventListener listener) {
 			this.eventListeners.remove(listener);
 	}
@@ -76,7 +74,6 @@ public class EventManager implements IEventManager {
 	 * @see IEventManager#notifyEvent(EventType)
 	 * @param eventListeners
 	 */
-	@Override
 	public void notifyEvent(final Event event) {
 		for (IEventListener listener : this.eventListeners) {
 			listener.notifyEvent(event);	

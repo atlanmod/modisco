@@ -72,7 +72,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#add(int, org.eclipse.core.resources.IProject)
 	 */
-	@Override
 	public void add(final int arg0, final IProject arg1) {
 		this.projects.add(arg0, arg1);
 	}
@@ -80,7 +79,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#add(org.eclipse.core.resources.IProject)
 	 */
-	@Override
 	public boolean add(final IProject toAdd) {
 		return this.projects.add(toAdd);
 	}
@@ -88,7 +86,6 @@ public class ProjectSet implements IProjectSet {
 	public IProjectSet sortBySize() {
 		Collections.sort(this.projects, new Comparator<IProject>() {
 
-			@Override
 			public int compare(final IProject arg0, final IProject arg1) {
 				try {
 					if (getProjectSize(arg0) < getProjectSize(arg1)) {
@@ -129,7 +126,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#addAll(java.util.Collection)
 	 */
-	@Override
 	public boolean addAll(final Collection<? extends IProject> arg0) {
 		return this.projects.addAll(arg0);
 	}
@@ -137,7 +133,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#addAll(int, java.util.Collection)
 	 */
-	@Override
 	public boolean addAll(final int arg0, final Collection<? extends IProject> arg1) {
 		return this.projects.addAll(arg0, arg1);
 	}
@@ -145,7 +140,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#clear()
 	 */
-	@Override
 	public void clear() {
 		this.projects.clear();
 	}
@@ -153,7 +147,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#contains(java.lang.Object)
 	 */
-	@Override
 	public boolean contains(final Object arg0) {
 		return this.projects.contains(arg0);
 	}
@@ -161,7 +154,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#containsAll(java.util.Collection)
 	 */
-	@Override
 	public boolean containsAll(final Collection<?> arg0) {
 		return this.projects.containsAll(arg0);
 	}
@@ -177,7 +169,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#get(int)
 	 */
-	@Override
 	public IProject get(final int arg0) {
 		return this.projects.get(arg0);
 	}
@@ -193,7 +184,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#indexOf(java.lang.Object)
 	 */
-	@Override
 	public int indexOf(final Object arg0) {
 		return this.projects.indexOf(arg0);
 	}
@@ -201,7 +191,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#isEmpty()
 	 */
-	@Override
 	public boolean isEmpty() {
 		return this.projects.isEmpty();
 	}
@@ -209,7 +198,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#iterator()
 	 */
-	@Override
 	public Iterator<IProject> iterator() {
 		return this.projects.iterator();
 	}
@@ -217,7 +205,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#lastIndexOf(java.lang.Object)
 	 */
-	@Override
 	public int lastIndexOf(final Object arg0) {
 		return this.projects.lastIndexOf(arg0);
 	}
@@ -225,7 +212,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#listIterator()
 	 */
-	@Override
 	public ListIterator<IProject> listIterator() {
 		return this.projects.listIterator();
 	}
@@ -233,7 +219,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#listIterator(int)
 	 */
-	@Override
 	public ListIterator<IProject> listIterator(final int arg0) {
 		return this.projects.listIterator(arg0);
 	}
@@ -241,7 +226,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#remove(int)
 	 */
-	@Override
 	public IProject remove(final int arg0) {
 		return this.projects.remove(arg0);
 	}
@@ -249,7 +233,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#remove(java.lang.Object)
 	 */
-	@Override
 	public boolean remove(final Object arg0) {
 		return this.projects.remove(arg0);
 	}
@@ -257,7 +240,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#removeAll(java.util.Collection)
 	 */
-	@Override
 	public boolean removeAll(final Collection<?> arg0) {
 		return this.projects.removeAll(arg0);
 	}
@@ -265,7 +247,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#retainAll(java.util.Collection)
 	 */
-	@Override
 	public boolean retainAll(final Collection<?> arg0) {
 		return this.projects.retainAll(arg0);
 	}
@@ -273,7 +254,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#set(int, org.eclipse.core.resources.IProject)
 	 */
-	@Override
 	public IProject set(final int arg0, final IProject arg1) {
 		return this.projects.set(arg0, arg1);
 	}
@@ -281,7 +261,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#size()
 	 */
-	@Override
 	public int size() {
 		return this.projects.size();
 	}
@@ -289,7 +268,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#subList(int, int)
 	 */
-	@Override
 	public List<IProject> subList(final int arg0, final int arg1) {
 		return this.projects.subList(arg0, arg1);
 	}
@@ -297,7 +275,6 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#toArray()
 	 */
-	@Override
 	public Object[] toArray() {
 		return this.projects.toArray();
 	}
@@ -305,12 +282,10 @@ public class ProjectSet implements IProjectSet {
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.internal.impl.IProjectSet#toArray(T[])
 	 */
-	@Override
 	public <T> T[] toArray(final T[] arg0) {
 		return this.projects.toArray(arg0);
 	}
 
-	@Override
 	public List<IProject> getProjects() {
 		return this.projects;
 	}
