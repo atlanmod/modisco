@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="org.eclipse.modisco.dev.targetplatform" sequenceNumber="2">
+<target name="org.eclipse.modisco.dev.targetplatform" sequenceNumber="4">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="3.6.0.I20100608-0911"/>
@@ -67,6 +67,8 @@
 <unit id="org.apache.commons.jxpath" version="1.2.0.v20080604-1500"/>
 <unit id="org.apache.commons.jxpath.source" version="1.3.0.v200911051830"/>
 <unit id="org.apache.commons.jxpath.source" version="1.2.0.v20080604-1500"/>
+<unit id="org.prefuse" version="0.1.0.v20100514-1000"/>
+<unit id="org.prefuse.source" version="0.1.0.v20100514-1000"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
 </location>
 </locations>
