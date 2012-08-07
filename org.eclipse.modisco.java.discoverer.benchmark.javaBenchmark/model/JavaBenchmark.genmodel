@@ -10,7 +10,7 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
     editPluginID="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.edit"
     editorPluginID="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.editor"
-    language="" usedGenPackages="../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.genmodel#//benchmark">
+    runtimeVersion="2.6" language="" usedGenPackages="../../org.eclipse.modisco.infra.discovery.benchmark/model/benchmark.genmodel#//benchmark">
   <foreignModel>JavaBenchmark.ecore</foreignModel>
   <genPackages prefix="JavaBenchmark" basePackage="org.eclipse.modisco.java.discoverer.benchmark"
       disposableProviderFactory="true" fileExtensions="javaBenchmark" ecorePackage="JavaBenchmark.ecore#/">
