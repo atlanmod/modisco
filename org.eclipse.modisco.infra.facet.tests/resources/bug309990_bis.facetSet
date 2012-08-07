@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" name="bug309990" nsURI="http://www.eclipse.org/MoDisco/facet/bug309990_bis" nsPrefix="bug309990">
+  <extendedPackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+</facet:FacetSet>

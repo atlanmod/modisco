@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="bug336502" nsURI="http://Bug336502" nsPrefix="Bug336502">
+  <eClassifiers xsi:type="facet:Facet" name="Bug336502Class" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="Bug336502Attribute" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <valueQuery xsi:type="query:OCLModelQuery" href="modisco:/query/org.eclipse.modisco.infra.browser.custom.tests#customTestQuery"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="Bug336502Reference" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <valueQuery xsi:type="query:OCLModelQuery" href="modisco:/query/org.eclipse.modisco.infra.browser.custom.tests#identity"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+</facet:FacetSet>
