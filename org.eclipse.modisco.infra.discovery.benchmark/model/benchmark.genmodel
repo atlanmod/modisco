@@ -6,7 +6,8 @@
     editorDirectory="/org.eclipse.modisco.infra.discovery.benchmark.editor/src" modelPluginID="org.eclipse.modisco.infra.discovery.benchmark"
     modelName="benchmark" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
     copyrightFields="false" editPluginID="org.eclipse.modisco.infra.discovery.benchmark.edit"
-    editorPluginID="org.eclipse.modisco.infra.discovery.benchmark.editor" language="">
+    editorPluginID="org.eclipse.modisco.infra.discovery.benchmark.editor" runtimeVersion="2.6"
+    language="">
   <foreignModel>benchmark.ecore</foreignModel>
   <genPackages prefix="Benchmark" basePackage="org.eclipse.modisco.infra.discovery"
       disposableProviderFactory="true" ecorePackage="benchmark.ecore#/">

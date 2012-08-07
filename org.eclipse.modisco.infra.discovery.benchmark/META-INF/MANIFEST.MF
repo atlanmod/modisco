@@ -11,5 +11,5 @@ Export-Package: org.eclipse.modisco.infra.discovery.benchmark,
  org.eclipse.modisco.infra.discovery.benchmark.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;bundle-version="2.6.0"
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0"
 Bundle-ActivationPolicy: lazy
