@@ -59,7 +59,7 @@ public class BundleTest {
 	private void testManifestProperty(final String property, final String regex) {
 		List<Bundle> wrongBundle = test(new RunnableTest() {
 			public void run(final Bundle bundle) {
-				Assert.assertTrue(bundle.getHeaders().get(property).matches(regex));
+				Assert.assertTrue(bundle.getHeaders().get(property).toString().matches(regex));
 			}
 		});
 		if (wrongBundle.size() > 0) {
