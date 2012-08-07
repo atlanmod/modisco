@@ -1,4 +1,0 @@
-#master switch 
-org.eclipse.modisco.java.discoverer.tests/debug=false
-org.eclipse.modisco.java.discoverer.tests/debug/JavaDiscovererUtils/getQualifiedName=false
-org.eclipse.modisco.java.discoverer.tests/debug/JavaDiscovererUtils/getNamedElementByQualifiedName=false

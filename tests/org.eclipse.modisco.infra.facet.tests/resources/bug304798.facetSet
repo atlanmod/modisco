@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="bug304798" nsURI="http://www.304798.org/bug/304798" nsPrefix="bug304798">
-  <eClassifiers xsi:type="facet:Facet" name="Bug304798" abstract="true">
-    <eSuperTypes href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    <conditionQuery xsi:type="query:OCLModelQuery" href="modisco:/query/bug304798#bug304798"/>
-  </eClassifiers>
-  <extendedPackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
-</facet:FacetSet>
