@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+version="3.1">
+
+<!--  
+ * Copyright (c) 2010 Mia-Software.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *  
+ *  	   Nicolas Guyomar (Mia-Software) - initial API and implementation
+ --> 
+ 
+    <enterprise-beans>
+        <session>
+            <ejb-name>ejb-name-example</ejb-name>
+			 <service-endpoint>service-endpoint-example</service-endpoint>
+            <business-local>business-local-example</business-local>
+            <business-remote>business-remote-example</business-remote>
+            <ejb-class>ejb-class-example</ejb-class>
+            <session-type>session-type-example</session-type>
+            <transaction-type>transaction-type-example</transaction-type>
+        </session>
+		
+		  <message-driven>
+            <ejb-name>ejb-name-example</ejb-name>
+            <ejb-class>ejb-class-example</ejb-class>
+            <messaging-type>messaging-type-example</messaging-type>
+            <transaction-type>transaction-type-example</transaction-type>
+            <message-destination-type>message-destination-type-example</message-destination-type>
+            <message-destination-link>message-destination-link-example</message-destination-link>           
+            <resource-ref>
+                <res-ref-name>res-ref-name-example</res-ref-name>
+                <res-type>res-type-example</res-type>
+            </resource-ref>                      
+        </message-driven>
+		
+		<entity>
+			<ejb-name>ejb-name-example</ejb-name>
+			<local-home>local-home-example</local-home>
+			<local>local-example</local>
+			<ejb-class>ejb-class-example</ejb-class>
+			<persistence-type>persistence-type-example</persistence-type>
+			<prim-key-class>prim-key-class-example</prim-key-class>
+			<cmp-version>cmp-version-example</cmp-version>
+			<abstract-schema-name>abstract-schema-name-example</abstract-schema-name>
+			
+			<cmp-field>
+				<field-name>field-name-example</field-name>
+			</cmp-field>
+			
+			<primkey-field>primkey-field-example</primkey-field>
+			<query>
+				<query-method>
+					<method-name>method-name-example</method-name>
+					<method-params>
+						<method-param>method-param-example</method-param>
+					</method-params>
+				</query-method>			
+				<ejb-ql>ejb-ql-example</ejb-ql>
+			</query>		
+		</entity>
+		
+    </enterprise-beans>
+	
+	 <assembly-descriptor>
+        <message-destination>
+            <message-destination-name>message-destination-name-example</message-destination-name>
+        </message-destination>
+    </assembly-descriptor>
+	
+</ejb-jar>

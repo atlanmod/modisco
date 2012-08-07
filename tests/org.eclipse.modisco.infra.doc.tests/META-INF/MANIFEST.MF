@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.infra.doc.tests
+Bundle-Version: 0.10.1.qualifier
+Bundle-Activator: org.eclipse.modisco.infra.doc.tests.Activator
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit;bundle-version="4.7.0",
+ org.eclipse.modisco.infrastructure.doc;bundle-version="0.10.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.modisco.infra.doc.tests;x-friends:="org.eclipse.modisco.tests"
