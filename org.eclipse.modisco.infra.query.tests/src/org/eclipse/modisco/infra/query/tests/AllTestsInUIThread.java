@@ -6,7 +6,8 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Nicolas Bros (Mia-Software)
+ *		Nicolas Bros (Mia-Software)
+ *		Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
  *******************************************************************************/
 package org.eclipse.modisco.infra.query.tests;
 
@@ -16,6 +17,6 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ UnitTests.class })
-public class AllTests {
+public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }

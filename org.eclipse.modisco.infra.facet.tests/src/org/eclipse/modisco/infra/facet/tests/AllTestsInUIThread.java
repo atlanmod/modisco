@@ -6,25 +6,17 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Nicolas Guyomar (Mia-Software)
+ *		Nicolas Bros (Mia-Software)
+ *		Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
  *******************************************************************************/
-package org.eclipse.modisco.jee.webapp.discoverer.tests.compatibility;
+package org.eclipse.modisco.infra.facet.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({
-	TestCommentedDocType.class,
-	TestNoVersion.class,
-	/* TestNoUri.class, disabled because of Bug 354468 : the test doesn't finish */
-	TestWebXml22.class,
-	TestWebXml23.class,
-	TestWebXml24.class,
-	TestWebXml25.class,
-	TestWebXml30.class
-	})
-public class AllTests {
+@SuiteClasses({ FacetTests.class })
+public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }

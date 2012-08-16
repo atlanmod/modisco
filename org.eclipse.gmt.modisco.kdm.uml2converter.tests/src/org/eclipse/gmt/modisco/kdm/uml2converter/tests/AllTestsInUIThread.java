@@ -6,17 +6,22 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Nicolas Bros (Mia-Software)
+ *		Nicolas Bros (Mia-Software)
+ *		Fabien Giquel (Mia-Software) - Bug 339720 - MoDisco Discoverers (infra + techno) API clean
+ *		Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
  *******************************************************************************/
-package org.eclipse.modisco.infra.common.core.tests;
+package org.eclipse.gmt.modisco.kdm.uml2converter.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+/**
+ * @deprecated use matching org.eclipse.modisco.x.y.z component
+ */
+@Deprecated
 @RunWith(Suite.class)
-@SuiteClasses({ MetaclassInstancesTest.class, EcoreCatalogTest.class, ProjectUtilsTest.class,
-		ModelUtilsTest.class, Bug336903Test.class })
-public class AllTests {
+@SuiteClasses({ HotTransformationTest.class, KdmToUml2ConverterTest.class })
+public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }
