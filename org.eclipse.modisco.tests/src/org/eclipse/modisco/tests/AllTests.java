@@ -6,7 +6,8 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Nicolas Bros (Mia-Software) - initial API and implementation
+ *		Nicolas Bros (Mia-Software) - initial API and implementation
+ *		Gregorie Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
  *******************************************************************************/
 package org.eclipse.modisco.tests;
 
@@ -39,7 +40,7 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.modisco.jee.webapp.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.webapp.discoverer.tests.compatibility.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.jsp.discoverer.tests.AllTestsInUIThread.class,
-		org.eclipse.modisco.jee.jsp.discoverer.tests.compatibility.AllTestsInUIThread.class,
+		org.eclipse.modisco.jee.jsp.discoverer.tests.compatibility.AllTests.class,
 		org.eclipse.modisco.jee.jsp.generation.tests.DiffGeneratedJspTest.class,
 		org.eclipse.modisco.kdm.uml2converter.tests.AllTestsInUIThread.class,
 		org.eclipse.gmt.modisco.kdm.uml2converter.tests.AllTestsInUIThread.class,
