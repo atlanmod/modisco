@@ -7,7 +7,6 @@
  *
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
- *    Fabien Giquel (Mia-Software) - Bug 393416 - Missing interface
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core;
 
@@ -47,7 +46,7 @@ import org.eclipse.modisco.infra.discovery.core.internal.Activator;
  * @param <T>
  *            the type of source of the discovery
  */
-public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> implements IModelDiscoverer<T> {
+public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> {
 
 	private static final int FLUSH_LIMIT_SHIFT = 16;
 	private static final Integer FLUSH_LIMIT = Integer
@@ -57,17 +56,11 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> i
 
 	private Resource fTargetModel;
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.modisco.infra.discovery.core.IModelDiscoverer#getTargetModel()
-	 */
 	@Parameter(name = "TARGET_MODEL", requiresInputValue = false, description = "A model container; usually an output of the discovery but may also be provided as input.")
 	public Resource getTargetModel() {
 		return this.fTargetModel;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.modisco.infra.discovery.core.IModelDiscoverer#setTargetModel(org.eclipse.emf.ecore.resource.Resource)
-	 */
 	@Parameter(name = "TARGET_MODEL")
 	public void setTargetModel(final Resource targetModel) {
 		this.fTargetModel = targetModel;
@@ -79,9 +72,6 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> i
 		return this.fSerializeTarget;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.modisco.infra.discovery.core.IModelDiscoverer#setSerializeTarget(boolean)
-	 */
 	@Parameter(name = "SERIALIZE_TARGET", requiresInputValue = false, description = "Whether to serialize the target model. The save behavior depends on the Discoverer implementation. The standard behavior is to use XMI serialization.")
 	public void setSerializeTarget(final boolean serializeTarget) {
 		this.fSerializeTarget = serializeTarget;
@@ -89,16 +79,10 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> i
 
 	private URI fTargetURI;
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.modisco.infra.discovery.core.IModelDiscoverer#getTargetURI()
-	 */
 	public URI getTargetURI() {
 		return this.fTargetURI;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.modisco.infra.discovery.core.IModelDiscoverer#setTargetURI(org.eclipse.emf.common.util.URI)
-	 */
 	@Parameter(name = "TARGET_URI", requiresInputValue = false, description = "A target location for optional model serialization. Save behavior depends on the Discoverer implementation.")
 	public void setTargetURI(final URI targetURI) {
 		this.fTargetURI = targetURI;
