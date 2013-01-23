@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.eclipse.modisco.infra.discovery.benchmark.feature"
-      label="%featureName"
+      label="MoDisco Infrastructure Discovery Benchmark (Incubation)"
       version="0.10.2.qualifier"
       provider-name="%providerName">
 

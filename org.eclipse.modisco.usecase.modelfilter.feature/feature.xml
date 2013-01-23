@@ -11,7 +11,7 @@
  -->
 <feature
       id="org.eclipse.modisco.usecase.modelfilter.feature"
-      label="%featureName"
+      label="MoDisco Model Filter (Incubation)"
       version="0.10.2.qualifier"
       provider-name="%providerName">
 

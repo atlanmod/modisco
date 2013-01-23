@@ -11,7 +11,7 @@
  -->
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
-      label="%featureName"
+      label="MoDisco Infrastructure (Incubation)"
       version="0.10.2.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.infra.common.core">

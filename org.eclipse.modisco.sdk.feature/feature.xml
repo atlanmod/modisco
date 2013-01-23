@@ -11,7 +11,7 @@
  -->
 <feature
       id="org.eclipse.modisco.sdk.feature"
-      label="%featureName"
+      label="MoDisco SDK (Incubation)"
       version="0.10.2.qualifier"
       provider-name="%providerName">
 

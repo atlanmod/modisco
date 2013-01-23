@@ -11,7 +11,7 @@ Contributors:
 -->
 <feature
       id="org.eclipse.modisco.java.discoverer.benchmark.feature"
-      label="%featureName"
+      label="MoDisco Java Discoverer Benchmark feature (Incubation)"
       version="0.10.2.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.java.discoverer.benchmark">
