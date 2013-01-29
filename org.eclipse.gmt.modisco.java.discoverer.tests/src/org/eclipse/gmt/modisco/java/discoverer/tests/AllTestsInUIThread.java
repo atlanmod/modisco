@@ -21,9 +21,11 @@ import org.junit.runners.Suite.SuiteClasses;
  */
 @Deprecated
 @RunWith(Suite.class)
-@SuiteClasses({ JavaJUnitEMF.class, SimpleBlackBoxDiscovery.class,
-		SimpleBlackBoxConverter.class, Java2KdmConverterTest.class,
-		ParameterizedDiscovery.class, Bug329423CommentsTest.class })
+@SuiteClasses({
+//		JavaJUnitEMF.class, SimpleBlackBoxDiscovery.class,
+//		SimpleBlackBoxConverter.class, Java2KdmConverterTest.class,
+//		ParameterizedDiscovery.class, Bug329423CommentsTest.class 
+		})
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }
