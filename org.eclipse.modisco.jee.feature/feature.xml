@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.jee.feature"
       label="MoDisco JEE feature (Incubation)"
-      version="0.10.2.qualifier"
+      version="0.11.0.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.modisco.jee">
 
