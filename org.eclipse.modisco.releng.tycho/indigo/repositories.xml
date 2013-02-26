@@ -17,4 +17,9 @@ Contributors:
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/indigo/</url>
 		</repository>
+		<repository>
+			<id>Orbit</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/</url>
+		</repository>
 </repositories>
