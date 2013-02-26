@@ -27,4 +27,9 @@ Contributors:
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site</url>
 		</repository>
+		<repository>
+			<id>EMF Facet 0.2.2</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/facet/updates/release/0.2.2/</url>
+		</repository>
 </repositories>
