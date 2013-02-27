@@ -14,8 +14,8 @@ Contributors:
 <target>
          <artifact>
             <groupId>org.eclipse.mdt</groupId>
-            <artifactId>org.eclipse.modisco.dev.targetplatform</artifactId>
-            <classifier>org.eclipse.modisco.dev.targetplatform-indigo</classifier>
+            <artifactId>org.eclipse.modisco.archi.tech.targetplatform</artifactId>
+            <classifier>org.eclipse.modisco.archi.tech.targetplatform-indigo</classifier>
             <version>0.11.0</version>
          </artifact>
 </target>
