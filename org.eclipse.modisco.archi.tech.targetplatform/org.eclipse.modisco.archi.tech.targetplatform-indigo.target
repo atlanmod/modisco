@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target name="org.eclipse.modisco.dev.targetplatform-indigo" sequenceNumber="37">
+<target name="org.eclipse.modisco.archi.tech.targetplatform-indigo" sequenceNumber="37">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.3.0.v201211221333"/>

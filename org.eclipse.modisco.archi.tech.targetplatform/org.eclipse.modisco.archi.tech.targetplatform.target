@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="org.eclipse.modisco.dev.targetplatform" sequenceNumber="4">
+<target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="4">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.platform.ide" version="3.6.0.I20100608-0911"/>
