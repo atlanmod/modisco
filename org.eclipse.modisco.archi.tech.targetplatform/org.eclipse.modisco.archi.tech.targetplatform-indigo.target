@@ -27,6 +27,7 @@
 <unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
 <unit id="org.apache.lucene" version="2.9.1.v201101211721"/>
 <unit id="org.eclipse.emf.cdo.server.db.feature.group" version="4.0.0.v20111221-2220"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.5.0.v20110530-7P7NFUFFLWUl76mart"/>
 <repository location="http://download.eclipse.org/releases/indigo"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
