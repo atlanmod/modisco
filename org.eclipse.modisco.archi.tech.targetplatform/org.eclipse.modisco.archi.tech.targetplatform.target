@@ -37,12 +37,12 @@
 <unit id="org.eclipse.birt.feature.group" version="2.6.0.v20100617-9gF727DGKb0yl9AwWxpmbo35PwQ_"/>
 <unit id="org.eclipse.birt.osgi.runtime.source.feature.group" version="2.6.0.v20100617-8rC_7EFx2cysCBtJNuxdV1"/>
 <unit id="org.eclipse.birt.source.feature.group" version="2.6.0.v20100617-9gF727DGKb0yl9AwWxpmbo35PwQ_"/>
-<repository location="http://download.eclipse.org/releases/helios/"/>
+<repository location="http://download.eclipse.org/releases/helios/201006230900/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.3.0.v201211221333"/>
-<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.3.0.v201211221333"/>
-<repository location="http://download.eclipse.org/facet/updates/integration/0.3.0/I201211221333/"/>
+<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.3.0.201302281617"/>
+<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.3.0.201302281617"/>
+<repository location="http://download.eclipse.org/facet/updates/integration/0.3.0/I201302281617/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
