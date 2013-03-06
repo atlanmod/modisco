@@ -7,11 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark,
- org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.impl,
- org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.util
+Export-Package: org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.ui;bundle-version="3.7.0",
+ org.eclipse.ui;bundle-version="3.6.0",
  org.eclipse.modisco.infra.discovery
 Bundle-ActivationPolicy: lazy
