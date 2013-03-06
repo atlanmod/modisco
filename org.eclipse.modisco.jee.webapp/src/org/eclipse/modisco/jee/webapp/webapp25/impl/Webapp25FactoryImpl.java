@@ -134,15 +134,16 @@ import org.eclipse.modisco.jee.webapp.webapp25.XsdQNameType;
 import org.eclipse.modisco.jee.webapp.webapp25.XsdStringType;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
  * @generated
  */
 public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory {
 	/**
 	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public static Webapp25Factory init() {
@@ -160,8 +161,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 
 	/**
 	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Webapp25FactoryImpl() {
@@ -169,7 +170,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -270,7 +272,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -388,7 +391,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -506,7 +510,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AuthConstraintType createAuthConstraintType() {
@@ -515,7 +520,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AuthMethodType createAuthMethodType() {
@@ -524,7 +530,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DescriptionType createDescriptionType() {
@@ -533,7 +540,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DispatcherType createDispatcherType() {
@@ -542,7 +550,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DisplayNameType createDisplayNameType() {
@@ -551,7 +560,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DocumentRoot createDocumentRoot() {
@@ -560,7 +570,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbLinkType createEjbLinkType() {
@@ -569,7 +580,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbLocalRefType createEjbLocalRefType() {
@@ -578,7 +590,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRefNameType createEjbRefNameType() {
@@ -587,7 +600,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRefType createEjbRefType() {
@@ -596,7 +610,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRefTypeType createEjbRefTypeType() {
@@ -605,7 +620,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EmptyType createEmptyType() {
@@ -614,7 +630,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EnvEntryType createEnvEntryType() {
@@ -623,7 +640,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EnvEntryTypeValuesType createEnvEntryTypeValuesType() {
@@ -632,7 +650,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ErrorCodeType createErrorCodeType() {
@@ -641,7 +660,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ErrorPageType createErrorPageType() {
@@ -650,7 +670,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FilterMappingType createFilterMappingType() {
@@ -659,7 +680,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FilterNameType createFilterNameType() {
@@ -668,7 +690,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FilterType createFilterType() {
@@ -677,7 +700,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FormLoginConfigType createFormLoginConfigType() {
@@ -686,7 +710,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FullyQualifiedClassType createFullyQualifiedClassType() {
@@ -695,7 +720,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public GenericBooleanType createGenericBooleanType() {
@@ -704,7 +730,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public HomeType createHomeType() {
@@ -713,7 +740,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public IconType createIconType() {
@@ -722,7 +750,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InjectionTargetType createInjectionTargetType() {
@@ -731,7 +760,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JavaIdentifierType createJavaIdentifierType() {
@@ -740,7 +770,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JavaTypeType createJavaTypeType() {
@@ -749,7 +780,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JndiNameType createJndiNameType() {
@@ -758,7 +790,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JspConfigType createJspConfigType() {
@@ -767,7 +800,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JspFileType createJspFileType() {
@@ -776,7 +810,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JspPropertyGroupType createJspPropertyGroupType() {
@@ -785,7 +820,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LifecycleCallbackType createLifecycleCallbackType() {
@@ -794,7 +830,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ListenerType createListenerType() {
@@ -803,7 +840,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LocaleEncodingMappingListType createLocaleEncodingMappingListType() {
@@ -812,7 +850,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LocaleEncodingMappingType createLocaleEncodingMappingType() {
@@ -821,7 +860,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LocalHomeType createLocalHomeType() {
@@ -830,7 +870,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LocalType createLocalType() {
@@ -839,7 +880,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LoginConfigType createLoginConfigType() {
@@ -848,7 +890,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationLinkType createMessageDestinationLinkType() {
@@ -857,7 +900,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationRefType createMessageDestinationRefType() {
@@ -866,7 +910,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationType createMessageDestinationType() {
@@ -875,7 +920,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationTypeType createMessageDestinationTypeType() {
@@ -884,7 +930,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationUsageType createMessageDestinationUsageType() {
@@ -893,7 +940,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MimeMappingType createMimeMappingType() {
@@ -902,7 +950,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MimeTypeType createMimeTypeType() {
@@ -911,7 +960,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NonEmptyStringType createNonEmptyStringType() {
@@ -920,7 +970,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ParamValueType createParamValueType() {
@@ -929,7 +980,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PathType createPathType() {
@@ -938,7 +990,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceContextRefType createPersistenceContextRefType() {
@@ -947,7 +1000,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceContextTypeType createPersistenceContextTypeType() {
@@ -956,7 +1010,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceUnitRefType createPersistenceUnitRefType() {
@@ -965,7 +1020,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PortComponentRefType createPortComponentRefType() {
@@ -974,7 +1030,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PropertyType createPropertyType() {
@@ -983,7 +1040,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RemoteType createRemoteType() {
@@ -992,7 +1050,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResAuthType createResAuthType() {
@@ -1001,7 +1060,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResourceEnvRefType createResourceEnvRefType() {
@@ -1010,7 +1070,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResourceRefType createResourceRefType() {
@@ -1019,7 +1080,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResSharingScopeType createResSharingScopeType() {
@@ -1028,7 +1090,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RoleNameType createRoleNameType() {
@@ -1037,7 +1100,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RunAsType createRunAsType() {
@@ -1046,7 +1110,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SecurityConstraintType createSecurityConstraintType() {
@@ -1055,7 +1120,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SecurityRoleRefType createSecurityRoleRefType() {
@@ -1064,7 +1130,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SecurityRoleType createSecurityRoleType() {
@@ -1073,7 +1140,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServiceRefHandlerChainsType createServiceRefHandlerChainsType() {
@@ -1082,7 +1150,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServiceRefHandlerChainType createServiceRefHandlerChainType() {
@@ -1091,7 +1160,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServiceRefHandlerType createServiceRefHandlerType() {
@@ -1100,7 +1170,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServiceRefType createServiceRefType() {
@@ -1109,7 +1180,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServletMappingType createServletMappingType() {
@@ -1118,7 +1190,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServletNameType createServletNameType() {
@@ -1127,7 +1200,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServletType createServletType() {
@@ -1136,7 +1210,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SessionConfigType createSessionConfigType() {
@@ -1145,7 +1220,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public org.eclipse.modisco.jee.webapp.webapp25.String createString() {
@@ -1154,7 +1230,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TaglibType createTaglibType() {
@@ -1163,7 +1240,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TransportGuaranteeType createTransportGuaranteeType() {
@@ -1172,7 +1250,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TrueFalseType createTrueFalseType() {
@@ -1181,7 +1260,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public UrlPatternType createUrlPatternType() {
@@ -1190,7 +1270,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public UserDataConstraintType createUserDataConstraintType() {
@@ -1199,7 +1280,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public WarPathType createWarPathType() {
@@ -1208,7 +1290,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public WebAppType createWebAppType() {
@@ -1217,7 +1300,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public WebResourceCollectionType createWebResourceCollectionType() {
@@ -1226,7 +1310,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public WelcomeFileListType createWelcomeFileListType() {
@@ -1235,7 +1320,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdAnyURIType createXsdAnyURIType() {
@@ -1244,7 +1330,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdBooleanType createXsdBooleanType() {
@@ -1253,7 +1340,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdIntegerType createXsdIntegerType() {
@@ -1262,7 +1350,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdNMTOKENType createXsdNMTOKENType() {
@@ -1271,7 +1360,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdNonNegativeIntegerType createXsdNonNegativeIntegerType() {
@@ -1280,7 +1370,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdPositiveIntegerType createXsdPositiveIntegerType() {
@@ -1289,7 +1380,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdQNameType createXsdQNameType() {
@@ -1298,7 +1390,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdStringType createXsdStringType() {
@@ -1307,18 +1400,19 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DispatcherTypeBase createDispatcherTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public DispatcherTypeBase createDispatcherTypeBaseFromString(EDataType eDataType, String initialValue) {
 		DispatcherTypeBase result = DispatcherTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertDispatcherTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1326,18 +1420,19 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		EjbRefTypeTypeBase result = EjbRefTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbRefTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1345,38 +1440,39 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvEntryTypeValuesTypeBase createEnvEntryTypeValuesTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public EnvEntryTypeValuesTypeBase createEnvEntryTypeValuesTypeBaseFromString(EDataType eDataType, String initialValue) {
 		EnvEntryTypeValuesTypeBase result = EnvEntryTypeValuesTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEnvEntryTypeValuesTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertEnvEntryTypeValuesTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenericBooleanTypeBase createGenericBooleanTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public GenericBooleanTypeBase createGenericBooleanTypeBaseFromString(EDataType eDataType, String initialValue) {
 		GenericBooleanTypeBase result = GenericBooleanTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertGenericBooleanTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1384,27 +1480,28 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseFromString(EDataType eDataType, String initialValue) {
 		MessageDestinationUsageTypeBase result = MessageDestinationUsageTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationUsageTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationUsageTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NullCharType createNullCharTypeFromString(EDataType eDataType, String initialValue) {
@@ -1414,7 +1511,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertNullCharTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1422,27 +1520,28 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		PersistenceContextTypeTypeBase result = PersistenceContextTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPersistenceContextTypeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertPersistenceContextTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResAuthTypeBase createResAuthTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1452,7 +1551,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResAuthTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1460,18 +1560,19 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResSharingScopeTypeBase createResSharingScopeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public ResSharingScopeTypeBase createResSharingScopeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		ResSharingScopeTypeBase result = ResSharingScopeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResSharingScopeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1479,38 +1580,39 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransportGuaranteeTypeBase createTransportGuaranteeTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public TransportGuaranteeTypeBase createTransportGuaranteeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		TransportGuaranteeTypeBase result = TransportGuaranteeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTransportGuaranteeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertTransportGuaranteeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebAppVersionType createWebAppVersionTypeFromString(EDataType eDataType,
-			String initialValue) {
+	public WebAppVersionType createWebAppVersionTypeFromString(EDataType eDataType, String initialValue) {
 		WebAppVersionType result = WebAppVersionType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertWebAppVersionTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1518,7 +1620,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createAuthMethodTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1526,7 +1629,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertAuthMethodTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1534,7 +1638,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createDeweyVersionTypeFromString(EDataType eDataType, String initialValue) {
@@ -1542,7 +1647,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertDeweyVersionTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1550,16 +1656,17 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DispatcherTypeBase createDispatcherTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public DispatcherTypeBase createDispatcherTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createDispatcherTypeBaseFromString(Webapp25Package.Literals.DISPATCHER_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertDispatcherTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -1567,7 +1674,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEjbLinkTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1575,7 +1683,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbLinkTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1583,7 +1692,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEjbRefNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1591,7 +1701,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbRefNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1599,16 +1710,17 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createEjbRefTypeTypeBaseFromString(Webapp25Package.Literals.EJB_REF_TYPE_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbRefTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -1616,7 +1728,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEncodingTypeFromString(EDataType eDataType, String initialValue) {
@@ -1624,7 +1737,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEncodingTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1632,25 +1746,26 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvEntryTypeValuesTypeBase createEnvEntryTypeValuesTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public EnvEntryTypeValuesTypeBase createEnvEntryTypeValuesTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createEnvEntryTypeValuesTypeBaseFromString(Webapp25Package.Literals.ENV_ENTRY_TYPE_VALUES_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEnvEntryTypeValuesTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertEnvEntryTypeValuesTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertEnvEntryTypeValuesTypeBaseToString(Webapp25Package.Literals.ENV_ENTRY_TYPE_VALUES_TYPE_BASE, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public BigInteger createErrorCodeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1658,7 +1773,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertErrorCodeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1666,43 +1782,44 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createFullyQualifiedClassTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createFullyQualifiedClassTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.TOKEN, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFullyQualifiedClassTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertFullyQualifiedClassTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.TOKEN, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenericBooleanTypeBase createGenericBooleanTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public GenericBooleanTypeBase createGenericBooleanTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createGenericBooleanTypeBaseFromString(Webapp25Package.Literals.GENERIC_BOOLEAN_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGenericBooleanTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertGenericBooleanTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertGenericBooleanTypeBaseToString(Webapp25Package.Literals.GENERIC_BOOLEAN_TYPE_BASE, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createHomeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1710,7 +1827,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertHomeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1718,7 +1836,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createHttpMethodTypeFromString(EDataType eDataType, String initialValue) {
@@ -1726,7 +1845,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertHttpMethodTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1734,7 +1854,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJavaIdentifierTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1742,7 +1863,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJavaIdentifierTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1750,7 +1872,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJavaTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1758,7 +1881,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJavaTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1766,7 +1890,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJndiNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1774,7 +1899,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJndiNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1782,7 +1908,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJspFileTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1790,7 +1917,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJspFileTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1798,7 +1926,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Object createLoadOnStartupTypeFromString(EDataType eDataType, String initialValue) {
@@ -1829,7 +1958,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLoadOnStartupTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1856,7 +1986,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createLocaleTypeFromString(EDataType eDataType, String initialValue) {
@@ -1864,7 +1995,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLocaleTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1872,7 +2004,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createLocalHomeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1880,7 +2013,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLocalHomeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1888,7 +2022,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createLocalTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1896,7 +2031,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLocalTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1904,61 +2040,62 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createMessageDestinationLinkTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createMessageDestinationLinkTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.TOKEN, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationLinkTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationLinkTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.TOKEN, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createMessageDestinationTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createMessageDestinationTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationTypeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createMessageDestinationUsageTypeBaseFromString(Webapp25Package.Literals.MESSAGE_DESTINATION_USAGE_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationUsageTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationUsageTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertMessageDestinationUsageTypeBaseToString(Webapp25Package.Literals.MESSAGE_DESTINATION_USAGE_TYPE_BASE, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createMimeTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1966,7 +2103,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertMimeTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1974,7 +2112,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createNonEmptyStringTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1982,7 +2121,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertNonEmptyStringTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1990,7 +2130,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NullCharType createNullCharTypeObjectFromString(EDataType eDataType, String initialValue) {
@@ -1998,7 +2139,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertNullCharTypeObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2006,7 +2148,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createPathTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2014,7 +2157,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertPathTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2022,25 +2166,26 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createPersistenceContextTypeTypeBaseFromString(Webapp25Package.Literals.PERSISTENCE_CONTEXT_TYPE_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPersistenceContextTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertPersistenceContextTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertPersistenceContextTypeTypeBaseToString(Webapp25Package.Literals.PERSISTENCE_CONTEXT_TYPE_TYPE_BASE, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createRemoteTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2048,7 +2193,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertRemoteTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2056,16 +2202,17 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResAuthTypeBase createResAuthTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public ResAuthTypeBase createResAuthTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createResAuthTypeBaseFromString(Webapp25Package.Literals.RES_AUTH_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResAuthTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2073,25 +2220,26 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResSharingScopeTypeBase createResSharingScopeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public ResSharingScopeTypeBase createResSharingScopeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createResSharingScopeTypeBaseFromString(Webapp25Package.Literals.RES_SHARING_SCOPE_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertResSharingScopeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertResSharingScopeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertResSharingScopeTypeBaseToString(Webapp25Package.Literals.RES_SHARING_SCOPE_TYPE_BASE, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createRoleNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2099,7 +2247,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertRoleNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2107,25 +2256,26 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<String> createServiceRefProtocolBindingListTypeFromString(EDataType eDataType,
-			String initialValue) {
+	public List<String> createServiceRefProtocolBindingListTypeFromString(EDataType eDataType, String initialValue) {
 		if (initialValue == null) return null;
 		List<String> result = new ArrayList<String>();
-		for (String item : split(initialValue)) {
+		for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer.hasMoreTokens(); ) {
+			String item = stringTokenizer.nextToken();
 			result.add(createServiceRefProtocolBindingTypeFromString(Webapp25Package.Literals.SERVICE_REF_PROTOCOL_BINDING_TYPE, item));
 		}
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertServiceRefProtocolBindingListTypeToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertServiceRefProtocolBindingListTypeToString(EDataType eDataType, Object instanceValue) {
 		if (instanceValue == null) return null;
 		List<?> list = (List<?>)instanceValue;
 		if (list.isEmpty()) return "";
@@ -2138,11 +2288,11 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createServiceRefProtocolBindingTypeFromString(EDataType eDataType,
-			String initialValue) {
+	public String createServiceRefProtocolBindingTypeFromString(EDataType eDataType, String initialValue) {
 		if (initialValue == null) return null;
 		String result = null;
 		RuntimeException exception = null;
@@ -2170,11 +2320,11 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertServiceRefProtocolBindingTypeToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertServiceRefProtocolBindingTypeToString(EDataType eDataType, Object instanceValue) {
 		if (instanceValue == null) return null;
 		if (XMLTypePackage.Literals.ANY_URI.isInstance(instanceValue)) {
 			try {
@@ -2198,25 +2348,26 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createServiceRefProtocolURIAliasTypeFromString(EDataType eDataType,
-			String initialValue) {
+	public String createServiceRefProtocolURIAliasTypeFromString(EDataType eDataType, String initialValue) {
 		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.TOKEN, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertServiceRefProtocolURIAliasTypeToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertServiceRefProtocolURIAliasTypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.TOKEN, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createServiceRefQnamePatternFromString(EDataType eDataType, String initialValue) {
@@ -2224,7 +2375,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertServiceRefQnamePatternToString(EDataType eDataType, Object instanceValue) {
@@ -2232,25 +2384,26 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransportGuaranteeTypeBase createTransportGuaranteeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public TransportGuaranteeTypeBase createTransportGuaranteeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createTransportGuaranteeTypeBaseFromString(Webapp25Package.Literals.TRANSPORT_GUARANTEE_TYPE_BASE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTransportGuaranteeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertTransportGuaranteeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertTransportGuaranteeTypeBaseToString(Webapp25Package.Literals.TRANSPORT_GUARANTEE_TYPE_BASE, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Boolean createTrueFalseTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2258,7 +2411,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTrueFalseTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2266,7 +2420,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Boolean createTrueFalseTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
@@ -2274,7 +2429,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTrueFalseTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2282,7 +2438,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createWarPathTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2290,7 +2447,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertWarPathTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2298,16 +2456,17 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebAppVersionType createWebAppVersionTypeObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public WebAppVersionType createWebAppVersionTypeObjectFromString(EDataType eDataType, String initialValue) {
 		return createWebAppVersionTypeFromString(Webapp25Package.Literals.WEB_APP_VERSION_TYPE, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertWebAppVersionTypeObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2315,7 +2474,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Webapp25Package getWebapp25Package() {
@@ -2323,7 +2483,8 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @deprecated
 	 * @generated
 	 */
@@ -2332,4 +2493,4 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 		return Webapp25Package.eINSTANCE;
 	}
 
-} // Webapp25FactoryImpl
+} //Webapp25FactoryImpl
