@@ -2302,7 +2302,8 @@ public class EjbJar30FactoryImpl extends EFactoryImpl implements EjbJar30Factory
 			String initialValue) {
 		if (initialValue == null) return null;
 		List<String> result = new ArrayList<String>();
-		for (String item : split(initialValue)) {
+		for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer.hasMoreTokens(); ) {
+			String item = stringTokenizer.nextToken();
 			result.add(createServiceRefProtocolBindingTypeFromString(EjbJar30Package.eINSTANCE.getServiceRefProtocolBindingType(), item));
 		}
 		return result;

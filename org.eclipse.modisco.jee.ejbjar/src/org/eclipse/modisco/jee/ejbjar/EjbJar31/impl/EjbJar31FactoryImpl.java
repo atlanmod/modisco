@@ -13,8 +13,8 @@ package org.eclipse.modisco.jee.ejbjar.EjbJar31.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
 
+import java.util.StringTokenizer;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -170,15 +170,16 @@ import org.eclipse.modisco.jee.ejbjar.EjbJar31.XsdQNameType;
 import org.eclipse.modisco.jee.ejbjar.EjbJar31.XsdStringType;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
  * @generated
  */
 public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory {
 	/**
 	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public static EjbJar31Factory init() {
@@ -196,8 +197,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 
 	/**
 	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbJar31FactoryImpl() {
@@ -205,7 +206,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -335,7 +337,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -479,7 +482,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -623,7 +627,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AccessTimeoutType createAccessTimeoutType() {
@@ -632,7 +637,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ActivationConfigPropertyType createActivationConfigPropertyType() {
@@ -641,7 +647,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ActivationConfigType createActivationConfigType() {
@@ -650,7 +657,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AddressingResponsesType createAddressingResponsesType() {
@@ -659,7 +667,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AddressingType createAddressingType() {
@@ -668,7 +677,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ApplicationExceptionType createApplicationExceptionType() {
@@ -677,7 +687,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AroundInvokeType createAroundInvokeType() {
@@ -686,7 +697,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AroundTimeoutType createAroundTimeoutType() {
@@ -695,7 +707,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AssemblyDescriptorType createAssemblyDescriptorType() {
@@ -704,7 +717,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AsyncMethodType createAsyncMethodType() {
@@ -713,7 +727,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public CmpFieldType createCmpFieldType() {
@@ -722,7 +737,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public CmpVersionType createCmpVersionType() {
@@ -731,7 +747,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public CmrFieldType createCmrFieldType() {
@@ -740,7 +757,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public CmrFieldTypeType createCmrFieldTypeType() {
@@ -749,7 +767,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConcurrencyManagementTypeType createConcurrencyManagementTypeType() {
@@ -758,7 +777,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConcurrentLockTypeType createConcurrentLockTypeType() {
@@ -767,7 +787,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConcurrentMethodType createConcurrentMethodType() {
@@ -776,7 +797,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ContainerTransactionType createContainerTransactionType() {
@@ -785,7 +807,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DataSourceType createDataSourceType() {
@@ -794,7 +817,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DependsOnType createDependsOnType() {
@@ -803,7 +827,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DescriptionType createDescriptionType() {
@@ -812,7 +837,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DisplayNameType createDisplayNameType() {
@@ -821,7 +847,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public DocumentRoot createDocumentRoot() {
@@ -830,7 +857,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbClassType createEjbClassType() {
@@ -839,7 +867,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbJarType createEjbJarType() {
@@ -848,7 +877,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbLinkType createEjbLinkType() {
@@ -857,7 +887,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbLocalRefType createEjbLocalRefType() {
@@ -866,7 +897,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbNameType createEjbNameType() {
@@ -875,7 +907,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRefNameType createEjbRefNameType() {
@@ -884,7 +917,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRefType createEjbRefType() {
@@ -893,7 +927,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRefTypeType createEjbRefTypeType() {
@@ -902,7 +937,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRelationshipRoleType createEjbRelationshipRoleType() {
@@ -911,7 +947,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbRelationType createEjbRelationType() {
@@ -920,7 +957,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EmptyType createEmptyType() {
@@ -929,7 +967,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EnterpriseBeansType createEnterpriseBeansType() {
@@ -938,7 +977,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EntityBeanType createEntityBeanType() {
@@ -947,7 +987,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EnvEntryType createEnvEntryType() {
@@ -956,7 +997,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EnvEntryTypeValuesType createEnvEntryTypeValuesType() {
@@ -965,7 +1007,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ExcludeListType createExcludeListType() {
@@ -974,7 +1017,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FullyQualifiedClassType createFullyQualifiedClassType() {
@@ -983,7 +1027,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public GenericBooleanType createGenericBooleanType() {
@@ -992,7 +1037,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public HandlerChainsType createHandlerChainsType() {
@@ -1001,7 +1047,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public HandlerChainType createHandlerChainType() {
@@ -1010,7 +1057,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public HandlerType createHandlerType() {
@@ -1019,7 +1067,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public HomeType createHomeType() {
@@ -1028,7 +1077,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public IconType createIconType() {
@@ -1037,7 +1087,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InitMethodType createInitMethodType() {
@@ -1046,7 +1097,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InjectionTargetType createInjectionTargetType() {
@@ -1055,7 +1107,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InterceptorBindingType createInterceptorBindingType() {
@@ -1064,7 +1117,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InterceptorOrderType createInterceptorOrderType() {
@@ -1073,7 +1127,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InterceptorsType createInterceptorsType() {
@@ -1082,7 +1137,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public InterceptorType createInterceptorType() {
@@ -1091,7 +1147,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JavaIdentifierType createJavaIdentifierType() {
@@ -1100,7 +1157,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JavaTypeType createJavaTypeType() {
@@ -1109,7 +1167,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JdbcUrlType createJdbcUrlType() {
@@ -1118,7 +1177,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public JndiNameType createJndiNameType() {
@@ -1127,7 +1187,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LifecycleCallbackType createLifecycleCallbackType() {
@@ -1136,7 +1197,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ListenerType createListenerType() {
@@ -1145,7 +1207,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LocalHomeType createLocalHomeType() {
@@ -1154,7 +1217,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LocalType createLocalType() {
@@ -1163,7 +1227,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationLinkType createMessageDestinationLinkType() {
@@ -1172,7 +1237,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationRefType createMessageDestinationRefType() {
@@ -1181,7 +1247,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationType createMessageDestinationType() {
@@ -1190,7 +1257,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationTypeType createMessageDestinationTypeType() {
@@ -1199,7 +1267,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDestinationUsageType createMessageDestinationUsageType() {
@@ -1208,7 +1277,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MessageDrivenBeanType createMessageDrivenBeanType() {
@@ -1217,7 +1287,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MethodIntfType createMethodIntfType() {
@@ -1226,7 +1297,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MethodNameType createMethodNameType() {
@@ -1235,7 +1307,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MethodParamsType createMethodParamsType() {
@@ -1244,7 +1317,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MethodPermissionType createMethodPermissionType() {
@@ -1253,7 +1327,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MethodType createMethodType() {
@@ -1262,7 +1337,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MultiplicityType createMultiplicityType() {
@@ -1271,7 +1347,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NamedMethodType createNamedMethodType() {
@@ -1280,7 +1357,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ParamValueType createParamValueType() {
@@ -1289,7 +1367,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PathType createPathType() {
@@ -1298,7 +1377,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceContextRefType createPersistenceContextRefType() {
@@ -1307,7 +1387,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceContextTypeType createPersistenceContextTypeType() {
@@ -1316,7 +1397,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceTypeType createPersistenceTypeType() {
@@ -1325,7 +1407,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PersistenceUnitRefType createPersistenceUnitRefType() {
@@ -1334,7 +1417,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PortComponentRefType createPortComponentRefType() {
@@ -1343,7 +1427,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public PropertyType createPropertyType() {
@@ -1352,7 +1437,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public QueryMethodType createQueryMethodType() {
@@ -1361,7 +1447,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public QueryType createQueryType() {
@@ -1370,7 +1457,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RelationshipRoleSourceType createRelationshipRoleSourceType() {
@@ -1379,7 +1467,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RelationshipsType createRelationshipsType() {
@@ -1388,7 +1477,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RemoteType createRemoteType() {
@@ -1397,7 +1487,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RemoveMethodType createRemoveMethodType() {
@@ -1406,7 +1497,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResAuthType createResAuthType() {
@@ -1415,7 +1507,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResourceEnvRefType createResourceEnvRefType() {
@@ -1424,7 +1517,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResourceRefType createResourceRefType() {
@@ -1433,7 +1527,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RespectBindingType createRespectBindingType() {
@@ -1442,7 +1537,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResSharingScopeType createResSharingScopeType() {
@@ -1451,7 +1547,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResultTypeMappingType createResultTypeMappingType() {
@@ -1460,7 +1557,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RoleNameType createRoleNameType() {
@@ -1469,7 +1567,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RunAsType createRunAsType() {
@@ -1478,7 +1577,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SecurityIdentityType createSecurityIdentityType() {
@@ -1487,7 +1587,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SecurityRoleRefType createSecurityRoleRefType() {
@@ -1496,7 +1597,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SecurityRoleType createSecurityRoleType() {
@@ -1505,7 +1607,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ServiceRefType createServiceRefType() {
@@ -1514,7 +1617,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SessionBeanType createSessionBeanType() {
@@ -1523,7 +1627,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SessionTypeType createSessionTypeType() {
@@ -1532,7 +1637,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public StatefulTimeoutType createStatefulTimeoutType() {
@@ -1541,7 +1647,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public org.eclipse.modisco.jee.ejbjar.EjbJar31.String createString() {
@@ -1550,7 +1657,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TimerScheduleType createTimerScheduleType() {
@@ -1559,7 +1667,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TimerType createTimerType() {
@@ -1568,7 +1677,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TimeUnitTypeType createTimeUnitTypeType() {
@@ -1577,7 +1687,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TransactionTypeType createTransactionTypeType() {
@@ -1586,7 +1697,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TransAttributeType createTransAttributeType() {
@@ -1595,7 +1707,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TrueFalseType createTrueFalseType() {
@@ -1604,7 +1717,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public UrlPatternType createUrlPatternType() {
@@ -1613,7 +1727,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdAnyURIType createXsdAnyURIType() {
@@ -1622,7 +1737,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdBooleanType createXsdBooleanType() {
@@ -1631,7 +1747,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdIntegerType createXsdIntegerType() {
@@ -1640,7 +1757,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdNMTOKENType createXsdNMTOKENType() {
@@ -1649,7 +1767,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdNonNegativeIntegerType createXsdNonNegativeIntegerType() {
@@ -1658,7 +1777,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdPositiveIntegerType createXsdPositiveIntegerType() {
@@ -1667,7 +1787,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdQNameType createXsdQNameType() {
@@ -1676,7 +1797,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public XsdStringType createXsdStringType() {
@@ -1685,38 +1807,39 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AddressingResponsesTypeBase createAddressingResponsesTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public AddressingResponsesTypeBase createAddressingResponsesTypeBaseFromString(EDataType eDataType, String initialValue) {
 		AddressingResponsesTypeBase result = AddressingResponsesTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertAddressingResponsesTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertAddressingResponsesTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CmpVersionTypeBase createCmpVersionTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public CmpVersionTypeBase createCmpVersionTypeBaseFromString(EDataType eDataType, String initialValue) {
 		CmpVersionTypeBase result = CmpVersionTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertCmpVersionTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1724,18 +1847,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CmrFieldTypeTypeBase createCmrFieldTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public CmrFieldTypeTypeBase createCmrFieldTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		CmrFieldTypeTypeBase result = CmrFieldTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertCmrFieldTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1743,58 +1867,59 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConcurrencyManagementTypeTypeBase createConcurrencyManagementTypeTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public ConcurrencyManagementTypeTypeBase createConcurrencyManagementTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		ConcurrencyManagementTypeTypeBase result = ConcurrencyManagementTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConcurrencyManagementTypeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertConcurrencyManagementTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConcurrentLockTypeTypeBase createConcurrentLockTypeTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public ConcurrentLockTypeTypeBase createConcurrentLockTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		ConcurrentLockTypeTypeBase result = ConcurrentLockTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConcurrentLockTypeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertConcurrentLockTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		EjbRefTypeTypeBase result = EjbRefTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbRefTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1802,18 +1927,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenericBooleanTypeBase createGenericBooleanTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public GenericBooleanTypeBase createGenericBooleanTypeBaseFromString(EDataType eDataType, String initialValue) {
 		GenericBooleanTypeBase result = GenericBooleanTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertGenericBooleanTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1821,18 +1947,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IsolationLevelType createIsolationLevelTypeFromString(EDataType eDataType,
-			String initialValue) {
+	public IsolationLevelType createIsolationLevelTypeFromString(EDataType eDataType, String initialValue) {
 		IsolationLevelType result = IsolationLevelType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertIsolationLevelTypeToString(EDataType eDataType, Object instanceValue) {
@@ -1840,38 +1967,39 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseFromString(EDataType eDataType, String initialValue) {
 		MessageDestinationUsageTypeBase result = MessageDestinationUsageTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationUsageTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationUsageTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodIntfTypeBase createMethodIntfTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public MethodIntfTypeBase createMethodIntfTypeBaseFromString(EDataType eDataType, String initialValue) {
 		MethodIntfTypeBase result = MethodIntfTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertMethodIntfTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1879,18 +2007,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MultiplicityTypeBase createMultiplicityTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public MultiplicityTypeBase createMultiplicityTypeBaseFromString(EDataType eDataType, String initialValue) {
 		MultiplicityTypeBase result = MultiplicityTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertMultiplicityTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1898,38 +2027,39 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseFromString(
-			EDataType eDataType, String initialValue) {
+	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		PersistenceContextTypeTypeBase result = PersistenceContextTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPersistenceContextTypeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertPersistenceContextTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PersistenceTypeTypeBase createPersistenceTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public PersistenceTypeTypeBase createPersistenceTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		PersistenceTypeTypeBase result = PersistenceTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertPersistenceTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1937,7 +2067,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ResAuthTypeBase createResAuthTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -1947,7 +2078,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResAuthTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1955,18 +2087,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResSharingScopeTypeBase createResSharingScopeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public ResSharingScopeTypeBase createResSharingScopeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		ResSharingScopeTypeBase result = ResSharingScopeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResSharingScopeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1974,18 +2107,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResultTypeMappingTypeBase createResultTypeMappingTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public ResultTypeMappingTypeBase createResultTypeMappingTypeBaseFromString(EDataType eDataType, String initialValue) {
 		ResultTypeMappingTypeBase result = ResultTypeMappingTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResultTypeMappingTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -1993,18 +2127,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SessionTypeTypeBase createSessionTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public SessionTypeTypeBase createSessionTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		SessionTypeTypeBase result = SessionTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertSessionTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2012,18 +2147,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TimeUnitTypeTypeBase createTimeUnitTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public TimeUnitTypeTypeBase createTimeUnitTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		TimeUnitTypeTypeBase result = TimeUnitTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTimeUnitTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2031,18 +2167,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransactionTypeTypeBase createTransactionTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public TransactionTypeTypeBase createTransactionTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		TransactionTypeTypeBase result = TransactionTypeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTransactionTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2050,18 +2187,19 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransAttributeTypeBase createTransAttributeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public TransAttributeTypeBase createTransAttributeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		TransAttributeTypeBase result = TransAttributeTypeBase.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTransAttributeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2069,34 +2207,35 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AddressingResponsesTypeBase createAddressingResponsesTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public AddressingResponsesTypeBase createAddressingResponsesTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createAddressingResponsesTypeBaseFromString(EjbJar31Package.eINSTANCE.getAddressingResponsesTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertAddressingResponsesTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertAddressingResponsesTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertAddressingResponsesTypeBaseToString(EjbJar31Package.eINSTANCE.getAddressingResponsesTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CmpVersionTypeBase createCmpVersionTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public CmpVersionTypeBase createCmpVersionTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createCmpVersionTypeBaseFromString(EjbJar31Package.eINSTANCE.getCmpVersionTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertCmpVersionTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2104,61 +2243,62 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CmrFieldTypeTypeBase createCmrFieldTypeTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public CmrFieldTypeTypeBase createCmrFieldTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createCmrFieldTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getCmrFieldTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCmrFieldTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertCmrFieldTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertCmrFieldTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getCmrFieldTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConcurrencyManagementTypeTypeBase createConcurrencyManagementTypeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public ConcurrencyManagementTypeTypeBase createConcurrencyManagementTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createConcurrencyManagementTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getConcurrencyManagementTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConcurrencyManagementTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertConcurrencyManagementTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertConcurrencyManagementTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getConcurrencyManagementTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConcurrentLockTypeTypeBase createConcurrentLockTypeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public ConcurrentLockTypeTypeBase createConcurrentLockTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createConcurrentLockTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getConcurrentLockTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConcurrentLockTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertConcurrentLockTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertConcurrentLockTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getConcurrentLockTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createDeweyVersionTypeFromString(EDataType eDataType, String initialValue) {
@@ -2166,7 +2306,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertDeweyVersionTypeToString(EDataType eDataType, Object instanceValue) {
@@ -2174,7 +2315,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEjbClassTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2182,7 +2324,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbClassTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2190,7 +2333,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEjbLinkTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2198,7 +2342,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbLinkTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2206,7 +2351,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEjbNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2214,7 +2360,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2222,7 +2369,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createEjbRefNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2230,7 +2378,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbRefNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2238,16 +2387,17 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public EjbRefTypeTypeBase createEjbRefTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createEjbRefTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getEjbRefTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertEjbRefTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2255,61 +2405,62 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createEnvEntryTypeValuesTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createEnvEntryTypeValuesTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEnvEntryTypeValuesTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertEnvEntryTypeValuesTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createFullyQualifiedClassTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createFullyQualifiedClassTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.TOKEN, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFullyQualifiedClassTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertFullyQualifiedClassTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.TOKEN, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GenericBooleanTypeBase createGenericBooleanTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public GenericBooleanTypeBase createGenericBooleanTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createGenericBooleanTypeBaseFromString(EjbJar31Package.eINSTANCE.getGenericBooleanTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGenericBooleanTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertGenericBooleanTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertGenericBooleanTypeBaseToString(EjbJar31Package.eINSTANCE.getGenericBooleanTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createHomeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2317,7 +2468,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertHomeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2325,16 +2477,17 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IsolationLevelType createIsolationLevelTypeObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public IsolationLevelType createIsolationLevelTypeObjectFromString(EDataType eDataType, String initialValue) {
 		return createIsolationLevelTypeFromString(EjbJar31Package.eINSTANCE.getIsolationLevelType(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertIsolationLevelTypeObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2342,7 +2495,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJavaIdentifierTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2350,7 +2504,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJavaIdentifierTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2358,7 +2513,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJavaTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2366,7 +2522,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJavaTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2374,7 +2531,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJdbcUrlTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2382,7 +2540,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJdbcUrlTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2390,7 +2549,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createJndiNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2398,7 +2558,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertJndiNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2406,7 +2567,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createLocalHomeTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2414,7 +2576,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLocalHomeTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2422,7 +2585,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createLocalTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2430,7 +2594,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLocalTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2438,70 +2603,71 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createMessageDestinationLinkTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createMessageDestinationLinkTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.TOKEN, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationLinkTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationLinkTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.TOKEN, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createMessageDestinationTypeTypeBaseFromString(EDataType eDataType,
-			String initialValue) {
+	public String createMessageDestinationTypeTypeBaseFromString(EDataType eDataType, String initialValue) {
 		return (String)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationTypeTypeBaseToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationTypeTypeBaseToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public MessageDestinationUsageTypeBase createMessageDestinationUsageTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createMessageDestinationUsageTypeBaseFromString(EjbJar31Package.eINSTANCE.getMessageDestinationUsageTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMessageDestinationUsageTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMessageDestinationUsageTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertMessageDestinationUsageTypeBaseToString(EjbJar31Package.eINSTANCE.getMessageDestinationUsageTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodIntfTypeBase createMethodIntfTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public MethodIntfTypeBase createMethodIntfTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createMethodIntfTypeBaseFromString(EjbJar31Package.eINSTANCE.getMethodIntfTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertMethodIntfTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2509,7 +2675,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createMethodNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2517,7 +2684,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertMethodNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2525,25 +2693,26 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MultiplicityTypeBase createMultiplicityTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public MultiplicityTypeBase createMultiplicityTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createMultiplicityTypeBaseFromString(EjbJar31Package.eINSTANCE.getMultiplicityTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertMultiplicityTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertMultiplicityTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertMultiplicityTypeBaseToString(EjbJar31Package.eINSTANCE.getMultiplicityTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createPathTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2551,7 +2720,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertPathTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2559,57 +2729,59 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public PersistenceContextTypeTypeBase createPersistenceContextTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createPersistenceContextTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getPersistenceContextTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPersistenceContextTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertPersistenceContextTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertPersistenceContextTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getPersistenceContextTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PersistenceTypeTypeBase createPersistenceTypeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public PersistenceTypeTypeBase createPersistenceTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createPersistenceTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getPersistenceTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertPersistenceTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertPersistenceTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertPersistenceTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getPersistenceTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<String> createProtocolBindingListTypeFromString(EDataType eDataType,
-			String initialValue) {
+	public List<String> createProtocolBindingListTypeFromString(EDataType eDataType, String initialValue) {
 		if (initialValue == null) return null;
 		List<String> result = new ArrayList<String>();
-		for (String item : split(initialValue)) {
+		for (StringTokenizer stringTokenizer = new StringTokenizer(initialValue); stringTokenizer.hasMoreTokens(); ) {
+			String item = stringTokenizer.nextToken();
 			result.add(createProtocolBindingTypeFromString(EjbJar31Package.eINSTANCE.getProtocolBindingType(), item));
 		}
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertProtocolBindingListTypeToString(EDataType eDataType, Object instanceValue) {
@@ -2625,7 +2797,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createProtocolBindingTypeFromString(EDataType eDataType, String initialValue) {
@@ -2656,7 +2829,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertProtocolBindingTypeToString(EDataType eDataType, Object instanceValue) {
@@ -2683,7 +2857,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createProtocolURIAliasTypeFromString(EDataType eDataType, String initialValue) {
@@ -2691,7 +2866,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertProtocolURIAliasTypeToString(EDataType eDataType, Object instanceValue) {
@@ -2699,7 +2875,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createQnamePatternFromString(EDataType eDataType, String initialValue) {
@@ -2707,7 +2884,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertQnamePatternToString(EDataType eDataType, Object instanceValue) {
@@ -2715,7 +2893,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createRemoteTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2723,7 +2902,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertRemoteTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2731,16 +2911,17 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResAuthTypeBase createResAuthTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public ResAuthTypeBase createResAuthTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createResAuthTypeBaseFromString(EjbJar31Package.eINSTANCE.getResAuthTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertResAuthTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2748,43 +2929,44 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResSharingScopeTypeBase createResSharingScopeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public ResSharingScopeTypeBase createResSharingScopeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createResSharingScopeTypeBaseFromString(EjbJar31Package.eINSTANCE.getResSharingScopeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertResSharingScopeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertResSharingScopeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertResSharingScopeTypeBaseToString(EjbJar31Package.eINSTANCE.getResSharingScopeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResultTypeMappingTypeBase createResultTypeMappingTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public ResultTypeMappingTypeBase createResultTypeMappingTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createResultTypeMappingTypeBaseFromString(EjbJar31Package.eINSTANCE.getResultTypeMappingTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertResultTypeMappingTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertResultTypeMappingTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertResultTypeMappingTypeBaseToString(EjbJar31Package.eINSTANCE.getResultTypeMappingTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createRoleNameTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2792,7 +2974,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertRoleNameTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2800,16 +2983,17 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SessionTypeTypeBase createSessionTypeTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public SessionTypeTypeBase createSessionTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createSessionTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getSessionTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertSessionTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2817,61 +3001,62 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TimeUnitTypeTypeBase createTimeUnitTypeTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public TimeUnitTypeTypeBase createTimeUnitTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createTimeUnitTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getTimeUnitTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTimeUnitTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertTimeUnitTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertTimeUnitTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getTimeUnitTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransactionTypeTypeBase createTransactionTypeTypeBaseObjectFromString(
-			EDataType eDataType, String initialValue) {
+	public TransactionTypeTypeBase createTransactionTypeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createTransactionTypeTypeBaseFromString(EjbJar31Package.eINSTANCE.getTransactionTypeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTransactionTypeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertTransactionTypeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertTransactionTypeTypeBaseToString(EjbJar31Package.eINSTANCE.getTransactionTypeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransAttributeTypeBase createTransAttributeTypeBaseObjectFromString(EDataType eDataType,
-			String initialValue) {
+	public TransAttributeTypeBase createTransAttributeTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
 		return createTransAttributeTypeBaseFromString(EjbJar31Package.eINSTANCE.getTransAttributeTypeBase(), initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTransAttributeTypeBaseObjectToString(EDataType eDataType,
-			Object instanceValue) {
+	public String convertTransAttributeTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertTransAttributeTypeBaseToString(EjbJar31Package.eINSTANCE.getTransAttributeTypeBase(), instanceValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Boolean createTrueFalseTypeBaseFromString(EDataType eDataType, String initialValue) {
@@ -2879,7 +3064,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTrueFalseTypeBaseToString(EDataType eDataType, Object instanceValue) {
@@ -2887,7 +3073,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Boolean createTrueFalseTypeBaseObjectFromString(EDataType eDataType, String initialValue) {
@@ -2895,7 +3082,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertTrueFalseTypeBaseObjectToString(EDataType eDataType, Object instanceValue) {
@@ -2903,7 +3091,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EjbJar31Package getEjbJar31Package() {
@@ -2911,7 +3100,8 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @deprecated
 	 * @generated
 	 */
@@ -2920,4 +3110,4 @@ public class EjbJar31FactoryImpl extends EFactoryImpl implements EjbJar31Factory
 		return EjbJar31Package.eINSTANCE;
 	}
 
-} // EjbJar31FactoryImpl
+} //EjbJar31FactoryImpl
