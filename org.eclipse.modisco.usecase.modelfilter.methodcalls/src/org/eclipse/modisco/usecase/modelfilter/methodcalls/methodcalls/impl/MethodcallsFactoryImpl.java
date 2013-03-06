@@ -36,7 +36,7 @@ public class MethodcallsFactoryImpl extends EFactoryImpl implements MethodcallsF
 	 */
 	public static MethodcallsFactory init() {
 		try {
-			MethodcallsFactory theMethodcallsFactory = (MethodcallsFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/MethodCalls/0.1.incubation/methodcalls");  //$NON-NLS-1$
+			MethodcallsFactory theMethodcallsFactory = (MethodcallsFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/MethodCalls/0.1.incubation/methodcalls"); 
 			if (theMethodcallsFactory != null) {
 				return theMethodcallsFactory;
 			}
@@ -69,7 +69,7 @@ public class MethodcallsFactoryImpl extends EFactoryImpl implements MethodcallsF
 			case MethodcallsPackage.CALLS_MODEL: return createCallsModel();
 			case MethodcallsPackage.CALL_NODE: return createCallNode();
 			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 

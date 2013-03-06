@@ -156,7 +156,7 @@ public class MethodCallImpl extends EObjectImpl implements MethodCall {
 	public void setParent(CallNode newParent) {
 		if (newParent != eInternalContainer() || (eContainerFeatureID() != MethodcallsPackage.METHOD_CALL__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -364,7 +364,7 @@ public class MethodCallImpl extends EObjectImpl implements MethodCall {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (order: "); //$NON-NLS-1$
+		result.append(" (order: ");
 		result.append(order);
 		result.append(')');
 		return result.toString();
