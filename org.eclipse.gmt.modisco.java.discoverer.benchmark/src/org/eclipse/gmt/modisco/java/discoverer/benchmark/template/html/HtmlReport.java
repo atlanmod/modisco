@@ -143,10 +143,14 @@ public class HtmlReport extends AbstractAcceleoGenerator {
                  * The behavior of the properties loader service is explained in the Acceleo documentation
                  * (Help -> Help Contents).
                  */
-                 
+                //Bug 382359 - Compatibility with Helios
+            	//gdupe> The properties are not used in the generation removing 
+                // the following lines allow to build against Helios.
+                /*
                 for (int i = 2; i < args.length; i++) {
                     generator.addPropertiesFile(args[i]);
                 }
+                */
                 
                 generator.doGenerate(new BasicMonitor());
             }
@@ -282,10 +286,15 @@ public class HtmlReport extends AbstractAcceleoGenerator {
      *            The properties file to add.
      * @since 3.1
      */
+    //Bug 382359 - Compatibility with Helios
+  	//gdupe> The properties are not nues in the generation removing the method
+  	// allow to build against Helios.
+  	/*
     @Override
     public void addPropertiesFile(String propertiesFile) {
         this.propertiesFiles.add(propertiesFile);
     }
+    */
 
   /**
 	 * If the module(s) called by this launcher require properties files, return their qualified path from
