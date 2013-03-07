@@ -99,7 +99,7 @@ public class ProjectSet implements IProjectSet {
 					}
 				} catch (CoreException e) {
 					MoDiscoLogger.logError(e,
-							"Could not compute size of a project. The project set will not be sorted.", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+							"Could not compute size of a project. The project set will not be sorted.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 					return 0;
 				}
 				return 0;

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.facet.util.emf.core.serialization.ISerializer;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
 
 /**

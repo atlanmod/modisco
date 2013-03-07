@@ -166,7 +166,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 			
 		
 		} catch (InterruptedException e) {
-				MoDiscoLogger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault());
+				MoDiscoLogger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
 		}
 		
 		

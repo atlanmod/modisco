@@ -40,12 +40,12 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.dom.Modifier;
-import org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator;
 import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererBenchmarkDiscoverer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererID;
 import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventNotifier;
 import org.eclipse.modisco.infra.discovery.benchmark.core.api.IProjectSet;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
 import org.eclipse.modisco.infra.discovery.benchmark.core.reporting.HtmlReport;
 import org.eclipse.modisco.infra.discovery.benchmark.core.reporting.internal.BenchmarkChartGeneration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Benchmark;
@@ -204,18 +204,18 @@ implements IDiscovererBenchmarkDiscoverer {
 							discoverer.discoverElement(project, subProgressMonitor);
 						} else {
 							MoDiscoLogger.logWarning("Discoverer " + discovererId + " is not applicable on project " + project.getName(),
-									org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault());
+									org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
 						}
 					} catch (DiscoveryException e) {
 						failure = true;
 						discoveryErrors.append(e.getStackTrace().toString());
 						MoDiscoLogger.logError(e,
-								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 					} catch (ClassCastException e) {
 						failure = true;
 						discoveryErrors.append(e.getStackTrace().toString());
 						MoDiscoLogger.logError(e,
-								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 					}
 					this.recorder.stop();
 					this.events.addAll(this.recorder.getEvents());
@@ -238,7 +238,7 @@ implements IDiscovererBenchmarkDiscoverer {
 						saveTargetModel(benchmark);
 					} catch (IOException e) {
 						MoDiscoLogger.logError(e,
-								"Intermediate model save fail", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+								"Intermediate model save fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 					}
 				}
 			}
@@ -258,13 +258,13 @@ implements IDiscovererBenchmarkDiscoverer {
 			}
 		} catch (IOException e) {
 			MoDiscoLogger.logError(e,
-					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 		} catch (CoreException e) {
 			MoDiscoLogger.logError(e,
-					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 		} catch (Exception e) {
 			MoDiscoLogger.logError(e,
-					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 		}
 
 
@@ -327,7 +327,7 @@ implements IDiscovererBenchmarkDiscoverer {
 			HtmlReport report = new HtmlReport(benchmark, file, arguments);
 			report.doGenerate(null);
 		} catch (Exception e) {
-			MoDiscoLogger.logWarning(e, "Acceleo exception", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault());
+			MoDiscoLogger.logWarning(e, "Acceleo exception", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
 		}
 		//Generation of the charts
 		BenchmarkChartGeneration chartGenerator = new BenchmarkChartGeneration(file, this.measureMemoryUse);
@@ -498,7 +498,7 @@ implements IDiscovererBenchmarkDiscoverer {
 			benchmark.setOsArchitecture(sysInfo.getArch());
 		} catch (IOException e) {
 			MoDiscoLogger.logError(e,
-					"Could not get system information for benchmark", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+					"Could not get system information for benchmark", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 		}
 		return benchmark;
 	}
@@ -601,7 +601,7 @@ implements IDiscovererBenchmarkDiscoverer {
 				disco.setXmiSizeInBytes(fileStore.fetchInfo().getLength());
 			} catch (Exception e) {
 				MoDiscoLogger.logError(e,
-						"Could not get output model size.", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+						"Could not get output model size.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 			}
 
 		}
@@ -669,7 +669,7 @@ implements IDiscovererBenchmarkDiscoverer {
 			}
 		} catch (CoreException e) {
 			MoDiscoLogger.logError(e,
-					"Could not get members of project", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
+					"Could not get members of project", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 		}
 		return proj;
 	}
