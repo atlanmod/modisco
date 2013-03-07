@@ -8,14 +8,14 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.infra.discovery.benchmark.internal.impl;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.modisco.infra.discovery.benchmark.api.IEventListener;
-import org.eclipse.modisco.infra.discovery.benchmark.api.IEventManager;
-import org.eclipse.modisco.infra.discovery.benchmark.api.IEventManagerFactory;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventListener;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventManager;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventManagerFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Event;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.EventType;
 

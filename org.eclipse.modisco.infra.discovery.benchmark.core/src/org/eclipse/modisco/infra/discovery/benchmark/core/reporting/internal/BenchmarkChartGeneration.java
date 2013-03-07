@@ -8,7 +8,7 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.infra.discovery.benchmark.reporting.internal;
+package org.eclipse.modisco.infra.discovery.benchmark.core.reporting.internal;
 
 import java.io.File;
 import java.util.ArrayList;

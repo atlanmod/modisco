@@ -9,7 +9,7 @@
  *     Guillaume Doux - INRIA - Initial API and implementation
  *     
  ******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.api;
+package org.eclipse.modisco.infra.discovery.benchmark.core.api;
 
 /**
  * Interface used by discoverers of discovery benchmarks

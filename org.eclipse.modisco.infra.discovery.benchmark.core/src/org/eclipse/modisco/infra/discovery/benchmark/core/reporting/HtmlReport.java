@@ -9,7 +9,7 @@
  *     Obeo - initial API and implementation
  *     Guillaume Doux - INRIA
  *******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.reporting;
+package org.eclipse.modisco.infra.discovery.benchmark.core.reporting;
 
 import java.io.File;
 import java.io.IOException;

@@ -8,7 +8,7 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.infra.discovery.benchmark.internal.impl;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
 import java.util.LinkedList;
 import java.util.List;

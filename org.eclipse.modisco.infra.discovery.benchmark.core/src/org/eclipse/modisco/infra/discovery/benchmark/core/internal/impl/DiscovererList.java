@@ -7,7 +7,7 @@
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
  * 
  ******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.internal.impl;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -15,7 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
-import org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
 
 /**

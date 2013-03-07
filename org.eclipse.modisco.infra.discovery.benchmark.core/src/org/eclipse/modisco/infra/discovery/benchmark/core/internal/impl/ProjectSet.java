@@ -8,7 +8,7 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.infra.discovery.benchmark.internal.impl;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -29,7 +29,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.modisco.infra.discovery.benchmark.api.IProjectSet;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IProjectSet;
 
 /**
  * the project set implementation
@@ -99,7 +99,7 @@ public class ProjectSet implements IProjectSet {
 					}
 				} catch (CoreException e) {
 					MoDiscoLogger.logError(e,
-							"Could not compute size of a project. The project set will not be sorted.", org.eclipse.modisco.infra.discovery.benchmark.api.Activator.getDefault()); //$NON-NLS-1$
+							"Could not compute size of a project. The project set will not be sorted.", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault()); //$NON-NLS-1$
 					return 0;
 				}
 				return 0;

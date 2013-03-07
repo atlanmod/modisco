@@ -8,17 +8,15 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.infra.discovery.benchmark.internal.impl;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.modisco.infra.discovery.benchmark.api.IEventListener;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.BenchmarkFactory;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventListener;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Event;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.EventType;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.MemoryMeasurement;
 
 /**
@@ -168,7 +166,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 			
 		
 		} catch (InterruptedException e) {
-				MoDiscoLogger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.api.Activator.getDefault());
+				MoDiscoLogger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.core.api.Activator.getDefault());
 		}
 		
 		
