@@ -148,9 +148,14 @@ public class HtmlReport extends AbstractAcceleoGenerator {
                  * (Help -> Help Contents).
                  */
                  
+            	//Bug 382359 - Compatibility with Helios
+            	//gdupe> The properties are not used in the generation removing 
+                // the following lines allow to build against Helios.
+                /*
                 for (int i = 2; i < args.length; i++) {
                     generator.addPropertiesFile(args[i]);
                 }
+                */
                 
                 generator.doGenerate(new BasicMonitor());
             }
@@ -300,10 +305,15 @@ public class HtmlReport extends AbstractAcceleoGenerator {
      *            The properties file to add.
      * @since 3.1
      */
+	//Bug 382359 - Compatibility with Helios
+	//gdupe> The properties are not nues in the generation removing the method
+	// allow to build against Helios.
+	/*
     @Override
     public void addPropertiesFile(final String propertiesFile) {
         this.propertiesFiles.add(propertiesFile);
     }
+    */
 
   /**
 	 * This will be used to get the list of templates that are to be launched by

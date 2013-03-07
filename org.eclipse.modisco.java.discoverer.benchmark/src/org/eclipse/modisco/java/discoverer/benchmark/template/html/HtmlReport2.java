@@ -167,11 +167,14 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 				 * With a new property loader you could for example, look for
 				 * properties files in a bundle.
 				 */
-
+            	//Bug 382359 - Compatibility with Helios
+            	//gdupe> The properties are not used in the generation removing 
+                // the following lines allow to build against Helios.
+                /*
 				for (int i = 2; i < args.length; i++) {
 					generator.addPropertiesFile(args[i]);
 				}
-
+				*/
 				generator.doGenerate(new BasicMonitor());
 			}
 		} catch (IOException e) {
@@ -331,10 +334,15 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	 * @generated
 	 * @since 3.1
 	 */
+	//Bug 382359 - Compatibility with Helios
+	//gdupe> The properties are not nues in the generation removing the method
+	// allow to build against Helios.
+	/*
 	@Override
 	public void addPropertiesFile(String propertiesFile) {
         this.propertiesFiles.add(propertiesFile);
     }
+    */
 
 	/**
 	 * This will be used to get the list of templates that are to be launched by
