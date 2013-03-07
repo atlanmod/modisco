@@ -16,7 +16,6 @@ import javax.sql.DataSource;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.emf.cdo.common.revision.CDORevisionCache;
 import org.eclipse.emf.cdo.server.CDOServerUtil;
 import org.eclipse.emf.cdo.server.IRepository;
 import org.eclipse.emf.cdo.server.IStore;
@@ -140,14 +139,7 @@ public abstract class AbstractCDOServer implements Server {
 	protected abstract DataSource getDataSource(final String dbName) throws Exception;
 
 	protected abstract IDBAdapter getDBAdapter();
-
-	protected CDORevisionCache getCache() {
-		return null;
-		// CDORevisionCache revisionCache = CDORevisionCacheUtil.createLRUCache(
-		// CURRENT_LRU_CAPACITY, REVISED_LRU_CAPACITY);
-		// return revisionCache;
-	}
-
+	
 	public void setRepository(final IRepository repository) {
 		this.repository = repository;
 	}
