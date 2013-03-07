@@ -30,9 +30,9 @@ Require-Bundle: org.eclipse.gmt.modisco.java;bundle-version="0.7.0",
  org.apache.derby;bundle-version="10.5.1",
  org.eclipse.modisco.kdm.source.extension;bundle-version="0.9.0",
  org.eclipse.core.runtime;bundle-version="3.6.0",
- com.ibm.icu;bundle-version="4.4.2",
+ com.ibm.icu;bundle-version="4.2.1",
  org.h2;bundle-version="1.1.117",
- org.eclipse.net4j.db.h2;bundle-version="4.0.0",
+ org.eclipse.net4j.db.h2;bundle-version="3.0.0",
  org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark;bundle-version="0.9.0",
  org.eclipse.modisco.infra.discovery.benchmark;bundle-version="0.9.0"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
