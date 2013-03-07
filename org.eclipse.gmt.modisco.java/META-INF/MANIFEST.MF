@@ -15,8 +15,8 @@ Bundle-ActivationPolicy: lazy
 Export-Package: 
  org.eclipse.gmt.modisco.java,
  org.eclipse.gmt.modisco.java.emf,
- org.eclipse.gmt.modisco.java.emf.impl,
- org.eclipse.gmt.modisco.java.emf.util,
+ org.eclipse.gmt.modisco.java.emf.impl;x-internal:=true,
+ org.eclipse.gmt.modisco.java.emf.util;x-internal:=true,
  org.eclipse.gmt.modisco.java.internal.util;
   x-friends:="org.eclipse.gmt.modisco.java.discoverer.tests,
    org.eclipse.gmt.modisco.java.discoverer,
