@@ -9,8 +9,10 @@
  *     Guillaume Doux - INRIA - Initial API and implementation
  *     
  ******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.core.api;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererList;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererList;
 
 /**

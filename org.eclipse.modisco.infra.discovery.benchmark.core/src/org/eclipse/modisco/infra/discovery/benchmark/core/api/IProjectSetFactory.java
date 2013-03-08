@@ -9,6 +9,8 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.api;
 
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.ProjectSetFactory;
+
 /**
  * Interface of the IprojectSet factory
  * @author Guillaume Doux

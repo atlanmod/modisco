@@ -11,6 +11,8 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.api;
 
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.DiscovererListFactory;
+
 /**
  * Interface of the DiscovererList factory
  * @author Guillaume Doux
