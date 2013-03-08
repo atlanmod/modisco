@@ -7,7 +7,7 @@
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
  * 
  ******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.core.api;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
 
 import java.io.ByteArrayInputStream;
@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.facet.util.emf.core.serialization.ISerializer;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererList;
+import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
 
 /**
@@ -33,14 +34,14 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discove
  * @author Guillaume Doux
  *
  */
-public class IDiscovererListSerializer implements ISerializer<IDiscovererList> {
+public class DiscovererListSerializer implements ISerializer<IDiscovererList> {
 
 	private ResourceSet rSet;
 	private Resource inMemoryRes;
 	
 	
 	
-	public IDiscovererListSerializer() {
+	public DiscovererListSerializer() {
 		this.rSet = new ResourceSetImpl();
 		this.rSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
 			.put("xmi", new XMIResourceFactoryImpl());
