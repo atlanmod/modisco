@@ -15,6 +15,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.jface.window.Window;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSetFactory;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;

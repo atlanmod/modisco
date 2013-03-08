@@ -9,8 +9,8 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
-import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IProjectSetFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSetFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.ProjectSet;
 
 /**

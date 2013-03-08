@@ -13,6 +13,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.facet.util.emf.core.serialization.ISerializer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSetFactory;
 
 /**
  * ProjectSet Serialization facility

@@ -17,6 +17,7 @@ import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.window.Window;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.BenchmarkFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;

@@ -11,8 +11,8 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
-import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererList;
 
 /**
