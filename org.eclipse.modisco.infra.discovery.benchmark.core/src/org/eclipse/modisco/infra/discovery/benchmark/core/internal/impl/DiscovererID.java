@@ -10,7 +10,7 @@
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
-import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererID;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererID;
 
 /**
  * The discover Id implementation class

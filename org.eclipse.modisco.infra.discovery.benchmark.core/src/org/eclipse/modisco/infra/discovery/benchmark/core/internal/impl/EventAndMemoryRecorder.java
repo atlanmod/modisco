@@ -15,7 +15,7 @@ import java.util.List;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventListener;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventListener;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Event;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.MemoryMeasurement;
 

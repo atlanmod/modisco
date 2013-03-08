@@ -15,7 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
-import org.eclipse.modisco.infra.discovery.benchmark.core.api.IDiscovererList;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
 
 /**

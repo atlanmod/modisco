@@ -10,8 +10,8 @@
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
-import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventManager;
-import org.eclipse.modisco.infra.discovery.benchmark.core.api.IEventManagerFactory;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventManager;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventManagerFactory;
 
 /**
  * the Factory class for creating event managers

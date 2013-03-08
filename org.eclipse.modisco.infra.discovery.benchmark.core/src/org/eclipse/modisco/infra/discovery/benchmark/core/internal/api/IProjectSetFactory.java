@@ -7,9 +7,10 @@
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
  * 
  ******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.core.api;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.api;
 
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.ProjectSetFactory;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
 
 /**
  * Interface of the IprojectSet factory

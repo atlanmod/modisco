@@ -9,7 +9,7 @@
  *     Guillaume Doux - INRIA - Initial API and implementation
  *     
  ******************************************************************************/
-package org.eclipse.modisco.infra.discovery.benchmark.core.api;
+package org.eclipse.modisco.infra.discovery.benchmark.core.internal.api;
 
 /**
  * Interface for the discoverer ID element
