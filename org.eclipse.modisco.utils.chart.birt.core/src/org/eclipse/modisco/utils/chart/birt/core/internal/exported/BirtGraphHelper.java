@@ -7,7 +7,7 @@
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
  * 
  ******************************************************************************/
-package org.eclipse.modisco.utils.chart.birt.core;
+package org.eclipse.modisco.utils.chart.birt.core.internal.exported;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -33,11 +33,8 @@ import org.eclipse.birt.chart.model.attribute.impl.BoundsImpl;
 import org.eclipse.birt.chart.model.attribute.impl.ColorDefinitionImpl;
 import org.eclipse.birt.chart.model.attribute.impl.LineAttributesImpl;
 import org.eclipse.birt.chart.model.attribute.impl.NumberFormatSpecifierImpl;
-import org.eclipse.birt.chart.model.attribute.impl.TextImpl;
 import org.eclipse.birt.chart.model.component.Axis;
-import org.eclipse.birt.chart.model.component.Label;
 import org.eclipse.birt.chart.model.component.Series;
-import org.eclipse.birt.chart.model.component.impl.LabelImpl;
 import org.eclipse.birt.chart.model.component.impl.SeriesImpl;
 import org.eclipse.birt.chart.model.data.NumberDataSet;
 import org.eclipse.birt.chart.model.data.SeriesDefinition;
@@ -47,6 +44,7 @@ import org.eclipse.birt.chart.model.impl.ChartWithAxesImpl;
 import org.eclipse.birt.chart.model.type.LineSeries;
 import org.eclipse.birt.chart.model.type.impl.LineSeriesImpl;
 import org.eclipse.birt.chart.util.PluginSettings;
+import org.eclipse.modisco.utils.chart.birt.core.internal.GraphHelperException;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
@@ -126,7 +124,7 @@ public final class BirtGraphHelper {
 		chart.getLegend().setAnchor(Anchor.NORTH_EAST_LITERAL);
 
 		chart.getTitle().getLabel().getCaption()
-		.setValue(birtChart.getTitle()); //$NON-NLS-1$
+		.setValue(birtChart.getTitle());
 
 		final Axe abs = birtChart.getAxes().get(0);
 		final Axe ord = birtChart.getAxes().get(1);

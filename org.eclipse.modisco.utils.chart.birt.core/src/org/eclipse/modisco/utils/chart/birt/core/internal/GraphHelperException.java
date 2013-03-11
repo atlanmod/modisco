@@ -9,7 +9,7 @@
  *     Guillaume Doux - INRIA - Initial API and implementation
  *     
  ******************************************************************************/
-package org.eclipse.modisco.utils.chart.birt.core;
+package org.eclipse.modisco.utils.chart.birt.core.internal;
 
 /**
  * @author Guillaume Doux
