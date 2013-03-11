@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -24,12 +24,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getPoints <em>Points</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getPoints <em>Points</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#getSerie()
+ * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#getSerie()
  * @model
  * @generated
  */
@@ -51,14 +51,14 @@ public interface Serie extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#getSerie_Name()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#getSerie_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -69,8 +69,8 @@ public interface Serie extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Points</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.modisco.utils.chart.metamodel.chart.Point}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point#getSerie <em>Serie</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getSerie <em>Serie</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Points</em>' containment reference list isn't clear,
@@ -78,8 +78,8 @@ public interface Serie extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' containment reference list.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#getSerie_Points()
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Point#getSerie
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#getSerie_Points()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getSerie
 	 * @model opposite="serie" containment="true"
 	 * @generated
 	 */

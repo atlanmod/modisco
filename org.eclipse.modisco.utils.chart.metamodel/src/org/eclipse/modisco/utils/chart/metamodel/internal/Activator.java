@@ -8,7 +8,7 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.utils.chart.metamodel;
+package org.eclipse.modisco.utils.chart.metamodel.internal;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

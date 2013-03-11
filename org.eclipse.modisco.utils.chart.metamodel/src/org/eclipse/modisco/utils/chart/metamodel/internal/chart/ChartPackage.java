@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -28,11 +28,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory
+ * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory
  * @model kind="package"
  * @generated
  */
-public interface chartPackage extends EPackage {
+public interface ChartPackage extends EPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -54,7 +54,7 @@ public interface chartPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/modisco/utils/chart/0.1/chart";
+	String eNS_URI = "http://www.eclipse.org/modisco/utils/chart/0.11.incubation/internal/chart";
 
 	/**
 	 * The package namespace name.
@@ -70,14 +70,14 @@ public interface chartPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	chartPackage eINSTANCE = org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl.init();
+	ChartPackage eINSTANCE = org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl <em>Chart</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl <em>Chart</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getChart()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getChart()
 	 * @generated
 	 */
 	int CHART = 0;
@@ -119,11 +119,11 @@ public interface chartPackage extends EPackage {
 	int CHART_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.AxeImpl <em>Axe</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.AxeImpl <em>Axe</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.AxeImpl
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getAxe()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.AxeImpl
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getAxe()
 	 * @generated
 	 */
 	int AXE = 1;
@@ -156,11 +156,11 @@ public interface chartPackage extends EPackage {
 	int AXE_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.SerieImpl <em>Serie</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.SerieImpl <em>Serie</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.SerieImpl
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getSerie()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.SerieImpl
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getSerie()
 	 * @generated
 	 */
 	int SERIE = 2;
@@ -193,11 +193,11 @@ public interface chartPackage extends EPackage {
 	int SERIE_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.PointImpl <em>Point</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.PointImpl <em>Point</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.PointImpl
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getPoint()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.PointImpl
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getPoint()
 	 * @generated
 	 */
 	int POINT = 3;
@@ -230,11 +230,11 @@ public interface chartPackage extends EPackage {
 	int POINT_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.CoordinateImpl <em>Coordinate</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.CoordinateImpl <em>Coordinate</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.CoordinateImpl
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getCoordinate()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.CoordinateImpl
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getCoordinate()
 	 * @generated
 	 */
 	int COORDINATE = 4;
@@ -268,171 +268,171 @@ public interface chartPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Chart <em>Chart</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart <em>Chart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Chart</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Chart
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart
 	 * @generated
 	 */
 	EClass getChart();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Chart#getAxes <em>Axes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart#getAxes <em>Axes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Axes</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Chart#getAxes()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart#getAxes()
 	 * @see #getChart()
 	 * @generated
 	 */
 	EReference getChart_Axes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Chart#getSeries <em>Series</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart#getSeries <em>Series</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Series</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Chart#getSeries()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart#getSeries()
 	 * @see #getChart()
 	 * @generated
 	 */
 	EReference getChart_Series();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Chart#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Chart#getTitle()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart#getTitle()
 	 * @see #getChart()
 	 * @generated
 	 */
 	EAttribute getChart_Title();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Axe <em>Axe</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe <em>Axe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Axe</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Axe
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe
 	 * @generated
 	 */
 	EClass getAxe();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Axe#getLegend <em>Legend</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe#getLegend <em>Legend</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Legend</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Axe#getLegend()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe#getLegend()
 	 * @see #getAxe()
 	 * @generated
 	 */
 	EAttribute getAxe_Legend();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Axe#getUnit <em>Unit</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe#getUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Unit</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Axe#getUnit()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe#getUnit()
 	 * @see #getAxe()
 	 * @generated
 	 */
 	EAttribute getAxe_Unit();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie <em>Serie</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie <em>Serie</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Serie</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Serie
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie
 	 * @generated
 	 */
 	EClass getSerie();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getName()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getName()
 	 * @see #getSerie()
 	 * @generated
 	 */
 	EAttribute getSerie_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getPoints <em>Points</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getPoints <em>Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Points</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getPoints()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getPoints()
 	 * @see #getSerie()
 	 * @generated
 	 */
 	EReference getSerie_Points();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point <em>Point</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point <em>Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Point</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Point
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point
 	 * @generated
 	 */
 	EClass getPoint();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point#getSerie <em>Serie</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getSerie <em>Serie</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Serie</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Point#getSerie()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getSerie()
 	 * @see #getPoint()
 	 * @generated
 	 */
 	EReference getPoint_Serie();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point#getCoordinates <em>Coordinates</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getCoordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Coordinates</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Point#getCoordinates()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getCoordinates()
 	 * @see #getPoint()
 	 * @generated
 	 */
 	EReference getPoint_Coordinates();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate <em>Coordinate</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate <em>Coordinate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Coordinate</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate
 	 * @generated
 	 */
 	EClass getCoordinate();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate#getAxe <em>Axe</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate#getAxe <em>Axe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Axe</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate#getAxe()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate#getAxe()
 	 * @see #getCoordinate()
 	 * @generated
 	 */
 	EReference getCoordinate_Axe();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate#getValue()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate#getValue()
 	 * @see #getCoordinate()
 	 * @generated
 	 */
@@ -445,7 +445,7 @@ public interface chartPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	chartFactory getchartFactory();
+	ChartFactory getChartFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -461,11 +461,11 @@ public interface chartPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl <em>Chart</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl <em>Chart</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getChart()
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getChart()
 		 * @generated
 		 */
 		EClass CHART = eINSTANCE.getChart();
@@ -495,11 +495,11 @@ public interface chartPackage extends EPackage {
 		EAttribute CHART__TITLE = eINSTANCE.getChart_Title();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.AxeImpl <em>Axe</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.AxeImpl <em>Axe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.AxeImpl
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getAxe()
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.AxeImpl
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getAxe()
 		 * @generated
 		 */
 		EClass AXE = eINSTANCE.getAxe();
@@ -521,11 +521,11 @@ public interface chartPackage extends EPackage {
 		EAttribute AXE__UNIT = eINSTANCE.getAxe_Unit();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.SerieImpl <em>Serie</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.SerieImpl <em>Serie</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.SerieImpl
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getSerie()
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.SerieImpl
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getSerie()
 		 * @generated
 		 */
 		EClass SERIE = eINSTANCE.getSerie();
@@ -547,11 +547,11 @@ public interface chartPackage extends EPackage {
 		EReference SERIE__POINTS = eINSTANCE.getSerie_Points();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.PointImpl <em>Point</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.PointImpl <em>Point</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.PointImpl
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getPoint()
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.PointImpl
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getPoint()
 		 * @generated
 		 */
 		EClass POINT = eINSTANCE.getPoint();
@@ -573,11 +573,11 @@ public interface chartPackage extends EPackage {
 		EReference POINT__COORDINATES = eINSTANCE.getPoint_Coordinates();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.CoordinateImpl <em>Coordinate</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.CoordinateImpl <em>Coordinate</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.CoordinateImpl
-		 * @see org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartPackageImpl#getCoordinate()
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.CoordinateImpl
+		 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl#getCoordinate()
 		 * @generated
 		 */
 		EClass COORDINATE = eINSTANCE.getCoordinate();
@@ -600,4 +600,4 @@ public interface chartPackage extends EPackage {
 
 	}
 
-} //chartPackage
+} //ChartPackage

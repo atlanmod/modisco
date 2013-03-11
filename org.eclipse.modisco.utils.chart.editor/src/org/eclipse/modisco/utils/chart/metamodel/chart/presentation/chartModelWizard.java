@@ -23,76 +23,51 @@ import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.StringTokenizer;
 
-import org.eclipse.emf.common.CommonPlugin;
-
-import org.eclipse.emf.common.util.URI;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
-
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.ecore.xmi.XMLResource;
-
-import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
-
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
-
 import org.eclipse.core.runtime.IProgressMonitor;
-
+import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.CommonPlugin;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.dialogs.MessageDialog;
-
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardPage;
-
+import org.eclipse.modisco.utils.chart.metamodel.chart.provider.chartEditPlugin;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
 import org.eclipse.swt.SWT;
-
-import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.ModifyEvent;
-
+import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-
-import org.eclipse.ui.actions.WorkspaceModifyOperation;
-
-import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
-
-import org.eclipse.ui.part.FileEditorInput;
-import org.eclipse.ui.part.ISetSelectionTarget;
-
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
-import org.eclipse.modisco.utils.chart.metamodel.chart.provider.chartEditPlugin;
-
-
-import org.eclipse.core.runtime.Path;
-
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.StructuredSelection;
-
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.actions.WorkspaceModifyOperation;
+import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
+import org.eclipse.ui.part.FileEditorInput;
+import org.eclipse.ui.part.ISetSelectionTarget;
 
 
 /**
@@ -133,7 +108,7 @@ public class chartModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected chartPackage _chartPackage = chartPackage.eINSTANCE;
+	protected ChartPackage _ChartPackage = ChartPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -141,7 +116,7 @@ public class chartModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected chartFactory _chartFactory = _chartPackage.getchartFactory();
+	protected ChartFactory _ChartFactory = _ChartPackage.getChartFactory();
 
 	/**
 	 * This is the file creation page.
@@ -205,7 +180,7 @@ public class chartModelWizard extends Wizard implements INewWizard {
 	protected Collection<String> getInitialObjectNames() {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : _chartPackage.getEClassifiers()) {
+			for (EClassifier eClassifier : _ChartPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -225,8 +200,8 @@ public class chartModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass)_chartPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = _chartFactory.create(eClass);
+		EClass eClass = (EClass)_ChartPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = _ChartFactory.create(eClass);
 		return rootObject;
 	}
 

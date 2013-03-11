@@ -18,11 +18,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -33,10 +30,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie} object.
@@ -98,7 +94,7 @@ public class SerieItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Serie_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Serie_name_feature", "_UI_Serie_type"),
-				 chartPackage.Literals.SERIE__NAME,
+				 ChartPackage.Literals.SERIE__NAME,
 				 true,
 				 false,
 				 false,
@@ -119,7 +115,7 @@ public class SerieItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(chartPackage.Literals.SERIE__POINTS);
+			childrenFeatures.add(ChartPackage.Literals.SERIE__POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -174,10 +170,10 @@ public class SerieItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Serie.class)) {
-			case chartPackage.SERIE__NAME:
+			case ChartPackage.SERIE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case chartPackage.SERIE__POINTS:
+			case ChartPackage.SERIE__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -197,8 +193,8 @@ public class SerieItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(chartPackage.Literals.SERIE__POINTS,
-				 chartFactory.eINSTANCE.createPoint()));
+				(ChartPackage.Literals.SERIE__POINTS,
+				 ChartFactory.eINSTANCE.createPoint()));
 	}
 
 	/**

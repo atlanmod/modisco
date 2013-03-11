@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.util;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -19,17 +19,17 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.*;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage
+ * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage
  * @generated
  */
-public class chartAdapterFactory extends AdapterFactoryImpl {
+public class ChartAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -43,7 +43,7 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static chartPackage modelPackage;
+	protected static ChartPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -51,9 +51,9 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public chartAdapterFactory() {
+	public ChartAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = chartPackage.eINSTANCE;
+			modelPackage = ChartPackage.eINSTANCE;
 		}
 	}
 
@@ -82,8 +82,8 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected chartSwitch<Adapter> modelSwitch =
-		new chartSwitch<Adapter>() {
+	protected ChartSwitch<Adapter> modelSwitch =
+		new ChartSwitch<Adapter>() {
 			@Override
 			public Adapter caseChart(Chart object) {
 				return createChartAdapter();
@@ -125,13 +125,13 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Chart <em>Chart</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart <em>Chart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Chart
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart
 	 * @generated
 	 */
 	public Adapter createChartAdapter() {
@@ -139,13 +139,13 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Axe <em>Axe</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe <em>Axe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Axe
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe
 	 * @generated
 	 */
 	public Adapter createAxeAdapter() {
@@ -153,13 +153,13 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie <em>Serie</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie <em>Serie</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Serie
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie
 	 * @generated
 	 */
 	public Adapter createSerieAdapter() {
@@ -167,13 +167,13 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point <em>Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point <em>Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Point
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point
 	 * @generated
 	 */
 	public Adapter createPointAdapter() {
@@ -181,13 +181,13 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate <em>Coordinate</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate <em>Coordinate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate
 	 * @generated
 	 */
 	public Adapter createCoordinateAdapter() {
@@ -206,4 +206,4 @@ public class chartAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //chartAdapterFactory
+} //ChartAdapterFactory

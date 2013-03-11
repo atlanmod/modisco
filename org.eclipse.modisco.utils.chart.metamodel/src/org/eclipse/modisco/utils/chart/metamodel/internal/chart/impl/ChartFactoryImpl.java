@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.impl;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.*;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.modisco.utils.chart.metamodel.chart.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class chartFactoryImpl extends EFactoryImpl implements chartFactory {
+public class ChartFactoryImpl extends EFactoryImpl implements ChartFactory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,17 +42,17 @@ public class chartFactoryImpl extends EFactoryImpl implements chartFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static chartFactory init() {
+	public static ChartFactory init() {
 		try {
-			chartFactory thechartFactory = (chartFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/modisco/utils/chart/0.1/chart"); 
-			if (thechartFactory != null) {
-				return thechartFactory;
+			ChartFactory theChartFactory = (ChartFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/modisco/utils/chart/0.11.incubation/internal/chart"); 
+			if (theChartFactory != null) {
+				return theChartFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new chartFactoryImpl();
+		return new ChartFactoryImpl();
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class chartFactoryImpl extends EFactoryImpl implements chartFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public chartFactoryImpl() {
+	public ChartFactoryImpl() {
 		super();
 	}
 
@@ -73,11 +73,11 @@ public class chartFactoryImpl extends EFactoryImpl implements chartFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case chartPackage.CHART: return createChart();
-			case chartPackage.AXE: return createAxe();
-			case chartPackage.SERIE: return createSerie();
-			case chartPackage.POINT: return createPoint();
-			case chartPackage.COORDINATE: return createCoordinate();
+			case ChartPackage.CHART: return createChart();
+			case ChartPackage.AXE: return createAxe();
+			case ChartPackage.SERIE: return createSerie();
+			case ChartPackage.POINT: return createPoint();
+			case ChartPackage.COORDINATE: return createCoordinate();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -138,8 +138,8 @@ public class chartFactoryImpl extends EFactoryImpl implements chartFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public chartPackage getchartPackage() {
-		return (chartPackage)getEPackage();
+	public ChartPackage getChartPackage() {
+		return (ChartPackage)getEPackage();
 	}
 
 	/**
@@ -149,8 +149,8 @@ public class chartFactoryImpl extends EFactoryImpl implements chartFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static chartPackage getPackage() {
-		return chartPackage.eINSTANCE;
+	public static ChartPackage getPackage() {
+		return ChartPackage.eINSTANCE;
 	}
 
-} //chartFactoryImpl
+} //ChartFactoryImpl

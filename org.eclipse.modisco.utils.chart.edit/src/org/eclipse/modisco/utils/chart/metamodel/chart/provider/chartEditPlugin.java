@@ -13,7 +13,6 @@
 package org.eclipse.modisco.utils.chart.metamodel.chart.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

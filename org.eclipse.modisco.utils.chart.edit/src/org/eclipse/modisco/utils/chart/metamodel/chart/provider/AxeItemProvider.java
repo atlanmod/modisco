@@ -18,9 +18,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,9 +29,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.modisco.utils.chart.metamodel.chart.Axe} object.
@@ -96,7 +93,7 @@ public class AxeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Axe_legend_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Axe_legend_feature", "_UI_Axe_type"),
-				 chartPackage.Literals.AXE__LEGEND,
+				 ChartPackage.Literals.AXE__LEGEND,
 				 true,
 				 false,
 				 false,
@@ -118,7 +115,7 @@ public class AxeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Axe_unit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Axe_unit_feature", "_UI_Axe_type"),
-				 chartPackage.Literals.AXE__UNIT,
+				 ChartPackage.Literals.AXE__UNIT,
 				 true,
 				 false,
 				 false,
@@ -164,8 +161,8 @@ public class AxeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Axe.class)) {
-			case chartPackage.AXE__LEGEND:
-			case chartPackage.AXE__UNIT:
+			case ChartPackage.AXE__LEGEND:
+			case ChartPackage.AXE__UNIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

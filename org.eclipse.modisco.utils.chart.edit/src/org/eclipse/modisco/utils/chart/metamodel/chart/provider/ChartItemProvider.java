@@ -18,11 +18,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -33,10 +30,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.modisco.utils.chart.metamodel.chart.Chart} object.
@@ -98,7 +94,7 @@ public class ChartItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Chart_title_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Chart_title_feature", "_UI_Chart_type"),
-				 chartPackage.Literals.CHART__TITLE,
+				 ChartPackage.Literals.CHART__TITLE,
 				 true,
 				 false,
 				 false,
@@ -119,8 +115,8 @@ public class ChartItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(chartPackage.Literals.CHART__AXES);
-			childrenFeatures.add(chartPackage.Literals.CHART__SERIES);
+			childrenFeatures.add(ChartPackage.Literals.CHART__AXES);
+			childrenFeatures.add(ChartPackage.Literals.CHART__SERIES);
 		}
 		return childrenFeatures;
 	}
@@ -175,11 +171,11 @@ public class ChartItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Chart.class)) {
-			case chartPackage.CHART__TITLE:
+			case ChartPackage.CHART__TITLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case chartPackage.CHART__AXES:
-			case chartPackage.CHART__SERIES:
+			case ChartPackage.CHART__AXES:
+			case ChartPackage.CHART__SERIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -199,13 +195,13 @@ public class ChartItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(chartPackage.Literals.CHART__AXES,
-				 chartFactory.eINSTANCE.createAxe()));
+				(ChartPackage.Literals.CHART__AXES,
+				 ChartFactory.eINSTANCE.createAxe()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(chartPackage.Literals.CHART__SERIES,
-				 chartFactory.eINSTANCE.createSerie()));
+				(ChartPackage.Literals.CHART__SERIES,
+				 ChartFactory.eINSTANCE.createSerie()));
 	}
 
 	/**

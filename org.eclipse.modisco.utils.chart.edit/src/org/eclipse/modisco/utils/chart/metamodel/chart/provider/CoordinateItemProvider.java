@@ -18,9 +18,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,9 +29,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate} object.
@@ -96,7 +93,7 @@ public class CoordinateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinate_axe_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinate_axe_feature", "_UI_Coordinate_type"),
-				 chartPackage.Literals.COORDINATE__AXE,
+				 ChartPackage.Literals.COORDINATE__AXE,
 				 true,
 				 false,
 				 true,
@@ -118,7 +115,7 @@ public class CoordinateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinate_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinate_value_feature", "_UI_Coordinate_type"),
-				 chartPackage.Literals.COORDINATE__VALUE,
+				 ChartPackage.Literals.COORDINATE__VALUE,
 				 true,
 				 false,
 				 false,
@@ -162,7 +159,7 @@ public class CoordinateItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Coordinate.class)) {
-			case chartPackage.COORDINATE__VALUE:
+			case ChartPackage.COORDINATE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -10,14 +10,14 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.util;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.util;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.*;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,10 +29,10 @@ import org.eclipse.modisco.utils.chart.metamodel.chart.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage
+ * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage
  * @generated
  */
-public class chartSwitch<T> {
+public class ChartSwitch<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,7 +46,7 @@ public class chartSwitch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static chartPackage modelPackage;
+	protected static ChartPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -54,9 +54,9 @@ public class chartSwitch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public chartSwitch() {
+	public ChartSwitch() {
 		if (modelPackage == null) {
-			modelPackage = chartPackage.eINSTANCE;
+			modelPackage = ChartPackage.eINSTANCE;
 		}
 	}
 
@@ -100,31 +100,31 @@ public class chartSwitch<T> {
 	 */
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case chartPackage.CHART: {
+			case ChartPackage.CHART: {
 				Chart chart = (Chart)theEObject;
 				T result = caseChart(chart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case chartPackage.AXE: {
+			case ChartPackage.AXE: {
 				Axe axe = (Axe)theEObject;
 				T result = caseAxe(axe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case chartPackage.SERIE: {
+			case ChartPackage.SERIE: {
 				Serie serie = (Serie)theEObject;
 				T result = caseSerie(serie);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case chartPackage.POINT: {
+			case ChartPackage.POINT: {
 				Point point = (Point)theEObject;
 				T result = casePoint(point);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case chartPackage.COORDINATE: {
+			case ChartPackage.COORDINATE: {
 				Coordinate coordinate = (Coordinate)theEObject;
 				T result = caseCoordinate(coordinate);
 				if (result == null) result = defaultCase(theEObject);
@@ -224,4 +224,4 @@ public class chartSwitch<T> {
 		return null;
 	}
 
-} //chartSwitch
+} //ChartSwitch

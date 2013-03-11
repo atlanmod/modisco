@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.impl;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;
 
 import java.util.Collection;
 
@@ -29,10 +29,10 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Point;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,8 +41,8 @@ import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.PointImpl#getSerie <em>Serie</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.PointImpl#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.PointImpl#getSerie <em>Serie</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.PointImpl#getCoordinates <em>Coordinates</em>}</li>
  * </ul>
  * </p>
  *
@@ -82,7 +82,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return chartPackage.Literals.POINT;
+		return ChartPackage.Literals.POINT;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 */
 	public Serie getSerie() {
-		if (eContainerFeatureID() != chartPackage.POINT__SERIE) return null;
+		if (eContainerFeatureID() != ChartPackage.POINT__SERIE) return null;
 		return (Serie)eContainer();
 	}
 
@@ -101,7 +101,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 */
 	public NotificationChain basicSetSerie(Serie newSerie, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newSerie, chartPackage.POINT__SERIE, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newSerie, ChartPackage.POINT__SERIE, msgs);
 		return msgs;
 	}
 
@@ -111,19 +111,19 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 */
 	public void setSerie(Serie newSerie) {
-		if (newSerie != eInternalContainer() || (eContainerFeatureID() != chartPackage.POINT__SERIE && newSerie != null)) {
+		if (newSerie != eInternalContainer() || (eContainerFeatureID() != ChartPackage.POINT__SERIE && newSerie != null)) {
 			if (EcoreUtil.isAncestor(this, newSerie))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSerie != null)
-				msgs = ((InternalEObject)newSerie).eInverseAdd(this, chartPackage.SERIE__POINTS, Serie.class, msgs);
+				msgs = ((InternalEObject)newSerie).eInverseAdd(this, ChartPackage.SERIE__POINTS, Serie.class, msgs);
 			msgs = basicSetSerie(newSerie, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartPackage.POINT__SERIE, newSerie, newSerie));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChartPackage.POINT__SERIE, newSerie, newSerie));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 */
 	public EList<Coordinate> getCoordinates() {
 		if (coordinates == null) {
-			coordinates = new EObjectContainmentEList<Coordinate>(Coordinate.class, this, chartPackage.POINT__COORDINATES);
+			coordinates = new EObjectContainmentEList<Coordinate>(Coordinate.class, this, ChartPackage.POINT__COORDINATES);
 		}
 		return coordinates;
 	}
@@ -146,7 +146,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case chartPackage.POINT__SERIE:
+			case ChartPackage.POINT__SERIE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetSerie((Serie)otherEnd, msgs);
@@ -162,9 +162,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case chartPackage.POINT__SERIE:
+			case ChartPackage.POINT__SERIE:
 				return basicSetSerie(null, msgs);
-			case chartPackage.POINT__COORDINATES:
+			case ChartPackage.POINT__COORDINATES:
 				return ((InternalEList<?>)getCoordinates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -178,8 +178,8 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case chartPackage.POINT__SERIE:
-				return eInternalContainer().eInverseRemove(this, chartPackage.SERIE__POINTS, Serie.class, msgs);
+			case ChartPackage.POINT__SERIE:
+				return eInternalContainer().eInverseRemove(this, ChartPackage.SERIE__POINTS, Serie.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -192,9 +192,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case chartPackage.POINT__SERIE:
+			case ChartPackage.POINT__SERIE:
 				return getSerie();
-			case chartPackage.POINT__COORDINATES:
+			case ChartPackage.POINT__COORDINATES:
 				return getCoordinates();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,10 +209,10 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case chartPackage.POINT__SERIE:
+			case ChartPackage.POINT__SERIE:
 				setSerie((Serie)newValue);
 				return;
-			case chartPackage.POINT__COORDINATES:
+			case ChartPackage.POINT__COORDINATES:
 				getCoordinates().clear();
 				getCoordinates().addAll((Collection<? extends Coordinate>)newValue);
 				return;
@@ -228,10 +228,10 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case chartPackage.POINT__SERIE:
+			case ChartPackage.POINT__SERIE:
 				setSerie((Serie)null);
 				return;
-			case chartPackage.POINT__COORDINATES:
+			case ChartPackage.POINT__COORDINATES:
 				getCoordinates().clear();
 				return;
 		}
@@ -246,9 +246,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case chartPackage.POINT__SERIE:
+			case ChartPackage.POINT__SERIE:
 				return getSerie() != null;
-			case chartPackage.POINT__COORDINATES:
+			case ChartPackage.POINT__COORDINATES:
 				return coordinates != null && !coordinates.isEmpty();
 		}
 		return super.eIsSet(featureID);

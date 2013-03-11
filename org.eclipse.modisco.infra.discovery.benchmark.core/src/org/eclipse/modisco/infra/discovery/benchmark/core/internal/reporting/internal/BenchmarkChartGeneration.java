@@ -20,12 +20,12 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
 import org.eclipse.modisco.utils.chart.birt.core.internal.exported.BirtGraphHelper;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Point;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * Class preparing and launching the chart generation in Birt
@@ -36,7 +36,7 @@ public class BenchmarkChartGeneration {
 
 	private File location;
 	private boolean measureMemory;
-	private chartFactory factory;
+	private ChartFactory factory;
 	private BirtGraphHelper helper;
 
 	public static final double MEGABYTE = 1024.0 * 1024.0;
@@ -48,7 +48,7 @@ public class BenchmarkChartGeneration {
 	public BenchmarkChartGeneration(final File location, final boolean measureMemory) {
 		this.location = location;
 		this.measureMemory = measureMemory;
-		this.factory = chartFactory.eINSTANCE;
+		this.factory = ChartFactory.eINSTANCE;
 		this.helper = BirtGraphHelper.getInstance();		
 	}
 

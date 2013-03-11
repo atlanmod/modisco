@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage
+ * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage
  * @generated
  */
-public interface chartFactory extends EFactory {
+public interface ChartFactory extends EFactory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +36,7 @@ public interface chartFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	chartFactory eINSTANCE = org.eclipse.modisco.utils.chart.metamodel.chart.impl.chartFactoryImpl.init();
+	ChartFactory eINSTANCE = org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Chart</em>'.
@@ -90,6 +90,6 @@ public interface chartFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	chartPackage getchartPackage();
+	ChartPackage getChartPackage();
 
-} //chartFactory
+} //ChartFactory

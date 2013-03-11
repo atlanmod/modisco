@@ -18,11 +18,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -31,10 +28,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.eclipse.modisco.utils.chart.metamodel.chart.Point;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.modisco.utils.chart.metamodel.chart.Point} object.
@@ -94,7 +90,7 @@ public class PointItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(chartPackage.Literals.POINT__COORDINATES);
+			childrenFeatures.add(ChartPackage.Literals.POINT__COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -146,7 +142,7 @@ public class PointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Point.class)) {
-			case chartPackage.POINT__COORDINATES:
+			case ChartPackage.POINT__COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -166,8 +162,8 @@ public class PointItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(chartPackage.Literals.POINT__COORDINATES,
-				 chartFactory.eINSTANCE.createCoordinate()));
+				(ChartPackage.Literals.POINT__COORDINATES,
+				 ChartFactory.eINSTANCE.createCoordinate()));
 	}
 
 	/**

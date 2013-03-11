@@ -45,10 +45,10 @@ import org.eclipse.birt.chart.model.type.LineSeries;
 import org.eclipse.birt.chart.model.type.impl.LineSeriesImpl;
 import org.eclipse.birt.chart.util.PluginSettings;
 import org.eclipse.modisco.utils.chart.birt.core.internal.GraphHelperException;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * Class providing support for generating a chart with Birt in png
@@ -153,7 +153,7 @@ public final class BirtGraphHelper {
 		};
 		for (Serie serie : birtChart.getSeries()) {
 			dataPoints.clear();
-			for (org.eclipse.modisco.utils.chart.metamodel.chart.Point point : serie.getPoints()) {
+			for (org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point point : serie.getPoints()) {
 				double xCoord = 0;
 				double yCoord = 0;
 				for (Coordinate coord : point.getCoordinates()) {

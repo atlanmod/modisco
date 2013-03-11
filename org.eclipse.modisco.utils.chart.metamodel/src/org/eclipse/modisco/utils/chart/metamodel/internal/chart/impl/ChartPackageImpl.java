@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.impl;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Point;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class chartPackageImpl extends EPackageImpl implements chartPackage {
+public class ChartPackageImpl extends EPackageImpl implements ChartPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -87,12 +87,12 @@ public class chartPackageImpl extends EPackageImpl implements chartPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#eNS_URI
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private chartPackageImpl() {
-		super(eNS_URI, chartFactory.eINSTANCE);
+	private ChartPackageImpl() {
+		super(eNS_URI, ChartFactory.eINSTANCE);
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class chartPackageImpl extends EPackageImpl implements chartPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link chartPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ChartPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,27 +114,27 @@ public class chartPackageImpl extends EPackageImpl implements chartPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static chartPackage init() {
-		if (isInited) return (chartPackage)EPackage.Registry.INSTANCE.getEPackage(chartPackage.eNS_URI);
+	public static ChartPackage init() {
+		if (isInited) return (ChartPackage)EPackage.Registry.INSTANCE.getEPackage(ChartPackage.eNS_URI);
 
 		// Obtain or create and register package
-		chartPackageImpl thechartPackage = (chartPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof chartPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new chartPackageImpl());
+		ChartPackageImpl theChartPackage = (ChartPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ChartPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ChartPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		thechartPackage.createPackageContents();
+		theChartPackage.createPackageContents();
 
 		// Initialize created meta-data
-		thechartPackage.initializePackageContents();
+		theChartPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		thechartPackage.freeze();
+		theChartPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(chartPackage.eNS_URI, thechartPackage);
-		return thechartPackage;
+		EPackage.Registry.INSTANCE.put(ChartPackage.eNS_URI, theChartPackage);
+		return theChartPackage;
 	}
 
 	/**
@@ -286,8 +286,8 @@ public class chartPackageImpl extends EPackageImpl implements chartPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public chartFactory getchartFactory() {
-		return (chartFactory)getEFactoryInstance();
+	public ChartFactory getChartFactory() {
+		return (ChartFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -386,4 +386,4 @@ public class chartPackageImpl extends EPackageImpl implements chartPackage {
 		createResource(eNS_URI);
 	}
 
-} //chartPackageImpl
+} //ChartPackageImpl

@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -24,12 +24,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point#getSerie <em>Serie</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getSerie <em>Serie</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getCoordinates <em>Coordinates</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#getPoint()
+ * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#getPoint()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface Point extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Serie</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getPoints <em>Points</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getPoints <em>Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Serie</em>' container reference isn't clear,
@@ -52,15 +52,15 @@ public interface Point extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Serie</em>' container reference.
 	 * @see #setSerie(Serie)
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#getPoint_Serie()
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.Serie#getPoints
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#getPoint_Serie()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie#getPoints
 	 * @model opposite="points" required="true" transient="false"
 	 * @generated
 	 */
 	Serie getSerie();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.modisco.utils.chart.metamodel.chart.Point#getSerie <em>Serie</em>}' container reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point#getSerie <em>Serie</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Serie</em>' container reference.
@@ -71,7 +71,7 @@ public interface Point extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Coordinates</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate}.
+	 * The list contents are of type {@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Coordinates</em>' containment reference list isn't clear,
@@ -79,7 +79,7 @@ public interface Point extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Coordinates</em>' containment reference list.
-	 * @see org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage#getPoint_Coordinates()
+	 * @see org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage#getPoint_Coordinates()
 	 * @model containment="true"
 	 * @generated
 	 */

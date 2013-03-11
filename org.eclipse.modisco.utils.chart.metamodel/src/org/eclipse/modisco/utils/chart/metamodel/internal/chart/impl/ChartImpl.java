@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.impl;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;
 
 import java.util.Collection;
 
@@ -28,10 +28,10 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,9 +40,9 @@ import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl#getAxes <em>Axes</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl#getSeries <em>Series</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.ChartImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl#getAxes <em>Axes</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl#getSeries <em>Series</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartImpl#getTitle <em>Title</em>}</li>
  * </ul>
  * </p>
  *
@@ -112,7 +112,7 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return chartPackage.Literals.CHART;
+		return ChartPackage.Literals.CHART;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	 */
 	public EList<Axe> getAxes() {
 		if (axes == null) {
-			axes = new EObjectContainmentEList<Axe>(Axe.class, this, chartPackage.CHART__AXES);
+			axes = new EObjectContainmentEList<Axe>(Axe.class, this, ChartPackage.CHART__AXES);
 		}
 		return axes;
 	}
@@ -134,7 +134,7 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	 */
 	public EList<Serie> getSeries() {
 		if (series == null) {
-			series = new EObjectContainmentEList<Serie>(Serie.class, this, chartPackage.CHART__SERIES);
+			series = new EObjectContainmentEList<Serie>(Serie.class, this, ChartPackage.CHART__SERIES);
 		}
 		return series;
 	}
@@ -157,7 +157,7 @@ public class ChartImpl extends EObjectImpl implements Chart {
 		String oldTitle = title;
 		title = newTitle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartPackage.CHART__TITLE, oldTitle, title));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChartPackage.CHART__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -168,9 +168,9 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case chartPackage.CHART__AXES:
+			case ChartPackage.CHART__AXES:
 				return ((InternalEList<?>)getAxes()).basicRemove(otherEnd, msgs);
-			case chartPackage.CHART__SERIES:
+			case ChartPackage.CHART__SERIES:
 				return ((InternalEList<?>)getSeries()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -184,11 +184,11 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case chartPackage.CHART__AXES:
+			case ChartPackage.CHART__AXES:
 				return getAxes();
-			case chartPackage.CHART__SERIES:
+			case ChartPackage.CHART__SERIES:
 				return getSeries();
-			case chartPackage.CHART__TITLE:
+			case ChartPackage.CHART__TITLE:
 				return getTitle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -203,15 +203,15 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case chartPackage.CHART__AXES:
+			case ChartPackage.CHART__AXES:
 				getAxes().clear();
 				getAxes().addAll((Collection<? extends Axe>)newValue);
 				return;
-			case chartPackage.CHART__SERIES:
+			case ChartPackage.CHART__SERIES:
 				getSeries().clear();
 				getSeries().addAll((Collection<? extends Serie>)newValue);
 				return;
-			case chartPackage.CHART__TITLE:
+			case ChartPackage.CHART__TITLE:
 				setTitle((String)newValue);
 				return;
 		}
@@ -226,13 +226,13 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case chartPackage.CHART__AXES:
+			case ChartPackage.CHART__AXES:
 				getAxes().clear();
 				return;
-			case chartPackage.CHART__SERIES:
+			case ChartPackage.CHART__SERIES:
 				getSeries().clear();
 				return;
-			case chartPackage.CHART__TITLE:
+			case ChartPackage.CHART__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
 		}
@@ -247,11 +247,11 @@ public class ChartImpl extends EObjectImpl implements Chart {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case chartPackage.CHART__AXES:
+			case ChartPackage.CHART__AXES:
 				return axes != null && !axes.isEmpty();
-			case chartPackage.CHART__SERIES:
+			case ChartPackage.CHART__SERIES:
 				return series != null && !series.isEmpty();
-			case chartPackage.CHART__TITLE:
+			case ChartPackage.CHART__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 		}
 		return super.eIsSet(featureID);

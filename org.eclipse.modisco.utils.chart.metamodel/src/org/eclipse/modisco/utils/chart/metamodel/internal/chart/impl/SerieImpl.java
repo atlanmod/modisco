@@ -10,33 +10,43 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.impl;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Axe</b></em>'.
+ * An implementation of the model object '<em><b>Serie</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.AxeImpl#getLegend <em>Legend</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.AxeImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.SerieImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.SerieImpl#getPoints <em>Points</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AxeImpl extends EObjectImpl implements Axe {
+public class SerieImpl extends EObjectImpl implements Serie {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -45,51 +55,41 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	public static final String copyright = "*******************************************************************************\r\n * Copyright (c) 2012 INRIA. All rights reserved. This program and the\r\n * accompanying materials are made available under the terms of the Eclipse\r\n * Public License v1.0 which accompanies this distribution, and is available at\r\n * http://www.eclipse.org/legal/epl-v10.html\r\n * \r\n * Contributors: Guillaume Doux - INRIA - Initial API and implementation\r\n * \r\n ******************************************************************************\r\n";
 
 	/**
-	 * The default value of the '{@link #getLegend() <em>Legend</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLegend()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LEGEND_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getLegend() <em>Legend</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLegend()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String legend = LEGEND_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * The cached value of the '{@link #getPoints() <em>Points</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnit()
+	 * @see #getPoints()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UNIT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected String unit = UNIT_EDEFAULT;
+	protected EList<Point> points;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AxeImpl() {
+	protected SerieImpl() {
 		super();
 	}
 
@@ -100,7 +100,7 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return chartPackage.Literals.AXE;
+		return ChartPackage.Literals.SERIE;
 	}
 
 	/**
@@ -108,8 +108,8 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLegend() {
-		return legend;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -117,11 +117,11 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLegend(String newLegend) {
-		String oldLegend = legend;
-		legend = newLegend;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartPackage.AXE__LEGEND, oldLegend, legend));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChartPackage.SERIE__NAME, oldName, name));
 	}
 
 	/**
@@ -129,8 +129,11 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUnit() {
-		return unit;
+	public EList<Point> getPoints() {
+		if (points == null) {
+			points = new EObjectContainmentWithInverseEList<Point>(Point.class, this, ChartPackage.SERIE__POINTS, ChartPackage.POINT__SERIE);
+		}
+		return points;
 	}
 
 	/**
@@ -138,11 +141,28 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnit(String newUnit) {
-		String oldUnit = unit;
-		unit = newUnit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartPackage.AXE__UNIT, oldUnit, unit));
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ChartPackage.SERIE__POINTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPoints()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ChartPackage.SERIE__POINTS:
+				return ((InternalEList<?>)getPoints()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -153,10 +173,10 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case chartPackage.AXE__LEGEND:
-				return getLegend();
-			case chartPackage.AXE__UNIT:
-				return getUnit();
+			case ChartPackage.SERIE__NAME:
+				return getName();
+			case ChartPackage.SERIE__POINTS:
+				return getPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,14 +186,16 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case chartPackage.AXE__LEGEND:
-				setLegend((String)newValue);
+			case ChartPackage.SERIE__NAME:
+				setName((String)newValue);
 				return;
-			case chartPackage.AXE__UNIT:
-				setUnit((String)newValue);
+			case ChartPackage.SERIE__POINTS:
+				getPoints().clear();
+				getPoints().addAll((Collection<? extends Point>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,11 +209,11 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case chartPackage.AXE__LEGEND:
-				setLegend(LEGEND_EDEFAULT);
+			case ChartPackage.SERIE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case chartPackage.AXE__UNIT:
-				setUnit(UNIT_EDEFAULT);
+			case ChartPackage.SERIE__POINTS:
+				getPoints().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -205,10 +227,10 @@ public class AxeImpl extends EObjectImpl implements Axe {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case chartPackage.AXE__LEGEND:
-				return LEGEND_EDEFAULT == null ? legend != null : !LEGEND_EDEFAULT.equals(legend);
-			case chartPackage.AXE__UNIT:
-				return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
+			case ChartPackage.SERIE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ChartPackage.SERIE__POINTS:
+				return points != null && !points.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -223,12 +245,10 @@ public class AxeImpl extends EObjectImpl implements Axe {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (legend: ");
-		result.append(legend);
-		result.append(", unit: ");
-		result.append(unit);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} //AxeImpl
+} //SerieImpl

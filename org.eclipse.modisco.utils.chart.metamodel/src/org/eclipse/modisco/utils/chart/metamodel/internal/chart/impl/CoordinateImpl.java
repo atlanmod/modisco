@@ -10,7 +10,7 @@
  *  ******************************************************************************
  * 
  */
-package org.eclipse.modisco.utils.chart.metamodel.chart.impl;
+package org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,8 +31,8 @@ import org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.CoordinateImpl#getAxe <em>Axe</em>}</li>
- *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.chart.impl.CoordinateImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.CoordinateImpl#getAxe <em>Axe</em>}</li>
+ *   <li>{@link org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.CoordinateImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -92,7 +92,7 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return chartPackage.Literals.COORDINATE;
+		return ChartPackage.Literals.COORDINATE;
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 			axe = (Axe)eResolveProxy(oldAxe);
 			if (axe != oldAxe) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, chartPackage.COORDINATE__AXE, oldAxe, axe));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ChartPackage.COORDINATE__AXE, oldAxe, axe));
 			}
 		}
 		return axe;
@@ -130,7 +130,7 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 		Axe oldAxe = axe;
 		axe = newAxe;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartPackage.COORDINATE__AXE, oldAxe, axe));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChartPackage.COORDINATE__AXE, oldAxe, axe));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 		double oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartPackage.COORDINATE__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChartPackage.COORDINATE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -162,10 +162,10 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case chartPackage.COORDINATE__AXE:
+			case ChartPackage.COORDINATE__AXE:
 				if (resolve) return getAxe();
 				return basicGetAxe();
-			case chartPackage.COORDINATE__VALUE:
+			case ChartPackage.COORDINATE__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -179,10 +179,10 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case chartPackage.COORDINATE__AXE:
+			case ChartPackage.COORDINATE__AXE:
 				setAxe((Axe)newValue);
 				return;
-			case chartPackage.COORDINATE__VALUE:
+			case ChartPackage.COORDINATE__VALUE:
 				setValue((Double)newValue);
 				return;
 		}
@@ -197,10 +197,10 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case chartPackage.COORDINATE__AXE:
+			case ChartPackage.COORDINATE__AXE:
 				setAxe((Axe)null);
 				return;
-			case chartPackage.COORDINATE__VALUE:
+			case ChartPackage.COORDINATE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -215,9 +215,9 @@ public class CoordinateImpl extends EObjectImpl implements Coordinate {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case chartPackage.COORDINATE__AXE:
+			case ChartPackage.COORDINATE__AXE:
 				return axe != null;
-			case chartPackage.COORDINATE__VALUE:
+			case ChartPackage.COORDINATE__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
