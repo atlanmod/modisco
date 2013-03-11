@@ -17,9 +17,9 @@ import org.eclipse.core.internal.jobs.JobStatus;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.BenchmarkFactory;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.EventType;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.MemoryMeasurement;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EventType;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
 
 /**
  * The implementation of the job measuring the memory consumption

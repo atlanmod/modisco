@@ -14,11 +14,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Benchmark;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.DiscoveryIteration;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Event;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.MemoryMeasurement;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
 import org.eclipse.modisco.utils.chart.birt.core.BirtGraphHelper;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;

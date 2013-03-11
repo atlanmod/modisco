@@ -13,7 +13,7 @@ package org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.in
 
 import java.util.Collection;
 
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.DiscoveryIteration;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
 
 /** Java services used from the Acceleo generators */
 public final class ReportingUtilities {

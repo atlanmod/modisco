@@ -27,7 +27,7 @@ import org.eclipse.emf.facet.util.emf.core.serialization.ISerializer;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererListFactory;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
 
 /**
  * IDiscovererList serialization feature

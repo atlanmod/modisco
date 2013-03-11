@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://www.eclipse.org/modisco/infra/discovery/0.1.incubation/benchmark"
-            class="org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.BenchmarkPackage"
+            uri="http://www.eclipse.org/modisco/infra/discovery/benchmark/0.11.incubation/internal/benchmark"
+            class="org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkPackage"
             genModel="model/benchmark.genmodel"/>
    </extension>
 

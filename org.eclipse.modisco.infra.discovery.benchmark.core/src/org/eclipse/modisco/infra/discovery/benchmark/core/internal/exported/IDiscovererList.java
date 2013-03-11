@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
 
 /**
  * Interface for Discoverer List operations, basically a specialization of the list interface for discoverers

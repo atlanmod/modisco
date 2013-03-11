@@ -9,7 +9,7 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.api;
 
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Event;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
 
 /**
  * IEvent manager interface, used to manage the listener and teh events

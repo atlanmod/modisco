@@ -11,7 +11,7 @@ package org.eclipse.modisco.infra.discovery.benchmark.core.internal.api;
 
 import java.util.List;
 
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.EventType;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EventType;
 
 /**
  * The event notifier interface

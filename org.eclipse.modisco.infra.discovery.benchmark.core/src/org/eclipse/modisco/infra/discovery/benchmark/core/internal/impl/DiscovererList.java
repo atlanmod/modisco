@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Discovery;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
 
 /**
  * Discoverer list implementation, basically delegation of the list interface methods

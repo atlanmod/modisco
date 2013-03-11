@@ -16,8 +16,8 @@ import java.util.List;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventListener;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventManager;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventManagerFactory;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.Event;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.benchmark.EventType;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EventType;
 
 /**
  * the event manager
