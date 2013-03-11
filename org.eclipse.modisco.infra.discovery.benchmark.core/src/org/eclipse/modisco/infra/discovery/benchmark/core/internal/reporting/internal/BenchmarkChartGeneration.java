@@ -19,7 +19,7 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
-import org.eclipse.modisco.utils.chart.birt.core.BirtGraphHelper;
+import org.eclipse.modisco.utils.chart.birt.core.internal.exported.BirtGraphHelper;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
 import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
