@@ -69,7 +69,7 @@ import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
 import org.eclipse.modisco.infra.discovery.launch.LaunchFactory;
 import org.eclipse.modisco.infra.discovery.launch.ParameterValue;
-import org.eclipse.modisco.utils.core.SystemInfo;
+import org.eclipse.modisco.utils.core.internal.exported.SystemInfo;
 
 /**
  * Main entry point for the discoverer of benchmark
