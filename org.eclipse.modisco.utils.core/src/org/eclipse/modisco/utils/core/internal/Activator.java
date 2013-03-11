@@ -7,7 +7,7 @@
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
  * 
  ******************************************************************************/
-package org.eclipse.modisco.utils.core;
+package org.eclipse.modisco.utils.core.internal;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
