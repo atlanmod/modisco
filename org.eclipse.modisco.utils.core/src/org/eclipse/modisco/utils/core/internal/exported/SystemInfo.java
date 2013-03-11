@@ -9,7 +9,7 @@
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Guillaume Doux (INRIA) -  refactoring and move to a separate plug-in
  *******************************************************************************/
-package org.eclipse.modisco.utils.core;
+package org.eclipse.modisco.utils.core.internal.exported;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
