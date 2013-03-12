@@ -22,13 +22,13 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.modisco.utils.chart.birt.core.BirtGraphHelper;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Axe;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Chart;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Coordinate;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Point;
-import org.eclipse.modisco.utils.chart.metamodel.chart.Serie;
-import org.eclipse.modisco.utils.chart.metamodel.chart.chartFactory;
+import org.eclipse.modisco.utils.chart.birt.core.internal.exported.BirtGraphHelper;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
+import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 import org.junit.Test;
 
 /**
@@ -101,13 +101,13 @@ public class BirtGraphHelperTest {
 	 * @return the test chart
 	 */
 	private Chart createSampleChart() {
-		Chart birtChart = chartFactory.eINSTANCE.createChart();
+		Chart birtChart = ChartFactory.eINSTANCE.createChart();
 		birtChart.setTitle("TestChart");
-		Serie serie = chartFactory.eINSTANCE.createSerie();
+		Serie serie = ChartFactory.eINSTANCE.createSerie();
 		serie.setName("testSerie");
 		birtChart.getSeries().add(serie);
-		Axe xaxe = chartFactory.eINSTANCE.createAxe();
-		Axe yaxe = chartFactory.eINSTANCE.createAxe();
+		Axe xaxe = ChartFactory.eINSTANCE.createAxe();
+		Axe yaxe = ChartFactory.eINSTANCE.createAxe();
 		xaxe.setUnit("x unit");
 		xaxe.setLegend("x legend");
 		yaxe.setUnit("y unit");
@@ -130,11 +130,11 @@ public class BirtGraphHelperTest {
 	 * @return the new point
 	 */
 	private Point createPoint(final Axe xaxe, final Axe yaxe, final double xval, final double yval) {
-		Point point = chartFactory.eINSTANCE.createPoint();
-		Coordinate xcoord = chartFactory.eINSTANCE.createCoordinate();
+		Point point = ChartFactory.eINSTANCE.createPoint();
+		Coordinate xcoord = ChartFactory.eINSTANCE.createCoordinate();
 		xcoord.setAxe(xaxe);
 		xcoord.setValue(xval);
-		Coordinate ycoord = chartFactory.eINSTANCE.createCoordinate();
+		Coordinate ycoord = ChartFactory.eINSTANCE.createCoordinate();
 		ycoord.setAxe(yaxe);
 		ycoord.setValue(yval);
 		point.getCoordinates().add(xcoord);
