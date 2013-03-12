@@ -8,7 +8,7 @@
  * 
  ******************************************************************************/
 
-package org.eclipse.modisco.utils.chart.birt.core.tests;
+package org.eclipse.modisco.utils.chart.birt.core.tests.internal;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
