@@ -30,12 +30,14 @@ Contributors:
 		<artifactId>org.eclipse.pde.feature.group</artifactId>
 		<version>${swtbot-version}</version>
 	</dependency>
+	<!-- 
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.eclipse.test.junit4.feature.group
 		</artifactId>
 		<version>${swtbot-version}</version>
 	</dependency>
+	 -->
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.forms.feature.group</artifactId>
