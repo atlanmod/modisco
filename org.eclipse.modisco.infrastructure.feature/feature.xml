@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
       label="MoDisco Infrastructure (Incubation)"
-      version="0.11.0.qualifier"
+      version="0.12.0.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.infra.common.core">
 
