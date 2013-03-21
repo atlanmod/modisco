@@ -51,7 +51,7 @@ Contributors:
       <discoverer
             discovererID="org.eclipse.modisco.java.discoverer.javaResourceToKDM"
             icon="icons/kdmsdk_16.gif"
-            label="%discoverer.javaResouorceProjectToKDM.label.1">
+            label="%discoverer.javaResourceProjectToKDM.label.1">
       </discoverer>
    </extension>
 
