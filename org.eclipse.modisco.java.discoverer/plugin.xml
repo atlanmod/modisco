@@ -8,6 +8,7 @@
    
     Contributors:
         Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
+        Gregoire Dupe (Mia-Software) - Bug 403912 - Java to KDM discoverer active on Resource
  -->
 
 <plugin>
@@ -32,6 +33,10 @@
       <discoverer
             class="org.eclipse.modisco.java.discoverer.DiscoverKDMModelFromJavaModel"
             id="org.eclipse.modisco.java.discoverer.javaToKDM">
+      </discoverer>
+      <discoverer
+            class="org.eclipse.modisco.java.discoverer.internal.DiscoverKDMModelFromEMFResources"
+            id="org.eclipse.modisco.java.discoverer.javaResourceToKDM">
       </discoverer>
       <discoverer
             class="org.eclipse.modisco.java.discoverer.DiscoverKDMModelFromJavaProject"
