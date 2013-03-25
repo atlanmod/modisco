@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
+ *    Gregoire Dupe (Mia-Software) - Bug 404263 - EditingDomainProvider does not work when using IResourceEditorInput
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.editors;
 
@@ -18,6 +19,7 @@ import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -42,6 +44,14 @@ public class BrowserEditingDomain extends AdapterFactoryEditingDomain implements
 			final CommandStack commandStack, final HashMap<Resource, Boolean> hashMap,
 			final EcoreBrowser ecoreBrowser) {
 		super(adapterFactoryWithRegistry, commandStack, hashMap);
+		commandStack.addCommandStackListener(this);
+		this.ecoreBrowser = ecoreBrowser;
+	}
+
+	public BrowserEditingDomain(final ComposedAdapterFactory adapterFactoryWithRegistry,
+			final CommandStack commandStack, final ResourceSet resourceSet,
+			final EcoreBrowser ecoreBrowser) {
+		super(adapterFactoryWithRegistry, commandStack, resourceSet);
 		commandStack.addCommandStackListener(this);
 		this.ecoreBrowser = ecoreBrowser;
 	}

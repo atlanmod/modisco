@@ -10,6 +10,7 @@
  *    Nicolas Payneau (Mia-Software) - Enable editability
  *    Nicolas Guyomar (Mia-Software) - Code Synchronization
  *    Nicolas Guyomar (Mia_software) - Bug 333651 Remove of the MoDisco EPackage view and of the metamodel browsing button
+ *    Gregoire Dupe (Mia-Software) - Bug 404263 - EditingDomainProvider does not work when using IResourceEditorInput 
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.editors;
 
@@ -524,6 +525,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 					});
 				}
 			}
+			initializeEditingDomain(this.fResourceSet);
 		} catch (final Exception e) {
 			exception = e;
 			MoDiscoBrowserPlugin.logException(e);
@@ -2781,74 +2783,78 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * This sets up the editing domain for the model editor
 	 */
 	protected void initializeEditingDomain() {
-		if (this.editingDomain == null) {
+		if (this.fResourceSet == null) {
+			initializeEditingDomain(new ResourceSetImpl());
+		}
+	}
+
+	protected void initializeEditingDomain(final ResourceSet resourceSet) {
 			// Create an adapter factory that yields item providers.
 			this.adapterFactoryWithRegistry = new BrowserAdapterFactory(
 					ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-
 			this.adapterFactoryWithRegistry
 					.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 			this.adapterFactoryWithRegistry
 					.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
+			final CommandStack commandStack = createCommandStack();
+			// Create the editing domain with a special command stack.
+			final BrowserEditingDomain newEditingDomain = new BrowserEditingDomain(
+					this.adapterFactoryWithRegistry, commandStack, resourceSet, this);
+			setEditingDomain(newEditingDomain);
+	}
 
-			// Create the command stack that will notify this editor as commands
-			// are executed.
-			CommandStack commandStack;
-			if (isReadOnly()) {
-				commandStack = new ReadOnlyCommandStack();
-			} else {
-				commandStack = new BasicCommandStack();
-			}
-
-			commandStack.addCommandStackListener(new CommandStackListener() {
-				public void commandStackChanged(final EventObject event) {
-					getParentComposite().getDisplay().asyncExec(new Runnable() {
-						public void run() {
-							firePropertyChange(IEditorPart.PROP_DIRTY);
-
-							// Try to select the affected objects.
-							final Command mostRecentCommand = ((CommandStack) event.getSource())
-									.getMostRecentCommand();
-							if (mostRecentCommand != null) {
-								// asyncExec is to make it happen after the
-								// refresh
-								Display.getDefault().asyncExec(new Runnable() {
-									public void run() {
-										try {
-											// avoid the view jumping around as
-											// the selection changes
-											// several times
-											EcoreBrowser.this.treeViewer.getTree().setRedraw(false);
-											selectAffectedElements(mostRecentCommand);
-										} finally {
-											EcoreBrowser.this.treeViewer.getTree().setRedraw(true);
-										}
+	private CommandStack createCommandStack() {
+		// Create the command stack that will notify this editor as commands
+		// are executed.
+		CommandStack commandStack;
+		if (isReadOnly()) {
+			commandStack = new ReadOnlyCommandStack();
+		} else {
+			commandStack = new BasicCommandStack();
+		}
+		commandStack.addCommandStackListener(new CommandStackListener() {
+			public void commandStackChanged(final EventObject event) {
+				getParentComposite().getDisplay().asyncExec(new Runnable() {
+					public void run() {
+						firePropertyChange(IEditorPart.PROP_DIRTY);
+						// Try to select the affected objects.
+						final Command mostRecentCommand = ((CommandStack) event.getSource())
+								.getMostRecentCommand();
+						if (mostRecentCommand != null) {
+							// asyncExec is to make it happen after the
+							// refresh
+							Display.getDefault().asyncExec(new Runnable() {
+								public void run() {
+									try {
+										// avoid the view jumping around as
+										// the selection changes
+										// several times
+										EcoreBrowser.this.treeViewer.getTree().setRedraw(false);
+										selectAffectedElements(mostRecentCommand);
+									} finally {
+										EcoreBrowser.this.treeViewer.getTree().setRedraw(true);
 									}
-								});
-							}
-
-							IPropertySheetPage page = EcoreBrowser.this.getPropertySheetPage();
-							if (page != null && page.getControl() != null
-									&& !page.getControl().isDisposed()) {
-								if (page instanceof PropertySheetPage) {
-									PropertySheetPage propertyPage = (PropertySheetPage) page;
-									propertyPage.refresh();
-								} else if (page instanceof TabbedPropertySheetPage) {
-									TabbedPropertySheetPage tabbedPropertyPage = (TabbedPropertySheetPage) page;
-									if (tabbedPropertyPage.getCurrentTab() != null) {
-										tabbedPropertyPage.refresh();
-									}
+								}
+							});
+						}
+						IPropertySheetPage page = EcoreBrowser.this.getPropertySheetPage();
+						if (page != null && page.getControl() != null
+								&& !page.getControl().isDisposed()) {
+							if (page instanceof PropertySheetPage) {
+								PropertySheetPage propertyPage = (PropertySheetPage) page;
+								propertyPage.refresh();
+							} else if (page instanceof TabbedPropertySheetPage) {
+								TabbedPropertySheetPage tabbedPropertyPage = (TabbedPropertySheetPage) page;
+								if (tabbedPropertyPage.getCurrentTab() != null) {
+									tabbedPropertyPage.refresh();
 								}
 							}
 						}
-					});
-				}
-			});
-
-			// Create the editing domain with a special command stack.
-			setEditingDomain(new BrowserEditingDomain(this.adapterFactoryWithRegistry,
-					commandStack, new HashMap<Resource, Boolean>(), this));
-		}
+					}
+				});
+			}
+		});
+		return commandStack;
 	}
 
 	/** added for integration into Papyrus */
@@ -2888,7 +2894,6 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	}
 
 	public EditingDomain getEditingDomain() {
-		initializeEditingDomain();
 		return this.editingDomain;
 	}
 
