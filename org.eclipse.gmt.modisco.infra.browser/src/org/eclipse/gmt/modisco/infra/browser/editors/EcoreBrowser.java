@@ -746,6 +746,11 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 				MoDiscoLogger.logError(e, Activator.getDefault());
 			}
 		}
+		this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
+			public void run() {
+				firePropertyChange(PROP_INPUT);
+			}
+		});
 	}
 
 	private void checkCancelled(final IProgressMonitor monitor) {
