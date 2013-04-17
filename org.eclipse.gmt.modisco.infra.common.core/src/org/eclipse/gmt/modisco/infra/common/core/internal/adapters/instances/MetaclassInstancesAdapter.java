@@ -7,6 +7,11 @@
  *
  * Contributors:
  *     Nicolas Bros (Mia-Software) - initial API and implementation
+ *     Nicolas Bros (Mia-Software) - Bug 308234 - NPE with Facet when saving
+ *     Nicolas Bros (Mia-Software) - Bug 307999 - [Facet] Not real time update face
+ *     Nicolas Bros (Mia-Software) - Bug 327633 - [Model Browser] avoid blocking the UI
+ *     Fabien Giquel (Mia-Software) - Bug 336903 - [Model Browser] : metaclasses cache issue with some model update events
+ *     Nicolas Bros (Mia-Software) -  Bug 339930 - Anticipate UI freeze : MoDisco project & externalize Strings
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances;
 

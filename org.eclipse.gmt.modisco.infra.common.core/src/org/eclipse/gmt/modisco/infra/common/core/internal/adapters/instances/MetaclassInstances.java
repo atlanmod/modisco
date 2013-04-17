@@ -7,6 +7,7 @@
  *
  * Contributors:
  *     Nicolas Bros (Mia-Software) - initial API and implementation
+ *     Nicolas Bros (Mia-Software) - Bug 339930 - Anticipate UI freeze : MoDisco project & externalize Strings
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances;
 
