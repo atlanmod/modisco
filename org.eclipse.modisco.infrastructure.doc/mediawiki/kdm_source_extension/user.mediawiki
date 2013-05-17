@@ -7,7 +7,7 @@ This plug-in is an infrastructure component and it does not provide features to 
 
 This framework reuses the [../../../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html KDM] "Source" subpackage, which proposes a model for physical resources, known as "Inventory Model".
 
-The feature is in the scope of a larger issue: the composition of metamodels <!-- TODO : link to composition description page -->. Considering that the composition with kdm inventory metamodel is a recurrent composition case, providing a dedicated minimal framework was convenient.
+The feature is in the scope of a larger issue: the composition of metamodels . Considering that the composition with kdm inventory metamodel is a recurrent composition case, providing a dedicated minimal framework was convenient.
 
 The MoDisco [../../../org.eclipse.modisco.java.doc/mediawiki/composition/user.html "Java Application"] is the reference metamodel and discoverer for illustrating the use of the KDM Source extension.
 
