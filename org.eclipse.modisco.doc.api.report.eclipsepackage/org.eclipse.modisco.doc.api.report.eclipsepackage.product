@@ -192,12 +192,6 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <feature id="org.eclipse.emf.transaction"/>
       <feature id="org.eclipse.emf.validation"/>
       <feature id="org.eclipse.uml2"/>
-      <!-- gdupe: 'org.eclipse.swtbot.go-2.0.5.20111003_1754-3676ac8-dev-e36' 
-      requires the bundle 'org.junit4-0.0.0' but 'org.junit4' has been removed 
-      since Kepler M6 -->
-      <!--feature id="org.eclipse.swtbot"/-->
-      <!--feature id="org.eclipse.swtbot.eclipse"/-->
-      <feature id="org.eclipse.modisco.all.feature"/>
       <feature id="org.eclipse.modisco.examples.feature"/>
       <feature id="org.eclipse.modisco.infra.cdo.derby.feature"/>
       <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature"/>

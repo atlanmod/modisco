@@ -11,5 +11,5 @@
     Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
 -->
 <toc label="Test Report" link_to="../org.eclipse.modisco.doc/maintoc.xml#test.report">
-   <topic label="Test Report" href="report/index.html"/>
+   <topic label="Test Report" href="report/html/index.html"/>
 </toc>

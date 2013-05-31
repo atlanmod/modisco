@@ -10,6 +10,6 @@
  Contributors:
     Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
 -->
-<toc label="Metrics Report" link_to="../org.eclipse.emf.facet.doc/maintoc.xml#metric.report">
+<toc label="Metrics Report" link_to="../org.eclipse.modisco.doc/maintoc.xml#metric.report">
    <topic label="Metrics Report" href="report/index.html"/>
 </toc>

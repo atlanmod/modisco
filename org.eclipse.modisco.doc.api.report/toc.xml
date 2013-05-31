@@ -11,5 +11,5 @@
     Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
 -->
 <toc label="API Use Report" link_to="../org.eclipse.modisco.doc/maintoc.xml#api.report">
-   <topic label="API Use Report" href="report/index.html"/>
+   <topic label="API Use Report" href="report/html/index.html"/>
 </toc>

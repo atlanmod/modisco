@@ -24,6 +24,11 @@ Contributors:
 	   <topic href="javadoc/index.html" label="API Reference"/>
 	   <topic href="mediawiki/new_and_noteworthy.html" label="New and Noteworthy"/>
    </topic>
+   <topic label="Simultaneous Release Tracker Required Documents">
+		<anchor id="api.report"/>
+		<anchor id="test.report"/>
+		<anchor id="metric.report"/>
+   </topic>
    <topic label="Architecture documentation">
 		<anchor id="archi"/>
    </topic>
