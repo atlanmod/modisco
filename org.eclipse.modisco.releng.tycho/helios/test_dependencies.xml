@@ -10,4 +10,9 @@ Contributors:
 	Gregoire DUPE (Mia-Software)
 -->
 <dependencies>
+        <dependency>
+          <type>eclipse-plugin</type>
+          <artifactId>org.hamcrest</artifactId>
+          <version>0.0.0</version>
+        </dependency>
 </dependencies>
