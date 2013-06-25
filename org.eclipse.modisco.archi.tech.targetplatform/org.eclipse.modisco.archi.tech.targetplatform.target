@@ -26,9 +26,9 @@
 <repository location="http://download.eclipse.org/technology/epp/packages/helios/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.3.0.201302281617"/>
-<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.3.0.201302281617"/>
-<repository location="http://download.eclipse.org/facet/updates/integration/0.3.0/I201302281617/"/>
+<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.3.0.201305312221"/>
+<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.3.0.201305312221"/>
+<repository location="http://download.eclipse.org/facet/updates/release/0.3.0/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
