@@ -9,6 +9,7 @@
  *    Gregoire DUPE (Mia-Software)
  *    Fabien Giquel (Mia-Software)
  *    Nicolas Bros (Mia-Software)
+ *    Gregoire DUPE (Mia-Software) - Bug 367497 - [Unit Test Failure] org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests.Tests.bug308991
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.utils;
 
@@ -48,6 +49,7 @@ import org.eclipse.core.runtime.preferences.IScopeContext;
 import org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.gmt.modisco.infra.common.core.internal.Messages;
 import org.eclipse.gmt.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.gmt.modisco.infra.common.core.internal.exception.MoDiscoCommonRuntimeException;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.apt.core.util.AptPreferenceConstants;
 import org.eclipse.jdt.core.IClasspathEntry;
@@ -290,7 +292,12 @@ public final class ProjectUtils {
 			if (bundleFile.isDirectory()) {
 				FolderUtils.copyDirectory(bundleFile, project.getLocation().toFile(), filter);
 			} else {
-				zip = new ZipFile(new File(filePath));
+				try {
+					zip = new ZipFile(new File(filePath));
+				} catch (Exception e1) {
+					throw new MoDiscoCommonRuntimeException(
+							"Failed to open the zip file :" + filePath, e1); //$NON-NLS-1$
+				}
 				Enumeration<? extends ZipEntry> entries = zip.entries();
 				List<IStatus> errors = new ArrayList<IStatus>();
 				while (entries.hasMoreElements()) {
