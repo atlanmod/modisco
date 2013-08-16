@@ -8,6 +8,7 @@
  * Contributors:
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Fabien Giquel (Mia-Software) - Bug 339720 : MoDisco Discoverers (infra + techno) API clean
+ *    Gregoire Dupe (Mia-Sotware) - Bug 415215 - org.eclipse.gmt.modisco.infra.discoverymanager build fail with Eclipse 4.4
  */
 
 package org.eclipse.gmt.modisco.infra.discoverymanager.ui.launch.utils;
@@ -122,18 +123,18 @@ public final class ParameterUtils {
 					boolean value = configuration.getAttribute(parameter.getName(), false);
 					result = new Boolean(value);
 				} else if (List.class.isAssignableFrom(type)) {
-					List<?> value = configuration.getAttribute(parameter.getName(),
-							Collections.emptyList());
+					List<String> value = configuration.getAttribute(parameter.getName(),
+							new ArrayList<String>());
 					result = value;
 				} else if (Set.class.isAssignableFrom(type)) {
 					Set<Object> value = new HashSet<Object>();
-					List<Object> list = configuration.getAttribute(parameter.getName(),
-							Collections.emptyList());
+					List<String> list = configuration.getAttribute(parameter.getName(),
+							new ArrayList<String>());
 					value.addAll(list);
 					result = value;
 				} else if (Map.class.isAssignableFrom(type)) {
-					Map<?, ?> value = configuration.getAttribute(parameter.getName(),
-							Collections.emptyMap());
+					Map<String, String> value = configuration.getAttribute(parameter.getName(),
+							new HashMap<String, String>());
 					result = value;
 				} else if (IFile.class.isAssignableFrom(type)) {
 					IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
@@ -200,13 +201,13 @@ public final class ParameterUtils {
 			} else if ((type.equals(Boolean.TYPE)) || (type.equals(Boolean.class))) {
 				configuration.setAttribute(parameter.getName(), ((Boolean) value).booleanValue());
 			} else if (List.class.isAssignableFrom(type)) {
-				configuration.setAttribute(parameter.getName(), (List<?>) value);
+				configuration.setAttribute(parameter.getName(), (List<String>) value);
 			} else if (Set.class.isAssignableFrom(type)) {
-				List<Object> list = new ArrayList<Object>();
-				list.addAll((Set<?>) value);
+				List<String> list = new ArrayList<String>();
+				list.addAll((Set<String>) value);
 				configuration.setAttribute(parameter.getName(), list);
 			} else if (Map.class.isAssignableFrom(type)) {
-				configuration.setAttribute(parameter.getName(), (Map<?, ?>) value);
+				configuration.setAttribute(parameter.getName(), (Map<String, String>) value);
 			} else if (IFile.class.isAssignableFrom(type)) {
 				IFile ifile = (IFile) value;
 				configuration.setAttribute(parameter.getName(), ifile.getFullPath().toString());
