@@ -20,7 +20,6 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<xsl:apply-templates select="//m2:project/*[name()!='build']" />
 			<properties>
-				<uml-to-java-site>http://marketplace.obeonetwork.com/updates/od5/</uml-to-java-site>
 				<eclipse-site>http://download.eclipse.org/releases/indigo</eclipse-site>
 				<platform-version>[3.7,3.8)</platform-version>
 			</properties>
@@ -29,11 +28,6 @@
 					<id>eclipse-platform</id>
 					<layout>p2</layout>
 					<url>${eclipse-site}</url>
-				</repository>
-				<repository>
-					<id>uml-to-java</id>
-					<layout>p2</layout>
-					<url>${uml-to-java-site}</url>
 				</repository>
 				<repository>
 					<id>Indigo Release</id>
@@ -105,16 +99,13 @@
 							<useBinaryResources>false</useBinaryResources>
 							<usePlatformResourcePath>true</usePlatformResourcePath>
 							<acceleoProject>
-							<root>${basedir}</root>
-							<entries>
-								<entry>
-									<input>src/</input>
-									<output>__target__/classes</output>
-								</entry>
-							</entries>
-							<jars>
-								<jar>p2.eclipse-plugin:org.obeonetwork.pim.uml2.gen.java</jar>
-							</jars>
+								<root>${basedir}</root>
+								<entries>
+									<entry>
+										<input>src/</input>
+										<output>__target__/classes</output>
+									</entry>
+								</entries>
 							</acceleoProject>
 							<packagesToRegister>
 								<packageToRegister>org.eclipse.gmt.modisco.java.emf.JavaPackage</packageToRegister>
