@@ -39,8 +39,12 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.modisco.jee.ejbjar.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.webapp.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.webapp.discoverer.tests.compatibility.AllTestsInUIThread.class,
+
+/* Bug 415657 - Disabling of 'org.eclipse.modisco.jee.jsp.discoverer' to deliver to Luna M1
+ * To be able to deliver to Luna M1
 		org.eclipse.modisco.jee.jsp.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.jsp.discoverer.tests.compatibility.AllTests.class,
+*/
 		org.eclipse.modisco.jee.jsp.generation.tests.DiffGeneratedJspTest.class,
 		org.eclipse.modisco.kdm.uml2converter.tests.AllTestsInUIThread.class,
 		org.eclipse.gmt.modisco.kdm.uml2converter.tests.AllTestsInUIThread.class,
