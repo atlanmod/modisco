@@ -48,7 +48,10 @@ import org.osgi.framework.Bundle;
  */
 public class DiffGeneratedJspTest {
 
+	/* Bug 415657 - Disabling of 'org.eclipse.modisco.jee.jsp.discoverer' to deliver to Luna M1
 	private static final String JSP_DISCOVERER_TESTS_PLUGINID = org.eclipse.modisco.jee.jsp.discoverer.tests.Activator.PLUGIN_ID;
+	*/
+	private static final String JSP_DISCOVERER_TESTS_PLUGINID = null;
 	private static final String RESOURCES_TEST1_XML = "resources/org.eclipse.modisco.jee.jsp.discoverer.tests.jspxmi"; //$NON-NLS-1$
 	private static final String RESOURCES_TEST1_JSP = "resources/"; //$NON-NLS-1$
 	private static final String DEPLOYED_TEST1_JSP = "resources/"; //$NON-NLS-1$
