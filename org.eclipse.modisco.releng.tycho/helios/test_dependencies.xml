@@ -40,7 +40,7 @@ Contributors:
 	<dependency>
 		<type>p2-installable-unit</type>
 		<groupId>${project.groupdId}</groupId>
-		<artifactId>org.eclipse.emf.facet.sdk.feature.feature.group</artifactId>
+		<artifactId>org.eclipse.modisco.sdk.feature.feature.group</artifactId>
 		<version>${project.versionId}</version>
 	</dependency>
 	<!-- Test dependencies -->
@@ -83,6 +83,11 @@ Contributors:
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.emf.validation.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<groupId>${project.groupdId}</groupId>
+		<artifactId>org.eclipse.emf.facet.sdk.feature.feature.group</artifactId>
 	</dependency>
 	<!--  Others  -->
 	<dependency>
