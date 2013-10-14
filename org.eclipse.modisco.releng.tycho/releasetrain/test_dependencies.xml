@@ -10,11 +10,7 @@ Contributors:
 	Gregoire DUPE (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
 -->
 <dependencies>
-	<dependency>
-		<type>p2-installable-unit</type>
-		<artifactId>org.eclipse.pde.feature.group</artifactId>
-		<version>${platform-version}</version>
-	</dependency>
+	<!-- SWTBot -->
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.eclipse.feature.group</artifactId>
@@ -27,17 +23,9 @@ Contributors:
 	</dependency>
 	<dependency>
 		<type>p2-installable-unit</type>
-		<artifactId>org.eclipse.pde.feature.group</artifactId>
+		<artifactId>org.eclipse.swtbot.eclipse.test.junit.feature.group</artifactId>
 		<version>${swtbot-version}</version>
 	</dependency>
-	<!-- 
-	<dependency>
-		<type>p2-installable-unit</type>
-		<artifactId>org.eclipse.swtbot.eclipse.test.junit4.feature.group
-		</artifactId>
-		<version>${swtbot-version}</version>
-	</dependency>
-	 -->
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.forms.feature.group</artifactId>
@@ -47,5 +35,53 @@ Contributors:
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.feature.group</artifactId>
 		<version>${swtbot-version}</version>
+	</dependency>
+	<!-- Currently tested feature -->
+	<dependency>
+		<type>p2-installable-unit</type>
+		<groupId>${project.groupdId}</groupId>
+		<artifactId>org.eclipse.emf.facet.sdk.feature.feature.group</artifactId>
+		<version>${project.versionId}</version>
+	</dependency>
+	<!-- Test dependencies -->
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.jdt.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.pde.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.rcp.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.emf.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.uml2.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.ocl.all.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.emf.transaction.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.emf.query.sdk.feature.group</artifactId>
+	</dependency>
+	<dependency>
+		<type>p2-installable-unit</type>
+		<artifactId>org.eclipse.emf.validation.sdk.feature.group</artifactId>
 	</dependency>
 </dependencies>
