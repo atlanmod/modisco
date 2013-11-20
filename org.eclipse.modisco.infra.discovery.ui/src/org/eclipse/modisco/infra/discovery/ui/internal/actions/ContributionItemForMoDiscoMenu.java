@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2009-2011 Mia-Software.
+ * Copyright (c) 2009-2013 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -9,6 +9,7 @@
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - refactoring for new discovery framework
  *    Nicolas Bros (Mia-Software) - Bug 344117 - NPE during context menu generation prevents 'Progress' view from coming up
+ *    Gregoire Dupe (Mia-Software) - Bug 422168 - Discovery menu breakable by an extension exception
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.ui.internal.actions;
 
@@ -102,10 +103,14 @@ public class ContributionItemForMoDiscoMenu extends ContributionItem implements
 							boolean applicable = true;
 							for (final Object selectedObject : selectedObjects) {
 								// check discoverer compatibility
-								if (!IDiscoveryManager.INSTANCE.isApplicable(discoverer,
-										selectedObject)) {
-									applicable = false;
-									break;
+								try {
+									if (!IDiscoveryManager.INSTANCE.isApplicable(discoverer,
+											selectedObject)) {
+										applicable = false;
+										break;
+									}
+								} catch (Exception e) {
+									MoDiscoLogger.logError(e, Activator.getDefault());
 								}
 							}
 							if (applicable) {
