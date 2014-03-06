@@ -30,6 +30,6 @@ Contributors:
 		<repository>
 			<id>EMF Facet 0.2.2</id>
 			<layout>p2</layout>
-			<url>http://archive.eclipse.org/facet/updates/0.2.2/</url>
+			<url>http://archive.eclipse.org/facet/updates/release/0.2.2/</url>
 		</repository>
 </repositories>
