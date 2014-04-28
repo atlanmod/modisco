@@ -21,5 +21,10 @@ Contributors:
 			<id>Orbit</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/</url>
-		</repository>				
+		</repository>
+		<repository>
+			<id>Eclipse License</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/cbi/updates/license/</url>
+		</repository>			
 </repositories>
