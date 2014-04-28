@@ -14,7 +14,9 @@
       label="MoDisco JEE feature (Incubation)"
       version="0.12.0.qualifier"
       provider-name="%providerName"
-      plugin="org.eclipse.modisco.jee">
+      plugin="org.eclipse.modisco.jee"
+      license-feature="org.eclipse.license"
+      license-feature-version="0.0.0">
 
    <description url="http://www.eclipse.org/MoDisco/">
       %description
@@ -95,6 +97,7 @@ http://www.eclipse.org/legal/epl-v10.html
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
    <plugin
          id="org.eclipse.modisco.jee.jsp.discoverer"
          download-size="0"
@@ -108,6 +111,7 @@ http://www.eclipse.org/legal/epl-v10.html
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
    <plugin
          id="org.eclipse.modisco.jee.jsp.generation"
          download-size="0"

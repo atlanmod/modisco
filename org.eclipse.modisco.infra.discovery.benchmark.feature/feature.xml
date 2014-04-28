@@ -3,7 +3,9 @@
       id="org.eclipse.modisco.infra.discovery.benchmark.feature"
       label="MoDisco Infrastructure Discovery Benchmark (Incubation)"
       version="0.12.0.qualifier"
-      provider-name="%providerName">
+      provider-name="%providerName"
+      license-feature="org.eclipse.license"
+      license-feature-version="0.0.0">
 
    <description>
       %description
