@@ -32,4 +32,9 @@ Contributors:
 			<layout>p2</layout>
 			<url>http://archive.eclipse.org/facet/updates/release/0.2.2/</url>
 		</repository>
+		<repository>
+			<id>Eclipse License</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/cbi/updates/license/</url>
+		</repository>
 </repositories>
