@@ -31,7 +31,7 @@ which accompanies this distribution, and is available at
 http://www.eclipse.org/legal/epl-v10.html
    </copyright>
 
-   <license url="http://www.eclipse.org/legal/epl-v10.html">
+   <license url="%licenseURL">
       %license
    </license>
 
