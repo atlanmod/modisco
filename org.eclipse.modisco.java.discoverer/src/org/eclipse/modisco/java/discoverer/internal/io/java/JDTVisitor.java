@@ -15,6 +15,7 @@
  *    Nicolas Guyomar (Mia-Software)
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *    Nicolas Bros (Mia-Software) - Bug 351590 - [Java discoverer] ClassCastException while discovering Apache math commons
+ *    Hervé Esteguet (Mia-Software) - Bug 435282 - [Java Discoverer] Wrong value for Javadoc.content field in model (bad line feeds)
  *******************************************************************************/
 
 package org.eclipse.modisco.java.discoverer.internal.io.java;
@@ -844,7 +845,8 @@ public class JDTVisitor extends ASTVisitor {
 					commentElement = this.factory.createJavadoc();
 					initializeNode(commentElement, aComment);
 				}
-				commentElement.setContent(aComment.toString());
+				String content = CommentsManager.extractCommentContent(aComment, this.javaContent);
+				commentElement.setContent(content);
 			}
 
 			getCommentsBinding().put(aComment, commentElement);
