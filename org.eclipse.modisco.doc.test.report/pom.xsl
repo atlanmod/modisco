@@ -22,7 +22,7 @@
 				<dependency>
 					<groupId>org.eclipse.mdt</groupId>
 					<artifactId>org.eclipse.modisco.tests</artifactId>
-					<version>0.12.1-SNAPSHOT</version>
+					<version>0.13.0-SNAPSHOT</version>
 					<type>eclipse-test-plugin</type>
 				</dependency>
 			</dependencies>
