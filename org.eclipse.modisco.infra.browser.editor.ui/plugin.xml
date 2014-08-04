@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ Copyright (c) 2014 Mia-Software.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
+-->
+<plugin>
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor"
+            default="false"
+            id="org.eclipse.modisco.infra.browser.editor.ui.TreeEditor"
+            name="%TreeResourceEditor">
+         <contentTypeBinding
+               contentTypeId="org.eclipse.emf.ecore.xmi">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.facet.util.emf.core.modelViewer">
+      <resourceViewer
+            class="org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceBrowserOpener">
+      </resourceViewer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="org.eclipse.modisco.infra.browser.editor.ui.toolbar1"
+               label="%modiscoBrowserToolbarLabel">
+            <command
+                  commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
+                  id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
+                  label="%LoadUnloadFacets"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="activePart">
+                     <adapt
+                           type="org.eclipse.emf.facet.efacet.core.IFacetManagerProvider">
+                     </adapt>
+                  </with>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="org.eclipse.emf.facet.ui.loadCustomization"
+                  id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
+                  label="%LoadUnloadCustoms"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="activePart">
+                     <adapt
+                           type="org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider">
+                     </adapt>
+                  </with>
+               </visibleWhen>
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

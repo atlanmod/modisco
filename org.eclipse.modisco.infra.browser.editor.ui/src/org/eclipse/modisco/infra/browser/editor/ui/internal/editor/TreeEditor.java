@@ -1,0 +1,191 @@
+/** 
+ * Copyright (c) 2014 Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
+ */
+package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
+
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.common.command.BasicCommandStack;
+import org.eclipse.emf.common.command.CommandStack;
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import org.eclipse.emf.facet.custom.core.ICustomizationManager;
+import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
+import org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider;
+import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory;
+import org.eclipse.emf.facet.custom.ui.IResolvingCustomizedLabelProviderFactory;
+import org.eclipse.emf.facet.efacet.core.IFacetManager;
+import org.eclipse.emf.facet.efacet.core.IFacetManagerFactory;
+import org.eclipse.emf.facet.efacet.core.IFacetManagerListener;
+import org.eclipse.emf.facet.efacet.core.IFacetManagerProvider;
+import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.viewers.IContentProvider;
+import org.eclipse.jface.viewers.ILabelProvider;
+import org.eclipse.jface.viewers.ISelectionProvider;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
+import org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceEditorInput;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorSite;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.part.EditorPart;
+import org.eclipse.ui.part.FileEditorInput;
+
+public class TreeEditor extends EditorPart implements IEditingDomainProvider,
+		IFacetManagerProvider, ICustomizationManagerProvider {
+
+	private static final String EDITOR_ID = Activator.getDefault().getBundle()
+			.getSymbolicName() + ".TreeEditor"; //$NON-NLS-1$
+	private Resource resource;
+	private ResourceSet resourceSet;
+	private EditingDomain editingDomain;
+	private IFacetManager facetManager;
+	private ICustomizationManager customManager;
+	private TreeViewer tree;
+	private IFacetManagerListener facetMgrListener;
+
+	@Override
+	public void doSave(final IProgressMonitor monitor) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void doSaveAs() {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void init(final IEditorSite site, final IEditorInput input)
+			throws PartInitException {
+		setSite(site);
+		setInput(input);
+		if (input instanceof FileEditorInput) {
+			final FileEditorInput fileEI = (FileEditorInput) input;
+			final IFile file = fileEI.getFile();
+			final IPath path = file.getFullPath();
+			final String pathStr = path.toString();
+			final URI uri = URI.createPlatformResourceURI(pathStr, true);
+			this.resourceSet = new ResourceSetImpl();
+			this.resource = this.resourceSet.getResource(uri, true);
+		} else if (input instanceof ResourceEditorInput) {
+			final ResourceEditorInput resourceEI = (ResourceEditorInput) input;
+			this.resource = resourceEI.getResource();
+			this.resourceSet = this.resource.getResourceSet();
+		}
+		final AdapterFactory adapterFactory = new AdapterFactoryImpl();
+		final CommandStack commandStack = new BasicCommandStack();
+		this.editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
+				commandStack, this.resourceSet);
+	}
+	
+	
+	private void createPopupMenu() {
+		final MenuManager menuMgr = new MenuManager("#PopupMenu"); //$NON-NLS-1$
+		menuMgr.setRemoveAllWhenShown(true);
+		final Menu menu = menuMgr.createContextMenu(this.tree.getControl());
+		this.tree.getControl().setMenu(menu);
+		getSite().registerContextMenu(menuMgr, this.tree);
+	}
+
+	@Override
+	public boolean isDirty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isSaveAsAllowed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void createPartControl(final Composite parent) {
+		this.tree = new TreeViewer(parent);
+		this.facetManager = IFacetManagerFactory.DEFAULT
+				.getOrCreateFacetManager(this.resourceSet);
+		this.customManager = ICustomizationManagerFactory.DEFAULT
+				.getOrCreateICustomizationManager(this.resourceSet);
+		final ILabelProvider labelProvider = IResolvingCustomizedLabelProviderFactory.DEFAULT
+				.createCustomizedLabelProvider(this.customManager);
+		final IContentProvider contentProvider = ICustomizedContentProviderFactory.DEFAULT
+				.createCustomizedTreeContentProvider(this.customManager);
+		this.tree.setContentProvider(contentProvider);
+		this.tree.setLabelProvider(labelProvider);
+		this.tree.setInput(this.resource.getContents());
+		getSite().setSelectionProvider(this.tree);
+		this.facetMgrListener = new IFacetManagerListener() {
+			public void facetManagerChanged() {
+				TreeEditor.this.refresh();
+			}
+		};
+		createPopupMenu();
+		this.facetManager.addListener(this.facetMgrListener);
+	}
+
+	protected void refresh() {
+		final Object[] expanededElts = this.tree.getExpandedElements();
+		this.tree.refresh();
+		this.tree.setExpandedElements(expanededElts);
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static String getEditorId() {
+		return EDITOR_ID;
+	}
+
+	public EditingDomain getEditingDomain() {
+		return this.editingDomain;
+	}
+	
+	@Override
+	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {
+		/* @SuppressWarnings("rawtypes"): gdupe> Imposed by the super class */
+		Object result = null;
+		if (adapter.isInstance(this)) {
+			result = this;
+		} else if (adapter == ISelectionProvider.class) {
+			result = this.tree;
+		} else {
+			result = super.getAdapter(adapter);
+		}
+		return result;
+	}
+
+	public ICustomizationManager getCustomizationManager() {
+		return this.customManager;
+	}
+
+	public IFacetManager getFacetManager() {
+		return this.facetManager;
+	}
+	
+	@Override
+	public void dispose() {
+		this.facetManager.removeListener(this.facetMgrListener);
+		super.dispose();
+	}
+	
+}
