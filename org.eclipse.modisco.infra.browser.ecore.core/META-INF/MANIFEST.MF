@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modisco Browser Ecore Core
+Bundle-SymbolicName: org.eclipse.modisco.infra.browser.ecore.core;singleton:=true
+Bundle-Version: 0.12.0.qualifier
+Bundle-Activator: org.eclipse.modisco.infra.browser.ecore.core.internal.Activator
+Bundle-Vendor: Eclipse Modeling Project
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.facet.query.java.core;bundle-version="0.5.0",
+ org.eclipse.emf.ecore;bundle-version="2.6.1",
+ org.eclipse.emf.facet.efacet.metamodel;bundle-version="0.4.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
