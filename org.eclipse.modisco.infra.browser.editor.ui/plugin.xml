@@ -10,6 +10,7 @@
  Contributors:
     Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
     Thomas Cicognani (Soft-Maint) - Bug 442019 - Toolbar actions disappear when focus is not on the browser
+    Thomas Cicognani (Soft-Maint) - Bug 442257 - New toolbar actions to (des)activate customizations
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -56,7 +57,21 @@
                   commandId="org.eclipse.emf.facet.ui.loadCustomization"
                   id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
                   label="%LoadUnloadCustoms"
-                  style="push">
+                  style="pulldown">
+               <visibleWhen
+                     checkEnabled="true">
+                  <with
+                        variable="activeEditor">
+                     <instanceof
+                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                     </instanceof>
+                  </with>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
+                  label="%ShowLinksLabel"
+                  style="toggle">
                <visibleWhen
                      checkEnabled="true">
                   <with
@@ -69,6 +84,27 @@
             </command>
          </toolbar>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization">
+         <command
+               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
+               label="%ShowLinksLabel"
+               style="toggle">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LinksCountHandler"
+            id="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
+            name="%ShowLinksLabel">
+         <state
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LinksCountState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
    </extension>
 
 </plugin>
