@@ -35,15 +35,16 @@ public abstract class AbstractCustomizationActivatorToggleState extends
 	private final IFacetManagerListener facetMgrListener;
 
 	private IFacetManager facetManager;
+	private final String customId;
 
 	protected AbstractCustomizationActivatorToggleState(final String customID) {
 		/*
-		 * No persistance and initialized to FALSE (unchecked button)
+		 * No persistence and initialized to FALSE (unchecked button)
 		 */
 		super();
 		setShouldPersist(false);
 		setValue(Boolean.FALSE);
-
+		this.customId = customID;
 		this.partListener = new IPartListener() {
 			public void partOpened(final IWorkbenchPart part) {
 				// DO NOTHING
@@ -62,27 +63,28 @@ public abstract class AbstractCustomizationActivatorToggleState extends
 			}
 
 			public void partActivated(final IWorkbenchPart part) {
-				if (part instanceof TreeEditor) {
-					final TreeEditor treeEditor = (TreeEditor) part;
-					AbstractCustomizationActivatorToggleState.this.facetManager = treeEditor
-							.getFacetManager();
-
-					AbstractCustomizationActivatorToggleState.this.facetManager
-							.removeListener(AbstractCustomizationActivatorToggleState.this.facetMgrListener);
-					AbstractCustomizationActivatorToggleState.this.facetManager
-							.addListener(AbstractCustomizationActivatorToggleState.this.facetMgrListener);
-					changeState(customID);
-
-				}
+				AbstractCustomizationActivatorToggleState.this
+						.partActivated(part);
 			}
 		};
 
 		this.facetMgrListener = new IFacetManagerListener() {
 			public void facetManagerChanged() {
-				changeState(customID);
+				changeToggleState();
 			}
 		};
 	}
+	
+	protected void partActivated(final IWorkbenchPart part) {
+		if (part instanceof TreeEditor) {
+			final TreeEditor treeEditor = (TreeEditor) part;
+			this.facetManager = treeEditor.getFacetManager();
+			this.facetManager.removeListener(this.facetMgrListener);
+			this.facetManager.addListener(this.facetMgrListener);
+			changeToggleState();
+		}
+	}
+	
 
 	/**
 	 * Check if the customization linked to this ToogleState is activated. If
@@ -91,15 +93,16 @@ public abstract class AbstractCustomizationActivatorToggleState extends
 	 * @param pCustomID
 	 *            ID of the customization linked to this ToggleState
 	 */
-	private void changeState(final String pCustomID) {
+	protected void changeToggleState() {
 		final List<FacetSet> facetSets = this.facetManager
 				.getManagedFacetSets();
 		for (FacetSet facetSet : facetSets) {
-			if (facetSet.getName().equals(pCustomID)) {
+			if (this.customId.equals(facetSet.getName())) {
 				setValue(Boolean.TRUE);
 				break;
+			} else if (!this.getValue().equals(Boolean.FALSE)) {
+				setValue(Boolean.FALSE);
 			}
-			setValue(Boolean.FALSE);
 		}
 	}
 
