@@ -16,5 +16,8 @@ Contributors:
       <modeldeclaration
             file="custom/ePackageContainsEClass.custom">
       </modeldeclaration>
+      <modeldeclaration
+            file="custom/linksCount.custom">
+      </modeldeclaration>
    </extension>
 </plugin>
