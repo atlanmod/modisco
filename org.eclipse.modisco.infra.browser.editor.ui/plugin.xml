@@ -9,6 +9,7 @@
  
  Contributors:
     Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
+    Thomas Cicognani (Soft-Maint) - Bug 442019 - Toolbar actions disappear when focus is not on the browser
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -42,12 +43,12 @@
                   label="%LoadUnloadFacets"
                   style="push">
                <visibleWhen
-                     checkEnabled="false">
+                     checkEnabled="true">
                   <with
-                        variable="activePart">
-                     <adapt
-                           type="org.eclipse.emf.facet.efacet.core.IFacetManagerProvider">
-                     </adapt>
+                        variable="activeEditor">
+                     <instanceof
+                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                     </instanceof>
                   </with>
                </visibleWhen>
             </command>
@@ -57,12 +58,12 @@
                   label="%LoadUnloadCustoms"
                   style="push">
                <visibleWhen
-                     checkEnabled="false">
+                     checkEnabled="true">
                   <with
-                        variable="activePart">
-                     <adapt
-                           type="org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider">
-                     </adapt>
+                        variable="activeEditor">
+                     <instanceof
+                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                     </instanceof>
                   </with>
                </visibleWhen>
             </command>
