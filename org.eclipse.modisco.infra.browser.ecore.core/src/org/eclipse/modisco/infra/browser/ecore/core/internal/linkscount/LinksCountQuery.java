@@ -10,6 +10,11 @@
  */
 package org.eclipse.modisco.infra.browser.ecore.core.internal.linkscount;
 
+
+public class LinksCountQuery {
+	//FIXME
+}
+/*
 import java.util.Collection;
 
 import org.eclipse.emf.ecore.EObject;
@@ -62,3 +67,4 @@ public class LinksCountQuery implements IJavaQuery3<EObject, String> {
 		return size;
 	}
 }
+*/
