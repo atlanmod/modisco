@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 442257 - New toolbar actions to (des)activate customizations
+ *    Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.handlers;
 
@@ -25,26 +26,25 @@ import org.eclipse.ui.PlatformUI;
 
 /**
  * Abstract ToggleState to manage menu toolbar shortcuts. These shortcuts allow
- * users to (des)activate customizations. If you want to create a menu shortcut,
- * your ToggleState must extends this class
+ * users to (des)activate facet sets (customizations are facet sets). If you
+ * want to create a menu shortcut, your ToggleState must extends this class
  */
-public abstract class AbstractCustomizationActivatorToggleState extends
-		ToggleState {
+public abstract class AbstractFacetSetActivatorToggleState extends ToggleState {
 
 	private final IPartListener partListener;
 	private final IFacetManagerListener facetMgrListener;
 
 	private IFacetManager facetManager;
-	private final String customId;
+	private final String facetSetID;
 
-	protected AbstractCustomizationActivatorToggleState(final String customID) {
+	protected AbstractFacetSetActivatorToggleState(final String facetSetID) {
 		/*
 		 * No persistence and initialized to FALSE (unchecked button)
 		 */
 		super();
 		setShouldPersist(false);
 		setValue(Boolean.FALSE);
-		this.customId = customID;
+		this.facetSetID = facetSetID;
 		this.partListener = new IPartListener() {
 			public void partOpened(final IWorkbenchPart part) {
 				// DO NOTHING
@@ -63,8 +63,7 @@ public abstract class AbstractCustomizationActivatorToggleState extends
 			}
 
 			public void partActivated(final IWorkbenchPart part) {
-				AbstractCustomizationActivatorToggleState.this
-						.partActivated(part);
+				AbstractFacetSetActivatorToggleState.this.partActivated(part);
 			}
 		};
 
@@ -74,7 +73,7 @@ public abstract class AbstractCustomizationActivatorToggleState extends
 			}
 		};
 	}
-	
+
 	protected void partActivated(final IWorkbenchPart part) {
 		if (part instanceof TreeEditor) {
 			final TreeEditor treeEditor = (TreeEditor) part;
@@ -84,20 +83,16 @@ public abstract class AbstractCustomizationActivatorToggleState extends
 			changeToggleState();
 		}
 	}
-	
 
 	/**
-	 * Check if the customization linked to this ToogleState is activated. If
-	 * so, the ToggleState is checked
-	 * 
-	 * @param pCustomID
-	 *            ID of the customization linked to this ToggleState
+	 * Check if the facet set linked to this ToogleState is activated. If so,
+	 * the ToggleState is checked
 	 */
 	protected void changeToggleState() {
 		final List<FacetSet> facetSets = this.facetManager
 				.getManagedFacetSets();
 		for (FacetSet facetSet : facetSets) {
-			if (this.customId.equals(facetSet.getName())) {
+			if (this.facetSetID.equals(facetSet.getName())) {
 				setValue(Boolean.TRUE);
 				break;
 			} else if (!this.getValue().equals(Boolean.FALSE)) {

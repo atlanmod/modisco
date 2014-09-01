@@ -12,6 +12,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 442019 - Toolbar actions disappear when focus is not on the browser
     Thomas Cicognani (Soft-Maint) - Bug 442257 - New toolbar actions to (des)activate customizations
     Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
+    Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -43,7 +44,21 @@
                   commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
                   id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
                   label="%LoadUnloadFacets"
-                  style="push">
+                  style="pulldown">
+               <visibleWhen
+                     checkEnabled="true">
+                  <with
+                        variable="activeEditor">
+                     <instanceof
+                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                     </instanceof>
+                  </with>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.facetset.econtainer"
+                  label="%ShowEContainerLabel"
+                  style="toggle">
                <visibleWhen
                      checkEnabled="true">
                   <with
