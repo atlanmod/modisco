@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
+ *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -187,5 +188,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		this.facetManager.removeListener(this.facetMgrListener);
 		super.dispose();
 	}
-	
+
+	public ILabelProvider getViewerLabelProvider() {
+		return (ILabelProvider) this.tree.getLabelProvider();
+	}
 }
