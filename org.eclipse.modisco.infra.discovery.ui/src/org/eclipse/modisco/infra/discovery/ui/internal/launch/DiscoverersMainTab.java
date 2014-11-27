@@ -13,6 +13,7 @@
  *    Nicolas Bros (Mia-Software) - Bug 342824 - SWTException when closing the Discovery launch configuration dialog
  *    Nicolas Bros (Mia-Software) - Bug 342832 - [Discovery] Values lost when clicking anywhere in the launch config dialog
  *    Fabien Giquel (Mia-Software) - Bug 344082 - [Java Discovery] IllegalArgumentException in launch configurations
+ *    Gregoire Dupe (Mia-Software) - Bug 453476 - Stop using EMF Facet's deprecated APIs
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.ui.internal.launch;
 
@@ -25,7 +26,7 @@ import org.eclipse.debug.ui.AbstractLaunchConfigurationTab;
 import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.emf.facet.widgets.celleditors.IListener;
-import org.eclipse.emf.facet.widgets.celleditors.core.composite.registries.ICompositeEditorFactoriesRegistry;
+import org.eclipse.emf.facet.widgets.celleditors.core.composite.registry.ICompositeEditorFactoriesRegistry;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
@@ -147,9 +148,9 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 			placeholder.setEnabled(false);
 			placeholder.setLayoutData(new GridData(GridData.FILL, GridData.FILL, true, false));
 		} else {
-			ICompositeEditorFactory<Object> compositeEditorFactory = (ICompositeEditorFactory<Object>) ICompositeEditorFactoriesRegistry.INSTANCE
-					.getCompositeEditorFactory(discoverer.getSourceType());
-
+			final Class<?> sourceType = discoverer.getSourceType();
+			final ICompositeEditorFactory<Object> compositeEditorFactory = (ICompositeEditorFactory<Object>) ICompositeEditorFactoriesRegistry.INSTANCE
+					.getCompositeEditorFactory(sourceType);
 			if (compositeEditorFactory != null) {
 				this.sourceCellEditorComposite = compositeEditorFactory.createCompositeEditor(
 						this.sourceGroup, SWT.BORDER);
@@ -166,8 +167,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 				placeholder.setEnabled(false);
 
 				placeholder.setText(NLS.bind(
-						Messages.DiscoverersMainTab_noCellEditorRegisteredForType, discoverer
-								.getSourceType().getName()));
+						Messages.DiscoverersMainTab_noCellEditorRegisteredForType, sourceType.getName()));
 				placeholder.setForeground(Display.getDefault().getSystemColor(SWT.COLOR_DARK_RED));
 			}
 		}

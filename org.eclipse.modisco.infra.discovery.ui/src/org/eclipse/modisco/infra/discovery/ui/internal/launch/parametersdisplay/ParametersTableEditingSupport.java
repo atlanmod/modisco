@@ -9,6 +9,7 @@
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Fabien Giquel (Mia-Software)
  *    Nicolas Guyomar (Mia-Software) - Bug 339571 - Compilation errors due to EMF Facet API cleaning
+ *    Gregoire Dupe (Mia-Software) - Bug 453476 - Stop using EMF Facet's deprecated APIs
  */
 
 package org.eclipse.modisco.infra.discovery.ui.internal.launch.parametersdisplay;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
-import org.eclipse.emf.facet.widgets.celleditors.core.composite.registries.ICompositeEditorFactoriesRegistry;
+import org.eclipse.emf.facet.widgets.celleditors.core.composite.registry.ICompositeEditorFactoriesRegistry;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.TableViewer;

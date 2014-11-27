@@ -8,6 +8,7 @@
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software)
+ *    Gregoire Dupe (Mia-Software) - Bug 453476 - Stop using EMF Facet's deprecated APIs
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.ui.internal.celleditors.composite;
 
@@ -17,7 +18,7 @@ import java.util.List;
 import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.emf.facet.widgets.celleditors.IListener;
-import org.eclipse.emf.facet.widgets.celleditors.IWidget;
+import org.eclipse.emf.facet.widgets.celleditors.IWidget2;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -36,7 +37,7 @@ public class ComposedCellEditor extends CellEditor {
 
 	@Override
 	protected void doSetValue(final Object value) {
-		((IWidget<Object>) getControl()).setValue(value);
+		((IWidget2<Object>) getControl()).setValue(value);
 	}
 
 	@Override
@@ -46,7 +47,7 @@ public class ComposedCellEditor extends CellEditor {
 
 	@Override
 	protected Object doGetValue() {
-		return ((IWidget<Object>) getControl()).getValue();
+		return ((IWidget2<Object>) getControl()).getValue();
 	}
 
 	@Override

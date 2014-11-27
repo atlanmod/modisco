@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Fabien Giquel - initial API and implementation
+ *    Gregoire Dupe (Mia-Software) - Bug 453476 - Stop using EMF Facet's deprecated APIs
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core.tests;
 
@@ -19,8 +20,11 @@ import junit.framework.Assert;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.facet.util.emf.catalog.Catalog;
-import org.eclipse.emf.facet.util.emf.core.ICatalogSetManager;
+import org.eclipse.emf.facet.util.emf.catalog.CatalogSet;
+import org.eclipse.emf.facet.util.emf.core.ICatalogSetManager2;
+import org.eclipse.emf.facet.util.emf.core.ICatalogSetManagerFactory;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererCatalog;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
@@ -44,8 +48,10 @@ public class TestDiscoverersReferential {
 
 		// test discoverers catalog registration
 		boolean catalogFound = false;
-		for (Catalog aCatalog : ICatalogSetManager.INSTANCE.getCatalogSet()
-				.getCatalogs()) {
+		final ICatalogSetManager2 catalogSetManager = ICatalogSetManagerFactory.DEFAULT
+				.createICatalogSetManager(new ResourceSetImpl());
+		final CatalogSet catalogSet = catalogSetManager.getCatalogSet();
+		for (Catalog aCatalog : catalogSet.getCatalogs()) {
 			if (aCatalog instanceof DiscovererCatalog) {
 				catalogFound = true;
 

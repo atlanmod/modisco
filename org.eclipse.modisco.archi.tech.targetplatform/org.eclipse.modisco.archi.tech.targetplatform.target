@@ -26,8 +26,8 @@
 <repository location="http://download.eclipse.org/technology/epp/packages/helios/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.5.0.201408050748"/>
-<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.5.0.201408050748"/>
+<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="1.0.0.201411271427"/>
+<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="1.0.0.201411271427"/>
 <repository location="http://download.eclipse.org/facet/updates/integration/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
