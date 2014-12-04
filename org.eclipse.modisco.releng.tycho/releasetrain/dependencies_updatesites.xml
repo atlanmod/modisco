@@ -13,6 +13,11 @@ Contributors:
 -->
 <repositories>
 		<repository>
+			<id>EMF Facet 1.0.0/I201411271427</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/facet/updates/integration/1.0.0/I201411271427/</url>
+		</repository>
+		<repository>
 			<id>SWTBot</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/technology/swtbot/releases/latest/</url>
