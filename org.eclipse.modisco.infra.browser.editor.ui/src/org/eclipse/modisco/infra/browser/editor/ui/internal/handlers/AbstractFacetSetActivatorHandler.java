@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 442257 - New toolbar actions to (des)activate customizations
+ *    Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.handlers;
 
@@ -15,37 +16,35 @@ import java.util.List;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.emf.facet.custom.core.ICustomizationCatalogManager;
-import org.eclipse.emf.facet.custom.core.ICustomizationCatalogManagerFactory;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider;
-import org.eclipse.emf.facet.custom.metamodel.v0_2_0.custom.Customization;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
+import org.eclipse.emf.facet.efacet.core.IFacetSetCatalogManager;
+import org.eclipse.emf.facet.efacet.core.IFacetSetCatalogManagerFactory;
 import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 /**
  * Abstract Handler to manage menu toolbar shortcuts. These shortcuts allow
- * users to (des)activate customizations. If you want to create a menu shortcut,
- * your Handler must extends this class
+ * users to (des)activate facet sets (customizations are facet sets). If you
+ * want to create a menu shortcut, your Handler must extends this class
  */
-public abstract class AbstractCustomizationActivatorHandler extends
-		AbstractHandler {
+public abstract class AbstractFacetSetActivatorHandler extends AbstractHandler {
 
 	/**
 	 * Execute the Handler
 	 * 
 	 * @param event
 	 *            The execution event that contains the application context
-	 * @param customID
-	 *            ID of the customization linked to this Handler
-	 * @returnthe result of the execution. Reserved for future use, must be
-	 *            null.
+	 * @param facetSetID
+	 *            ID of the facet set linked to this Handler
+	 * @return the result of the execution. Reserved for future use, can be
+	 *         null.
 	 * @throws ExecutionException
 	 */
 	protected static Object execute(final ExecutionEvent event,
-			final String customID) throws ExecutionException {
+			final String facetSetID) throws ExecutionException {
 		final boolean toggle = HandlerUtil.toggleCommandState(event
 				.getCommand());
 		final IWorkbenchPart activePart = HandlerUtil.getActivePart(event);
@@ -53,35 +52,36 @@ public abstract class AbstractCustomizationActivatorHandler extends
 			final ICustomizationManagerProvider customMgrProvider = (ICustomizationManagerProvider) activePart
 					.getAdapter(ICustomizationManagerProvider.class);
 			if (customMgrProvider != null) {
-				execute(customID, toggle, customMgrProvider);
+				execute(facetSetID, toggle, customMgrProvider);
 			}
 		}
 		return null;
 	}
 
-	private static void execute(final String customID, final boolean toggle,
+	private static void execute(final String facetSetID, final boolean toggle,
 			final ICustomizationManagerProvider customMgrProvider) {
 		final ICustomizationManager manager = customMgrProvider
 				.getCustomizationManager();
-		final ICustomizationCatalogManager catalog = ICustomizationCatalogManagerFactory.DEFAULT
-				.getOrCreateCustomizationCatalogManager(manager
-						.getResourceSet());
-		Customization linksCountCustom = null;
-		for (Customization custom : catalog.getRegisteredCustomizations()) {
-			if (customID.equals(custom.getName())) {
-				linksCountCustom = custom;
+
+		final IFacetSetCatalogManager catalog = IFacetSetCatalogManagerFactory.DEFAULT
+				.getOrCreateFacetSetCatalogManager(manager.getResourceSet());
+
+		FacetSet facetSetToActive = null;
+		for (FacetSet facetSet : catalog.getRegisteredFacetSets()) {
+			if (facetSetID.equals(facetSet.getName())) {
+				facetSetToActive = facetSet;
 				break;
 			}
 		}
-		if (linksCountCustom != null) {
+		if (facetSetToActive != null) {
 			final IFacetManager facetManager = manager.getFacetManager();
 			final List<FacetSet> managedFacetSets = facetManager
 					.getManagedFacetSets();
 			if (toggle) {
-				managedFacetSets.remove(linksCountCustom);
+				managedFacetSets.remove(facetSetToActive);
 			} else {
-				if (!managedFacetSets.contains(linksCountCustom)) {
-					managedFacetSets.add(0, linksCountCustom);
+				if (!managedFacetSets.contains(facetSetToActive)) {
+					managedFacetSets.add(0, facetSetToActive);
 				}
 			}
 		}
