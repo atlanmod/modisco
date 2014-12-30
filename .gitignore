@@ -1,0 +1,17 @@
+/**/__target__/
+/*/bin/
+/*/pom.xml
+/*/pom.xml.*
+/*/pom.xml.configure-quality-poms.bak
+/*.doc/mediawiki/*.html
+/*.doc/mediawiki/*.xml
+/*.doc/toc.html
+/*.doc.archi/mediawiki/*.html
+/*.doc.archi/mediawiki/*.xml
+/*.tests/screenshots/
+/*.eclipsepackage/pom_updated_modules.xml
+/*.targetplatform/pom.tmp.xml
+/*.updatesite/category.xml
+/*.updatesite/pom_after_updatesite.xml
+/*.updatesite/poma.xml
+
