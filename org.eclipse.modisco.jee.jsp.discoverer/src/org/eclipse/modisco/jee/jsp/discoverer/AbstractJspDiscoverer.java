@@ -8,6 +8,7 @@
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - adapted to new discovery framework (Bug 335003)
+ *    Fabien Giquel (Mia-Software) - upper case files extensions are not supported (Bug 463078)
  *********************************************************************************/
 package org.eclipse.modisco.jee.jsp.discoverer;
 
@@ -55,7 +56,11 @@ public abstract class AbstractJspDiscoverer<T> extends AbstractModelDiscoverer<T
 	}
 
 	public static boolean isJspExtension(final String extension) {
-		return getExtensionList().contains(extension);
+		boolean result = false;
+		if (extension != null) {
+			result = getExtensionList().contains(extension.toLowerCase());
+		}
+		return result;
 	}
 
 	/** Discovers the given file into the given JSP model. */
