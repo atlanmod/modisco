@@ -44,17 +44,17 @@
 					<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
 				</pluginRepository>
 			</pluginRepositories>
-			
+
 			<dependencies>
 				<dependency>
 					<groupId>org.eclipse.acceleo</groupId>
-					<artifactId>maven</artifactId>
-					<version>3.2.1</version>
+					<artifactId>org.eclipse.acceleo.maven</artifactId>
+					<version>3.5.0-SNAPSHOT</version>
 				</dependency>
 				<dependency>
 					<groupId>org.eclipse.acceleo</groupId>
-					<artifactId>engine</artifactId>
-					<version>3.2.1</version>
+					<artifactId>org.eclipse.acceleo.engine</artifactId>
+					<version>3.5.0-SNAPSHOT</version>
 				</dependency>
 				<dependency>
 					<groupId>org.slf4j</groupId>
