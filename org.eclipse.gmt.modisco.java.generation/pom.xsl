@@ -25,40 +25,23 @@
 			</properties>
 			<repositories>
 				<repository>
-					<id>eclipse-platform</id>
-					<layout>p2</layout>
-					<url>${eclipse-site}</url>
+					<id>Eclipse - Acceleo Snapshots</id>
+					<url>https://repo.eclipse.org/content/repositories/acceleo-snapshots</url>
 				</repository>
 				<repository>
-					<id>Indigo Release</id>
-					<url>https://raw.github.com/eclipse/acceleo/master/maven/repository/releases/indigo</url>
-				</repository>
-				<repository>
-					<id>Juno Release</id>
-					<url>https://raw.github.com/eclipse/acceleo/master/maven/repository/releases/juno</url>
-				</repository>
-				<repository>
-					<id>Snapshots</id>
-					<url>https://raw.github.com/eclipse/acceleo/master/maven/repository/snapshots</url>
+					<id>Eclipse - Acceleo Release</id>
+					<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
 				</repository>
 			</repositories>
-			
+		
 			<pluginRepositories>
 				<pluginRepository>
-					<id>codehaus.snapshots</id>
-					<url>http://snapshots.repository.codehaus.org/</url>
+					<id>Eclipse - Acceleo Snapshots</id>
+					<url>https://repo.eclipse.org/content/repositories/acceleo-snapshots</url>
 				</pluginRepository>
 				<pluginRepository>
-					<id>Indigo Release</id>
-					<url>https://raw.github.com/eclipse/acceleo/master/maven/repository/releases/indigo</url>
-				</pluginRepository>
-				<pluginRepository>
-					<id>Juno Release</id>
-					<url>https://raw.github.com/eclipse/acceleo/master/maven/repository/releases/juno</url>
-				</pluginRepository>
-				<pluginRepository>
-					<id>Snapshots</id>
-					<url>https://raw.github.com/eclipse/acceleo/master/maven/repository/snapshots</url>
+					<id>Eclipse - Acceleo Release</id>
+					<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
 				</pluginRepository>
 			</pluginRepositories>
 			
@@ -85,8 +68,8 @@
 					<xsl:copy-of select="//m2:project/build/plugins/*"/>
 					<plugin>
 						<groupId>org.eclipse.acceleo</groupId>
-						<artifactId>maven</artifactId>
-						<version>3.2.1</version>
+						<artifactId>org.eclipse.acceleo.maven</artifactId>
+						<version>3.5.0</version>
 						<executions>
 							<execution>
 								<goals>
