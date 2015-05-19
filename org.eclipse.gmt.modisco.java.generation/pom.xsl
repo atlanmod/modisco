@@ -69,7 +69,7 @@
 					<plugin>
 						<groupId>org.eclipse.acceleo</groupId>
 						<artifactId>org.eclipse.acceleo.maven</artifactId>
-						<version>3.5.0</version>
+						<version>3.5.0-SNAPSHOT</version>
 						<executions>
 							<execution>
 								<goals>
