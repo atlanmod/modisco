@@ -17,6 +17,7 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
@@ -58,6 +59,7 @@ import org.eclipse.jdt.core.JavaConventions;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
+import org.eclipse.osgi.service.datalocation.Location;
 import org.osgi.framework.Bundle;
 
 import com.ibm.icu.lang.UCharacter;
@@ -286,8 +288,20 @@ public final class ProjectUtils {
 		project.open(new NullProgressMonitor());
 		ZipFile zip = null;
 		try {
-			String bundlePath = bundle.getLocation();
-			String filePath = bundlePath.replaceFirst("^reference:file:", ""); //$NON-NLS-1$ //$NON-NLS-2$
+			final String bundlePath = bundle.getLocation();
+			String filePath;
+			final Location platformInstall = Platform.getInstallLocation();
+			final URL url = platformInstall.getURL();
+			final String installPath = url.toString().replaceAll(".*file:", ""); //$NON-NLS-1$ //$NON-NLS-2$
+			if (bundlePath
+					.startsWith("initial@reference:file:")) { //$NON-NLS-1$
+				// cas d'un chemin relatif
+				filePath = bundlePath.replaceAll(
+						"initial@reference:file:", //$NON-NLS-1$
+						installPath);
+			} else {
+				filePath = bundlePath.replaceFirst("^reference:file:", ""); //$NON-NLS-1$ //$NON-NLS-2$
+			}
 			File bundleFile = new File(filePath);
 			if (bundleFile.isDirectory()) {
 				FolderUtils.copyDirectory(bundleFile, project.getLocation().toFile(), filter);
@@ -310,7 +324,7 @@ public final class ProjectUtils {
 									f.create(true, true, new NullProgressMonitor());
 								}
 							} else {
-								InputStream is = zip.getInputStream(zipEntry);
+								InputStream inputStream = zip.getInputStream(zipEntry);
 								IFile f = project.getFile(zipEntry.getName());
 								if (!f.getParent().exists()) {
 									if (f.getParent() instanceof IFolder) {
@@ -321,7 +335,7 @@ public final class ProjectUtils {
 								if (f.exists()) {
 									f.delete(true, new NullProgressMonitor());
 								}
-								f.create(is, true, new NullProgressMonitor());
+								f.create(inputStream, true, new NullProgressMonitor());
 							}
 						}
 					} catch (Exception e) {
