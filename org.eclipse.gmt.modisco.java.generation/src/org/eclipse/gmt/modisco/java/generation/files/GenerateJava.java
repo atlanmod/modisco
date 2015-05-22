@@ -322,6 +322,7 @@ public class GenerateJava extends AbstractAcceleoGenerator {
      * @generated
      * @since 3.1
      */
+	//@Override gdupe> Commented to be able to build aginst Helios
     public void addPropertiesFile(String propertiesFile) {
         this.propertiesFiles.add(propertiesFile);
     }
