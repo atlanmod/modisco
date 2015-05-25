@@ -23,6 +23,6 @@ import org.junit.runners.Suite.SuiteClasses;
 	TestURIDialog.class
 	})
 // NO JavaScalabilityTest !
-public class AllTestsInUIThread {
+public class AllTestsNotInUIThread {
 	// JUnit 4 test suite
 }
