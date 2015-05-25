@@ -1,3 +1,4 @@
+/*source.feature
 /**/__target__/
 /*/bin/
 /*/pom.xml
@@ -5,6 +6,8 @@
 /*/pom.xml.configure-quality-poms.bak
 /*.doc/mediawiki/*.html
 /*.doc/mediawiki/*.xml
+/*.doc/mediawiki/**/*.html
+/*.doc/mediawiki/**/*.xml
 /*.doc/toc.html
 /*.doc.archi/mediawiki/*.html
 /*.doc.archi/mediawiki/*.xml
@@ -14,4 +17,6 @@
 /*.updatesite/category.xml
 /*.updatesite/pom_after_updatesite.xml
 /*.updatesite/poma.xml
+/pom.xml*
+/pom_after_configure.xml
 
