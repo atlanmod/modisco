@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010 Mia-Software.
+ * Copyright (c) 2010, 2015  Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,15 +7,18 @@
  *
  * Contributors:
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
+ *    Bug 468346 - [Unit Test Failure] org.eclipse.modisco.usecase.modelfilter.tests.SimpleBlackBoxDiscovery.testUmlModelFromJavaProjectWithReferenceModel
  */
 
 package org.eclipse.modisco.usecase.modelfilter.tests;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -67,37 +70,32 @@ public class SimpleBlackBoxDiscovery {
 	}
 
 	@Test
-	public void testUmlModelDiscoveryFromJavaProject() {
+	public void testUmlModelDiscoveryFromJavaProject() throws CoreException,
+			IOException {
 		Assert.assertNotNull(this.javaProjectFactory);
+		IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
+		Assert.assertNotNull(javaProject);
 
-		try {
+		String sourceFolderPath = this.rootSourcesPath + this.projectName
+				+ "/src"; //$NON-NLS-1$
+		URL src = Activator.getDefault().getBundle()
+				.getEntry(sourceFolderPath);
+		Assert.assertNotNull(src);
+		this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
 
-			IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
-			Assert.assertNotNull(javaProject);
+		DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
+		Assert.assertNotNull(discoverer);
+		Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
+		parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
+		discoverer.discoverElement(javaProject, parameters);
+		Resource output = (Resource) parameters.get(discoverer
+				.getTargetModelParameter());
+		Assert.assertNotNull(output);
 
-			String sourceFolderPath = this.rootSourcesPath + this.projectName
-					+ "/src"; //$NON-NLS-1$
-			URL src = Activator.getDefault().getBundle()
-					.getEntry(sourceFolderPath);
-			Assert.assertNotNull(src);
-			this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
-
-			DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
-			Assert.assertNotNull(discoverer);
-			Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
-			parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
-			discoverer.discoverElement(javaProject, parameters);
-			Resource output = (Resource) parameters.get(discoverer
-					.getTargetModelParameter());
-			Assert.assertNotNull(output);
-
-			if (this.export) {
-				output.setURI(URI
-						.createFileURI("c:/referenceModel" + this.umlModelExtension)); //$NON-NLS-1$
-				output.save(null);
-			}
-		} catch (Exception e) {
-			Assert.fail(e.getMessage());
+		if (this.export) {
+			output.setURI(URI
+					.createFileURI("c:/referenceModel" + this.umlModelExtension)); //$NON-NLS-1$
+			output.save(null);
 		}
 	}
 
