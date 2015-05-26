@@ -37,6 +37,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.facet.util.core.DebugUtils;
+import org.eclipse.emf.facet.util.pde.core.internal.exported.TargetPlatformUtils;
+import org.eclipse.emf.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ProjectUtils;
@@ -55,6 +58,7 @@ import org.eclipse.gmt.modisco.infra.query.runtime.ModelQueryResult;
 import org.eclipse.gmt.modisco.infra.query.runtime.RuntimeFactory;
 import org.eclipse.modisco.infra.query.tests.samples.Bug303036Test003Query;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 @SuppressWarnings("nls")
@@ -67,6 +71,11 @@ public class UnitTests {
 	private final Utils utils = new Utils(Activator.getDefault());
 	private final EPackage ecorePackage = this.utils.getEcorePackage();
 
+	@BeforeClass
+	public static void loadTarget() throws PdeCoreUtilsException {
+		TargetPlatformUtils.loadTargetPlatform();
+	}
+	
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
