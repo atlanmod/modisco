@@ -44,6 +44,8 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.facet.util.pde.core.internal.exported.TargetPlatformUtils;
+import org.eclipse.emf.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreCatalog;
 import org.eclipse.gmt.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
@@ -64,6 +66,7 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.modisco.infra.query.tests.Utils;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -80,6 +83,11 @@ public class FacetTests {
 	private final EPackage ecorePackage = this.utils.getEcorePackage();
 	private final ResourceSet resourceSet = new ResourceSetImpl();
 
+	@BeforeClass
+	public static void loadTarget() throws PdeCoreUtilsException {
+		TargetPlatformUtils.loadTargetPlatform();
+	}
+	
 	/**
 	 * @return the utils
 	 */
