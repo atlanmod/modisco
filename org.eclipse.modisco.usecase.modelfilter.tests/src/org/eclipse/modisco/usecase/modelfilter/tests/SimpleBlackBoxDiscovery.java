@@ -34,6 +34,7 @@ import org.eclipse.modisco.common.tests.TestModelUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -99,6 +100,7 @@ public class SimpleBlackBoxDiscovery {
 		}
 	}
 
+	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468346
 	@Test
 	public void testUmlModelFromJavaProjectWithReferenceModel()
 			throws CoreException, IOException, InterruptedException {
