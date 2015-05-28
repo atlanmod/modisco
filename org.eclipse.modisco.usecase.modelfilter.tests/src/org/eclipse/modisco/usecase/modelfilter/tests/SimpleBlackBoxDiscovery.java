@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
- *    Bug 468346 - [Unit Test Failure] org.eclipse.modisco.usecase.modelfilter.tests.SimpleBlackBoxDiscovery.testUmlModelFromJavaProjectWithReferenceModel
+ *    Grégoire Dupé (Mia-Software) - Bug 468346 - [Unit Test Failure] org.eclipse.modisco.usecase.modelfilter.tests.SimpleBlackBoxDiscovery.testUmlModelFromJavaProjectWithReferenceModel
  */
 
 package org.eclipse.modisco.usecase.modelfilter.tests;
@@ -100,50 +100,47 @@ public class SimpleBlackBoxDiscovery {
 	}
 
 	@Test
-	public void testUmlModelFromJavaProjectWithReferenceModel() {
+	public void testUmlModelFromJavaProjectWithReferenceModel()
+			throws CoreException, IOException, InterruptedException {
 		Assert.assertNotNull(this.javaProjectFactory);
-		try {
-			IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
-			Assert.assertNotNull(javaProject);
+		IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
+		Assert.assertNotNull(javaProject);
 
-			String sourceFolderPath = this.rootSourcesPath + this.projectName
-					+ "/src"; //$NON-NLS-1$
-			URL src = Activator.getDefault().getBundle()
-					.getEntry(sourceFolderPath);
-			Assert.assertNotNull(src);
-			this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
+		String sourceFolderPath = this.rootSourcesPath + this.projectName
+				+ "/src"; //$NON-NLS-1$
+		URL src = Activator.getDefault().getBundle()
+				.getEntry(sourceFolderPath);
+		Assert.assertNotNull(src);
+		this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
 
-			DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
-			Assert.assertNotNull(discoverer);
-			Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
-			parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
-			discoverer.discoverElement(javaProject, parameters);
-			Resource output = (Resource) parameters.get(discoverer
-					.getTargetModelParameter());
-			Assert.assertNotNull(output);
+		DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
+		Assert.assertNotNull(discoverer);
+		Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
+		parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
+		discoverer.discoverElement(javaProject, parameters);
+		Resource output = (Resource) parameters.get(discoverer
+				.getTargetModelParameter());
+		Assert.assertNotNull(output);
 
-			/*
-			 * Because everything looks great, well we have to test model
-			 * content. In details we will compare current resource with a
-			 * reference (checked manually)
-			 * 
-			 * Warning, because the java model store the "filepath" of
-			 * discovered java code, the compilation units elements could not be
-			 * the same !!!!
-			 */
-			String referencePath = "/" + Activator.PLUGIN_ID + this.referencesFolderPath + this.projectName //$NON-NLS-1$ 
-					+ "RealTypes" + this.umlModelExtension; //$NON-NLS-1$
-			URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
-			Assert.assertNotNull(referenceUri);
-			Resource referenceModel = ModelUtils.loadModel(referenceUri);
-			Assert.assertNotNull(referenceModel);
-			boolean result = TestModelUtils.compareModels(output,
-					referenceModel, true);
-			Assert.assertTrue(
-					"Comparison of Uml models with real types has failed !", result); //$NON-NLS-1$
-		} catch (Exception e) {
-			Assert.fail(e.getMessage());
-		}
+		/*
+		 * Because everything looks great, well we have to test model
+		 * content. In details we will compare current resource with a
+		 * reference (checked manually)
+		 * 
+		 * Warning, because the java model store the "filepath" of
+		 * discovered java code, the compilation units elements could not be
+		 * the same !!!!
+		 */
+		String referencePath = "/" + Activator.PLUGIN_ID + this.referencesFolderPath + this.projectName //$NON-NLS-1$ 
+				+ "RealTypes" + this.umlModelExtension; //$NON-NLS-1$
+		URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
+		Assert.assertNotNull(referenceUri);
+		Resource referenceModel = ModelUtils.loadModel(referenceUri);
+		Assert.assertNotNull(referenceModel);
+		boolean result = TestModelUtils.compareModels(output,
+				referenceModel, true);
+		Assert.assertTrue(
+				"Comparison of Uml models with real types has failed !", result); //$NON-NLS-1$
 	}
 
 	@Test
