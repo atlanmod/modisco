@@ -25,10 +25,8 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.modisco.java.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.gmt.modisco.java.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.queries.tests.AllTestsInUIThread.class,
-/* disable benchmark tests because benchmark is disabled because Birt is disabled in Juno aggregation build
 		org.eclipse.modisco.java.discoverer.benchmark.tests.AllTestsInUIThread.class,
 		org.eclipse.gmt.modisco.java.discoverer.benchmark.tests.AllTestsInUIThread.class,
-*/
 //  see Bug 363302 - Disabled junit test java.discoverer.cdo.tests
 		org.eclipse.modisco.java.discoverer.cdo.tests.AllTestsInUIThread.class,
 //		org.eclipse.gmt.modisco.java.discoverer.cdo.tests.AllTestsInUIThread.class,
