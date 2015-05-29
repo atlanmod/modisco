@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (c) 2012 Mia-Software. -->
+<!-- Copyright (c) 2012, 2015 Mia-Software. -->
 <!-- All rights reserved. -->
 <!-- This program and the accompanying materials are made available under 
 	the terms of the Eclipse Public License v1.0 which accompanies this distribution, 
 	and is available at http://www.eclipse.org/legal/epl-v10.html -->
 <!-- Contributors: -->
 <!-- Grégoire Dupé (Mia-Software) - Bug 413749 - Missing GenerateJava.emtl file in modisco java generator plugin -->
+<!-- Grégoire Dupé (Mia-Software) - Bug 468685 - [Unit Test Failure] org.eclipse.modisco.java.generation.tests.TestGlobal001.test001  -->
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://exslt.org/common"
 	extension-element-prefixes="exsl" xmlns:m2="http://maven.apache.org/POM/4.0.0"
@@ -89,8 +90,13 @@
 										<output>__target__/classes</output>
 									</entry>
 								</entries>
+								<jars>
+									<jar>p2.eclipse-plugin:org.eclipse.emf.ecore</jar>
+									<jar>org.eclipse.mdt:org.eclipse.gmt.modisco.java</jar>
+								</jars>
 							</acceleoProject>
 							<packagesToRegister>
+								<packageToRegister>org.eclipse.emf.ecore.EcorePackage</packageToRegister>
 								<packageToRegister>org.eclipse.gmt.modisco.java.emf.JavaPackage</packageToRegister>
 							</packagesToRegister>
 							<uriHandler>org.eclipse.acceleo.maven.AcceleoURIHandler</uriHandler>

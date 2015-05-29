@@ -319,7 +319,7 @@ public class GenerateJava extends AbstractAcceleoGenerator {
      * 
      * @param propertiesFile
      *            The properties file to add.
-     * @generated
+     * @generated NOT
      * @since 3.1
      */
 	//@Override gdupe> Commented to be able to build aginst Helios
@@ -410,5 +410,14 @@ public class GenerateJava extends AbstractAcceleoGenerator {
         
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
+	
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	protected URI createTemplateURI(final String entry) {
+		return URI.createURI(entry);
+	}
+
 	
 }
