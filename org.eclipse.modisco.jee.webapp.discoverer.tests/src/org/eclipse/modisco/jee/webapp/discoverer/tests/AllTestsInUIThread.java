@@ -19,7 +19,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
 	TestCommentedDocType.class,
 	TestNoVersion.class,
-	/* TestNoUri.class, disabled because of Bug 354468 : the test doesn't finish */
+	TestNoUri.class,
 	TestWebXml22.class,
 	TestWebXml23.class,
 	TestWebXml24.class,
