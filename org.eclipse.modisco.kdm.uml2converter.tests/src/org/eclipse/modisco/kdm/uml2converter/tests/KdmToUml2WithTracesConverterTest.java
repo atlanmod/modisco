@@ -238,6 +238,7 @@ public class KdmToUml2WithTracesConverterTest {
 		return output;
 	}
 
+	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=469150
 	@Test
 	public void testValidationOfConvertedSourceUmlModel() throws Exception {
 
