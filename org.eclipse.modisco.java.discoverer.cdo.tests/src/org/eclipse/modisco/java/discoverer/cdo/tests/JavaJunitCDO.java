@@ -21,7 +21,9 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.java.discoverer.cdo.JavaDiscovererCDO;
 import org.eclipse.modisco.java.discoverer.tests.JavaJUnitEMF;
 import org.junit.AfterClass;
+import org.junit.Ignore;
 
+@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=399504
 public class JavaJunitCDO extends JavaJUnitEMF {
 
 	private final int port = 2036;

@@ -17,7 +17,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
-//	JavaJunitCDO.class 
+	JavaJunitCDO.class 
 	})
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
