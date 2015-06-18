@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?>
+<!--
+Copyright (c) 2015 Mia-Software
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+   Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
+-->
+<plugin>
+   <extension point="org.eclipse.ui.views">
+      <view
+         class="org.eclipse.modisco.infra.browser.view.ecore.ui.internal.view.EcoreExplorerView"
+         icon="icons/MoDiscoModelIcon.gif"
+         id="org.eclipse.modisco.infra.browser.ecore.ui.view1"
+         name="%EcoreExplorer"
+         restorable="true"/>
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution
+         allPopups="false"
+         locationURI="toolbar:org.eclipse.modisco.infra.browser.ecore.ui.view1">
+            <command
+               commandId="org.eclipse.emf.facet.ui.loadCustomization"
+               id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
+               label="Load/Unload customizations"
+               style="push">
+                 <visibleWhen checkEnabled="false">
+                    <with variable="activePart">
+                      <adapt type="org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider">
+                      </adapt>
+                    </with>
+                 </visibleWhen>
+            </command>
+            <command
+               commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
+               id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
+               label="Load/Unload facets"
+               style="push">
+                  <visibleWhen checkEnabled="false">
+                     <with variable="activePart">
+                        <adapt type="org.eclipse.emf.facet.efacet.core.IFacetManagerProvider">
+                        </adapt>
+                     </with>
+                  </visibleWhen>
+            </command>
+      </menuContribution>
+   </extension>
+</plugin>
