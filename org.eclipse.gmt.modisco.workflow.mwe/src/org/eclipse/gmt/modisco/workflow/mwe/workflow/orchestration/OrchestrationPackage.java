@@ -312,7 +312,10 @@ public interface OrchestrationPackage extends EPackage {
 	 * </ul>
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+	 *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
 	 */
+	@Deprecated
 	interface Literals {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmt.modisco.workflow.mwe.workflow.orchestration.impl.WorkflowSerialOrchestrationStrategyImpl <em>Workflow Serial Orchestration Strategy</em>}' class.
