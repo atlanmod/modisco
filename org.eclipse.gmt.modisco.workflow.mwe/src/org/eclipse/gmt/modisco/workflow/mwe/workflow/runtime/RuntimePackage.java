@@ -36,6 +36,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowPackage;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimeFactory
  * @model kind="package"
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface RuntimePackage extends EPackage {
