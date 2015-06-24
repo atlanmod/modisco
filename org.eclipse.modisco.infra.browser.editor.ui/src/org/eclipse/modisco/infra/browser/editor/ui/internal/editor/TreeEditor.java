@@ -9,6 +9,7 @@
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
+ *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -99,12 +100,20 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		} else if (input instanceof ResourceSetEditorInput) {
 			final ResourceSetEditorInput resourceSetEI = (ResourceSetEditorInput) input;
 			this.resourceSet = resourceSetEI.getResourceSet();
+		} else {
+			final String message = String.format(
+					"The EditorInput (%s) is not compatible with the TreeEditor", //$NON-NLS-1$
+					input.getClass().getName()
+				);
+			throw new IllegalArgumentException(message);
 		}
 		if (this.resourceSet == null) {
-			final String message = String
-					.format("The EditorInput (%s) is not compatible with the TreeEditor", //$NON-NLS-1$
-							input.getClass().getName());
-			throw new IllegalArgumentException(message);
+			/*
+			 * "this.resourceSet" is null while opening an ecore model stored in
+			 * EPackage.Registry.INSTANCE. this.resourceSet must not be null,
+			 * because we need it to instantiate the facetManager.
+			 */
+			this.resourceSet = new ResourceSetImpl();
 		}
 		final AdapterFactory adapterFactory = new AdapterFactoryImpl();
 		final CommandStack commandStack = new BasicCommandStack();
