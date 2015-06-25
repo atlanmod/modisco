@@ -7,9 +7,14 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
+ *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
  */
 package org.eclipse.modisco.infra.browser.editor.ui.exceptions;
 
+/**
+ * @noextend clients must not extend this class
+ * @noinstantiate clients must not instantiate this class
+ */
 public class TreeEditorOpenerException extends Exception {
 
 	private static final long serialVersionUID = -4055299672749732009L;
