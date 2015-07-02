@@ -90,7 +90,8 @@ public class EcoreMetaExplorerComposite extends Composite implements ISelectionP
 	}
 	
 	public void changeInput(final Collection<EPackage> ePackages) {
-		if (this.tree != null && !this.tree.getInput().equals(ePackages)) {
+		if (this.tree != null && !this.tree.getTree().isDisposed()
+				&& !ePackages.equals(this.tree.getInput())) {
 			this.tree.setInput(ePackages);
 			this.tree.refresh();
 		}
