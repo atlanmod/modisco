@@ -9,6 +9,7 @@
  *     Nicolas Bros (Mia-Software) - initial API and implementation
  *     Nicolas Bros (Mia-Software) - Bug 339930 - Anticipate UI freeze : MoDisco project & externalize Strings
  *     Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
+ *     Fabien Giquel (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
 package org.eclipse.modisco.util.emf.core.internal.allinstances;
 
@@ -30,7 +31,7 @@ public interface MetaclassInstances {
 	 */
 	Collection<EObject> getInstances(EClass eClass, boolean includingSubclasses);
 
-	/** Clears the cache and recomputes its contents */
+	/** Clears the cache. Cache will be computed again at next access */
 	void clearCache();
 
 	/** Add a listener to be notified when the model changes */
