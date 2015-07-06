@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+ *    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.widget;
 
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.modisco.infra.browser.ecore.ui.internal.exported.IEcoreExplorerWidget;
 import org.eclipse.modisco.infra.browser.ecore.ui.internal.view.Utils;
@@ -49,13 +51,13 @@ public class EcoreExplorerWidget implements IEcoreExplorerWidget {
 	protected void displayInstancesOf(final Set<EClass> eClasses) {
 		final Set<EObject> allInstances = new HashSet<EObject>();
 		for (EClass eClass : eClasses) {
-			final Set<EObject> eClassInstances = getInstancesOf(eClass);
+			final Set<EObject> eClassInstances = getInstancesOfFromCurrentResources(eClass);
 			allInstances.addAll(eClassInstances);
 		}
 		this.composite.displayInstances(allInstances);
 	}
 
-	public Set<EObject> getInstancesOf(final EClass eClass) {
+	public Set<EObject> getInstancesOfFromCurrentResources(final EClass eClass) {
 		final Set<EObject> allInstances = new HashSet<EObject>();
 		for (Resource resource : this.currentResources) {
 			final List<EObject> instances = AllInstancesUtils
@@ -63,6 +65,25 @@ public class EcoreExplorerWidget implements IEcoreExplorerWidget {
 			allInstances.addAll(instances);
 		}
 		return allInstances;
+	}
+	
+
+	public Set<EObject> getInstancesOfFromCurrentResourceSets(
+			final EClass eClass) {
+		final Set<EObject> result = new HashSet<EObject>();
+		final Set<Resource> allResources = new HashSet<Resource>();
+		for (Resource resource : this.currentResources) {
+			final ResourceSet resourceSet = resource.getResourceSet();
+			if (resourceSet != null) {
+				allResources.addAll(resourceSet.getResources());
+			}
+		}
+		for (Resource resource : allResources) {
+			final List<EObject> instances = AllInstancesUtils.allInstances(
+					eClass, resource, false);
+			result.addAll(instances);
+		}
+		return result;
 	}
 
 	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {

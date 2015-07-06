@@ -6,7 +6,6 @@
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *    Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
  *    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.custom;
@@ -23,9 +22,11 @@ import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
 import org.eclipse.modisco.infra.browser.ecore.ui.internal.widget.InternalUtils;
 
 /**
- * Add the number of instances of an EClass (in the ResourceSet) at the end of the name
+ * Add the number of instances of an EClass (in the same Resource) at the end of
+ * the name
  */
-public class NbInstancesEClassByResourceSetQuery implements IJavaQuery3<EObject, String> {
+public class NbInstancesEClassByResourceQuery implements
+		IJavaQuery3<EObject, String> {
 
 	public String evaluate(final EObject source,
 			final IParameterValueList2 parameterValues,
@@ -36,7 +37,7 @@ public class NbInstancesEClassByResourceSetQuery implements IJavaQuery3<EObject,
 			if (source instanceof EClass) {
 				final EClass eClass = (EClass) source;
 				final Set<EObject> allInstances = InternalUtils
-						.getInstancesOfFromCurrentResourceSets(eClass);
+						.getInstancesOfFromCurrentResources(eClass);
 				instancesNbStr = String.format(" (%d)", //$NON-NLS-1$
 						Integer.valueOf(allInstances.size()));
 			}

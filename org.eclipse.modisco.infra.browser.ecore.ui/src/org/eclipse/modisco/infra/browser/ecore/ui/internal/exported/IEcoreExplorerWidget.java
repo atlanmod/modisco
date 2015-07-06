@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+ *    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.exported;
 
@@ -21,6 +22,8 @@ public interface IEcoreExplorerWidget extends IAdaptable {
 
 	void changeInput(Collection<EObject> eObjects);
 	
-	Set<EObject> getInstancesOf(EClass eClass);
+	Set<EObject> getInstancesOfFromCurrentResources(EClass eClass);
 
+	Set<EObject> getInstancesOfFromCurrentResourceSets(EClass eClass);
+	
 }

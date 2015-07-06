@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+ *    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.sync.generated;
 
@@ -21,7 +22,6 @@ public class SynchronizedEcoreExplorerWidget extends SynchronizedObject<org.ecli
 	public SynchronizedEcoreExplorerWidget(final org.eclipse.modisco.infra.browser.ecore.ui.internal.exported.IEcoreExplorerWidget object, final Display display) {
 		super(object, display);
 	}
-	
 	public final java.lang.Object getAdapter(
 			@SuppressWarnings("rawtypes") // @SuppressWarnings("rawtypes"): tci> Because of the implementation
 			final java.lang.Class parm0) {
@@ -42,11 +42,20 @@ public class SynchronizedEcoreExplorerWidget extends SynchronizedObject<org.ecli
 		});
 	}
 	
-	public final java.util.Set<org.eclipse.emf.ecore.EObject> getInstancesOf(final org.eclipse.emf.ecore.EClass parm0) {
+	public final java.util.Set<org.eclipse.emf.ecore.EObject> getInstancesOfFromCurrentResourceSets(final org.eclipse.emf.ecore.EClass parm0) {
 		return safeSyncExec(new AbstractExceptionFreeRunnable<java.util.Set<org.eclipse.emf.ecore.EObject>>() {
 			@Override
 			public java.util.Set<org.eclipse.emf.ecore.EObject> safeRun() {
-				return SynchronizedEcoreExplorerWidget.this.getSynchronizedObject().getInstancesOf(parm0);
+				return SynchronizedEcoreExplorerWidget.this.getSynchronizedObject().getInstancesOfFromCurrentResourceSets(parm0);
+			}
+		});
+	}
+	
+	public final java.util.Set<org.eclipse.emf.ecore.EObject> getInstancesOfFromCurrentResources(final org.eclipse.emf.ecore.EClass parm0) {
+		return safeSyncExec(new AbstractExceptionFreeRunnable<java.util.Set<org.eclipse.emf.ecore.EObject>>() {
+			@Override
+			public java.util.Set<org.eclipse.emf.ecore.EObject> safeRun() {
+				return SynchronizedEcoreExplorerWidget.this.getSynchronizedObject().getInstancesOfFromCurrentResources(parm0);
 			}
 		});
 	}

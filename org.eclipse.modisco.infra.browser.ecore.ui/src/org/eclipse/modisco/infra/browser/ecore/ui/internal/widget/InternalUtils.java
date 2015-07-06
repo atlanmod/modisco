@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+ *    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.widget;
 
@@ -39,16 +40,37 @@ public final class InternalUtils {
 		return adaptersToRemove;
 	}
 
-	public static Set<EObject> getAllInstancesFor(final EClass eClass) {
-		final Set<EObject> result = new HashSet<EObject>();
+	private static List<EcoreExplorerAdapter> getEcoreExplorerAdapters(
+			final EClass eClass) {
 		final EPackage ePackage = eClass.getEPackage();
-		final List<EcoreExplorerAdapter> adapters = getEcoreExplorerAdapters(ePackage);
+		return getEcoreExplorerAdapters(ePackage);
+	}
+
+	public static Set<EObject> getInstancesOfFromCurrentResources(
+			final EClass eClass) {
+		final Set<EObject> result = new HashSet<EObject>();
+		final List<EcoreExplorerAdapter> adapters = getEcoreExplorerAdapters(eClass);
 		for (EcoreExplorerAdapter adapter : adapters) {
 			final IEcoreExplorerWidget widget = adapter.getWidget();
-			final Set<EObject> eObjects = widget.getInstancesOf(eClass);
+			final Set<EObject> eObjects = widget
+					.getInstancesOfFromCurrentResources(eClass);
 			result.addAll(eObjects);
 		}
 		return result;
 	}
+
+	public static Set<EObject> getInstancesOfFromCurrentResourceSets(
+			final EClass eClass) {
+		final Set<EObject> result = new HashSet<EObject>();
+		final List<EcoreExplorerAdapter> adapters = getEcoreExplorerAdapters(eClass);
+		for (EcoreExplorerAdapter adapter : adapters) {
+			final IEcoreExplorerWidget widget = adapter.getWidget();
+			final Set<EObject> eObjects = widget
+					.getInstancesOfFromCurrentResourceSets(eClass);
+			result.addAll(eObjects);
+		}
+		return result;
+	}
+
 
 }
