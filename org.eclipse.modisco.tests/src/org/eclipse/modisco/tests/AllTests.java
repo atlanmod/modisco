@@ -44,7 +44,6 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.gmt.modisco.kdm.uml2converter.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.queries.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.composition.discoverer.tests.AllTestsInUIThread.class,
-		org.eclipse.modisco.java.composition.discoverer.tests.compatibility.AllTestsInUIThread.class,
 		org.eclipse.modisco.infra.discovery.core.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.infra.discovery.ui.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.xml.discoverer.tests.AllTestsInUIThread.class,
