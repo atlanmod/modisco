@@ -33,7 +33,6 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.modisco.infra.doc.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.ejbjar.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.webapp.discoverer.tests.AllTestsInUIThread.class,
-		org.eclipse.modisco.jee.webapp.discoverer.tests.compatibility.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.jsp.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.jee.jsp.discoverer.tests.compatibility.AllTests.class,
 		org.eclipse.modisco.jee.jsp.generation.tests.DiffGeneratedJspTest.class,
