@@ -15,7 +15,7 @@ Contributors:
 		<repository>
 			<id>SWTBot</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/swtbot/releases/latest/</url>
+			<url>http://download.eclipse.org/technology/swtbot/snapshots</url>
 		</repository>
 		<repository>
 			<id>Orbit</id>
