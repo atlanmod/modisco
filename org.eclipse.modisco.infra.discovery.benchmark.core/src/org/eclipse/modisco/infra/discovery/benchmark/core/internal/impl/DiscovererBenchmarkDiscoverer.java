@@ -1,11 +1,14 @@
 /*******************************************************************************
- * Copyright (c) 2012 INRIA. All rights reserved. This program and the
+ * Copyright (c) 2012, 2015 INRIA, and Mia-Software.
+ * 
+ * All rights reserved. This program and the
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  * 
- * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ * Contributors:
+ *    Guillaume Doux (INRIA) - Initial API and implementation
+ *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -34,6 +37,8 @@ import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EPackage.Registry;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -50,6 +55,7 @@ import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.Htm
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.BenchmarkChartGeneration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkPackage;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EndEvent;
@@ -181,9 +187,9 @@ implements IDiscovererBenchmarkDiscoverer {
 				setLaunchParameter(disco, discoverer);
 				String serializationLocation;
 				if (discoverer.getTargetURI() != null) {
-					serializationLocation = discoverer.getTargetURI().trimFileExtension().toPlatformString(false);
+					serializationLocation = discoverer.getTargetURI().trimFileExtension().toString();
 				} else {
-					serializationLocation = this.getTargetURI().trimFileExtension().toPlatformString(false);
+					serializationLocation = this.getTargetURI().trimFileExtension().toString();
 				}
 				for (int i = 1; i <= this.iterations;  i++) {
 					URI resultSerializationLocation =  URI.createURI(serializationLocation);
@@ -285,7 +291,7 @@ implements IDiscovererBenchmarkDiscoverer {
 				size++;
 			}
 		} else {
-			MoDiscoLogger.logWarning("Unable to compute the number of element of an unexisting model", Activator.getDefault());
+			MoDiscoLogger.logWarning("Unable to compute the number of element of an unexisting model: "+targetModel.getURI().toString(), Activator.getDefault());
 		}
 		return size;
 	}
