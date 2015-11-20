@@ -29,6 +29,8 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -312,34 +314,48 @@ implements IDiscovererBenchmarkDiscoverer {
 			targetURI = this.getTargetURI();
 		}
 		if (targetURI == null) {
-			MoDiscoLogger.logWarning("The HTML_REPORT_LOCATION or the TARGET_URI parameter should not be null", Activator.getDefault());
+			MoDiscoLogger.logWarning(
+					"The HTML_REPORT_LOCATION or the TARGET_URI parameter should not be null", //$NON-NLS-1$
+					Activator.getDefault());
 			return;
 		}
-		IContainer location = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(targetURI.path().replace("/resource", ""))).getParent();
-		String locationString = "";
-		if (targetURI == this.getTargetURI()) {
-			locationString = ResourcesPlugin.getWorkspace().getRoot().getLocation().toString() 
-					+ targetURI.trimSegments(1).toString().replace("platform:/resource", "") + "/HTMLReport";
+		final IWorkspace workspace = ResourcesPlugin.getWorkspace();
+		final IWorkspaceRoot wsRoot = workspace.getRoot();
+		java.io.File file = null;
+		IFile iFile = null;
+		String targetUriStr = targetURI.toString();
+		if (targetURI.isPlatformResource()) {
+			final String pathStr = 
+					targetUriStr.replaceAll("platform:/resource", ""); //$NON-NLS-1$//$NON-NLS-2$
+			iFile = wsRoot.getFile(new Path(pathStr));
+			iFile.getLocation().toFile();
+		} else if (targetURI.isFile()) {
+			file = new java.io.File(java.net.URI.create(targetUriStr));
 		} else {
-			locationString = ResourcesPlugin.getWorkspace().getRoot().getLocation().toString() 
-					+ targetURI.toString().replace("platform:/resource", "");
+			final String message = String.format(
+					"The following target URI '%s' is not managed. 'platform:/resource' or 'file:/' are expected.", //$NON-NLS-1$
+					targetURI.toString());
+			throw new IllegalArgumentException(message);
 		}
-		java.net.URI uri = java.net.URI.create(locationString);
-		java.io.File file = new java.io.File(uri.toString());
-
-		ArrayList<Object> arguments = new ArrayList<Object>();
+		final ArrayList<Object> arguments = new ArrayList<Object>();
 		//Generation of the HTML report
 		try {
 			HtmlReport report = new HtmlReport(benchmark, file, arguments);
 			report.doGenerate(null);
 		} catch (Exception e) {
-			MoDiscoLogger.logWarning(e, "Acceleo exception", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
+			MoDiscoLogger.logWarning(e,
+					"Acceleo exception", //$NON-NLS-1$
+					Activator.getDefault());
 		}
 		//Generation of the charts
-		BenchmarkChartGeneration chartGenerator = new BenchmarkChartGeneration(file, this.measureMemoryUse);
+		final BenchmarkChartGeneration chartGenerator = 
+				new BenchmarkChartGeneration(file, this.measureMemoryUse);
 		chartGenerator.generateAll(benchmark);
 
-		location.refreshLocal(IResource.DEPTH_INFINITE, progressMonitor);
+		if (iFile != null) {
+			final IContainer location = iFile.getParent();
+			location.refreshLocal(IResource.DEPTH_INFINITE, progressMonitor);
+		}
 	}
 
 	/**

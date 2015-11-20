@@ -37,7 +37,7 @@ public class Application implements IApplication {
 		// create Options object
 		final Options options = new Options();
 		// add t option
-		options.addOption("r", false, "Generate HTML report"); //$NON-NLS-1$
+		options.addOption("r", true, "HTML report directory"); //$NON-NLS-1$
 		options.addOption("d", true, "Comma separated discoverer list"); //$NON-NLS-1$
 		options.getOption("d").setRequired(true); //$NON-NLS-1$
 		options.addOption("i", true, "Number of iteration"); //$NON-NLS-1$
@@ -77,6 +77,8 @@ public class Application implements IApplication {
 		final String filePath = cmd.getOptionValue('o');
 		discoverer.setTargetURI(URI.createFileURI(filePath));
 		discoverer.setSerializeTarget(true);
+		final String htmlPath = cmd.getOptionValue('r');
+		discoverer.setHtmlReportLocation(URI.createFileURI(htmlPath));
 		discoverer.discoverBenchmark(projectSet, new NullProgressMonitor());
 		System.out.println(discoverer.getTargetURI().toString());
 		return null;
