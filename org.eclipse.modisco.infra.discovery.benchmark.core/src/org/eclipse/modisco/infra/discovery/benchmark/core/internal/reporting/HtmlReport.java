@@ -9,6 +9,7 @@
  *     Obeo - initial API and implementation
  *     Guillaume Doux (INRIA)
  *     Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+ *     Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting;
 
@@ -344,13 +345,18 @@ public class HtmlReport extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
+        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE);
+        }
+        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE);
+        }
         
         /*
          * If you need additional package registrations, you can register them here. The following line

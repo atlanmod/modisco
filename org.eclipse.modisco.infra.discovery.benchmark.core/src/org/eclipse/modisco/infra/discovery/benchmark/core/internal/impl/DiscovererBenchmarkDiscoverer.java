@@ -9,6 +9,7 @@
  * Contributors:
  *    Guillaume Doux (INRIA) - Initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+ *    Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
