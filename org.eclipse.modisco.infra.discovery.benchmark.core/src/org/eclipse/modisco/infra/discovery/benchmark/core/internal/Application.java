@@ -77,8 +77,13 @@ public class Application implements IApplication {
 		final String filePath = cmd.getOptionValue('o');
 		discoverer.setTargetURI(URI.createFileURI(filePath));
 		discoverer.setSerializeTarget(true);
-		final String htmlPath = cmd.getOptionValue('r');
-		discoverer.setHtmlReportLocation(URI.createFileURI(htmlPath));
+		if (cmd.hasOption('r')) {
+			final String htmlPath = cmd.getOptionValue('r');
+			discoverer.setHtmlReportLocation(URI.createFileURI(htmlPath));
+			discoverer.setGenerateHtmlReport(true);
+		} else {
+			discoverer.setGenerateHtmlReport(false);
+		}
 		discoverer.discoverBenchmark(projectSet, new NullProgressMonitor());
 		System.out.println(discoverer.getTargetURI().toString());
 		return null;
