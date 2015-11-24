@@ -18,7 +18,9 @@ public class Messages extends NLS {
 	public static String Application_Comma_sep_existing_prj_path;
 	public static String Application_Comma_sep_project_list;
 	public static String Application_Html_report_dir;
+	public static String Application_MemoryPollingInterval;
 	public static String Application_no_of_iteration;
+	public static String Application_RecordMemoryUse;
 	public static String Application_XMI_Output;
 
 	static {

@@ -54,6 +54,8 @@ public class Application implements IApplication {
 		options.addOption("o", true, Messages.Application_XMI_Output); //$NON-NLS-1$
 		options.getOption("o").setRequired(true); //$NON-NLS-1$
 		options.addOption("e", true, Messages.Application_Comma_sep_existing_prj_path); //$NON-NLS-1$
+		options.addOption("m", false, Messages.Application_RecordMemoryUse); //$NON-NLS-1$
+		options.addOption("n", true, Messages.Application_MemoryPollingInterval); //$NON-NLS-1$
 		final CommandLineParser parser = new GnuParser();
 		final CommandLine cmd = parser.parse(options, args);
 		if (cmd.hasOption('e')) {
@@ -73,6 +75,10 @@ public class Application implements IApplication {
 			discoverer.setIterations(Integer.parseInt(cmd.getOptionValue('i')));
 		} else {
 			discoverer.setIterations(1);
+		}
+		discoverer.setMeasureMemoryUse(cmd.hasOption('m'));
+		if (cmd.hasOption('n')) {
+			discoverer.setMemoryPollingInterval(Integer.parseInt(cmd.getOptionValue('n')));
 		}
 		final IProjectSet projectSet = IProjectSetFactory.INSTANCE.createProjectSet();
 		if (cmd.hasOption('p')) {
