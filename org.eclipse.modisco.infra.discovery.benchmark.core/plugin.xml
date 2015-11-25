@@ -9,6 +9,7 @@
 
  Contributors:
     Grégoire Dupé (Mia-Software) - Bug 482656 - infra.discovery.benchmark.core should be splitted to separate Accelo dependencies
+    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface 
 -->
 <plugin>
    <extension
@@ -28,6 +29,19 @@
             visible="true">
          <run
                class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="xmiToHtml"
+         name="xmiToHtml"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.XmiToHtmlApplication">
          </run>
       </application>
    </extension>
