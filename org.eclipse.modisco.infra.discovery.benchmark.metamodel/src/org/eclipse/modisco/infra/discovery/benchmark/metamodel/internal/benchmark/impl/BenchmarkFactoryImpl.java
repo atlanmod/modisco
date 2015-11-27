@@ -1,14 +1,13 @@
 /**
- * *******************************************************************************
- *  * Copyright (c) 2012 INRIA. All rights reserved. This program and the
- *  * accompanying materials are made available under the terms of the Eclipse
- *  * Public License v1.0 which accompanies this distribution, and is available at
- *  * http://www.eclipse.org/legal/epl-v10.html
- *  * 
- *  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- *  * 
- *  ******************************************************************************
+ * Copyright (c) 2012, 2015 INRIA and Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  * 
+ * Contributors:
+ *      Guillaume Doux (INRIA) - Initial API and implementation
+ *      Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  */
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl;
 
@@ -44,7 +43,7 @@ public class BenchmarkFactoryImpl extends EFactoryImpl implements BenchmarkFacto
 	 */
 	public static BenchmarkFactory init() {
 		try {
-			BenchmarkFactory theBenchmarkFactory = (BenchmarkFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/modisco/infra/discovery/benchmark/0.11.incubation/internal/benchmark"); 
+			BenchmarkFactory theBenchmarkFactory = (BenchmarkFactory)EPackage.Registry.INSTANCE.getEFactory(BenchmarkPackage.eNS_URI);
 			if (theBenchmarkFactory != null) {
 				return theBenchmarkFactory;
 			}

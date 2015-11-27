@@ -1,14 +1,13 @@
 /**
- * *******************************************************************************
- *  * Copyright (c) 2012 INRIA. All rights reserved. This program and the
- *  * accompanying materials are made available under the terms of the Eclipse
- *  * Public License v1.0 which accompanies this distribution, and is available at
- *  * http://www.eclipse.org/legal/epl-v10.html
- *  * 
- *  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- *  * 
- *  ******************************************************************************
+ * Copyright (c) 2012, 2015 INRIA and Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  * 
+ * Contributors:
+ *      Guillaume Doux (INRIA) - Initial API and implementation
+ *      Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  */
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark;
 
@@ -21,13 +20,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getTotalLines <em>Total Lines</em>}</li>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getAverageFileSizeInBytes <em>Average File Size In Bytes</em>}</li>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getAverageLinesPerFile <em>Average Lines Per File</em>}</li>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getFiles <em>Files</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkPackage#getProject()
  * @model

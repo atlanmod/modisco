@@ -1,14 +1,13 @@
 /**
- * *******************************************************************************
- *  * Copyright (c) 2012 INRIA. All rights reserved. This program and the
- *  * accompanying materials are made available under the terms of the Eclipse
- *  * Public License v1.0 which accompanies this distribution, and is available at
- *  * http://www.eclipse.org/legal/epl-v10.html
- *  * 
- *  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- *  * 
- *  ******************************************************************************
+ * Copyright (c) 2012, 2015 INRIA and Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  * 
+ * Contributors:
+ *      Guillaume Doux (INRIA) - Initial API and implementation
+ *      Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  */
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl;
 
@@ -27,10 +26,10 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.MemoryMeasurementImpl#getMemoryUsed <em>Memory Used</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -50,7 +49,7 @@ public class MemoryMeasurementImpl extends EventImpl implements MemoryMeasuremen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int MEMORY_USED_EDEFAULT = 0;
+	protected static final long MEMORY_USED_EDEFAULT = 0L;
 
 	/**
 	 * The cached value of the '{@link #getMemoryUsed() <em>Memory Used</em>}' attribute.
@@ -60,7 +59,7 @@ public class MemoryMeasurementImpl extends EventImpl implements MemoryMeasuremen
 	 * @generated
 	 * @ordered
 	 */
-	protected int memoryUsed = MEMORY_USED_EDEFAULT;
+	protected long memoryUsed = MEMORY_USED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,7 +85,7 @@ public class MemoryMeasurementImpl extends EventImpl implements MemoryMeasuremen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMemoryUsed() {
+	public long getMemoryUsed() {
 		return memoryUsed;
 	}
 
@@ -95,8 +94,8 @@ public class MemoryMeasurementImpl extends EventImpl implements MemoryMeasuremen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMemoryUsed(int newMemoryUsed) {
-		int oldMemoryUsed = memoryUsed;
+	public void setMemoryUsed(long newMemoryUsed) {
+		long oldMemoryUsed = memoryUsed;
 		memoryUsed = newMemoryUsed;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BenchmarkPackage.MEMORY_MEASUREMENT__MEMORY_USED, oldMemoryUsed, memoryUsed));
@@ -125,7 +124,7 @@ public class MemoryMeasurementImpl extends EventImpl implements MemoryMeasuremen
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BenchmarkPackage.MEMORY_MEASUREMENT__MEMORY_USED:
-				setMemoryUsed((Integer)newValue);
+				setMemoryUsed((Long)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

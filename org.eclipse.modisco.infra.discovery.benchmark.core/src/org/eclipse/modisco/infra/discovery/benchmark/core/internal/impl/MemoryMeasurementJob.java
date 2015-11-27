@@ -1,11 +1,14 @@
 /*******************************************************************************
- * Copyright (c) 2012 INRIA. All rights reserved. This program and the
- * accompanying materials are made available under the terms of the Eclipse
- * Public License v1.0 which accompanies this distribution, and is available at
+ * Copyright (c) 2012, 2015 INRIA and Mia-Software.
+ * All rights reserved. This program and the accompanying materials are made 
+ * available under the terms of the Eclipse Public License v1.0 which 
+ * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  * 
- * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ * Contributors:
+ *     Guillaume Doux (INRIA) - Initial API and implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+ *     Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  ******************************************************************************/
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
@@ -13,13 +16,16 @@ package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.core.internal.jobs.JobStatus;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EventType;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
+import org.osgi.framework.Bundle;
 
 /**
  * The implementation of the job measuring the memory consumption
@@ -84,20 +90,27 @@ public class MemoryMeasurementJob extends Job {
 	/**
 	 * The run method of the job
 	 */
-	//TODO check that the long is not too big for an int
 	protected IStatus run(final IProgressMonitor monitor) {
-		IStatus result = new JobStatus(IStatus.OK, this, "Memory measured every " + this.memoryPollingInterval + " ms.");
+		final String message = String.format(
+				Messages.MemoryMeasurementJob_MemoryMeasureEveryMs,
+				Integer.toString(this.memoryPollingInterval));
+		final String pluginId = getPluginId();
+		final IStatus result = new Status(IStatus.OK, pluginId, message);
 		System.gc();
-		final long mem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-		
-		MemoryMeasurement memoryMeasure = BenchmarkFactory.eINSTANCE.createMemoryMeasurement();
+		final Runtime runtime = Runtime.getRuntime();
+		final long mem = runtime.totalMemory() - runtime.freeMemory();
+		final MemoryMeasurement memoryMeasure = 
+				BenchmarkFactory.eINSTANCE.createMemoryMeasurement();
 		memoryMeasure.setTime(System.currentTimeMillis() - this.jobStartTime);
-		memoryMeasure.setMemoryUsed((int) mem);
+		memoryMeasure.setMemoryUsed(mem);
 		memoryMeasure.setEventType(this.eventType);
-		
 		this.measures.add(memoryMeasure);
 		schedule(this.memoryPollingInterval);
 		return result;
 	}
 
+	private static String getPluginId() {
+		final Bundle bundle = Activator.getDefault().getBundle();
+		return bundle.getSymbolicName();
+	}
 }

@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+ *    Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
@@ -22,6 +23,7 @@ public class Messages extends NLS {
 	public static String Application_no_of_iteration;
 	public static String Application_RecordMemoryUse;
 	public static String Application_XMI_Output;
+	public static String MemoryMeasurementJob_MemoryMeasureEveryMs;
 
 	public static String XmiToHtmlApplication_MeasureMemoryUse;
 	public static String XmiToHtmlApplication_Target_Folder_Path;
