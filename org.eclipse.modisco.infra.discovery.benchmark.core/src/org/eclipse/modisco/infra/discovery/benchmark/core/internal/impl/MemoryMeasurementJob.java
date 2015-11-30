@@ -1,10 +1,10 @@
 /*******************************************************************************
  * Copyright (c) 2012, 2015 INRIA and Mia-Software.
- * All rights reserved. This program and the accompanying materials are made 
- * available under the terms of the Eclipse Public License v1.0 which 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v1.0 which
  * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Guillaume Doux (INRIA) - Initial API and implementation
  *     Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
@@ -25,6 +25,7 @@ import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EventType;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
+import org.eclipse.osgi.util.NLS;
 import org.osgi.framework.Bundle;
 
 /**
@@ -37,13 +38,13 @@ public class MemoryMeasurementJob extends Job {
 	private int memoryPollingInterval;
 	private List<MemoryMeasurement> measures;
 	private long jobStartTime;
-	
+
 	private EventType eventType;
-	
+
 	/**
 	 * Constructor
 	 * @param name: the name of the job
-	 * @param interval: the time interval between two measure in milliseconds 
+	 * @param interval: the time interval between two measure in milliseconds
 	 */
 	public MemoryMeasurementJob(final String name, final int interval) {
 		super(name);
@@ -53,7 +54,7 @@ public class MemoryMeasurementJob extends Job {
 		this.eventType = BenchmarkFactory.eINSTANCE.createEventType();
 		this.eventType.setName("periodicMemoryMeasure");
 	}
-	
+
 	/**
 	 * Re-initialize the memory measurement job
 	 * @return this job
@@ -62,7 +63,7 @@ public class MemoryMeasurementJob extends Job {
 		this.measures = new LinkedList<MemoryMeasurement>();
 		return this;
 	}
-	
+
 	/**
 	 * Setter for the starting time
 	 * @param s: the starting time in milliseconds
@@ -70,7 +71,7 @@ public class MemoryMeasurementJob extends Job {
 	public void setJobStartTime(final long s) {
 		this.jobStartTime = s;
 	}
-	
+
 	/**
 	 * Getter for the polling interval
 	 * @return the interval
@@ -91,7 +92,7 @@ public class MemoryMeasurementJob extends Job {
 	 * The run method of the job
 	 */
 	protected IStatus run(final IProgressMonitor monitor) {
-		final String message = String.format(
+		final String message = NLS.bind(
 				Messages.MemoryMeasurementJob_MemoryMeasureEveryMs,
 				Integer.toString(this.memoryPollingInterval));
 		final String pluginId = getPluginId();
@@ -99,7 +100,7 @@ public class MemoryMeasurementJob extends Job {
 		System.gc();
 		final Runtime runtime = Runtime.getRuntime();
 		final long mem = runtime.totalMemory() - runtime.freeMemory();
-		final MemoryMeasurement memoryMeasure = 
+		final MemoryMeasurement memoryMeasure =
 				BenchmarkFactory.eINSTANCE.createMemoryMeasurement();
 		memoryMeasure.setTime(System.currentTimeMillis() - this.jobStartTime);
 		memoryMeasure.setMemoryUsed(mem);
