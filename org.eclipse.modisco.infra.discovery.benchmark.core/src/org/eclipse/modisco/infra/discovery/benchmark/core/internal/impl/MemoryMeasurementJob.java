@@ -38,7 +38,6 @@ public class MemoryMeasurementJob extends Job {
 	private int memoryPollingInterval;
 	private List<MemoryMeasurement> measures;
 	private long jobStartTime;
-
 	private EventType eventType;
 
 	/**
@@ -90,6 +89,12 @@ public class MemoryMeasurementJob extends Job {
 
 	/**
 	 * The run method of the job
+	 */
+	@SuppressWarnings("PMD.DoNotCallGarbageCollectionExplicitly")
+	/*
+	 * @SuppressWarnings("PMD.DoNotCallGarbageCollectionExplicitly"): gdupe> We
+	 * really want to call the garbage collector to improve the memory
+	 * measurement.
 	 */
 	protected IStatus run(final IProgressMonitor monitor) {
 		final String message = NLS.bind(
