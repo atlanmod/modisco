@@ -8,6 +8,7 @@
  * Contributors:
  *      Guillaume Doux (INRIA) - Initial API and implementation
  *      Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
+ *      Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  */
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl;
 
@@ -48,7 +49,7 @@ public class BenchmarkPackageImpl extends EPackageImpl implements BenchmarkPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "*******************************************************************************\r\n * Copyright (c) 2012 INRIA. All rights reserved. This program and the\r\n * accompanying materials are made available under the terms of the Eclipse\r\n * Public License v1.0 which accompanies this distribution, and is available at\r\n * http://www.eclipse.org/legal/epl-v10.html\r\n * \r\n * Contributors: Guillaume Doux - INRIA - Initial API and implementation\r\n * \r\n ******************************************************************************\r\n";
+	public static final String copyright = "Copyright (c) 2012, 2015 INRIA and Mia-Software.\r\nAll rights reserved. This program and the accompanying materials\r\nare made available under the terms of the Eclipse Public License v1.0\r\nwhich accompanies this distribution, and is available at\r\nhttp://www.eclipse.org/legal/epl-v10.html\r\n\r\nContributors:\r\n     Guillaume Doux (INRIA) - Initial API and implementation\r\n     Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage\r\n     Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer\r\n";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -388,6 +389,24 @@ public class BenchmarkPackageImpl extends EPackageImpl implements BenchmarkPacka
 	 */
 	public EReference getProject_Files() {
 		return (EReference)projectEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProject_InputSize() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProject_InputSizeUnit() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -753,6 +772,8 @@ public class BenchmarkPackageImpl extends EPackageImpl implements BenchmarkPacka
 		createEAttribute(projectEClass, PROJECT__AVERAGE_FILE_SIZE_IN_BYTES);
 		createEAttribute(projectEClass, PROJECT__AVERAGE_LINES_PER_FILE);
 		createEReference(projectEClass, PROJECT__FILES);
+		createEAttribute(projectEClass, PROJECT__INPUT_SIZE);
+		createEAttribute(projectEClass, PROJECT__INPUT_SIZE_UNIT);
 
 		benchmarkEClass = createEClass(BENCHMARK);
 		createEAttribute(benchmarkEClass, BENCHMARK__JVM_MAX_HEAP_IN_MI_B);
@@ -859,6 +880,8 @@ public class BenchmarkPackageImpl extends EPackageImpl implements BenchmarkPacka
 		initEAttribute(getProject_AverageFileSizeInBytes(), ecorePackage.getELong(), "averageFileSizeInBytes", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_AverageLinesPerFile(), ecorePackage.getELong(), "averageLinesPerFile", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_Files(), this.getFile(), null, "files", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_InputSize(), ecorePackage.getEDouble(), "inputSize", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_InputSizeUnit(), ecorePackage.getEString(), "inputSizeUnit", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(benchmarkEClass, Benchmark.class, "Benchmark", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBenchmark_JvmMaxHeapInMiB(), ecorePackage.getELong(), "jvmMaxHeapInMiB", null, 0, 1, Benchmark.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -899,6 +922,40 @@ public class BenchmarkPackageImpl extends EPackageImpl implements BenchmarkPacka
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// @Depreacted
+		create_DepreactedAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>@Depreacted</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void create_DepreactedAnnotations() {
+		String source = "@Depreacted";	
+		addAnnotation
+		  (getProject_TotalLines(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getProject_AverageFileSizeInBytes(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getProject_AverageLinesPerFile(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getProject_Files(), 
+		   source, 
+		   new String[] {
+		   });
 	}
 
 } //BenchmarkPackageImpl

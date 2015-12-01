@@ -11,6 +11,7 @@
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
  *    Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
  *    Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
+ *    Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -37,6 +38,7 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -49,6 +51,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.modisco.infra.discovery.benchmark.core.ISizeDiscoverer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererBenchmarkDiscoverer;
@@ -78,6 +81,7 @@ import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
 import org.eclipse.modisco.infra.discovery.launch.LaunchFactory;
 import org.eclipse.modisco.infra.discovery.launch.ParameterValue;
 import org.eclipse.modisco.utils.core.internal.exported.SystemInfo;
+import org.eclipse.osgi.util.NLS;
 
 /**
  * Main entry point for the discoverer of benchmark
@@ -97,34 +101,30 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	private IDiscovererID discovererID;
 	private int iterations;
 	private boolean measureMemoryUse;
-	private int memoryPollingInterval;
-	private boolean generateHtmlReport;
-	private URI htmlReportLocation;
+	private int memPollInterval;
+	private boolean generateHtml;
+	private URI htmlReportLoc;
+	private final List<MemoryMeasurement> memMeasurements;
+	private final List<Event> events;
+	private final ResourceSet rSet;
 	private EventAndMemoryRecorder recorder;
-	private List<MemoryMeasurement> memoryMeasurements;
-	private List<Event> events;
-	private ResourceSet rSet;
-
+	private IDiscovererList discoverers;
+	private String sizeDiscovererId;
 
 	public DiscovererBenchmarkDiscoverer() {
 		super();
 		this.discovererID = new DiscovererID(ID);
-		this.memoryPollingInterval = 0;
-		this.memoryMeasurements = new LinkedList<MemoryMeasurement>();
+		this.memPollInterval = 0;
+		this.memMeasurements = new LinkedList<MemoryMeasurement>();
 		this.events = new LinkedList<Event>();
 		this.rSet = new ResourceSetImpl();
-		final Registry resourceFactoryRegistry =
+		final Registry rFactoryRegistry =
 				this.rSet.getResourceFactoryRegistry();
-		final Map<String, Object> extensionToFactoryMap =
-				resourceFactoryRegistry.getExtensionToFactoryMap();
-		extensionToFactoryMap.put("xmi", new XMIResourceFactoryImpl()); //$NON-NLS-1$
+		final Map<String, Object> extToFactoryMap =
+				rFactoryRegistry.getExtensionToFactoryMap();
+		extToFactoryMap.put("xmi", new XMIResourceFactoryImpl()); //$NON-NLS-1$
 		this.iterations = 1;
 	}
-
-	/**
-	 * Parameter for getting the dicoverers
-	 */
-	private IDiscovererList discoverers;
 
 	protected IDiscovererList getDiscoverers() {
 		return this.discoverers;
@@ -146,85 +146,30 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @return The benchmark model conforms to http://www.eclipse.org/modisco/infra/discovery/0.1.incubation/benchmark
 	 * @throws DiscoveryException
 	 */
-	public Resource discoverBenchmark(final IProjectSet projects, final IProgressMonitor progressMonitor) throws DiscoveryException {
+	public Resource discoverBenchmark(final IProjectSet projects,
+			final IProgressMonitor progressMonitor) throws DiscoveryException {
+		this.recorder =
+				new EventAndMemoryRecorder(this.measureMemoryUse,
+				this.memPollInterval);
 		final int nbDiscoToDo = getIterations() * projects.getProjects().size()
 				* this.discoverers.getDiscoverers().size();
-		progressMonitor.beginTask(Messages.DiscovererBenchmarkDiscoverer_BenchmarkTaskName, nbDiscoToDo);
-		progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_BenchmarkInitializationSubTask);
-		final Benchmark benchmark = benchmarkInit();
-		this.recorder =  new EventAndMemoryRecorder(this.measureMemoryUse,
-				this.memoryPollingInterval);
+		progressMonitor.beginTask(
+				Messages.DiscovererBenchmarkDiscoverer_BenchmarkTaskName,
+				nbDiscoToDo);
+		final Benchmark benchmark = benchmarkInit(progressMonitor);
 		for (IProject project : projects.sortBySize().getProjects()) {
-			progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_ProjectInitializationSubTask);
-			final Project projectDesc = createBenchmarkProjectAndFiles(project);
-			benchmark.getProjects().add(projectDesc);
+			final Project projectDesc = createProjectDescription(project,
+					benchmark, progressMonitor);
 			for (Discovery discovery : this.discoverers) {
-				progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_DiscoveryInitializationSubTask);
-				final Discovery disco = BenchmarkFactory.eINSTANCE.createDiscovery();
+				progressMonitor.subTask(
+						Messages.DiscovererBenchmarkDiscoverer_DiscoveryInitializationSubTask);
 				final String discovererId = discovery.getDiscovererId();
-				final AbstractModelDiscoverer<IProject> discoverer =
-						(AbstractModelDiscoverer<IProject>)
-						IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
-				benchmark.getDiscoveries().add(disco);
-				preDiscoveryDiscoInit(projectDesc, disco, discovery, discoverer,
-						discovererId);
-				setLaunchParameter(disco, discoverer);
-				final URI resultSerializationLoc;
-				if (discoverer.getTargetURI() != null) {
-					resultSerializationLoc = getSerializationLoc(discoverer);
-				} else {
-					resultSerializationLoc = getSerializationLoc(this);
-				}
+				final Discovery disco = createDiscovery(projectDesc,
+						discovery, benchmark);
+				AbstractModelDiscoverer<IProject> discoverer = null;
 				for (int i = 1; i <= this.iterations;  i++) {
-					progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_ProjectDiscoveryIterationSubTask + String.valueOf(getIterations()));
-					final String suffix = String.format("%s_%s_i%s.xmi", //$NON-NLS-1$
-							disco.getDiscovererId(),
-							project.getName(),
-							String.valueOf(i));
-					final URI uri = resultSerializationLoc.appendSegment(suffix);
-					discoverer.setTargetURI(uri);
-					boolean failure = false;
-					final StringBuilder discoveryErrors = new StringBuilder();
-					this.recorder.reset();
-					if (IEventNotifier.class.isInstance(discoverer)) {
-						((IEventNotifier) discoverer).addListener(this.recorder);
-					}
-					this.recorder.start();
-					try {
-						if (discoverer.isApplicableTo(project)) {
-							final IProgressMonitor subProgressMonitor =
-									new SubProgressMonitor(progressMonitor, 0);
-							discoverer.discoverElement(project, subProgressMonitor);
-						} else {
-							final String message = String.format(
-									"Discoverer '%s' is not applicable on project '%s'.", //$NON-NLS-1$
-									discovererId, project.getName());
-							Logger.logError(message, Activator.getDefault());
-						}
-					} catch (Exception e) {
-						failure = true;
-						discoveryErrors.append(e.getStackTrace().toString());
-						final String message = String.format(
-								"Benchmark of discoverer %s fails on project%s", //$NON-NLS-1$
-								discovererId, project.getName());
-						Logger.logError(e, message, Activator.getDefault());
-					}
-					this.recorder.stop();
-					this.events.addAll(this.recorder.getEvents());
-					this.events.addAll(this.recorder.getMemoryMeasurements());
-					this.memoryMeasurements.addAll(this.recorder.getMemoryMeasurements());
-					if (IEventNotifier.class.isInstance(discoverer)) {
-						((IEventNotifier) discoverer).removeListener(this.recorder);
-					}
-					final DiscoveryIteration discoveryIteration =
-							createDiscoveryIteration(this.recorder);
-					if (failure) {
-						discoveryIteration.setDiscoveryErrors(
-								discoveryErrors.toString());
-					}
-					disco.getIterations().add(discoveryIteration);
-					save(benchmark, progressMonitor);
-					progressMonitor.worked(1);
+					discoverer = preformIteration(progressMonitor, benchmark,
+							project, discovererId, disco, i);
 				}
 				postDiscoveryDiscoInit(disco, discoverer);
 			}
@@ -233,18 +178,98 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		save(benchmark, progressMonitor);
 		progressMonitor.worked(nbDiscoToDo);
 		if (isGenerateHtmlReport()) {
-			try {
-				progressMonitor.subTask(
-						Messages.DiscovererBenchmarkDiscoverer_GeneratingBenchmarkReportSubTask);
-				final IProgressMonitor subProgressM =
-						new SubProgressMonitor(progressMonitor, 0);
-				generateHtmlReport(subProgressM, benchmark);
-			} catch (Exception e) {
-				Logger.logError(e, "Report generation fail", Activator.getDefault()); //$NON-NLS-1$
-			}
+			safeGenerateHtmlReport(progressMonitor, benchmark);
 		}
 		progressMonitor.done();
 		return benchmark.eResource();
+	}
+
+	private AbstractModelDiscoverer<IProject> preformIteration(
+			final IProgressMonitor progressMonitor, final Benchmark benchmark,
+			final IProject project, final String discovererId,
+			final Discovery disco, final int iteration) {
+		AbstractModelDiscoverer<IProject> discoverer = (AbstractModelDiscoverer<IProject>)
+				IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
+		final URI serializationLoc = getSerializationLoc(discoverer);
+		progressMonitor.subTask(NLS.bind(
+				Messages.DiscovererBenchmarkDiscoverer_ProjectDiscoveryIterationSubTask,
+				String.valueOf(getIterations())));
+		final String suffix = String.format("%s_%s_i%s.xmi", //$NON-NLS-1$
+				disco.getDiscovererId(), project.getName(),
+				String.valueOf(iteration));
+		final URI uri = serializationLoc.appendSegment(suffix);
+		discoverer.setTargetURI(uri);
+		boolean failure = false;
+		final StringBuilder discoveryErrors = new StringBuilder();
+		this.recorder.reset();
+		if (IEventNotifier.class.isInstance(discoverer)) {
+			((IEventNotifier) discoverer).addListener(this.recorder);
+		}
+		this.recorder.start();
+		try {
+			if (discoverer.isApplicableTo(project)) {
+				final IProgressMonitor subProgressMonitor =
+						new SubProgressMonitor(progressMonitor, 0);
+				discoverer.discoverElement(project, subProgressMonitor);
+			} else {
+				final String message = String.format(
+						"Discoverer '%s' is not applicable on project '%s'.", //$NON-NLS-1$
+						discovererId, project.getName());
+				Logger.logError(message, Activator.getDefault());
+			}
+		} catch (Exception e) {
+			failure = true;
+			discoveryErrors.append(e.getStackTrace().toString());
+			final String message = String.format(
+					"Benchmark of discoverer %s fails on project '%s'", //$NON-NLS-1$
+					discovererId, project.getName());
+			Logger.logError(e, message, Activator.getDefault());
+		}
+		this.recorder.stop();
+		this.events.addAll(this.recorder.getEvents());
+		this.events.addAll(this.recorder.getMemoryMeasurements());
+		this.memMeasurements.addAll(this.recorder.getMemoryMeasurements());
+		if (IEventNotifier.class.isInstance(discoverer)) {
+			((IEventNotifier) discoverer).removeListener(this.recorder);
+		}
+		final DiscoveryIteration iterationDesc =
+				createDiscoveryIteration(this.recorder);
+		if (failure) {
+			iterationDesc.setDiscoveryErrors(
+					discoveryErrors.toString());
+		}
+		disco.getIterations().add(iterationDesc);
+		save(benchmark, progressMonitor);
+		progressMonitor.worked(1);
+		return discoverer;
+	}
+
+	private URI getSerializationLoc(final AbstractModelDiscoverer<IProject> discoverer) {
+		URI result;
+		if (discoverer.getTargetURI() == null) {
+			result = basicGetSerializationLoc(this);
+		} else {
+			result = basicGetSerializationLoc(discoverer);
+		}
+		return result;
+	}
+
+	private Project createProjectDescription(final IProject project,
+			final Benchmark benchmark, final IProgressMonitor progressMonitor)
+					throws DiscoveryException {
+		progressMonitor.subTask(
+				Messages.DiscovererBenchmarkDiscoverer_ProjectInitializationSubTask);
+		final ISizeDiscoverer discoverer = (ISizeDiscoverer)
+				IDiscoveryManager.INSTANCE.createDiscovererImpl(this.sizeDiscovererId);
+		final Project projDesc = BenchmarkFactory.eINSTANCE.createProject();
+		discoverer.discoverElement(project, new NullProgressMonitor());
+		final double prjSize = discoverer.getSize();
+		projDesc.setInputSize(prjSize);
+		final String prjUnit = discoverer.getUnit();
+		projDesc.setInputSizeUnit(prjUnit);
+		projDesc.setName(project.getName());
+		benchmark.getProjects().add(projDesc);
+		return projDesc;
 	}
 
 	private void save(final Benchmark benchmark,
@@ -261,7 +286,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		}
 	}
 
-	private static URI getSerializationLoc(
+	private static URI basicGetSerializationLoc(
 			final AbstractModelDiscoverer<?> discoverer) {
 		final URI targetURI = discoverer.getTargetURI();
 		return targetURI.trimFileExtension();
@@ -272,7 +297,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @param targetModel
 	 * @return the number of model elements
 	 */
-	private long computeSize(final Resource targetModel) {
+	private static long computeSize(final Resource targetModel) {
 		long size = 0;
 		if (targetModel != null) {
 			for (TreeIterator<EObject> iterator = targetModel.getAllContents(); iterator.hasNext();) {
@@ -287,20 +312,34 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		return size;
 	}
 
+	private void safeGenerateHtmlReport(final IProgressMonitor progressMonitor, final Benchmark benchmark) {
+		try {
+			
+			generateHtmlReport(progressMonitor, benchmark);
+		} catch (Exception e) {
+			Logger.logError(e, "Report generation fail", Activator.getDefault()); //$NON-NLS-1$
+		}
+	}
+
 	/**
 	 * launch the generation of the HTML report and the charts for the benchmark model in parameter
-	 * @param progressMonitor
+	 * @param parentMonitor
 	 * @param benchmark
-	 * @throws Exception
+	 * @throws ReportUtilsException 
+	 * @throws CoreException 
 	 */
-	private void generateHtmlReport(final IProgressMonitor progressMonitor,
-			final Benchmark benchmark) throws Exception {
+	private void generateHtmlReport(final IProgressMonitor parentMonitor,
+			final Benchmark benchmark) throws ReportUtilsException, CoreException {
+		parentMonitor.subTask(
+				Messages.DiscovererBenchmarkDiscoverer_GeneratingBenchmarkReportSubTask);
+		final IProgressMonitor progressMonitor =
+				new SubProgressMonitor(parentMonitor, 0);
 		//Get the output folder
 		URI targetURI = null;
-		if (this.getHtmlReportLocation() != null) {
-			targetURI = this.getHtmlReportLocation();
-		} else {
+		if (this.getHtmlReportLocation() == null) {
 			targetURI = this.getTargetURI();
+		} else {
+			targetURI = this.getHtmlReportLocation();
 		}
 		if (targetURI == null) {
 			Logger.logWarning(
@@ -312,7 +351,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		final IWorkspaceRoot wsRoot = workspace.getRoot();
 		java.io.File file = null;
 		IFile iFile = null;
-		String targetUriStr = targetURI.toString();
+		final String targetUriStr = targetURI.toString();
 		if (targetURI.isPlatformResource()) {
 			final String pathStr =
 					targetUriStr.replaceAll("platform:/resource", ""); //$NON-NLS-1$//$NON-NLS-2$
@@ -424,12 +463,12 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	}
 
 	private static void onInvokeException(final DiscovererParameter parameter,
-			final Object parameterValue, final Exception e)
+			final Object parameterValue, final Exception exception)
 					throws DiscoveryException {
 		final String message = String.format(
 				"Illegal parameter value for '%s' : %s", //$NON-NLS-1$
 				parameter.getId(), parameterValue);
-		throw new DiscoveryException(message, e);
+		throw new DiscoveryException(message, exception);
 	}
 
 	/**
@@ -443,27 +482,29 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					Activator.getDefault());
 			return;
 		}
-		if (benchmark.eResource() == null) {
-			Resource res = null;
+		Resource resource = benchmark.eResource();
+		if (resource == null) {
+			URI resourceUri;
 			if (getTargetModel() == null) {
-				res = this.rSet.createResource(getTargetURI());
+				resourceUri = getTargetURI();
 			} else {
-				res = this.rSet.createResource(getTargetModel().getURI());
+				resourceUri = getTargetModel().getURI();
 			}
-			res.getContents().add(benchmark);
-			List<Event> eventsList = new ArrayList<Event>();
-			List<EventType> eventTypeList = new ArrayList<EventType>();
-			for (Discovery d : benchmark.getDiscoveries()) {
-				for (DiscoveryIteration i : d.getIterations()) {
-					for (Event event : i.getEvents()) {
-						eventsList.add(event);
-						eventTypeList.add(event.getEventType());
-					}
+			resource = this.rSet.createResource(resourceUri);
+			resource.getContents().add(benchmark);
+		}
+		final List<Event> eventsList = new ArrayList<Event>();
+		final List<EventType> eventTypeList = new ArrayList<EventType>();
+		for (Discovery discovery : benchmark.getDiscoveries()) {
+			for (DiscoveryIteration iteration : discovery.getIterations()) {
+				for (Event event : iteration.getEvents()) {
+					eventsList.add(event);
+					eventTypeList.add(event.getEventType());
 				}
 			}
-			res.getContents().addAll(eventTypeList);
-			this.setTargetModel(res);
 		}
+		resource.getContents().addAll(eventTypeList);
+		this.setTargetModel(resource);
 		this.saveTargetModel();
 	}
 
@@ -473,7 +514,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 */
 	private long computeMaxMemoryUsage() {
 		long max = 0;
-		for (MemoryMeasurement measure : this.memoryMeasurements) {
+		for (MemoryMeasurement measure : this.memMeasurements) {
 			if (max < measure.getMemoryUsed()) {
 				max = measure.getMemoryUsed();
 			}
@@ -485,10 +526,12 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * Initialize the benchmark model element with system information
 	 * @return the model element
 	 */
-	private static Benchmark benchmarkInit() {
+	private static Benchmark benchmarkInit(final IProgressMonitor progressMonitor) {
+		progressMonitor.subTask(
+				Messages.DiscovererBenchmarkDiscoverer_BenchmarkInitializationSubTask);
 		final Benchmark benchmark = BenchmarkFactory.eINSTANCE.createBenchmark();
 		try {
-			SystemInfo sysInfo = SystemInfo.getInstance();
+			final SystemInfo sysInfo = SystemInfo.getInstance();
 			benchmark.setJvmMaxHeapInMiB(Runtime.getRuntime().maxMemory() / BYTEPERMB);
 			benchmark.setProcessorName(sysInfo.getProcName());
 			benchmark.setProcessorDescription(sysInfo.getProcDescription());
@@ -519,13 +562,17 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 *            discovery in the launch configuration
 	 * @param discoverer
 	 *            the real discoverer {@link AbstractModelDiscoverer}
+	 * @param benchmark 
 	 * @param discovererId
 	 *            the discoverer id
 	 */
-	private static void preDiscoveryDiscoInit(final Project projectDesc,
-			final Discovery disco, final Discovery discovery,
-			final AbstractModelDiscoverer<IProject> discoverer,
-			final String discovererId) {
+	private Discovery createDiscovery(final Project projectDesc,
+			final Discovery discovery, final Benchmark benchmark) {
+		final String discovererId = discovery.getDiscovererId();
+		final AbstractModelDiscoverer<IProject> discoverer =
+				(AbstractModelDiscoverer<IProject>)
+				IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
+		final Discovery disco = BenchmarkFactory.eINSTANCE.createDiscovery();
 		disco.setProject(projectDesc);
 		disco.setName(discoverer.toString());
 		disco.setDiscovererClassName(discoverer.getClass().getName());
@@ -573,6 +620,9 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			discoDesc.setSourceType(discovery.getCopyOfDiscovererDescription().getSourceType());
 		}
 		disco.setCopyOfDiscovererDescription(discoDesc);
+		benchmark.getDiscoveries().add(disco);
+		setLaunchParameter(disco, discoverer);
+		return disco;
 	}
 
 	/**
@@ -581,7 +631,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @param discoverer
 	 */
 	private void postDiscoveryDiscoInit(final Discovery disco, final AbstractModelDiscoverer<IProject> discoverer) {
-		double totalDiscoveryTime = 0;
+		double totalDiscoTime = 0;
 		double totalSaveTime = 0;
 		if (this.iterations > 0) {
 			double maxDisco = 0;
@@ -590,7 +640,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			double minSave = disco.getIterations().get(0).getSaveTimeInSeconds();
 			for (DiscoveryIteration iter : disco.getIterations()) {
 				totalSaveTime += iter.getSaveTimeInSeconds();
-				totalDiscoveryTime += iter.getDiscoveryTimeInSeconds();
+				totalDiscoTime += iter.getDiscoveryTimeInSeconds();
 				if (iter.getDiscoveryTimeInSeconds() > maxDisco) {
 					maxDisco = iter.getDiscoveryTimeInSeconds();
 				}
@@ -604,7 +654,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					minSave = iter.getSaveTimeInSeconds();
 				}
 			}
-			disco.setDiscoveryTimeAverageInSeconds(totalDiscoveryTime / this.iterations);
+			disco.setDiscoveryTimeAverageInSeconds(totalDiscoTime / this.iterations);
 			disco.setSaveTimeAverageInSeconds(totalSaveTime / this.iterations);
 			disco.setExecutionTimeStandardDeviation(maxDisco - minDisco);
 			disco.setSaveTimeStandardDeviation(maxSave - minSave);
@@ -626,16 +676,17 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 
 	/**
 	 * Initialize a {@link DiscoveryIteration} after the discovery using the event and memory recorder
-	 * @param rec {@link EventAndMemoryRecorder}
+	 * @param recoreder {@link EventAndMemoryRecorder}
 	 * @return the initialized discovery iteration
 	 */
-	private DiscoveryIteration createDiscoveryIteration(final EventAndMemoryRecorder rec) {
+	private static DiscoveryIteration createDiscoveryIteration(
+			final EventAndMemoryRecorder recoreder) {
 		DiscoveryIteration discoIter = BenchmarkFactory.eINSTANCE.createDiscoveryIteration();
 		discoIter.setDiscoveryDate(new Date());
-		discoIter.setMaxUsedMemoryInBytes(rec.getMaxMemoryUsed());
-		discoIter.getEvents().addAll(rec.getEvents());
-		discoIter.setDiscoveryTimeInSeconds((rec.getStopTime() - rec.getStartTime()) / MSINSEC);
-		for (Event event : rec.getEvents()) {
+		discoIter.setMaxUsedMemoryInBytes(recoreder.getMaxMemoryUsed());
+		discoIter.getEvents().addAll(recoreder.getEvents());
+		discoIter.setDiscoveryTimeInSeconds((recoreder.getStopTime() - recoreder.getStartTime()) / MSINSEC);
+		for (Event event : recoreder.getEvents()) {
 			if (event instanceof EndEvent) {
 				if (event.getEventType().getName().equals(SAVE_OPERATION)) {
 					double saveTime = event.getTime() - ((EndEvent) event).getBeginning().getTime();
@@ -644,7 +695,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 				}
 			}
 		}
-		discoIter.getMemoryMeasurements().addAll(rec.getMemoryMeasurements());
+		discoIter.getMemoryMeasurements().addAll(recoreder.getMemoryMeasurements());
 		return discoIter;
 	}
 
@@ -659,11 +710,12 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		try {
 			for (IResource res : project.members()) {
 				if (res instanceof IFolder) {
-					proj.getFiles().addAll(createFiles((IFolder) res, new LinkedList<File>()));
+					final List<File> files = createFiles((IFolder) res, new LinkedList<File>());
+					proj.getFiles().addAll(files);
 				} else {
 					if (res instanceof IFile) {
-						File f = createFile(res);
-						proj.getFiles().add(f);
+						final File file = createFile(res);
+						proj.getFiles().add(file);
 					}
 				}
 			}
@@ -700,7 +752,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @param proj the project to compute the number of lines
 	 * @return the number of lines
 	 */
-	private long getNumberOfSourceCodeFiles(final Project proj) {
+	private static long getNumberOfSourceCodeFiles(final Project proj) {
 		int number = 0;
 		for (File file : proj.getFiles()) {
 			//only files having CODE_EXTENSION as extension are measured
@@ -722,11 +774,13 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	private List<File> createFiles(final IFolder folder, final List<File> files) throws CoreException {
 		for (IResource res : folder.members()) {
 			if (res instanceof IFolder) {
-				files.addAll(createFiles((IFolder) res, new LinkedList<File>()));
+				final List<File> newFiles = 
+						createFiles((IFolder) res, new LinkedList<File>());
+				files.addAll(newFiles);
 			} else {
 				if (res instanceof IFile) {
-					File f = createFile(res);
-					files.add(f);
+					final File file = createFile(res);
+					files.add(file);
 				}
 			}
 		}
@@ -739,13 +793,13 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @return the initialized file
 	 * @throws CoreException
 	 */
-	private File createFile(final IResource res) throws CoreException {
-		IFileStore fileStore = EFS.getStore(res.getLocationURI());
-		File f = BenchmarkFactory.eINSTANCE.createFile();
-		f.setSizeInBytes(fileStore.fetchInfo().getLength());
-		f.setFilepath(res.getFullPath().toString());
-		f.setLines(getLineNumber(res));
-		return f;
+	private static File createFile(final IResource res) throws CoreException {
+		final IFileStore fileStore = EFS.getStore(res.getLocationURI());
+		final File file = BenchmarkFactory.eINSTANCE.createFile();
+		file.setSizeInBytes(fileStore.fetchInfo().getLength());
+		file.setFilepath(res.getFullPath().toString());
+		file.setLines(getLineNumber(res));
+		return file;
 	}
 
 	/**
@@ -799,17 +853,12 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		this.discoverBenchmark(sources, monitor);
 	}
 
-	public EventAndMemoryRecorder getRecorder() {
-		return this.recorder;
-	}
-
-
-	public void setRecorders(final EventAndMemoryRecorder rec) {
-		this.recorder = rec;
-	}
-
 	public void setDiscovererID(final IDiscovererID discoId) {
 		this.discovererID = discoId;
+	}
+
+	public void setSizeDiscovererId(final String sizeDiscovererId) {
+		this.sizeDiscovererId = sizeDiscovererId;
 	}
 
 	/**
@@ -828,10 +877,8 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	@Parameter(name = "MEASURE_MEMORY_USAGE", description = "Tells if the memory usage should be measured or not.", requiresInputValue = true)
 	public void setMeasureMemoryUse(final boolean measure) {
 		this.measureMemoryUse = measure;
-		if (this.measureMemoryUse) { //putting a default value in case of bad initialization
-			if (this.memoryPollingInterval == 0) {
-				this.memoryPollingInterval = INTERVAL;
-			}
+		if (this.measureMemoryUse && this.memPollInterval == 0) {
+			this.memPollInterval = INTERVAL;
 		}
 	}
 
@@ -841,7 +888,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 */
 	@Parameter(name = "MEMORY_POLLING_INTERVAL", description = "The time interval between to memory measurement (default value is 1 sec)", requiresInputValue = false)
 	public void setMemoryPollingInterval(final int memoryInterval) {
-		this.memoryPollingInterval = memoryInterval;
+		this.memPollInterval = memoryInterval;
 	}
 
 	/**
@@ -850,18 +897,20 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 */
 	@Parameter(name = "GENERATE_HTML_REPORT", description = "Tells if a html report should be generated.", requiresInputValue = true)
 	public void setGenerateHtmlReport(final boolean generate) {
-		this.generateHtmlReport = generate;
+		this.generateHtml = generate;
 	}
 
 	/**
 	 * Setter for the output model URI, annotated set by the UI
 	 * @param the output model URI
 	 */
+	@Override
 	public void setTargetURI(final org.eclipse.emf.common.util.URI targetURI) {
 		super.setTargetURI(targetURI);
 		super.setTargetModel(this.rSet.createResource(targetURI));
 	}
 
+	@Override
 	@Parameter(name = "TARGET_URI")
 	public org.eclipse.emf.common.util.URI getTargetURI() {
 		return super.getTargetURI();
@@ -881,27 +930,29 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	}
 
 	public int getMemoryPollingInterval() {
-		return this.memoryPollingInterval;
+		return this.memPollInterval;
 	}
 
 	public boolean isGenerateHtmlReport() {
-		return this.generateHtmlReport;
+		return this.generateHtml;
 	}
 
 	/**
 	 * @return the htmlReportLocation
 	 */
 	public URI getHtmlReportLocation() {
-		return this.htmlReportLocation;
+		return this.htmlReportLoc;
 	}
 
 	/**
 	 * Allow the selection of the HTML report location
-	 * @param htmlReportLocation the htmlReportLocation to set
+	 * @param htmlReportLoc the htmlReportLocation to set
 	 */
-	@Parameter(name = "HTML_REPORT_LOCATION", description = "Tells the location of the HTML report, should be set if GENERATE_HTML_REPORT is true", requiresInputValue = false)
-	public void setHtmlReportLocation(final URI htmlReportLocationParam) {
-		this.htmlReportLocation = htmlReportLocationParam;
+	@Parameter(name = "HTML_REPORT_LOCATION", 
+			description = "Tells the location of the HTML report, should be set if GENERATE_HTML_REPORT is true",
+			requiresInputValue = false)
+	public void setHtmlReportLocation(final URI htmlReportUri) {
+		this.htmlReportLoc = htmlReportUri;
 	}
 
 }

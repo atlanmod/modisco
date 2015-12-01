@@ -8,6 +8,7 @@
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
  *    Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
+ *    Grégoire Dupé (Mia-Software) - Bug 483400 - The input size should be computable by the discoverer
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
@@ -23,6 +24,15 @@ public class Messages extends NLS {
 	public static String Application_no_of_iteration;
 	public static String Application_RecordMemoryUse;
 	public static String Application_XMI_Output;
+	public static String BenchmarkChartGeneration_AvgTimeByPrjSizeFor;
+	public static String BenchmarkChartGeneration_AvgUsedMemByPrjSizeFor;
+	public static String BenchmarkChartGeneration_DiscoTime;
+	public static String BenchmarkChartGeneration_DiscoTimeByPrjSizeOverall;
+	public static String BenchmarkChartGeneration_PrjSize;
+	public static String BenchmarkChartGeneration_time;
+	public static String BenchmarkChartGeneration_UsedMem;
+	public static String BenchmarkChartGeneration_UsedMemByPrjSize;
+	public static String BenchmarkChartGeneration_UsedMEmByTimeForOnThe;
 	public static String DiscovererBenchmarkDiscoverer_BenchmarkInitializationSubTask;
 	public static String DiscovererBenchmarkDiscoverer_BenchmarkTaskName;
 	public static String DiscovererBenchmarkDiscoverer_DiscoveryInitializationSubTask;

@@ -1,14 +1,14 @@
 /**
- * *******************************************************************************
- *  * Copyright (c) 2012 INRIA. All rights reserved. This program and the
- *  * accompanying materials are made available under the terms of the Eclipse
- *  * Public License v1.0 which accompanies this distribution, and is available at
- *  * http://www.eclipse.org/legal/epl-v10.html
- *  * 
- *  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- *  * 
- *  ******************************************************************************
+ * Copyright (c) 2012, 2015 INRIA and Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  * 
+ * Contributors:
+ *      Guillaume Doux (INRIA) - Initial API and implementation
+ *      Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
+ *      Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  */
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark;
 
@@ -38,7 +38,7 @@ public interface BenchmarkPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String copyright = "*******************************************************************************\r\n * Copyright (c) 2012 INRIA. All rights reserved. This program and the\r\n * accompanying materials are made available under the terms of the Eclipse\r\n * Public License v1.0 which accompanies this distribution, and is available at\r\n * http://www.eclipse.org/legal/epl-v10.html\r\n * \r\n * Contributors: Guillaume Doux - INRIA - Initial API and implementation\r\n * \r\n ******************************************************************************\r\n";
+	String copyright = "Copyright (c) 2012, 2015 INRIA and Mia-Software.\r\nAll rights reserved. This program and the accompanying materials\r\nare made available under the terms of the Eclipse Public License v1.0\r\nwhich accompanies this distribution, and is available at\r\nhttp://www.eclipse.org/legal/epl-v10.html\r\n\r\nContributors:\r\n     Guillaume Doux (INRIA) - Initial API and implementation\r\n     Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage\r\n     Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer\r\n";
 
 	/**
 	 * The package name.
@@ -414,13 +414,31 @@ public interface BenchmarkPackage extends EPackage {
 	int PROJECT__FILES = RESOURCE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Input Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__INPUT_SIZE = RESOURCE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Input Size Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__INPUT_SIZE_UNIT = RESOURCE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 4;
+	int PROJECT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.BenchmarkImpl <em>Benchmark</em>}' class.
@@ -992,6 +1010,28 @@ public interface BenchmarkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProject_Files();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getInputSize <em>Input Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Size</em>'.
+	 * @see org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getInputSize()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_InputSize();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getInputSizeUnit <em>Input Size Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Size Unit</em>'.
+	 * @see org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project#getInputSizeUnit()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_InputSizeUnit();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark <em>Benchmark</em>}'.
@@ -1577,6 +1617,22 @@ public interface BenchmarkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROJECT__FILES = eINSTANCE.getProject_Files();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__INPUT_SIZE = eINSTANCE.getProject_InputSize();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Size Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__INPUT_SIZE_UNIT = eINSTANCE.getProject_InputSizeUnit();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.BenchmarkImpl <em>Benchmark</em>}' class.

@@ -8,6 +8,7 @@
  * Contributors:
  *      Guillaume Doux (INRIA) - Initial API and implementation
  *      Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
+ *      Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  */
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl;
 
@@ -42,6 +43,8 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.ProjectImpl#getAverageFileSizeInBytes <em>Average File Size In Bytes</em>}</li>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.ProjectImpl#getAverageLinesPerFile <em>Average Lines Per File</em>}</li>
  *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.ProjectImpl#getFiles <em>Files</em>}</li>
+ *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.ProjectImpl#getInputSize <em>Input Size</em>}</li>
+ *   <li>{@link org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl.ProjectImpl#getInputSizeUnit <em>Input Size Unit</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,7 +55,7 @@ public class ProjectImpl extends ResourceImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "*******************************************************************************\r\n * Copyright (c) 2012 INRIA. All rights reserved. This program and the\r\n * accompanying materials are made available under the terms of the Eclipse\r\n * Public License v1.0 which accompanies this distribution, and is available at\r\n * http://www.eclipse.org/legal/epl-v10.html\r\n * \r\n * Contributors: Guillaume Doux - INRIA - Initial API and implementation\r\n * \r\n ******************************************************************************\r\n";
+	public static final String copyright = "Copyright (c) 2012, 2015 INRIA and Mia-Software.\r\nAll rights reserved. This program and the accompanying materials\r\nare made available under the terms of the Eclipse Public License v1.0\r\nwhich accompanies this distribution, and is available at\r\nhttp://www.eclipse.org/legal/epl-v10.html\r\n\r\nContributors:\r\n     Guillaume Doux (INRIA) - Initial API and implementation\r\n     Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage\r\n     Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer\r\n";
 
 	/**
 	 * The default value of the '{@link #getTotalLines() <em>Total Lines</em>}' attribute.
@@ -123,6 +126,46 @@ public class ProjectImpl extends ResourceImpl implements Project {
 	 * @ordered
 	 */
 	protected EList<File> files;
+
+	/**
+	 * The default value of the '{@link #getInputSize() <em>Input Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double INPUT_SIZE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getInputSize() <em>Input Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected double inputSize = INPUT_SIZE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInputSizeUnit() <em>Input Size Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSizeUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INPUT_SIZE_UNIT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInputSizeUnit() <em>Input Size Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputSizeUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String inputSizeUnit = INPUT_SIZE_UNIT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -223,6 +266,48 @@ public class ProjectImpl extends ResourceImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getInputSize() {
+		return inputSize;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputSize(double newInputSize) {
+		double oldInputSize = inputSize;
+		inputSize = newInputSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BenchmarkPackage.PROJECT__INPUT_SIZE, oldInputSize, inputSize));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getInputSizeUnit() {
+		return inputSizeUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputSizeUnit(String newInputSizeUnit) {
+		String oldInputSizeUnit = inputSizeUnit;
+		inputSizeUnit = newInputSizeUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BenchmarkPackage.PROJECT__INPUT_SIZE_UNIT, oldInputSizeUnit, inputSizeUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -248,6 +333,10 @@ public class ProjectImpl extends ResourceImpl implements Project {
 				return getAverageLinesPerFile();
 			case BenchmarkPackage.PROJECT__FILES:
 				return getFiles();
+			case BenchmarkPackage.PROJECT__INPUT_SIZE:
+				return getInputSize();
+			case BenchmarkPackage.PROJECT__INPUT_SIZE_UNIT:
+				return getInputSizeUnit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -274,6 +363,12 @@ public class ProjectImpl extends ResourceImpl implements Project {
 				getFiles().clear();
 				getFiles().addAll((Collection<? extends File>)newValue);
 				return;
+			case BenchmarkPackage.PROJECT__INPUT_SIZE:
+				setInputSize((Double)newValue);
+				return;
+			case BenchmarkPackage.PROJECT__INPUT_SIZE_UNIT:
+				setInputSizeUnit((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -298,6 +393,12 @@ public class ProjectImpl extends ResourceImpl implements Project {
 			case BenchmarkPackage.PROJECT__FILES:
 				getFiles().clear();
 				return;
+			case BenchmarkPackage.PROJECT__INPUT_SIZE:
+				setInputSize(INPUT_SIZE_EDEFAULT);
+				return;
+			case BenchmarkPackage.PROJECT__INPUT_SIZE_UNIT:
+				setInputSizeUnit(INPUT_SIZE_UNIT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -318,6 +419,10 @@ public class ProjectImpl extends ResourceImpl implements Project {
 				return averageLinesPerFile != AVERAGE_LINES_PER_FILE_EDEFAULT;
 			case BenchmarkPackage.PROJECT__FILES:
 				return files != null && !files.isEmpty();
+			case BenchmarkPackage.PROJECT__INPUT_SIZE:
+				return inputSize != INPUT_SIZE_EDEFAULT;
+			case BenchmarkPackage.PROJECT__INPUT_SIZE_UNIT:
+				return INPUT_SIZE_UNIT_EDEFAULT == null ? inputSizeUnit != null : !INPUT_SIZE_UNIT_EDEFAULT.equals(inputSizeUnit);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -338,6 +443,10 @@ public class ProjectImpl extends ResourceImpl implements Project {
 		result.append(averageFileSizeInBytes);
 		result.append(", averageLinesPerFile: ");
 		result.append(averageLinesPerFile);
+		result.append(", inputSize: ");
+		result.append(inputSize);
+		result.append(", inputSizeUnit: ");
+		result.append(inputSizeUnit);
 		result.append(')');
 		return result.toString();
 	}

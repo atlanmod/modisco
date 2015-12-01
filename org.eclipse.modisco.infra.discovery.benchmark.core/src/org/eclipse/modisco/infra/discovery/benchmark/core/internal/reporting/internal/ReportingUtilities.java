@@ -1,17 +1,20 @@
 /*******************************************************************************
- * Copyright (c) 2011 Mia-Software and INRIA. All rights reserved. This program and the
- * accompanying materials are made available under the terms of the Eclipse
- * Public License v1.0 which accompanies this distribution, and is available at
+ * Copyright (c) 2011, 2015 Mia-Software and INRIA.
+ * All rights reserved. This program and the accompanying materials are made 
+ * available under the terms of the Eclipse Public License v1.0 which 
+ * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors: Nicolas Bros (Mia-Software) - initial API and implementation
- * 				 Guillaume Doux (INRIA) - Moving to the org.eclipse.modisco.infra.discovery.benchmark.core plug-in
- * 
+ *
+ * Contributors:
+ *     Nicolas Bros (Mia-Software) - initial API and implementation
+ *     Guillaume Doux (INRIA) - Moving to the org.eclipse.modisco.infra.discovery.benchmark.core plug-in
+ *     Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  ******************************************************************************/
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
 
@@ -96,5 +99,8 @@ public final class ReportingUtilities {
 		}
 		return String.format("%.2f", remainder) + "s"; //$NON-NLS-1$ //$NON-NLS-2$
 	}
-	
+
+	public static int indexOf(final List<Object> list, final Object object) {
+		return list.indexOf(object);
+	}
 }

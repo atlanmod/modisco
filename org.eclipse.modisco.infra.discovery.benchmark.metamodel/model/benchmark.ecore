@@ -30,13 +30,23 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalSizeInBytes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="#//benchmark/Resource">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalLines" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalLines" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+        <eAnnotations source="@Depreacted"/>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageFileSizeInBytes"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+        <eAnnotations source="@Depreacted"/>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageLinesPerFile"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+        <eAnnotations source="@Depreacted"/>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
-          eType="#//benchmark/File" containment="true"/>
+          eType="#//benchmark/File" containment="true">
+        <eAnnotations source="@Depreacted"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputSizeUnit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Benchmark">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="jvmMaxHeapInMiB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>

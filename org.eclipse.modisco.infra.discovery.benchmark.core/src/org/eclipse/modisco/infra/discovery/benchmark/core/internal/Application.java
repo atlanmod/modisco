@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+ *    Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
@@ -56,6 +57,8 @@ public class Application implements IApplication {
 		options.addOption("e", true, Messages.Application_Comma_sep_existing_prj_path); //$NON-NLS-1$
 		options.addOption("m", false, Messages.Application_RecordMemoryUse); //$NON-NLS-1$
 		options.addOption("n", true, Messages.Application_MemoryPollingInterval); //$NON-NLS-1$
+		options.addOption("s", true, "Sample size discoverer"); //$NON-NLS-1$
+		options.getOption("s").setRequired(true); //$NON-NLS-1$
 		final CommandLineParser parser = new GnuParser();
 		final CommandLine cmd = parser.parse(options, args);
 		if (cmd.hasOption('e')) {
@@ -96,6 +99,7 @@ public class Application implements IApplication {
 		final String filePath = cmd.getOptionValue('o');
 		discoverer.setTargetURI(URI.createFileURI(filePath));
 		discoverer.setSerializeTarget(true);
+		discoverer.setSizeDiscovererId(cmd.getOptionValue('s'));
 		if (cmd.hasOption('r')) {
 			final String htmlPath = cmd.getOptionValue('r');
 			discoverer.setHtmlReportLocation(URI.createFileURI(htmlPath));

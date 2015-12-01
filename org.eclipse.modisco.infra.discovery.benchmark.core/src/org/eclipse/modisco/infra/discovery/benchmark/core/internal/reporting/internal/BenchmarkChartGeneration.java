@@ -1,11 +1,13 @@
 /*******************************************************************************
- * Copyright (c) 2012 INRIA. All rights reserved. This program and the
- * accompanying materials are made available under the terms of the Eclipse
- * Public License v1.0 which accompanies this distribution, and is available at
+ * Copyright (c) 2012, 2015 INRIA and Mia-Software.
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v1.0 which 
+ * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  * 
- * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ * Contributors:
+ *     Guillaume Doux - INRIA - Initial API and implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  ******************************************************************************/
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal;
@@ -14,11 +16,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
+import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Project;
 import org.eclipse.modisco.utils.chart.birt.core.internal.exported.BirtGraphHelper;
 import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Axe;
 import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Chart;
@@ -26,6 +30,7 @@ import org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartFactory;
 import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Coordinate;
 import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Point;
 import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
+import org.eclipse.osgi.util.NLS;
 
 /**
  * Class preparing and launching the chart generation in Birt
@@ -34,10 +39,10 @@ import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
  */
 public class BenchmarkChartGeneration {
 
-	private File location;
-	private boolean measureMemory;
-	private ChartFactory factory;
-	private BirtGraphHelper helper;
+	private final File location;
+	private final boolean measureMemory;
+	private final ChartFactory factory;
+	private final BirtGraphHelper helper;
 
 	public static final double MEGABYTE = 1024.0 * 1024.0;
 
@@ -61,7 +66,7 @@ public class BenchmarkChartGeneration {
 
 	public void createDiscoveryTimeAsProjectSizeFull(final Benchmark b) throws Exception {
 		createDiscoveryTimeAsProjectSizeOverallAveraged(b);
-		List<String> testedDiscoverers = new ArrayList<String>();
+		final List<String> testedDiscoverers = new ArrayList<String>();
 		for (Discovery d : b.getDiscoveries()) {
 			if (!testedDiscoverers.contains(d.getDiscovererId())) {
 				createDiscoveryTimeAsProjectSizeAveraged(b, d);
@@ -71,45 +76,54 @@ public class BenchmarkChartGeneration {
 	}
 
 	private void createDiscoveryTimeAsProjectSizeAveraged(final Benchmark b, final Discovery d) throws Exception {
-		Chart chart = this.factory.createChart();
-		chart.setTitle("Discovery time by project size for" + d.getDiscovererId());
-		Serie s = this.factory.createSerie();
-		s.setName(d.getDiscovererId());
-		chart.getSeries().add(s);
-		Axe size = this.factory.createAxe();
-		Axe time = this.factory.createAxe();
-		size.setUnit("megabytes");
-		size.setLegend("project size");
-		time.setUnit("secondes");
-		time.setLegend("Discovery Time");
+		final Chart chart = this.factory.createChart();
+		final String title = NLS.bind(
+				Messages.BenchmarkChartGeneration_AvgTimeByPrjSizeFor,
+				d.getDiscovererId());
+		chart.setTitle(title);
+		final Serie series = this.factory.createSerie();
+		series.setName(d.getDiscovererId());
+		chart.getSeries().add(series);
+		final Axe size = this.factory.createAxe();
+		final Axe time = this.factory.createAxe();
+		size.setLegend(Messages.BenchmarkChartGeneration_PrjSize);
+		time.setUnit("secondes"); //$NON-NLS-1$
+		time.setLegend(Messages.BenchmarkChartGeneration_DiscoTime);
 		chart.getAxes().add(size);
 		chart.getAxes().add(time);
 		for (Discovery dtemp : b.getDiscoveries()) {
 			if (dtemp.getDiscovererId().equals(d.getDiscovererId())) {
-				Point p = this.factory.createPoint();
-				p.setSerie(s);
-				Coordinate t = this.factory.createCoordinate();
+				final Point point = this.factory.createPoint();
+				point.setSerie(series);
+				final Coordinate t = this.factory.createCoordinate();
 				t.setAxe(size);
-				t.setValue(dtemp.getProject().getTotalSizeInBytes() / MEGABYTE);
-				Coordinate m = this.factory.createCoordinate();
+				final Project project = (Project) dtemp.getProject();
+				size.setUnit(project.getInputSizeUnit());
+				t.setValue(project.getInputSize());
+				final Coordinate m = this.factory.createCoordinate();
 				m.setAxe(time);
 				m.setValue(dtemp.getDiscoveryTimeAverageInSeconds());
-				p.getCoordinates().add(t);
-				p.getCoordinates().add(m);
+				point.getCoordinates().add(t);
+				point.getCoordinates().add(m);
 			}
 		}
-		this.helper.createBirtGraph(chart, this.location, "DiscoveryTimeByProjectSize" + d.getDiscovererId());
+		final String fileName = String.format("avgTimeBySize_%s", //$NON-NLS-1$
+				d.getDiscovererId());
+		final File reportDir = new File(this.location, "Report"); //$NON-NLS-1$
+		if (!reportDir.exists()) {
+			reportDir.mkdirs();
+		}
+		this.helper.createBirtGraph(chart, reportDir, fileName);
 	}
 
 	private void createDiscoveryTimeAsProjectSizeOverallAveraged(final Benchmark b) throws Exception {
 		Chart chart = this.factory.createChart();
-		chart.setTitle("Discovery time by project size overall");
+		chart.setTitle(Messages.BenchmarkChartGeneration_DiscoTimeByPrjSizeOverall);
 		Axe size = this.factory.createAxe();
 		Axe time = this.factory.createAxe();
-		size.setUnit("megabytes");
-		size.setLegend("project size");
-		time.setUnit("secondes");
-		time.setLegend("Discovery Time");
+		size.setLegend(Messages.BenchmarkChartGeneration_PrjSize);
+		time.setUnit("secondes"); //$NON-NLS-1$
+		time.setLegend(Messages.BenchmarkChartGeneration_DiscoTime);
 		chart.getAxes().add(size);
 		chart.getAxes().add(time);
 		List<String> testedDiscoverers = new ArrayList<String>();
@@ -124,7 +138,9 @@ public class BenchmarkChartGeneration {
 						p.setSerie(s);
 						Coordinate t = this.factory.createCoordinate();
 						t.setAxe(size);
-						t.setValue(dtemp.getProject().getTotalSizeInBytes() / MEGABYTE);
+						final Project project = (Project) dtemp.getProject();
+						size.setUnit(project.getInputSizeUnit());
+						t.setValue(project.getInputSize());
 						Coordinate m = this.factory.createCoordinate();
 						m.setAxe(time);
 						m.setValue(dtemp.getDiscoveryTimeAverageInSeconds());
@@ -135,7 +151,8 @@ public class BenchmarkChartGeneration {
 				testedDiscoverers.add(d.getDiscovererId());
 			}
 		}
-		this.helper.createBirtGraph(chart, this.location, "DiscoveryTimeByProjectSizeOverall");
+		this.helper.createBirtGraph(chart, this.location,
+				"DiscoveryTimeByProjectSizeOverall"); //$NON-NLS-1$
 	}
 
 
@@ -155,16 +172,18 @@ public class BenchmarkChartGeneration {
 
 	private void createMemoryUsedAsProjectSizeAveraged(final Benchmark b, final Discovery d) throws Exception {
 		Chart chart = this.factory.createChart();
-		chart.setTitle("Memory used by project size for" + d.getDiscovererId());
+		final String title = NLS.bind(
+				Messages.BenchmarkChartGeneration_AvgUsedMemByPrjSizeFor,
+				d.getDiscovererId());
+		chart.setTitle(title);
 		Serie s = this.factory.createSerie();
 		s.setName(d.getDiscovererId());
 		chart.getSeries().add(s);
 		Axe size = this.factory.createAxe();
 		Axe memory = this.factory.createAxe();
-		size.setUnit("megabytes");
-		size.setLegend("project size");
-		memory.setUnit("megabytes");
-		memory.setLegend("memory used");
+		size.setLegend(Messages.BenchmarkChartGeneration_PrjSize);
+		memory.setUnit("MB"); //$NON-NLS-1$
+		memory.setLegend(Messages.BenchmarkChartGeneration_UsedMem);
 		chart.getAxes().add(size);
 		chart.getAxes().add(memory);
 		for (Discovery dtemp : b.getDiscoveries()) {
@@ -173,7 +192,9 @@ public class BenchmarkChartGeneration {
 				p.setSerie(s);
 				Coordinate t = this.factory.createCoordinate();
 				t.setAxe(size);
-				t.setValue(dtemp.getProject().getTotalSizeInBytes() / MEGABYTE);
+				final Project project = (Project) dtemp.getProject();
+				size.setUnit(project.getInputSizeUnit());
+				t.setValue(project.getInputSize());
 				Coordinate m = this.factory.createCoordinate();
 				m.setAxe(memory);
 				m.setValue(dtemp.getIterations().get(0).getMaxUsedMemoryInBytes() / MEGABYTE);
@@ -181,18 +202,23 @@ public class BenchmarkChartGeneration {
 				p.getCoordinates().add(m);
 			}
 		}
-		this.helper.createBirtGraph(chart, this.location, "memoryByProjectSize" + d.getDiscovererId());
+		final String fileName = String.format("avgMemoryByProjectSize_%s", //$NON-NLS-1$
+				d.getDiscovererId());
+		final File reportDir = new File(this.location, "Report"); //$NON-NLS-1$
+		if (!reportDir.exists()) {
+			reportDir.mkdirs();
+		}
+		this.helper.createBirtGraph(chart, reportDir, fileName);
 	}
 
 	private void createMemoryUsedAsProjectSizeOverallAveraged(final Benchmark b) throws Exception {
 		Chart chart = this.factory.createChart();
-		chart.setTitle("Memory used by project size overall");
+		chart.setTitle(Messages.BenchmarkChartGeneration_UsedMemByPrjSize);
 		Axe size = this.factory.createAxe();
 		Axe memory = this.factory.createAxe();
-		size.setUnit("megabytes");
-		size.setLegend("project size");
-		memory.setUnit("megabytes");
-		memory.setLegend("memory used");
+		size.setLegend(Messages.BenchmarkChartGeneration_PrjSize);
+		memory.setUnit("megabytes"); //$NON-NLS-1$
+		memory.setLegend(Messages.BenchmarkChartGeneration_UsedMem);
 		chart.getAxes().add(size);
 		chart.getAxes().add(memory);
 		List<String> testedDiscoverers = new ArrayList<String>();
@@ -207,7 +233,9 @@ public class BenchmarkChartGeneration {
 						p.setSerie(s);
 						Coordinate t = this.factory.createCoordinate();
 						t.setAxe(size);
-						t.setValue(dtemp.getProject().getTotalSizeInBytes() / MEGABYTE);
+						final Project project = (Project) dtemp.getProject();
+						size.setUnit(project.getInputSizeUnit());
+						t.setValue(project.getInputSize());
 						Coordinate m = this.factory.createCoordinate();
 						m.setAxe(memory);
 						m.setValue(dtemp.getIterations().get(0).getMaxUsedMemoryInBytes() / MEGABYTE);
@@ -218,22 +246,30 @@ public class BenchmarkChartGeneration {
 				testedDiscoverers.add(d.getDiscovererId());
 			}
 		}
-		this.helper.createBirtGraph(chart, this.location, "memoryByProjectSizeOverall");
+		this.helper.createBirtGraph(chart, this.location,
+				"memoryByProjectSizeOverall"); //$NON-NLS-1$
 	}
 
 
 	public void createMemoryUseByTime(final Discovery d, final DiscoveryIteration di) throws Exception {
 		Chart chart = this.factory.createChart();
-		chart.setTitle("Memory used by time for " + d.getDiscovererId() + " on " + d.getProject().getName() + " the " + di.getDiscoveryDate());
+		final String title = NLS.bind(
+				Messages.BenchmarkChartGeneration_UsedMEmByTimeForOnThe,
+				new Object[]{
+					d.getDiscovererId(),
+					d.getProject().getName(),
+					di.getDiscoveryDate().toString()
+				});
+		chart.setTitle(title);
 		Serie s = this.factory.createSerie();
 		s.setName(d.getDiscovererId());
 		chart.getSeries().add(s);
 		Axe time = this.factory.createAxe();
 		Axe memory = this.factory.createAxe();
-		time.setUnit("ms");
-		time.setLegend("time");
-		memory.setUnit("megabytes");
-		memory.setLegend("memory used");
+		time.setUnit("ms"); //$NON-NLS-1$
+		time.setLegend(Messages.BenchmarkChartGeneration_time);
+		memory.setUnit("megabytes"); //$NON-NLS-1$
+		memory.setLegend(Messages.BenchmarkChartGeneration_UsedMem);
 		chart.getAxes().add(time);
 		chart.getAxes().add(memory);
 		
@@ -252,7 +288,15 @@ public class BenchmarkChartGeneration {
 				p.getCoordinates().add(m);
 			}
 		}
-		this.helper.createBirtGraph(chart, this.location, "memoryByTime" + d.getDiscovererId() + "_" + di.getDiscoveryDate().toString().replaceAll(" ", "_").replaceAll(":", "-"));
+		final String fileName = String.format("memoryByTime-%s", //$NON-NLS-1$
+				Integer.toString(d.getIterations().indexOf(di)));
+		final File reportDir = new File(this.location, "Report"); //$NON-NLS-1$
+		final File projectDir = new File(reportDir, d.getProject().getName());
+		final File targetFolder = new File(projectDir, d.getDiscovererId());
+		if (!targetFolder.exists()) {
+			targetFolder.mkdirs();
+		}
+		this.helper.createBirtGraph(chart, targetFolder, fileName);
 	}
 
 }
