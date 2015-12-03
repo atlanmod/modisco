@@ -1,9 +1,8 @@
 /*******************************************************************************
  * Copyright (c) 2012, 2015 INRIA, and Mia-Software.
- *
- * All rights reserved. This program and the
- * accompanying materials are made available under the terms of the Eclipse
- * Public License v1.0 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
@@ -12,6 +11,7 @@
  *    Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
  *    Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  *    Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
+ *    Grégoire Dupé (Mia-Software) - Bug 483639 - [Benchmark] Incorrect standard derivation computation
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -37,6 +37,7 @@ import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
@@ -53,6 +54,7 @@ import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.modisco.infra.discovery.benchmark.core.ISizeDiscoverer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.MathUtils;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererBenchmarkDiscoverer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererID;
@@ -188,7 +190,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			final IProgressMonitor progressMonitor, final Benchmark benchmark,
 			final IProject project, final String discovererId,
 			final Discovery disco, final int iteration) {
-		AbstractModelDiscoverer<IProject> discoverer = (AbstractModelDiscoverer<IProject>)
+		final AbstractModelDiscoverer<IProject> discoverer = (AbstractModelDiscoverer<IProject>)
 				IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
 		final URI serializationLoc = getSerializationLoc(discoverer);
 		progressMonitor.subTask(NLS.bind(
@@ -208,9 +210,9 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		this.recorder.start();
 		try {
 			if (discoverer.isApplicableTo(project)) {
-				final IProgressMonitor subProgressMonitor =
+				final IProgressMonitor subProgressM =
 						new SubProgressMonitor(progressMonitor, 0);
-				discoverer.discoverElement(project, subProgressMonitor);
+				discoverer.discoverElement(project, subProgressM);
 			} else {
 				final String message = String.format(
 						"Discoverer '%s' is not applicable on project '%s'.", //$NON-NLS-1$
@@ -299,15 +301,16 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 */
 	private static long computeSize(final Resource targetModel) {
 		long size = 0;
-		if (targetModel != null) {
-			for (TreeIterator<EObject> iterator = targetModel.getAllContents(); iterator.hasNext();) {
-				iterator.next();
-				size++;
-			}
-		} else {
+		if (targetModel == null) {
 			Logger.logWarning(
 					"Unable to compute the number of element of an unexisting model", //$NON-NLS-1$
 					Activator.getDefault());
+		} else {
+			for (final TreeIterator<EObject> iterator =
+					targetModel.getAllContents(); iterator.hasNext();) {
+				iterator.next();
+				size++;
+			}
 		}
 		return size;
 	}
@@ -407,25 +410,24 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * Find the setter of identifier id in the class clazz
 	 * use java reflexion
 	 * @param clazz
-	 * @param id
+	 * @param paramId
 	 * @return the setter
 	 */
 	private static Method findSetter(
 			final Class<? extends AbstractModelDiscoverer> clazz,
-			final String id) {
+			final String paramId) {
+		Method result = null;
 		for (Method method : clazz.getMethods()) {
 			if (method.isAnnotationPresent(Parameter.class)) {
-				Parameter p = method.getAnnotation(Parameter.class);
-				if (p.name().equals(id)) {
-					if (method.getReturnType().equals(void.class)) {
-						return method;
-					}
+				final Parameter param = method.getAnnotation(Parameter.class);
+				if (param.name().equals(paramId) 
+						&& method.getReturnType().equals(void.class)) {
+					result = method;
 				}
 			}
 		}
-		return null;
+		return result;
 	}
-
 
 	/**
 	 * method to set the values of parameters: extracted from DiscoveryManager
@@ -630,45 +632,45 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @param disco
 	 * @param discoverer
 	 */
-	private void postDiscoveryDiscoInit(final Discovery disco, final AbstractModelDiscoverer<IProject> discoverer) {
-		double totalDiscoTime = 0;
-		double totalSaveTime = 0;
+	private void postDiscoveryDiscoInit(final Discovery disco,
+			final AbstractModelDiscoverer<IProject> discoverer) {
 		if (this.iterations > 0) {
-			double maxDisco = 0;
-			double maxSave = 0;
-			double minDisco = disco.getIterations().get(0).getDiscoveryTimeInSeconds();
-			double minSave = disco.getIterations().get(0).getSaveTimeInSeconds();
-			for (DiscoveryIteration iter : disco.getIterations()) {
-				totalSaveTime += iter.getSaveTimeInSeconds();
-				totalDiscoTime += iter.getDiscoveryTimeInSeconds();
-				if (iter.getDiscoveryTimeInSeconds() > maxDisco) {
-					maxDisco = iter.getDiscoveryTimeInSeconds();
+			final MathUtils.Resolver<DiscoveryIteration> discoTimeResolver = 
+					new MathUtils.Resolver<DiscoveryIteration>() {
+				public double getValue(final DiscoveryIteration object) {
+					return object.getDiscoveryTimeInSeconds();
 				}
-				if (iter.getSaveTimeInSeconds() > maxSave) {
-					maxSave = iter.getSaveTimeInSeconds();
+			};
+			disco.setDiscoveryTimeAverageInSeconds(MathUtils.average(
+					disco.getIterations(), discoTimeResolver));
+			disco.setExecutionTimeStandardDeviation(MathUtils.standardDeviation(
+					disco.getIterations(), discoTimeResolver));
+			final MathUtils.Resolver<DiscoveryIteration> saveTimeResolver = 
+					new MathUtils.Resolver<DiscoveryIteration>() {
+				public double getValue(final DiscoveryIteration object) {
+					return object.getSaveTimeInSeconds();
 				}
-				if (iter.getDiscoveryTimeInSeconds() < minDisco) {
-					minDisco = iter.getDiscoveryTimeInSeconds();
-				}
-				if (iter.getSaveTimeInSeconds() < minSave) {
-					minSave = iter.getSaveTimeInSeconds();
-				}
-			}
-			disco.setDiscoveryTimeAverageInSeconds(totalDiscoTime / this.iterations);
-			disco.setSaveTimeAverageInSeconds(totalSaveTime / this.iterations);
-			disco.setExecutionTimeStandardDeviation(maxDisco - minDisco);
-			disco.setSaveTimeStandardDeviation(maxSave - minSave);
+			};
+			disco.setSaveTimeAverageInSeconds(MathUtils.average(
+					disco.getIterations(), saveTimeResolver));
+			disco.setSaveTimeStandardDeviation(MathUtils.standardDeviation(
+					disco.getIterations(), saveTimeResolver));
 			disco.setNumberOfModelElements(computeSize(discoverer.getTargetModel()));
 			IFileStore fileStore;
 			final URI targetURI = discoverer.getTargetURI();
+			final String targetUriStr = targetURI.toString();
 			try {
-				String locationString = "file://" + ResourcesPlugin.getWorkspace().getRoot().getLocation().toString() + targetURI.toString(); //$NON-NLS-1$
-				java.net.URI uri = java.net.URI.create(locationString);
+				final IWorkspace workspace = ResourcesPlugin.getWorkspace();
+				final IWorkspaceRoot wsRoot = workspace.getRoot();
+				final IPath wsLoc = wsRoot.getLocation();
+				final String wsLocStr = wsLoc.toString();
+				final String locationString = "file://" + wsLocStr + targetUriStr; //$NON-NLS-1$
+				final java.net.URI uri = java.net.URI.create(locationString);
 				fileStore = EFS.getStore(uri);
 				disco.setXmiSizeInBytes(fileStore.fetchInfo().getLength());
 			} catch (Exception e) {
 				final String message = String.format(
-						"Could not get output model size.", targetURI); //$NON-NLS-1$
+						"Could not get output model size (%s).", targetUriStr); //$NON-NLS-1$
 				Logger.logError(e, message, Activator.getDefault());
 			}
 		}
@@ -681,18 +683,19 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 */
 	private static DiscoveryIteration createDiscoveryIteration(
 			final EventAndMemoryRecorder recoreder) {
-		DiscoveryIteration discoIter = BenchmarkFactory.eINSTANCE.createDiscoveryIteration();
+		final DiscoveryIteration discoIter =
+				BenchmarkFactory.eINSTANCE.createDiscoveryIteration();
 		discoIter.setDiscoveryDate(new Date());
 		discoIter.setMaxUsedMemoryInBytes(recoreder.getMaxMemoryUsed());
 		discoIter.getEvents().addAll(recoreder.getEvents());
 		discoIter.setDiscoveryTimeInSeconds((recoreder.getStopTime() - recoreder.getStartTime()) / MSINSEC);
 		for (Event event : recoreder.getEvents()) {
-			if (event instanceof EndEvent) {
-				if (event.getEventType().getName().equals(SAVE_OPERATION)) {
-					double saveTime = event.getTime() - ((EndEvent) event).getBeginning().getTime();
-					discoIter.setSaveTimeInSeconds(saveTime / MSINSEC);
-					discoIter.setDiscoveryTimeInSeconds(discoIter.getDiscoveryTimeInSeconds() - discoIter.getSaveTimeInSeconds());
-				}
+			if (event instanceof EndEvent
+					&& event.getEventType().getName().equals(SAVE_OPERATION)) {
+				final double saveTime = event.getTime() 
+						- ((EndEvent) event).getBeginning().getTime();
+				discoIter.setSaveTimeInSeconds(saveTime / MSINSEC);
+				discoIter.setDiscoveryTimeInSeconds(discoIter.getDiscoveryTimeInSeconds() - discoIter.getSaveTimeInSeconds());
 			}
 		}
 		discoIter.getMemoryMeasurements().addAll(recoreder.getMemoryMeasurements());
@@ -817,10 +820,11 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			if (res.getFileExtension() != null
 					&& res.getFileExtension().endsWith(CODE_EXTENSION)) {
 				try {
-					final java.io.File f = res.getLocation().toFile();
-					final BufferedReader br = new BufferedReader(new FileReader(f));
-					for (lines = 0; br.readLine() != null; lines++);
-					br.close();
+					final java.io.File file = res.getLocation().toFile();
+					final BufferedReader bReader = new BufferedReader(
+							new FileReader(file));
+					for (lines = 0; bReader.readLine() != null; lines++);
+					bReader.close();
 				} catch (Exception e) {
 					final String message = String.format(
 							"Counting the number of lines is '%s' failed ",  //$NON-NLS-1$
