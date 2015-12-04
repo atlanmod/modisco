@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="11">
+<target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="13">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.m2m.atl.feature.group" version="3.1.0.v201006150240"/>
@@ -19,6 +19,7 @@
 <unit id="org.apache.lucene" version="1.9.1.v20100518-1140"/>
 <unit id="org.eclipse.emf.cdo.server.db.feature.group" version="3.0.0.v20100614-1654"/>
 <unit id="org.eclipse.equinox.executable.feature.group" version="3.4.0.v20100524-7M7K-FIhIez-egBko15H73"/>
+<unit id="org.apache.commons.cli" version="1.0.0.v20080604-1500"/>
 <repository location="http://download.eclipse.org/releases/helios/201006230900/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
