@@ -567,13 +567,19 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @param benchmark 
 	 * @param discovererId
 	 *            the discoverer id
+	 * @throws DiscoveryException 
 	 */
 	private Discovery createDiscovery(final Project projectDesc,
-			final Discovery discovery, final Benchmark benchmark) {
+			final Discovery discovery, final Benchmark benchmark)
+			throws DiscoveryException {
 		final String discovererId = discovery.getDiscovererId();
 		final AbstractModelDiscoverer<IProject> discoverer =
 				(AbstractModelDiscoverer<IProject>)
 				IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
+		if (discoverer == null) {
+			final String message = String.format("The discoverer '%s' does not exists.", discovererId);
+			throw new DiscoveryException(message);
+		}
 		final Discovery disco = BenchmarkFactory.eINSTANCE.createDiscovery();
 		disco.setProject(projectDesc);
 		disco.setName(discoverer.toString());
