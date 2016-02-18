@@ -12,6 +12,7 @@
  *    Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  *    Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  *    Grégoire Dupé (Mia-Software) - Bug 483639 - [Benchmark] Incorrect standard derivation computation
+ *    Grégoire Dupé (Mia-Software) - Bug 488020 - computeSize benchmark error message not precise enough
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -296,18 +297,21 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 
 	/**
 	 * Compute the size of the model in parameter (in number of model elements)
-	 * @param targetModel
+	 * @param discoverer.getTargetModel()
 	 * @return the number of model elements
 	 */
-	private static long computeSize(final Resource targetModel) {
+	private static long computeSize(final AbstractModelDiscoverer<IProject> discoverer) {
 		long size = 0;
+		final Resource targetModel = discoverer.getTargetModel();
 		if (targetModel == null) {
-			Logger.logWarning(
-					"Unable to compute the number of element of an unexisting model", //$NON-NLS-1$
-					Activator.getDefault());
+			final String message = String.format(
+					"Unable to compute the number of element of an unexisting model for the discoverer '%s'", //$NON-NLS-1$
+					discoverer.getClass().getName());
+			Logger.logWarning(message, Activator.getDefault());
 		} else {
-			for (final TreeIterator<EObject> iterator =
-					targetModel.getAllContents(); iterator.hasNext();) {
+			final TreeIterator<EObject> allContents = targetModel.getAllContents();
+			for (final TreeIterator<EObject> iterator = allContents;
+					iterator.hasNext();) {
 				iterator.next();
 				size++;
 			}
@@ -661,7 +665,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					disco.getIterations(), saveTimeResolver));
 			disco.setSaveTimeStandardDeviation(MathUtils.standardDeviation(
 					disco.getIterations(), saveTimeResolver));
-			disco.setNumberOfModelElements(computeSize(discoverer.getTargetModel()));
+			disco.setNumberOfModelElements(computeSize(discoverer));
 			IFileStore fileStore;
 			final URI targetURI = discoverer.getTargetURI();
 			final String targetUriStr = targetURI.toString();
