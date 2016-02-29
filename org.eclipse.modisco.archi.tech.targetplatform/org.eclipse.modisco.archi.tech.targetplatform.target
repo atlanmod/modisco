@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="13">
+<target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="14">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.m2m.atl.feature.group" version="3.1.0.v201006150240"/>
@@ -27,9 +27,9 @@
 <repository location="http://download.eclipse.org/technology/epp/packages/helios/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="1.1.0.201508071644"/>
-<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="1.1.0.201508071644"/>
-<repository location="http://download.eclipse.org/facet/updates/integration/"/>
+<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="1.0.2.201601181335"/>
+<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="1.0.2.201601181335"/>
+<repository location="http://download.eclipse.org/facet/updates/release/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
