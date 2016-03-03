@@ -174,56 +174,54 @@ public final class BirtGraphHelper {
 			Collections.sort(dataPoints, comparator);
 			final ColorDefinition serieColor = getColorForSerie(birtChart.getSeries().indexOf(serie));
 
-			final LineSeries lineSeries = (LineSeries) LineSeriesImpl.create();
-			lineSeries.setSeriesIdentifier(serie.getName());
-			lineSeries.setCurve(false);
-
-			final ArrayList<Double> yAxisValues = new ArrayList<Double>();
-			for (Point dataPoint : dataPoints) {
-				yAxisValues.add(dataPoint.y);
-			}
-			final NumberDataSet dataSet = NumberDataSetImpl.create(yAxisValues);
-			lineSeries.setDataSet(dataSet);
-			lineSeries.getMarkers().clear();//Remove this to show markers for each points
-
-			final LineAttributes lineAttr = LineAttributesImpl.create(ColorDefinitionImpl.BLACK(),
-					LineStyle.SOLID_LITERAL, 1);
-			lineAttr.setVisible(true);
-			lineAttr.setColor(serieColor);
-			lineSeries.setLineAttributes(lineAttr);
-
-			final Point[] linearRegression = computeLinearRegression(dataPoints);
-			final LineSeries linearRegSeries = (LineSeries) LineSeriesImpl.create();
-			final ArrayList<Double> regressionYAxisValues = new ArrayList<Double>();
-			for (Point point : linearRegression) {
-					regressionYAxisValues.add(point.y);
-			}
-			final NumberDataSet linearRegDataSet = NumberDataSetImpl.create(regressionYAxisValues);
-			linearRegSeries.setDataSet(linearRegDataSet);
-			linearRegSeries.getMarkers().clear();
-			// line attributes
-			final LineAttributes lineAttr2 = LineAttributesImpl.create(ColorDefinitionImpl.BLACK(),
-					LineStyle.DASHED_LITERAL, 1);
-			lineAttr2.setVisible(true);
-			lineAttr2.setColor(serieColor);
-			linearRegSeries.setLineAttributes(lineAttr2);
-
+			final LineSeries lineSeries = createLineSeries(
+					dataPoints.toArray(new Point[0]), serieColor, 
+					LineStyle.SOLID_LITERAL, serie.getName());
 			ySeriesDefinition.getSeries().add(lineSeries);
+			final Point[] linearRegression = computeLinearRegression(dataPoints);
+			final LineSeries linearRegSeries = createLineSeries(
+					linearRegression, serieColor, LineStyle.DASHED_LITERAL, ""); //$NON-NLS-1$
 			ySeriesDefinition.getSeries().add(linearRegSeries);
 		}
 		//Creating x axis labels
 		final ArrayList<Double> xAxisValues = new ArrayList<Double>();
 		for (Point dataPoint : dataPoints) {
-				xAxisValues.add(dataPoint.x);
+				xAxisValues.add(Double.valueOf(dataPoint.x));
 		}
 		final NumberDataSet xAxisDataSet = NumberDataSetImpl.create(xAxisValues);
-
 		final Series xAxisSeries = SeriesImpl.create();
 		xAxisSeries.setDataSet(xAxisDataSet);
 		final SeriesDefinition xSeriesDefinition = SeriesDefinitionImpl.create();
 		xSeriesDefinition.getSeries().add(xAxisSeries);
 		xAxis.getSeriesDefinitions().add(xSeriesDefinition);
 
+		createYAxis(chart, ord, xAxis, ySeriesDefinition);
+		chartRendering(targetFolder, fileName, chart);
+	}
+	
+	private static LineSeries createLineSeries(final Point[] dataPoints,
+			final ColorDefinition serieColor, final LineStyle lineStyle, final String name) {
+		final LineSeries lineSeries = (LineSeries) LineSeriesImpl.create();
+		lineSeries.setSeriesIdentifier(name);
+		lineSeries.setCurve(false);
+		final ArrayList<Double> yAxisValues = new ArrayList<Double>();
+		for (Point point : dataPoints) {
+			yAxisValues.add(Double.valueOf(point.y));
+		}
+		final NumberDataSet dataSet = NumberDataSetImpl.create(yAxisValues);
+		lineSeries.setDataSet(dataSet);
+		lineSeries.getMarkers().clear(); // Remove this to show markers for each  points
+		// line attributes
+		final LineAttributes lineAttr = LineAttributesImpl
+				.create(ColorDefinitionImpl.BLACK(), lineStyle, 1);
+		lineAttr.setVisible(true);
+		lineAttr.setColor(serieColor);
+		lineSeries.setLineAttributes(lineAttr);
+		return lineSeries;
+	}
+
+	private static void createYAxis(final ChartWithAxes chart, final Axe ord,
+			final Axis xAxis, final SeriesDefinition ySeriesDefinition) {
 		final Axis yAxis = chart.getPrimaryOrthogonalAxis(xAxis);
 		yAxis.setType(AxisType.LINEAR_LITERAL);
 		yAxis.setFormatSpecifier(NumberFormatSpecifierImpl.create());
@@ -232,7 +230,6 @@ public final class BirtGraphHelper {
 				ord.getLegend(), ord.getUnit());
 		yAxis.getTitle().getCaption().setValue(yCaption);
 		yAxis.getSeriesDefinitions().add(ySeriesDefinition);
-		chartRendering(targetFolder, fileName, chart);
 	}
 
 	private static void chartRendering(final File targetFolder, final String fileName,
@@ -271,7 +268,7 @@ public final class BirtGraphHelper {
 			return new Point[0];
 		}
 		if ((int) size == 1) {
-			Point point = dataPoints.get(0);
+			final Point point = dataPoints.get(0);
 			return new Point[] { new Point(point.x, point.y) };
 		}
 		double sumXY = 0.0;
