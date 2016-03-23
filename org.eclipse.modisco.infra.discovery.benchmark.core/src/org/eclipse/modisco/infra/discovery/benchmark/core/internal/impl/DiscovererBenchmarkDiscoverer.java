@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012, 2015 INRIA, and Mia-Software.
+ * Copyright (c) 2012, 2016 INRIA, and Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -13,6 +13,7 @@
  *    Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
  *    Grégoire Dupé (Mia-Software) - Bug 483639 - [Benchmark] Incorrect standard derivation computation
  *    Grégoire Dupé (Mia-Software) - Bug 488020 - computeSize benchmark error message not precise enough
+ *    Grégoire Dupé (Mia-Software) - Bug 489866 - [Benchmark] inverse benchmarking algorithm
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -159,22 +160,21 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		progressMonitor.beginTask(
 				Messages.DiscovererBenchmarkDiscoverer_BenchmarkTaskName,
 				nbDiscoToDo);
-		final Benchmark benchmark = benchmarkInit(progressMonitor);
-		for (IProject project : projects.sortBySize().getProjects()) {
-			final Project projectDesc = createProjectDescription(project,
-					benchmark, progressMonitor);
-			for (Discovery discovery : this.discoverers) {
+		final Benchmark benchmark = benchmarkInit(projects, progressMonitor);
+		for (int i = 1; i <= this.iterations; i++) {
+			for (Discovery discovery : benchmark.getDiscoveries()) {
 				progressMonitor.subTask(
 						Messages.DiscovererBenchmarkDiscoverer_DiscoveryInitializationSubTask);
-				final String discovererId = discovery.getDiscovererId();
-				final Discovery disco = createDiscovery(projectDesc,
-						discovery, benchmark);
-				AbstractModelDiscoverer<IProject> discoverer = null;
-				for (int i = 1; i <= this.iterations;  i++) {
-					discoverer = preformIteration(progressMonitor, benchmark,
-							project, discovererId, disco, i);
+				final org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Resource resource = discovery.getProject();
+				if (resource instanceof Project) {
+					final Project projectDesc = (Project) resource;
+					final IProject project = ResourcesPlugin.getWorkspace()
+							.getRoot().getProject(projectDesc.getName());
+					final AbstractModelDiscoverer<IProject> discoverer = 
+							preformIteration(progressMonitor, benchmark,
+									project, discovery, i);
+					postDiscoveryDiscoInit(discovery, discoverer);
 				}
-				postDiscoveryDiscoInit(disco, discoverer);
 			}
 		}
 		benchmark.setJvmMaxHeapInMiB(computeMaxMemoryUsage());
@@ -189,8 +189,8 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 
 	private AbstractModelDiscoverer<IProject> preformIteration(
 			final IProgressMonitor progressMonitor, final Benchmark benchmark,
-			final IProject project, final String discovererId,
-			final Discovery disco, final int iteration) {
+			final IProject project, final Discovery disco, final int iteration) {
+		final String discovererId = disco.getDiscovererId();
 		final AbstractModelDiscoverer<IProject> discoverer = (AbstractModelDiscoverer<IProject>)
 				IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
 		final URI serializationLoc = getSerializationLoc(discoverer);
@@ -198,7 +198,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 				Messages.DiscovererBenchmarkDiscoverer_ProjectDiscoveryIterationSubTask,
 				String.valueOf(getIterations())));
 		final String suffix = String.format("%s_%s_i%s.xmi", //$NON-NLS-1$
-				disco.getDiscovererId(), project.getName(),
+				discovererId, project.getName(),
 				String.valueOf(iteration));
 		final URI uri = serializationLoc.appendSegment(suffix);
 		discoverer.setTargetURI(uri);
@@ -530,9 +530,12 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 
 	/**
 	 * Initialize the benchmark model element with system information
+	 * @param projects 
 	 * @return the model element
+	 * @throws DiscoveryException 
 	 */
-	private static Benchmark benchmarkInit(final IProgressMonitor progressMonitor) {
+	private Benchmark benchmarkInit(final IProjectSet projects,
+			final IProgressMonitor progressMonitor) throws DiscoveryException {
 		progressMonitor.subTask(
 				Messages.DiscovererBenchmarkDiscoverer_BenchmarkInitializationSubTask);
 		final Benchmark benchmark = BenchmarkFactory.eINSTANCE.createBenchmark();
@@ -551,6 +554,13 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			Logger.logError(e,
 					"Could not get system information for benchmark", //$NON-NLS-1$
 					Activator.getDefault());
+		}
+		for (IProject project : projects.sortBySize().getProjects()) {
+			final Project projectDesc = createProjectDescription(project,
+					benchmark, progressMonitor);
+			for (Discovery discovery : this.discoverers) {
+				createDiscovery(projectDesc, discovery, benchmark);
+			}
 		}
 		return benchmark;
 	}
