@@ -14,6 +14,7 @@
  *    Grégoire Dupé (Mia-Software) - Bug 483639 - [Benchmark] Incorrect standard derivation computation
  *    Grégoire Dupé (Mia-Software) - Bug 488020 - computeSize benchmark error message not precise enough
  *    Grégoire Dupé (Mia-Software) - Bug 489866 - [Benchmark] inverse benchmarking algorithm
+ *    Grégoire Dupé (Mia-Software) - Bug 491545 - [Benchmark] Need more reporting messages
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -191,6 +192,10 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			final IProgressMonitor progressMonitor, final Benchmark benchmark,
 			final IProject project, final Discovery disco, final int iteration) {
 		final String discovererId = disco.getDiscovererId();
+		final String infoMsg = String.format(
+				"Excuting the discoverer '%s' on '%s' (iteration=%s)", //$NON-NLS-1$
+				discovererId, project.getName(), Integer.valueOf(iteration));
+		Logger.logInfo(infoMsg, Activator.getDefault());
 		final AbstractModelDiscoverer<IProject> discoverer = (AbstractModelDiscoverer<IProject>)
 				IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
 		final URI serializationLoc = getSerializationLoc(discoverer);
