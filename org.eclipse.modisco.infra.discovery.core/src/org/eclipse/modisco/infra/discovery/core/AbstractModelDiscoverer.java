@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011 Mia-Software.
+ * Copyright (c) 2011, 2016 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
+ *    Grégoire Dupé (Mia-Software) - Bug 491546 - [Discovery] Poor saving failure message
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core;
 
@@ -189,8 +190,11 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> {
 			try {
 				saveTargetModel();
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e,
-						"Error saving discovery result model", Activator.getDefault()); //$NON-NLS-1$
+				final String message = String.format(
+						"The saving step of '%s' failed (targetURI='%s')", //$NON-NLS-1$
+						this.getClass().getName(),
+						this.getTargetURI());
+				MoDiscoLogger.logError(e, message, Activator.getDefault());
 			}
 		}
 	}
