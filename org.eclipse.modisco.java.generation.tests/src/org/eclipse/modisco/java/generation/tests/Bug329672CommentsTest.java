@@ -13,11 +13,11 @@ package org.eclipse.modisco.java.generation.tests;
 import java.io.File;
 import java.io.IOException;
 
-import junit.framework.Assert;
-
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
+import org.junit.Assert;
+import org.junit.Test;
 import org.osgi.framework.Bundle;
 
 public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
@@ -46,6 +46,7 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 		return Activator.getDefault().getBundle();
 	}
 
+	@Test
 	public final void testBug329672Comments() throws CoreException, IOException {
 		File sourceJavaModel = getInputModelFile();
 		File targetJavaDirectory = prepareOutputDirectory();

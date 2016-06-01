@@ -13,11 +13,14 @@ package org.eclipse.modisco.java.generation.tests;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import junit.framework.Assert;
+
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
 import org.osgi.framework.Bundle;
 
 public class TestGlobal001 extends DiffGeneratedJavaTest {
@@ -33,22 +36,22 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 		.getBundle(TestGlobal001.JAVA_DISCOVERER_TESTS_PLUGINID);
 		return javaDiscoveryTestsBundle;
 	}
-	
+
 	@Override
 	protected String getJavaXmiFilePath() {
 		return TestGlobal001.RESOURCES_TEST1_XML;
 	}
-	
+
 	@Override
 	protected String getCodeSourceReferencePath() {
 		return TestGlobal001.RESOURCES_TEST1_JAVA;
 	}
-	
+
 	@Override
 	protected String getDeployedCodeSourceReferencePath() {
 		return TestGlobal001.DEPLOYED_TEST1_JAVA;
 	}
-	
+
 	/**
 	 * Launch a java files generation, and compares result with from reference
 	 * java files.
@@ -57,6 +60,8 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	 * @throws IOException
 	 * @throws CoreException
 	 */
+	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468685
+	@Test
 	public final void test001() throws URISyntaxException, CoreException,
 			IOException {
 		File sourceJavaModel = getInputModelFile();
@@ -82,7 +87,4 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 						+ targetJavaDirectory.getAbsolutePath(),
 				compareOldAndNewFiles);
 	}
-
-
-
 }

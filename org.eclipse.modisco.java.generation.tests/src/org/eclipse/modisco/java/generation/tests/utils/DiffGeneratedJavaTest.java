@@ -45,7 +45,7 @@ import org.osgi.framework.Bundle;
  * compared char by char (excluding white spaces).
  * 
  */
-public abstract class DiffGeneratedJavaTest extends TestCase {
+public abstract class DiffGeneratedJavaTest {
 
 	protected final class JavaFileFilter implements FilenameFilter {
 		public JavaFileFilter() {
