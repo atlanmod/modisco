@@ -27,9 +27,4 @@ Contributors:
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/cbi/updates/license/</url>
 		</repository>
-		<repository>
-			<id>EMF Facet</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/facet/updates/integration/1.1.0/I201507100802/</url>
-		</repository>
 </repositories>
