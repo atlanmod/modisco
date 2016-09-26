@@ -10,14 +10,6 @@
 
 RT_VERSION=Neon_maintenance
 
-function usage {
-	echo "Usage: $0 target_dir"
-}
-
-if [ -z $1 ] ; then
-	usage
-fi 
-
 echo $DISPLAY
 echo $PATH
 
