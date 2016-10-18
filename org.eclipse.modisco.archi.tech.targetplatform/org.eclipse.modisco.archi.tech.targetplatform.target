@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.6"?>
-
-<target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="14">
+<?pde version="3.8"?><target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="16">
 <locations>
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.m2m.atl.feature.group" version="3.1.0.v201006150240"/>
 <unit id="org.eclipse.m2m.atl.source.feature.group" version="3.1.0.v201006150240"/>
 <unit id="org.antlr.runtime" version="3.0.0.v200803061811"/>
@@ -22,16 +20,16 @@
 <unit id="org.apache.commons.cli" version="1.0.0.v20080604-1500"/>
 <repository location="http://download.eclipse.org/releases/helios/201006230900/"/>
 </location>
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.epp.package.modeling.feature.feature.group" version="1.3.0.20100617-0520"/>
 <repository location="http://download.eclipse.org/technology/epp/packages/helios/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="1.0.2.201601181335"/>
-<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="1.0.2.201601181335"/>
-<repository location="http://download.eclipse.org/facet/updates/release/"/>
+<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.0.0"/>
+<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/facet/updates/release/1.1.0/"/>
 </location>
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
 <unit id="org.eclipse.swtbot.eclipse.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
 <unit id="org.eclipse.swtbot.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
@@ -40,13 +38,13 @@
 <unit id="org.eclipse.swtbot.eclipse.test.junit4.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
 <repository location="http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site"/>
 </location>
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.prefuse" version="0.1.0.v20100514-1000"/>
 <unit id="org.prefuse.source" version="0.1.0.v20100514-1000"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit"> 
-<unit id="org.eclipse.license.feature.group" version="0.0.0"/> 
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.license.feature.group" version="0.0.0"/>
 <repository location="http://download.eclipse.org/cbi/updates/license"/>
 </location>
 </locations>
