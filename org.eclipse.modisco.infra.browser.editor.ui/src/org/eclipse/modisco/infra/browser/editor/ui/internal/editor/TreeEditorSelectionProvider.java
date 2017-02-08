@@ -14,13 +14,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.facet.custom.ui.CustomizedContentProviderUtils;
+import org.eclipse.emf.facet.util.core.DebugUtils;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 
 public class TreeEditorSelectionProvider implements ISelectionProvider {
 
+	private static final boolean DEBUG = DebugUtils
+			.getDebugStatus(Activator.getDefault());
 	private final ISelectionProvider wrappedSP;
 	private final List<ISelectionChangedListener> listeners = new ArrayList<ISelectionChangedListener>();
 
@@ -42,7 +46,12 @@ public class TreeEditorSelectionProvider implements ISelectionProvider {
 
 	public ISelection getSelection() {
 		final ISelection wrappedSel = this.wrappedSP.getSelection();
-		return CustomizedContentProviderUtils.resolveSelection(wrappedSel);
+		final ISelection result = CustomizedContentProviderUtils
+				.resolveSelection(wrappedSel);
+		if (DEBUG) {
+			DebugUtils.debug(result.toString());
+		}
+		return result;
 	}
 
 	public void removeSelectionChangedListener(

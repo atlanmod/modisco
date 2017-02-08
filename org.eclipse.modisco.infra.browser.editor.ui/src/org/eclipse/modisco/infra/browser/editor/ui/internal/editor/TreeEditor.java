@@ -170,7 +170,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		menuMgr.setRemoveAllWhenShown(true);
 		final Menu menu = menuMgr.createContextMenu(this.tree.getControl());
 		this.tree.getControl().setMenu(menu);
-		getSite().registerContextMenu(menuMgr, this.tree);
+		getSite().registerContextMenu(menuMgr, this.selectionProvider);
 	}
 
 	protected final void onCommandStackChanged() {
@@ -221,6 +221,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		} else {
 			contents.addAll(this.resource.getContents());
 		}
+		TreeEditorDragAndDropUtils.addDragAndDropSupport(this.tree,
+				this.editingDomain);
 		this.tree.setInput(contents);
 		this.selectionProvider = new TreeEditorSelectionProvider(this.tree);
 		getSite().setSelectionProvider(this.selectionProvider);
@@ -245,8 +247,6 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 
 	protected void internalRefresh(final Object object) {
 		this.tree.refresh(object);
-		TreeEditorDragAndDropUtils.addDragAndDropSupport(this.tree,
-				this.editingDomain);
 	}
 
 	protected void refresh() {
