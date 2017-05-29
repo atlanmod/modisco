@@ -9,11 +9,13 @@
     Contributors:
        Nicolas Bros (Mia-Software) - initial API and implementation
        Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
+       Grégoire Dupé (Mia-Software) - Bug 517365 - org.eclipse.modisco.infrastructure.feature : missing provider name
  -->
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
       label="MoDisco Infrastructure"
       version="1.1.0.qualifier"
+      provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.infra.common.core"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
