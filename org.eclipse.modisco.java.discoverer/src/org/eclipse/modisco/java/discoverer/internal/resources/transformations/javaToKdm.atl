@@ -1,5 +1,5 @@
 --@atlcompiler atl2006
---Copyright (c) 2009 Mia-Software.
+--Copyright (c) 2009 Mia-Software, 2017 Inria.
 --All rights reserved. This program and the accompanying materials
 --are made available under the terms of the Eclipse Public License v1.0
 --which accompanies this distribution, and is available at
@@ -9,6 +9,7 @@
 --	  Gabriel BARBIER (Mia-Software) - initial API and implementation
 --    Fabien GIQUEL (Mia-Software) - initial API and implementation
 --	  Hugo Bruneliere (Inria) - Bug 526229 - InfixExpression rule update
+--								Bug 526234 - SwitchStatementToActionElement update
 --
 -- @nsURI kdm=http://www.eclipse.org/MoDisco/kdm/action
 -- @nsURI java=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
@@ -1415,6 +1416,16 @@ rule SwitchStatementToActionElement extends ASTNodeToAbstractCodeElement {
 		kind <- 'switch'
 		,name <- 'switch'
 		-- referenced elements
+		,actionRelation <- 
+			if(src.expression.oclIsUndefined()) then 
+            	Sequence{}
+			else 
+				if (src.expression.oclIsTypeOf(java!SingleVariableAccess)) then
+		    		thisModule->CreateReads(src.expression)
+				else
+					Sequence{}
+				endif
+			endif
 		,codeElement <- thisModule->filterExpression(src.expression)
 		,codeElement <- src.statements
 	)
