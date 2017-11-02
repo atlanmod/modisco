@@ -8,7 +8,7 @@
 --Contributors:
 --	  Gabriel BARBIER (Mia-Software) - initial API and implementation
 --    Fabien GIQUEL (Mia-Software) - initial API and implementation
-
+--	  Hugo Bruneliere (Inria) - Bug 526229 - InfixExpression rule update
 --
 -- @nsURI kdm=http://www.eclipse.org/MoDisco/kdm/action
 -- @nsURI java=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
@@ -1954,6 +1954,26 @@ rule InfixExpressionToActionElement extends ASTNodeToAbstractCodeElement {
 		kind <- 'infix expression'
 		,name <- src.operator.toString()
 		-- referenced elements
+		,actionRelation <-
+			if (src.leftOperand.oclIsUndefined()) then
+				Sequence{}
+			else
+				if (src.leftOperand.oclIsTypeOf(java!SingleVariableAccess)) then
+					thisModule -> CreateReads(src.leftOperand)
+				else
+					Sequence{}
+				endif
+			endif
+		,actionRelation <-
+			if (src.rightOperand.oclIsUndefined()) then
+				Sequence{}
+			else 
+				if (src.rightOperand.oclIsTypeOf(java!SingleVariableAccess)) then
+					thisModule -> CreateReads(src.rightOperand)
+				else
+					Sequence{}
+				endif
+			endif
 		,codeElement <- thisModule->filterExpression(src.leftOperand)
 		,codeElement <- thisModule->filterExpression(src.rightOperand)
 		,codeElement <- src.extendedOperands->collect(e | thisModule->filterExpression(e))->flatten()
