@@ -25,6 +25,6 @@ Contributors:
 		<repository>
 			<id>Eclipse License</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/cbi/updates/license/</url>
+			<url>http://download.eclipse.org/cbi/updates/license/1.0.1.v20140414-1359/</url>
 		</repository>
 </repositories>
