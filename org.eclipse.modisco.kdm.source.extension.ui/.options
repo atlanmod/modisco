@@ -1,0 +1,4 @@
+org.eclipse.modisco.kdm.source.extension.ui/debug=false
+org.eclipse.modisco.kdm.source.extension.ui/debug/SourceAccessAdapter/debug=false
+org.eclipse.modisco.kdm.source.extension.ui/debug/BrowseCodeInTextEditor/debug=false
+org.eclipse.modisco.kdm.source.extension.ui/debug/ActionBrowseCodeInTextEditor/debug=false

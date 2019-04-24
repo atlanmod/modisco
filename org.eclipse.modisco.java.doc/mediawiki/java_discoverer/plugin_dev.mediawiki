@@ -1,0 +1,35 @@
+= Java Discoverer API =
+
+First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
+* org.eclipse.gmt.modisco.java
+* org.eclipse.modisco.java.discoverer
+* org.eclipse.modisco.infra.discovery.core
+
+There are several Java discoverer classes that do the same discovery but on different inputs:
+* DiscoverJavaModelFromJavaProject : from an IJavaProject (defined in jdt.core)
+* DiscoverJavaModelFromProject : from an IProject
+* DiscoverJavaModelFromClassFile : from an IClassFile (defined in jdt.core)
+* DiscoverJavaModelFromLibrary : from an IPackageFragmentRoot (for jars; defined in jdt.core)
+
+You can easily discover a Java model programmatically. For example, to discover a Java model from a Java project:
+<pre>
+DiscoverJavaModelFromJavaProject discoverer = new DiscoverJavaModelFromJavaProject();
+javaDiscoverer.discoverElement(javaProject, monitor);
+Resource javaResource = javaDiscoverer.getTargetModel();
+</pre>
+
+To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.
+
+Once you have the Java Resource, you can use the standard EMF API to read model elements. For example, to get the root:
+<pre>
+Model javaModel = (Model) javaResource.getContents().get(0);
+</pre>
+
+To print the list of Java classes in the model:
+
+<pre>
+EList<ClassFile> classFiles = javaModel.getClassFiles();
+for (ClassFile classFile : classFiles) {
+    System.out.println(classFile.getName());
+}
+</pre>

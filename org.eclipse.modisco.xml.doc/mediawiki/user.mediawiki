@@ -1,0 +1,23 @@
+== Overview ==
+
+The Generic XML Metamodel represents a subset of concepts defined in [http://www.w3.org/TR/2008/REC-xml-20081126/ W3C XML Recommendation].
+
+Its purpose is to represent XML content without taking care of conformance to concepts described in a Document Type Definition(DTD) or in a XML Schema Description (XSD) (i.e. without having a metamodel dedicated to one or many DTD/XSD).
+
+It is an alternative to the metamodel definition provided with EMF plug-ins (nsuri : http://www.eclipse.org/emf/2003/XMLType) : we think that a more understandable model navigation, without the use of the Extended Ecore Modeling FeatureMap type, can be proposed to the end user. In return, some filtering (on node children) might be more time expensive.
+
+''Quality disclaimer: this XML discoverer has good test coverage compared to the complexity of the discovery process.''
+
+== Components ==
+
+* [xml_metamodel/user.html XML metamodel]
+* [xml_discoverer/user.html XML discoverer]
+** [xml_discoverer/plugin_dev.html XML discoverer API]
+
+== Team ==
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins ==
+
+* XML metamodel : org.eclipse.gmt.modisco.xml
+* XML discoverer : org.eclipse.modisco.xml.discoverer

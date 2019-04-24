@@ -1,0 +1,29 @@
+-- @atlcompiler atl2010
+
+-- @nsURI MM=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
+
+-- ******************************************************************************
+-- Copyright (c) 2012 INRIA & Ecole des Mines de Nantes. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	Hugo Bruneliere - Initial implementation
+--  
+-- ******************************************************************************
+
+
+module DeleteDeprecatedMethods;
+create OUT : Java refining IN : Java;
+
+
+rule deleteDeprecatedMethod {
+	from
+		imd : Java!MethodDeclaration (
+			imd.annotations->exists(a | a.type.type.name='Deprecated')
+		)
+	to
+		drop
+}

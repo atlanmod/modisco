@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kdm"
+    nsURI="http://www.eclipse.org/MoDisco/kdmsourceextension/0.1.incubation/kdm" nsPrefix="kdm">
+  <eSubpackages name="source" nsURI="http://www.eclipse.org/MoDisco/kdmsourceextension/0.1.incubation/kdm/source"
+      nsPrefix="source">
+    <eSubpackages name="extension" nsURI="http://www.eclipse.org/MoDisco/kdmsourceextension/0.1.incubation/kdm/source/extension"
+        nsPrefix="extension">
+      <eClassifiers xsi:type="ecore:EClass" name="ASTNodeSourceRegion" abstract="false"
+          eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1"
+            eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+            eType="#//source/extension/CodeUnit2File" eOpposite="#//source/extension/CodeUnit2File/children"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CodeUnit2File" abstract="false">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="file" lowerBound="1"
+            eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceFile"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+            eType="#//source/extension/ASTNodeSourceRegion" containment="true" eOpposite="#//source/extension/ASTNodeSourceRegion/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1"
+            eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

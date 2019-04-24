@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+Copyright (c) 2009 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Gregoire DUPE (Mia-Software) - initial API and implementation
+-->
+<plugin>
+   <extension-point id="org.eclipse.gmt.modisco.infra.facet.registration" name="%extension-point.name.0" schema="schema/org.eclipse.gmt.modisco.infra.facet.registration.exsd"/>
+   <extension-point id="facetRefreshStrategy" name="%extension-point.name.1" schema="schema/facetRefreshStrategy.exsd"/>
+   <extension
+         id="org.eclipse.gmt.modisco.infra.facet.manager.facetBuilder"
+         name="%extension.name"
+         point="org.eclipse.gmt.modisco.common.core.builder.register">
+      <builder
+            class="org.eclipse.gmt.modisco.infra.facet.core.internal.FacetBuilder">
+         <depends
+               builder="org.eclipse.gmt.modisco.infra.query.core.QueryBuilder">
+         </depends>
+         <depends
+               builder="org.eclipse.gmt.modisco.infra.common.core.EcoreBuilder">
+         </depends>
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.gmt.modisco.common.core.protocolext">
+      <scheme-specific-part
+            class="org.eclipse.gmt.modisco.infra.facet.core.internal.FacetProtocolExtension">
+      </scheme-specific-part>
+   </extension>
+
+   <extension
+         id="org.eclipse.gmt.modisco.infra.facet.problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+
+</plugin>

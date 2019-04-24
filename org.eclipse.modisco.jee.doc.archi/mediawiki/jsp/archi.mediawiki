@@ -1,0 +1,49 @@
+=JSP Parser=
+
+Modisco JSP Parser has been developed using an ANTLR grammar.
+
+It can support JSP file, as well as HTML files, TAG files, and JSP/TAG fragment files
+
+==Grammar Architecture==
+
+The ANTLR grammar is composed with rules representing what could be founded in a JSP file : 
+
+The root element for the grammar is "Page", which is basically a JSP file.
+
+A "Page" can contain JSP items, as well as Doctype declarations, comments, CData items or simply HTML tags
+
+Tags are the basic elements to describe a JSP file. A tag can contain xml-like attributes, possibly composed with JSP elements.
+
+==Updating the Grammar==
+
+===Non XML Conformity===
+
+The JSP Grammar takes in consideration the non XML conformity of a JSP file.
+Knowing that it can contain html or javascript tags, an opened tag is not necessarily closed by one
+
+Example : 
+<code> <img src="./img/myImage.png"> </code>
+
+In order to build the inheritance tree, we had to store all the found tags, and each time a closing one is detected, rebuild the inheritance tree.
+
+Example :
+<pre> 
+<p>
+<img src="./img/myImage.png">
+</p>
+</pre>
+
+This fragment of code will add the <img> tag to the children of the <nowiki> <p> tag when </p> </nowiki> is detected, and so on.
+
+=== User Code in the generated one ===
+Because we do not know if a tag will be closed later in the code, we had to manually implement some text concatenation.
+
+Let's say we meet a new opening tag:
+
+<pre>
+<p>
+This is some HTML content
+</p>
+</pre>
+
+We cannot declare a rule  <nowiki> "'<p>'  'any letter'  '</p>'" because </p> </nowiki> might never appear, or a JSP expression could be there. That is why we concatenate manually the potentially present content after an opening tag, and wait till we found a known token.

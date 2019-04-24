@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.doc;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Activator: org.eclipse.modisco.doc.internal.Activator
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.help;bundle-version="3.5.0",
+ org.apache.ant;bundle-version="1.7.1"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+ 

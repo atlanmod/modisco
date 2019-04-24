@@ -1,0 +1,30 @@
+== Overview ==
+A discoverer is a component that injects an element into a model which represents this element. To allow an easy manipulation of different discoverers and to be independent of the discoverers implementation, we provide a standard contract for discoverers. Through that, we provide a set of common tools:
+* a registry of all discoverers available in the Eclipse platform
+* a contextual menu to use discoverers available on a single selected resource
+* a launch configuration to run discoverers and encapsulate them in a workflow
+
+== Abstract ==
+
+A general definition of MoDisco Discovery :
+'''A discovery is a process which takes an input source, and which aims to discover and return some information. This process may take into account some additional input data (discovery parameters), some of which being possibly mandatory for the process.'''
+
+== Documentation ==
+
+The documentation is divided in two parts: 
+
+* [user.html User Documentation]:
+**If you want to use existing discoverers through the Eclipse workbench
+* [plugin_dev.html Developer Documentation]:
+**If you want to use existing discoverers through a dedicated Eclipse/Java API
+**If you want to develop new discoverers through a dedicated Eclipse/Java API
+
+
+== Team ==
+*Fabien Giquel ([http://www.mia-software.com Mia-Software])
+*Nicolas Bros ([http://www.mia-software.com Mia-Software]) 
+
+== Included Plug-ins ==
+* metamodel: org.eclipse.modisco.infra.discovery
+* core plug-in : org.eclipse.modisco.infra.discovery.core
+* UI plug-in : org.eclipse.modisco.infra.discovery.ui

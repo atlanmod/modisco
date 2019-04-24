@@ -1,0 +1,24 @@
+== Overview ==
+Reverse engineering use cases on Java/JEE applications require the retrieval
+of data, via models, for a combination of several established
+technologies : Java, JSP, XML configuration files, ...
+
+Considering old JEE based applications: some data is stored in XML
+configuration files (and not as Java annotations), usually named "web.xml".
+The goal of the WebApp Discoverer plug-in is to allow the extraction of information from such web.xml files.
+
+== Components ==
+
+* [../webapp_metamodel/user.html WebApp Metamodel]
+* [../webapp_discoverer/user.html WebApp Discoverer]
+** [../webapp_discoverer/plugin_dev.html WebApp Discoverer API]
+* [../webapp_generation/user.html WebApp Generation]
+
+== Team ==
+* Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins  ==
+
+* metamodel : org.eclipse.modisco.jee.webapp
+* discoverer : org.eclipse.modisco.jee.webapp.discoverer

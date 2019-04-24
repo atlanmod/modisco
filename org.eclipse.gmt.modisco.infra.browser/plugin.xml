@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?><!--
+    Copyright (c) 2009, 2010 Mia-Software.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        Nicolas Bros (Mia-Software) - initial API and implementation
+        Nicolas Guyomar (Mia_software) - Bug 333651 Remove of the MoDisco EPackage view and of the metamodel browsing button
+ -->
+
+<plugin>
+   <extension-point id="loadingDepth" name="%extension-point.name" schema="schema/loadingDepth.exsd"/>
+   <extension-point id="doubleClickListener" name="%extension-point.name.0" schema="schema/doubleClickListener.exsd"/>
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser"
+            contributorClass="org.eclipse.gmt.modisco.infra.browser.editors.BrowserActionBarContributor"
+            default="true"
+            icon="icons/full/obj16/MoDiscoModelIcon.gif"
+            id="org.eclipse.gmt.modisco.infra.browser.editorID"
+            name="%Browser_label">
+         <contentTypeBinding
+               contentTypeId="org.eclipse.emf.ecore.xmi">
+         </contentTypeBinding>
+      </editor>
+      <editor
+            class="org.eclipse.gmt.modisco.infra.browser.editors.table.TableEditor"
+            default="false"
+            icon="icons/full/obj16/MoDiscoModelIcon.gif"
+            id="org.eclipse.gmt.modisco.infra.browser.table.editorID"
+            name="%TableViewer">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="org.eclipse.gmt.modisco.infra.browser.category"
+            name="%Category">
+      </category>
+      <command
+            categoryId="org.eclipse.gmt.modisco.infra.browser.category"
+            id="org.eclipse.gmt.modisco.infra.browser.OpenModelFromEmfRegistryCommand"
+            name="%OpenModelFromEmfRegistry">
+      </command>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.eclipse.gmt.modisco.infra.browser.OpenModelFromEmfRegistryCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+M3+R">
+      </key>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.gmt.modisco.infra.query.ui.queryResultDisplay">
+      <queryResultDisplayer
+            class="org.eclipse.gmt.modisco.infra.browser.queryResultDisplayers.TableQueryResultDisplayer"
+            name="Table">
+      </queryResultDisplayer>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.gmt.modisco.infra.browser.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.gmt.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
+            class="org.eclipse.gmt.modisco.infra.browser.preferences.BrowserPreferencePage"
+            id="org.eclipse.gmt.modisco.infra.browser.preferencePage"
+            name="%preferencePage.name">
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="org.eclipse.gmt.modisco.infra.browser.openResourceInMoDiscoBrowser"
+            objectClass="org.eclipse.emf.ecore.resource.Resource">
+         <action
+               class="org.eclipse.gmt.modisco.infra.browser.actions.OpenResourceInMoDiscoBrowserAction"
+               enablesFor="1"
+               id="org.eclipse.gmt.modisco.infra.browser.actions.openResourceInMoDiscoBrowserAction"
+               label="%OpenResourceInMoDiscoBrowserAction"
+               style="push"
+               tooltip="%OpenResourceInMoDiscoBrowserAction">
+         </action>
+      </objectContribution>
+   </extension>
+   
+   <!-- see EcoreBrowser#fixClipboardCommands -->
+   <extension point="org.eclipse.ui.contexts">
+      <context
+	    id="org.eclipse.gmt.modisco.infra.browser.dummyContext"
+	    parentId="org.eclipse.ui.contexts.dialogAndWindow"
+	    name="%dummyContext.name"/>
+   </extension>
+   
+   <!-- see EcoreBrowser#fixClipboardCommands -->
+   <extension point="org.eclipse.ui.commands">
+      <command
+	     id="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	     categoryId="org.eclipse.gmt.modisco.infra.browser.category"
+	     name="%dummyCommand.name"/>
+   </extension>
+	
+	<!-- see EcoreBrowser#fixClipboardCommands -->
+	<extension point="org.eclipse.ui.bindings">
+	  <!-- These key bindings are redefined on a dummy context which 
+	       is activated when some widgets are selected to prevent the 
+	       default commands from getting used -->
+	  <key
+	    sequence="M1+X"
+	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	  <key
+	    sequence="M1+C"
+	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	  <key
+	    sequence="M1+V"
+	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	  <key
+	    sequence="M1+Z"
+	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	</extension>
+
+  <extension
+        point="org.eclipse.emf.facet.util.emf.core.modelViewer">
+     <resourceViewer
+           class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
+     </resourceViewer>
+     <eObjectViewer
+           class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
+     </eObjectViewer>
+     <ePackageViewer
+           class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
+     </ePackageViewer>
+  </extension>   
+</plugin>

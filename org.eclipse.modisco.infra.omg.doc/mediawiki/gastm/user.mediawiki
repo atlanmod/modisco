@@ -1,0 +1,22 @@
+== Overview  ==
+
+Abstract Syntax Tree Metamodeling Specification (ASTM) is a publicly available specification from the Object Management Group ([http://www.omg.org/adm OMG]). 
+
+The main purpose of Abstract Syntax Tree Metamodeling Specification (ASTM) is to enable easy interchange of detailed software metadata between software development and software modernization tools, platforms, and metadata repositories in distributed heterogeneous environments. The Abstract Syntax Tree Metamodel (ASTM) defines a specification for modeling elements to express abstract syntax trees (AST) in a representation that is sharable among multiple tools from different vendors. 
+
+The ASTM specification mainly consists of definitions of metamodels software application artifacts in the following domains: 
+
+*Generic Abstract Syntax Tree Metamodel: A generic set of language modeling elements common across numerous languages establishes a common core for language modeling, called the Generic Abstract Syntax Trees (GAST). In this standard the GASTM model elements are expressed as UML class diagrams. 
+*Language Specific Abstract Syntax Tree Metamodels (SASTM) for particular languages such as Ada, C, Fortran, Java, etc are modeled in MOF or MOF compatible forms and expressed as the GASTM along with modeling element extensions sufficient to capture the language. 
+*Proprietary Abstract Syntax Tree Metamodels (PASTM) express ASTs for languages such as Ada, C, COBOL, etc modeled in formats that are not consistent with MOF, the GSATM, or SASTM. For such proprietary AST the ASTM specification defines the minimum conformance standards needed to support model interchange.
+
+See more on dedicated documents: [http://www.omg.org/spec/ASTM ASTM specifications]. 
+
+== Team ==
+
+;MetaModel
+* Adolfo Sánchez-Barbudo Herrera (Open Canarias) (GASTM metamodel implementation)
+
+== Included plug-ins ==
+
+* GASTM metamodel : org.eclipse.modisco.omg.gastm

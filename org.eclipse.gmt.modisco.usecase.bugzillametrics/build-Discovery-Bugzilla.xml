@@ -1,0 +1,48 @@
+<!--
+/********************************************************************************
+ * Copyright (c) 2007 INRIA. 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors: 
+ *     INRIA - Initial implementation
+ *     
+ ******************************************************************************/
+-->
+
+<!-- author: Hugo Bruneliere -->
+ 	
+<project name="BugzillaModel-Discovery" default="discover">
+
+	<target name="discover" depends="loadMetamodels">
+						
+		<!-- Inject the XML file to a XML model -->
+		<am3.loadModel name="Bugs_GMT-XML" metamodel="XML" path="/Input/bugs-GMT.xml">
+		 <injector name="xml"/>
+		</am3.loadModel>
+		<am3.saveModel model="Bugs_GMT-XML" path="Outputs/XML/Bugs_GMT-XML.xmi"/>
+
+		<!-- Generate the Bugzilla model from the XML model -->		
+		<am3.atl path="Transformations/XML2Bugzilla.atl">
+			<inModel name="IN" model="Bugs_GMT-XML"/>
+			<inModel name="XML" model="XML"/>
+			<inModel name="Bugzilla" model="Bugzilla"/>
+			<outModel name="OUT" model="Bugs_GMT-Bugzilla" metamodel="Bugzilla"/>
+		</am3.atl>		
+		<am3.saveModel model="Bugs_GMT-Bugzilla" path="Outputs/Bugzilla/Bugs_GMT-Bugzilla.xmi"/>
+		
+	</target>
+			
+	<target name="loadMetamodels">
+
+		<!-- Load Bugzilla metamodel -->
+		<am3.loadModel modelHandler="EMF" name="Bugzilla" metamodel="MOF" path="Metamodels/Bugzilla.ecore" />
+		
+		<!-- Load XML metamodel -->
+		<am3.loadModel modelHandler="EMF" name="XML" metamodel="MOF" path="Metamodels/XML.ecore" />
+		
+	</target>
+	
+</project>

@@ -1,0 +1,9 @@
+= KDM Discoverer API =
+
+The KDM discoverer can be called programmatically (see the [../java_discoverer/plugin_dev.html#Java_Discoverer_API Java Discoverer API]). Use either:
+
+* <code>DiscoverKDMModelFromJavaModel</code>
+* <code>DiscoverKDMModelFromJavaProject</code>
+* <code>DiscoverKDMModelFromProject</code>
+
+from plug-in org.eclipse.modisco.java.discoverer

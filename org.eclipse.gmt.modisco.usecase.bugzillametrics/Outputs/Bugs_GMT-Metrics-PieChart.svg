@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<svg xmlns = 'http://www.w3.org/2000/svg' version = '1.1' width = '358.2' height = '358.2'>
+  <g transform = 'translate(161.19,161.19) scale(0.9)' fill = 'black'>
+    <rect x = '-176.6' y = '-176.6' width = '353.2' height = '353.2' fill = 'none' stroke = 'none'/>
+    <text x = '0.0' y = '151.6' transform = '' stroke = 'blue' font-size = 'medium' text-anchor = 'middle'>Percentage of bugs per severity type</text>
+    <g transform = 'rotate(0.0)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 0,1 99.84613426472933,5.545220679977027 z' fill = 'rgb(0,99,5)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(99.96152616500244,2.773677480085566) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Blocker</text>
+    </g>
+    <g transform = 'rotate(3.1788079470198674)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 0,1 99.38501055220709,11.073376970810797 z' fill = 'rgb(127,99,11)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(99.84613426472933,5.545220679977027) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Critical</text>
+    </g>
+    <g transform = 'rotate(9.536423841059602)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 0,1 89.08490475323231,45.42994326551078 z' fill = 'rgb(255,89,45)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(97.23294317082876,23.361394700196833) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Major</text>
+    </g>
+    <g transform = 'rotate(36.556291390728475)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 1,1 -86.07773273793299,-50.89817213512661 z' fill = 'rgb(0,86,50)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(-26.383960337738348,96.45665677855857) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Normal</text>
+    </g>
+    <g transform = 'rotate(247.15231788079467)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 0,1 94.95451745817218,31.363029418180833 z' fill = 'rgb(127,94,31)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(98.73057212894398,15.88313971138551) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Minor</text>
+    </g>
+    <g transform = 'rotate(265.4304635761589)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 0,1 99.52903544104024,9.693869411961195 z' fill = 'rgb(255,99,9)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(99.88218946364769,4.852651640906059) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Trivial</text>
+    </g>
+    <g transform = 'rotate(270.9933774834437)' fill = 'black'>
+      <path transform = '' d = 'M0,0 L100,0 A100,100 0 0,1 1.7336839206397738,99.98497057089789 z' fill = 'rgb(0,1,99)' stroke = 'black'/>
+      <text x = '0.0' y = '0.0' transform = 'translate(71.3209940763026,70.09504835555798) rotate(70.0)' stroke = 'blue' font-size = '10' text-anchor = 'start'>-- Enhancement</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="kdmToJavaShortcuts" nsURI="http://www.eclipse.org/KDM/Composition/kdmShortcuts" nsPrefix="kdmToJavaShortcuts">
+  <eClassifiers xsi:type="facet:Facet" name="JavaSourceFile" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/kdm/source#//SourceFile"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="javaUnit" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//CompilationUnit"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/javaCompositionShortcuts#getSourceFileCompilationUnit"/>
+    </eStructuralFeatures>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/javaCompositionShortcuts#IsJavaSourceFile"/>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/MoDisco/kdm/source#/"/>
+</facet:FacetSet>

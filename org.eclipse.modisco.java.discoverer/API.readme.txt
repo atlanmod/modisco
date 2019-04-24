@@ -1,0 +1,14 @@
+##############################################################################
+# Copyright (c) 2011 Mia-Software.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors:
+#     Fabien Giquel (Mia-Software) - initial API and implementation
+###############################################################################
+
+oem.java.discoverer.internal is exposed for unit tests on oem.java.discoverer.tests
+oem.java.discoverer.internal.io.java is exposed to oem.java.discoverer.cdo which subclasses discoverer and uses directly JavaReader
+oem.java.discoverer.internal.io.binding is exposed to oem.java.discoverer.cdo which subclasses discoverer and uses directly BindingManager

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java" name="AnnotationJPA">
+  <ownedElements name="sample">
+    <ownedElements xsi:type="java:ClassDeclaration" originalCompilationUnit="//@compilationUnits.0" name="MethodAnnotated">
+      <modifier visibility="public"/>
+      <bodyDeclarations xsi:type="java:MethodDeclaration" originalCompilationUnit="//@compilationUnits.0" name="methodGeneratedValue">
+        <annotations originalCompilationUnit="//@compilationUnits.0">
+          <type type="//@unresolvedItems.0"/>
+        </annotations>
+        <modifier visibility="public"/>
+        <body originalCompilationUnit="//@compilationUnits.0"/>
+        <returnType type="//@orphanTypes.5"/>
+      </bodyDeclarations>
+    </ownedElements>
+    <ownedElements xsi:type="java:ClassDeclaration" originalCompilationUnit="//@compilationUnits.1" name="AnnotationCacheable">
+      <annotations originalCompilationUnit="//@compilationUnits.1">
+        <type type="//@unresolvedItems.1"/>
+      </annotations>
+      <modifier visibility="public"/>
+    </ownedElements>
+    <ownedElements xsi:type="java:InterfaceDeclaration" originalCompilationUnit="//@compilationUnits.2" name="AnnotationTable">
+      <annotations originalCompilationUnit="//@compilationUnits.2">
+        <type type="//@unresolvedItems.2"/>
+      </annotations>
+      <modifier visibility="public"/>
+    </ownedElements>
+    <ownedElements xsi:type="java:ClassDeclaration" originalCompilationUnit="//@compilationUnits.3" name="AnnotationEntityResult">
+      <annotations originalCompilationUnit="//@compilationUnits.3">
+        <type type="//@unresolvedItems.3"/>
+      </annotations>
+      <modifier visibility="public"/>
+    </ownedElements>
+  </ownedElements>
+  <orphanTypes xsi:type="java:PrimitiveTypeInt" name="int"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeLong" name="long"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeFloat" name="float"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeDouble" name="double"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeBoolean" name="boolean"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeVoid" name="void" usagesInTypeAccess="//@ownedElements.0/@ownedElements.0/@bodyDeclarations.0/@returnType"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeChar" name="char"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeShort" name="short"/>
+  <orphanTypes xsi:type="java:PrimitiveTypeByte" name="byte"/>
+  <unresolvedItems xsi:type="java:UnresolvedTypeDeclaration" name="GeneratedValue" proxy="true" usagesInTypeAccess="//@ownedElements.0/@ownedElements.0/@bodyDeclarations.0/@annotations.0/@type"/>
+  <unresolvedItems xsi:type="java:UnresolvedTypeDeclaration" name="Cacheable" proxy="true" usagesInTypeAccess="//@ownedElements.0/@ownedElements.1/@annotations.0/@type"/>
+  <unresolvedItems xsi:type="java:UnresolvedTypeDeclaration" name="Table" proxy="true" usagesInTypeAccess="//@ownedElements.0/@ownedElements.2/@annotations.0/@type"/>
+  <unresolvedItems xsi:type="java:UnresolvedTypeDeclaration" name="EntityResult" proxy="true" usagesInTypeAccess="//@ownedElements.0/@ownedElements.3/@annotations.0/@type"/>
+  <compilationUnits name="MethodAnnotated.java" originalFilePath="D:\guyomar\workspaces\Workspace_Runtime\AnnotationJPA\src\sample\MethodAnnotated.java" package="//@ownedElements.0" types="//@ownedElements.0/@ownedElements.0"/>
+  <compilationUnits name="AnnotationCacheable.java" originalFilePath="D:\guyomar\workspaces\Workspace_Runtime\AnnotationJPA\src\sample\AnnotationCacheable.java" package="//@ownedElements.0" types="//@ownedElements.0/@ownedElements.1"/>
+  <compilationUnits name="AnnotationTable.java" originalFilePath="D:\guyomar\workspaces\Workspace_Runtime\AnnotationJPA\src\sample\AnnotationTable.java" package="//@ownedElements.0" types="//@ownedElements.0/@ownedElements.2"/>
+  <compilationUnits name="AnnotationEntityResult.java" originalFilePath="D:\guyomar\workspaces\Workspace_Runtime\AnnotationJPA\src\sample\AnnotationEntityResult.java" package="//@ownedElements.0" types="//@ownedElements.0/@ownedElements.3"/>
+</java:Model>

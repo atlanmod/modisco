@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.gmt.modisco.infra.query.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.gmt.modisco.infra.query.core" id="org.eclipse.gmt.modisco.infra.query.factory" name="org.eclipse.gmt.modisco.infra.query.factory"/>
+      </appinfo>
+      <documentation>
+         Use this extension point when you want to define a new type of queries (Java, OCL, Scala, etc.).
+You must provide an implementation of IModelQueryFactory, so that queries of the type your are defining can be instantiated.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <choice minOccurs="1" maxOccurs="unbounded">
+            <element ref="factory"/>
+            <element ref="tooltip" minOccurs="0" maxOccurs="1"/>
+         </choice>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="factory">
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The implementation of the query factory.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.infra.query.core.IModelQueryFactory"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="tooltip">
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Implement this interface if you want to customize the tooltip that is shown for this kind of queries.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.infra.query.core.IModelQueryTooltip"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         0.8
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         &lt;pre&gt;
+&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.query.factory&quot;&gt;
+  &lt;factory class=&quot;org.eclipse.gmt.modisco.infra.query.core.java.internal.JavaModelQueryFactory&quot;/&gt;
+&lt;/extension&gt;
+&lt;/pre&gt;
+      </documentation>
+   </annotation>
+
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;
+See:
+&lt;ul&gt;
+&lt;li&gt; org.eclipse.gmt.modisco.infra.query.core.java.internal.JavaModelQueryFactory
+&lt;li&gt; org.eclipse.gmt.modisco.infra.query.jxpath.query.JXPathModelQueryFactory
+&lt;li&gt; org.eclipse.gmt.modisco.infra.query.core.ocl.OclModelQueryFactory
+&lt;/ul&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         Copyright (c) 2009 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Gregoire DUPE (Mia-Software) - initial API and implementation
+      </documentation>
+   </annotation>
+
+</schema>

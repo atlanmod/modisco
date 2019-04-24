@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/Java/Composition/0.1.incubation/javaApplication">
+  <types metaclassName="javaapplication.Java2Directory">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.composition.browser.customization/icons/javaApp.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="javaapplication.Java2File">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.composition.browser.customization/icons/javaApp.png"/>
+    </customizedFeatures>
+    <customizedFeatures customizedFeature="label">
+      <defaultValue xsi:type="uicustom:DerivedFeatureValue">
+        <valueCalculator xsi:type="query:OCLModelQuery" href="modisco:/query/javaComposition#getJava2FileName"/>
+      </defaultValue>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="javaapplication.JavaApplication">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.composition.browser.customization/icons/javaApp.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="javaapplication.JavaJar2File">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.composition.browser.customization/icons/javaApp.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="javaapplication.JavaNodeSourceRegion">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.composition.browser.customization/icons/javaApp.png"/>
+    </customizedFeatures>
+    <customizedFeatures customizedFeature="label">
+      <defaultValue xsi:type="uicustom:DerivedFeatureValue">
+        <valueCalculator xsi:type="query:JavaModelQuery" href="modisco:/query/javaComposition#getJavaNodeSourceRegionName"/>
+      </defaultValue>
+    </customizedFeatures>
+  </types>
+</uicustom:MetamodelView>

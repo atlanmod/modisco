@@ -1,0 +1,17 @@
+= KDM Source Discoverer API  =
+
+Each MoDisco discoverer responds to a normalized interface and can be called programmatically (see org.eclipse.modisco.infra.discovery.core.IDiscoverer<T>).
+
+First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
+* org.eclipse.gmt.modisco.omg.kdm
+* org.eclipse.modisco.kdm.source.discoverer
+* org.eclipse.modisco.infra.discovery.core
+
+You can easily discover a KDM model from a project programmatically:
+<pre>
+DiscoverSourceModelFromJavaElement discoverer = new DiscoverSourceModelFromJavaElement();
+discoverer.discoverElement(javaProject, monitor);
+Resource kdmModel = discoverer.getTargetModel();
+</pre>
+
+To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.

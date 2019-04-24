@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java">
+  <types metaclassName="java.ClassDeclaration">
+    <customizedFeatures customizedFeature="icon">
+      <valueCases>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/toggle_breadcrumb.gif"/>
+        <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasMainMethod"/>
+      </valueCases>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="java.VariableDeclaration">
+    <customizedFeatures customizedFeature="icon">
+      <valueCases>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/variableDeclarationWithFilteredPotentialTypes.gif"/>
+        <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasFilteredPotentialTypes"/>
+      </valueCases>
+      <valueCases>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/variableDeclarationWithPotentialTypes.gif"/>
+        <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasPotentialTypes"/>
+      </valueCases>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="java.Type">
+    <customizedFeatures customizedFeature="icon">
+      <valueCases>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/typeUsingOtherTypes.gif"/>
+        <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasUsedTypes"/>
+      </valueCases>
+    </customizedFeatures>
+  </types>
+</uicustom:MetamodelView>

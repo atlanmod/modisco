@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.modisco.workflow.launchType">
+<listAttribute key="serializedWorkflow">
+<listEntry value="1-JPAProject_Discovery"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.modisco.infra.discovery.launchConfigurationType"/>
+<listEntry value="2-ModifyEntityClassNames"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="3-AddMissingGetterMethods"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="4-DeleteDeprecatedMethods"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.m2m.atl.adt.launching.atlTransformation"/>
+<listEntry value="5-JPAProject_Regeneration"/>
+<listEntry value="0"/>
+<listEntry value="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType"/>
+</listAttribute>
+</launchConfiguration>

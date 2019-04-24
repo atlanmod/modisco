@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ *  Copyright (c) 2010, 2018 Mia-Software.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *  
+ *      Nicolas Guyomar (Mia-Software) - initial API and implementation
+ *	 Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings
+ -->
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="  Copyright (c) 2010, 2018 Mia-Software.&#xD;&#xA;  All rights reserved. This program and the accompanying materials&#xD;&#xA;  are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;  which accompanies this distribution, and is available at&#xD;&#xA;  http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;  &#xD;&#xA;  Contributors:&#xD;&#xA;  &#xD;&#xA;      Nicolas Guyomar (Mia-Software) - initial API and implementation&#xD;&#xA;    Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings"
+    modelDirectory="/org.eclipse.modisco.jee.webapp/src-gen" modelPluginID="org.eclipse.modisco.jee.webapp"
+    modelName="Webapp24" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace">
+  <foreignModel>webapp24.ecore</foreignModel>
+  <genPackages prefix="Webapp24" basePackage="org.eclipse.modisco.jee.webapp"
+      resource="XML" disposableProviderFactory="true" ecorePackage="webapp24.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//DispatcherTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//DispatcherTypeBase/FORWARD"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//DispatcherTypeBase/INCLUDE"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//DispatcherTypeBase/REQUEST"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//DispatcherTypeBase/ERROR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//EjbRefTypeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EjbRefTypeTypeBase/Entity"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EjbRefTypeTypeBase/Session"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//EnvEntryTypeValuesTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangBoolean"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangByte"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangCharacter"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangString"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangShort"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangInteger"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangLong"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangFloat"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//EnvEntryTypeValuesTypeBase/javaLangDouble"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//GenericBooleanTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//GenericBooleanTypeBase/true"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//GenericBooleanTypeBase/false"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//GenericBooleanTypeBase/yes"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//GenericBooleanTypeBase/no"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//HttpMethodTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/HEAD"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/OPTIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//HttpMethodTypeBase/TRACE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//MessageDestinationUsageTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//MessageDestinationUsageTypeBase/Consumes"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//MessageDestinationUsageTypeBase/Produces"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//MessageDestinationUsageTypeBase/ConsumesProduces"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//ResAuthTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//ResAuthTypeBase/Application"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//ResAuthTypeBase/Container"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//ResSharingScopeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//ResSharingScopeTypeBase/Shareable"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//ResSharingScopeTypeBase/Unshareable"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//TransportGuaranteeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//TransportGuaranteeTypeBase/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//TransportGuaranteeTypeBase/INTEGRAL"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//TransportGuaranteeTypeBase/CONFIDENTIAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp24.ecore#//WebAppVersionType">
+      <genEnumLiterals ecoreEnumLiteral="webapp24.ecore#//WebAppVersionType/_24"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="webapp24.ecore#//AuthMethodTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//DeweyVersionType"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//DispatcherTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//EjbLinkTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//EjbRefNameTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//EjbRefTypeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//EncodingType"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//EnvEntryTypeValuesTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//ErrorCodeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//FullyQualifiedClassTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//GenericBooleanTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//HomeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//HttpMethodTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//JavaIdentifierTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//JavaTypeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//JndiNameTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//JspFileTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//LocaleType"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//LocalHomeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//LocalTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//MessageDestinationLinkTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//MessageDestinationTypeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//MessageDestinationUsageTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//MimeTypeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//NonEmptyStringTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//PathTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//RemoteTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//ResAuthTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//ResSharingScopeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//RoleNameTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//TransportGuaranteeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//TrueFalseTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//TrueFalseTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//WarPathTypeBase"/>
+    <genDataTypes ecoreDataType="webapp24.ecore#//WebAppVersionTypeObject"/>
+    <genClasses ecoreClass="webapp24.ecore#//AuthConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//AuthConstraintType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//AuthConstraintType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//AuthConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//AuthMethodType"/>
+    <genClasses ecoreClass="webapp24.ecore#//DescriptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//DescriptionType/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//DispatcherType"/>
+    <genClasses ecoreClass="webapp24.ecore#//DisplayNameType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//DisplayNameType/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//DocumentRoot/webApp"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//EjbLinkType"/>
+    <genClasses ecoreClass="webapp24.ecore#//EjbLocalRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbLocalRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbLocalRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbLocalRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbLocalRefType/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbLocalRefType/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbLocalRefType/ejbLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//EjbLocalRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//EjbRefNameType"/>
+    <genClasses ecoreClass="webapp24.ecore#//EjbRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbRefType/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbRefType/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EjbRefType/ejbLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//EjbRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//EjbRefTypeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//EmptyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//EmptyType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//EnvEntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EnvEntryType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EnvEntryType/envEntryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EnvEntryType/envEntryType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//EnvEntryType/envEntryValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//EnvEntryType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//EnvEntryTypeValuesType"/>
+    <genClasses ecoreClass="webapp24.ecore#//ErrorCodeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//ErrorPageType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ErrorPageType/errorCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ErrorPageType/exceptionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ErrorPageType/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ErrorPageType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//FilterMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterMappingType/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterMappingType/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterMappingType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterMappingType/dispatcher"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//FilterMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//FilterNameType"/>
+    <genClasses ecoreClass="webapp24.ecore#//FilterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterType/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterType/filterClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FilterType/initParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//FilterType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//FormLoginConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FormLoginConfigType/formLoginPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//FormLoginConfigType/formErrorPage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//FormLoginConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//FullyQualifiedClassType"/>
+    <genClasses ecoreClass="webapp24.ecore#//GenericBooleanType"/>
+    <genClasses ecoreClass="webapp24.ecore#//HomeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//HttpMethodType"/>
+    <genClasses ecoreClass="webapp24.ecore#//IconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//IconType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//IconType/largeIcon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//IconType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//IconType/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//JavaIdentifierType"/>
+    <genClasses ecoreClass="webapp24.ecore#//JavaTypeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//JndiNameType"/>
+    <genClasses ecoreClass="webapp24.ecore#//JspConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspConfigType/taglib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspConfigType/jspPropertyGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//JspConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//JspFileType"/>
+    <genClasses ecoreClass="webapp24.ecore#//JspPropertyGroupType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/elIgnored"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/pageEncoding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/scriptingInvalid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/isXml"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/includePrelude"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//JspPropertyGroupType/includeCoda"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//JspPropertyGroupType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ListenerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ListenerType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ListenerType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ListenerType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ListenerType/listenerClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ListenerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//LocaleEncodingMappingListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//LocaleEncodingMappingListType/localeEncodingMapping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//LocaleEncodingMappingListType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//LocaleEncodingMappingType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//LocaleEncodingMappingType/locale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//LocaleEncodingMappingType/encoding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//LocaleEncodingMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//LocalHomeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//LocalType"/>
+    <genClasses ecoreClass="webapp24.ecore#//LoginConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//LoginConfigType/authMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//LoginConfigType/realmName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//LoginConfigType/formLoginConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//LoginConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//MessageDestinationLinkType"/>
+    <genClasses ecoreClass="webapp24.ecore#//MessageDestinationRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationRefType/messageDestinationRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationRefType/messageDestinationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationRefType/messageDestinationUsage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationRefType/messageDestinationLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//MessageDestinationRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//MessageDestinationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MessageDestinationType/messageDestinationName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//MessageDestinationType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//MessageDestinationTypeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//MessageDestinationUsageType"/>
+    <genClasses ecoreClass="webapp24.ecore#//MimeMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MimeMappingType/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//MimeMappingType/mimeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//MimeMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//MimeTypeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//NonEmptyStringType"/>
+    <genClasses ecoreClass="webapp24.ecore#//ParamValueType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ParamValueType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ParamValueType/paramName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ParamValueType/paramValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ParamValueType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//PathType"/>
+    <genClasses ecoreClass="webapp24.ecore#//PortComponentRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//PortComponentRefType/serviceEndpointInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//PortComponentRefType/portComponentLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//PortComponentRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//RemoteType"/>
+    <genClasses ecoreClass="webapp24.ecore#//ResAuthType"/>
+    <genClasses ecoreClass="webapp24.ecore#//ResourceEnvRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceEnvRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceEnvRefType/resourceEnvRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceEnvRefType/resourceEnvRefType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ResourceEnvRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ResourceRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceRefType/resRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceRefType/resType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceRefType/resAuth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ResourceRefType/resSharingScope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ResourceRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ResSharingScopeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//RoleNameType"/>
+    <genClasses ecoreClass="webapp24.ecore#//RunAsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//RunAsType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//RunAsType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//RunAsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//SecurityConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityConstraintType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityConstraintType/webResourceCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityConstraintType/authConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityConstraintType/userDataConstraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//SecurityConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//SecurityRoleRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityRoleRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityRoleRefType/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityRoleRefType/roleLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//SecurityRoleRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//SecurityRoleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityRoleType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SecurityRoleType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//SecurityRoleType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ServiceRefHandlerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/handlerName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/handlerClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/initParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/soapHeader"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/soapRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefHandlerType/portName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ServiceRefHandlerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ServiceRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/serviceRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/serviceInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/wsdlFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/jaxrpcMappingFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/serviceQname"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/portComponentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServiceRefType/handler"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ServiceRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ServletMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletMappingType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletMappingType/urlPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ServletMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//ServletNameType"/>
+    <genClasses ecoreClass="webapp24.ecore#//ServletType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/servletClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/jspFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/initParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/loadOnStartup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/runAs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//ServletType/securityRoleRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//ServletType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//SessionConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//SessionConfigType/sessionTimeout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//SessionConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//String">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//String/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//String/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//TaglibType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//TaglibType/taglibUri"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//TaglibType/taglibLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//TaglibType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//TransportGuaranteeType"/>
+    <genClasses ecoreClass="webapp24.ecore#//TrueFalseType"/>
+    <genClasses ecoreClass="webapp24.ecore#//UrlPatternType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//UrlPatternType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//UserDataConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//UserDataConstraintType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//UserDataConstraintType/transportGuarantee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//UserDataConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//WarPathType"/>
+    <genClasses ecoreClass="webapp24.ecore#//WebAppType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp24.ecore#//WebAppType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/description"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/displayName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/icon"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/distributable"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/contextParam"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/filter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/filterMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/listener"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/servlet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/servletMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/sessionConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/mimeMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/welcomeFileList"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/errorPage"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/jspConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/securityConstraint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/loginConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/securityRole"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/envEntry"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/ejbRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/ejbLocalRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/serviceRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/resourceRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/resourceEnvRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/messageDestinationRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/messageDestination"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp24.ecore#//WebAppType/localeEncodingMappingList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//WebAppType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//WebAppType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//WebResourceCollectionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//WebResourceCollectionType/webResourceName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//WebResourceCollectionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//WebResourceCollectionType/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp24.ecore#//WebResourceCollectionType/httpMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//WebResourceCollectionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//WelcomeFileListType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//WelcomeFileListType/welcomeFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//WelcomeFileListType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdAnyURIType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdAnyURIType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdAnyURIType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdBooleanType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdBooleanType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdBooleanType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdIntegerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdIntegerType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdIntegerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdNMTOKENType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdNMTOKENType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdNMTOKENType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdNonNegativeIntegerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdNonNegativeIntegerType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdNonNegativeIntegerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdPositiveIntegerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdPositiveIntegerType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdPositiveIntegerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdQNameType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdQNameType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdQNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp24.ecore#//XsdStringType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdStringType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp24.ecore#//XsdStringType/id"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,9 @@
+KDM improvements :
+
+EnumeratedType cannot have code elements => it should have the possibility, in Java, these feature is available (an enum is able to contain a class declaration or methods).
+Enumerated value cannot have an expression, only a value => in C#, a value could be initialized with an expression, and in Java, a value initialisation corresponds to a constructor call but only with parameters list (anonymous constructor call ?)
+
+A MemberUnit cannot contains StorableUnit elements => in Java, we could have a list of variable declared with only one type (private final Object obj1, obj2, obj3;)
+A MemberUnit should be able to be contained in an InterfaceUnit (java interface may have static final attributes)
+
+An ImplementationOf relationship should not be restrained to "abstract" methods.

@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<svg xmlns = 'http://www.w3.org/2000/svg' version = '1.1' width = '268.0' height = '120.0'>
+  <g transform = 'translate(108.0,10.0) scale(1.0)' fill = 'black'>
+    <text x = '31.0' y = '100.0' transform = '' stroke = 'blue' font-size = '12' text-anchor = 'middle'>Number of bugs per severity type</text>
+    <rect x = '-103.0' y = '-5.0' width = '258.0' height = '90.0' fill = 'none' stroke = 'blue'/>
+    <path transform = '' d = 'M145,0 H0 V80,0 z' fill = 'none' stroke = 'black'/>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '9.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Blocker (4)</text>
+      <rect x = '0.0' y = '0.0' width = '2.0377358490566038' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '19.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Critical (8)</text>
+      <rect x = '0.0' y = '10.0' width = '4.0754716981132075' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '29.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Major (34)</text>
+      <rect x = '0.0' y = '20.0' width = '17.32075471698113' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '39.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Normal (265)</text>
+      <rect x = '0.0' y = '30.0' width = '135.0' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '49.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Minor (23)</text>
+      <rect x = '0.0' y = '40.0' width = '11.716981132075471' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '59.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Trivial (7)</text>
+      <rect x = '0.0' y = '50.0' width = '3.5660377358490565' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+    <g transform = '' fill = 'black'>
+      <text x = '-5.0' y = '69.0' transform = '' stroke = 'blue' font-size = '8' text-anchor = 'end'>Enhancement (112)</text>
+      <rect x = '0.0' y = '60.0' width = '57.056603773584904' height = '10.0' fill = 'blue' stroke = 'black'/>
+    </g>
+  </g>
+</svg>

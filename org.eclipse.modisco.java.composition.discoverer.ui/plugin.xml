@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.modisco.infra.discovery.ui.discoverer">
+      <discoverer
+            discovererID="org.eclipse.modisco.java.composition.discoverer.fromJavaProject"
+            label="%discoverer.label"
+            icon="icons/DiscovererJavaComposite.png">
+      </discoverer>
+      <discoverer
+            discovererID="org.eclipse.modisco.java.composition.discoverer.fromProject"
+            label="%discoverer.label.0"
+            icon="icons/DiscovererJavaComposite.png">
+      </discoverer>
+   </extension>
+</plugin>

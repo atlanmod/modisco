@@ -1,0 +1,12 @@
+##############################################################################
+# Copyright (c) 2011 Mia-Software.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors:
+#     Fabien Giquel (Mia-Software) - initial API and implementation
+###############################################################################
+
+oem.jee.ejbjar.webapp**.util are exposed to oem.jee.webapp.discoverer because discoverer choose explicitely the ResourceFactoryImpl to use after reading XMl file header

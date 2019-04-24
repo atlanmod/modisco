@@ -1,0 +1,75 @@
+== UI test ==
+Create a MoDisco project named facetTest
+
+In the project facetTest, create a facet set named My
+
+Open My.facetSet in the model editor.
+
+Right-click > Load meta-model
+* Select: http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
+
+Set the facetSet:
+* Extended meta-model: java
+* Name: My
+* Ns prefix: my
+* Ns URI: http://test/facet/my
+
+Right-click > Load MoDisco Resource
+* Select : modifierJavaQueries
+Create a facet (Right-click > New child > Facet)
+* Condition query: isAbstract
+* ESuper type: ClassDeclaration
+* Name: MyAbstractClassDeclaration
+
+File > Import > Plug-ins and Fragements
+* Project with source folder
+* Next
+* org.eclipse.gmt.modisco.common.core
+* Finish
+
+Select the project org.eclipse.gmt.modisco.common.core
+* Right-click > MoDisco > Discover Java Model From Java project
+
+Open /org.eclipse.gmt.modisco.infra.common.core/org.eclipse.gmt.modisco.infra.common.core.javaxmi with the model browser
+
+Remove all the applied facet and customization
+
+Re-open the browser
+
+Apply the facet set My 
+* You must get a new element named MyAbstractClassDeclaration in the left panel.
+
+In the editor of My.facetSet
+* Right-click > Load MoDisco Resource
+** Select : _example_jdkAndEclipseQuerySet
+* Select MyAbstractClassDeclaration
+* Right-click > New Child > FacetReference
+** Name : subtypes
+** Value Query : getSubTypes
+** Upper bound: -1
+** EType: TypeDeclaration
+
+Re-open org.eclipse.gmt.modisco.infra.common.core.javaxmi
+* Check that the FacetReference subtypes work properly
+
+Open testFacet/My.facetSet
+* Select My
+* Right-click > New Child > Facet
+** Name : ClassDeclarationExt
+** ESuper Type: ClassDeclaration
+* Select ClassDeclarationExt
+* Right-click > New Child > FacetAttribute
+** Name : isAbstract
+** Value Query : isAbstract
+** EType: EBoolean
+* Save My.facetSet
+
+Re-open org.eclipse.gmt.modisco.infra.common.core.javaxmi
+* Enable the facet ClassDeclarationExt
+* Check that the FacetAttribute isAbstract works properly.
+
+Import the uml browser customization example
+* File > New > Example > UML MoDisco Browser customization 
+
+Open the "Facet set view"
+* Check that only one instance of the facet set _example_umlFacets exists.

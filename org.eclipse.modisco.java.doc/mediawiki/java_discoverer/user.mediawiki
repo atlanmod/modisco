@@ -1,0 +1,46 @@
+= Java Discoverer  =
+
+The goal of the Java Discoverer plug-in is to allow practical extractions of Java models from Java projects. 
+
+''Quality disclaimer: this Java Discoverer was tested on projects of varied sizes: see the [java_discoverer_benchmark/user.html Java discoverer benchmark].''
+
+=== Description  ===
+
+This plug-in aims at analyzing Java source code compliant with version 3 of "Java Language Specification" from Sun Microsystems and providing a model describing the information found, conforming to the [../java_metamodel/user.html Java metamodel]. 
+
+A Java model contains the full abstract syntax tree of the Java program: each statement such as attribute definition, method invocation or loop is described. In addition, links between elements are resolved (by resolved link we mean for instance a link between a method invocation and the declaration of this method, or between the usage of a variable and its declaration). The model can thus be seen as an abstract syntax graph (ASG). 
+
+=== User manual  ===
+
+The plug-in provides the user with a contextual menu to easily create models. 
+
+By right-clicking on a Java Project in the Eclipse Package Explorer view, you can quickly create the Java model of your application (see next Figure). 
+
+[[Image:../../img/MoDisco_DiscoverJavaProject_Menu.png|frame|center|Menus in Eclipse to create model from source code]] 
+
+A discovery parameters dialog opens to let you specify the parameters of the discovery:
+
+[[Image:../../img/MoDisco_Launching_discovery_org.eclipse.modisco.java.discoverer.javaProject.png|frame|center|Discovery parameters dialog]]
+
+* Set '''SERIALIZE_TARGET''' to true if you want to save the model to a file
+* You can define '''TARGET_URI''' to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.<br>'''Beware: the file will be overwritten if it already exists!'''
+* You can filter the classes to analyze using regular expressions, by setting INCLUDED_ELEMENTS_REGEX and/or EXCLUDED_ELEMENTS_REGEX
+* You can specify additional dependencies (projects or libraries) that you want to analyze and add to the model, by selecting them in the dialog that opens when you click the '''ELEMENTS_TO_ANALYZE''' parameter:
+
+[[Image:../../img/MoDisco_JavaDiscoverer_ElementsToAnalyze_Dialog.png|frame|center|Choosing the elements to analyze]]
+
+Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:
+
+[[Image:../../img/MoDisco_JavaDiscoverer_ProgressDialog.png|frame|center|Progress dialog]]
+
+At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:
+
+[[Image:../../img/MoDisco_Java_Test4javaXMI.png|frame|center|Java model in the package explorer]] 
+
+And the model is opened in the default model browser if you selected '''Open model in editor after discovery''':
+
+[[Image:../../img/MoDisco_Test4JavaXMI_ModelBrowser.png|frame|center|Java model viewed with the MoDisco model browser]] 
+
+The Java XMI files (with a filename ending in "_java.xmi" by convention) can be opened in any model browser:
+
+[[Image:../../img/MoDisco_Test4JavaXMI_OpenWithMenu.png|frame|center|"Open With" on a Java model]]

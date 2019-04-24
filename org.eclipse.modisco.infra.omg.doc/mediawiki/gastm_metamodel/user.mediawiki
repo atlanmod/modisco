@@ -1,0 +1,2 @@
+== EMF Implementation ==
+This component provides a ECore definition of ASTM core concepts (GASTM) and an EMF implementation of the classes defined by this standard.

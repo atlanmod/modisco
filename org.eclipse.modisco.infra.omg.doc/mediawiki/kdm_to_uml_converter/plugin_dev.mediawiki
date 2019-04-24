@@ -1,0 +1,19 @@
+= KDM to UML Converter Discoverer API  =
+
+Each MoDisco discoverer responds to a normalized interface and can be called programmatically (see org.eclipse.modisco.infra.discovery.core.IDiscoverer<T>).
+
+First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
+* org.eclipse.uml2.uml
+* org.eclipse.modisco.kdm.uml2converter
+* org.eclipse.modisco.infra.discovery.core
+
+You can easily discover a UML model from the KDM model programmatically:
+<pre>
+DiscoverUmlModelFromKdmModel discoverer = new DiscoverUmlModelFromKdmModel();
+discoverer.discoverElement(kdmModelFile, monitor);
+Resource umlModel = discoverer.getTargetModel();
+</pre>
+
+To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.
+
+As an example, you may checkout the code from project org.eclipse.modisco.kdm.uml2converter.tests.

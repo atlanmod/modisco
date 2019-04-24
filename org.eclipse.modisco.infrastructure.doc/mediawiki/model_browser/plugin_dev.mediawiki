@@ -1,0 +1,59 @@
+== UI Core ==
+Plug-in "org.eclipse.gmt.modisco.infra.browser.uicore" contains the core parts of the browser, that can be integrated in any tree viewer.
+It provides a tree content provider, a label provider, and a customization manager.
+
+<code>CustomizableModelContentProvider</code> and <code>CustomizableModelLabelProvider</code> are abstract classes that must be sub-classed, providing an instance of a <code>CustomizationManager</code>.
+
+The <code>CustomizationManager</code> class is the entry point for customizing the way things look and behave in the browser, through:
+* Browser customizations ("uiCustom" files)
+* Facets ("facetSet" files)
+* APIs to control options that would appear in the MoDisco Browser's toolbar (sort instances, show empty links, etc.)
+
+If parameters are modified in <code>CustomizationManager</code> after the <code>TreeViewer</code> was displayed, the viewer must be refreshed explicitly to account for these changes.
+
+You may also want to override method <code>getRootElements</code> in <code>CustomizableModelContentProvider</code>, to provide the <code>EObject</code>s you want to display at the root of the tree.
+
+Pay attention to the fact that the elements in the JFace model are not directly <code>EObject</code>s, but objects internal to the browser. So, don't redefine the <code>getElements</code> method to return <code>EObject</code>s, since that wouldn't work.
+
+=== EObject from selection ===
+If you want to get an <code>EObject</code> from a selection, you must use an adapter like this:
+ EObject eObject = (EObject) Platform.getAdapterManager().getAdapter(selectedElement, EObject.class);
+
+=== Selection from EObject ===
+To select an EObject in a TreeViewer created using UiCore, you can't just create a StructuredSelection(eObject), since the TreeViewer is composed of elements that encapsulate the EObjects.
+
+Instead, you can retrieve the wrapping element by doing something like this:
+
+  public Object findElementForEObject(EObject eObjectToFind, TreeViewer treeViewer) {
+    ITreeContentProvider contentProvider = (ITreeContentProvider) treeViewer
+        .getContentProvider();
+    Object[] elements = contentProvider.getElements(treeViewer.getInput());
+    LinkedList<Object> elementsToHandle = new LinkedList<Object>();
+    for (Object element : elements) {
+      elementsToHandle.add(element);
+    }
+    while (!elementsToHandle.isEmpty()) {
+      Object e = elementsToHandle.removeFirst();
+      EObject eObject = (EObject) Platform.getAdapterManager().getAdapter(e, EObject.class);
+      if (eObject != null && eObject.equals(eObjectToFind)) {
+        return e;
+      }
+      if (contentProvider.hasChildren(e)) {
+        Object[] children = contentProvider.getChildren(e);
+        if (children != null) {
+          for (Object child : children) {
+            elementsToHandle.addLast(child);
+          }
+        }
+      }
+    }
+    return null;
+  }
+
+=== Context menu / Selection provider ===
+If you need to use a selection provider, for example if you want to add a context menu on your UiCore viewer, you can use <code>UnwrappingSelectionProvider</code> :
+ getSite().registerContextMenu(MENU_ID, contextMenu, new UnwrappingSelectionProvider(treeViewer));
+
+<code>UnwrappingSelectionProvider</code> also offers static methods should you need them:
+* <code>ISelection unwrapSelection(ISelection selection)</code>
+* <code>Object unwrapElement(Object element)</code>

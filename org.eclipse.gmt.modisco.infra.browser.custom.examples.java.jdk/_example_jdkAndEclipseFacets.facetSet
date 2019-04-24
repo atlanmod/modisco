@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2010 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Gregoire DUPE (Mia-Software)
+    Nicolas GUYOMAR (Mia-Software)
+-->
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="_example_jdkAndEclipseFacets" nsURI="http://www.eclipse.org/MoDisco/examples/jdkAndEclipseFacets" nsPrefix="jdkAndEclipseFacets" facets="//Implementation //Collection //Throwable //EObject //Runnable //Plugin //JavaModelProxy //NotJavaModelProxy //EclipseUI //NotJavaModelProxyTypeDeclaration //TypeDeclarationExtension //TypeReference">
+  <eClassifiers xsi:type="facet:Facet" name="Implementation" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isImpl"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Collection" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isCollection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Throwable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isThrowable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="EObject" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isIndirectEObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Runnable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isRunnable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Plugin" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isPlugin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="JavaModelProxy" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//NamedElement"/>
+    <conditionQuery xsi:type="query:OCLModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isProxy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NotJavaModelProxy" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//NamedElement"/>
+    <conditionQuery xsi:type="query:OCLModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isNotProxy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="EclipseUI" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isEclipseUI"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NotJavaModelProxyTypeDeclaration" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:OCLModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#isNotProxy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TypeDeclarationExtension" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="subTypes" upperBound="-1" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/_example_jdkAndEclipseQuerySet#getSubTypes"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="qualifiedName" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/textJavaQueries#getQualifiedName"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TypeReference" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractVariablesContainer"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassInstanceCreation"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodRefParameter"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ParameterizedType"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//SingleVariableDeclaration"/>
+    <eStructuralFeatures xsi:type="facet:FacetReference" name="typeRef" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/textJavaQueries#getTypeRef"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
+</facet:FacetSet>

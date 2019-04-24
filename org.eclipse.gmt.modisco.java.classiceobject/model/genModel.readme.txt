@@ -1,0 +1,10 @@
+"org.eclipse.gtm.modisco.java.emf.classic" provides an alternate emf classic implementation for metamodel Java (EObjectImpl use)
+
+If ecore definition from "org.eclipse.gtm.modisco.java" is modified, please follow the steps to regenerate this alternate implementation :
+
+- paste the new .ecore definition 
+- fix the EPackage nsURI in .Ecore with : "http://www.eclipse.org/MoDisco/Java/x.x.x/java-classicEObject"
+- launch "generate model" on .genmodel
+- delete interfaces package (reuse those from "org.eclipse.gtm.modisco.java")
+- modify extends of JavaFactory to extend org.eclipse.gmt.modisco.java.emf.JavaFactory
+- modify extends of JavaPackage to extend org.eclipse.gmt.modisco.java.emf.JavaPackage

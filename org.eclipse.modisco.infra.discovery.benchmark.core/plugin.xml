@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ Copyright (c) 2012, 2015 Mia-Software.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+
+ Contributors:
+    Grégoire Dupé (Mia-Software) - Bug 482656 - infra.discovery.benchmark.core should be splitted to separate Accelo dependencies
+    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface 
+-->
+<plugin>
+   <extension
+         point="org.eclipse.modisco.infra.discovery.core.discoverer">
+      <discoverer
+            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererBenchmarkDiscoverer"
+            id="org.eclipse.modisco.infra.discovery.benchmark.api.benchmarkdiscoverer">
+      </discoverer>
+   </extension>
+   <extension
+         id="benchmark"
+         name="benchmark"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="xmiToHtml"
+         name="xmiToHtml"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.XmiToHtmlApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.emf.facet.util.emf.core.serialization">
+      <serializer
+            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IProjectSetSerializer">
+      </serializer>
+      <serializer
+            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.DiscovererListSerializer">
+      </serializer>
+   </extension>
+</plugin>

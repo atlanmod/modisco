@@ -1,0 +1,82 @@
+-- @atlcompiler atl2010
+
+-- @nsURI MM=http://www.eclipse.org/MoDisco/Java/0.2.incubation/java
+
+-- ******************************************************************************
+-- Copyright (c) 2012 INRIA & Ecole des Mines de Nantes. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	Hugo Bruneliere - Initial implementation
+--  
+-- ******************************************************************************
+
+
+module AddMissingGetterMethods;
+create OUT : Java refining IN : Java;
+
+
+helper context Java!FieldDeclaration def: hasGetter() : Boolean = 
+	self.abstractTypeDeclaration.bodyDeclarations
+	->select(d | d.oclIsTypeOf(Java!MethodDeclaration))
+	->select(md | md.name.startsWith(
+		let fieldName : String = self.fragments->first().name 
+		in
+			'get' + fieldName.substring(1,1).toUpper() + fieldName.substring(2,fieldName.size())
+		))
+	->notEmpty();
+
+rule createMissingGetterInEntityClass {
+	from
+		ifd : Java!FieldDeclaration (
+			ifd.abstractTypeDeclaration.annotations->exists(a | a.type.type.name='Entity')
+			and
+			not ifd.hasGetter()
+		)
+	to
+		ofd : Java!FieldDeclaration (),
+		-- @begin Getter generation
+		omd : Java!MethodDeclaration (
+			abstractTypeDeclaration <- ifd.abstractTypeDeclaration,
+			originalCompilationUnit <- ifd.originalCompilationUnit,
+			name <- let fieldName : String = ifd.fragments->first().name 
+					in
+						'get' + fieldName.substring(1,1).toUpper() + fieldName.substring(2,fieldName.size()),
+			modifier <- om,
+			body <- ob,
+			returnType <- ota
+		),
+		om : Java!Modifier (
+			visibility <- #public	
+		),
+		ota : Java!TypeAccess (
+			type <- if not ifd.type.oclIsUndefined() then
+						ifd.type.type
+					else
+						OclUndefined
+					endif
+		),
+		ob : Java!Block (
+			originalCompilationUnit <- ifd.originalCompilationUnit,
+			statements <- Sequence{ors}
+		),
+		ors : Java!ReturnStatement (
+			originalCompilationUnit <- ifd.originalCompilationUnit,
+			expression <- oex
+		),
+		oex : Java!FieldAccess (
+			originalCompilationUnit <- ifd.originalCompilationUnit,
+			field <- osva,
+			expression <- ote
+		),
+		osva : Java!SingleVariableAccess (
+			variable <- ifd.fragments->first()	
+		),
+		ote : Java!ThisExpression (
+			originalCompilationUnit <- ifd.originalCompilationUnit
+		)
+		-- @end Getter generation
+}

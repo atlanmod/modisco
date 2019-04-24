@@ -21,3 +21,24 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/**/__target__/
+/*.doc.archi/mediawiki/*.html
+/*.doc.archi/mediawiki/*.xml
+/*.doc/mediawiki/**/*.html
+/*.doc/mediawiki/**/*.xml
+/*.doc/mediawiki/*.html
+/*.doc/mediawiki/*.xml
+/*.doc/toc.html
+/*.eclipsepackage/pom_updated_modules.xml
+/*.targetplatform/pom.tmp.xml
+/*.tests/screenshots/
+/*.updatesite/category.xml
+/*.updatesite/pom_after_updatesite.xml
+/*.updatesite/poma.xml
+/*/bin/
+/*/pom.xml
+/*/pom.xml.*
+/*/pom.xml.configure-quality-poms.bak
+/*source.feature
+/pom.xml*
+/pom_after_configure.xml

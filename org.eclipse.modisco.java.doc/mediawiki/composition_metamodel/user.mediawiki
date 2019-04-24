@@ -1,0 +1,13 @@
+= Java Composition Metamodel =
+
+== Description ==
+This ''JavaApplication'' metamodel aims at weaving a MoDisco Java Model with a MoDisco KDM Inventory Model. It relies on the core metamodel described in the 
+[../../../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html kdm.source extension framework].
+
+Such a metamodel allows linking java nodes to their physical position in the source files (''JavaNodeSourceRegion'' metaclass owning ''startLine'', ''endLine'' properties).
+
+As proposed in the [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html kdm.source extension framework], the reference ''JavaASTNodeSourceRegion.javaNode'' derives from ''ASTNodeSourceRegion.node''. So does ''Java2File.javaUnit'' from ''CodeUnit2File.unit''.
+
+[[Image:../../img/composition/JavaApplicationMetaModel.png|frame|center|JavaApplication Metamodel]]
+
+Note : the references ''java2DirectoryChildren'' and ''java2FileChildren'' are expected to be containment references. For some technical reasons (memory usage tuning via lazy loading), they are not containments to make sure that the ''Java2Directory'', ''Java2File'' and ''JavaNodeSourceRegion'' instances are managed in their own graph compared with ''JavaApplication'' instances (see [../../../org.eclipse.modisco.java.doc.archi/mediawiki/composition/archi.html#Benchmark benchmark]).

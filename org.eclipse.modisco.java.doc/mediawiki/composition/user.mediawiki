@@ -1,0 +1,25 @@
+==Overview==
+
+Java Composition bundles propose a weaving representation between Java elements from a [../../../org.eclipse.modisco.java.doc/mediawiki/user.html Java model] and the elements from a [../../../org.eclipse.modisco.infra.omg.doc/mediawiki/kdm/user.html#Details MoDisco KDM Inventory model].
+
+Such a weaving information is convenient for client programs in order to access physical files. For example, the [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/user.html MoDisco Browser] may use this information for displaying original code portions associated to Java model element.
+
+The bundles relies on the [../../../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html kdm.source extension framework].
+
+== Components ==
+
+* [../composition_metamodel/user.html Composition metamodel]
+* [../composition_discoverer/user.html Composition discoverer]
+** [../composition_discoverer/plugin_dev.html Composition discoverer API]
+* [../composition_ui/user.html Java source code synchronization]
+
+
+== Team ==
+* Fabien Giquel ([http://www.mia-software.com Mia-Software])
+* Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
+
+== Included Plug-ins  ==
+
+* metamodel : org.eclipse.modisco.java.composition
+* discoverer : org.eclipse.modisco.java.composition.discoverer
+* Java source code synchronization : org.eclipse.modisco.java.composition.ui

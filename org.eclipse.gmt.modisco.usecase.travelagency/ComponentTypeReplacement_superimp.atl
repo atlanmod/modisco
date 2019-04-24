@@ -1,0 +1,204 @@
+-- ******************************************************************************
+-- Copyright (c) 2007 Txt e-Solutions. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	 Txt e-Solutions - Initial implementation
+--  
+-- ******************************************************************************
+
+--This module allows ComponentType replacement
+
+-- To be used with superimposition
+
+-- uses tags to select to be replaced and replacing components:
+
+-- To Be Replaced TagType: name = TBR tagtype, type = java.lang.String
+-- To Be Replaced Tag: name = TBR, type = TBR tagtype
+-- Replacing Part TagType: name = RC tagtype, type = java.lang.String
+-- Replacing Part Tag: name = RC, type = RC tagtype
+
+module ComponentTypeReplacement_superimp; -- Module Template
+create OUT : Xirup from IN : Xirup;
+
+--check if a ComponentType has a TBR Tag
+helper context Xirup!ComponentType def : hasTBRTag() : Boolean =
+	if (self.tag->exists(e|e.name='TBR')) 
+		then
+			true
+	else
+			false
+	endif;
+
+--check if a ComponentType has a RC Tag
+helper context Xirup!ComponentType def : hasRCTag() : Boolean =
+	if (self.tag->exists(e|e.name='RC')) 
+		then
+			true
+		else
+			false
+	endif;
+
+
+--get the TBR ComponentType
+helper def : getTBR : Xirup!ComponentType = 
+	Xirup!ComponentType->allInstances()->iterate(e;res : Sequence(Xirup!ComponentType) = Sequence{}|
+		if e.hasTBRTag()
+			then
+				res->append(e)
+			else
+				res
+		endif	
+		)->first()
+	;
+
+--get the Replacing ComponentType
+helper def : getRC : Xirup!ComponentType = 
+	Xirup!ComponentType->allInstances()->iterate(e;res : Sequence(Xirup!ComponentPart) = Sequence{}|
+		if e.hasRCTag()
+			then
+				res->append(e)
+			else
+				res
+		endif	
+		)->first()
+	;
+
+--check if the type of a ComponentPart has to be changed
+helper context Xirup!ComponentPart def : checkType() : Xirup!ComponentType  = 
+	if (self.type=thisModule.getTBR)
+		then
+			thisModule.getRC
+		else
+			self.type
+		endif	
+	;
+
+--check if a Connection offers has to be updated
+helper context Xirup!Connection def : checkOffConn() : Xirup!Offers  = 
+	if ((thisModule.getTBR.offers->exists(e|e=self.offers)))
+		then
+			thisModule.getRC.offers->select(e|e.to=self.offers.to)->first()
+		else
+			self.offers
+		endif
+;
+
+--check if a Connection requires has to be updated
+helper context Xirup!Connection def : checkReqConn() : Xirup!Requires  = 
+	if ((thisModule.getTBR.requires->exists(e|e=self.requires)))
+		then
+			thisModule.getRC.requires->select(e|e.to=self.requires.to)->first()
+		else
+			self.requires
+		endif
+;
+
+--check if a Required internal has to be updated
+helper context Xirup!Required def : checkReq() : Xirup!Requires  = 
+	if ((thisModule.getTBR.requires->exists(e|e=self.internal)))
+		then
+			thisModule.getRC.requires->select(e|e.to=self.internal.to)->first()
+		else
+			self.internal
+		endif
+;
+
+--check if a Exposed internal has to be updated
+helper context Xirup!Exposed def : checkExp() : Xirup!Offers  = 
+	if ((thisModule.getTBR.offers->exists(e|e=self.internal)))
+		then
+			thisModule.getRC.offers->select(e|e.to=self.internal.to)->first()
+		else
+			self.internal
+		endif
+;
+	
+
+--override ComponentPart rule
+rule ComponentPart{ 
+	from 
+		s : Xirup!ComponentPart 
+	to
+		t : Xirup!ComponentPart (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			externalModelReference<-s.externalModelReference,
+			type<-s.checkType(),
+			name<-s.name
+	)
+}
+
+
+--override Connection rule
+rule Connection{ 
+	from 
+		s : Xirup!Connection
+	to
+		t : Xirup!Connection (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			offers<-s.checkOffConn(),
+			offersPart<-s.offersPart,
+			requires<-s.checkReqConn(),
+			requiresPart<-s.requiresPart
+	)
+}
+
+
+--override Required rule 
+rule Required { 
+	from 
+		s : Xirup!Required
+	to
+		t : Xirup!Required (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			internal<-s.checkReq(),
+			internalPart<-s.internalPart,
+			external<-s.external
+	)
+}
+
+--override Exposed rule
+rule Exposed{ 
+	from 
+		s : Xirup!Exposed
+	to
+		t : Xirup!Exposed (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			constrainttemplate<-s.constrainttemplate,
+			constraint<-s.constraint,
+			internal<-s.checkExp(),
+			internalPart<-s.internalPart,
+			external<-s.external
+	)
+}
+
+
+--override Tag rule
+
+rule Tag { 
+	from 
+		s : Xirup!Tag 
+	to
+		t : Xirup!Tag (
+			id<-s.id,
+			tag<-s.tag,
+			metric<-s.metric,
+			name<-s.name,
+			type<-s.type,
+			value<-s.value
+	)
+}
+

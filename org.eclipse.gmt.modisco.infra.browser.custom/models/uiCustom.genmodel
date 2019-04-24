@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2009, 2018 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Nicolas Bros (Mia-Software) - initial API and implementation&#xD;&#xA;    Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings&#xD;&#xA;"
+    modelDirectory="/org.eclipse.gmt.modisco.infra.browser.custom/src-gen" editDirectory="/org.eclipse.gmt.modisco.infra.browser.custom.edit/src"
+    editorDirectory="/org.eclipse.gmt.modisco.infra.browser.custom.editor/src" modelPluginID="org.eclipse.gmt.modisco.infra.browser.custom"
+    templateDirectory="" modelName="UiCustom" editPluginClass="org.eclipse.gmt.modisco.infra.browser.custom.emf.provider.UiCustomEditPlugin"
+    editorPluginClass="org.eclipse.gmt.modisco.infra.browser.custom.emf.presentation.UiCustomEditorPlugin"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    editPluginID="org.eclipse.gmt.modisco.infra.browser.custom.edit" editorPluginID="org.eclipse.gmt.modisco.infra.browser.custom.editor"
+    language="" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.gmt.modisco.infra.query/model/query.genmodel#//query"
+    interfaceNamePattern="" classNamePattern="">
+  <foreignModel>uiCustom.ecore</foreignModel>
+  <genPackages prefix="Uicustom" basePackage="org.eclipse.gmt.modisco.infra.browser"
+      disposableProviderFactory="true" metaDataPackageSuffix="emf" classPackageSuffix="emf.impl"
+      utilityPackageSuffix="emf.util" providerPackageSuffix="emf.provider" presentationPackageSuffix="emf.presentation"
+      testsPackageSuffix="emf.tests" literalsInterface="false" fileExtensions="uiCustom"
+      ecorePackage="uiCustom.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uiCustom.ecore#//CustomizableFeatures">
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/visible"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/label"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/fontName"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/color"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/backgroundColor"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/icon"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/bold"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/italic"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/underlined"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/struckthrough"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/hideMetaclassName"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/facetMainIcon"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/facetOverlayIcon"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/metaclassVisible"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/collapseLink"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/metaclassIcon"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/instanceIcon"/>
+      <genEnumLiterals ecoreEnumLiteral="uiCustom.ecore#//CustomizableFeatures/stickerIcon"/>
+    </genEnums>
+    <genClasses ecoreClass="uiCustom.ecore#//MetamodelView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//MetamodelView/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uiCustom.ecore#//MetamodelView/types"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//MetamodelView/metamodelURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//MetamodelView/allQuerySetsAvailable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//MetamodelView/availableQuerySets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//MetamodelView/location"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//TypeView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//TypeView/metaclassName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//TypeView/appliesToSubInstances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uiCustom.ecore#//TypeView/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uiCustom.ecore#//TypeView/references"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uiCustom.ecore#//TypeView/metamodelView"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//AttributeView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//AttributeView/attributeName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uiCustom.ecore#//AttributeView/type"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//ReferenceView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//ReferenceView/referenceName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uiCustom.ecore#//ReferenceView/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uiCustom.ecore#//CustomView">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uiCustom.ecore#//CustomView/customizedFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//CustomViewFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//CustomViewFeature/customizedFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uiCustom.ecore#//CustomViewFeature/valueCases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uiCustom.ecore#//CustomViewFeature/defaultValue"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uiCustom.ecore#//CustomViewFeature/customView"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//FeatureValueCase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uiCustom.ecore#//FeatureValueCase/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uiCustom.ecore#//FeatureValueCase/feature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uiCustom.ecore#//FeatureValueCase/condition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="uiCustom.ecore#//FeatureValue">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uiCustom.ecore#//FeatureValue/feature"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference uiCustom.ecore#//FeatureValue/case"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//StaticFeatureValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uiCustom.ecore#//StaticFeatureValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="uiCustom.ecore#//DerivedFeatureValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uiCustom.ecore#//DerivedFeatureValue/valueCalculator"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

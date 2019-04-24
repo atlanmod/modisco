@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  
+  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  
+  Copyright 1999-2007 Sun Microsystems, Inc. All rights reserved.
+  
+  The contents of this file are subject to the terms of either the GNU
+  General Public License Version 2 only ("GPL") or the Common Development
+  and Distribution License("CDDL") (collectively, the "License").  You
+  may not use this file except in compliance with the License. You can obtain
+  a copy of the License at https://glassfish.dev.java.net/public/CDDL+GPL.html
+  or glassfish/bootstrap/legal/LICENSE.txt.  See the License for the specific
+  language governing permissions and limitations under the License.
+  
+  When distributing the software, include this License Header Notice in each
+  file and include the License file at glassfish/bootstrap/legal/LICENSE.txt.
+  Sun designates this particular file as subject to the "Classpath" exception
+  as provided by Sun in the GPL Version 2 section of the License file that
+  accompanied this code.  If applicable, add the following below the License
+  Header, with the fields enclosed by brackets [] replaced by your own
+  identifying information: "Portions Copyrighted [year]
+  [name of copyright owner]"
+  
+  Contributor(s):
+  
+  If you wish your version of this file to be governed by only the CDDL or
+  only the GPL Version 2, indicate your decision by adding "[Contributor]
+  elects to include this software in this distribution under the [CDDL or GPL
+  Version 2] license."  If you don't indicate a single choice of license, a
+  recipient has the option to distribute your version of this file under
+  either the CDDL, the GPL Version 2 or to extend the choice of license to
+  its licensees as provided above.  However, if you add GPL Version 2 code
+  and therefore, elected the GPL Version 2 license, then the option applies
+  only if the new code is made subject to such option by the copyright
+  holder.
+  
+-->
+<!--
+  The web-app element is the root of the deployment descriptor for
+  a web application
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="web-app">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="icon"/>
+        <xs:element minOccurs="0" ref="display-name"/>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element minOccurs="0" ref="distributable"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="context-param"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="servlet"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="servlet-mapping"/>
+        <xs:element minOccurs="0" ref="session-config"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mime-mapping"/>
+        <xs:element minOccurs="0" ref="welcome-file-list"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="error-page"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="taglib"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="resource-ref"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="security-constraint"/>
+        <xs:element minOccurs="0" ref="login-config"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="security-role"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="env-entry"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ejb-ref"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The icon element contains a small-icon and a large-icon element
+    which specify the location within the web application for a small and
+    large image used to represent the web application in a GUI tool. At a
+    minimum, tools must accept GIF and JPEG format images.
+  -->
+  <xs:element name="icon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="small-icon"/>
+        <xs:element minOccurs="0" ref="large-icon"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The small-icon element contains the location within the web
+    application of a file containing a small (16x16 pixel) icon image.
+  -->
+  <xs:element name="small-icon">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The large-icon element contains the location within the web
+    application of a file containing a large (32x32 pixel) icon image.
+  -->
+  <xs:element name="large-icon">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The display-name element contains a short name that is intended
+    to be displayed by GUI tools
+  -->
+  <xs:element name="display-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The description element is used to provide descriptive text about
+    the parent element.
+  -->
+  <xs:element name="description">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The distributable element, by its presence in a web application
+    deployment descriptor, indicates that this web application is
+    programmed appropriately to be deployed into a distributed servlet
+    container
+  -->
+  <xs:element name="distributable">
+    <xs:complexType>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The context-param element contains the declaration of a web
+    application's servlet context initialization parameters.
+  -->
+  <xs:element name="context-param">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="param-name"/>
+        <xs:element ref="param-value"/>
+        <xs:element minOccurs="0" ref="description"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- The param-name element contains the name of a parameter. -->
+  <xs:element name="param-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- The param-value element contains the value of a parameter. -->
+  <xs:element name="param-value">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The servlet element contains the declarative data of a
+    servlet. If a jsp-file is specified and the load-on-startup element is
+    present, then the JSP should be precompiled and loaded.
+  -->
+  <xs:element name="servlet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="icon"/>
+        <xs:element ref="servlet-name"/>
+        <xs:element minOccurs="0" ref="display-name"/>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:choice>
+          <xs:element ref="servlet-class"/>
+          <xs:element ref="jsp-file"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="init-param"/>
+        <xs:element minOccurs="0" ref="load-on-startup"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="security-role-ref"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The servlet-name element contains the canonical name of the
+    servlet.
+  -->
+  <xs:element name="servlet-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The servlet-class element contains the fully qualified class name
+    of the servlet.
+  -->
+  <xs:element name="servlet-class">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The jsp-file element contains the full path to a JSP file within
+    the web application.
+  -->
+  <xs:element name="jsp-file">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The init-param element contains a name/value pair as an
+    initialization param of the servlet
+  -->
+  <xs:element name="init-param">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="param-name"/>
+        <xs:element ref="param-value"/>
+        <xs:element minOccurs="0" ref="description"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The load-on-startup element indicates that this servlet should be
+    loaded on the startup of the web application. The optional contents of
+    these element must be a positive integer indicating the order in which
+    the servlet should be loaded. Lower integers are loaded before higher
+    integers. If no value is specified, or if the value specified is not a
+    positive integer, the container is free to load it at any time in the
+    startup sequence.
+  -->
+  <xs:element name="load-on-startup">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The servlet-mapping element defines a mapping between a servlet
+    and a url pattern
+  -->
+  <xs:element name="servlet-mapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="servlet-name"/>
+        <xs:element ref="url-pattern"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The url-pattern element contains the url pattern of the
+    mapping. Must follow the rules specified in Section 10 of the Servlet
+    API Specification.
+  -->
+  <xs:element name="url-pattern">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The session-config element defines the session parameters for
+    this web application.
+  -->
+  <xs:element name="session-config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="session-timeout"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The session-timeout element defines the default session timeout
+    interval for all sessions created in this web application. The
+    specified timeout must be expressed in a whole number of minutes.
+  -->
+  <xs:element name="session-timeout">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The mime-mapping element defines a mapping between an extension
+    and a mime type.
+  -->
+  <xs:element name="mime-mapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="extension"/>
+        <xs:element ref="mime-type"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The extension element contains a string describing an
+    extension. example: "txt"
+  -->
+  <xs:element name="extension">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The mime-type element contains a defined mime type. example:
+    "text/plain"
+  -->
+  <xs:element name="mime-type">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The welcome-file-list contains an ordered list of welcome files
+    elements.
+  -->
+  <xs:element name="welcome-file-list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="welcome-file"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The welcome-file element contains file name to use as a default
+    welcome file, such as index.html
+  -->
+  <xs:element name="welcome-file">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- The taglib element is used to describe a JSP tag library. -->
+  <xs:element name="taglib">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="taglib-uri"/>
+        <xs:element ref="taglib-location"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The taglib-uri element describes a URI, relative to the location
+    of the web.xml document, identifying a Tag Library used in the Web
+    Application.
+  -->
+  <xs:element name="taglib-uri">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    the taglib-location element contains the location (as a resource
+    relative to the root of the web application) where to find the Tag
+    Libary Description file for the tag library.
+  -->
+  <xs:element name="taglib-location">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The error-page element contains a mapping between an error code
+    or exception type to the path of a resource in the web application
+  -->
+  <xs:element name="error-page">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="error-code"/>
+          <xs:element ref="exception-type"/>
+        </xs:choice>
+        <xs:element ref="location"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- The error-code contains an HTTP error code, ex: 404 -->
+  <xs:element name="error-code">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The exception type contains a fully qualified class name of a
+    Java exception type.
+  -->
+  <xs:element name="exception-type">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The location element contains the location of the resource in the
+    web application
+  -->
+  <xs:element name="location">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The resource-ref element contains a declaration of a Web
+    Application's reference to an external resource.
+  -->
+  <xs:element name="resource-ref">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element ref="res-ref-name"/>
+        <xs:element ref="res-type"/>
+        <xs:element ref="res-auth"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The res-ref-name element specifies the name of the resource
+    factory reference name.
+  -->
+  <xs:element name="res-ref-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The res-type element specifies the (Java class) type of the data
+    source.
+  -->
+  <xs:element name="res-type">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The res-auth element indicates whether the application component
+    code performs resource signon programmatically or whether the
+    container signs onto the resource based on the principle mapping
+    information supplied by the deployer. Must be CONTAINER or SERVLET
+  -->
+  <xs:element name="res-auth">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The security-constraint element is used to associate security
+    constraints with one or more web resource collections
+  -->
+  <xs:element name="security-constraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="web-resource-collection"/>
+        <xs:element minOccurs="0" ref="auth-constraint"/>
+        <xs:element minOccurs="0" ref="user-data-constraint"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The web-resource-collection element is used to identify a subset
+    of the resources and HTTP methods on those resources within a web
+    application to which a security constraint applies. If no HTTP methods
+    are specified, then the security constraint applies to all HTTP
+    methods.
+  -->
+  <xs:element name="web-resource-collection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="web-resource-name"/>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="url-pattern"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="http-method"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The web-resource-name contains the name of this web resource
+    collection
+  -->
+  <xs:element name="web-resource-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- The http-method contains an HTTP method (GET | POST |...) -->
+  <xs:element name="http-method">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The user-data-constraint element is used to indicate how data
+    communicated between the client and container should be protected
+  -->
+  <xs:element name="user-data-constraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element ref="transport-guarantee"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The transport-guarantee element specifies that the communication
+    between client and server should be NONE, INTEGRAL, or
+    CONFIDENTIAL. NONE means that the application does not require any
+    transport guarantees. A value of INTEGRAL means that the application
+    requires that the data sent between the client and server be sent in
+    such a way that it can't be changed in transit. CONFIDENTIAL means
+    that the application requires that the data be transmitted in a
+    fashion that prevents other entities from observing the contents of
+    the transmission. In most cases, the presence of the INTEGRAL or
+    CONFIDENTIAL flag will indicate that the use of SSL is required.
+  -->
+  <xs:element name="transport-guarantee">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The auth-constraint element indicates the user roles that should
+    be permitted access to this resource collection. The role used here
+    must appear in a security-role-ref element.
+  -->
+  <xs:element name="auth-constraint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="role-name"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- The role-name element contains the name of a security role. -->
+  <xs:element name="role-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The login-config element is used to configure the authentication
+    method that should be used, the realm name that should be used for
+    this application, and the attributes that are needed by the form login
+    mechanism.
+  -->
+  <xs:element name="login-config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="auth-method"/>
+        <xs:element minOccurs="0" ref="realm-name"/>
+        <xs:element minOccurs="0" ref="form-login-config"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The realm name element specifies the realm name to use in HTTP
+    Basic authorization
+  -->
+  <xs:element name="realm-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The form-login-config element specifies the login and error pages
+    that should be used in form based login. If form based authentication
+    is not used, these elements are ignored.
+  -->
+  <xs:element name="form-login-config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="form-login-page"/>
+        <xs:element ref="form-error-page"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The form-login-page element defines the location in the web app
+    where the page that can be used for login can be found
+  -->
+  <xs:element name="form-login-page">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The form-error-page element defines the location in the web app
+    where the error page that is displayed when login is not successful
+    can be found
+  -->
+  <xs:element name="form-error-page">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The auth-method element is used to configure the authentication
+    mechanism for the web application. As a prerequisite to gaining access
+    to any web resources which are protected by an authorization
+    constraint, a user must have authenticated using the configured
+    mechanism. Legal values for this element are "BASIC", "DIGEST",
+    "FORM", or "CLIENT-CERT".
+  -->
+  <xs:element name="auth-method">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The security-role element contains the declaration of a security
+    role which is used in the security-constraints placed on the web
+    application.
+  -->
+  <xs:element name="security-role">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element ref="role-name"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The role-name element contains the name of a role. This element
+    must contain a non-empty string.
+  -->
+  <xs:element name="security-role-ref">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element ref="role-name"/>
+        <xs:element ref="role-link"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The role-link element is used to link a security role reference
+    to a defined security role. The role-link element must contain the
+    name of one of the security roles defined in the security-role
+    elements.
+  -->
+  <xs:element name="role-link">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The env-entry element contains the declaration of an
+    application's environment entry. This element is required to be
+    honored on in J2EE compliant servlet containers.
+  -->
+  <xs:element name="env-entry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element ref="env-entry-name"/>
+        <xs:element minOccurs="0" ref="env-entry-value"/>
+        <xs:element ref="env-entry-type"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The env-entry-name contains the name of an application's
+    environment entry
+  -->
+  <xs:element name="env-entry-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The env-entry-value element contains the value of an
+    application's environment entry
+  -->
+  <xs:element name="env-entry-value">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The env-entry-type element contains the fully qualified Java type
+    of the environment entry value that is expected by the application
+    code. The following are the legal values of env-entry-type:
+    java.lang.Boolean, java.lang.String, java.lang.Integer,
+    java.lang.Double, java.lang.Float.
+  -->
+  <xs:element name="env-entry-type">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The ejb-ref element is used to declare a reference to an
+    enterprise bean. 
+  -->
+  <xs:element name="ejb-ref">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="description"/>
+        <xs:element ref="ejb-ref-name"/>
+        <xs:element ref="ejb-ref-type"/>
+        <xs:element ref="home"/>
+        <xs:element ref="remote"/>
+        <xs:element minOccurs="0" ref="ejb-link"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The ejb-ref-name element contains the name of an EJB
+    reference. This is the JNDI name that the servlet code uses to get a
+    reference to the enterprise bean.
+  -->
+  <xs:element name="ejb-ref-name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The ejb-ref-type element contains the expected java class type of
+    the referenced EJB.
+  -->
+  <xs:element name="ejb-ref-type">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The ejb-home element contains the fully qualified name of the
+    EJB's home interface
+  -->
+  <xs:element name="home">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The ejb-remote element contains the fully qualified name of the
+    EJB's remote interface
+  -->
+  <xs:element name="remote">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    The ejb-link element is used in the ejb-ref element to specify
+    that an EJB reference is linked to an EJB in an encompassing Java2
+    Enterprise Edition (J2EE) application package. The value of the
+    ejb-link element must be the ejb-name of and EJB in the J2EE
+    application package.
+  -->
+  <xs:element name="ejb-link">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!--
+  The ID mechanism is to allow tools to easily make tool-specific
+  references to the elements of the deployment descriptor. This allows
+  tools that produce additional deployment information (i.e information
+  beyond the standard deployment descriptor information) to store the
+  non-standard information in a separate file, and easily refer from
+  these tools-specific files to the information in the standard web-app
+  deployment descriptor.
+-->

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="jeeJpaAnnotations" nsURI="http://www.eclipse.org/MoDisco/JEE/JPA/Annotations" nsPrefix="jeeJpaAnnotations">
+  <eClassifiers xsi:type="facet:Facet" name="Access" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsAccess"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AssociationOverride" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsAssociationOverride"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AssociationOverrides" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsAssociationOverrides"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AttributeOverride" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsAttributeOverride"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="AttributeOverrides" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsAttributeOverrides"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Basic" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsBasic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Cacheable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsCacheable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="CollectionTable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsCollectionTable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Column" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ColumnResult" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsColumnResult"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="DiscriminatorColumn" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsDiscriminatorColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="DiscriminatorValue" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsDiscriminatorValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ElementCollection" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsElementCollection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Embeddable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEmbeddable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Embedded" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEmbedded"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="EmbeddedId" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEmbeddedId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Entity" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="EntityListeners" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEntityListeners"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="EntityResult" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEntityResult"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Enumerated" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsEnumerated"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ExcludeDefaultListeners" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsExcludeDefaultListeners"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ExcludeSuperclassListeners" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsExcludeSuperclassListeners"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="FieldResult" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsFieldResult"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="GeneratedValue" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsGeneratedValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Id" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="IdClass" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsIdClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Inheritance" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsInheritance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="JoinColumn" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsJoinColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="JoinColumns" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsJoinColumns"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="JoinTable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsJoinTable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Lob" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsLob"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ManyToMany" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsManyToMany"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="ManyToOne" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsManyToOne"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKey" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKey"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKeyClass" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKeyClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKeyColumn" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKeyColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKeyEnumerated" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKeyEnumerated"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKeyJoinColumn" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKeyJoinColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKeyJoinColumns" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKeyJoinColumns"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapKeyTemporal" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapKeyTemporal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MappedSuperclass" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMappedSuperclass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="MapsId" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsMapsId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NamedNativeQueries" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsNamedNativeQueries"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NamedNativeQuery" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsNamedNativeQuery"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NamedQueries" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsNamedQueries"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="NamedQuery" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsNamedQuery"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="OneToMany" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsOneToMany"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="OneToOne" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsOneToOne"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="OrderBy" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsOrderBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="OrderColumn" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsOrderColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PersistenceContext" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPersistenceContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PersistenceContexts" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPersistenceContexts"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PersistenceProperty" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPersistenceProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PersistenceUnit" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPersistenceUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PersistenceUnits" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPersistenceUnits"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PostLoad" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPostLoad"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PostPersist" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPostPersist"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PostRemove" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPostRemove"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PostUpdate" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPostUpdate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PrePersist" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPrePersist"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PreRemove" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPreRemove"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PreUpdate" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPreUpdate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PrimaryKeyJoinColumn" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPrimaryKeyJoinColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="PrimaryKeyJoinColumns" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsPrimaryKeyJoinColumns"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="QueryHint" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsQueryHint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="SecondaryTable" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsSecondaryTable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="SecondaryTables" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsSecondaryTables"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="SequenceGenerator" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsSequenceGenerator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="SqlResultSetMapping" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsSqlResultSetMapping"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="SqlResultSetMappings" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsSqlResultSetMappings"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Table" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsTable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="TableGenerator" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsTableGenerator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Temporal" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsTemporal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Transient" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsTransient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="UniqueConstraint" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsUniqueConstraint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="Version" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
+    <conditionQuery xsi:type="query:JavaModelQuery" href="modisco:/query/jeeJpaAnnotations#IsVersion"/>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
+</facet:FacetSet>

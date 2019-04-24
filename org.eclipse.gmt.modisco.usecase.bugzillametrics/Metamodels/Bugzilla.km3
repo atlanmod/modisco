@@ -1,0 +1,282 @@
+-- ******************************************************************************
+-- Copyright (c) 2005 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+-- @name		Bugzilla
+-- @version		1.1
+-- @domains		Software bug tracking
+-- @authors		Hugo Bruneliere (hugo.bruneliere@gmail.com)
+-- @date		2005/07/07
+-- @description	This metamodel describes the structure used by Bugzilla to import/export bugs in XML format. Bugzilla is a free "Defect Tracking System" or "Bug-Tracking System" which allows individual or groups of developers to keep track of outstanding bugs in their product effectively.
+-- @see			bugzilla.dtd, http://www.mantisbt.org/mantis/view.php?id=4024 at the bottom of the page
+
+package Bugzilla {
+
+	-- @begin Bugzilla special types
+	
+	--@comment Defines the type of error for a bug
+	enumeration ErrorType {
+		literal et_null;
+		literal et_NotFound;
+		literal et_NotPermitted;
+		literal et_InvalidBugId;
+	}
+	
+	-- @comment Defines the type of severity for a bug.
+	enumeration SeverityType{
+		literal st_null;
+		-- @comment Blocks development and/or testing work. 
+		literal st_blocker; 
+		-- @comment Crashes, loss of data, severe memory leak.
+		literal st_critical;  
+		-- @comment Loss of function.
+		literal st_major;
+		-- @comment A normal problem.
+		literal st_normal;  
+		-- @comment Loss of function, or other problem where easy workaround is present. 
+		literal st_minor; 
+		-- @comment Cosmetic problem.
+		literal st_trivial;  
+		-- @comment Request for enhancement.
+		literal st_enhancement;  	
+	}
+	
+	-- @comment Defines the type of status for a bug.
+	enumeration StatusType{
+		literal st_null;
+		-- @comment A new bug, when a product has voting.
+		literal st_UNCONFIRMED;
+		-- @comment Recently added or confirmed.
+		literal st_NEW;
+		-- @comment Has been assigned.
+		literal st_ASSIGNED;
+		-- @comment Was once resolved but has been reopened
+		literal st_REOPENED;
+		-- @comment Has been resolved (e.g. fixed, deemed unfixable, etc.), see the "ResolutionType".
+		literal st_RESOLVED;
+		-- @comment The resolution has been approved by Quality Assurance.
+		literal st_VERIFIED;
+		-- @comment Over and done with.
+		literal st_CLOSED;	
+	}
+	
+	-- @comment Defines the type of operating system on which a bug was observed.
+	enumeration OperatingSystemType{
+		literal ost_null;
+		literal ost_all;
+		literal "ost_Windows 3.1"; 
+		literal "ost_Windows 95";
+		literal "ost_Windows 98";
+		literal "ost_Windows ME";
+		literal "ost_Windows 2000";
+		literal "ost_Windows NT";
+		literal "ost_Windows XP";
+		literal "ost_Windows Vista";
+		literal "ost_Windows Server 2003";
+		literal "ost_MacSystem 7";
+		literal "ost_MacSystem 7.5";
+		literal "ost_MacSystem 7.6.1";
+		literal "ost_MacSystem 8.0";
+		literal "ost_MacSystem 8.5";
+		literal "ost_MacSystem 8.6";
+		literal "ost_MacSystem 9.x";
+		literal "ost_Mac OS X 10.0";
+		literal "ost_Mac OS X 10.1";
+		literal "ost_Mac OS X 10.2";
+		literal "ost_Mac OS X 10.3";
+		literal ost_Linux;
+		literal "ost_BDS/OS"; 
+		literal ost_FreeBSD;
+		literal ost_NetBSD;
+		literal ost_OpenBSD;
+		literal ost_AIX;
+		literal ost_BeOS;
+		literal "ost_HP-UX";
+		literal ost_IRIX;
+		literal ost_Neutrino;
+		literal ost_OpenVMS;
+		literal "ost_OS/2";
+		literal "ost_OSF/1";
+		literal ost_Solaris;
+		literal ost_SunOS;
+		literal ost_other;
+	}
+	
+	-- @comment Defines the type of priority for a bug.
+	enumeration PriorityType{
+		literal pt_null;
+		-- @comment Most Urgent
+		literal pt_P1;
+		literal pt_P2;
+		literal pt_P3;
+		literal pt_P4;
+		-- @comment Least Urgent
+		literal pt_P5;
+	}
+	
+	-- @comment Defines the type of platform on which a bug was reported.
+	enumeration ReportedPlatformType{
+		literal rpt_null;
+		literal rpt_all;
+		literal rpt_DEC;
+		literal rpt_HP;
+		literal rpt_Macintosh;
+		literal rpt_PC;
+		literal rpt_SGI;
+		literal rpt_Sun;
+		literal rpt_other;
+	}
+	
+	-- @comment Defines the bug's type of resolution
+	enumeration ResolutionType{
+		literal rt_null;
+		-- @comment The bug has been fixed. 
+		literal rt_FIXED;
+		-- @comment The problem described is not a bug.
+		literal rt_INVALID;
+		-- @comment This bug will never be fixed. 
+		literal rt_WONTFIX;
+		-- @comment This bug will not be fixed in this version.
+		literal rt_LATER;
+		-- @comment This bug probably won't be fixed in this version. 
+		literal rt_REMIND;
+		-- @comment This is a duplicate of an existing bug. 
+		literal rt_DUPLICATE;
+		-- @comment This bug could not be reproduced. 
+		literal rt_WORKSFORME;
+		-- @comment This bug has been moved to another (Bugzilla) database.
+		literal rt_MOVED;
+	}
+	
+	-- @end Bugzilla special types
+	
+	
+	-- @begin Bugzilla structure
+	
+	class BugzillaRoot {
+		attribute version : String;
+		attribute urlbase : String;
+		attribute maintainer : String;
+		attribute exporter[0-1] : String;
+		
+		reference bugs[1-*] ordered container : Bug oppositeOf bug_bugzillaRoot;
+	}
+	
+	class Bug {
+		reference bug_bugzillaRoot : BugzillaRoot oppositeOf bugs;
+		
+		attribute error[0-1] : ErrorType;
+		
+		-- @comment The identification number of the bug
+		attribute bug_id : String;
+		
+		attribute exporter : String;
+		attribute urlbase : String;
+		
+		-- @comment The current status of this bug.
+		attribute bug_status : StatusType;
+		-- @comment The resolution's level of this bug.
+		attribute resolution[0-1] : ResolutionType;
+		-- @comment The name of the software product
+		attribute product : String;
+		-- @comment The bug's priority.
+		attribute priority : PriorityType;
+		-- @comment The name of the version of the software product or component
+		attribute version : String;
+		-- @comment The type of the platform on which the bug was reported.
+		attribute rep_platform : ReportedPlatformType;
+		-- @comment The current owner of this bug.
+		attribute assigned_to : String;
+		-- @comment The time at which information about this bug changing was last emailed to the cc list.
+		attribute delta_ts : String;
+		-- @comment The name of a software product's component.
+		attribute component : String;
+		-- @comment The user who has reported this bug.
+		attribute reporter : String;
+		-- @comment The current target milestone for this bug.
+		attribute target_milestone[0-1] : String;
+		-- @comment The evaluation of this bug's severity.
+		attribute bug_severity : SeverityType;
+		-- @comment The times of the bug's creation.
+		attribute creation_ts : String;
+		-- @comment The "quality assurance" contact for this bug.
+		attribute qa_contact[0-1] : String;
+		-- @comment Some comments about the status of this bug.
+		attribute status_whiteboard[0-1] : String;
+		-- @comment The operating system on which this bug was observed.
+		attribute op_sys : OperatingSystemType;
+		-- @comment A URL which points to more information about the bug.
+		attribute bug_file_loc[0-1] : String;
+		-- @comment A short textual description of the bug
+		attribute short_desc[0-1] : String;
+		-- @comment A list of keywords relating to this bug.
+		reference keywords[*] ordered container : Keywords;
+		-- @comment Represents the bugs from which this bug depends.
+		reference dependson[*] ordered container : Dependson;
+		-- @comment ???
+		reference blocks[*] ordered container : Blocks;
+		-- @comment Represents the users who have asked to receive email when a bug changes.
+		reference cc[*] ordered container : Cc;
+		-- @comment Long descriptions about the bug
+		reference long_desc[*] ordered container : LongDesc;
+		-- @comment Represents the attachments associated to this bug.
+		reference attachment[*] ordered container : Attachment;
+		
+	}
+
+	abstract class StringElt {
+		attribute value : String;
+	}
+	
+	-- @comment Defines a keyword relative to a bug
+	class Keywords extends StringElt {}
+	
+	-- @comment Defines a bug from which an other bug depends
+	class Dependson extends StringElt {}
+	
+	-- @comment Defines ???
+	class Blocks extends StringElt {}
+	
+	-- @comment Defines a user who have asked to receive an email when a bug changes.
+	class Cc extends StringElt {}
+	
+	-- @comment Defines a long description about the bug
+	class LongDesc {
+		attribute isPrivate : Boolean;
+		attribute who : String;
+		attribute bug_when : String;
+		attribute thetext : String;
+	}
+	
+	-- @comment Defines an attachment associated to a bug.
+	class Attachment {
+		attribute isObsolete : Boolean;
+		attribute isPatch : Boolean;
+		attribute isPrivate : Boolean;
+		attribute id : String;
+		attribute date : String;
+		attribute desc : String;
+		attribute type : String;
+		attribute data : String;
+	}
+	
+	-- @end Bugzilla structure
+
+}
+
+package PrimitiveTypes {
+	
+	datatype Integer;
+	datatype String;
+	datatype Boolean;
+	datatype Double;
+
+}

@@ -1,0 +1,26 @@
+== JSP Generation ==
+
+The goal of the JSP Generation plug-in is to allow JSP / HTML code generation from a Java model 
+
+''Quality disclaimer: this generator is provided without any guarantee.''
+
+=== Description ===
+
+[[Image:../../img/jsp/JspM2T.PNG|JSP Code Generation|frame|center]] 
+
+This plug-in proposes [[Acceleo|Acceleo MTL]] modules for generating JSP/html files conforming to JSP models. There is only one template which generates the code.
+
+JSP models are obtained with the [../jsp_discoverer/user.html#JSP_Discoverer JSP Discoverer] component.
+
+=== User Manual ===
+
+First, you need a JSP model. Please refer to the JSP Discoverer user manual.
+
+To launch a JSP generation, Add ''org.eclipse.modisco.jee.jsp.generation'' to your plug-in dependencies and use the ''GenerateJsp'' main method with the input model and target folder as parameters. The code should look like this :
+<pre>
+GenerateJsp jspGenerator = new GenerateJsp(URI.createFileURI("C:/.../my.javaxmi"),
+    new File("C:/.../myOutputFolder"), new ArrayList<Object>());
+jspGenerator.doGenerate(null);
+</pre>
+
+Note : at the moment this documentation is written, there is no way of creating one Acceleo Launch Configuration based on one installed Acceleo module plugin.

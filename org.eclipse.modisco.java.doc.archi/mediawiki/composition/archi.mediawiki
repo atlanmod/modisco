@@ -1,0 +1,42 @@
+
+== Benchmark 1 : dispatching elements in XMI resources ==
+
+Java Composition Model, weaving KDM Model Source and Java Model, can easily become a big model, in terms of XMI size as well as number of model elements. 
+
+First implementation resulted in a single XMI file containing all the weaving elements between both models. 
+
+Second implementation results in a root XMI file, referencing other xmi fragment 
+
+<br> Splitting was done following this repartition: 
+
+*First resource contains the JavaApplication itself 
+*Second resource contains all Java2Directory 
+*One resource per package/directory
+
+
+This splitting enable the browser to perform lazy loading when browsing a composite model in the MoDisco Model Browser It has been decided to split after realizing a benchmark on the memory consumption of the MoDisco model browser.
+
+[[Image:../../img/composition/ResourceComposition.png|frame|center|Three levels of resource]]
+
+=== Memory usage ===
+This figure shows the memory used by the MoDisco Model Browser on several xmi resources obtained with the Java Composition Discoverer. The gain of memory thanks to the lazy loading is significant.
+
+[[Image:../../img/composition/MoDiscoOpeningBrowserCompositeBenchmark.png|500px|center]]
+
+=== Saving time ===
+To decide which spliting solution to choose, we made another benchmark on the time spent on serializing the resource on the hard drive. Moreover, serializing plenty of files (one xmi for each java classes) creates a lot of hard drive access resulting in some delay while browsing
+
+[[Image:../../img/composition/MoDiscoSavingCompositeBenchmark.png|500px|center]]
+
+
+== Benchmark 2 : MinimalEObject vs EObject ==
+
+Measures in ''Browser opening'' figure have been done with -1 as "Resource Loading Depth" setting, for initial complete xmi resources loading in MoDisco Browser.
+
+[[Image:../../img/composition/Javakdmbenchmark2d.JPG|center]]
+
+[[Image:../../img/composition/Javakdmbenchmark2c.JPG|center]]
+
+[[Image:../../img/composition/Javakdmbenchmark2.JPG|center]]
+
+[[Image:../../img/composition/Javakdmbenchmark2b.JPG|center]]

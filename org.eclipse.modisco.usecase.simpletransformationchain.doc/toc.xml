@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc label="Simple Transformation Chain" link_to="../org.eclipse.modisco.doc/maintoc.xml#usecases.anchor">
+   <topic label="Simple Transformation Chain" href="mediawiki/user.html">
+      <topic label="User Documentation" href="mediawiki/user.html"/>
+      <topic label="Developer Documentation" href="mediawiki/plugin_dev.html"/>
+   </topic>
+</toc>

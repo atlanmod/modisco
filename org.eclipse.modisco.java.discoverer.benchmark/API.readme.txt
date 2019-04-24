@@ -1,0 +1,22 @@
+##############################################################################
+# Copyright (c) 2011 Mia-Software.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors:
+#     Fabien Giquel (Mia-Software) - initial API and implementation
+#		Fabien Giquel (Mia-Software) - 342856 - improve Discoverers implementation
+###############################################################################
+
+org.eclipse.modisco.java.discoverer.benchmark.template.html is exported because required by acceleo
+oem.java.discoverer.benchmark.emfstat is exposed to oem.java.composition.discoverer.benchmark which subclasses benchmark discoverer
+oem.java.discoverer.benchmark is exposed to oem.java.composition.discoverer.benchmark which subclasses benchmark discoverer
+
+org.eclipse.modisco.java.discoverer.benchmark;
+	x-friends:="org.eclipse.modisco.java.composition.discoverer.benchmark" 
+for reuse benchmarking in composition and testing
+
+org.eclipse.modisco.java.discoverer.benchmark.emf.client;
+	x-friends:="org.eclipse.modisco.java.discoverer.benchmark.tests"

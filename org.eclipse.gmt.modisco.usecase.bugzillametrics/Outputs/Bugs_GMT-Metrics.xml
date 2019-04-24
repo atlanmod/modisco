@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<Workbook xmlns = 'urn:schemas-microsoft-com:office:spreadsheet' xmlns:ss = 'urn:schemas-microsoft-com:office:spreadsheet'>
+  <Worksheet ss:Name = 'Metric 1'>
+    <Table>
+      <Column ss:Width = '200.0'/>
+      <Column ss:Width = '200.0'/>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'></Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'String'>Number of bugs per severity type</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Blocker</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>4.0</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Critical</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>8.0</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Major</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>34.0</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Normal</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>265.0</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Minor</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>23.0</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Trivial</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>7.0</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Enhancement</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>112.0</Data>
+        </Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name = 'Metric 2'>
+    <Table>
+      <Column ss:Width = '200.0'/>
+      <Column ss:Width = '200.0'/>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'></Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'String'>Percentage of bugs per severity type</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Blocker</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>0.8830022075055187</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Critical</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>1.7660044150110374</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Major</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>7.50551876379691</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Normal</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>58.498896247240616</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Minor</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>5.077262693156733</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Trivial</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>1.5452538631346577</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type = 'String'>Enhancement</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type = 'Number'>24.724061810154524</Data>
+        </Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>

@@ -1,0 +1,7 @@
+About exposed internal packages :
+
+- org.eclipse.modisco.infra.discovery.core.internal.catalog is exposed 
+	since extension point id is reused for generating plugin.xml 
+	in core.ui component (NewDiscovererWizard)
+- org.eclipse.modisco.infra.discovery.core.internal.annotations is exposed
+	for behavior non regression tests

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="discovery"
+    nsURI="http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery" nsPrefix="discovery">
+  <eSubpackages name="catalog" nsURI="http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/catalog"
+      nsPrefix="catalog">
+    <eClassifiers xsi:type="ecore:EClass" name="DiscovererDescription">
+      <eOperations name="getParameterDefinition" eType="#//catalog/DiscovererParameter">
+        <eParameters name="parameterName" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterDefinitions"
+          upperBound="-1" eType="#//catalog/DiscovererParameter" containment="true"
+          eOpposite="#//catalog/DiscovererParameter/discoverer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceType" lowerBound="1"
+          transient="true">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementationType" lowerBound="1"
+          transient="true">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementationBundle"
+          lowerBound="1" eType="#//catalog/Bundle" transient="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiscovererParameter">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="discoverer" lowerBound="1"
+          eType="#//catalog/DiscovererDescription" eOpposite="#//catalog/DiscovererDescription/parameterDefinitions"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//catalog/DirectionKind"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredInput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
+          transient="true">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="field" eType="#//catalog/Field"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="getter" eType="#//catalog/Method"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="setter" eType="#//catalog/Method"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initializer" eType="#//catalog/Method"
+          transient="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="DirectionKind">
+      <eLiterals name="in"/>
+      <eLiterals name="inout" value="1"/>
+      <eLiterals name="out" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EDataType" name="EStringToObjectMapEntry" instanceTypeName="java.util.Map.Entry&lt;String, Object>"
+        serializable="false"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Bundle" instanceClassName="org.osgi.framework.Bundle"
+        serializable="false"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Method" instanceClassName="java.lang.reflect.Method"
+        serializable="false"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Field" instanceClassName="java.lang.reflect.Field"
+        serializable="false"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DiscovererCatalog" eSuperTypes="platform:/plugin/org.eclipse.emf.facet.util.emf.catalog/model/catalog.ecore#//Catalog">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="installedDiscoverers"
+          upperBound="-1" eType="#//catalog/DiscovererDescription" volatile="true"
+          transient="true" derived="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="launch" nsURI="http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/launch"
+      nsPrefix="launch">
+    <eClassifiers xsi:type="ecore:EClass" name="LaunchConfiguration">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType ../../org.eclipse.emf.facet.util.emf.core/model/serialization.ecore#//ExtensibleSerializableJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterValues" upperBound="-1"
+          eType="#//launch/ParameterValue" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="discoverer" lowerBound="1"
+          eType="#//catalog/DiscovererDescription"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="openModelAfterDiscovery"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterValue">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//catalog/DiscovererParameter"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType ../../org.eclipse.emf.facet.util.emf.core/model/serialization.ecore#//ExtensibleSerializableJavaObject"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

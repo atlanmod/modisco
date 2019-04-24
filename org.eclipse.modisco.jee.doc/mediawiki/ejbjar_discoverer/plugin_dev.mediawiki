@@ -1,0 +1,19 @@
+==Discoverer API==
+
+Each MoDisco discoverer responds to a normalized interface and can be called programmatically (see org.eclipse.modisco.infra.discovery.core.IDiscoverer<T>).
+
+First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
+* org.eclipse.modisco.jee.ejbjar
+* org.eclipse.modisco.jee.ejbjar.discoverer
+* org.eclipse.modisco.infra.discovery.core
+
+You can easily discover an EjbJar model programmatically. For example:
+<pre>
+EjbJarDiscoverer2 discoverer = new EjbJarDiscoverer2();
+discoverer.discoverElement(xmlFile, monitor);
+Resource ejbJarModel = discoverer.getTargetModel();
+</pre>
+
+To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.
+
+As an example, you may checkout the code from project org.eclipse.modisco.jee.ejbjar.discoverer.tests.

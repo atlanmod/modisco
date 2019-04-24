@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ *  Copyright (c) 2010, 2018 Mia-Software.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *  
+ *  Contributors:
+ *  
+ *      Nicolas Guyomar (Mia-Software) - initial API and implementation
+ *	 Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings
+ -->
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="  Copyright (c) 2010, 2018 Mia-Software.&#xD;&#xA;  All rights reserved. This program and the accompanying materials&#xD;&#xA;  are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;  which accompanies this distribution, and is available at&#xD;&#xA;  http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;  &#xD;&#xA;  Contributors:&#xD;&#xA;  &#xD;&#xA;      Nicolas Guyomar (Mia-Software) - initial API and implementation&#xD;&#xA;    Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings"
+    modelDirectory="/org.eclipse.modisco.jee.webapp/src-gen" modelPluginID="org.eclipse.modisco.jee.webapp"
+    modelName="Webapp30" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" runtimeVersion="2.5" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace">
+  <foreignModel>webapp30.ecore</foreignModel>
+  <genPackages prefix="Webapp30" basePackage="org.eclipse.modisco.jee.webapp" resource="XML"
+      disposableProviderFactory="true" loadInitialization="true" literalsInterface="false"
+      ecorePackage="webapp30.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//AddressingResponsesTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//AddressingResponsesTypeBase/ANONYMOUS"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//AddressingResponsesTypeBase/NONANONYMOUS"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//AddressingResponsesTypeBase/ALL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//DispatcherTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//DispatcherTypeBase/FORWARD"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//DispatcherTypeBase/INCLUDE"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//DispatcherTypeBase/REQUEST"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//DispatcherTypeBase/ASYNC"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//DispatcherTypeBase/ERROR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//EjbRefTypeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//EjbRefTypeTypeBase/Entity"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//EjbRefTypeTypeBase/Session"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//GenericBooleanTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//GenericBooleanTypeBase/true"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//GenericBooleanTypeBase/false"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//GenericBooleanTypeBase/yes"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//GenericBooleanTypeBase/no"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//IsolationLevelType">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//IsolationLevelType/TRANSACTIONREADUNCOMMITTED"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//IsolationLevelType/TRANSACTIONREADCOMMITTED"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//IsolationLevelType/TRANSACTIONREPEATABLEREAD"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//IsolationLevelType/TRANSACTIONSERIALIZABLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//MessageDestinationUsageTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//MessageDestinationUsageTypeBase/Consumes"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//MessageDestinationUsageTypeBase/Produces"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//MessageDestinationUsageTypeBase/ConsumesProduces"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//NullCharType">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//NullCharType/_"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//PersistenceContextTypeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//PersistenceContextTypeTypeBase/Transaction"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//PersistenceContextTypeTypeBase/Extended"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//ResAuthTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//ResAuthTypeBase/Application"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//ResAuthTypeBase/Container"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//ResSharingScopeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//ResSharingScopeTypeBase/Shareable"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//ResSharingScopeTypeBase/Unshareable"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//TrackingModeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//TrackingModeTypeBase/COOKIE"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//TrackingModeTypeBase/URL"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//TrackingModeTypeBase/SSL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//TransportGuaranteeTypeBase">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//TransportGuaranteeTypeBase/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//TransportGuaranteeTypeBase/INTEGRAL"/>
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//TransportGuaranteeTypeBase/CONFIDENTIAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webapp30.ecore#//WebAppVersionType">
+      <genEnumLiterals ecoreEnumLiteral="webapp30.ecore#//WebAppVersionType/_30"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="webapp30.ecore#//AddressingResponsesTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//AuthMethodTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//DeweyVersionType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//DispatcherTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//EjbLinkTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//EjbRefNameTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//EjbRefTypeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//EncodingType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//EnvEntryTypeValuesTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//ErrorCodeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//FullyQualifiedClassTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//GenericBooleanTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//HomeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//HttpMethodType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//IsolationLevelTypeObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//JavaIdentifierTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//JavaTypeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//JdbcUrlTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//JndiNameTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//JspFileTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//LoadOnStartupType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//LocaleType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//LocalHomeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//LocalTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//MessageDestinationLinkTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//MessageDestinationTypeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//MessageDestinationUsageTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//MimeTypeTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//NonEmptyStringTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//NullCharTypeObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//PathTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//PersistenceContextTypeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//ProtocolBindingListType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//ProtocolBindingType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//ProtocolURIAliasType"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//QnamePattern"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//RemoteTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//ResAuthTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//ResSharingScopeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//RoleNameTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//TrackingModeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//TransportGuaranteeTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//TrueFalseTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//TrueFalseTypeBaseObject"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//WarPathTypeBase"/>
+    <genDataTypes ecoreDataType="webapp30.ecore#//WebAppVersionTypeObject"/>
+    <genClasses ecoreClass="webapp30.ecore#//AbsoluteOrderingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp30.ecore#//AbsoluteOrderingType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//AbsoluteOrderingType/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//AbsoluteOrderingType/others"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//AddressingResponsesType"/>
+    <genClasses ecoreClass="webapp30.ecore#//AddressingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//AddressingType/enabled"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//AddressingType/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//AddressingType/responses"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//AuthConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//AuthConstraintType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//AuthConstraintType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//AuthConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//AuthMethodType"/>
+    <genClasses ecoreClass="webapp30.ecore#//CookieCommentType"/>
+    <genClasses ecoreClass="webapp30.ecore#//CookieConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/httpOnly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/secure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//CookieConfigType/maxAge"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//CookieConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//CookieDomainType"/>
+    <genClasses ecoreClass="webapp30.ecore#//CookieNameType"/>
+    <genClasses ecoreClass="webapp30.ecore#//CookiePathType"/>
+    <genClasses ecoreClass="webapp30.ecore#//DataSourceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/className"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/serverName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/portNumber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/databaseName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/url"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/user"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/password"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/loginTimeout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/transactional"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//DataSourceType/isolationLevel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/initialPoolSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/maxPoolSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/minPoolSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/maxIdleTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DataSourceType/maxStatements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//DataSourceType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//DescriptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//DescriptionType/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//DispatcherType"/>
+    <genClasses ecoreClass="webapp30.ecore#//DisplayNameType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//DisplayNameType/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//DocumentRoot/webApp"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//EjbLinkType"/>
+    <genClasses ecoreClass="webapp30.ecore#//EjbLocalRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/localHome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/local"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/ejbLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbLocalRefType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//EjbLocalRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//EjbRefNameType"/>
+    <genClasses ecoreClass="webapp30.ecore#//EjbRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/ejbRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/ejbRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/home"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/remote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/ejbLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EjbRefType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//EjbRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//EjbRefTypeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//EmptyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//EmptyType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//EnvEntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/envEntryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/envEntryType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/envEntryValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//EnvEntryType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//EnvEntryType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//EnvEntryTypeValuesType"/>
+    <genClasses ecoreClass="webapp30.ecore#//ErrorCodeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//ErrorPageType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ErrorPageType/errorCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ErrorPageType/exceptionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ErrorPageType/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ErrorPageType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//FilterMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterMappingType/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp30.ecore#//FilterMappingType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//FilterMappingType/urlPattern"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//FilterMappingType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterMappingType/dispatcher"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//FilterMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//FilterNameType"/>
+    <genClasses ecoreClass="webapp30.ecore#//FilterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/filterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/filterClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/asyncSupported"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FilterType/initParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//FilterType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//FormLoginConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FormLoginConfigType/formLoginPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//FormLoginConfigType/formErrorPage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//FormLoginConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//FullyQualifiedClassType"/>
+    <genClasses ecoreClass="webapp30.ecore#//GenericBooleanType"/>
+    <genClasses ecoreClass="webapp30.ecore#//HandlerChainsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerChainsType/handlerChain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//HandlerChainsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//HandlerChainType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//HandlerChainType/serviceNamePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//HandlerChainType/portNamePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//HandlerChainType/protocolBindings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerChainType/handler"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//HandlerChainType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//HandlerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/handlerName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/handlerClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/initParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/soapHeader"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/soapRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//HandlerType/portName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//HandlerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//HomeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//IconType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//IconType/smallIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//IconType/largeIcon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//IconType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//IconType/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//InjectionTargetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//InjectionTargetType/injectionTargetClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//InjectionTargetType/injectionTargetName"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//JavaIdentifierType"/>
+    <genClasses ecoreClass="webapp30.ecore#//JavaTypeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//JdbcUrlType"/>
+    <genClasses ecoreClass="webapp30.ecore#//JndiNameType"/>
+    <genClasses ecoreClass="webapp30.ecore#//JspConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspConfigType/taglib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspConfigType/jspPropertyGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//JspConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//JspFileType"/>
+    <genClasses ecoreClass="webapp30.ecore#//JspPropertyGroupType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/urlPattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/elIgnored"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/pageEncoding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/scriptingInvalid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/isXml"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/includePrelude"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/includeCoda"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/deferredSyntaxAllowedAsLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/trimDirectiveWhitespaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/defaultContentType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/buffer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//JspPropertyGroupType/errorOnUndeclaredNamespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//JspPropertyGroupType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//LifecycleCallbackType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//LifecycleCallbackType/lifecycleCallbackClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//LifecycleCallbackType/lifecycleCallbackMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ListenerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ListenerType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ListenerType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ListenerType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ListenerType/listenerClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ListenerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//LocaleEncodingMappingListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//LocaleEncodingMappingListType/localeEncodingMapping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//LocaleEncodingMappingListType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//LocaleEncodingMappingType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//LocaleEncodingMappingType/locale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//LocaleEncodingMappingType/encoding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//LocaleEncodingMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//LocalHomeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//LocalType"/>
+    <genClasses ecoreClass="webapp30.ecore#//LoginConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//LoginConfigType/authMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//LoginConfigType/realmName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//LoginConfigType/formLoginConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//LoginConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//MessageDestinationLinkType"/>
+    <genClasses ecoreClass="webapp30.ecore#//MessageDestinationRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/messageDestinationRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/messageDestinationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/messageDestinationUsage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/messageDestinationLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationRefType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//MessageDestinationRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//MessageDestinationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationType/messageDestinationName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MessageDestinationType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//MessageDestinationType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//MessageDestinationTypeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//MessageDestinationUsageType"/>
+    <genClasses ecoreClass="webapp30.ecore#//MimeMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MimeMappingType/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MimeMappingType/mimeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//MimeMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//MimeTypeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//MultipartConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//MultipartConfigType/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//MultipartConfigType/maxFileSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//MultipartConfigType/maxRequestSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//MultipartConfigType/fileSizeThreshold"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//NonEmptyStringType"/>
+    <genClasses ecoreClass="webapp30.ecore#//OrderingOrderingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//OrderingOrderingType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//OrderingOrderingType/others"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//OrderingOthersType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//OrderingOthersType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//OrderingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//OrderingType/after"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//OrderingType/before"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ParamValueType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ParamValueType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ParamValueType/paramName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ParamValueType/paramValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ParamValueType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//PathType"/>
+    <genClasses ecoreClass="webapp30.ecore#//PersistenceContextRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/persistenceContextRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/persistenceUnitName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/persistenceContextType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/persistenceProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceContextRefType/injectionTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//PersistenceContextRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//PersistenceContextTypeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//PersistenceUnitRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceUnitRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceUnitRefType/persistenceUnitRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceUnitRefType/persistenceUnitName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceUnitRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PersistenceUnitRefType/injectionTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//PersistenceUnitRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//PortComponentRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PortComponentRefType/serviceEndpointInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PortComponentRefType/enableMtom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PortComponentRefType/mtomThreshold"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PortComponentRefType/addressing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PortComponentRefType/respectBinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PortComponentRefType/portComponentLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//PortComponentRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//PropertyType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PropertyType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//PropertyType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//PropertyType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//RemoteType"/>
+    <genClasses ecoreClass="webapp30.ecore#//ResAuthType"/>
+    <genClasses ecoreClass="webapp30.ecore#//ResourceEnvRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceEnvRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceEnvRefType/resourceEnvRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceEnvRefType/resourceEnvRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceEnvRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceEnvRefType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceEnvRefType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ResourceEnvRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ResourceRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/resRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/resType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/resAuth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/resSharingScope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ResourceRefType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ResourceRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//RespectBindingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//RespectBindingType/enabled"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ResSharingScopeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//RoleNameType"/>
+    <genClasses ecoreClass="webapp30.ecore#//RunAsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//RunAsType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//RunAsType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//RunAsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//SecurityConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityConstraintType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityConstraintType/webResourceCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityConstraintType/authConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityConstraintType/userDataConstraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//SecurityConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//SecurityRoleRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityRoleRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityRoleRefType/roleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityRoleRefType/roleLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//SecurityRoleRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//SecurityRoleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityRoleType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SecurityRoleType/roleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//SecurityRoleType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ServiceRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/serviceRefName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/serviceInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/serviceRefType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/wsdlFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/jaxrpcMappingFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/serviceQname"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/portComponentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/handler"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/handlerChains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/mappedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/injectionTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServiceRefType/lookupName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ServiceRefType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ServletMappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletMappingType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletMappingType/urlPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ServletMappingType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//ServletNameType"/>
+    <genClasses ecoreClass="webapp30.ecore#//ServletType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/displayName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/servletName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/servletClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/jspFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/initParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ServletType/loadOnStartup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/enabled"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/asyncSupported"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/runAs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/securityRoleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//ServletType/multipartConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//ServletType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//SessionConfigType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SessionConfigType/sessionTimeout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SessionConfigType/cookieConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//SessionConfigType/trackingMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//SessionConfigType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//String">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//String/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//String/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//TaglibType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//TaglibType/taglibUri"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//TaglibType/taglibLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//TaglibType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//TrackingModeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//TransportGuaranteeType"/>
+    <genClasses ecoreClass="webapp30.ecore#//TrueFalseType"/>
+    <genClasses ecoreClass="webapp30.ecore#//UrlPatternType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//UrlPatternType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//UserDataConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//UserDataConstraintType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//UserDataConstraintType/transportGuarantee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//UserDataConstraintType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//WarPathType"/>
+    <genClasses ecoreClass="webapp30.ecore#//WebAppType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebAppType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/moduleName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/description"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/displayName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/icon"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/distributable"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/contextParam"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/filter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/filterMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/listener"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/servlet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/servletMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/sessionConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/mimeMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/welcomeFileList"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/errorPage"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/jspConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/securityConstraint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/loginConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/securityRole"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/envEntry"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/ejbRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/ejbLocalRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/serviceRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/resourceRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/resourceEnvRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/messageDestinationRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/persistenceContextRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/persistenceUnitRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/postConstruct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/preDestroy"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/dataSource"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/messageDestination"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/localeEncodingMappingList"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebAppType/absoluteOrdering"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebAppType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebAppType/metadataComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebAppType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//WebFragmentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebFragmentType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/description"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/displayName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/icon"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/distributable"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/contextParam"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/filter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/filterMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/listener"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/servlet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/servletMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/sessionConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/mimeMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/welcomeFileList"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/errorPage"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/jspConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/securityConstraint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/loginConfig"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/securityRole"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/envEntry"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/ejbRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/ejbLocalRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/serviceRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/resourceRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/resourceEnvRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/messageDestinationRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/persistenceContextRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/persistenceUnitRef"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/postConstruct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/preDestroy"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/dataSource"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/messageDestination"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/localeEncodingMappingList"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webapp30.ecore#//WebFragmentType/ordering"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebFragmentType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebFragmentType/metadataComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebFragmentType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//WebResourceCollectionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//WebResourceCollectionType/webResourceName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//WebResourceCollectionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webapp30.ecore#//WebResourceCollectionType/urlPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebResourceCollectionType/httpMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebResourceCollectionType/httpMethodOmission"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WebResourceCollectionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//WelcomeFileListType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WelcomeFileListType/welcomeFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//WelcomeFileListType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdAnyURIType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdAnyURIType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdAnyURIType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdBooleanType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdBooleanType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdBooleanType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdIntegerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdIntegerType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdIntegerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdNMTOKENType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdNMTOKENType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdNMTOKENType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdNonNegativeIntegerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdNonNegativeIntegerType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdNonNegativeIntegerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdPositiveIntegerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdPositiveIntegerType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdPositiveIntegerType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdQNameType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdQNameType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdQNameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp30.ecore#//XsdStringType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdStringType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp30.ecore#//XsdStringType/id"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

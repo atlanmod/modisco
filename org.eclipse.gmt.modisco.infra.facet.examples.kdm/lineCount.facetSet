@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facet:FacetSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:facet="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="lineCount" nsURI="http://www.eclipse.org/MoDisco/examples/lineCount" nsPrefix="lineCount">
+  <eClassifiers xsi:type="facet:Facet" name="LineCount" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/kdm/source#//InventoryItem"/>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="numberOfCharacters" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/lineCount#numberOfCharacters"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="numberOfLines" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/lineCount#numberOfLines"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="numberOfNonEmptyLines" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/lineCount#nonEmptyLines"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="facet:Facet" name="RecursiveLineCount" abstract="true">
+    <eSuperTypes href="http://www.eclipse.org/MoDisco/kdm/source#//InventoryContainer"/>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="numberOfCharactersInContainedFiles" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/lineCount#numberOfCharacters"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="numberOfLinesInContainedFiles" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/lineCount#numberOfLines"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="facet:FacetAttribute" name="numberOfNonEmptyLinesInContainedFiles" changeable="false" volatile="true" unsettable="true" derived="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <valueQuery xsi:type="query:JavaModelQuery" href="modisco:/query/lineCount#nonEmptyLines"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <extendedPackage href="http://www.eclipse.org/MoDisco/kdm/source#/"/>
+</facet:FacetSet>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/JEE/JPA/Annotations" allQuerySetsAvailable="false">
+  <types metaclassName="jeeJpaAnnotations.Access">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.AssociationOverride">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.AssociationOverrides">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.AttributeOverride">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.AttributeOverrides">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Basic">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Cacheable">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.CollectionTable">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Column">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.ColumnResult">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.DiscriminatorColumn">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.DiscriminatorValue">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.ElementCollection">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Embeddable">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Embedded">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.EmbeddedId">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Entity">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.EntityListeners">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.EntityResult">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Enumerated">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.ExcludeDefaultListeners">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.ExcludeSuperclassListeners">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.FieldResult">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.GeneratedValue">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Id">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.IdClass">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Inheritance">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.JoinColumn">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.JoinColumns">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.JoinTable">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Lob">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.ManyToMany">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.ManyToOne">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKey">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKeyClass">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKeyColumn">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKeyEnumerated">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKeyJoinColumn">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKeyJoinColumns">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapKeyTemporal">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MappedSuperclass">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.MapsId">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.NamedNativeQueries">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.NamedNativeQuery">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.NamedQueries">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.NamedQuery">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.OneToMany">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.OneToOne">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.OrderBy">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.OrderColumn">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PersistenceContext">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PersistenceContexts">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PersistenceProperty">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PersistenceUnit">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PersistenceUnits">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PostLoad">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PostPersist">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PostRemove">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PostUpdate">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PrePersist">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PreRemove">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PreUpdate">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PrimaryKeyJoinColumn">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.PrimaryKeyJoinColumns">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.QueryHint">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.SecondaryTable">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.SecondaryTables">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.SequenceGenerator">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.SqlResultSetMapping">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.SqlResultSetMappings">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Table">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.TableGenerator">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Temporal">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Transient">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.UniqueConstraint">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Version">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.AssociationOverride">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jeeJpaAnnotations.Access">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.facet/icons/stateful.png"/>
+    </customizedFeatures>
+  </types>
+  <availableQuerySets>jeeJpaAnnotations</availableQuerySets>
+</uicustom:MetamodelView>

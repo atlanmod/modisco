@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.modisco.infra.discovery.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.modisco.infra.discovery.core" id="discoverer" name="Add a discoverer"/>
+      </appinfo>
+      <documentation>
+         To add a discoverer in the MoDisco framework.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+         <documentation>
+            Definition of extension point instance.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="discoverer"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="discoverer">
+      <annotation>
+         <documentation>
+            A discoverer must have a name and provide an implementation of the Discoverer interface to be recognized by the MoDisco discovery framework.
+For each discoverer, a new entry in the MoDisco menu will be added.
+However, each discoverer should provide a resource filter to trigger its visibility in the menu depending on the selection element.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Required information to identify a discoverer in the registry; it must be unique. The token cannot contain whitespace
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  A class that implements the IDiscoverer interface to be managed by the IDiscoveryManager.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.infra.discovery.core.IDiscoverer"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         0.9
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         The following is an example of a discoverer extension point:
+&lt;p&gt;
+&lt;pre&gt;
+&lt;extension point=&quot;org.eclipse.modisco.infra.discovery.core.discoverer&quot;&gt;
+      &lt;discoverer
+            class=&quot;org.eclipse.gmt.modisco.java.JavaModelDiscoverer&quot;
+            name=&quot;Java model discoverer&quot;&gt;
+      &lt;/discoverer&gt;
+&lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+In the example above, the provided class JavaModelDiscoverer implements interface Discoverer. The name &quot;Java model discoverer&quot; will be used to identify the discoverer instance in the registry.
+      </documentation>
+   </annotation>
+
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;
+MoDisco comes with existing discoverers in the following plug-ins:&lt;ul&gt;
+&lt;li&gt;org.eclipse.gmt.modisco.java&lt;/li&gt;
+&lt;li&gt;org.eclipse.gmt.modisco.xml&lt;/li&gt;
+&lt;li&gt;org.eclipse.modisco.jee.ejbjar.discoverer&lt;/li&gt;
+&lt;li&gt;org.eclipse.modisco.jee.jsp.discoverer&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         Copyright (c) 2010-2011 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+      </documentation>
+   </annotation>
+
+</schema>

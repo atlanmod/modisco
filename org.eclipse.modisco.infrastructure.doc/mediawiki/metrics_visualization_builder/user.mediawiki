@@ -1,0 +1,69 @@
+== Overview ==
+This generic tool is about '''building metrics visualizations''' in different formats ('''HTML''' and '''Excel''' for tabular representations, '''SVG''' for graphical ones like bar charts and pie charts) '''from any metrics data''' stored into models that conform to the provided generic ''Metrics'' metamodel.
+
+This tool is provided by '''INRIA AtlanMod''' and its development has been supported by the [http://www.modelplex.org IST European MODELPLEX project] (MODELing solution for comPLEX software systems, FP6-IP 34081).
+
+The overall approach applied by this tool is summarized in the following figure:
+
+[[Image:../../img/metrics_visualization_builder/MoDisco_MetricsVisualizationBuilder_Overview.png|frame|Metrics Visualization Builder Tool Overview]]
+
+The tool is composed of a set of [http://www.eclipse.org/m2m/atl/ ATL model-to-model transformations] that implement the different steps of the visualization building. The input ''Metrics'' model is first transformed into a ''Table'' model that provides a simple tabular representation of the data. Models specific to different visualization formats (i.e. ''HTML'', ''Excel'' and ''SVG'' models) are then built from the ''Table'' model. These generated models are finally extracted into software readable files.
+
+We provide below some examples of the visualizations that can be produced using the tool from a given ''Metrics'' model:
+
+[[Image:../../img/metrics_visualization_builder/MoDisco_MetricsVisualizationBuilder_VisualizationExamples.png|frame|Examples of different visualizations (representing some metrics on Bugzilla data)]]
+
+== Related Use Cases ==
+=== Bugzilla Metrics ===
+This complete use case covers both the "Model Discovery" and "Model Understanding" phases. It is about discovering bugs information expressed in HTML format, building a Bugzilla model from this data, computing it in order to produce a Metrics model and finally building some visualizations of the generated metrics.
+
+
+== Metamodels ==
+
+We provide here the links to all the metamodels which have been developped and/or used within this tool. 
+
+These metamodels are available resources that may be used within other tools or use cases, in other different contexts or for other purposes.
+
+Each of them is provided in two different formats: Ecore and [http://wiki.eclipse.org/index.php/KM3 KM3].
+
+{| border="1" cellpadding="20" cellspacing="0"
+! ''Ecore'' format
+! ''KM3'' format
+|-
+|[http://www.emn.fr/x-info/atlanmod/index.php/Ecore#XML_1.1 XML]
+|[http://www.emn.fr/x-info/atlanmod/index.php/Atlantic#XML_1.1 XML]
+|-
+|[http://www.emn.fr/x-info/atlanmod/index.php/Ecore#Metrics_1.0 Metrics]
+|[http://www.emn.fr/x-info/atlanmod/index.php/Atlantic#Metrics_1.0 Metrics]
+|-
+|[http://www.emn.fr/x-info/atlanmod/index.php/Ecore#Table_1.1 Table]
+|[http://www.emn.fr/x-info/atlanmod/index.php/Atlantic#Table_1.1 Table]
+|-
+|[http://www.emn.fr/x-info/atlanmod/index.php/Ecore#HTML_1.0 HTML]
+|[http://www.emn.fr/x-info/atlanmod/index.php/Atlantic#HTML_1.0 HTML]
+|-
+|[http://www.emn.fr/x-info/atlanmod/index.php/Ecore#SpreadsheetMLSimplified_1.2 MS Office Excel SpreadsheetML]
+|[http://www.emn.fr/x-info/atlanmod/index.php/Atlantic#SpreadsheetMLSimplified_1.2 MS Office Excel SpreadsheetML]
+|-
+|[http://www.emn.fr/x-info/atlanmod/index.php/Ecore#SVG_1.1 SVG]
+|[http://www.emn.fr/x-info/atlanmod/index.php/Atlantic#SVG_1.1 SVG]
+|}
+
+Note that these metamodels are also available in other varied graphical and textual formats from the [http://www.emn.fr/x-info/atlanmod/index.php/Zoos metamodel zoos].
+
+== Related Links ==
+* [http://www.w3.org/Graphics/SVG/ W3C SVG (Scalable Vector Graphics) Specification]
+* [http://www.microsoft.com/office/xml/default.mspx Microsoft Office 2003 XML Reference Schemas (including Excel SpreadsheetML)]
+
+== Team  ==
+
+*[http://www.emn.fr/x-info/atlanmod/index.php/User:Bruneliere Hugo Bruneliere]
+*[mailto:eric.vepa@gmail.com Eric Vepa]
+
+== Source Repository  ==
+
+All of the source code is stored in a public source repository, which you can access at: 
+
+[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/ https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/]
+
+You can also browse it [http://dev.eclipse.org/viewsvn/index.cgi/plugins/trunk/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/?root=Modeling_MODISCO through the Web interface].

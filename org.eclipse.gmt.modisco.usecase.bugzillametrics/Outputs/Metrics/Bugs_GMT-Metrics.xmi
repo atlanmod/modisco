@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="Metrics">
+  <Metric name="Number of bugs per severity type">
+    <values xsi:type="IntegerMetricValue" tag="Blocker" value="4"/>
+    <values xsi:type="IntegerMetricValue" tag="Critical" value="8"/>
+    <values xsi:type="IntegerMetricValue" tag="Major" value="34"/>
+    <values xsi:type="IntegerMetricValue" tag="Normal" value="265"/>
+    <values xsi:type="IntegerMetricValue" tag="Minor" value="23"/>
+    <values xsi:type="IntegerMetricValue" tag="Trivial" value="7"/>
+    <values xsi:type="IntegerMetricValue" tag="Enhancement" value="112"/>
+  </Metric>
+  <Metric name="Percentage of bugs per severity type">
+    <values xsi:type="DoubleMetricValue" tag="Blocker" value="0.8830022075055187"/>
+    <values xsi:type="DoubleMetricValue" tag="Critical" value="1.7660044150110374"/>
+    <values xsi:type="DoubleMetricValue" tag="Major" value="7.50551876379691"/>
+    <values xsi:type="DoubleMetricValue" tag="Normal" value="58.498896247240616"/>
+    <values xsi:type="DoubleMetricValue" tag="Minor" value="5.077262693156733"/>
+    <values xsi:type="DoubleMetricValue" tag="Trivial" value="1.5452538631346577"/>
+    <values xsi:type="DoubleMetricValue" tag="Enhancement" value="24.724061810154524"/>
+  </Metric>
+</xmi:XMI>

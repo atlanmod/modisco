@@ -1,0 +1,3 @@
+= WebApp Generation =
+
+The WebApp discoverer creates the model in an <code>org.eclipse.emf.ecore.xmi.XMLResource</code>. So, this resource can be serialized back to XML by using the standard EMF mechanism : just call <code>save()</code> on the resource.

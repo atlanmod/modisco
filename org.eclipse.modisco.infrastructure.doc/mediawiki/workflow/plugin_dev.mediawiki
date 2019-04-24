@@ -1,0 +1,24 @@
+== Add a workflow engine in MoDiscoWorkflow ==
+
+To extend the capabilities of MoDiscoWorkflow, other workflow engines can be provided through the "engine" extension point.
+
+=== "engine" extension point  ===
+
+[[Image:../../img/workflow/MoDiscoWorkflowEngineExtensionPoint.jpg|thumb|center|"engine" extension point definition]] 
+
+The MoDiscoWorkflow plug-in proposes an extension point named "engine". 
+
+This extension point allows you to add a new type of Workflow. To do this, you define:
+* a workflow engine, specified by the "workflowExecution" element
+* a workflow model item definition specified by the "workflowCore" element, to bridge the internal model representation with the MoDiscoWorkflow representation
+
+===="workflowExecution" part====
+
+This part defines: 
+*'''class''': The class which has to implement interface "org.eclipse.modisco.workflow.core.WorkflowExecution". It will bridge a MoDiscoWorkflow definition with the internal execution engine to run the specified workflow.
+
+==== "workflowCore" part ====
+
+This part defines: 
+*'''name''': a name that describes the workflow engine
+*'''class''': a class which implements interface "org.eclipse.modisco.workflow.core.WorkflowModel". It will bridge the internal model representation with the MoDiscoWorkflow representation.
