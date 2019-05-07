@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:m2="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>org.eclipse.emf.facet.releng.tycho.util</groupId>
+   <artifactId>org.eclipse.emf.facet.releng.tycho.util.ide</artifactId>
+   <version>0.3.0-SNAPSHOT</version>
+   <properties>
+		    <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
+	  </properties>
+   <dependencies>
+		    <dependency>
+			      <groupId>org.apache.ant</groupId>
+			      <artifactId>ant</artifactId>
+			      <version>1.8.3</version>
+		    </dependency>
+		    <dependency>
+			      <groupId>junit</groupId>
+			      <artifactId>junit</artifactId>
+			      <version>4.10</version>
+		    </dependency>
+	  </dependencies>
+   <profiles>
+		    <profile>
+			      <id>pom-configure</id>
+			      <activation>
+			</activation>
+			      <properties>
+				<!-- Build type (N)ightly, (I)ntegration, (M)aintenance, (S)table, (R)elease -->
+				<BUILD_TYPE>N</BUILD_TYPE>
+				        <!-- A parameter of a build to precise whether or not to run UNIT tests -->
+				<SKIP_TESTS>false</SKIP_TESTS>
+				        <SKIP_QUALITY_ANALYSIS>false</SKIP_QUALITY_ANALYSIS>
+				        <!-- The tycho version to use, could be overridden in the job configuration -->
+				<tycho.version>0.21.0</tycho.version>
+				        <!-- The tycho extras version (may differs from tycho.version, checks 
+					the tycho repository for the right one) -->
+				<tycho.extras.version>0.21.0</tycho.extras.version>
+				        <!-- Ant version to used (SEE: API use) -->
+				<ant.version.number>1.8.3</ant.version.number>
+				        <!-- We provide a way to customize the build directory name in case of 
+					conflict with one of others dir.Here we change the name of the target directory 
+					to avoid any conflict with an existing directory. Because the plug-in developer 
+					has not be aware of the release engineering process. The '__' informs the 
+					user that the directory is a Maven directory -->
+				<org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName>__target__</org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName>
+				        <!-- The location of the build data for the main pom -->
+				<org.eclipse.emf.facet.releng.tycho.util.configure.parentDir>${WORKSPACE}${file.separator}${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}</org.eclipse.emf.facet.releng.tycho.util.configure.parentDir>
+				        <product.source.location>${org.eclipse.emf.facet.releng.tycho.util.configure.parentDir}</product.source.location>
+				        <!-- The location of the main pom -->
+				<pom.parent.dir>${product.source.location}</pom.parent.dir>
+				        <!-- The product build directory -->
+				<product.build.directory>${product.source.location}${file.separator}${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}</product.build.directory>
+				        <!-- Others needs the location of the releng utility project -->
+				<releng.dir>${project.basedir}</releng.dir>
+				        <!-- The location of all the stylesheet used by the releng utility -->
+				<releng.stylesheet.location>${project.basedir}/style</releng.stylesheet.location>
+				        <!-- The location of the embedded eclipse used by tycho -->
+				<tycho.external.bundles.location>${settings.localRepository}/org/eclipse/tycho/tycho-bundles-external/${tycho.version}/eclipse/plugins</tycho.external.bundles.location>
+				        <!-- We keep this for backward compatibility to old scripts -->
+				<skipTests>${SKIP_TESTS}</skipTests>
+				        <!-- We use this to change the name of the maven buid output directory, 
+					in case of the target folder been used by one of our bundles -->
+				<releng.classes>${project.basedir}/${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}/classes</releng.classes>
+				        <!-- The test workspace will be externalized into this directory -->
+				<product.tests.worksDirectory>${product.build.directory}/tests-workspaces</product.tests.worksDirectory>
+				        <!-- All test reports will be saved into the directory pointed by this 
+					property -->
+				<product.tests.reports>${product.build.directory}${file.separator}testresults</product.tests.reports>
+				        <!-- XML and TXT reports of junit tests will be stored here -->
+				<product.tests.reportsDirectory>${product.tests.reports}${file.separator}xml</product.tests.reportsDirectory>
+				        <!-- The location of the html versions of tests report -->
+				<product.tests.htmlDirectory>${product.tests.reports}${file.separator}html</product.tests.htmlDirectory>
+				        <!-- There could be many checkout for one jobs; the default revision 
+					property is ${SVN_REVISION}, when there is many, we will have ${SVN_REVISION_1} 
+					... ${SVN_REVISION_N}. The property below help you choose the revision you 
+					want to add to the final result. -->
+				<org.eclipse.emf.facet.releng.tycho.util.configure.productRevision>${SVN_REVISION}</org.eclipse.emf.facet.releng.tycho.util.configure.productRevision>				
+				        <org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact>${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}</org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact>
+				        <org.eclipse.emf.facet.releng.tycho.util.configure.relengProperties>${org.eclipse.emf.facet.releng.tycho.util.configure.relengProperties}</org.eclipse.emf.facet.releng.tycho.util.configure.relengProperties>
+				        <org.eclipse.emf.facet.releng.tycho.util.configure.generateDependencies.aggrDir>${WORKSPACE}</org.eclipse.emf.facet.releng.tycho.util.configure.generateDependencies.aggrDir>
+			      </properties>
+
+			      <!-- Remove this when stop using tycho snapshot versions -->
+			<pluginRepositories>
+			</pluginRepositories>
+
+			      <build>
+				        <directory>${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}</directory>
+				        <plugins>
+					          <plugin>
+						            <groupId>org.codehaus.mojo</groupId>
+						            <artifactId>properties-maven-plugin</artifactId>
+						            <version>1.0-alpha-2</version>
+						            <executions>
+							<!-- We load project build properties -->
+							<execution>
+								                <id>reading-build-propeties</id>
+								                <phase>initialize</phase>
+								                <goals>
+									                  <goal>read-project-properties</goal>
+								                </goals>
+								                <configuration>
+									                  <files>
+										                    <file>${org.eclipse.emf.facet.releng.tycho.util.configure.relengProperties}</file>
+									                  </files>
+								                </configuration>
+							              </execution>
+							              <!-- We save the project properties for others to read -->
+							<execution>
+								                <phase>initialize</phase>
+								                <goals>
+									                  <goal>write-project-properties</goal>
+								                </goals>
+								                <configuration>
+									                  <outputFile>${project.basedir}/releng-build.properties</outputFile>
+								                </configuration>
+							              </execution>
+						            </executions>
+					          </plugin>
+					          <!-- First we generate features for sources from existing features -->
+					<plugin>
+						            <groupId>org.apache.maven.plugins</groupId>
+						            <artifactId>maven-antrun-plugin</artifactId>
+						            <version>1.7</version>
+						            <executions>
+							              <execution>
+								                <id>generate-source-features</id>
+								                <phase>generate-sources</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										                    <echo>org.eclipse.emf.facet.releng.tycho.util.configure.productRevision=${org.eclipse.emf.facet.releng.tycho.util.configure.productRevision}</echo>
+										                    <echo>product.source.location=${product.source.location}</echo>
+										                    <ant antfile="pre.build.xml" target="generate-source-features"/>
+											
+									                  </target>
+								                </configuration>
+							              </execution>
+							              <execution>
+								                <id>generate-java-doc</id>
+								                <phase>generate-sources</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										                    <echo>Javadoc plugins generation</echo>
+										                    <ant antfile="javadoc/javadoc.build.xml" target="createJavadocPlugin"/>
+									                  </target>
+								                </configuration>
+							              </execution>
+							              <execution>
+								                <id>configure-products-poms</id>
+								                <phase>compile</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										                    <ant antfile="pre.build.xml" target="configure-doc-pom"/>
+										                    <ant antfile="pre.build.xml" target="configure-updatesite-pom"/>
+										                    <ant antfile="pre.build.xml" target="configure-apireport-pom"/>
+										                    <ant antfile="pre.build.xml" target="configure-tests-poms"/>
+										                    <ant antfile="pre.build.xml" target="configure-quality-poms">
+											                      <property name="org.eclipse.emf.facet.releng.tycho.util.ant-script.configure-quality-poms.skip"
+                                           value="${SKIP_QUALITY_ANALYSIS}"/>
+										                    </ant>									
+										                    <!-- We configure the products poms in the compile phase because, 
+											this target depends on a compiled task -->
+										<ant antfile="pre.build.xml" target="configure-products-poms"/>
+										                    <ant antfile="pre.build.xml" target="configure-targets-poms"/>
+										                    <ant antfile="pre.build.xml" target="configure-parent-pom"/>
+										                    <ant antfile="javadoc/javadoc.build.xml" target="configure-pom-for-javadoc"/>
+										                    <ant antfile="pre.build.xml" target="post-generation-xsl"/>
+									                  </target>
+								                </configuration>
+							              </execution>
+							              <execution>
+								                <id>remove generated poms</id>
+								                <phase>clean</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										                    <delete>
+											                      <fileset dir="${WORKSPACE}">
+												                        <include name="**/${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}/**/*updatesite/category.xml"/>
+												                        <include name="**/releng-build.properties"/>
+												                        <include name="**/${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}/**/pom.xml"/>
+												                        <include name="**/${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}/**/pom.xml*"/>
+												                        <include name="**/${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}/**/pom.tmp*"/>
+  												                      <exclude name="**/org.eclipse.emf.facet.releng.tycho.util/pom.xml"/>
+  												                      <exclude name="**/.metadata/**/*"/>
+											                      </fileset>
+										                    </delete>
+									                  </target>
+								                </configuration>
+							              </execution>
+							              <execution>
+								                <id>remove target directories and source features</id>
+								                <phase>clean</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										                    <delete includeemptydirs="true" defaultexcludes="false">
+											                      <fileset dir="${WORKSPACE}/${org.eclipse.emf.facet.releng.tycho.util.configure.parentArtifact}">
+												                        <include name="**/__target__/**"/>
+												                        <include name="**/*source.feature/**"/>
+											                      </fileset>
+										                    </delete>
+									                  </target>
+								                </configuration>
+							              </execution>
+						            </executions>
+						            <dependencies>
+							              <dependency>
+								                <groupId>net.sf.saxon</groupId>
+								                <artifactId>saxon</artifactId>
+								                <version>8.7</version>
+							              </dependency>
+							              <dependency>
+								                <groupId>ant-contrib</groupId>
+								                <artifactId>ant-contrib</artifactId>
+								                <version>1.0b3</version>
+								                <exclusions>
+									                  <exclusion>
+										                    <groupId>ant</groupId>
+										                    <artifactId>ant</artifactId>
+									                  </exclusion>
+									                  <exclusion>
+										                    <groupId>org.apache.ant</groupId>
+										                    <artifactId>ant</artifactId>
+									                  </exclusion>
+								                </exclusions>
+							              </dependency>
+							              <dependency>
+								                <groupId>org.tigris.antelope</groupId>
+								                <artifactId>antelopetasks</artifactId>
+								                <version>3.2.10</version>
+							              </dependency>
+						            </dependencies>
+					          </plugin>
+					          <!-- We generate bundles poms -->
+					<plugin>
+						            <groupId>org.eclipse.tycho</groupId>
+						            <artifactId>tycho-pomgenerator-plugin</artifactId>
+						            <version>${tycho.version}</version>
+						            <executions>
+							              <execution>
+								                <id>poms-generation</id>
+								                <phase>generate-resources</phase>
+								                <goals>
+									                  <goal>generate-poms</goal>
+								                </goals>
+								                <configuration>
+									                  <baseDir>${product.source.location}${file.separator}</baseDir>
+									                  <extraDirs>
+										${product.source.location}/features,${product.source.location}/plugins,${product.source.location}/doc,${product.source.location}/tests,${product.source.location}/dev,${product.source.location}/examples
+									</extraDirs>
+									                  <groupId>${product.group.id}</groupId>
+									                  <version>${product.version}</version>
+								                </configuration>
+							              </execution>
+						            </executions>
+					          </plugin>
+				        </plugins>
+			      </build>
+			      <dependencies>
+				        <dependency>
+					          <groupId>org.apache.ant</groupId>
+					          <artifactId>ant</artifactId>
+					          <version>${ant.version.number}</version>
+				        </dependency>
+			      </dependencies>
+		    </profile>
+		    <profile>
+			      <id>pom-finalize</id>
+			      <build>
+				        <plugins>
+					          <plugin>
+						            <groupId>org.codehaus.mojo</groupId>
+						            <artifactId>properties-maven-plugin</artifactId>
+						            <version>1.0-alpha-2</version>
+						            <executions>
+							<!-- We load project build properties -->
+							<execution>
+								                <id>reading-build-propeties</id>
+								                <phase>initialize</phase>
+								                <goals>
+									                  <goal>read-project-properties</goal>
+								                </goals>
+								                <configuration>
+									                  <files>
+										                    <file>${project.basedir}/releng-build.properties</file>
+									                  </files>
+								                </configuration>
+							              </execution>
+						            </executions>
+					          </plugin>
+					          <plugin>
+						            <groupId>org.apache.maven.plugins</groupId>
+						            <artifactId>maven-antrun-plugin</artifactId>
+						            <version>1.7</version>
+						            <executions>
+							              <execution>
+								                <id>finalize-build</id>
+								                <phase>process-resources</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										                    <ant antfile="${releng.dir}/post.build.xml" target="create-or-update-final-artifact">
+											                      <property name="org.eclipse.emf.facet.releng.tycho.util.ant-script.generate-doc-archive.location"
+                                           value="${updatesite.source.location}"/>
+											                      <property name="WORKSPACE" value="${WORKSPACE}"/>
+										                    </ant>
+									                  </target>
+								                </configuration>
+							              </execution>
+						            </executions>
+						            <dependencies>
+							              <dependency>
+								                <groupId>net.sf.saxon</groupId>
+								                <artifactId>saxon</artifactId>
+								                <version>8.7</version>
+							              </dependency>
+							              <dependency>
+								                <groupId>net.sf.saxon</groupId>
+								                <artifactId>saxon-dom</artifactId>
+								                <version>8.7</version>
+							              </dependency>
+							              <dependency>
+								                <groupId>ant-contrib</groupId>
+								                <artifactId>ant-contrib</artifactId>
+								                <version>1.0b3</version>
+								                <exclusions>
+									                  <exclusion>
+										                    <groupId>ant</groupId>
+										                    <artifactId>ant</artifactId>
+									                  </exclusion>
+								                </exclusions>
+							              </dependency>
+						            </dependencies>
+					          </plugin>
+				        </plugins>
+			      </build>
+		    </profile>
+	  </profiles>
+   <build>
+      <plugins/>
+   </build>
+</project>

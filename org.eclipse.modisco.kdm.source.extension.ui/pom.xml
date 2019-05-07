@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:m2="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>org.eclipse.mdt</groupId>
+      <artifactId>org.eclipse.modisco.build</artifactId>
+      <version>1.2.0</version>
+  </parent>
+   <groupId>org.eclipse.mdt</groupId>
+   <artifactId>org.eclipse.modisco.kdm.source.extension.ui</artifactId>
+   <version>1.2.0-SNAPSHOT</version>
+   <packaging>eclipse-plugin</packaging>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.7</version>
+            <executions>
+               <execution>
+                  <id>generate_quality_analysis_dir</id>
+                  <phase>process-resources</phase>
+                  <goals>
+                     <goal>run</goal>
+                  </goals>
+                  <configuration>
+                     <target>
+                        <mkdir dir="/Users/sunye/Work/atlanmod/workspace/org.eclipse.modisco.build/__target__/pmd/${project.name}"/>
+                        <mkdir dir="/Users/sunye/Work/atlanmod/workspace/org.eclipse.modisco.build/__target__/checkstyle/${project.name}"/>
+                     </target>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+         </plugin>
+      </plugins>
+   </build>
+</project>
