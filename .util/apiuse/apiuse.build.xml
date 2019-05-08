@@ -1,0 +1,37 @@
+<!-- 
+		Copyright (c) 2012 Mia-Software. All rights reserved. This program and 
+		the accompanying materials are made available under the terms of the Eclipse 
+		Public License v1.0 which accompanies this distribution, and is available 
+		at http://www.eclipse.org/legal/epl-v10.html 
+		
+		Contributors: 
+			Herve ESTEGUET (Mia-Software) - Bug 381352 - [Releng] There must be a project to configure the build by tycho 
+-->
+<project name="apitask" basedir="." default="apiAnalysis">
+
+	<property file="${org.eclipse.emf.facet.releng.tycho.util.apiUse.properties}"/>
+	<property name="org.eclipse.emf.facet.releng.tycho.util.apiUse.location" value="${org.eclipse.emf.facet.releng.tycho.util.apiUse.target}/repository/"/>
+	<property name="org.eclipse.emf.facet.releng.tycho.util.apiUse.xml" value="${org.eclipse.emf.facet.releng.tycho.util.apiUse.target}/report/xml"/>
+	<property name="org.eclipse.emf.facet.releng.tycho.util.apiUse.html" value="${org.eclipse.emf.facet.releng.tycho.util.apiUse.target}/report/html"/>
+	
+	<!-- Launch the API analysis (not intended to be called, is invoked internally by launchApiAnalysis) -->
+	<target name="apiAnalysis">
+		<mkdir dir="${org.eclipse.emf.facet.releng.tycho.util.apiUse.html}"/>
+		<mkdir dir="${org.eclipse.emf.facet.releng.tycho.util.apiUse.xml}"/>
+		<apitooling.apiuse
+			location="${org.eclipse.emf.facet.releng.tycho.util.apiUse.location}"
+			report="${org.eclipse.emf.facet.releng.tycho.util.apiUse.xml}"
+			referencepattern=".*"
+			scopepattern="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.scopepattern}"
+			considerillegaluse="true"
+			considerinternal="true"
+			debug="true"
+			/>
+		<apitooling.apiuse_reportconversion
+			xmlfiles="${org.eclipse.emf.facet.releng.tycho.util.apiUse.xml}"
+			htmlfiles="${org.eclipse.emf.facet.releng.tycho.util.apiUse.html}"
+			debug="true"
+			/>
+	</target>
+
+</project>

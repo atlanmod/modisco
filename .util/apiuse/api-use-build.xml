@@ -1,0 +1,192 @@
+<!-- 
+		Copyright (c) 2012 Mia-Software. All rights reserved. This program and 
+		the accompanying materials are made available under the terms of the Eclipse 
+		Public License v1.0 which accompanies this distribution, and is available 
+		at http://www.eclipse.org/legal/epl-v10.html 
+		
+		Contributors: 
+			Herve ESTEGUET (Mia-Software) - Bug 381352 - [Releng] There must be a project to configure the build by tycho 
+-->
+<project name="apitask" basedir="." default="launchApiAnalysis">
+
+	
+	<!-- We load ant-contrib tasks definitions -->
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement path="${maven.plugin.classpath}" />
+		</classpath>
+	</taskdef>
+
+	<condition property="propertiesDefined">
+		<and>
+			<isset property="releng.dir" />
+		</and>
+	</condition>
+
+	<fail unless="propertiesDefined"
+		message="These properties must all be set: releng.dir" />
+
+	<!-- We may find some properties here -->
+	<property file="${releng.dir}/releng-build.properties" />	
+
+	<!-- Properties that will be passed to the apiuse tasks -->
+	<property name="report.loc" value="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/target/api_use_xml_report" />
+	<property name="html.loc" value="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/report" />
+	<property name="scope.loc"  value="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.eclipsepackage}/${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}/repository/plugins" />
+
+	<!-- load all properties. The file is not required. -->
+	<property file="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/api_use_ant.properties" />
+
+	<!-- This property is used to extract api.use internal jars -->
+	<property name="eclipse.lib.dir" value="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}/libs" />
+	
+	<!-- This location will contains unsigned jars -->
+	<property name="launch.api.analysis.unsigned.jar.dir" value="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}/api_unsigned_jars" />
+
+	<!-- A macro for unsigning a jar -->
+	<macrodef name="unsignjar">
+	    <attribute name="jar"/>
+		<attribute name="destjar" />
+	    <sequential>
+	        <!-- Remove any existing signatures from a JAR file. -->
+	        <tempfile prefix="usignjar-" destdir="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/${org.eclipse.emf.facet.releng.tycho.util.configure.targetDirectoryName}/temp" property="temp.file"/>
+	        <echo message="Removing signatures from JAR: @{jar}"/>
+	        <mkdir dir="${temp.file}"/>
+	                
+	        <unjar src="@{jar}" dest="${temp.file}">
+	            <patternset>
+	                <include name="**"/>
+	                <exclude name="META-INF/*.SF"/>
+	                <exclude name="META-INF/*.DSA"/>
+	                <exclude name="META-INF/*.RSA"/>
+	            </patternset>
+	        </unjar>
+	                
+	        <!-- Touch it in case the file didn't have a manifest.
+	             Otherwise the JAR task below will fail if the manifest 
+	             file doesn't exist. -->
+	        <mkdir dir="${temp.file}/META-INF"/>
+	        <touch file="${temp.file}/META-INF/MANIFEST.MF"/>
+	                
+	        <jar destfile="@{destjar}" 
+	            basedir="${temp.file}" 
+	            includes="**" 
+	            manifest="${temp.file}/META-INF/MANIFEST.MF"/>
+	                
+	        <delete dir="${temp.file}" failonerror="true"/>
+	    </sequential>
+	</macrodef>
+	
+	<!-- a macro for unsigning all jars from path into a directory.
+	the path attribute must be an id pointing at jars path -->
+	<macrodef name="unsign_all_jars">
+		<attribute name="path" />
+		<attribute name="destdir"/>
+		<sequential>
+			<var name="unsigned_jar_dest" value="@{destdir}" />
+			<for param="signedjar">
+				<path refid="@{path}" /> 
+				<sequential>
+					<propertyregex property="signedjar.basename" input="@{signedjar}" regexp=".*/([^/\\]+)/?" select="\1" override="true" />
+					<if>
+						<available file="@{signedjar}" type="dir" />
+						<then>
+							<copy todir="${unsigned_jar_dest}/${signedjar.basename}">
+								<fileset dir="@{signedjar}" includes="**/*" />
+							</copy>
+						</then>
+						<else>
+							<if>
+								<available file="@{signedjar}" type="file" />
+								<then>
+									<unsignjar jar="@{signedjar}" destjar="${unsigned_jar_dest}/${signedjar.basename}" />
+								</then>
+							</if>
+						</else>
+					</if>
+				</sequential>
+			</for>
+		</sequential>
+	</macrodef>
+	
+	<!-- Launch the API analysis (not intended to be called, is invoked internally by launchApiAnalysis) -->
+	<target name="apiAnalysis">
+		<taskdef file="${releng.dir}/apiuse/api-tasks.properties">
+			<classpath>
+				<pathelement path="${maven.plugin.classpath}" />
+				<pathelement path="${maven.compile.classpath}" />
+			</classpath>
+		</taskdef>
+		<mkdir dir="${report.loc}" />
+		<!--for param="eclipse">
+			<path>
+				<fileset dir="${scope.loc}" includes="**/plugins" />
+			</path>
+			<sequential-->
+				<apiuse location="${scope.loc}" report="${report.loc}"
+					referencepattern=".*" scopepattern="${apiuse.scope.pattern}"
+					considerillegaluse="true" considerinternal="true" debug="true" />
+				<apiuse_reportconversion xmlfiles="${report.loc}" htmlfiles="${html.loc}"  debug="true" />
+			<!--/sequential>
+		</for-->
+	</target>
+
+	<!-- Extract and unsigned the sets of jars necessary for the api computation.
+		This target should be invoke by the api.report pom.xml
+	 -->
+	<target name="prepareApiReporting">
+		<mkdir dir="${eclipse.lib.dir}" />
+		<unjar overwrite="true" dest="${eclipse.lib.dir}"
+			src="${maven.dependency.p2.eclipse-plugin.org.eclipse.pde.api.tools.jar.path}">
+			<patternset>
+				<include name="**/*.jar" />
+			</patternset>
+		</unjar>
+		<move file="${eclipse.lib.dir}/lib/apitooling-ant.jar" overwrite="true"
+			todir="${eclipse.lib.dir}" />
+		<delete dir="${eclipse.lib.dir}/lib/" includeemptydirs="true" />
+
+		<echoproperties destfile="${org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project}/api_use_ant.properties"
+			format="text" />
+		
+		<path id="launch.api.analysis.signed.jars">
+			<fileset dir="${eclipse.lib.dir}" includes="*.jar" />
+			<pathelement path="${maven.compile.classpath}" />
+		</path>
+		
+		<!-- we unsigned all classpath jar for this purpose -->
+		<mkdir dir="${launch.api.analysis.unsigned.jar.dir}" />
+		<unsign_all_jars path="launch.api.analysis.signed.jars" destdir="${launch.api.analysis.unsigned.jar.dir}" />
+	</target>
+	
+	<!-- Will launch ant with a customized classpath.
+		This target should be invoke during the package lifecycle phase of the updatesite,
+		because the API use computation will be performed on the plugins directory of this one.
+	-->
+	<target name="launchApiAnalysis">
+		<if>
+			<available file="${scope.loc}" type="dir" />
+			<then>					
+					<!-- some jars needs to be added to the classpath -->
+					<java classname="org.apache.tools.ant.Main" failonerror="true"
+						logerror="true" fork="true">
+						<arg value="-f" />
+						<arg value="${ant.file}" />
+						<arg value="apiAnalysis" />
+						<arg value="-DWORKSPACE=${WORKSPACE}" />
+						<arg value="-Dreleng.dir=${releng.dir}" />
+						<arg value="-Dant.version.number=${ant.version.number}" />
+						<arg value="-Djava.security.debug=access,failure" />
+						<classpath>
+							<fileset dir="${maven.local.repository}/org/apache/ant"
+								includes="**/${ant.version.number}/**/*.jar" />
+							<fileset dir="${launch.api.analysis.unsigned.jar.dir}" includes="*" />
+							<pathelement location="${releng.classes}" />
+							<pathelement path="${maven.plugin.classpath}" />
+						</classpath>
+					</java>
+				</then>
+			</if>
+	</target>
+
+</project>

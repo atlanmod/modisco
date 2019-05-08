@@ -8,11 +8,12 @@
         <artifactId>commons</artifactId>
         <version>1.0.4</version>
     </parent>
-   <modelVersion>4.0.0</modelVersion>
-   <groupId>org.eclipse.mdt</groupId>
-   <artifactId>org.eclipse.modisco.build</artifactId>
+       <modelVersion>4.0.0</modelVersion>
+   <groupId>org.atlanmod.modisco</groupId>
+   <artifactId>atlanmod-modisco</artifactId>
    <version>1.2.0</version>
    <packaging>pom</packaging>
+   <name>Atlanmod Modisco</name>
   
      <properties>
         <modisco.build>${project.basedir}</modisco.build>
@@ -289,13 +290,13 @@
                      <goal>run</goal>
                   </goals>
                   <configuration>
-                     <target>
+                     <!--target>
                         <property name="WORKSPACE">/Users/sunye/Work/atlanmod/workspace</property>
                         <property name="releng.dir">/Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util</property>
                         <ant antfile="/Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util/build.xml"
                              target="store-build-qualifier"
                              inheritRefs="true"/>
-                     </target>
+                     </target-->
                   </configuration>
                </execution>
                <execution>

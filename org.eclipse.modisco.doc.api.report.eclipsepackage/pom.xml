@@ -137,7 +137,7 @@
                <plugin>
                   <groupId>org.eclipse.tycho.extras</groupId>
                   <artifactId>tycho-eclipserun-plugin</artifactId>
-                  <version>0.21.0</version>
+                  <version>${tycho-extras-version}</version>
                   <executions>
                      <execution>
                         <id>install-api-report</id>
@@ -146,8 +146,8 @@
                         </goals>
                         <phase>package</phase>
                         <configuration>
-                           <argLine>-Dorg.eclipse.emf.facet.releng.tycho.util.apiUse.properties=/Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util/releng-build.properties -Dorg.eclipse.emf.facet.releng.tycho.util.apiUse.target=${project.build.directory}</argLine>
-                           <appArgLine>-application org.eclipse.ant.core.antRunner -buildfile /Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util/apiuse/apiuse.build.xml -vmargs</appArgLine>
+                           <argLine>-Dorg.eclipse.emf.facet.releng.tycho.util.apiUse.properties=${util.dir}/releng-build.properties -Dorg.eclipse.emf.facet.releng.tycho.util.apiUse.target=${project.build.directory}</argLine>
+                           <appArgLine>-application org.eclipse.ant.core.antRunner -buildfile ${util.dir}/apiuse/apiuse.build.xml -vmargs</appArgLine>
                            <dependencies>
                               <dependency>
                                  <artifactId>org.apache.ant</artifactId>
