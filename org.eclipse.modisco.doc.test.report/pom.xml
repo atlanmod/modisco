@@ -27,7 +27,7 @@
                      <goal>run</goal>
                   </goals>
                   <configuration>
-                     <target>
+                     <!--target>
                         <property name="releng.dir">${{releng.dir}}</property>
                         <ant antfile="${releng.dir}/build.xml" target="copy-test-report" inheritRefs="true"
                              inheritAll="true">
@@ -36,7 +36,7 @@
                            <property name="org.eclipse.emf.facet.releng.tycho.util.ant-script.copy-test-report.to"
                                      value="${basedir}/report"/>
                         </ant>
-                     </target>
+                     </target-->
                   </configuration>
                </execution>
                <execution>

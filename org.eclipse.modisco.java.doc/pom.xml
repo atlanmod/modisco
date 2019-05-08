@@ -54,14 +54,14 @@
                      <goal>run</goal>
                   </goals>
                   <configuration>
-                     <target>
+                     <!--target>
                         <ant antfile="/Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util/doc.build.xml"
                              target="all"
                              inheritRefs="true">
                            <property name="org.eclipse.emf.facet.releng.tycho.util.doc.build.downloads"
                                      value="${project.build.directory}/downloads"/>
                         </ant>
-                     </target>
+                     </target -->
                   </configuration>
                </execution>
             </executions>

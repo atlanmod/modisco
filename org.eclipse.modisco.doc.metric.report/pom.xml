@@ -27,7 +27,7 @@
                      <goal>run</goal>
                   </goals>
                   <configuration>
-                     <target>
+                     <!--target>
                         <property name="releng.dir">${{releng.dir}}</property>
                         <ant antfile="${releng.dir}/build.xml" target="compute-metric-report"
                              inheritRefs="true"
@@ -37,7 +37,7 @@
                            <property name="org.eclipse.emf.facet.releng.tycho.util.ant-script.compute-metric-report.sourceRoot"
                                      value="${product.source.location}"/>
                         </ant>
-                     </target>
+                     </target-->
                   </configuration>
                </execution>
             </executions>

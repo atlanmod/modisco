@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:m2="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
       <parent>
         <groupId>org.atlanmod.commons</groupId>
         <artifactId>commons</artifactId>
@@ -15,22 +15,25 @@
    <packaging>pom</packaging>
   
      <properties>
-        <modisco.build>/Users/sunye/Work/atlanmod/workspace/org.eclipse.modisco.build</modisco.build>
+        <modisco.build>${project.basedir}</modisco.build>
         <util.dir>${modisco.build}/.util</util.dir>
-        <product.signing.directory>/home/data/httpd/download-staging.priv/modeling/mdt/modisco/signing</product.signing.directory> 
+        <product.signing.directory>/home/data/httpd/download-staging.priv/modeling/mdt/modisco/signing</product.signing.directory>
         <eclipse.p2.mirrors>false</eclipse.p2.mirrors>
 
-      <tycho-version>1.4.0</tycho-version>
-      <tycho-extras-version>1.4.0</tycho-extras-version>
-      <download.eclipse.org.mirror>download.eclipse.org</download.eclipse.org.mirror>
-      <maven.compile.deprecation>false</maven.compile.deprecation>
-      <maven.test.failure.ignore>true</maven.test.failure.ignore>
-      <ant.version.number>1.8.3</ant.version.number>
-      <releng.dir>/Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util</releng.dir>
-      <buildDirectoryName>__target__</buildDirectoryName>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-      <outputEncoding>UTF-8</outputEncoding>
+        <tycho-version>1.4.0</tycho-version>
+        <tycho-extras-version>1.4.0</tycho-extras-version>
+        <download.eclipse.org.mirror>download.eclipse.org</download.eclipse.org.mirror>
+        <maven.compile.deprecation>false</maven.compile.deprecation>
+        <maven.test.failure.ignore>true</maven.test.failure.ignore>
+        <ant.version.number>1.8.3</ant.version.number>
+
+        <buildDirectoryName>__target__</buildDirectoryName>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <outputEncoding>UTF-8</outputEncoding>
+
+
+
       <org.eclipse.emf.facet.releng.tycho.util.configure.relengProperties>${modisco.build}/org.eclipse.modisco.releng.tycho/releasetrain/releng.properties</org.eclipse.emf.facet.releng.tycho.util.configure.relengProperties>
       <product.source.location>${modisco.build}</product.source.location>
       <!--#A file which contains repositories declarations used when the build is against update-sites.
@@ -41,14 +44,13 @@
       <!--#How the releng tools should find relevant bundles--><updatesite.source.location>${modisco.build}/org.eclipse.modisco.updatesite</updatesite.source.location>
       <test.report.plugin.source.location>${modisco.build}/org.eclipse.modisco.doc.test.report</test.report.plugin.source.location>
       <metric.report.plugin.source.location>${modisco.build}/org.eclipse.modisco.doc.metric.report</metric.report.plugin.source.location>
-      <!--#API use report generation configuration--><org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project/>
+      <!--#API use report generation configuration-->
+        <org.eclipse.emf.facet.releng.tycho.util.configure.apireport.project/>
       <org.eclipse.emf.facet.releng.tycho.util.configure.apireport.eclipsepackage>${modisco.build}/org.eclipse.modisco.doc.api.report.eclipsepackage</org.eclipse.emf.facet.releng.tycho.util.configure.apireport.eclipsepackage>
       <org.eclipse.emf.facet.releng.tycho.util.configure.apireport.scopepattern>org\.eclipse.*modisco.*</org.eclipse.emf.facet.releng.tycho.util.configure.apireport.scopepattern>
       <targetOS>${modisco.build}/org.eclipse.modisco.releng.tycho/targetOS.xml</targetOS>
       <targetPlatform>${modisco.build}/org.eclipse.modisco.releng.tycho/releasetrain/empty.targetPlatform.xml</targetPlatform>
-      <org.eclipse.emf.facet.releng.tycho.util.configure.pmdRuleSet>${modisco.build}/../org.eclipse.emf.facet.archi.tech.rules/pmd/ruleset.xml</org.eclipse.emf.facet.releng.tycho.util.configure.pmdRuleSet>
-
-      <!-- org.eclipse.emf.facet.releng.tycho.util.configure.checkstyleConfig>${modisco.build}/../org.eclipse.emf.facet.archi.tech.rules/checkstyle/EmfFacet.checkstyle</org.eclipse.emf.facet.releng.tycho.util.configure.checkstyleConfig -->
+      <org.eclipse.emf.facet.releng.tycho.util.configure.pmdRuleSet>${util.dir}/pmd/ruleset.xml</org.eclipse.emf.facet.releng.tycho.util.configure.pmdRuleSet>
       <org.eclipse.emf.facet.releng.tycho.util.configure.checkstyleConfig>${util.dir}/checkstyle/Modisco.checkstyle</org.eclipse.emf.facet.releng.tycho.util.configure.checkstyleConfig>
       <org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>-Xmx1024m -XX:MaxPermSize=256m -XstartOnFirstThread</org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>
       <org.eclipse.emf.facet.releng.tycho.util.configure.source.idRegex>org\.eclipse.*modisco.*</org.eclipse.emf.facet.releng.tycho.util.configure.source.idRegex>
@@ -56,6 +58,11 @@
       <org.eclipse.emf.facet.releng.tycho.util.configure.statsURI>http://download.eclipse.org/stats</org.eclipse.emf.facet.releng.tycho.util.configure.statsURI>
       <org.eclipse.emf.facet.releng.tycho.util.configure.bugzillaProduct>MDT.MoDisco</org.eclipse.emf.facet.releng.tycho.util.configure.bugzillaProduct>
       <org.eclipse.emf.facet.releng.tycho.util.configure.ipLogProjectId>modeling.mdt.modisco</org.eclipse.emf.facet.releng.tycho.util.configure.ipLogProjectId>
+
+        <!-- # References to EMF Facet -->
+
+        <!-- releng.dir>/Users/sunye/Work/atlanmod/workspace/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util</releng.dir -->
+
    </properties>
   
    <modules xmlns="">
@@ -410,33 +417,24 @@
                <pomDependencies>consider</pomDependencies>
                <allowConflictingDependencies>true</allowConflictingDependencies>
                <includePackedArtifacts>true</includePackedArtifacts>
-               <environments xmlns="">
-	<!--
-	<environment>
-		<os>win32</os>
-		<arch>x86</arch>
-		<ws>win32</ws>
-	</environment>
-	<environment>
-		<os>win32</os>
-		<arch>x86_64</arch>
-		<ws>win32</ws>
-	</environment>
-	<environment>
-		<os>linux</os>
-		<arch>x86</arch>
-		<ws>gtk</ws>
-	</environment>
-	<environment>
-		<os>linux</os>
-		<arch>x86_64</arch>
-		<ws>gtk</ws>
-	</environment>
-	-->
-</environments>
-               <target xmlns="">
-
-</target>
+               <environments>
+                        <environment>
+                            <os>win32</os>
+                            <ws>win32</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                        <environment>
+                            <os>linux</os>
+                            <ws>gtk</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                        <environment>
+                            <os>macosx</os>
+                            <ws>cocoa</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                    </environments>
+               <target xmlns=""></target>
             </configuration>
          </plugin>
          <plugin>
@@ -454,6 +452,7 @@
             </configuration>
          </plugin>
       </plugins>
+
       <pluginManagement>
          <plugins>
             <plugin>
@@ -544,54 +543,54 @@
       </pluginManagement>
    </build>
 
-   <repositories xmlns="">
+   <repositories>
 	     <repository>
-		       <id>SWTBot__0__0__0__0</id>
+		       <id>SWTBot</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/technology/swtbot/snapshots</url>
 	     </repository>
 	     <repository>
-		       <id>Orbit__1__1__1__1</id>
+		       <id>Orbit</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150519210750/repository/</url>
 	     </repository>
 	     <repository>
-		       <id>Eclipse License__2__2__2__2</id>
+		       <id>Eclipse License</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/cbi/updates/license/1.0.1.v20140414-1359/</url>
 	     </repository>
 	     <repository>
-		       <id>BIRT interim__3__3__3__3</id>
+		       <id>BIRT interim</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/birt/update-site/oxygen-interim/</url>
 	     </repository>
 	     <repository>
-		       <id>EMF CDO__4__4__4__4</id>
+		       <id>EMF CDO</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/emf/cdo/drops/R20180613-0111</url>
 	     </repository>
 	     <repository>
-		       <id>EMF 2.18__5__5__5__5</id>
+		       <id>EMF 2.18</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/emf/emf/builds/milestone/S201904050820</url>
 	     </repository>
 	     <repository>
-		       <id>EMF Query milestones__6__6__6__6</id>
+		       <id>EMF Query</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/emf/query/updates/releases/R201805030653</url>
 	     </repository>
 	     <repository>
-		       <id>EMF Validation milestones__7__7__7__7</id>
+		       <id>EMF Validation</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/emf/validation/updates/releases/R201812070911</url>
 	     </repository>
 	     <repository>
-		       <id>EMF Transaction milestones__8__8__8__8</id>
+		       <id>EMF Transaction</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824/</url>
 	     </repository>
 	     <repository>
-		       <id>Eclipse and Equinox__9__9__9__9</id>
+		       <id>Eclipse and Equinox</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/eclipse/updates/4.12milestones/S-4.12M1-201904110625/</url>
 	     </repository>
@@ -606,197 +605,17 @@
 		       <url>http://download.eclipse.org/acceleo/updates/milestones/3.7/S201902261618</url>
 	     </repository>
 	     <repository>
-		       <id>UML2 5.5.x Releases__12__12__12__12</id>
+		       <id>UML2 5.5.x</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/mdt/uml2/updates/5.5</url>
 	     </repository>
 	     <repository>
-		       <id>OCL__13__13__13__13</id>
+		       <id>OCL</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/modeling/mdt/ocl/updates/milestones/6.8.0/S201904151846</url>
 	     </repository>
 	     <repository>
-		       <id>PDT 6.2__14__14__14__14</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/tools/pdt/updates/milestones/6.2rc2</url>
-	     </repository>
-	     <repository>
-		       <id>BIRT interim__15__15__15</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/birt/update-site/oxygen-interim/</url>
-	     </repository>
-	     <repository>
-		       <id>EMF CDO__16__16__16</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/cdo/drops/R20180613-0111</url>
-	     </repository>
-	     <repository>
-		       <id>EMF 2.18__17__17__17</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/emf/builds/milestone/S201904050820</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Query milestones__18__18__18</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/query/updates/releases/R201805030653</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Validation milestones__19__19__19</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/validation/updates/releases/R201812070911</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Transaction milestones__20__20__20</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824/</url>
-	     </repository>
-	     <repository>
-		       <id>Eclipse and Equinox__21__21__21</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/eclipse/updates/4.12milestones/S-4.12M1-201904110625/</url>
-	     </repository>
-	     <repository>
-		       <id>M2M ATL__22__22__22</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/mmt/atl/updates/releases/4.0/R201812100843</url>
-	     </repository>
-	     <repository>
-		       <id>Acceleo__23__23__23</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/acceleo/updates/milestones/3.7/S201902261618</url>
-	     </repository>
-	     <repository>
-		       <id>UML2 5.5.x Releases__24__24__24</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/mdt/uml2/updates/5.5</url>
-	     </repository>
-	     <repository>
-		       <id>OCL__25__25__25</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/mdt/ocl/updates/milestones/6.8.0/S201904151846</url>
-	     </repository>
-	     <repository>
-		       <id>PDT 6.2__26__26__26</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/tools/pdt/updates/milestones/6.2rc2</url>
-	     </repository>
-	     <repository>
-		       <id>BIRT interim__28__27</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/birt/update-site/oxygen-interim/</url>
-	     </repository>
-	     <repository>
-		       <id>EMF CDO__29__28</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/cdo/drops/R20180613-0111</url>
-	     </repository>
-	     <repository>
-		       <id>EMF 2.18__30__29</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/emf/builds/milestone/S201904050820</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Query milestones__31__30</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/query/updates/releases/R201805030653</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Validation milestones__32__31</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/validation/updates/releases/R201812070911</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Transaction milestones__33__32</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824/</url>
-	     </repository>
-	     <repository>
-		       <id>Eclipse and Equinox__34__33</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/eclipse/updates/4.12-I-builds/I20190501-1800/</url>
-	     </repository>
-	     <repository>
-		       <id>M2M ATL__35__34</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/mmt/atl/updates/releases/4.0/R201812100843</url>
-	     </repository>
-	     <repository>
-		       <id>Acceleo__36__35</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/acceleo/updates/milestones/3.7/S201902261618</url>
-	     </repository>
-	     <repository>
-		       <id>UML2 5.5.x Releases__37__36</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/mdt/uml2/updates/5.5</url>
-	     </repository>
-	     <repository>
-		       <id>OCL__38__37</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/mdt/ocl/updates/milestones/6.8.0/S201904151846</url>
-	     </repository>
-	     <repository>
-		       <id>PDT 6.2__39__38</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/tools/pdt/updates/milestones/6.2rc2</url>
-	     </repository>
-	     <repository>
-		       <id>BIRT interim__39</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/birt/update-site/oxygen-interim/</url>
-	     </repository>
-	     <repository>
-		       <id>EMF CDO__40</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/cdo/drops/R20180613-0111</url>
-	     </repository>
-	     <repository>
-		       <id>EMF 2.18__41</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/emf/builds/milestone/S201904050820</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Query milestones__42</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/query/updates/releases/R201805030653</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Validation milestones__43</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/validation/updates/releases/R201812070911</url>
-	     </repository>
-	     <repository>
-		       <id>EMF Transaction milestones__44</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824/</url>
-	     </repository>
-	     <repository>
-		       <id>Eclipse and Equinox__45</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/eclipse/updates/4.12-I-builds/I20190501-1800/</url>
-	     </repository>
-	     <repository>
-		       <id>M2M ATL__46</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/mmt/atl/updates/releases/4.0/R201812100843</url>
-	     </repository>
-	     <repository>
-		       <id>Acceleo__47</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/acceleo/updates/milestones/3.7/S201902261618</url>
-	     </repository>
-	     <repository>
-		       <id>UML2 5.5.x Releases__48</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/mdt/uml2/updates/5.5</url>
-	     </repository>
-	     <repository>
-		       <id>OCL__49</id>
-		       <layout>p2</layout>
-		       <url>http://download.eclipse.org/modeling/mdt/ocl/updates/milestones/6.8.0/S201904151846</url>
-	     </repository>
-	     <repository>
-		       <id>PDT 6.2__50</id>
+		       <id>PDT 6.2</id>
 		       <layout>p2</layout>
 		       <url>http://download.eclipse.org/tools/pdt/updates/milestones/6.2rc2</url>
 	     </repository>
@@ -896,5 +715,17 @@
             </property>
          </activation>
       </profile>
+         <profile>
+            <id>activate-in-module</id>
+            <activation>
+               <file>
+                  <exists>${basedir}/../.util/checkstyle/Modisco.checkstyle</exists>
+               </file>
+            </activation>
+            <properties>
+               <util.dir>${basedir}/../.util</util.dir>
+               <modisco.build>${basedir}/..</modisco.build>
+            </properties>
+         </profile>
    </profiles>
 </project>
