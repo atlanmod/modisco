@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.modisco.java.discoverer.benchmark.source"
+         label="MoDisco Java Discoverer Benchmark feature Source"
+         version="1.2.0.qualifier"
+         provider-name="%providerName"
+         plugin="org.eclipse.gmt.modisco.java.discoverer.benchmark"
+         license-feature="org.eclipse.license"
+         license-feature-version="0.0.0">
+   <description url="http://www.eclipse.org/MoDisco/">
+      %description
+   </description>
+   <copyright>
+      Copyright (c) 2008, 2009 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+   </copyright>
+   <license url="%licenseURL">
+      %license
+   </license>
+   <plugin id="org.eclipse.modisco.java.discoverer.benchmark.source" download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+   <plugin id="org.eclipse.gmt.modisco.java.nousages.source" download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+   <plugin id="org.eclipse.gmt.modisco.java.nousages.cdo.source" download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+   <plugin id="org.eclipse.gmt.modisco.java.classiceobject.source" download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+   <plugin id="org.eclipse.modisco.java.composition.discoverer.benchmark.source"
+           download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+   <plugin id="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.source"
+           download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+   <plugin id="org.eclipse.modisco.infra.discovery.benchmark.source" download-size="0"
+           install-size="0"
+           version="0.0.0"
+           unpack="false"/>
+</feature>

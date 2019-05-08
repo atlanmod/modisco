@@ -24,11 +24,11 @@ http://www.eclipse.org/legal/epl-v10.html
       %license
    </license>
 
-   <plugin
+   <!-- plugin
          id="org.antlr.runtime"
          download-size="0"
          install-size="0"
          version="3.0.0"
-         unpack="false"/>
+         unpack="false"/-->
 
 </feature>
