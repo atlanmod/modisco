@@ -83,7 +83,7 @@ Contributors:
     <module name="NeedBraces"/>
     <module name="RightCurly"/>
     <module name="AvoidInlineConditionals"/>
-    <module name="DoubleCheckedLocking"/>
+    <!-- module name="DoubleCheckedLocking"/-->
     <module name="EmptyStatement"/>
     <module name="EqualsHashCode"/>
     <module name="HiddenField">
@@ -94,10 +94,10 @@ Contributors:
     <module name="InnerAssignment"/>
     <module name="MagicNumber"/>
     <module name="MissingSwitchDefault"/>
-    <module name="RedundantThrows">
+    <!--module name="RedundantThrows">
       <property name="logLoadErrors" value="true"/>
       <property name="suppressLoadErrors" value="true"/>
-    </module>
+    </module-->
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
     <module name="DesignForExtension">
