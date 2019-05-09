@@ -14,36 +14,28 @@ Contributors:
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd"
 	xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd">
-	<description>PMD Plug-in preferences rule set dedicated to the project 'EMF Facet'.</description>
+	<description>PMD Plug-in preferences rule set dedicated to the project 'Modisco'.</description>
 	<exclude-pattern>.*/internal/Messages.java</exclude-pattern>
 	<exclude-pattern>.*/generated/.*\.java</exclude-pattern>
 	<exclude-pattern>.*/src-.*/.*</exclude-pattern>
 	<exclude-pattern>.*/.*-gen/.*</exclude-pattern>
-	<rule ref="rulesets/java/typeresolution.xml/LooseCoupling" />
-	<rule ref="rulesets/java/typeresolution.xml/CloneMethodMustImplementCloneable" />
-	<rule ref="rulesets/java/typeresolution.xml/UnusedImports" />
-	<rule ref="rulesets/java/typeresolution.xml/SignatureDeclareThrowsException" />
-	<rule ref="rulesets/java/braces.xml/IfStmtsMustUseBraces" />
-	<rule ref="rulesets/java/braces.xml/WhileLoopsMustUseBraces" />
-	<rule ref="rulesets/java/braces.xml/IfElseStmtsMustUseBraces" />
-	<rule ref="rulesets/java/braces.xml/ForLoopsMustUseBraces" />
-	<rule ref="rulesets/java/design.xml/UseSingleton" />
-	<rule ref="rulesets/java/design.xml/SimplifyBooleanReturns" />
-	<rule ref="rulesets/java/design.xml/SimplifyBooleanExpressions" />
-	<rule ref="rulesets/java/design.xml/SwitchStmtsShouldHaveDefault" />
-	<rule ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts" />
-	<rule ref="rulesets/java/design.xml/AvoidReassigningParameters" />
-	<rule ref="rulesets/java/design.xml/SwitchDensity" />
-	<rule ref="rulesets/java/design.xml/ConstructorCallsOverridableMethod">
+	<rule ref="category/java/design.xml/UseUtilityClass" />
+	<rule ref="category/java/design.xml/SimplifyBooleanReturns" />
+	<rule ref="category/java/design.xml/SimplifyBooleanExpressions" />
+	<rule ref="category/java/bestpractices.xml/SwitchStmtsShouldHaveDefault" />
+	<rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts" />
+	<rule ref="category/java/bestpractices.xml/AvoidReassigningParameters" />
+	<rule ref="category/java/design.xml/SwitchDensity" />
+	<rule ref="category/java/errorprone.xml/ConstructorCallsOverridableMethod">
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/design.xml/AccessorClassGeneration" />
-	<rule ref="rulesets/java/design.xml/FinalFieldCouldBeStatic" />
-	<rule ref="rulesets/java/design.xml/CloseResource" />
-	<rule ref="rulesets/java/design.xml/NonStaticInitializer" />
-	<rule ref="rulesets/java/design.xml/DefaultLabelNotLastInSwitchStmt" />
-	<rule ref="rulesets/java/design.xml/NonCaseLabelInSwitchStatement" />
-	<rule ref="rulesets/java/design.xml/OptimizableToArrayCall" />
+	<rule ref="category/java/bestpractices.xml/AccessorClassGeneration" />
+	<rule ref="category/java/design.xml/FinalFieldCouldBeStatic" />
+	<rule ref="category/java/errorprone.xml/CloseResource" />
+	<rule ref="category/java/errorprone.xml/NonStaticInitializer" />
+	<rule ref="category/java/bestpractices.xml/DefaultLabelNotLastInSwitchStmt" />
+	<rule ref="category/java/errorprone.xml/NonCaseLabelInSwitchStatement" />
+	<rule ref="category/java/performance.xml/OptimizableToArrayCall" />
 	<rule ref="rulesets/java/design.xml/BadComparison" />
 	<rule ref="rulesets/java/design.xml/EqualsNull" />
 	<rule ref="rulesets/java/design.xml/ConfusingTernary" />
@@ -67,20 +59,19 @@ Contributors:
 	<rule ref="rulesets/java/design.xml/NonThreadSafeSingleton" />
 	<rule ref="rulesets/java/design.xml/UncommentedEmptyMethod" />
 	<rule ref="rulesets/java/design.xml/UncommentedEmptyConstructor" />
-	<rule ref="rulesets/java/design.xml/AvoidConstantsInterface" />
+	<rule ref="rulesets/java/design.xml/ConstantsInInterface" />
 	<rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter" />
 	<rule ref="rulesets/java/design.xml/PreserveStackTrace" />
 	<rule ref="rulesets/java/design.xml/UseCollectionIsEmpty" />
-	<rule
-		ref="rulesets/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal" />
+	<rule ref="category/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal" />
 	<rule ref="rulesets/java/design.xml/EmptyMethodInAbstractClassShouldBeAbstract">
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/design.xml/SingularField" />
+	<rule ref="category/java/design.xml/SingularField" />
 	<rule ref="rulesets/java/design.xml/ReturnEmptyArrayRatherThanNull" >
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/design.xml/AbstractClassWithoutAnyMethod" />
+	<rule ref="category/java/design.xml/AbstractClassWithoutAnyMethod" />
 	<rule ref="rulesets/java/design.xml/TooFewBranchesForASwitchStatement" />
 	<rule ref="rulesets/java/strictexception.xml/AvoidCatchingThrowable" />
 	<rule ref="rulesets/java/strictexception.xml/SignatureDeclareThrowsException" />
@@ -95,7 +86,7 @@ Contributors:
 	<rule ref="rulesets/java/strictexception.xml/DoNotThrowExceptionInFinally" />
 	<rule
 		ref="rulesets/java/strictexception.xml/AvoidThrowingNewInstanceOfSameException" />
-	<rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField" />
+	<rule ref="category/java/bestpractices.xml/UnusedPrivateMethod" />
 	<rule ref="rulesets/java/unusedcode.xml/UnusedLocalVariable" />
 	<rule ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod" />
 	<rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter" />
@@ -159,26 +150,26 @@ Contributors:
 	<rule ref="category/java/errorprone.xml/EmptySwitchStatements" />
 	<rule ref="rulesets/java/basic.xml/JumbledIncrementer" />
 	<rule ref="rulesets/java/basic.xml/ForLoopShouldBeWhileLoop" />
-	<rule ref="rulesets/java/basic.xml/UnnecessaryConversionTemporary" />
+	<rule ref="rulesets/java/unnecessary.xml/UnnecessaryConversionTemporary" />
 	<rule ref="rulesets/java/basic.xml/OverrideBothEqualsAndHashcode" />
 	<rule ref="rulesets/java/basic.xml/DoubleCheckedLocking" />
 	<rule ref="rulesets/java/basic.xml/ReturnFromFinallyBlock" />
 	<rule ref="category/java/errorprone.xml/EmptySynchronizedBlock" />
-	<rule ref="rulesets/java/basic.xml/UnnecessaryReturn" />
-	<rule ref="rulesets/java/basic.xml/EmptyStaticInitializer" />
+	<rule ref="rulesets/java/unnecessary.xml/UnnecessaryReturn" />
+	<rule ref="rulesets/java/empty.xml/EmptyInitializer" />
 	<rule ref="rulesets/java/basic.xml/UnconditionalIfStatement" />
-	<rule ref="rulesets/java/basic.xml/EmptyStatementNotInLoop" />
+	<rule ref="rulesets/java/empty.xml/EmptyStatementNotInLoop" />
 	<rule ref="rulesets/java/basic.xml/BooleanInstantiation">
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/basic.xml/UnnecessaryFinalModifier" />
+	<rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier" />
 	<rule ref="rulesets/java/basic.xml/CollapsibleIfStatements" />
-	<rule ref="rulesets/java/basic.xml/UselessOverridingMethod" />
+	<rule ref="rulesets/java/unnecessary.xml/UselessOverridingMethod" />
 	<rule ref="rulesets/java/basic.xml/ClassCastExceptionWithToArray" />
 	<rule ref="rulesets/java/basic.xml/AvoidDecimalLiteralsInBigDecimalConstructor" />
-	<rule ref="rulesets/java/basic.xml/UselessOperationOnImmutable" />
+	<rule ref="rulesets/java/unnecessary.xml/UselessOperationOnImmutable" />
 	<rule ref="rulesets/java/basic.xml/MisplacedNullCheck" />
-	<rule ref="rulesets/java/basic.xml/UnusedNullCheckInEquals" />
+	<rule ref="rulesets/java/unnecessary.xml/UnusedNullCheckInEquals" />
 	<rule ref="rulesets/java/basic.xml/AvoidThreadGroup" />
 	<rule ref="rulesets/java/basic.xml/BrokenNullCheck" />
 	<rule ref="rulesets/java/basic.xml/BigIntegerInstantiation" />
@@ -186,7 +177,7 @@ Contributors:
 	<rule ref="rulesets/java/basic.xml/AvoidUsingHardCodedIP" />
 	<rule ref="rulesets/java/basic.xml/CheckResultSet" />
 	<rule ref="rulesets/java/basic.xml/AvoidMultipleUnaryOperators" />
-	<rule ref="rulesets/java/basic.xml/EmptyInitializer" />
+	<rule ref="rulesets/java/empty.xml/EmptyInitializer" />
 	<rule ref="rulesets/java/sunsecure.xml/MethodReturnsInternalArray" />
 	<rule ref="rulesets/java/sunsecure.xml/ArrayIsStoredDirectly" />
 	<rule ref="rulesets/java/coupling.xml/CouplingBetweenObjects" />
@@ -210,38 +201,38 @@ Contributors:
 	<rule ref="rulesets/java/controversial.xml" >
 		<!-- The rule 'DataflowAnomalyAnalysis' generates to many false positive. -->
 		<exclude name="DataflowAnomalyAnalysis" />
-		<exclude name="BooleanInversion" />
+		<!-- exclude name="BooleanInversion" /-->
 	</rule>
 	<rule ref="rulesets/java/naming.xml/ShortVariable" />
 	<rule ref="rulesets/java/naming.xml/LongVariable" />
 	<rule ref="rulesets/java/naming.xml/ShortMethodName" />
-	<rule ref="rulesets/java/naming.xml/VariableNamingConventions">
+	<rule ref="category/java/codestyle.xml/VariableNamingConventions">
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/naming.xml/MethodNamingConventions" />
-	<rule ref="rulesets/java/naming.xml/ClassNamingConventions" />
-	<rule ref="rulesets/java/naming.xml/AbstractNaming" />
-	<rule ref="rulesets/java/naming.xml/AvoidDollarSigns" />
-	<rule ref="rulesets/java/naming.xml/MethodWithSameNameAsEnclosingClass" />
-	<rule ref="rulesets/java/naming.xml/SuspiciousHashcodeMethodName" />
-	<rule ref="rulesets/java/naming.xml/SuspiciousConstantFieldName" />
-	<rule ref="rulesets/java/naming.xml/SuspiciousEqualsMethodName" />
-	<rule ref="rulesets/java/naming.xml/AvoidFieldNameMatchingTypeName" />
-	<rule ref="rulesets/java/naming.xml/AvoidFieldNameMatchingMethodName" />
-	<rule ref="rulesets/java/naming.xml/NoPackage" />
-	<rule ref="rulesets/java/naming.xml/PackageCase" />
-	<rule ref="rulesets/java/naming.xml/MisleadingVariableName" />
-	<rule ref="rulesets/java/naming.xml/BooleanGetMethodName" />
-	<rule ref="rulesets/java/codesize.xml/NPathComplexity" />
-	<rule ref="rulesets/java/codesize.xml/ExcessiveMethodLength" />
-	<rule ref="rulesets/java/codesize.xml/ExcessiveParameterList" />
-	<rule ref="rulesets/java/codesize.xml/ExcessiveClassLength" />
-	<rule ref="rulesets/java/codesize.xml/CyclomaticComplexity" />
-	<rule ref="rulesets/java/codesize.xml/ExcessivePublicCount" />
-	<rule ref="rulesets/java/codesize.xml/TooManyFields" />
-	<rule ref="rulesets/java/codesize.xml/NcssMethodCount" />
-	<rule ref="rulesets/java/codesize.xml/NcssTypeCount" />
-	<rule ref="rulesets/java/codesize.xml/NcssConstructorCount" />
+	<rule ref="category/java/codestyle.xml/MethodNamingConventions" />
+	<rule ref="category/java/codestyle.xml/ClassNamingConventions" />
+	<rule ref="category/java/codestyle.xml/AbstractNaming" />
+	<rule ref="category/java/codestyle.xml/AvoidDollarSigns" />
+	<rule ref="category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass" />
+	<rule ref="category/java/errorprone.xml/SuspiciousHashcodeMethodName" />
+	<rule ref="category/java/codestyle.xml/SuspiciousConstantFieldName" />
+	<rule ref="category/java/errorprone.xml/SuspiciousEqualsMethodName" />
+	<rule ref="category/java/errorprone.xml/AvoidFieldNameMatchingTypeName" />
+	<rule ref="category/java/errorprone.xml/AvoidFieldNameMatchingMethodName" />
+	<rule ref="category/java/codestyle.xml/NoPackage" />
+	<rule ref="category/java/codestyle.xml/PackageCase" />
+	<rule ref="category/java/codestyle.xml/MIsLeadingVariableName" />
+	<rule ref="category/java/codestyle.xml/BooleanGetMethodName" />
+	<rule ref="category/java/design.xml/NPathComplexity" />
+	<rule ref="category/java/design.xml/ExcessiveMethodLength" />
+	<rule ref="category/java/design.xml/ExcessiveParameterList" />
+	<rule ref="category/java/design.xml/ExcessiveClassLength" />
+	<rule ref="category/java/design.xml/CyclomaticComplexity" />
+	<rule ref="category/java/design.xml/ExcessivePublicCount" />
+	<rule ref="category/java/design.xml/TooManyFields" />
+	<rule ref="category/java/design.xml/NcssMethodCount" />
+	<rule ref="category/java/design.xml/NcssTypeCount" />
+	<rule ref="category/java/design.xml/NcssConstructorCount" />
 	<!-- This maximum number of methods is set to 10 by default. I assume that 
 		10 is tolerant approximation of 7 (+/- 2) which is number of item that a 
 		humane brain can managed in one time. If we apply this rule to UI or a functional 
@@ -252,22 +243,18 @@ Contributors:
 		the number of methods limit is useless. That why, to my mind this rule will 
 		not be applicable in the majority of cases. This rule must then be deprecated. -->
 	<!--  <rule ref="rulesets/java/codesize.xml/TooManyMethods" /> -->
-	<rule ref="rulesets/java/finalizers.xml/EmptyFinalizer" />
-	<rule ref="rulesets/java/finalizers.xml/FinalizeOnlyCallsSuperFinalize" />
-	<rule ref="rulesets/java/finalizers.xml/FinalizeOverloaded" />
-	<rule ref="rulesets/java/finalizers.xml/FinalizeDoesNotCallSuperFinalize" />
-	<rule ref="rulesets/java/finalizers.xml/FinalizeShouldBeProtected" />
-	<rule ref="rulesets/java/finalizers.xml/AvoidCallingFinalize" />
-	<rule ref="rulesets/java/logging-jakarta-commons.xml/UseCorrectExceptionLogging" />
-	<rule ref="rulesets/java/logging-jakarta-commons.xml/ProperLogger" />
-	<rule ref="rulesets/java/javabeans.xml">
-		<!-- The rule 'BeanMembersShouldSerialize' is useless in the EMF Facet context beacause each bean has 
-			to be implemented using an ecore model. -->
-		<exclude name="BeanMembersShouldSerialize" />
-	</rule>
-	<rule ref="rulesets/java/clone.xml/ProperCloneImplementation" >
+	<rule ref="category/java/errorprone.xml/EmptyFinalizer" />
+	<rule ref="category/java/errorprone.xml/FinalizeOnlyCallsSuperFinalize" />
+	<rule ref="category/java/errorprone.xml/FinalizeOverloaded" />
+	<rule ref="category/java/errorprone.xml/FinalizeDoesNotCallSuperFinalize" />
+	<rule ref="category/java/errorprone.xml/FinalizeShouldBeProtected" />
+	<rule ref="category/java/errorprone.xml/AvoidCallingFinalize" />
+	<rule ref="category/java/errorprone.xml/UseCorrectExceptionLogging" />
+	<rule ref="category/java/errorprone.xml/ProperLogger" />
+    <rule ref="category/java/errorprone.xml/MissingSerialVersionUID"/>
+	<rule ref="category/java/errorprone.xml/ProperCloneImplementation">
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/clone.xml/CloneThrowsCloneNotSupportedException" />
-	<rule ref="rulesets/java/clone.xml/CloneMethodMustImplementCloneable" />
+	<rule ref="category/java/errorprone.xml/CloneThrowsCloneNotSupportedException" />
+	<rule ref="category/java/errorprone.xml/CloneMethodMustImplementCloneable" />
 </ruleset>
