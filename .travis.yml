@@ -15,21 +15,8 @@ before_script:
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # give xvfb some time to start
 
-init_submodules:
-    #UPDATE SUBMODULES
-    - git submodule update --init --recursive
-
-install:
-    #LOCALLY INSTALL sexp2emf
-    - git clone --depth 1 https://github.com/atlanmod/sexp2emf.git
-    - mvn --batch-mode -Dmaven.javadoc.skip=true --file sexp2emf/pom.xml install
-
 script:
-    #ENFORCE MAVEN VERSION
-    #- mvn -pl . enforcer:enforce
-    #BUILD SCRIPT AND REPORTS
-    #- travis_wait 80 
-    - mvn -B -V -q -DskipTests --global-toolchains .travis.maven.toolchains.xml install jxr:aggregate site
+    - mvn -B -V -q --global-toolchains .travis.maven.toolchains.xml install jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
