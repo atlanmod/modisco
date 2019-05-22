@@ -56,7 +56,7 @@
       <targetPlatform>${modisco.build}/org.eclipse.modisco.releng.tycho/releasetrain/empty.targetPlatform.xml</targetPlatform>
       <org.eclipse.emf.facet.releng.tycho.util.configure.pmdRuleSet>${util.dir}/pmd/ruleset.xml</org.eclipse.emf.facet.releng.tycho.util.configure.pmdRuleSet>
       <org.eclipse.emf.facet.releng.tycho.util.configure.checkstyleConfig>${util.dir}/checkstyle/Modisco.checkstyle</org.eclipse.emf.facet.releng.tycho.util.configure.checkstyleConfig>
-      <org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>-Xmx1024m -XX:MaxPermSize=256m -XstartOnFirstThread</org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>
+      <org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>-Xmx1024m -XX:MaxPermSize=256m</org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>
       <org.eclipse.emf.facet.releng.tycho.util.configure.source.idRegex>org\.eclipse.*modisco.*</org.eclipse.emf.facet.releng.tycho.util.configure.source.idRegex>
       <org.eclipse.emf.facet.releng.tycho.util.configure.doc.pattern>org\.eclipse(\.gmt)?\.modisco\.((?!test|example).)*</org.eclipse.emf.facet.releng.tycho.util.configure.doc.pattern>
       <org.eclipse.emf.facet.releng.tycho.util.configure.statsURI>http://download.eclipse.org/stats</org.eclipse.emf.facet.releng.tycho.util.configure.statsURI>
@@ -740,6 +740,17 @@
          <properties>
             <util.dir>${basedir}/../.util</util.dir>
             <modisco.build>${basedir}/..</modisco.build>
+         </properties>
+      </profile>
+      <profile>
+         <id>platform-mac</id>
+         <activation>
+            <os>
+               <family>mac</family>
+            </os>
+         </activation>
+         <properties>
+            <org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>-Xmx1024m -XX:MaxPermSize=256m -XstartOnFirstThread</org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>
          </properties>
       </profile>
    </profiles>
