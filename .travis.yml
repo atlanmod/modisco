@@ -26,9 +26,10 @@ install:
 
 script:
     #ENFORCE MAVEN VERSION
-    - mvn -pl . enforcer:enforce
+    #- mvn -pl . enforcer:enforce
     #BUILD SCRIPT AND REPORTS
-    - travis_wait 80 mvn -B -V -q -DskipTests --global-toolchains .travis.maven.toolchains.xml install jxr:aggregate site
+    #- travis_wait 80 
+    - mvn -B -V -q -DskipTests --global-toolchains .travis.maven.toolchains.xml install jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
