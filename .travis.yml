@@ -26,7 +26,7 @@ before_script:
 
 install:
   # Resolve all dependencies
-  - mvn -B -V --global-toolchains .travis.maven.toolchains.xml -q -DskipTests install
+  - mvn -V --global-toolchains .travis.maven.toolchains.xml -DskipTests install
 
 
 script:
