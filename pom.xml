@@ -585,19 +585,19 @@
          <url>http://download.eclipse.org/modeling/emf/cdo/drops/R20180613-0111</url>
       </repository>
       <repository>
-         <id>EMF 2.18</id>
+         <id>EMF Lastest</id>
          <layout>p2</layout>
-         <url>http://download.eclipse.org/modeling/emf/emf/builds/milestone/S201904050820</url>
+         <url>http://download.eclipse.org/modeling/emf/emf/builds/release/latest</url>
       </repository>
       <repository>
          <id>EMF Query</id>
          <layout>p2</layout>
-         <url>http://download.eclipse.org/modeling/emf/query/updates/releases/R201805030653</url>
+         <url>http://download.eclipse.org/modeling/emf/query/updates/releases</url>
       </repository>
       <repository>
          <id>EMF Validation</id>
          <layout>p2</layout>
-         <url>http://download.eclipse.org/modeling/emf/validation/updates/releases/R201812070911</url>
+         <url>http://download.eclipse.org/modeling/emf/validation/updates/releases</url>
       </repository>
       <repository>
          <id>EMF Transaction</id>
@@ -605,9 +605,9 @@
          <url>http://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824/</url>
       </repository>
       <repository>
-         <id>Eclipse and Equinox</id>
+         <id>releasetrain</id>
          <layout>p2</layout>
-         <url>http://download.eclipse.org/eclipse/updates/4.12milestones/S-4.12M1-201904110625/</url>
+         <url>http://download.eclipse.org/releases/photon</url>
       </repository>
       <repository>
          <id>M2M ATL</id>
@@ -646,6 +646,7 @@
          <url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
       </pluginRepository>
    </pluginRepositories>
+   
    <profiles>
       <profile>
          <id>eclipse-sign</id>
@@ -750,7 +751,7 @@
             </os>
          </activation>
          <properties>
-            <org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>-Xmx1024m -XX:MaxPermSize=256m -XstartOnFirstThread</org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>
+            <org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>-XstartOnFirstThread</org.eclipse.emf.facet.releng.tycho.util.configure.test.vmargs>
          </properties>
       </profile>
    </profiles>
