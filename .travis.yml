@@ -19,7 +19,6 @@ cache:
 
 before_install:
     #NEEDED TO RUN THE GUI TESTS
-    - echo 'Java Home:' $JAVA_HOME
     - "export DISPLAY=:99.0"
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # give xvfb some time to start
@@ -27,7 +26,8 @@ before_install:
     
 install: 
   # Resolve all dependencies
-  -  travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
+  - mvn --global-toolchains .travis.maven.toolchains.xml clean 
+  #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
 
 script:
   #- travis_wait 60 mvn -B -V -q --global-toolchains .travis.maven.toolchains.xml package jxr:aggregate site
