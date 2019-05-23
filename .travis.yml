@@ -5,12 +5,9 @@ dist: trusty
 language: java
 jdk: oraclejdk8
 
-before_cache:
-    - rm -rf $HOME/.m2/
-
-cache: false
-#    directories:
-#        - '$HOME/.m2/repository'
+cache:
+    directories:
+        - '$HOME/.m2/repository'
 
 before_install:
     #NEEDED TO RUN THE GUI TESTS
@@ -21,7 +18,7 @@ before_install:
     
 install: 
   # Resolve all dependencies
-  - mvn --global-toolchains .travis.maven.toolchains.xml --update-snapshots validate 
+  - travis_wait 60 mvn --batch-mode --quiet --show-version mvn --global-toolchains .travis.maven.toolchains.xml --update-snapshots validate 
   #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
 
 script:
