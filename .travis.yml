@@ -5,6 +5,14 @@ dist: trusty
 language: java
 jdk: oraclejdk8
 
+notifications:
+  webhooks:
+    urls:
+      - "https://fleep.io/hook/Z0PU1GjzQUSGbrF3LPIIfg"
+    on_success: always  # always|never|change
+    on_failure: always
+    on_start: always
+    
 cache:
     directories:
         - '$HOME/.m2/repository'
@@ -16,8 +24,13 @@ before_script:
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # give xvfb some time to start
 
+install:
+  # Resolve all dependencies
+  - mvn -B -V --global-toolchains .travis.maven.toolchains.xml -q -DskipTests install
+
+
 script:
-    - mvn -B -V --global-toolchains .travis.maven.toolchains.xml install jxr:aggregate site
+  - mvn -B -V --global-toolchains .travis.maven.toolchains.xml package jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
