@@ -24,13 +24,13 @@ before_script:
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # give xvfb some time to start
 
-install:
+install: true
   # Resolve all dependencies
-  -  travis_wait 40 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests install
+  # -  travis_wait 40 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests install
 
 
 script:
-  - mvn -B -V --global-toolchains .travis.maven.toolchains.xml package jxr:aggregate site
+  - travis_wait 40 mvn -B -V -q --global-toolchains .travis.maven.toolchains.xml package jxr:aggregate site
 
 after_success:
 #DEPLOYMENT SCRIPTS
