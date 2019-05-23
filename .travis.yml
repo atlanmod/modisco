@@ -13,9 +13,9 @@ notifications:
     on_failure: always
     on_start: always
     
-cache:
-    directories:
-        - '$HOME/.m2/repository'
+#cache:
+#    directories:
+#        - '$HOME/.m2/repository'
 
 before_install:
     #NEEDED TO RUN THE GUI TESTS
