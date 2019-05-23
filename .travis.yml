@@ -26,7 +26,7 @@ before_install:
     
 install: 
   # Resolve all dependencies
-  - mvn --global-toolchains .travis.maven.toolchains.xml clean 
+  - mvn --global-toolchains .travis.maven.toolchains.xml --update-snapshots clean 
   #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
 
 script:
