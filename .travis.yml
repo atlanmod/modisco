@@ -22,7 +22,7 @@ install:
   #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
 
 script:
-  - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml --update-snapshots compile
+  - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml compile
   #- travis_wait 60 mvn -B -V -q --global-toolchains .travis.maven.toolchains.xml package jxr:aggregate site
 
 after_success:
