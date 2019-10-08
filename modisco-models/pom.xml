@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>modisco</artifactId>
+        <groupId>org.atlanmod.modisco</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>modisco-models</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>org.eclipse.gmt.modisco.infra.facet</module>
+        <module>org.eclipse.gmt.modisco.java.cdo</module>
+        <module>org.eclipse.gmt.modisco.infra.query.jxpath</module>
+        <module>org.eclipse.gmt.modisco.java.classiceobject</module>
+        <module>org.eclipse.gmt.modisco.java.nousages</module>
+        <module>org.eclipse.gmt.modisco.omg.smm</module>
+        <module>org.eclipse.modisco.eclipseplugin</module>
+        <module>org.eclipse.modisco.infra.discovery.benchmark</module>
+        <module>org.eclipse.modisco.infra.discovery.benchmark.metamodel</module>
+        <module>org.eclipse.modisco.java.composition</module>
+        <module>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</module>
+        <module>org.eclipse.modisco.manifest</module>
+        <module>org.eclipse.modisco.omg.gastm</module>
+        <module>org.eclipse.modisco.omg.smm</module>
+        <module>org.eclipse.modisco.smm.quality</module>
+        <module>org.eclipse.modisco.utils.chart.metamodel</module>
+        <module>org.eclipse.modisco.workflow</module>
+        <module>org.eclipse.gmt.modisco.java.nousages.cdo</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+        </dependency>
+    </dependencies>
+</project>

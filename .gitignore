@@ -36,11 +36,9 @@ hs_err_pid*
 /*.updatesite/pom_after_updatesite.xml
 /*.updatesite/poma.xml
 /*/bin/
-#/*/pom.xml
 /*/pom.xml.*
 /*/pom.xml.configure-quality-poms.bak
 /*source.feature
-#/pom.xml*
 /pom_after_configure.xml
 
 # IntelliJ
@@ -51,10 +49,14 @@ hs_err_pid*
 .project
 .settings
 .classpath
+bin
 
 # Visual Studio Code
 .vscode
 
+# Maven
 
+target
+tmp
 
-\.DS_Store
+.DS_Store
