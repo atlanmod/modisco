@@ -8,9 +8,11 @@ jdk: oraclejdk8
 cache:
     directories:
         - '$HOME/.m2/repository'
+        - 'tmp'
 
 before_install:
     #NEEDED TO RUN THE GUI TESTS
+    - "sh ./prepare.sh"
     - "export DISPLAY=:99.0"
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # give xvfb some time to start
