@@ -27,3 +27,7 @@ script:
 
 #after_success:
 #DEPLOYMENT SCRIPTS
+
+notifications:
+  webhooks: http://your-domain.com/notifications
+
