@@ -7,7 +7,7 @@
  * 
  * Contributors:
  *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
- *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ *     Gr?goire Dup? (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
  */
 package org.eclipse.modisco.manifest;
 
