@@ -12,10 +12,12 @@
 <feature
       id="org.eclipse.modisco.all.feature"
       label="MoDisco&apos;s quality analysis reports"
-      version="1.2.0.qualifier"
+      version="1.0.0.qualifier">
+   <!--
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
+      -->
 
    <description url="http://www.eclipse.org/MoDisco/">
       MoDisco is a framework for model driven reverse engineering and software modernization.
@@ -34,7 +36,7 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
-
+<!--
    <includes
          id="org.eclipse.modisco.sdk.feature"
          version="0.0.0"/>
@@ -59,5 +61,5 @@ http://www.eclipse.org/legal/epl-v10.html
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+-->
 </feature>

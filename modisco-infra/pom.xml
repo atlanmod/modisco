@@ -5,7 +5,7 @@
     <parent>
         <artifactId>modisco</artifactId>
         <groupId>org.atlanmod.modisco</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
@@ -14,10 +14,29 @@
 
     <modules>
         <module>org.eclipse.gmt.modisco.infra.common.core</module>
+        <module>org.eclipse.gmt.modisco.infra.common.ui</module>
         <module>org.eclipse.modisco.infra.discovery.core</module>
         <module>org.eclipse.gmt.modisco.infra.query.core</module>
         <module>org.eclipse.gmt.modisco.infra.query</module>
+        <module>org.eclipse.gmt.modisco.infra.query.edit</module>
+        <module>org.eclipse.gmt.modisco.infra.query.editor</module>
+        <module>org.eclipse.gmt.modisco.infra.query.ui</module>
         <module>org.eclipse.modisco.infra.discovery</module>
+        <module>org.eclipse.gmt.modisco.infra.browser</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.core</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.editor</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.examples.uml</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.ui</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.uicore</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf</module>
+        <module>org.eclipse.modisco.infra.discovery.benchmark.core</module>
+        <module>org.eclipse.gmt.modisco.infra.common.cdo</module>
+        <module>org.eclipse.gmt.modisco.infra.common.cdo.derby</module>
+        <module>org.eclipse.gmt.modisco.infra.prefuse</module>
+        <module>org.eclipse.modisco.infra.discovery.ui</module>
+        <module>org.eclipse.modisco.infra.discovery.benchmark.ui</module>
     </modules>
 
     <dependencies>
@@ -43,20 +62,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.edit</artifactId>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf</artifactId>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jdt</groupId>

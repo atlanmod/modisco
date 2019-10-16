@@ -7,7 +7,7 @@
     <parent>
         <artifactId>modisco</artifactId>
         <groupId>org.atlanmod.modisco</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>org.atlanmod.modisco</groupId>
@@ -17,6 +17,8 @@
     <modules>
         <module>org.eclipse.modisco.util.emf.core</module>
         <module>org.eclipse.modisco.util.atl.core</module>
+        <module>org.eclipse.modisco.utils.core</module>
+        <module>org.eclipse.modisco.utils.chart.birt.core</module>
     </modules>
 
 </project>

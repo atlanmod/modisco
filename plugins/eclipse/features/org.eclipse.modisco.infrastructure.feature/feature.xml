@@ -12,13 +12,16 @@
        Grégoire Dupé (Mia-Software) - Bug 517365 - org.eclipse.modisco.infrastructure.feature : missing provider name
  -->
 <feature
+
       id="org.eclipse.modisco.infrastructure.feature"
       label="%featureName"
-      version="1.2.0.qualifier"
+      version="1.0.0.qualifier">
+      <!--
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.infra.common.core"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
+      -->
 
    <description url="http://www.eclipse.org/MoDisco/">
       %description
@@ -37,9 +40,9 @@ http://www.eclipse.org/legal/epl-v10.html
       %license
    </license>
 
-   <includes
+   <!-- includes
          id="org.eclipse.modisco.infra.browser.feature"
-         version="0.0.0"/>
+         version="0.0.0"/-->
 
    <plugin
          id="org.eclipse.gmt.modisco.infra.common.core"
@@ -48,12 +51,12 @@ http://www.eclipse.org/legal/epl-v10.html
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
+   <!-- plugin
          id="org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
+         unpack="false"/ -->
 
    <plugin
          id="org.eclipse.gmt.modisco.infra.browser"
@@ -237,6 +240,7 @@ http://www.eclipse.org/legal/epl-v10.html
          version="0.0.0"
          unpack="false"/>
 
+<!--
    <plugin
          id="org.eclipse.modisco.doc"
          download-size="0"
@@ -244,11 +248,12 @@ http://www.eclipse.org/legal/epl-v10.html
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
-         id="org.eclipse.modisco.infrastructure.doc"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
+      <plugin
+            id="org.eclipse.modisco.infrastructure.doc"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"/>
+   -->
 
    <plugin
          id="org.eclipse.modisco.util.emf.core"

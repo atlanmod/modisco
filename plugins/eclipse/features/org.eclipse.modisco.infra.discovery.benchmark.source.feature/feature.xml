@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="org.eclipse.modisco.infra.discovery.benchmark.source"
+<feature id="org.eclipse.modisco.infra.discovery.benchmark.source.feature"
          label="MoDisco Infrastructure Discovery Benchmark Source"
-         version="1.2.0.qualifier"
+         version="1.0.0.qualifier">
+
+   <!--
          provider-name="%providerName"
          license-feature="org.eclipse.license"
          license-feature-version="0.0.0">
+         -->
    <description>
       %description
    </description>
@@ -19,6 +22,7 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
+   <!--
    <includes id="org.eclipse.modisco.utils.chart.source" version="0.0.0"/>
    <plugin id="org.eclipse.modisco.infra.discovery.benchmark.core.source"
            download-size="0"
@@ -37,4 +41,5 @@ http://www.eclipse.org/legal/epl-v10.html
    <plugin id="org.eclipse.modisco.utils.core.source" download-size="0" install-size="0"
            version="0.0.0"
            unpack="false"/>
+           -->
 </feature>

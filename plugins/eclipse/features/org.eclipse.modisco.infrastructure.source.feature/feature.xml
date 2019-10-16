@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="org.eclipse.modisco.infrastructure.source" label="%featureName"
-         version="1.2.0.qualifier"
-         provider-name="%providerName"
+<feature id="org.eclipse.modisco.infrastructure.source.feature" label="%featureName"
+         version="1.0.0.qualifier"
+         provider-name="%providerName">
+   <!--
          plugin="org.eclipse.gmt.modisco.infra.common.core"
          license-feature="org.eclipse.license"
          license-feature-version="0.0.0">
+         -->
    <description url="http://www.eclipse.org/MoDisco/">
       %description
    </description>
@@ -19,6 +21,7 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
+   <!--
    <includes id="org.eclipse.modisco.infra.browser.source" version="0.0.0"/>
    <plugin id="org.eclipse.gmt.modisco.infra.common.core.source" download-size="0"
            install-size="0"
@@ -138,4 +141,5 @@ http://www.eclipse.org/legal/epl-v10.html
            install-size="0"
            version="0.0.0"
            unpack="false"/>
+           -->
 </feature>

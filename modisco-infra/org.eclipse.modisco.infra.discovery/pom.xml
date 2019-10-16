@@ -6,7 +6,7 @@
    <parent>
       <groupId>org.atlanmod.modisco</groupId>
       <artifactId>modisco-infra</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
   </parent>
    <artifactId>org.eclipse.modisco.infra.discovery</artifactId>
 
@@ -36,14 +36,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.emf.facet</groupId>
-            <artifactId>org.eclipse.emf.facet.util.emf.core</artifactId>
-            <version>1.3.0</version>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.facet</artifactId>
+            <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf.facet</groupId>
-            <artifactId>org.eclipse.emf.facet.util.emf.catalog</artifactId>
-            <version>1.3.0</version>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
  </project>

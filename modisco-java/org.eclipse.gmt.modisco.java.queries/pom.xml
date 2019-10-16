@@ -6,7 +6,7 @@
    <parent>
       <groupId>org.atlanmod.modisco</groupId>
       <artifactId>modisco-java</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
   </parent>
    <artifactId>org.eclipse.gmt.modisco.java.queries</artifactId>
    <packaging>jar</packaging>
@@ -23,8 +23,9 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf</groupId>
+            <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.validation</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
 </project>

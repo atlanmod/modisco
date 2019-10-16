@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="org.eclipse.modisco.java.source" label="MoDisco Java Feature Source"
-         version="1.2.0.qualifier"
-         provider-name="%providerName"
-         plugin="org.eclipse.gmt.modisco.java"
-         license-feature="org.eclipse.license"
-         license-feature-version="0.0.0">
+<feature id="org.eclipse.modisco.java.source.feature"
+         label="MoDisco Java Feature Source"
+         version="1.0.0.qualifier">
+        <!--
+              provider-name="%providerNa      <
+              plugin="org.eclipse.gmt.modisco.java"
+              license-feature="org.eclipse.license"
+              license-feature-version="0.0.0">
+              -->
    <description url="http://wiki.eclipse.org/MoDisco/Components/Java/Documentation">
       %description
    </description>
@@ -19,6 +22,7 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
+   <!--
    <plugin id="org.eclipse.gmt.modisco.java.source" download-size="0" install-size="0"
            version="0.0.0"
            unpack="false"/>
@@ -93,4 +97,5 @@ http://www.eclipse.org/legal/epl-v10.html
            install-size="0"
            version="0.0.0"
            unpack="false"/>
+           -->
 </feature>

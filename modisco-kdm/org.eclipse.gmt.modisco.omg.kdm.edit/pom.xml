@@ -2,20 +2,20 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <parent>
-      <groupId>org.atlanmod.modisco</groupId>
-      <artifactId>modisco-kdm</artifactId>
-      <version>1.0-SNAPSHOT</version>
-  </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-kdm</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
-   <artifactId>org.eclipse.gmt.modisco.omg.kdm.edit</artifactId>
+    <artifactId>org.eclipse.gmt.modisco.omg.kdm.edit</artifactId>
 
-   <packaging>jar</packaging>
+    <packaging>jar</packaging>
 
-   <build>
-      <sourceDirectory>src-gen</sourceDirectory>
-   </build>
+    <build>
+        <sourceDirectory>src-gen</sourceDirectory>
+    </build>
 
 
     <dependencies>
@@ -24,14 +24,20 @@
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.common</artifactId>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.edit</artifactId>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.common</artifactId>
+            <type>pom</type>
         </dependency>
-
+        <dependency>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.edit</artifactId>
+            <type>pom</type>
+        </dependency>
         <!-- Internal -->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>

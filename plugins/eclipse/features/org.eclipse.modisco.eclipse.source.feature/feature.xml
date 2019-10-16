@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="org.eclipse.modisco.eclipse.source" label="%featureName"
-         version="1.2.0.qualifier"
+<feature id="org.eclipse.modisco.eclipse.source.feature"
+         label="%featureName"
+         version="1.0.0.qualifier">
+
+   <!--
          provider-name="%providerName"
          license-feature="org.eclipse.license"
          license-feature-version="0.0.0">
+         -->
    <description url="http://www.eclipse.org/MoDisco/">
       %description
    </description>
@@ -17,20 +21,21 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
-   <requires>
-      <import feature="org.eclipse.modisco.java.feature" version="1.0.0"
-              match="greaterOrEqual"/>
-   </requires>
-   <plugin id="org.eclipse.modisco.eclipseplugin.source" download-size="0"
-           install-size="0"
-           version="0.0.0"
-           unpack="false"/>
-   <plugin id="org.eclipse.modisco.eclipseplugin.discoverer.source" download-size="0"
-           install-size="0"
-           version="0.0.0"
-           unpack="false"/>
-   <plugin id="org.eclipse.modisco.eclipseplugin.discoverer.ui.source" download-size="0"
-           install-size="0"
-           version="0.0.0"
-           unpack="false"/>
+   <!--   <requires>
+   <import feature="org.eclipse.modisco.java.feature" version="1.0.0"
+           match="greaterOrEqual"/>
+</requires>
+<plugin id="org.eclipse.modisco.eclipseplugin.source" download-size="0"
+        install-size="0"
+        version="0.0.0"
+        unpack="false"/>
+<plugin id="org.eclipse.modisco.eclipseplugin.discoverer.source" download-size="0"
+        install-size="0"
+        version="0.0.0"
+        unpack="false"/>
+<plugin id="org.eclipse.modisco.eclipseplugin.discoverer.ui.source" download-size="0"
+        install-size="0"
+        version="0.0.0"
+        unpack="false"/>
+        -->
 </feature>

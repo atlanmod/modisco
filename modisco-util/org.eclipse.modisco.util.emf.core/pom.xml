@@ -6,7 +6,7 @@
    <parent>
       <groupId>org.atlanmod.modisco</groupId>
       <artifactId>modisco-util</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
   </parent>
 
    <artifactId>org.eclipse.modisco.util.emf.core</artifactId>
@@ -19,20 +19,19 @@
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf</artifactId>
+            <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.edit</artifactId>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.facet</artifactId>
+            <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.emf.facet</groupId>
-            <artifactId>org.eclipse.emf.facet.util.core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
+            <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.transaction</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
 </project>

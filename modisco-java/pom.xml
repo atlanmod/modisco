@@ -5,7 +5,7 @@
     <parent>
         <artifactId>modisco</artifactId>
         <groupId>org.atlanmod.modisco</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>modisco-java</artifactId>
@@ -16,5 +16,13 @@
         <module>org.eclipse.gmt.modisco.java.queries</module>
         <module>org.eclipse.gmt.modisco.java.generation</module>
         <module>org.eclipse.modisco.java.discoverer</module>
+        <module>org.eclipse.modisco.java.composition.discoverer</module>
+        <module>org.eclipse.modisco.java.composition.browser.customization</module>
+        <module>org.eclipse.modisco.java.composition.discoverer.benchmark</module>
+        <module>org.eclipse.modisco.java.discoverer.benchmark</module>
+        <module>org.eclipse.modisco.java.composition.ui</module>
+        <module>org.eclipse.modisco.java.composition.discoverer.ui</module>
+        <module>org.eclipse.modisco.java.discoverer.cdo</module>
+        <module>org.eclipse.modisco.java.discoverer.ui</module>
     </modules>
 </project>

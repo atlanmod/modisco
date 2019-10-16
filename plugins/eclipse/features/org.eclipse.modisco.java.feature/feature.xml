@@ -13,11 +13,13 @@
 <feature
       id="org.eclipse.modisco.java.feature"
       label="MoDisco Java Feature"
-      version="1.2.0.qualifier"
+      version="1.0.0.qualifier">
+   <!--
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.java"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
+      -->
 
    <description url="http://wiki.eclipse.org/MoDisco/Components/Java/Documentation">
       %description
@@ -127,11 +129,11 @@ http://www.eclipse.org/legal/epl-v10.html
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
+   <!--plugin
          id="org.eclipse.modisco.java.doc"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"/-->
 
    <plugin
          id="org.eclipse.modisco.manifest"

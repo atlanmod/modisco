@@ -6,7 +6,7 @@
    <parent>
       <groupId>org.atlanmod.modisco</groupId>
       <artifactId>modisco-jee</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
    </parent>
 
    <artifactId>org.eclipse.modisco.jee.jsp.discoverer.ui</artifactId>
