@@ -60,6 +60,12 @@
         <dependency>
             <groupId>org.eclipse.m2m.atl</groupId>
             <artifactId>org.eclipse.m2m.atl.engine</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.m2m.atl</groupId>
+                    <artifactId>org.eclipse.m2m.atl.emfvm</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- Internal -->
         <dependency>
