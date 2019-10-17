@@ -3,7 +3,7 @@
 Atlanmod Modisco is a fork of https://www.eclipse.org/MoDisco/[Eclipse MoDisco] project.
 
 
-## Local build
+== Local build
 
 Building the project:
 
@@ -22,7 +22,7 @@ cd plugins/eclipse
 mvn clean install
 ----
 
-## Travis builds
+== Travis builds
 
 We use https://travis-ci.org[Travis CI] for continuous integration.
 Current results are available https://travis-ci.org/atlanmod/modisco[here].
