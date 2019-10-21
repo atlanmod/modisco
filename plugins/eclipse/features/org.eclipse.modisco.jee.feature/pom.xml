@@ -22,11 +22,11 @@
             <artifactId>org.eclipse.modisco.jee.ejbjar.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.jee.ejbjar.discoverer.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.jee</artifactId>
@@ -42,11 +42,11 @@
             <artifactId>org.eclipse.modisco.jee.webapp.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.jee.webapp.discoverer.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.jee.jsp</artifactId>
@@ -57,11 +57,11 @@
             <artifactId>org.eclipse.modisco.jee.jsp.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.jee.jsp.discoverer.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.jee.jsp.generation</artifactId>

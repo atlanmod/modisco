@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>org.eclipse.modisco.jee.queries</module>
         <module>org.eclipse.modisco.jee</module>
         <module>org.eclipse.modisco.jee.jsp</module>
         <module>org.eclipse.modisco.jee.ejbjar</module>
@@ -22,9 +21,7 @@
         <module>org.eclipse.modisco.jee.webapp</module>
         <module>org.eclipse.modisco.jee.webapp.discoverer</module>
         <module>org.eclipse.modisco.jee.jsp.generation</module>
-        <module>org.eclipse.modisco.jee.ejbjar.discoverer.ui</module>
-        <module>org.eclipse.modisco.jee.jsp.discoverer.ui</module>
-        <module>org.eclipse.modisco.jee.webapp.discoverer.ui</module>
+        <module>org.eclipse.modisco.jee.queries</module>
     </modules>
 
 

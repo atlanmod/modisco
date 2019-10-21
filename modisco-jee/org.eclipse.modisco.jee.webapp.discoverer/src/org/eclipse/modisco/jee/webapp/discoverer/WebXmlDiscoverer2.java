@@ -84,7 +84,7 @@ public class WebXmlDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IFile source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IFile source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		setDefaultTargetURI(URI.createPlatformResourceURI(
 				source.getFullPath().toString()

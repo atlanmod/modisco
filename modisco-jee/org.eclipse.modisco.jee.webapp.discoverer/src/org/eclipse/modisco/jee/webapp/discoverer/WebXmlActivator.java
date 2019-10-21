@@ -15,13 +15,14 @@
  */
 package org.eclipse.modisco.jee.webapp.discoverer;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.core.runtime.Plugin;
+//import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
  */
-public class WebXmlActivator extends AbstractUIPlugin {
+public class WebXmlActivator extends Plugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.webxml.discoverer"; //$NON-NLS-1$

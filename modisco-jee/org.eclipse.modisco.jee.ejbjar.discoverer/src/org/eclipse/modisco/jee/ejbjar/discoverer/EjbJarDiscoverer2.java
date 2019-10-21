@@ -111,7 +111,7 @@ public class EjbJarDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 	 *            an IFile pointing to EjbJar contents
 	 */
 	@Override
-	protected void basicDiscoverElement(final IFile source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IFile source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		setDefaultTargetURI(URI.createPlatformResourceURI(
 				source.getFullPath().toString()

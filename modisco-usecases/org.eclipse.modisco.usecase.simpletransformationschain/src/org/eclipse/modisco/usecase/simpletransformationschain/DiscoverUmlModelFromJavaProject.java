@@ -73,7 +73,7 @@ public class DiscoverUmlModelFromJavaProject extends AbstractModelDiscoverer<IJa
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IJavaProject source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IJavaProject source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		IProject project = source.getProject();
 		setDefaultTargetURI(URI.createPlatformResourceURI(

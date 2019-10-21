@@ -86,7 +86,7 @@ public class DiscoverSourceModelFromResource extends AbstractModelDiscoverer<IRe
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IResource resource, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IResource resource, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		final KDMSourceDiscoverer disco = new KDMSourceDiscoverer();
 		final Resource model;

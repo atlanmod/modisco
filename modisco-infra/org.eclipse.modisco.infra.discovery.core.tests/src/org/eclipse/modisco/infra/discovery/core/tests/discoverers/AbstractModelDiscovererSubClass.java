@@ -15,7 +15,7 @@ public class AbstractModelDiscovererSubClass extends
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IResource source,
+	public void basicDiscoverElement(final IResource source,
 			final IProgressMonitor monitor) throws DiscoveryException {
 		createTargetModel();
 

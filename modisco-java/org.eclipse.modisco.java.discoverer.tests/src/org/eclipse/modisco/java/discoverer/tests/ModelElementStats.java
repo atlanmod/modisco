@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
-import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
+import org.atlanmod.modisco.discoverer.java.internal.JavaActivator;
 
 public class ModelElementStats extends DiscoverJavaModelFromJavaProject {
 
@@ -38,7 +38,7 @@ public class ModelElementStats extends DiscoverJavaModelFromJavaProject {
 	private PrintStream ps;
 
 	@Override
-	protected void basicDiscoverElement(final IJavaProject source,
+	public void basicDiscoverElement(final IJavaProject source,
 			final IProgressMonitor monitor) throws DiscoveryException {
 		super.basicDiscoverElement(source, monitor);
 		getModelElementStats(getTargetModel());

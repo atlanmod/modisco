@@ -15,8 +15,6 @@
     <modules>
         <module>org.eclipse.gmt.modisco.infra.facet.core</module>
         <module>org.eclipse.gmt.modisco.infra.facet.edit</module>
-        <module>org.eclipse.gmt.modisco.infra.facet.ui</module>
-        <module>org.eclipse.gmt.modisco.infra.facet.editor</module>
         <module>org.eclipse.gmt.modisco.infra.facet.examples.kdm</module>
     </modules>
 

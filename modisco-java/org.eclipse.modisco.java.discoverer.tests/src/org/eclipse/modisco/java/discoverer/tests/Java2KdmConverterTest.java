@@ -22,7 +22,7 @@ import org.eclipse.gmt.modisco.omg.kdm.code.ClassUnit;
 import org.eclipse.gmt.modisco.omg.kdm.code.ExportKind;
 import org.eclipse.gmt.modisco.omg.kdm.code.MethodUnit;
 import org.eclipse.modisco.java.discoverer.JavaDiscoveryConstants;
-import org.eclipse.modisco.java.discoverer.internal.TranslateJavaModelToKdm;
+import org.atlanmod.modisco.discoverer.java.internal.TranslateJavaModelToKdm;
 import org.eclipse.modisco.java.discoverer.tests.utils.JavaProjectFactory;
 import org.eclipse.modisco.kdm.source.discoverer.IKDMDiscoveryConstants;
 import org.junit.After;

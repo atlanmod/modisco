@@ -57,7 +57,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 		return this.refreshSourceBeforeDiscovery;
 	}
 
-	protected abstract void basicDiscoverElement(final T source, final IProgressMonitor monitor)
+	public abstract void basicDiscoverElement(final T source, final IProgressMonitor monitor)
 			throws DiscoveryException;
 
 	public void discoverElement(final T source, final IProgressMonitor monitor)

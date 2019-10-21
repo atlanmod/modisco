@@ -16,10 +16,6 @@
         <module>org.eclipse.gmt.modisco.omg.kdm</module>
         <module>org.eclipse.gmt.modisco.omg.kdm.edit</module>
         <module>org.eclipse.modisco.kdm.source.discoverer</module>
-        <module>org.eclipse.modisco.kdm.uml2converter</module>
         <module>org.eclipse.modisco.kdm.source.extension</module>
-        <module>org.eclipse.modisco.kdm.source.discoverer.ui</module>
-        <module>org.eclipse.modisco.kdm.source.extension.ui</module>
-        <module>org.eclipse.modisco.kdm.uml2converter.ui</module>
     </modules>
 </project>

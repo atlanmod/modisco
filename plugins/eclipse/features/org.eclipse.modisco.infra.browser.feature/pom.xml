@@ -17,10 +17,10 @@
             <artifactId>org.eclipse.modisco.infra.browser.ecore.core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.infra.browser.editor.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>

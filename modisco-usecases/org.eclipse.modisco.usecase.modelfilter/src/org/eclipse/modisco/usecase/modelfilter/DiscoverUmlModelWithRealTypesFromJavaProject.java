@@ -31,7 +31,7 @@ public class DiscoverUmlModelWithRealTypesFromJavaProject extends
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IJavaProject source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IJavaProject source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		try {
 			IProject project = source.getProject();

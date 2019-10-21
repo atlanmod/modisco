@@ -15,9 +15,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.eclipse.core</groupId>
+            <artifactId>org.eclipse.core.runtime</artifactId>
+        </dependency>
+       <!-- <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.ui</artifactId>
-        </dependency>
+        </dependency>-->
         <!-- Internal -->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>

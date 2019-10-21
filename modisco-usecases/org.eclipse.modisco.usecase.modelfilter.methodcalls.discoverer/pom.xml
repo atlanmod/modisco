@@ -23,7 +23,7 @@
         <!-- Internal -->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.java.discoverer</artifactId>
+            <artifactId>org.atlanmod.modisco.discoverer.java</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

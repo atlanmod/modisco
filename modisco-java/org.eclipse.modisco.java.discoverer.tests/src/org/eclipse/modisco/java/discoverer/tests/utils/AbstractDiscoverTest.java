@@ -36,7 +36,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
-import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
+import org.atlanmod.modisco.discoverer.java.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.tests.Activator;
 import org.junit.Before;
 import org.osgi.framework.Bundle;

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
+    <!--parent>
         <groupId>org.atlanmod.modisco</groupId>
         <artifactId>modisco</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../../..</relativePath>
-    </parent>
+    </parent-->
 
     <groupId>org.atlanmod.modisco.eclipse</groupId>
     <artifactId>org.atlanmod.modisco.eclipse.configuration</artifactId>
@@ -16,12 +17,16 @@
     <packaging>pom</packaging>
 
     <name>Modisco Eclipse Configuration</name>
-    <description />
+    <description/>
 
     <properties>
         <maven.test.skip>true</maven.test.skip>
         <maven.deploy.skip>true</maven.deploy.skip>
         <tycho-plugin.version>1.4.0</tycho-plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.outputDirectory>target/classes</project.build.outputDirectory>
     </properties>
 
     <repositories>
@@ -33,13 +38,33 @@
     </repositories>
 
     <build>
+        <sourceDirectory>src</sourceDirectory>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src-gen</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-compiler-plugin</artifactId>
                 <configuration>
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
+                    <compilerArgument>-warn:none</compilerArgument>
+                    <compilerArgument>-err:none</compilerArgument>
                 </configuration>
             </plugin>
 
@@ -60,7 +85,7 @@
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
-                <!-- configuration>
+                <configuration>
                     <pomDependencies>consider</pomDependencies>
                     <environments>
                         <environment>
@@ -79,12 +104,22 @@
                             <arch>x86_64</arch>
                         </environment>
                     </environments>
-                </configuration -->
+                </configuration>
             </plugin>
         </plugins>
 
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
                 <plugin>
                     <groupId>org.eclipse.tycho</groupId>
                     <artifactId>tycho-compiler-plugin</artifactId>

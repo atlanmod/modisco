@@ -39,7 +39,7 @@ public class DiscoverMethodCallsModelFromJavaModel extends
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IFile file,
+	public void basicDiscoverElement(final IFile file,
 			final IProgressMonitor monitor) throws DiscoveryException {
 		IProject project = file.getProject();
 		IJavaProject javaProject = null;

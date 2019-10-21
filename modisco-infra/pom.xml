@@ -14,62 +14,14 @@
 
     <modules>
         <module>org.eclipse.gmt.modisco.infra.common.core</module>
-        <module>org.eclipse.gmt.modisco.infra.common.ui</module>
         <module>org.eclipse.modisco.infra.discovery.core</module>
-        <module>org.eclipse.gmt.modisco.infra.query.core</module>
         <module>org.eclipse.gmt.modisco.infra.query</module>
-        <module>org.eclipse.gmt.modisco.infra.query.edit</module>
-        <module>org.eclipse.gmt.modisco.infra.query.editor</module>
-        <module>org.eclipse.gmt.modisco.infra.query.ui</module>
         <module>org.eclipse.modisco.infra.discovery</module>
-        <module>org.eclipse.gmt.modisco.infra.browser</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.core</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.editor</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.examples.uml</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.ui</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.uicore</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf</module>
-        <module>org.eclipse.modisco.infra.discovery.benchmark.core</module>
+         <module>org.eclipse.modisco.infra.discovery.benchmark.core</module>
         <module>org.eclipse.gmt.modisco.infra.common.cdo</module>
         <module>org.eclipse.gmt.modisco.infra.common.cdo.derby</module>
-        <module>org.eclipse.gmt.modisco.infra.prefuse</module>
-        <module>org.eclipse.modisco.infra.discovery.ui</module>
-        <module>org.eclipse.modisco.infra.discovery.benchmark.ui</module>
+        <module>org.eclipse.gmt.modisco.infra.query.edit</module>
+        <module>org.eclipse.gmt.modisco.infra.query.core</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.eclipse.core</groupId>
-            <artifactId>org.eclipse.core.runtime</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.core</groupId>
-            <artifactId>org.eclipse.core.resources</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.pde</groupId>
-            <artifactId>org.eclipse.pde</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jdt</groupId>
-            <artifactId>org.eclipse.jdt.core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jdt</groupId>
-            <artifactId>org.eclipse.jdt.launching</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jdt</groupId>
-            <artifactId>org.eclipse.jdt.apt.core</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

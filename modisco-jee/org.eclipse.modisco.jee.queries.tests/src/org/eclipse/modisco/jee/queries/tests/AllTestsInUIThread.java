@@ -9,7 +9,7 @@
  *		Nicolas Guyomar (Mia-Software)
  *		Gregoire Dupe (Mia-Software) - Bug 386235 - [Releng] Use tycho to build MoDisco
  *******************************************************************************/
-package org.eclipse.modisco.jee.queries.tests;
+package plugins.eclipse.bundles.org.eclipse.modisco.jee.queries.tests.src.org.eclipse.modisco.jee.queries.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

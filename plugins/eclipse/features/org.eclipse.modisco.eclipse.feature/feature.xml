@@ -34,12 +34,12 @@ http://www.eclipse.org/legal/epl-v10.html
       %license
    </license>
 
-   <!--requires>
+   <requires>
       <import
          feature="org.eclipse.modisco.java.feature"
          version="1.0.0"
          match="greaterOrEqual"/>
-   </requires-->
+   </requires>
 
    <plugin
          id="org.eclipse.modisco.eclipseplugin"
@@ -47,19 +47,17 @@ http://www.eclipse.org/legal/epl-v10.html
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
    <plugin
          id="org.eclipse.modisco.eclipseplugin.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
-
    <plugin
          id="org.eclipse.modisco.eclipseplugin.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
 </feature>

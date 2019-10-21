@@ -77,7 +77,7 @@ public class DiscoverJspModelFromResource extends AbstractJspDiscoverer<IResourc
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IResource resource, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IResource resource, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		monitor.beginTask(Messages.discoveringJspModel, IProgressMonitor.UNKNOWN);
 		Model model = getEFactory().createModel();

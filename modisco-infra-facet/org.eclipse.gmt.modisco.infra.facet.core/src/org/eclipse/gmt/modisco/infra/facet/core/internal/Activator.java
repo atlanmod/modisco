@@ -10,7 +10,8 @@
  */
 package org.eclipse.gmt.modisco.infra.facet.core.internal;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.core.runtime.Plugin;
+//import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
@@ -18,7 +19,7 @@ import org.osgi.framework.BundleContext;
  * @deprecated Replaced by EMF Facet
  */
 @Deprecated
-public class Activator extends AbstractUIPlugin {
+public class Activator extends Plugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.facet.core"; //$NON-NLS-1$

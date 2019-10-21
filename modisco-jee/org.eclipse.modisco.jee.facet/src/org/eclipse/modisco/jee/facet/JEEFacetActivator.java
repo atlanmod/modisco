@@ -13,13 +13,14 @@
  */
 package org.eclipse.modisco.jee.facet;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.core.runtime.Plugin;
+//import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
  */
-public class JEEFacetActivator extends AbstractUIPlugin {
+public class JEEFacetActivator extends Plugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.eclipse.modisco.jee.facet"; //$NON-NLS-1$

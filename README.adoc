@@ -28,3 +28,8 @@ We use https://travis-ci.org[Travis CI] for continuous integration.
 Current results are available https://travis-ci.org/atlanmod/modisco[here].
 
 image:https://travis-ci.org/atlanmod/modisco.svg?branch=master[align=center]
+
+== Snapshots
+
+Current Snapshots are available on the following update site:
+https://dl.bintray.com/atlanmod/modisco/

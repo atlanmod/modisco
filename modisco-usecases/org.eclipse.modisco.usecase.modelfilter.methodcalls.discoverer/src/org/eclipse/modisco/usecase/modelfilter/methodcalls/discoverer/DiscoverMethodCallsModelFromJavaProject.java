@@ -41,7 +41,7 @@ public class DiscoverMethodCallsModelFromJavaProject extends
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IJavaProject javaProject,
+	public void basicDiscoverElement(final IJavaProject javaProject,
 			final IProgressMonitor monitor) throws DiscoveryException {
 		IProject project = javaProject.getProject();
 		DiscoverJavaModelFromJavaProject discoverer = new DiscoverJavaModelFromJavaProject();

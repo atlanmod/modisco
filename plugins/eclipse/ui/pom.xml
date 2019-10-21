@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>org.atlanmod.modisco.eclipse</artifactId>
+        <groupId>org.atlanmod.modisco.eclipse</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>org.atlanmod.modisco.eclipse.ui</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>org.eclipse.modisco.eclipseplugin.discoverer.ui</module>
+        <module>org.eclipse.modisco.kdm.uml2converter.ui</module>
+        <module>org.eclipse.modisco.kdm.source.extension.ui</module>
+        <module>org.eclipse.modisco.kdm.source.discoverer.ui</module>
+        <module>org.eclipse.modisco.jee.ejbjar.discoverer.ui</module>
+        <module>org.eclipse.modisco.jee.jsp.discoverer.ui</module>
+        <module>org.eclipse.modisco.jee.webapp.discoverer.ui</module>
+        <module>org.eclipse.modisco.java.composition.discoverer.ui</module>
+        <module>org.eclipse.modisco.java.composition.ui</module>
+        <module>org.eclipse.modisco.java.discoverer.ui</module>
+        <module>org.eclipse.modisco.manifest.discoverer.ui</module>
+        <module>org.eclipse.modisco.properties.discoverer.ui</module>
+        <module>org.eclipse.modisco.xml.discoverer.ui</module>
+    </modules>
+</project>

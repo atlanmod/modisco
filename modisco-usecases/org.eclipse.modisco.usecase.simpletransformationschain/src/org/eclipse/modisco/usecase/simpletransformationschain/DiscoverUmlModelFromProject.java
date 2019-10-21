@@ -45,7 +45,7 @@ public class DiscoverUmlModelFromProject extends AbstractModelDiscoverer<IProjec
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IProject source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IProject source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		DiscoverUmlModelFromJavaProject discoverer = new DiscoverUmlModelFromJavaProject();
 		discoverer.setCustomTransformation(getCustomTransformation());

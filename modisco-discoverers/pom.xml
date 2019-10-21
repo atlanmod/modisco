@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>modisco</artifactId>
@@ -13,11 +13,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>org.eclipse.modisco.eclipseplugin.discoverer</module>
-        <module>org.eclipse.modisco.manifest.discoverer</module>
-        <module>org.eclipse.modisco.properties.discoverer</module>
-        <module>org.eclipse.modisco.properties.discoverer.ui</module>
-        <module>org.eclipse.modisco.manifest.discoverer.ui</module>
-        <module>org.eclipse.modisco.eclipseplugin.discoverer.ui</module>
+
     </modules>
 </project>

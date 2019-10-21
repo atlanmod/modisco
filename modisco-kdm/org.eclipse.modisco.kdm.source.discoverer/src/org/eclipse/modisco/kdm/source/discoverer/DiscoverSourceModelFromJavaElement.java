@@ -45,7 +45,7 @@ public class DiscoverSourceModelFromJavaElement extends AbstractModelDiscoverer<
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IJavaElement javaElement,
+	public void basicDiscoverElement(final IJavaElement javaElement,
 			final IProgressMonitor monitor) throws DiscoveryException {
 		final KDMSourceDiscoverer disco = new KDMSourceDiscoverer();
 		final Resource model;

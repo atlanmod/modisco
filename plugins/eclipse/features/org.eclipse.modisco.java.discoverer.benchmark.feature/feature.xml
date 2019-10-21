@@ -37,14 +37,14 @@ http://www.eclipse.org/legal/epl-v10.html
       %license
    </license>
 
-   <!--
+
    <plugin
          id="org.eclipse.modisco.java.discoverer.benchmark"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+   <!--
    <plugin
          id="org.eclipse.gmt.modisco.java.nousages"
          download-size="0"
@@ -65,14 +65,14 @@ http://www.eclipse.org/legal/epl-v10.html
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+-->
    <plugin
          id="org.eclipse.modisco.java.composition.discoverer.benchmark"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+<!--
    <plugin
          id="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark"
          download-size="0"

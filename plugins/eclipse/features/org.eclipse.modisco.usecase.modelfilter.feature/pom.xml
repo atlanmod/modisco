@@ -13,10 +13,10 @@
     <packaging>eclipse-feature</packaging>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.prefuse</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>

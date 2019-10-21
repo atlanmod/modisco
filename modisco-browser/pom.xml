@@ -12,9 +12,5 @@
     <packaging>pom</packaging>
     <modules>
         <module>org.eclipse.modisco.infra.browser.ecore.core</module>
-        <module>org.eclipse.modisco.infra.browser.ecore.ui</module>
-        <module>org.eclipse.modisco.infra.browser.editor.ui</module>
-        <module>org.eclipse.gmt.modisco.java.browser.customization</module>
-        <module>org.eclipse.modisco.infra.browser.custom.examples.generation</module>
     </modules>
 </project>

@@ -877,7 +877,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @see AbstractModelDiscoverer#discoverElement(Object, IProgressMonitor)
 	 */
 	@Override
-	protected void basicDiscoverElement(final IProjectSet sources, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IProjectSet sources, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		this.discoverBenchmark(sources, monitor);
 	}

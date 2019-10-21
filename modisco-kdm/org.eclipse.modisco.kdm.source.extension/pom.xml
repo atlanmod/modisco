@@ -11,40 +11,30 @@
    <artifactId>org.eclipse.modisco.kdm.source.extension</artifactId>
    <packaging>jar</packaging>
 
-   <build>
-      <plugins>
-         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>build-helper-maven-plugin</artifactId>
-            <executions>
-               <execution>
-                  <phase>generate-sources</phase>
-                  <goals>
-                     <goal>add-source</goal>
-                  </goals>
-                  <configuration>
-                     <sources>
-                        <source>src-gen</source>
-                     </sources>
-                  </configuration>
-               </execution>
-            </executions>
-         </plugin>
-      </plugins>
-   </build>
 
    <dependencies>
        <dependency>
            <groupId>org.eclipse.core</groupId>
            <artifactId>org.eclipse.core.runtime</artifactId>
        </dependency>
-       <dependency>
+       <!--<dependency>
            <groupId>org.eclipse.platform</groupId>
            <artifactId>org.eclipse.ui</artifactId>
-       </dependency>
+           <exclusions>
+               <exclusion>
+                   <groupId>org.eclipse.platform</groupId>
+                   <artifactId>org.eclipse.platform:org.eclipse.swt</artifactId>
+               </exclusion>
+           </exclusions>
+       </dependency>-->
       <dependency>
          <groupId>org.atlanmod.emf</groupId>
-         <artifactId>org.eclipse.emf</artifactId>
+         <artifactId>org.eclipse.emf.ecore</artifactId>
+         <type>pom</type>
+      </dependency>
+      <dependency>
+         <groupId>org.atlanmod.emf</groupId>
+         <artifactId>org.eclipse.emf.common</artifactId>
          <type>pom</type>
       </dependency>
 

@@ -15,6 +15,5 @@
     <modules>
         <module>org.eclipse.gmt.modisco.xml</module>
         <module>org.eclipse.modisco.xml.discoverer</module>
-        <module>org.eclipse.modisco.xml.discoverer.ui</module>
     </modules>
 </project>

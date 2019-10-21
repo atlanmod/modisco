@@ -21,6 +21,7 @@
         <!-- module>examples</module -->
         <module>releng</module>
         <module>products</module>
+        <module>ui</module>
     </modules>
 
 </project>

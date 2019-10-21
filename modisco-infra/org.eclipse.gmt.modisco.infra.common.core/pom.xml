@@ -23,10 +23,6 @@
             <artifactId>org.eclipse.pde.core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jdt</groupId>
-            <artifactId>org.eclipse.jdt.launching</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.common</artifactId>
             <type>pom</type>
@@ -35,6 +31,15 @@
             <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.ecore</artifactId>
             <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.edit</artifactId>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.apt.core</artifactId>
         </dependency>
     </dependencies>
 </project>

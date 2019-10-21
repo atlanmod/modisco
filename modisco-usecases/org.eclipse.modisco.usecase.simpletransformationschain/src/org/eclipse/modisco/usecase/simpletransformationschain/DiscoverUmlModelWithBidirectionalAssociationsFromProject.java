@@ -46,7 +46,7 @@ public class DiscoverUmlModelWithBidirectionalAssociationsFromProject extends
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IProject source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final IProject source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		DiscoverUmlModelWithBidirectionalAssociationsFromJavaProject discoverer = new DiscoverUmlModelWithBidirectionalAssociationsFromJavaProject();
 		discoverer.setCustomTransformation(getCustomTransformation());

@@ -8,7 +8,7 @@
  * Contributors:
  *     Nicolas Guyomar (Mia-Software)
  *******************************************************************************/
-package org.eclipse.modisco.jee.queries.tests;
+package plugins.eclipse.bundles.org.eclipse.modisco.jee.queries.tests.src.org.eclipse.modisco.jee.queries.tests;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;

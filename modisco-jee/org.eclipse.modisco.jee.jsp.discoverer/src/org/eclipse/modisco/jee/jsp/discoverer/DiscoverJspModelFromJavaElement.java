@@ -42,7 +42,7 @@ public class DiscoverJspModelFromJavaElement extends AbstractJspDiscoverer<IJava
 	}
 
 	@Override
-	protected void basicDiscoverElement(final IJavaElement javaElement,
+	public void basicDiscoverElement(final IJavaElement javaElement,
 			final IProgressMonitor monitor) throws DiscoveryException {
 		monitor.beginTask(Messages.discoveringJspModel, IProgressMonitor.UNKNOWN);
 		Model model = getEFactory().createModel();

@@ -21,11 +21,11 @@
             <artifactId>org.eclipse.modisco.infra.discovery.benchmark.metamodel</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.infra.discovery.benchmark.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.utils.core</artifactId>

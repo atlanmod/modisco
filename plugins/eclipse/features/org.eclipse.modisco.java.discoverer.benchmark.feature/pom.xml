@@ -12,11 +12,11 @@
     <packaging>eclipse-feature</packaging>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.java.discoverer.benchmark</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.java.nousages</artifactId>
@@ -32,11 +32,11 @@
             <artifactId>org.eclipse.gmt.modisco.java.classiceobject</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.java.composition.discoverer.benchmark</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</artifactId>

@@ -114,7 +114,7 @@ public abstract class AbstractProjectDeploymentDescriptorDiscoverer extends
 	}
 
 	@Override
-	protected void basicDiscoverElement(final Object source, final IProgressMonitor monitor)
+	public void basicDiscoverElement(final Object source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		final IProject project = getSourceProject(source);
 		try {

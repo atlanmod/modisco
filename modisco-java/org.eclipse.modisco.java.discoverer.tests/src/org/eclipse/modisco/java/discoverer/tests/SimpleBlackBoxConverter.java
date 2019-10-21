@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.common.tests.TestModelUtils;
 import org.eclipse.modisco.java.discoverer.JavaDiscoveryConstants;
-import org.eclipse.modisco.java.discoverer.internal.TranslateJavaModelToKdm;
+import org.atlanmod.modisco.discoverer.java.internal.TranslateJavaModelToKdm;
 import org.eclipse.modisco.java.discoverer.tests.utils.JavaProjectFactory;
 import org.eclipse.modisco.kdm.source.discoverer.IKDMDiscoveryConstants;
 import org.junit.After;

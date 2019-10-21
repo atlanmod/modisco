@@ -9,13 +9,14 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.core.runtime.Plugin;
+//import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
  */
-public class Activator extends AbstractUIPlugin {
+public class Activator extends Plugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.discovery.benchmark.metamodel"; //$NON-NLS-1$

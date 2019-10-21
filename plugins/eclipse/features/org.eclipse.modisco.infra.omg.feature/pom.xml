@@ -17,21 +17,21 @@
             <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.kdm.source.discoverer.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.kdm.uml2converter</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.kdm.uml2converter.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.omg.kdm</artifactId>
@@ -57,11 +57,11 @@
             <artifactId>org.eclipse.modisco.omg.smm</artifactId>
             <version>${project.version}</version>
         </dependency>
-       <dependency>
+       <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.kdm.source.extension.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.util.atl.core</artifactId>
