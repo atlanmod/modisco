@@ -1,0 +1,84 @@
+This describes tests that are currently done manually to test the browser UI.
+
+Keep the "error log" view opened when testing, to detect potential problems.
+
+=== Opening ===
+* Test opening a model from the package explorer
+* Test opening a metamodel from '''Navigate > Open EPackage'''
+* Upon opening, the metaclass of the root element of the model should be selected in the Types panel, and the root element visible in the Instances panel
+
+=== Navigation ===
+* Drill down to the children of a model element, then right click and select '''Browse''' on one of these children elements. Check that the metaclass changes to the one of the element, and that the element is selected in the Instances panel
+* Then, test the same thing with the "Enter" key shortcut
+* Then, do '''Navigate > Back''', and check that you're back to the element that was selected before the browse
+* Then, do '''Navigate > Forward''', and check that you're back again to the browsed element
+
+=== Searching ===
+* Type some text in the search box and hit <Enter>, and check that only the elements whose label contain the string you entered are displayed
+* Hit <Escape>; all the instances should be displayed again
+* Check the same thing after clicking on a metaclass with more than 1000 instances (with groups)
+
+=== Customization ===
+* Open a "*.javaxmi" file, and check that the "java" customization is activated by default
+* remove the "java" customization, and check that visual Java customizations are immediately removed from the browser
+
+=== Editing ===
+(with "Show Empty Links" and "Show Derived Links" enabled)
+* Create a new Ecore model
+* Open it in the browser
+* Do '''New Child > EClass''' on the root EPackage
+* Check that a new "EClass" metaclass appears in the Types panel, without manually refreshing
+* Also check that the ''eClassifiers'' link on the EPackage is not grayed anymore and is followed by "(1)"
+* On the EClass, right-click the ''eStructuralFeatures'' link and do '''New Child > EAttribute'''.
+* Go back to the EPackage, and delete the EClass under the eClassifiers link
+* Check that both the EClass and EAttribute disappeared from the Types panel
+* Now, do '''Edit > Undo''', and check that the EClass and EAttribute are back
+* On the EClass, check that you can't create any children from links ''ePackage'' and ''eSuperTypes''.
+
+* Check that the editor title starts with a star ("*"), indicating the editor is dirty
+* Save the model
+* Check that the editor title lost its star
+* Close the editor, open it again, and check that the model is the same as before you closed the editor
+
+* Open the same model with the "Sample Reflective Ecore Editor"
+* Change the name of the EClass (using the Properties view), create a new EClass, then save
+* Switch back to the MoDisco Browser, and check that both your changes are reflected in the browser
+* Now in the MoDisco Browser, change the name of the new EClass (don't save), then do the same thing in the "Sample Reflective Ecore Editor", and save in the "Sample Reflective Ecore Editor"
+* Switch back to the MoDisco Browser. You should have a "File Conflict" dialog box.
+* Click "Yes", and check that the changes from the "Sample Reflective Ecore Editor" replaced the changes in the MoDisco Browser
+
+=== Queries ===
+* Right click on a model element, and choose '''Execute Query...'''. The '''Query Execution''' view should be opened and focused, with the model element added to the context
+* Right click on a model element, then choose '''Create Query'''. The '''Create Query''' wizard should open, with the scope set to the metaclass of the selected model element.
+
+=== Miscellaneous ===
+* Check that the number of instances in the Instances panel matches the number between parenthesis for a metaclass in the Types panel.
+* Select several metaclasses in the Types panel, and check that the union of their instances is displayed in the Instances panel.
+* Right-click on an element and select '''Show Properties View''', and check that the properties view is opened, focused, and displays the element's attributes
+* Similarly, test opening the Properties view by double-clicking on an element
+
+=== Display options for '''Types''' panel ===
+Check each option separately:
+* "Show Empty Metaclasses": check that empty metaclasses are displayed in gray in the Types panel
+* "Display Instances of Subclasses": check that abstract metaclasses have instances when this option is activated
+* "Show Derivation Tree": check that the derivation tree looks correct
+* "Sort By Name": check that metaclasses are sorted by name
+* "Sort By Count": check that metaclasses are sorted by count
+* "Show Full Qualified Names": check that each metaclass is fully qualified
+* "Group by Package": check that metaclasses are grouped by their containing package
+
+=== Display options for the '''Instances''' panel ===
+For each option, try disabling then enabling the option:
+* Check that "Sort Instances" works
+* Open a model with many instances, multi-select all metaclasses in the Types panel, then check that a progress dialog is shown when sorting instances, and that the sorting can be cancelled at any moment. Also check that no such dialog appears when sorting is disabled.
+* Test "Show Empty Links", "Show Derived Links", "Sort Links", "Sort Links by Type"
+* Disable all customizations, and check that the full qualified names of metaclasses are displayed when "Show Full Qualified Names" is activated
+* Check that multiplicities are displayed on links when "Show Multiplicity" is selected
+* On a Java model, when "Show Ordering" is activated, each ordered link should have an arrow displayed to the right of the "statements" link of a "Block" element, with each element under the link numbered (starting from 0). When "Sort Instances" is activated, the arrow should disappear, and the elements should not be sorted by index anymore.
+* Check that the opposite links appear when "Show Opposite Links" is activated
+* Check that "Show Container" displays the ''/eContainer'' link
+* Check that attributes can be shown/hidden using "Show Attributes"
+* Check that empty attributes can be shown/hidden using "Show Empty Attributes", when "Show Attributes" is enabled
+* Check that the metaclass corresponding to the link appears when "Show Type of Links" is activated
+* When "Show Element IDs" is enabled, each element in the model should have a unique ID
+* Check that each element has its EMF URI displayed when "Show URI" is enabled

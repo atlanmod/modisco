@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?>
+<!--
+Copyright (c) 2015 Mia-Software, and Soft-Maint
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+   Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
+   Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+   Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
+   Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
+   Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
+-->
+<plugin>
+   <extension point="org.eclipse.ui.views">
+      <view
+         class="org.eclipse.modisco.infra.browser.ecore.ui.internal.view.EcoreExplorerView"
+         icon="icons/MoDiscoModelIcon.gif"
+         id="org.eclipse.modisco.infra.browser.ecore.ui.view1"
+         name="%EcoreExplorer"
+         restorable="true"/>
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution
+         allPopups="false"
+         locationURI="toolbar:org.eclipse.modisco.infra.browser.ecore.ui.view1">
+            <command
+               commandId="org.eclipse.emf.facet.ui.loadCustomization"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization"
+               label="Load/Unload customizations"
+               style="pulldown">
+            </command>
+            <command
+               commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet"
+               label="Load/Unload facets"
+               style="pulldown">
+            </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization">
+         <dynamic
+               class="org.eclipse.modisco.infra.browser.ecore.ui.internal.handler.LoadCustomShortcutsMenu"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization.dynamic">
+         </dynamic>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet">
+         <dynamic
+               class="org.eclipse.modisco.infra.browser.ecore.ui.internal.handler.LoadFacetSetShortcutsMenu"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet.dynamic">
+         </dynamic>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
+      <modeldeclaration
+            file="custom/nbInstancesEClassByResourceSet.custom">
+      </modeldeclaration>
+      <modeldeclaration
+            file="custom/nbInstancesEClassByResource.custom">
+      </modeldeclaration>
+   </extension>
+</plugin>

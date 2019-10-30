@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp">
+  <types metaclassName="jsp.JSPComment">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/jsp_comment.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JSPDeclaration">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/jsp_declaration.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JSPDirective">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/jsp_directive.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JSPExpression">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/jsp_expression.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JSPScriptlet">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/jsp_scriplet.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JSPStdAction">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/jsp_standard_action.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.Page">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/page.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.Model">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/model.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JavaScript">
+    <customizedFeatures customizedFeature="icon">
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.jee.jsp.browser.customization/icons/javascript.gif"/>
+    </customizedFeatures>
+  </types>
+  <types metaclassName="jsp.JSPScript">
+    <customizedFeatures customizedFeature="label">
+      <defaultValue xsi:type="uicustom:DerivedFeatureValue">
+        <valueCalculator xsi:type="query:JavaModelQuery" href="modisco:/query/jspQueries#GetJspScriptName"/>
+      </defaultValue>
+    </customizedFeatures>
+  </types>
+</uicustom:MetamodelView>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.gmt.modisco.infra.browser" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="org.eclipse.gmt.modisco.infra.browser" id="loadingDepth" name="resources loading depth"/>
+      </appInfo>
+      <documentation>
+         Specify the loading depth for Resources of a given metamodel.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="loadingDepth"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="loadingDepth">
+      <complexType>
+         <attribute name="metamodel" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The nsURI of the metamodel for which the loading depth is defined.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="depth" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The depth with which to initially load Resources linked to the main Resource.
+&lt;ul&gt;
+&lt;li&gt;-1 means load all Resources (no lazy loading)
+&lt;li&gt;0 means only load the main Resource (the one defined in the file opened in the model browser)
+&lt;li&gt;1 means load directly referenced Resources
+&lt;li&gt;2 means load directly referenced Resources and their referenced Resources
+&lt;li&gt;etc.
+&lt;/ul&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         0.9 M2
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         The following is an example of an extension that defines a loading depth for 2 metamodels:
+&lt;p&gt;
+&lt;pre&gt;
+&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.browser.loadingDepth&quot;&gt;
+   &lt;loadingDepth
+         depth=&quot;1&quot;
+         metamodel=&quot;http://www.eclipse.org/MoDisco/Java/0.2.incubation/java&quot;/&gt;
+   &lt;loadingDepth
+         depth=&quot;1&quot;
+         metamodel=&quot;http://www.eclipse.org/MoDisco/infra/browser/custom/0.8&quot;/&gt;
+&lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         Copyright (c) 2010 Mia-Software.
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+      </documentation>
+   </annotation>
+
+</schema>

@@ -1,0 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2011 Mia-Software.
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   Fabien Giquel (Mia-Software) - Bug 342856 - [Java Discovery] improve Discoverers implementation
+ *******************************************************************************/
+
+	org.eclipse.gmt.modisco.infra.common.cdo.server
+  x-friends:="org.eclipse.gmt.modisco.infra.common.cdo.derby,
+   org.eclipse.modisco.java.discoverer.benchmark,
+   org.eclipse.modisco.java.discoverer.cdo,
+   org.eclipse.modisco.java.discoverer.cdo.tests"
+   
+    For CDO server usage
