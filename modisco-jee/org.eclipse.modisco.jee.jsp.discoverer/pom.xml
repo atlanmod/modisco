@@ -11,12 +11,51 @@
 
    <artifactId>org.eclipse.modisco.jee.jsp.discoverer</artifactId>
 
-   <packaging>jar</packaging>
-
+   <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.ui,
+                            org.eclipse.core.runtime,
+                            org.antlr.runtime;bundle-version="[3.0.0,3.1.0)",
+                            org.eclipse.jdt.core;bundle-version="3.6.0",
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.xml;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.jee.jsp;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery.core;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.modisco.jee.jsp.discoverer.JspActivator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.core</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.core</groupId>
+            <artifactId>org.eclipse.core.resources</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.core</artifactId>
+            <scope>provided</scope>
         </dependency>
        <!-- <dependency>
             <groupId>org.eclipse.platform</groupId>

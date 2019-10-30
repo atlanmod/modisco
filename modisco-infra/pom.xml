@@ -18,8 +18,6 @@
         <module>org.eclipse.gmt.modisco.infra.query</module>
         <module>org.eclipse.modisco.infra.discovery</module>
          <module>org.eclipse.modisco.infra.discovery.benchmark.core</module>
-        <module>org.eclipse.gmt.modisco.infra.common.cdo</module>
-        <module>org.eclipse.gmt.modisco.infra.common.cdo.derby</module>
         <module>org.eclipse.gmt.modisco.infra.query.edit</module>
         <module>org.eclipse.gmt.modisco.infra.query.core</module>
     </modules>

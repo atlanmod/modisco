@@ -51,12 +51,14 @@ import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.osgi.util.ManifestElement;
+/*
 import org.eclipse.pde.core.plugin.IPluginAttribute;
 import org.eclipse.pde.core.plugin.IPluginElement;
 import org.eclipse.pde.core.plugin.IPluginExtension;
 import org.eclipse.pde.core.plugin.IPluginModelBase;
 import org.eclipse.pde.core.plugin.IPluginObject;
 import org.eclipse.pde.core.plugin.PluginRegistry;
+*/
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleException;
 
@@ -335,6 +337,7 @@ public class JavaModelQueryFactory implements IModelQueryFactory {
 	 * defined in the <code>plugin.xml</code> of the given project.
 	 */
 	void loadMetamodelsFromPluginXml(final IProject project, final Bundle bundle) {
+		/*
 		final String generatedPackageExtensionPoint = EcorePlugin.getPlugin().getSymbolicName()
 				+ "." //$NON-NLS-1$
 				+ EcorePlugin.GENERATED_PACKAGE_PPID;
@@ -369,6 +372,7 @@ public class JavaModelQueryFactory implements IModelQueryFactory {
 				}
 			}
 		}
+		*/
 	}
 
 	private void loadEPackage(final Bundle bundle, final String uri, final String className) {

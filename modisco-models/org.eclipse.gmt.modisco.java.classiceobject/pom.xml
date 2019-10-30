@@ -2,22 +2,51 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <parent>
-      <groupId>org.atlanmod.modisco</groupId>
-      <artifactId>modisco-models</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-   </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-models</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>org.eclipse.gmt.modisco.java.classiceobject</artifactId>
+    <packaging>bundle</packaging>
+    <description>Classic EObject</description>
 
-   <artifactId>org.eclipse.gmt.modisco.java.classiceobject</artifactId>
+    <build>
+        <plugins>
 
-   <packaging>jar</packaging>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <!--Bundle-SymbolicName>${project.groupId}.data.mapdb</Bundle-SymbolicName-->
+                        <Bundle-SymbolicName>org.eclipse.gmt.modisco.java.classiceobject</Bundle-SymbolicName>
+                        <Export-Package>
+                            !org.eclipse.gmt.modisco.java.classiceobject.*.internal.*,
+                            org.eclipse.gmt.modisco.java.classiceobject.*
+                        </Export-Package>
+                        <!--Require-Bundle>
+                            ${project.groupId}.core
+                        </Require-Bundle-->
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-   <dependencies>
-      <dependency>
-         <groupId>org.atlanmod.modisco</groupId>
-         <artifactId>org.eclipse.gmt.modisco.java</artifactId>
-         <version>${project.version}</version>
-      </dependency>
-   </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Internal -->
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

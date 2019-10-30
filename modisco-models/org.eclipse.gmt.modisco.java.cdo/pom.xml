@@ -2,26 +2,61 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <parent>
-      <artifactId>modisco-models</artifactId>
-      <groupId>org.atlanmod.modisco</groupId>
-      <version>1.0.0-SNAPSHOT</version>
-   </parent>
-   <artifactId>org.eclipse.gmt.modisco.java.cdo</artifactId>
-   <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>modisco-models</artifactId>
+        <groupId>org.atlanmod.modisco</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>org.eclipse.gmt.modisco.java.cdo</artifactId>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.emf.ecore,
+                            org.eclipse.emf.cdo,
+                            org.eclipse.emf.ecore.xmi,
+                            org.eclipse.gmt.modisco.java;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-      <dependencies>
-         <dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.core</groupId>
+            <artifactId>org.eclipse.core.runtime</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <type>pom</type>
+        </dependency>
+        <dependency>
             <groupId>org.eclipselabs</groupId>
             <artifactId>cdo</artifactId>
             <type>pom</type>
-         </dependency>
-         <dependency>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.java</artifactId>
             <version>${project.version}</version>
-         </dependency>
-      </dependencies>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 </project>

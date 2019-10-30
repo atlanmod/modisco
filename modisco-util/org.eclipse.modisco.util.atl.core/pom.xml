@@ -11,8 +11,33 @@
    </parent>
 
    <artifactId>org.eclipse.modisco.util.atl.core</artifactId>
-   <packaging>jar</packaging>
+    <packaging>bundle</packaging>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.emf;bundle-version="2.6.0",
+                            org.eclipse.emf.ecore;bundle-version="2.6.0",
+                            org.eclipse.m2m.atl;bundle-version="3.1.0",
+                            org.eclipse.m2m.atl.core;bundle-version="3.1.0",
+                            org.eclipse.m2m.atl.drivers.emf4atl;bundle-version="3.1.0"
+                        </Require-Bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
    <dependencies>
       <dependency>
          <groupId>org.eclipse.core</groupId>

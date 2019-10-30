@@ -10,7 +10,35 @@
     </parent>
 
     <artifactId>org.eclipse.modisco.jee.webapp.discoverer</artifactId>
-    <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.ui,
+                            org.eclipse.core.runtime,
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.jee.webapp;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.jee;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery.core;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.modisco.jee.webapp.discoverer.WebXmlActivator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>

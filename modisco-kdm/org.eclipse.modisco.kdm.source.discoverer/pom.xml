@@ -9,7 +9,45 @@
       <version>1.0.0-SNAPSHOT</version>
   </parent>
    <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
-   <packaging>jar</packaging>
+   <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.debug.core,
+                            org.eclipse.jdt.core,
+                            org.eclipse.jdt.launching,
+                            org.eclipse.acceleo.engine,
+                            org.eclipse.modisco.infra.discovery;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.omg.kdm;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]"
+                            <!--
+                            Not used:
+                            org.eclipse.modisco.workflow;bundle-version="[1.0.0,1.0.2]",
+                            -->
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.modisco.kdm.source.discoverer.internal.Activator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 
     <dependencies>
         <dependency>
@@ -19,6 +57,10 @@
         <dependency>
             <groupId>org.eclipse.core</groupId>
             <artifactId>org.eclipse.core.resources</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.core</artifactId>
         </dependency>
 
         <!-- Internal -->

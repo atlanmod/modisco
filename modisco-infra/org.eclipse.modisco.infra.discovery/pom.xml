@@ -9,23 +9,50 @@
       <version>1.0.0-SNAPSHOT</version>
   </parent>
    <artifactId>org.eclipse.modisco.infra.discovery</artifactId>
-
-   <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.emf.ecore;visibility:=reexport,
+                            org.eclipse.emf.facet.util.emf.catalog,
+                            org.eclipse.core.resources,
+                            org.eclipse.gmt.modisco.infra.common.core,
+                            org.eclipse.emf.facet.util.emf.core
+                        </Require-Bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
             <groupId>org.eclipse.core</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.facet</artifactId>
             <type>pom</type>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.ecore</artifactId>
             <type>pom</type>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
  </project>
