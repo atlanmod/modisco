@@ -4,14 +4,15 @@ Export-Package: org.eclipse.modisco.java.composition.javaapplication,
  org.eclipse.modisco.java.composition.javaapplication.impl;x-internal:=true,
  org.eclipse.modisco.java.composition.javaapplication.queries;x-friends:="org.eclipse.modisco.java.composition.ui",
  org.eclipse.modisco.java.composition.javaapplication.util;x-internal:=true
-Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
- ity:=reexport,org.eclipse.gmt.modisco.java;visibility:=reexport,org.e
- clipse.gmt.modisco.omg.kdm;visibility:=reexport,org.eclipse.modisco.k
- dm.source.extension;bundle-version="0.9.0",org.eclipse.gmt.modisco.in
- fra.query.core;bundle-version="0.9.0"
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.gmt.modisco.java;bundle-version="[1.0.0,1.0.2]";visibility:=reexport,
+ org.eclipse.gmt.modisco.omg.kdm;bundle-version="[1.0.0,1.0.2]";visibility:=reexport,
+ org.eclipse.modisco.kdm.source.extension;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]"
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ClassPath: .
-Bundle-Version: 1.2.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.java.composition;singleton:=true

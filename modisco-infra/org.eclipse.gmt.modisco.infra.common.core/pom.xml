@@ -8,20 +8,68 @@
         <groupId>org.atlanmod.modisco</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.emf.ecore.xmi;visibility:=reexport,
+                            org.eclipse.core.resources;visibility:=reexport,
+                            <!-- Trying to avoid a compilation dependency
+                            problem.
 
-    <packaging>jar</packaging>
+                            org.eclipse.jdt.apt.core,
+                            org.eclipse.jdt.core,
+                            org.eclipse.jdt.launching,
+                            org.eclipse.pde.core,
+                            -->
+                            org.eclipse.emf.edit,
+                            com.ibm.icu;bundle-version="4.2.1"
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.eclipse.pde</groupId>
             <artifactId>org.eclipse.pde.core</artifactId>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jdt</groupId>
+                    <artifactId>org.eclipse.jdt.core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
         <dependency>
             <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.common</artifactId>
@@ -40,6 +88,13 @@
         <dependency>
             <groupId>org.eclipse.jdt</groupId>
             <artifactId>org.eclipse.jdt.apt.core</artifactId>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jdt</groupId>
+                    <artifactId>org.eclipse.jdt.core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>

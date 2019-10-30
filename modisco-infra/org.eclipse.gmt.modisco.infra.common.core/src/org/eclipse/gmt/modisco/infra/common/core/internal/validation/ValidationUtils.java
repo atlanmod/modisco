@@ -25,9 +25,12 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.utils.BuildPropertiesU
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.PluginUtils;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.osgi.util.NLS;
-import org.eclipse.pde.core.build.IBuildEntry;
+//import org.eclipse.pde.core.build.IBuildEntry;
 
 public final class ValidationUtils {
+
+	// Avoiding to import all PDE for a single constant
+	private static final String  BIN_INCLUDES = "bin.includes";
 
 	private ValidationUtils() {
 		// utilities class
@@ -52,6 +55,8 @@ public final class ValidationUtils {
 	 *            the extension point that is used to register elements of this
 	 *            kind (elements must be declared with a "file" attribute)
 	 */
+
+
 	public static void validateRegistered(final IProject project, final String extensionToCheck,
 			final String markerType, final String elementType, final String extensionPoint) {
 		final List<IFile> notDeclared = new ArrayList<IFile>();
@@ -128,7 +133,7 @@ public final class ValidationUtils {
 		for (IFile file : notInBuild) {
 			try {
 				String message = NLS.bind(Messages.ValidationUtils_shouldBeInBin,
-						new Object[] { IBuildEntry.BIN_INCLUDES, elementType, file.getName() });
+						new Object[] { BIN_INCLUDES, elementType, file.getName() });
 				IMarker marker = buildMarkersResource.createMarker(markerType);
 				marker.setAttribute(IMarker.MESSAGE, message);
 				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);

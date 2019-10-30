@@ -9,16 +9,59 @@
         <artifactId>modisco-infra</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>org.eclipse.modisco.infra.discovery.benchmark.core</artifactId>
-
-    <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.core.resources;bundle-version="3.6.0",
+                            org.eclipse.core.filesystem;bundle-version="1.3.0",
+                            org.eclipse.debug.core;bundle-version="3.6.0",
+                            org.eclipse.emf.ecore;bundle-version="2.6.0",
+                            org.eclipse.emf.facet.util.emf.core,
+                            org.eclipse.acceleo.engine;bundle-version="3.0.0",
+                            org.eclipse.jdt.core;bundle-version="3.6.0",
+                            <!--org.apache.commons.cli;bundle-version="1.0.0",-->
+                            org.eclipse.emf.facet.util.core;bundle-version="1.1.0",
+                            org.eclipse.emf.common
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
             <groupId>org.eclipse.core</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.core.filesystem</artifactId>
+            <version>1.7.500</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.eclipse.acceleo</groupId>
             <artifactId>org.eclipse.acceleo.maven</artifactId>

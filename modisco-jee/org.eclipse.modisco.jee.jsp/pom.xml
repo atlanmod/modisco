@@ -2,34 +2,33 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <parent>
-      <groupId>org.atlanmod.modisco</groupId>
-      <artifactId>modisco-jee</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-  </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-jee</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
-   <artifactId>org.eclipse.modisco.jee.jsp</artifactId>
-   <packaging>jar</packaging>
+    <artifactId>org.eclipse.modisco.jee.jsp</artifactId>
+    <packaging>bundle</packaging>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src-gen</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.emf.ecore
+                        </Require-Bundle>
+                    </instructions>
+                </configuration>
             </plugin>
         </plugins>
     </build>

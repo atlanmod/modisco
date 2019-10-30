@@ -2,18 +2,18 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.facet.edit;singleton:=true
-Bundle-Version: 1.2.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.gmt.modisco.infra.facet.edit.provider.FacetEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.facet;visibility:=reexport,
+ org.eclipse.gmt.modisco.infra.facet;visibility:=reexport;bundle-version="[1.0.0,1.0.2]",
  org.eclipse.emf.edit;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.emf.ecore;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.emf.ecore.edit;bundle-version="2.5.0";visibility:=reexport,
- org.eclipse.gmt.modisco.infra.query;visibility:=reexport,
- org.eclipse.gmt.modisco.infra.query.edit;visibility:=reexport
+ org.eclipse.gmt.modisco.infra.query;visibility:=reexport;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.query.edit;visibility:=reexport;bundle-version="[1.0.0,1.0.2]"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.infra.facet.edit.provider;x-friends:="org.eclipse.gmt.modisco.infra.facet.editor"

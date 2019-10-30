@@ -11,23 +11,67 @@
   </parent>
 
    <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
-
-   <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.emf.ecore.xmi,
+                            org.eclipse.jdt.core,
+                            org.eclipse.jdt.apt.core,
+                            org.eclipse.emf.facet.util.emf.core,
+                            org.eclipse.emf.facet.util.emf.catalog,
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.modisco.infra.discovery.core.internal.Activator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.osgi</groupId>
-            <artifactId>org.eclipse.osgi</artifactId>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.facet</artifactId>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.core</groupId>
+            <artifactId>org.eclipse.core.runtime</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.apt.core</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <artifactId>org.eclipse.jdt.core</artifactId>
             <groupId>org.eclipse.jdt</groupId>
+            <artifactId>org.eclipse.jdt.core</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <artifactId>org.eclipse.core.resources</artifactId>
             <groupId>org.eclipse.core</groupId>
+            <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>

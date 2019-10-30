@@ -8,10 +8,10 @@ Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.facet.examples.kdm;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.common.core,
- org.eclipse.gmt.modisco.infra.query.core,
- org.eclipse.gmt.modisco.omg.kdm,
  org.eclipse.emf.ecore,
- org.eclipse.gmt.modisco.infra.facet.core,
- com.ibm.icu;bundle-version="4.2.1"
-Bundle-Version: 1.2.0.qualifier
+ com.ibm.icu;bundle-version="4.2.1",
+ org.eclipse.gmt.modisco.infra.common.core;bundle-version=[1.0.0,1.0.2],
+ org.eclipse.gmt.modisco.infra.query.core;bundle-version=[1.0.0,1.0.2],
+ org.eclipse.gmt.modisco.omg.kdm;bundle-version=[1.0.0,1.0.2],
+ org.eclipse.gmt.modisco.infra.facet.core;bundle-version=[1.0.0,1.0.2]
+Bundle-Version: 1.0.0.qualifier

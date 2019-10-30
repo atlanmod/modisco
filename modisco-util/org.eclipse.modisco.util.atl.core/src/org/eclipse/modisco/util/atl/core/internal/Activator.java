@@ -1,4 +1,4 @@
-package plugins.eclipse.bundles.org.eclipse.modisco.util.atl.core.src.org.eclipse.modisco.util.atl.core.internal;
+package org.eclipse.modisco.util.atl.core.internal;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;

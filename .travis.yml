@@ -5,9 +5,13 @@ dist: trusty
 language: java
 jdk: oraclejdk8
 
+env:
+	- M2_MIRROR=$HOME/m2_mirror
+
 cache:
     directories:
         - '$HOME/.m2/repository'
+		- '$HOME/m2_mirror'
 
 #before_install:
     #NEEDED TO RUN THE GUI TESTS
@@ -22,8 +26,10 @@ install:
   #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
 
 script:
+	# Maven artifacts:
   - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml install
-  #- travis_wait 60 mvn -B -V -q --global-toolchains .travis.maven.toolchains.xml package jxr:aggregate site
+  	# Eclipse plugins:
+  - travis_wait 60 mvn --batch-mode --quiet  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
 
 #after_success:
 #DEPLOYMENT SCRIPTS

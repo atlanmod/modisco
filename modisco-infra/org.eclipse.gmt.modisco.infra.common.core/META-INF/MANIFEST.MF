@@ -2,7 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.common.core;singleton:=true
-Bundle-Version: 1.2.0.qualifier
+Automatic-Module-Name: org.eclipse.gmt.modisco.infra.common.core
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -14,7 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jdt.launching,
  org.eclipse.pde.core,
  org.eclipse.emf.edit,
- org.eclipse.jdt.apt.core,
+ org.eclipse.jdt.apt.core;resolution:=optional,
  com.ibm.icu;bundle-version="4.2.1"
 Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
@@ -881,4 +882,3 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
  org.eclipse.gmt.modisco.infra.common.core.logging
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator
-

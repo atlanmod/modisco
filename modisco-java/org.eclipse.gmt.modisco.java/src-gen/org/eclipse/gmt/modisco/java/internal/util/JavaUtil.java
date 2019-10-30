@@ -29,7 +29,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+//import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.java.ASTNode;
 import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
@@ -182,12 +182,12 @@ public final class JavaUtil {
 				// No prefix if container is a Model instance
 				assert true; // misc statement for checkstyle rule
 			} else if (typeDeclaration.eContainer() != null) {
-				MoDiscoLogger.logWarning(
+				/*MoDiscoLogger.logWarning(
 						"Not managed type declaration: typeDeclaration.eContainer().getClass()= " //$NON-NLS-1$
-						, JavaPlugin.getDefault());
+						, JavaPlugin.getDefault());*/
 			} else {
-				MoDiscoLogger.logWarning("Type with null container" //$NON-NLS-1$
-						, JavaPlugin.getDefault());
+				/*MoDiscoLogger.logWarning("Type with null container" //$NON-NLS-1$
+						, JavaPlugin.getDefault());*/
 			}
 			buffer.append(typeDeclaration.getName());
 		} else if (object instanceof Package) {
@@ -353,10 +353,10 @@ public final class JavaUtil {
 		JavaUtil javaUtil = new JavaUtil();
 		CurrentElement currentElement = javaUtil.new CurrentElement();
 		if (searchedQualifiedName == null) {
-			MoDiscoLogger
+			/*MoDiscoLogger
 					.logError(
 							"JavaDiscovererUtils::getNamedElementByQualifiedName(): qualifiedName parameter is null", //$NON-NLS-1$
-							JavaPlugin.getDefault());
+							JavaPlugin.getDefault());*/
 		} else {
 			Iterator<Type> orphanTypes = model.getOrphanTypes().iterator();
 			while (orphanTypes.hasNext()) {
