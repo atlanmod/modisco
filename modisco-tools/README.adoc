@@ -1,0 +1,25 @@
+= Modisco Tools
+
+This modules contains some artifacts that help to correctly build Modisco.
+
+== About the Mirrors
+
+The only module used to create a local mirror of the needed P2 repositories is `mirror-all`.
+
+All others mirror modules inside `separate-mirrors`are used for configuration and evaluation of the impact of adding new Installable Units (IU) to the local mirror.
+
+The module `mirror-all` needs an environement variable called `M2_MIRROR` to be set.
+Otherwise, the local mirror will be saved into the `./target/repository/` directory.
+
+This directory also contains a `settings.xml` file, which should be used to configure the usage of the local mirror.
+
+For instance, to create the local mirror and build the Eclipse Plugins for Atlanmod Modisco, do:
+
+[source, shell]
+----
+export M2_MIRROR=$HOME/M2_MIRROR/
+cd modisco-tools/mirror-all
+mvn clean install
+cd ../../plugins/eclipse
+mvn --settings ../../modisco-tools/settings.xml clean install
+----

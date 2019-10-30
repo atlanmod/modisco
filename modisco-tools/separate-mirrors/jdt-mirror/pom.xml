@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>modisco-tools</artifactId>
+    </parent>
+
+    <artifactId>jdt-mirror</artifactId>
+    <packaging>pom</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho.extras</groupId>
+                <artifactId>tycho-p2-extras-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>mirror</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>
+                        <repository>
+                            <id>oxygen-updates</id>
+                            <url>https://download.eclipse.org/eclipse/updates/4.7/</url>
+                            <layout>p2</layout>
+                        </repository>
+                    </source>
+
+                    <!-- List of IUs to mirror  -->
+                    <ius>
+                        <iu>
+                            <id>org.eclipse.jdt.feature.group</id>
+                        </iu>
+                        <!--
+                        For some reason, selecting individual IU instead of a feature downloads
+                        a bugged version of org.eclipse.jdt.core.
+
+                        <iu>
+                            <id>org.eclipse.jdt.core</id>
+                        </iu>
+
+                        <iu>
+                            <id>org.eclipse.jdt.apt.core</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.jdt.launching</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.jdt.ui</id>
+                        </iu>
+                        -->
+                    </ius>
+
+                    <destination>${m2.mirror}</destination>
+                    <followStrictOnly>false</followStrictOnly>
+                    <includeOptional>true</includeOptional>
+                    <includeNonGreedy>true</includeNonGreedy>
+
+                    <latestVersionOnly>true</latestVersionOnly>
+                    <mirrorMetadataOnly>false</mirrorMetadataOnly>
+                    <compress>true</compress>
+                    <append>true</append>
+                    <includePacked>false</includePacked>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

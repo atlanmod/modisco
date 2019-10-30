@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>org.atlanmod.modisco</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>modisco-tools</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <tycho.version>1.4.0</tycho.version>
+        <m2.mirror>${project.build.directory}/repository</m2.mirror>
+    </properties>
+
+    <modules>
+        <module>birt-mirror</module>
+        <module>cdo-mirror</module>
+        <module>emf-mirror</module>
+        <module>facet-mirror</module>
+        <module>jdt-mirror</module>
+        <module>ocl-mirror</module>
+        <module>oxygen-mirror</module>
+        <module>transaction-mirror</module>
+        <module>validation-mirror</module>
+        <module>atl-mirror</module>
+        <module>pde-mirror</module>
+        <module>acceleo-mirror</module>
+        <module>uml-mirror</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho.extras</groupId>
+                <artifactId>tycho-p2-extras-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>mirror</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+
+
+
+
+
+
+

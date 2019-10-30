@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>modisco-tools</artifactId>
+    </parent>
+
+    <artifactId>birt-mirror</artifactId>
+    <packaging>pom</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho.extras</groupId>
+                <artifactId>tycho-p2-extras-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>mirror</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>
+                         <repository>
+                            <id>birt</id>
+                            <url>https://download.eclipse.org/birt/update-site/4.4/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <repository>
+                            <!-- Needed for complementaty IUs -->
+                            <id>orbit</id>
+                            <url>https://download.eclipse.org/tools/orbit/downloads/drops/R20180330011457/repository/</url>
+                            <layout>p2</layout>
+                        </repository>
+                   </source>
+
+                    <!-- List of IUs to mirror  -->
+                    <ius>
+                        <iu><id>org.eclipse.birt.chart.engine</id></iu>
+                        <iu><id>org.eclipse.birt.chart.engine.extension</id></iu>
+                        <iu><id>org.eclipse.birt.chart.device.extension</id></iu>
+                    </ius>
+
+                    <destination>${m2.mirror}</destination>
+                    <followStrictOnly>false</followStrictOnly>
+                    <includeOptional>false</includeOptional>
+                    <includeNonGreedy>false</includeNonGreedy>
+
+                    <latestVersionOnly>true</latestVersionOnly>
+                    <mirrorMetadataOnly>false</mirrorMetadataOnly>
+                    <compress>true</compress>
+                    <append>true</append>
+                    <includePacked>false</includePacked>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

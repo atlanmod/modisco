@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.eclipse.modisco</groupId>
+    <artifactId>mirror-all</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <tycho.version>1.4.0</tycho.version>
+        <m2.mirror>${env.M2_MIRROR}</m2.mirror>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho.extras</groupId>
+                <artifactId>tycho-p2-extras-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>mirror</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- For the sake of readability, please keep this list in alphabetical order -->
+                    <source>
+                        <!-- Acceleo -->
+                        <repository>
+                            <id>acceleo</id>
+                            <url>https://download.eclipse.org/acceleo/updates/releases/3.5</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <!-- ATL -->
+                        <repository>
+                            <id>atl</id>
+                            <layout>p2</layout>
+                            <url>https://download.eclipse.org/mmt/atl/updates/releases/4.1/</url>
+                        </repository>
+                        <!-- BIRT -->
+                        <repository>
+                            <id>birt</id>
+                            <url>https://download.eclipse.org/birt/update-site/4.4/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <!-- CDO -->
+                        <repository>
+                            <id>cdo</id>
+                            <url>https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.7/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <!-- EMF -->
+                        <repository>
+                            <id>emf</id>
+                            <layout>p2</layout>
+                            <url>http://download.eclipse.org/modeling/emf/emf/builds/release/2.13/</url>
+                        </repository>
+                        <!-- Facet -->
+                        <repository>
+                            <id>facet</id>
+                            <layout>p2</layout>
+                            <url>http://download.eclipse.org/facet/updates/release/1.3.0/</url>
+                        </repository>
+                        <!-- JDT  uses Oxygen Updates -->
+                        <!-- OCL -->
+                        <repository>
+                            <id>ocl</id>
+                            <layout>p2</layout>
+                            <url>https://download.eclipse.org/modeling/mdt/ocl/updates/releases/</url>
+                        </repository>
+                        <!-- Oxygen -->
+                        <!--
+                        <repository>
+                            <id>oxygen</id>
+                            <url>http://download.eclipse.org/releases/oxygen/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        -->
+                        <!-- Oxygen Updates -->
+                        <repository>
+                            <id>oxygen-updates</id>
+                            <url>https://download.eclipse.org/eclipse/updates/4.7/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <!-- PDE uses Oxygen Updates -->
+                        <!-- Transaction -->
+                        <repository>
+                            <id>transaction</id>
+                            <layout>p2</layout>
+                            <url>https://download.eclipse.org/modeling/emf/transaction/updates/releases/</url>
+                        </repository>
+                        <!-- UML2 5.3 -->
+                        <repository>
+                            <id>uml</id>
+                            <url>https://download.eclipse.org/modeling/mdt/uml2/updates/5.3/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <!-- Validation -->
+                        <repository>
+                            <id>validation</id>
+                            <layout>p2</layout>
+                            <url>https://download.eclipse.org/modeling/emf/validation/updates/releases/</url>
+                        </repository>
+                    </source>
+
+                    <!-- IUs to mirror  -->
+                    <!-- Be careful when adding new IU here, a single IU can trigger
+                         the downloading of several hundreds of Mega Bytes. Please
+                         check each new IU individually before modifying this list -->
+                    <ius>
+                        <!-- Acceleo -->
+                        <iu>
+                            <id>org.eclipse.acceleo.feature.group</id>
+                        </iu>
+                        <!-- ATL -->
+                        <iu>
+                            <id>org.eclipse.m2m.atl.feature.group</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.m2m.atl.emftvm</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.m2m.atl.drivers.emf4atl</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.m2m.atl.dsls</id>
+                        </iu>
+                        <!-- BIRT -->
+                        <iu>
+                            <id>org.eclipse.birt.chart.engine</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.birt.chart.engine.extension</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.birt.chart.device.extension</id>
+                        </iu>
+                        <!-- CDO -->
+                        <iu>
+                            <id>org.eclipse.emf.cdo.server.feature.group</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.net4j.db.feature.group</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.net4j.db.derby.feature.group</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.emf.cdo.feature.group</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.net4j.feature.group</id>
+                        </iu>
+                        <!-- EMF -->
+                        <iu>
+                            <id>org.eclipse.emf.sdk.feature.group</id>
+                        </iu>
+                        <!-- Facet -->
+                        <iu>
+                            <id>org.eclipse.emf.facet.sdk.feature.feature.group</id>
+                        </iu>
+                        <!-- JDT -->
+                        <iu>
+                            <id>org.eclipse.jdt.feature.group</id>
+                            <version>3.13.4.v20180330-0919</version>
+                        </iu>
+                        <!-- OCL -->
+                        <iu>
+                            <id>org.eclipse.ocl.all.feature.group</id>
+                        </iu>
+                        <!-- Oxygen -->
+                        <iu>
+                            <id>org.eclipse.core.runtime</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.ui</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.ui.forms</id>
+                        </iu>
+                        <!-- PDE -->
+                        <iu>
+                            <id>org.eclipse.pde.core</id>
+                        </iu>
+                        <!-- Transaction -->
+                        <iu>
+                            <id>org.eclipse.emf.transaction.feature.group</id>
+                        </iu>
+                        <!-- UML 2 -->
+                        <iu>
+                            <id>org.eclipse.uml2.feature.group</id>
+                        </iu>
+                        <!-- Validation -->
+                        <iu>
+                            <id>org.eclipse.emf.validation.feature.group</id>
+                        </iu>
+                        <iu>
+                            <id>org.eclipse.emf.validation.ocl.feature.group</id>
+                        </iu>
+                    </ius>
+
+                    <destination>${m2.mirror}</destination>
+                    <followStrictOnly>false</followStrictOnly>
+                    <includeOptional>true</includeOptional>
+                    <includeNonGreedy>true</includeNonGreedy>
+                    <!--
+                    latestVersionOnly cannot be set to true: some packages (e.g. JDT) need the same
+                    IU (org.eclipse.jdt.annotation) in different versions (1.1.150 and 2.1.150).
+                    If only the last version is included, the build fails!
+                    -->
+                    <latestVersionOnly>false</latestVersionOnly>
+                    <mirrorMetadataOnly>false</mirrorMetadataOnly>
+                    <compress>true</compress>
+                    <append>true</append>
+                    <includePacked>false</includePacked>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
