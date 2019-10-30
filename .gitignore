@@ -7,6 +7,9 @@
 # BlueJ files
 *.ctxt
 
+# Checkstyle
+.checkstyle
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
