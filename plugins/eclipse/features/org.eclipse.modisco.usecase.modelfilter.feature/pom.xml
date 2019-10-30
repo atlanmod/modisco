@@ -15,7 +15,7 @@
     <dependencies>
         <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.gmt.modisco.infra.prefuse</artifactId>
+            <artifactId>org.eclipse.modisco.usecase.modelfilter</artifactId>
             <version>${project.version}</version>
         </dependency>-->
     </dependencies>

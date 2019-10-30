@@ -17,7 +17,7 @@
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.xml"
       license-feature="org.eclipse.license"
-      license-feature-version="0.0.0"-->
+      license-feature-version="1.0.0.qualifier"-->
 
    <description url="http://wiki.eclipse.org/MoDisco/JavaDiscoverer">
       %description
@@ -40,34 +40,34 @@ http://www.eclipse.org/legal/epl-v10.html
          id="org.eclipse.gmt.modisco.xml"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.xml.browser.customization"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.xml.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.xml.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <!--plugin
          id="org.eclipse.modisco.xml.doc"
          download-size="0"
          install-size="0"
-         version="0.0.0"/-->
+         version="1.0.0.qualifier"/-->
 
 </feature>

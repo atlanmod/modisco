@@ -12,6 +12,22 @@
    <artifactId>org.eclipse.modisco.jee.jsp.browser.customization</artifactId>
 
    <packaging>eclipse-plugin</packaging>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-compiler-plugin</artifactId>
+            <configuration>
+               <copyResources>false</copyResources>
+               <useProjectSettings>false</useProjectSettings>
+               <extraClasspathElements>
+
+               </extraClasspathElements>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+
 
    <dependencies>
       <dependency>
@@ -22,6 +38,21 @@
       <dependency>
          <groupId>org.atlanmod.modisco</groupId>
          <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.atlanmod.modisco</groupId>
+         <artifactId>org.eclipse.gmt.modisco.infra.query</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.atlanmod.modisco</groupId>
+         <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.atlanmod.modisco</groupId>
+         <artifactId>org.eclipse.gmt.modisco.xml</artifactId>
          <version>${project.version}</version>
       </dependency>
    </dependencies>

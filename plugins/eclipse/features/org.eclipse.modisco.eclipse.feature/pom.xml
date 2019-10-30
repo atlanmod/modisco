@@ -13,20 +13,25 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.java.feature</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.eclipseplugin</artifactId>
             <version>${project.version}</version>
         </dependency>
 
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.modisco.eclipseplugin.discoverer</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-       <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.eclipseplugin.discoverer.ui</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
+        <dependency>
+             <groupId>org.atlanmod.modisco.eclipse</groupId>
+             <artifactId>org.eclipse.modisco.eclipseplugin.discoverer.ui</artifactId>
+             <version>${project.version}</version>
+         </dependency>
     </dependencies>
 </project>

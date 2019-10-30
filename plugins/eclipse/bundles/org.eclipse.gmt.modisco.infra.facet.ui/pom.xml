@@ -31,7 +31,6 @@
                             <artifactId>org.eclipse.gmt.modisco.infra.facet.core</artifactId>
                             <version>${project.version}</version>
                         </dependency>
-
                     </extraClasspathElements>
                 </configuration>
             </plugin>
@@ -58,17 +57,31 @@
            <type>pom</type>
         </dependency>
         -->
-
         <!-- Internal -->
-         <!--<dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.facet.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.facet</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.facet.editor</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-        <!--dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
             <version>${project.version}</version>
-        </dependency-->
+        </dependency>
     </dependencies>
 </project>

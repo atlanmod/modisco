@@ -13,4 +13,33 @@
 
     <artifactId>org.eclipse.modisco.kdm.source.discoverer.ui</artifactId>
 
+
+    <!--build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-compiler-plugin</artifactId>
+                <configuration>
+                    <copyResources>false</copyResources>
+                    <useProjectSettings>false</useProjectSettings>
+                    <extraClasspathElements>
+                        <dependency>
+                            <groupId>org.atlanmod.modisco.eclipse</groupId>
+                            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+                            <version>${project.version}</version>
+                        </dependency>
+                    </extraClasspathElements>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build-->
+
+
+    <!--dependencies>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies-->
 </project>

@@ -17,6 +17,7 @@
     <description/>
 
     <modules>
+
         <module>org.eclipse.modisco.all.feature</module>
         <module>org.eclipse.modisco.all.source.feature</module>
         <module>org.eclipse.modisco.eclipse.feature</module>

@@ -49,16 +49,40 @@
 
 
         <!-- Internal -->
-        <!--dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom</artifactId>
             <version>${project.version}</version>
-        </dependency-->
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.core</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
+       <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.query</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.facet</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.facet.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
-
 </project>

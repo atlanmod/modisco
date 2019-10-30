@@ -36,12 +36,19 @@ http://www.eclipse.org/legal/epl-v10.html
       %license
    </license>
 
-   <!--
+
    <plugin
          id="org.eclipse.gmt.modisco.infra.query.core"
          download-size="0"
          install-size="0"
          version="1.0.0.qualifier"
          unpack="false"/>
--->
+
+   <plugin
+         id="org.eclipse.gmt.modisco.infra.query"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.qualifier"
+         unpack="false"/>
+
 </feature>

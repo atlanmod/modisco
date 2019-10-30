@@ -19,11 +19,6 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
                     </extraClasspathElements>
                 </configuration>
             </plugin>
@@ -43,10 +38,32 @@
             <artifactId>org.eclipse.core.resources</artifactId>
         </dependency>-->
         <!-- Internal -->
-         <!--<dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
+        <!-- Not sure that this dependency is needed in the present code
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java.queries</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.facet.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

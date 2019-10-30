@@ -2,16 +2,16 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <parent>
-      <groupId>org.atlanmod.modisco</groupId>
-      <artifactId>modisco-infra</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-  </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco.eclipse</groupId>
+        <artifactId>org.atlanmod.modisco.eclipse.bundles</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
-   <artifactId>org.eclipse.gmt.modisco.infra.common.cdo.derby</artifactId>
+    <artifactId>org.eclipse.gmt.modisco.infra.common.cdo.derby</artifactId>
 
-   <packaging>jar</packaging>
+    <packaging>eclipse-plugin</packaging>
 
     <build>
         <plugins>
@@ -23,7 +23,7 @@
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
                         <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
+                            <groupId>org.atlanmod.modisco.eclipse</groupId>
                             <artifactId>org.eclipse.gmt.modisco.infra.common.cdo</artifactId>
                             <version>${project.version}</version>
                         </dependency>
@@ -33,28 +33,39 @@
         </plugins>
     </build>
     <dependencies>
-        <!--<dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.cdo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.eclipselabs</groupId>
             <artifactId>cdo</artifactId>
             <type>pom</type>
-            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
        <dependency>
             <groupId>org.eclipselabs</groupId>
             <artifactId>net4j</artifactId>
             <type>pom</type>
-           <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.eclipselabs</groupId>
             <artifactId>net4j.derby</artifactId>
             <type>pom</type>
-            <scope>provided</scope>
-        </dependency>-->
+            <optional>true</optional>
+        </dependency>
 
         <!-- Internal -->
 

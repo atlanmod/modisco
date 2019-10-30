@@ -10,4 +10,12 @@
     </parent>
     <packaging>eclipse-plugin</packaging>
     <artifactId>org.eclipse.modisco.eclipseplugin.discoverer.ui</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

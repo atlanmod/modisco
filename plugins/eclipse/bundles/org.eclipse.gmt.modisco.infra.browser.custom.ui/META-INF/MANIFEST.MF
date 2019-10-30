@@ -8,19 +8,19 @@ Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.ide,
- org.eclipse.gmt.modisco.infra.browser,
- org.eclipse.gmt.modisco.infra.common.ui,
- org.eclipse.gmt.modisco.infra.browser.uicore,
- org.eclipse.gmt.modisco.infra.browser.custom,
- org.eclipse.gmt.modisco.infra.browser.custom.core,
  org.eclipse.emf;bundle-version="2.5.0",
  org.eclipse.emf.ecore;bundle-version="2.5.0",
  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
  org.eclipse.emf.common.ui;bundle-version="2.5.0",
- org.eclipse.emf.facet.common.ui;bundle-version="0.1.0"
-Comment: org.eclipse.gmt.modisco.infra.query,
-         org.eclipse.gmt.modisco.infra.query.core,
-         org.eclipse.gmt.modisco.infra.common.core,
+ org.eclipse.emf.facet.common.ui;bundle-version="0.1.0",
+ org.eclipse.gmt.modisco.infra.browser;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.common.ui;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.browser.custom;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.browser.custom.core;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.query;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.infra.browser.custom.ui;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor",

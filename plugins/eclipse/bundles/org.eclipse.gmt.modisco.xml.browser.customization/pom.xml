@@ -26,7 +26,6 @@
                             <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
                             <version>${project.version}</version>
                         </dependency>
-
                     </extraClasspathElements>
                 </configuration>
             </plugin>
@@ -34,5 +33,10 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
      </dependencies>
 </project>

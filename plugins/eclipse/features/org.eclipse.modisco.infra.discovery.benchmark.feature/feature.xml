@@ -7,7 +7,7 @@
    <!--
       provider-name="%providerName"
       license-feature="org.eclipse.license"
-      license-feature-version="0.0.0">
+      license-feature-version="1.0.0.qualifier">
 -->
    <description>
       %description
@@ -25,38 +25,37 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
-
-   <!--
+   
    <includes
          id="org.eclipse.modisco.utils.chart.feature"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.eclipse.modisco.infra.discovery.benchmark.core"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.infra.discovery.benchmark.metamodel"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.infra.discovery.benchmark.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.utils.core"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
--->
+
 </feature>

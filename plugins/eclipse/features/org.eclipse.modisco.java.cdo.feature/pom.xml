@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.cdo</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -24,8 +24,14 @@
         </dependency>
         <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.cdo.derby</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.modisco.java.discoverer.cdo</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 </project>

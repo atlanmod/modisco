@@ -19,16 +19,7 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.manifest</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
+
                     </extraClasspathElements>
                 </configuration>
             </plugin>
@@ -51,5 +42,25 @@
            <type>pom</type>
         </dependency>-->
         <!-- Internal -->
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.manifest</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+       <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

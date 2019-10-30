@@ -32,6 +32,11 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!--<dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.ui</artifactId>

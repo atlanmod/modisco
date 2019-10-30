@@ -23,11 +23,11 @@
             <artifactId>org.atlanmod.modisco.discoverer.java</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.java.discoverer.ui</artifactId>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.java.discoverer</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.java.cdo</artifactId>
@@ -43,11 +43,11 @@
             <artifactId>org.eclipse.gmt.modisco.java.queries</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.gmt.modisco.java.browser.customization</artifactId>
+            <artifactId>org.eclipse.modisco.java.composition.browser.customization</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.java.composition</artifactId>
@@ -58,21 +58,21 @@
             <artifactId>org.eclipse.modisco.java.composition.ui</artifactId>
             <version>${project.version}</version>
         </dependency>-->
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.java.composition.browser.customization</artifactId>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java.browser.customization</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.modisco.java.composition.discoverer</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.modisco.java.composition.discoverer.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.util.atl.core</artifactId>

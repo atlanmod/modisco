@@ -39,7 +39,43 @@
     </build>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.java.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.extension.plugin</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.java.composition</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+          <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+         <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.extension</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--
+        <dependency>
             <groupId>org.eclipse.core</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>

@@ -40,7 +40,7 @@
                             <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
                             <version>${project.version}</version>
                         </dependency>
-                       <dependency>
+                        <dependency>
                             <groupId>org.atlanmod.modisco</groupId>
                             <artifactId>org.eclipse.modisco.xml.discoverer</artifactId>
                             <version>${project.version}</version>
@@ -50,9 +50,72 @@
                             <artifactId>org.atlanmod.modisco.discoverer.java</artifactId>
                             <version>${project.version}</version>
                         </dependency>
+                        <dependency>
+                            <groupId>org.atlanmod.modisco</groupId>
+                            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
+                            <version>${project.version}</version>
+                        </dependency>
                     </extraClasspathElements>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.xml</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.eclipseplugin</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.manifest</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.manifest.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.properties.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+       <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.java.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+       <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.xml.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
+            <version>${project.version}</version>
+      </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+     <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

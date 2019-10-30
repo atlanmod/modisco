@@ -12,6 +12,11 @@
     <packaging>eclipse-feature</packaging>
     <dependencies>
         <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.utils.chart.feature</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.infra.discovery.benchmark.core</artifactId>
             <version>${project.version}</version>

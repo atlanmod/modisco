@@ -21,6 +21,7 @@ http://www.eclipse.org/legal/epl-v10.html
    <license url="%licenseURL">
       %license
    </license>
+   <!--
    <includes id="org.eclipse.modisco.infrastructure.source" version="0.0.0"/>
    <includes id="org.eclipse.modisco.java.source" version="0.0.0"/>
    <includes id="org.eclipse.modisco.xml.source" version="0.0.0"/>
@@ -29,6 +30,7 @@ http://www.eclipse.org/legal/epl-v10.html
    <includes id="org.eclipse.modisco.infra.omg.source" version="0.0.0"/>
    <includes id="org.eclipse.modisco.jee.source" version="0.0.0"/>
    <includes id="org.eclipse.modisco.eclipse.source" version="0.0.0"/>
+   -->
    <!--
    <plugin id="org.eclipse.gmt.modisco.infra.capabilities.source" download-size="0"
            install-size="0"

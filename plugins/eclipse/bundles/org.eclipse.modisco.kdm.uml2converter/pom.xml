@@ -21,31 +21,6 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.util.atl.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.omg.kdm</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
 
                     </extraClasspathElements>
                 </configuration>
@@ -53,6 +28,41 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.ecf</groupId>
+            <artifactId>org.objectweb.asm</artifactId>
+            <version>[5.0.1,8.0.0)</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.util.atl.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.omg.kdm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!--<dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.ui</artifactId>

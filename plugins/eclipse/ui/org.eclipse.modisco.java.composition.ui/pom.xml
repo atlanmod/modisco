@@ -19,36 +19,6 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <!--<dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.kdm.source.extension.ui</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>-->
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.omg.kdm</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.java.composition</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
                     </extraClasspathElements>
                 </configuration>
             </plugin>
@@ -72,5 +42,41 @@
             <artifactId>org.eclipse.ui.editors</artifactId>
       </dependency>-->
         <!-- Internal -->
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.extension.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.extension</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.omg.kdm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.java.composition</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
 </project>

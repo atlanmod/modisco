@@ -18,7 +18,7 @@
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.java"
       license-feature="org.eclipse.license"
-      license-feature-version="0.0.0">
+      license-feature-version="1.0.0.qualifier">
       -->
 
    <description url="http://wiki.eclipse.org/MoDisco/Components/Java/Documentation">
@@ -42,139 +42,146 @@ http://www.eclipse.org/legal/epl-v10.html
          id="org.eclipse.gmt.modisco.java"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.atlanmod.modisco.discoverer.java"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.qualifier"
+         unpack="false"/>
+
+
+   <plugin
+         id="org.eclipse.modisco.java.discoverer"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.modisco.java.discoverer.plugin"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.java.cdo"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.java.generation"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.java.queries"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.java.browser.customization"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.composition"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.composition.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.composition.browser.customization"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.composition.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.java.composition.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.util.atl.core"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <!--plugin
          id="org.eclipse.modisco.java.doc"
          download-size="0"
          install-size="0"
-         version="0.0.0"/-->
+         version="1.0.0.qualifier"/-->
 
    <plugin
          id="org.eclipse.modisco.manifest"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.manifest.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.manifest.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.properties.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.properties.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
-
 </feature>

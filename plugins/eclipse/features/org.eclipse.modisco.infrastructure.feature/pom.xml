@@ -17,38 +17,41 @@
             <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.infra.browser.feature</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
-        <!-- dependency>
+        <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder</artifactId>
             <version>${project.version}</version>
-        </dependency -->
+        </dependency>-->
 
-        <!--<dependency>
+        <!--
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-        <!--dependency>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom</artifactId>
             <version>${project.version}</version>
-        </dependency-->
-        <!--<dependency>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.core</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-        <!--<dependency>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.editor</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
-        <!--dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.ui</artifactId>
-            <version>${project.version}</version>
-        </dependency-->
+        </dependency>
+        -->
+
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.query</artifactId>
@@ -114,11 +117,7 @@
             <artifactId>org.eclipse.modisco.infra.discovery</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
+        <!---->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.workflow</artifactId>
@@ -129,11 +128,7 @@
             <artifactId>org.eclipse.modisco.workflow.core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.workflow.ui</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
+
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.util.atl.core</artifactId>
@@ -149,5 +144,25 @@
             <artifactId>org.eclipse.modisco.util.emf.core</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <!-- UI  -->
+        <!--
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.workflow.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        -->
+
     </dependencies>
 </project>

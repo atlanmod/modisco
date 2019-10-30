@@ -77,5 +77,10 @@
             <artifactId>org.eclipse.modisco.jee.queries</artifactId>
             <version>${project.version}</version>
         </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.jee.jsp.browser.customization</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

@@ -13,9 +13,14 @@
     <packaging>eclipse-feature</packaging>
 
     <dependencies>
-        <dependency>
+       <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+      <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.query</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

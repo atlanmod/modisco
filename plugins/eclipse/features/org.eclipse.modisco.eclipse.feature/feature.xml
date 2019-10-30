@@ -16,7 +16,7 @@
    <!--
       provider-name="%providerName"
       license-feature="org.eclipse.license"
-      license-feature-version="0.0.0"-->
+      license-feature-version="1.0.0.qualifier"-->
 
    <description url="http://www.eclipse.org/MoDisco/">
       %description
@@ -37,15 +37,14 @@ http://www.eclipse.org/legal/epl-v10.html
    <requires>
       <import
          feature="org.eclipse.modisco.java.feature"
-         version="1.0.0"
-         match="greaterOrEqual"/>
+         version="1.0.0.qualifier"/>
    </requires>
 
    <plugin
          id="org.eclipse.modisco.eclipseplugin"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
    <plugin
          id="org.eclipse.modisco.eclipseplugin.discoverer"

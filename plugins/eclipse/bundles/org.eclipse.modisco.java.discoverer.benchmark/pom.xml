@@ -22,72 +22,15 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.infra.discovery.benchmark</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.atlanmod.modisco.discoverer.java</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.cdo</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.cdo.derby</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.java.nousages</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.java.nousages.cdo</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                       <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.java.cdo</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.java.classiceobject</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
 
                     </extraClasspathElements>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+    
     <dependencies>
-        <!--<dependency>
-            <groupId>org.eclipse.core</groupId>
-            <artifactId>org.eclipse.core.runtime</artifactId>
-        </dependency>
+        <!--
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.ui</artifactId>
@@ -102,17 +45,16 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.acceleo</groupId>
-            <artifactId>org.eclipse.acceleo.maven</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.acceleo</groupId>
             <artifactId>org.eclipse.acceleo.engine</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
         </dependency>
-
+         <dependency>
+            <groupId>org.eclipse.core</groupId>
+            <artifactId>org.eclipse.core.runtime</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.eclipselabs</groupId>
             <artifactId>cdo</artifactId>
@@ -131,10 +73,88 @@
         <dependency>
             <groupId>org.hudsonci.plugins</groupId>
             <artifactId>birt-charts</artifactId>
-        </dependency>-->
-
+        </dependency>
+        -->
         <!-- Internal -->
-
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.java.discoverer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+         <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.java.discoverer.cdo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.benchmark</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.atlanmod.modisco.discoverer.java</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.cdo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.cdo.derby</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java.nousages</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java.nousages.cdo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java.cdo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.java.classiceobject</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+       <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.extension</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
-
 </project>

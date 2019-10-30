@@ -19,23 +19,30 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.workflow.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
+
                     </extraClasspathElements>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <dependencies>
-        <!--<dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.workflow.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.workflow</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--
+        <dependency>
             <groupId>org.eclipse.core</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>

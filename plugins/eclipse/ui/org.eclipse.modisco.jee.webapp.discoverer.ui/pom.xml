@@ -2,13 +2,21 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <parent>
-      <groupId>org.atlanmod.modisco.eclipse</groupId>
-      <artifactId>org.atlanmod.modisco.eclipse.ui</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-   </parent>
-   <packaging>eclipse-plugin</packaging>
-   <artifactId>org.eclipse.modisco.jee.webapp.discoverer.ui</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco.eclipse</groupId>
+        <artifactId>org.atlanmod.modisco.eclipse.ui</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
+    <packaging>eclipse-plugin</packaging>
+    <artifactId>org.eclipse.modisco.jee.webapp.discoverer.ui</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -7,12 +7,15 @@
         <groupId>org.atlanmod.modisco.eclipse</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.atlanmod.modisco.eclipse.ui</artifactId>
     <packaging>pom</packaging>
 
     <modules>
+        <module>org.eclipse.gmt.modisco.infra.common.ui</module>
         <module>org.eclipse.modisco.eclipseplugin.discoverer.ui</module>
+        <module>org.eclipse.modisco.infra.discovery.ui</module>
         <module>org.eclipse.modisco.kdm.uml2converter.ui</module>
         <module>org.eclipse.modisco.kdm.source.extension.ui</module>
         <module>org.eclipse.modisco.kdm.source.discoverer.ui</module>
@@ -24,6 +27,7 @@
         <module>org.eclipse.modisco.java.discoverer.ui</module>
         <module>org.eclipse.modisco.manifest.discoverer.ui</module>
         <module>org.eclipse.modisco.properties.discoverer.ui</module>
+        <!--module>org.eclipse.modisco.usecase.simpletransformationschain.ui</module-->
         <module>org.eclipse.modisco.xml.discoverer.ui</module>
     </modules>
 </project>

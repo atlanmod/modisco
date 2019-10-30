@@ -30,14 +30,14 @@ http://www.eclipse.org/legal/epl-v10.html
          id="org.eclipse.modisco.infra.browser.ecore.core"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.infra.browser.editor.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
 </feature>

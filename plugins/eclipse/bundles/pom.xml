@@ -15,23 +15,23 @@
     <name>Modisco Eclipse Bundles</name>
     <description/>
     <modules>
-        <module>org.eclipse.modisco.java.discoverer.plugin</module>
+        <module>org.eclipse.modisco.java.discoverer</module>
         <module>org.eclipse.gmt.modisco.infra.browser</module>
         <module>org.eclipse.gmt.modisco.infra.browser.custom</module>
         <module>org.eclipse.gmt.modisco.infra.browser.custom.core</module>
         <module>org.eclipse.gmt.modisco.infra.browser.custom.editor</module>
         <module>org.eclipse.gmt.modisco.infra.browser.custom.ui</module>
         <module>org.eclipse.gmt.modisco.infra.browser.uicore</module>
+        <module>org.eclipse.gmt.modisco.infra.common.cdo</module>
+        <module>org.eclipse.gmt.modisco.infra.common.cdo.derby</module>
         <module>org.eclipse.gmt.modisco.infra.query.editor</module>
         <module>org.eclipse.gmt.modisco.infra.query.ui</module>
         <module>org.eclipse.gmt.modisco.infra.facet.editor</module>
         <module>org.eclipse.gmt.modisco.infra.facet.ui</module>
-        <module>org.eclipse.gmt.modisco.infra.common.ui</module>
         <module>org.eclipse.gmt.modisco.infra.prefuse</module>
         <module>org.eclipse.gmt.modisco.java.browser.customization</module>
         <module>org.eclipse.modisco.infra.browser.editor.ui</module>
         <module>org.eclipse.modisco.infra.discovery.benchmark.ui</module>
-        <module>org.eclipse.modisco.infra.discovery.ui</module>
         <module>org.eclipse.modisco.java.composition.discoverer.benchmark</module>
         <module>org.eclipse.modisco.java.discoverer.benchmark</module>
         <module>org.eclipse.modisco.kdm.uml2converter</module>
@@ -42,16 +42,17 @@
         <module>org.eclipse.modisco.java.composition.discoverer</module>
         <module>org.eclipse.modisco.properties.discoverer</module>
         <module>org.eclipse.modisco.manifest.discoverer</module>
+        <module>org.eclipse.modisco.jee.jsp.browser.customization</module>
+        <module>org.eclipse.gmt.modisco.infra.capabilities</module>
+        <module>org.eclipse.gmt.modisco.xml.browser.customization</module>
     </modules>
 
     <!--<modules>
-        <module>org.eclipse.gmt.modisco.infra.capabilities</module>
 
-        <module>org.eclipse.gmt.modisco.xml.browser.customization</module>
         <module>org.eclipse.modisco.infra.browser.ecore.ui</module>
         <module>org.eclipse.modisco.java.composition.discoverer.ui</module>
         <module>org.eclipse.modisco.java.discoverer.ui</module>
-        <module>org.eclipse.modisco.jee.jsp.browser.customization</module>
+
         <module>org.eclipse.modisco.usecase.modelfilter.dependencies.ui</module>
         <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui</module>
         <module>org.eclipse.modisco.usecase.simpletransformationschain.ui</module>

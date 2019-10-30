@@ -10,92 +10,94 @@
        Gabriel Barbier (Mia-Software) - initial API and implementation
  -->
 <feature
-      id="org.eclipse.modisco.usecase.modelfilter.feature"
-      label="MoDisco Model Filter"
-      version="1.0.0.qualifier">
-   <!--
-      provider-name="%providerName"
-      license-feature="org.eclipse.license"
-      license-feature-version="0.0.0">
-      -->
+        id="org.eclipse.modisco.usecase.modelfilter.feature"
+        label="MoDisco Model Filter"
+        version="1.0.0.qualifier">
+    <!--
+       provider-name="%providerName"
+       license-feature="org.eclipse.license"
+       license-feature-version="0.0.0">
+       -->
 
-   <description url="http://wiki.eclipse.org/MoDisco/ModelFilter">
-      %description
-   </description>
+    <description url="http://wiki.eclipse.org/MoDisco/ModelFilter">
+        %description
+    </description>
 
-   <copyright>
-      Copyright (c) 2009 Mia-Software.
-All rights reserved. This program and the accompanying materials
-are made available under the terms of the Eclipse Public License
-v1.0
-which accompanies this distribution, and is available at
-http://www.eclipse.org/legal/epl-v10.html
-   </copyright>
+    <copyright>
+        Copyright (c) 2009 Mia-Software.
+        All rights reserved. This program and the accompanying materials
+        are made available under the terms of the Eclipse Public License
+        v1.0
+        which accompanies this distribution, and is available at
+        http://www.eclipse.org/legal/epl-v10.html
+    </copyright>
 
-   <license url="%licenseURL">
-      %license
-   </license>
+    <license url="%licenseURL">
+        %license
+    </license>
 
-   <!--
-   <plugin
-         id="org.eclipse.gmt.modisco.infra.prefuse"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-      <plugin
+
+    <plugin
+            id="org.eclipse.gmt.modisco.infra.prefuse"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"
+            unpack="false"/>
+    <!--plugin
             id="org.prefuse"
             download-size="0"
             install-size="0"
             version="0.0.0"
-           ack="false"/>
+            ack="false"/-->
 
-      <plugin
+    <!--
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter"
             download-size="0"
             install-size="0"
             version="0.0.0"
             unpack="false"/>
 
-      <plugin
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter.dependencies.ui"
             download-size="0"
             install-size="0"
             version="0.0.0"
             unpack="false"/>
 
-      <plugin
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter.methodcalls"
             download-size="0"
             install-size="0"
             version="0.0.0"
             unpack="false"/>
 
-      <plugin
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui"
             download-size="0"
             install-size="0"
             version="0.0.0"
             unpack="false"/>
 
-      <plugin
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter.ui"
             download-size="0"
             install-size="0"
             version="0.0.0"
             unpack="false"/>
 
-      <plugin
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer"
             download-size="0"
             install-size="0"
             version="0.0.0"
             unpack="false"/>
-
-      <plugin
+-->
+    <!--
+    <plugin
             id="org.eclipse.modisco.usecase.modelfilter.doc"
             download-size="0"
             install-size="0"
             version="0.0.0"/>
-   -->
+-->
 </feature>

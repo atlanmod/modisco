@@ -16,7 +16,7 @@
    <!--
       provider-name="%providerName"
       license-feature="org.eclipse.license"
-      license-feature-version="0.0.0">
+      license-feature-version="1.0.0.qualifier">
       -->
 
    <description url="http://www.eclipse.org/MoDisco/">
@@ -40,90 +40,98 @@ http://www.eclipse.org/legal/epl-v10.html
          id="org.eclipse.modisco.kdm.source.discoverer"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
+
 
    <plugin
          id="org.eclipse.modisco.kdm.source.discoverer.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.kdm.uml2converter"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.kdm.uml2converter.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.omg.kdm"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.omg.kdm.edit"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.gmt.modisco.omg.smm"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.kdm.source.extension"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.modisco.kdm.source.extension.plugin"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.omg.smm"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.kdm.source.extension.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.util.atl.core"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.modisco.omg.gastm"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
    <!--plugin
          id="org.eclipse.modisco.infra.omg.doc"
          download-size="0"
          install-size="0"
-         version="0.0.0"/-->
+         version="1.0.0.qualifier"/-->
 
 </feature>

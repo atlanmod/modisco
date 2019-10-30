@@ -61,10 +61,26 @@
           <type>pom</type>
       </dependency>-->
        <!-- Internal -->
-       <!--<dependency>
+       <dependency>
            <groupId>org.atlanmod.modisco</groupId>
-           <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
+           <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
            <version>${project.version}</version>
-       </dependency>-->
-    </dependencies>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.query</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.query.edit</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+
+   </dependencies>
 </project>

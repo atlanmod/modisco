@@ -21,10 +21,15 @@
             <artifactId>org.eclipse.modisco.xml.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.atlanmod.modisco</groupId>
+       <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <artifactId>org.eclipse.gmt.modisco.xml.browser.customization</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.modisco.xml.discoverer.ui</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 </project>

@@ -1,8 +1,11 @@
 Manifest-Version: 1.0
-Require-Bundle: org.eclipse.gmt.modisco.infra.query.core,
- org.eclipse.emf.ecore,
- org.eclipse.modisco.jee.jsp;bundle-version="0.9.0",
- org.eclipse.gmt.modisco.xml;bundle-version="0.9.0"
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.xml;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.modisco.jee.jsp;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.query;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]",
+ org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]"
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
@@ -12,4 +15,3 @@ Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.jee.jsp.browser.customization
  ;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-
