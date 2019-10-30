@@ -1,0 +1,12 @@
+= Target Definition
+
+A target definition files specifies all aspects of a target platform,
+including its location (repositories), constituent plug-ins and environment.
+
+For now, the only working definition is `eclipse-oxygen.target`.
+All other files are used for configuration purposes.
+
+**Caution**: do not use Eclipse to edit the `eclipse-oxygen` target file, as it will remove
+all repository ids, making the local mirrors useless.
+
+

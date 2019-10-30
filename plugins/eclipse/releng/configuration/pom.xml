@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--parent>
+    <parent>
         <groupId>org.atlanmod.modisco</groupId>
-        <artifactId>modisco</artifactId>
+        <artifactId>modisco-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../../../..</relativePath>
-    </parent-->
+        <relativePath>../../../../modisco-parent/</relativePath>
+    </parent>
 
     <groupId>org.atlanmod.modisco.eclipse</groupId>
     <artifactId>org.atlanmod.modisco.eclipse.configuration</artifactId>
@@ -23,17 +24,74 @@
         <maven.test.skip>true</maven.test.skip>
         <maven.deploy.skip>true</maven.deploy.skip>
         <tycho-plugin.version>1.4.0</tycho-plugin.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.outputDirectory>target/classes</project.build.outputDirectory>
     </properties>
 
     <repositories>
         <repository>
-            <id>eclipse</id>
+            <id>acceleo</id>
+            <url>https://download.eclipse.org/acceleo/updates/releases/3.5</url>
             <layout>p2</layout>
-            <url>http://download.eclipse.org/releases/oxygen</url>
+        </repository>
+        <repository>
+            <id>atl</id>
+            <layout>p2</layout>
+            <url>https://download.eclipse.org/mmt/atl/updates/releases/4.1/</url>
+        </repository>
+        <repository>
+            <id>birt</id>
+            <url>https://download.eclipse.org/birt/update-site/4.4/</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>facet</id>
+            <layout>p2</layout>
+            <url>http://download.eclipse.org/facet/updates/release/1.3.0/</url>
+        </repository>
+        <repository>
+            <id>cdo</id>
+            <url>https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.7/</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>emf</id>
+            <layout>p2</layout>
+            <url>http://download.eclipse.org/modeling/emf/emf/builds/release/2.13/</url>
+        </repository>
+        <repository>
+            <id>jdt</id>
+            <url>https://www.eclipse.org/jdt/core/tools/jdtcoretools/update-site/</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>ocl</id>
+            <layout>p2</layout>
+            <url>https://download.eclipse.org/modeling/mdt/ocl/updates/releases/</url>
+        </repository>
+        <repository>
+            <id>oxygen</id>
+            <url>http://download.eclipse.org/releases/oxygen/</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>oxygen-updates</id>
+            <url>https://download.eclipse.org/eclipse/updates/4.7/</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>transaction</id>
+            <layout>p2</layout>
+            <url>https://download.eclipse.org/modeling/emf/transaction/updates/releases/</url>
+        </repository>
+        <repository>
+            <id>uml</id>
+            <url>https://download.eclipse.org/modeling/mdt/uml2/updates/5.3/</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>validation</id>
+            <layout>p2</layout>
+            <url>https://download.eclipse.org/modeling/emf/validation/updates/releases/</url>
         </repository>
     </repositories>
 
@@ -87,6 +145,17 @@
                 <artifactId>target-platform-configuration</artifactId>
                 <configuration>
                     <pomDependencies>consider</pomDependencies>
+                    <includePackedArtifacts>true</includePackedArtifacts>
+
+                    <target>
+                        <artifact>
+                            <groupId>org.atlanmod.modisco.eclipse</groupId>
+                            <artifactId>eclipse-oxygen</artifactId>
+                            <version>${project.version}</version>
+                            <classifier>eclipse-oxygen</classifier>
+                        </artifact>
+                    </target>
+
                     <environments>
                         <environment>
                             <os>win32</os>
@@ -104,6 +173,11 @@
                             <arch>x86_64</arch>
                         </environment>
                     </environments>
+                    <filter>
+                        <type>eclipse-plugin</type>
+                        <id>org.eclipse.gmt.modisco</id>
+                        <removeAll/>
+                    </filter>
                 </configuration>
             </plugin>
         </plugins>
@@ -170,5 +244,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
 </project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="cdo-target" sequenceNumber="5">
+<locations>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.sdk.feature.group" version="4.7.3.v20180330-0919"/>
+<repository location="http://download.eclipse.org/releases/oxygen"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.cdo.feature.group" version="4.7.0.v20180530-1201"/>
+<unit id="org.eclipse.emf.cdo.server.feature.group" version="4.7.0.v20180530-1201"/>
+<unit id="org.eclipse.net4j.db.derby.feature.group" version="4.2.400.v20180529-1130"/>
+<unit id="org.eclipse.net4j.db.feature.group" version="4.7.0.v20180530-0909"/>
+<unit id="org.eclipse.net4j.feature.group" version="4.7.0.v20180530-1201"/>
+<repository location="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.7/"/>
+</location>
+</locations>
+</target>

@@ -17,6 +17,7 @@
 
     <modules>
         <module>update</module>
+        <module>target-definition</module>
     </modules>
 
 </project>
