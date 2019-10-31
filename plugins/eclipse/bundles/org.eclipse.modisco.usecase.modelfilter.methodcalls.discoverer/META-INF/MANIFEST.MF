@@ -6,12 +6,12 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.modisco.usecase.modelfilter.methodcalls;bundle-version="0.9.0",
- org.eclipse.modisco.infra.discovery.core;bundle-version="0.9.0",
- org.eclipse.gmt.modisco.java;bundle-version="0.9.0",
+ org.eclipse.modisco.usecase.modelfilter.methodcalls,
+ org.eclipse.modisco.infra.discovery.core,
+ org.eclipse.gmt.modisco.java,
  org.eclipse.jdt.core;bundle-version="3.6.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.9.0",
- org.eclipse.modisco.java.discoverer;bundle-version="0.9.0"
+ org.eclipse.gmt.modisco.infra.common.core,
+ org.eclipse.modisco.java.discoverer
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer,

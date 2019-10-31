@@ -1,34 +1,31 @@
 os: linux
-sudo: false
 dist: trusty
 
 language: java
 jdk: oraclejdk8
 
 env:
-	- M2_MIRROR=$HOME/m2_mirror
+  global:
+    - M2_MIRROR: '$HOME/m2_mirror'
 
 cache:
-    directories:
-        - '$HOME/.m2/repository'
-		- '$HOME/m2_mirror'
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/m2_mirror'
 
 #before_install:
     #NEEDED TO RUN THE GUI TESTS
     #- "export DISPLAY=:99.0"
     #- "sh -e /etc/init.d/xvfb start"
     #- sleep 3 # give xvfb some time to start
-    
-    
+
 install: 
   # Resolve all dependencies
   - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml --update-snapshots validate 
   #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
 
 script:
-	# Maven artifacts:
   - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml install
-  	# Eclipse plugins:
   - travis_wait 60 mvn --batch-mode --quiet  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
 
 #after_success:

@@ -12,7 +12,7 @@
  *    Nicolas Bros (Mia-Software) - Bug 343647 - [Model Filter] NPE when navigating into "method calls" resulting model
  *******************************************************************************/
 
-package org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer;
+package plugins.eclipse.bundles.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.src.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer;
 
 import java.io.IOException;
 import java.util.HashMap;
