@@ -101,11 +101,6 @@
             <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.modisco.infra.discovery.benchmark.metamodel</artifactId>
-            <version>${project.version}</version>
-        </dependency>
        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.utils.chart.birt.core</artifactId>
