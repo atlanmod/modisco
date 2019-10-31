@@ -45,17 +45,10 @@
         <module>org.eclipse.modisco.jee.jsp.browser.customization</module>
         <module>org.eclipse.gmt.modisco.infra.capabilities</module>
         <module>org.eclipse.gmt.modisco.xml.browser.customization</module>
-    </modules>
-
-    <!--<modules>
-
         <module>org.eclipse.modisco.infra.browser.ecore.ui</module>
-        <module>org.eclipse.modisco.java.composition.discoverer.ui</module>
-        <module>org.eclipse.modisco.java.discoverer.ui</module>
-
         <module>org.eclipse.modisco.usecase.modelfilter.dependencies.ui</module>
         <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui</module>
-        <module>org.eclipse.modisco.usecase.simpletransformationschain.ui</module>
-    </modules>-->
+        <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer</module>
+    </modules>
 </project>
 

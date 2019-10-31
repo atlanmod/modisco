@@ -20,11 +20,6 @@
                     <copyResources>false</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
-                        <dependency>
-                            <groupId>org.atlanmod.modisco</groupId>
-                            <artifactId>org.eclipse.modisco.util.emf.core</artifactId>
-                            <version>${project.version}</version>
-                        </dependency>
 
                     </extraClasspathElements>
                 </configuration>
@@ -32,30 +27,10 @@
         </plugins>
     </build>
     <dependencies>
-        <!--
-         <dependency>
-            <groupId>org.eclipse.core</groupId>
-            <artifactId>org.eclipse.core.runtime</artifactId>
-        </dependency>
-         <dependency>
-            <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf</artifactId>
-            <type>pom</type>
-        </dependency>
         <dependency>
-            <groupId>org.eclipse.platform</groupId>
-            <artifactId>org.eclipse.ui</artifactId>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.util.emf.core</artifactId>
+            <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.platform</groupId>
-            <artifactId>org.eclipse.jface</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf.facet</artifactId>
-            <type>pom</type>
-        </dependency>
-        -->
-        <!-- Internal -->
     </dependencies>
 </project>

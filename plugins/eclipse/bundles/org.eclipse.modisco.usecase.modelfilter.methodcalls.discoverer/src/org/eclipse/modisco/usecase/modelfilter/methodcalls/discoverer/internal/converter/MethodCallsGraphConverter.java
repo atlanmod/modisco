@@ -11,7 +11,7 @@
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *******************************************************************************/
 
-package plugins.eclipse.bundles.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.src.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal.converter;
+package org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal.converter;
 
 import java.util.ArrayList;
 import java.util.Collections;

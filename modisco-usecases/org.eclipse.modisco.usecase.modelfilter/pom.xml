@@ -9,7 +9,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>org.eclipse.modisco.usecase.modelfilter</artifactId>
-    <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+
+
 
     <dependencies>
         <dependency>

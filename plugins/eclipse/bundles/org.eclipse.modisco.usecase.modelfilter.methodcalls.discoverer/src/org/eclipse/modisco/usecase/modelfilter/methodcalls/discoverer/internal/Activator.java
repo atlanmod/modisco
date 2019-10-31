@@ -9,7 +9,7 @@
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *    Fabien Giquel (Mia-Software) - Bug 343642 - Remove useless ui dependencies
  *******************************************************************************/
-package plugins.eclipse.bundles.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.src.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal;
+package org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;

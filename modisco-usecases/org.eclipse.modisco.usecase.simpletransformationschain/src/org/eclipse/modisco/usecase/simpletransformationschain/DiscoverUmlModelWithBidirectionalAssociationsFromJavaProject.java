@@ -27,15 +27,20 @@ import org.eclipse.m2m.atl.common.ATLLogger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
+/*
+Avoinding imports from UI bundles
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter;
+ */
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper.ModelInfo;
 
 public class DiscoverUmlModelWithBidirectionalAssociationsFromJavaProject extends
 		AbstractModelDiscoverer<IJavaProject> {
 
-	private static final String MODEL_FILE_SUFFIX = "_BidirectionalAssociations.uml"; //$NON-NLS-1$
+	// From org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter
+	public static final String KDM_UML_MM_URI = "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore"; //$NON-NLS-1$
 
+	private static final String MODEL_FILE_SUFFIX = "_BidirectionalAssociations.uml"; //$NON-NLS-1$
 	private static final String UML_MM_URI = "http://www.eclipse.org/uml2/2.1.0/UML"; //$NON-NLS-1$
 
 	private URL customTransformation = null;
@@ -76,7 +81,7 @@ public class DiscoverUmlModelWithBidirectionalAssociationsFromJavaProject extend
 			inputModels.add(inputModel);
 			final ModelInfo outputModel = new ModelInfo(
 					"umlOutput", URI.createURI("memory://umlTargetModel"), null, "uml", //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-					URI.createURI(KdmToUmlConverter.UML_MM_URI));
+					URI.createURI(KDM_UML_MM_URI));
 			outputModels.add(outputModel);
 
 			AtlLaunchHelper atlHelper = new AtlLaunchHelper();

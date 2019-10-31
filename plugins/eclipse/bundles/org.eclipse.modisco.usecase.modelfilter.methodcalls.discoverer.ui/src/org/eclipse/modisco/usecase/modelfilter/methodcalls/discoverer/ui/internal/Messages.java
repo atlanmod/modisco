@@ -15,24 +15,23 @@ import org.eclipse.osgi.util.NLS;
 
 /**
  * @author GBarbier
- *
  */
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal.messages"; //$NON-NLS-1$
-	public static String DisplayMethodCallsHandler_displayMethodCalls;
-	public static String DisplayMethodCallsHandler_noJavaProject;
-	public static String DisplayMethodCallsHandler_noJavaProjectLong;
-	public static String MethodCallsModelEditor_partName;
-	public static String MethodCallsModelEditor_recursion;
-	public static String MethodCallsModelEditor_rootNodeName;
-	public static String PrefuseGraphInput_name;
-	public static String PrefuseGraphInput_tooltip;
+    private static final String BUNDLE_NAME = "org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal.messages"; //$NON-NLS-1$
+    public static String DisplayMethodCallsHandler_displayMethodCalls;
+    public static String DisplayMethodCallsHandler_noJavaProject;
+    public static String DisplayMethodCallsHandler_noJavaProjectLong;
+    public static String MethodCallsModelEditor_partName;
+    public static String MethodCallsModelEditor_recursion;
+    public static String MethodCallsModelEditor_rootNodeName;
+    public static String PrefuseGraphInput_name;
+    public static String PrefuseGraphInput_tooltip;
 
-	static {
-		// initialize resource bundle
-		NLS.initializeMessages(Messages.BUNDLE_NAME, Messages.class);
-	}
+    static {
+        // initialize resource bundle
+        NLS.initializeMessages(Messages.BUNDLE_NAME, Messages.class);
+    }
 
-	private Messages() {
-	}
+    private Messages() {
+    }
 }

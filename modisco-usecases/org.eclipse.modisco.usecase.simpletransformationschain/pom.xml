@@ -9,7 +9,35 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>org.eclipse.modisco.usecase.simpletransformationschain</artifactId>
-    <packaging>jar</packaging>
+    <packaging>bundle</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.resources,
+                            org.eclipse.jdt.core,
+                            org.eclipse.m2m.atl.drivers.emf4atl;bundle-version="3.0.0",
+                            org.eclipse.m2m.atl.engine;bundle-version="3.0.0",
+                            org.eclipse.modisco.java.discoverer;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.kdm.uml2converter;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.util.atl.core;;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse.core</groupId>
@@ -22,11 +50,6 @@
         <dependency>
             <groupId>org.eclipse.jdt</groupId>
             <artifactId>org.eclipse.jdt.core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf</artifactId>
-            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.eclipse.m2m.atl</groupId>

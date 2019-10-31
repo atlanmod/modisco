@@ -10,12 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>modisco-usecases</artifactId>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>org.eclipse.modisco.usecase.modelfilter.methodcalls</module>
+
+    </modules>
     <!--modules>
         <module>org.eclipse.gmt.modisco.usecase.modelplex.examples.customization</module>
-        <module>org.eclipse.modisco.usecase.simpletransformationschain</module>
-        <module>org.eclipse.modisco.usecase.modelfilter</module>
+ <module>org.eclipse.modisco.usecase.simpletransformationschain</module>
+ <module>org.eclipse.modisco.usecase.modelfilter</module>
         <module>org.eclipse.modisco.usecase.modelfilter.ui</module>
-        <module>org.eclipse.modisco.usecase.modelfilter.methodcalls</module>
-        <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer</module>
     </modules-->
 </project>

@@ -38,7 +38,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
-import org.eclipse.modisco.java.discoverer.JavaModelUtils;
+import org.atlanmod.modisco.discoverer.java.JavaModelUtils;
 import org.atlanmod.modisco.discoverer.java.internal.core.JavaJdtBridge;
 import org.eclipse.modisco.usecase.modelfilter.dependencies.ui.internal.Activator;
 import org.eclipse.modisco.usecase.modelfilter.dependencies.ui.internal.Messages;

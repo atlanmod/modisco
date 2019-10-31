@@ -4,11 +4,11 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * <p>
  * Contributors:
- *    Gabriel Barbier (Mia-Software) - initial API and implementation
- *    Fabien Giquel (Mia-Software) - Bug 339720 : MoDisco Discoverers (infra + techno) API clean
- *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
+ * Gabriel Barbier (Mia-Software) - initial API and implementation
+ * Fabien Giquel (Mia-Software) - Bug 339720 : MoDisco Discoverers (infra + techno) API clean
+ * Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *******************************************************************************/
 
 package org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal;
@@ -22,50 +22,50 @@ import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.CallsMode
 
 public final class MethodCallsJavaBridge {
 
-	private MethodCallsJavaBridge() {
-		//
-	}
+    private MethodCallsJavaBridge() {
+        //
+    }
 
-	/**
-	 * From provided resource, which should contain a CallsModel element,
-	 * retrieve the CallNode element linked with the provided java operation.
-	 */
-	public static CallNode getCallNode(final Resource resource,
-			final AbstractMethodDeclaration targetOperation) {
-		// get root element
-		CallsModel callsModel = (CallsModel) resource.getContents().get(0);
-		return getCallNode(callsModel, targetOperation);
-	}
+    /**
+     * From provided resource, which should contain a CallsModel element,
+     * retrieve the CallNode element linked with the provided java operation.
+     */
+    public static CallNode getCallNode(final Resource resource,
+                                       final AbstractMethodDeclaration targetOperation) {
+        // get root element
+        CallsModel callsModel = (CallsModel) resource.getContents().get(0);
+        return getCallNode(callsModel, targetOperation);
+    }
 
-	/**
-	 * From the CallsModel element, retrieve the CallNode element linked with
-	 * the provided java operation.
-	 */
-	public static CallNode getCallNode(final CallsModel callsModel,
-			final AbstractMethodDeclaration targetOperation) {
-		for (CallNode callNode : callsModel.getCallNodes()) {
-			if (targetOperation.equals(callNode.getJavaMethod())) {
-				return callNode;
-			}
-		}
-		return null;
-	}
+    /**
+     * From the CallsModel element, retrieve the CallNode element linked with
+     * the provided java operation.
+     */
+    public static CallNode getCallNode(final CallsModel callsModel,
+                                       final AbstractMethodDeclaration targetOperation) {
+        for (CallNode callNode : callsModel.getCallNodes()) {
+            if (targetOperation.equals(callNode.getJavaMethod())) {
+                return callNode;
+            }
+        }
+        return null;
+    }
 
-	public static CallNode getCallNode(final Resource model,
-			final IMethod method) {
-		CallsModel callsModel = ((CallsModel) model.getContents().get(0));
-		return getCallNode(callsModel, method);
-	}
+    public static CallNode getCallNode(final Resource model,
+                                       final IMethod method) {
+        CallsModel callsModel = ((CallsModel) model.getContents().get(0));
+        return getCallNode(callsModel, method);
+    }
 
-	public static CallNode getCallNode(final CallsModel callsModel,
-			final IMethod method) {
-		Resource javaResource = callsModel.getCallNodes().get(0).getJavaMethod().eResource();
-		JavaJdtBridge bridge = new JavaJdtBridge();
-		AbstractMethodDeclaration targetOperation = bridge.getJavaOperation(
-				javaResource, method);
-		if (targetOperation == null) {
-			return null;
-		}
-		return getCallNode(callsModel, targetOperation);
-	}
+    public static CallNode getCallNode(final CallsModel callsModel,
+                                       final IMethod method) {
+        Resource javaResource = callsModel.getCallNodes().get(0).getJavaMethod().eResource();
+        JavaJdtBridge bridge = new JavaJdtBridge();
+        AbstractMethodDeclaration targetOperation = bridge.getJavaOperation(
+                javaResource, method);
+        if (targetOperation == null) {
+            return null;
+        }
+        return getCallNode(callsModel, targetOperation);
+    }
 }

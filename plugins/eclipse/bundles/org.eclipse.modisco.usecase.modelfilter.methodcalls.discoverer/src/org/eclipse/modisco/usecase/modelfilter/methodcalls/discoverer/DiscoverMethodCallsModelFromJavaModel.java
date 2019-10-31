@@ -11,7 +11,7 @@
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *******************************************************************************/
 
-package plugins.eclipse.bundles.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.src.org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer;
+package org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer;
 
 import java.io.IOException;
 
@@ -26,7 +26,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
-import org.eclipse.modisco.java.discoverer.JavaModelUtils;
+import org.atlanmod.modisco.discoverer.java.JavaModelUtils;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.MethodcallsConstants;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal.converter.MethodCallsGraphConverter;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.CallsModel;
