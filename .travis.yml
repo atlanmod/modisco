@@ -21,6 +21,3 @@ install:
 
 script:
   - travis_wait 60 mvn --batch-mode --quiet  --settings ./modisco-tools/settings.xml  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
-
-notifications:
-  webhooks: https://fleep.io/hook/L7FtwppmTx-ZPli2RfIIfg
