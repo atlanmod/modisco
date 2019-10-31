@@ -13,22 +13,14 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/m2_mirror'
 
-#before_install:
-    #NEEDED TO RUN THE GUI TESTS
-    #- "export DISPLAY=:99.0"
-    #- "sh -e /etc/init.d/xvfb start"
-    #- sleep 3 # give xvfb some time to start
+before_install:
+  - mvn --file modisco-tools/mirror-all clean package
 
-#install: 
-  # Resolve all dependencies
-  # - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml --update-snapshots validate 
-  #- travis_wait 60 mvn -B -q -V --global-toolchains .travis.maven.toolchains.xml -DskipTests compile
+install:
+  - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml install
 
 script:
-  - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml install
-  - travis_wait 60 mvn --batch-mode --quiet  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
+  - travis_wait 60 mvn --batch-mode --quiet  --settings ./modisco-tools/settings.xml  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
 
-#after_success:
-#DEPLOYMENT SCRIPTS
-
-
+notifications:
+  webhooks: https://fleep.io/hook/L7FtwppmTx-ZPli2RfIIfg

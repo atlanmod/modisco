@@ -19,7 +19,7 @@
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-compiler-plugin</artifactId>
                 <configuration>
-                    <copyResources>false</copyResources>
+                    <copyResources>true</copyResources>
                     <useProjectSettings>false</useProjectSettings>
                     <extraClasspathElements>
 
