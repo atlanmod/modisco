@@ -18,8 +18,6 @@ For instance, to create the local mirror and build the Eclipse Plugins for Atlan
 [source, shell]
 ----
 export M2_MIRROR=$HOME/M2_MIRROR/
-cd modisco-tools/mirror-all
-mvn clean install
-cd ../../plugins/eclipse
-mvn --settings ../../modisco-tools/settings.xml clean install
+mvn --file modisco-tools/mirror-all clean package
+mvn --settings ./modisco-tools/settings.xml --file plugins/eclipse clean install
 ----
