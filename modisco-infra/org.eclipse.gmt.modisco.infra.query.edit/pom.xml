@@ -42,7 +42,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.core</groupId>
+            <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.resources</artifactId>
         </dependency>
         <dependency>
@@ -56,7 +56,7 @@
             <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.core</groupId>
+            <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
         <!-- Internal -->

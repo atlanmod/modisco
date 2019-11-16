@@ -22,53 +22,58 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <atl.version>4.1.0</atl.version>
-        <swt.version>[3.100.0,3.114.0]</swt.version>
-        <!-- swt.version>4.6.1</swt.version  bad idea-->
+        <swt.version>[3.0.0,4.0.0)</swt.version>
+        <!--
+        SWT version that are > 4.O are actually older than versions 3.x.x
+        Always use the dependencies provided by the groupId
+        `org.eclipse.platform`
+        -->
         <cdo.version>4.7.2</cdo.version>
         <atlanmod.emf.version>1.0.5</atlanmod.emf.version>
         <acceleo.version>3.5.1.201409021433</acceleo.version>
         <!--
         <acceleo.version>3.5.0</acceleo.version>
         -->
+        <platform.version>[3.15.0,4.0.0)</platform.version>
     </properties>
 
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.eclipse.core</groupId>
+                <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.core.runtime</artifactId>
-                <version>3.7.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.core</groupId>
+                <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.core.resources</artifactId>
-                <version>3.7.100</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.ui</artifactId>
-                <version>3.114.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.ui.ide</artifactId>
-                <version>3.16.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.ui.forms</artifactId>
-                <version>3.8.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.jface</artifactId>
-                <version>3.17.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.core.resources</artifactId>
-                <version>3.13.0</version>
+                <version>3.13.500</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
@@ -78,12 +83,12 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.debug.ui</artifactId>
-                <version>3.14.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.ui.editors</artifactId>
-                <version>3.12.0</version>
+                <version>${platform.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.osgi</groupId>
@@ -284,7 +289,7 @@
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
-                <artifactId>org.eclipse.swt</artifactId>
+                <artifactId>${swt.artifactId}</artifactId>
                 <version>${swt.version}</version>
                 <exclusions>
                     <exclusion>
@@ -300,4 +305,45 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+        <!-- Use `mvn enforcer:display-info` to display the correct information about the OS -->
+        <profile>
+            <id>macosx</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                    <name>mac os x</name>
+                    <arch>x86_64</arch>
+                </os>
+            </activation>
+            <properties>
+                <swt.artifactId>org.eclipse.swt.cocoa.macosx.x86_64</swt.artifactId>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <name>Linux</name>
+                    <arch>x86_64</arch>
+                </os>
+            </activation>
+            <properties>
+                <swt.artifactId>org.eclipse.swt.gtk.linux.x86_64</swt.artifactId>
+            </properties>
+        </profile>
+        <profile>
+            <id>windows</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                    <arch>x86_64</arch>
+                </os>
+            </activation>
+            <properties>
+                <swt.artifactId>org.eclipse.swt.win32.win32.x86_64</swt.artifactId>
+            </properties>
+        </profile>
+    </profiles>
 </project>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd" name="NeoEMF rulesets">
+
+    <description>
+        This ruleset checks Modisco code for bad stuff.
+    </description>
+
+    <!-- Exclude generated sources -->
+
+    <exclude-pattern>.*/src-gen/.*</exclude-pattern>
+
+    <!-- Rulesets -->
+
+    <rule ref="category/java/bestpractices.xml" />
+    <rule ref="category/java/performance.xml" />
+    <rule ref="category/java/errorprone.xml" />
+
+</ruleset>

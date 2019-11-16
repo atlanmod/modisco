@@ -51,7 +51,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.core</groupId>
+            <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -68,7 +68,7 @@
         </dependency>
         <dependency>
             <artifactId>org.eclipse.core.resources</artifactId>
-            <groupId>org.eclipse.core</groupId>
+            <groupId>org.eclipse.platform</groupId>
             <scope>provided</scope>
         </dependency>
 

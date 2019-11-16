@@ -30,6 +30,8 @@
     </build>
 
     <dependencies>
+
+        <!-- Internal -->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>

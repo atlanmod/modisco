@@ -14,10 +14,10 @@ cache:
     - '$HOME/m2_mirror'
 
 before_install:
-  - mvn --file modisco-tools/mirror-all clean package
+  - mvn --file build-tools/mirror-all clean package
 
 install:
   - travis_wait 60 mvn --batch-mode --quiet --show-version --global-toolchains .travis.maven.toolchains.xml install
 
 script:
-  - travis_wait 60 mvn --batch-mode --quiet  --settings ./modisco-tools/settings.xml  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
+  - travis_wait 60 mvn --batch-mode --quiet  --settings ./build-tools/settings.xml  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
