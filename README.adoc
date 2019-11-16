@@ -1,5 +1,7 @@
 = Atlanmod Modisco
 
+image:https://api.codacy.com/project/badge/Grade/8a6a773f921d4acd9e8461ad8e02ea8e["Codacy code quality", link="https://www.codacy.com/manual/sunye/modisco?utm_source=github.com&utm_medium=referral&utm_content=atlanmod/modisco&utm_campaign=Badge_Grade"]
+
 Atlanmod Modisco is a fork of https://www.eclipse.org/MoDisco/[Eclipse MoDisco] project.
 
 
