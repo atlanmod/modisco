@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="eclipse-oxygen" sequenceNumber="19">
+<locations>
+    <!-- Acceleo -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.acceleo.feature.group" version="3.5.1.201409021433"/>
+        <repository id="acceleo" location="https://download.eclipse.org/acceleo/updates/releases/3.5"/>
+    </location>
+    <!-- ATL -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.m2m.atl.feature.group" version="4.1.0.v201909021645"/>
+        <unit id="org.eclipse.m2m.atl.emftvm" version="4.1.0.v201909021645"/>
+        <unit id="org.eclipse.m2m.atl.drivers.emf4atl" version="4.1.0.v201909021645"/>
+        <unit id="org.eclipse.m2m.atl.dsls" version="4.1.0.v201909021645"/>
+        <repository id="atl" location="https://download.eclipse.org/mmt/atl/updates/releases/4.1/"/>
+    </location>
+    <!-- BIRT -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <repository id="birt" location="https://download.eclipse.org/birt/update-site/4.4/"/>
+    </location>
+    <!-- CDO -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.emf.cdo.server.feature.group" version="4.7.0.v20180530-1201"/>
+        <unit id="org.eclipse.net4j.db.derby.feature.group" version="4.2.400.v20180529-1130"/>
+        <unit id="org.eclipse.net4j.db.feature.group" version="4.7.0.v20180530-0909"/>
+        <unit id="org.eclipse.net4j.feature.group" version="4.7.0.v20180530-1201"/>
+        <unit id="org.eclipse.emf.cdo.feature.group" version="4.7.0.v20180530-1201"/>
+        <repository id="cdo" location="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.7/"/>
+    </location>
+    <!-- EMF -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <repository id="emf" location="http://download.eclipse.org/modeling/emf/emf/builds/release/2.13/"/>
+    </location>
+    <!-- Facet -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="1.3.0.201805181509"/>
+        <repository id="facet" location="http://download.eclipse.org/facet/updates/release/1.3.0/"/>
+    </location>
+    <!-- JDT (see Oxygen Updates) -->
+    <!-- OCL -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.ocl.all.feature.group" version="5.10.0.v20190910-0937"/>
+        <repository id="ocl" location="https://download.eclipse.org/modeling/mdt/ocl/updates/releases/"/>
+    </location>
+    <!-- Oxygen -->
+    <!-- Oxygen Updates -->
+    <!-- PDE (see Oxygen Updates) -->
+    <!-- Transaction -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.emf.transaction.feature.group" version="1.11.0.201706061339"/>
+        <repository id="transaction" location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/"/>
+    </location>
+    <!-- UML2 -->
+        <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <repository id="uml" location="https://download.eclipse.org/modeling/mdt/uml2/updates/5.3/"/>
+    </location>
+    <!-- Validation -->
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+        <unit id="org.eclipse.emf.validation.feature.group" version="1.12.1.201812070911"/>
+        <unit id="org.eclipse.emf.validation.ocl.feature.group" version="1.12.1.201812070911"/>
+        <repository id="validation" location="https://download.eclipse.org/modeling/emf/validation/updates/releases/"/>
+    </location>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/releases/2019-09"/>
+		<unit id="org.eclipse.emf.ecore.xcore.sdk.feature.group" version="1.11.0.v20190822-1451"/>
+		<unit id="org.eclipse.emf.sdk.feature.group" version="2.19.0.v20190824-1315"/>
+		<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.12.1.201812070911"/>
+	</location>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="false" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/eclipse/updates/4.13"/>
+		<unit id="org.eclipse.equinox.sdk.feature.group" version="3.19.0.v20190907-0428"/>
+		<unit id="org.eclipse.jdt.feature.group" version="3.18.100.v20190916-1045"/>
+		<unit id="org.eclipse.jdt.source.feature.group" version="3.18.100.v20190916-1045"/>
+		<unit id="org.eclipse.pde.feature.group" version="3.14.100.v20190916-1045"/>
+		<unit id="org.eclipse.pde.source.feature.group" version="3.14.100.v20190916-1045"/>
+		<unit id="org.eclipse.platform.ide" version="4.13.0.I20190916-1045"/>
+	</location>
+</locations>
+<targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_202]"/>
+</target>
