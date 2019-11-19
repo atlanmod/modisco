@@ -21,3 +21,11 @@ install:
 
 script:
   - travis_wait 60 mvn --batch-mode --quiet  --settings ./build-tools/settings.xml  --global-toolchains .travis.maven.toolchains.xml --file plugins/eclipse package  
+
+notifications:
+  webhooks:
+    urls:
+      - "https://scalar.vector.im/api/neb/services/hooks/dHJhdmlzLWNpLyU0MHN1bnllJTNBbWF0cml4Lm9yZy8lMjFPRkdWd3V4SnBuaGd5RkFGZ0UlM0FtYXRyaXgub3Jn"
+    on_success: change  # always|never|change
+    on_failure: always
+    on_start: never
