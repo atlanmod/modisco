@@ -44,7 +44,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -61,7 +61,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.core</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -16,18 +16,8 @@
     <description/>
     <modules>
         <module>org.eclipse.modisco.java.discoverer</module>
-        <module>org.eclipse.gmt.modisco.infra.browser</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.core</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.editor</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.custom.ui</module>
-        <module>org.eclipse.gmt.modisco.infra.browser.uicore</module>
         <module>org.eclipse.gmt.modisco.infra.common.cdo</module>
         <module>org.eclipse.gmt.modisco.infra.common.cdo.derby</module>
-        <module>org.eclipse.gmt.modisco.infra.query.editor</module>
-        <module>org.eclipse.gmt.modisco.infra.query.ui</module>
-        <module>org.eclipse.gmt.modisco.infra.facet.editor</module>
-        <module>org.eclipse.gmt.modisco.infra.facet.ui</module>
         <module>org.eclipse.gmt.modisco.infra.prefuse</module>
         <module>org.eclipse.gmt.modisco.java.browser.customization</module>
         <module>org.eclipse.modisco.infra.browser.editor.ui</module>

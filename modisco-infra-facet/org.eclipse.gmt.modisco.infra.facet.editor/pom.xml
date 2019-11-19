@@ -4,24 +4,46 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.atlanmod.modisco.eclipse</groupId>
-        <artifactId>org.atlanmod.modisco.eclipse.bundles</artifactId>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-infra-facet</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>org.eclipse.gmt.modisco.infra.facet.editor</artifactId>
 
-    <packaging>eclipse-plugin</packaging>
+    <packaging>bundle</packaging>
     <build>
         <plugins>
             <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-compiler-plugin</artifactId>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
-                    <copyResources>true</copyResources>
-                    <useProjectSettings>false</useProjectSettings>
-                    <extraClasspathElements>
-                    </extraClasspathElements>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.core.resources;visibility:=reexport,
+                            org.eclipse.emf.ecore.xmi;bundle-version="2.5.0";visibility:=reexport,
+                            org.eclipse.emf.edit.ui;bundle-version="2.5.0";visibility:=reexport,
+                            org.eclipse.ui.ide;visibility:=reexport,
+                            org.eclipse.emf.ecore.edit;bundle-version="2.5.0";visibility:=reexport,
+                            org.eclipse.emf.ecore.editor;bundle-version="2.5.0",
+                            org.eclipse.gmt.modisco.infra.common.ui;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.facet;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.facet.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.facet.edit;bundle-version="[1.0.0,1.0.2]";visibility:=reexport,
+                            org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query.edit;bundle-version="[1.0.0,1.0.2]";visibility:=reexport
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetEditorPlugin$Implementation
+                        </Bundle-Activator>
+                    </instructions>
                 </configuration>
             </plugin>
         </plugins>
@@ -56,7 +78,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -62,6 +62,7 @@
       </dependency>
 
       <!-- Internal -->
+
       <dependency>
          <groupId>org.atlanmod.modisco</groupId>
          <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>

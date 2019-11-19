@@ -12,5 +12,11 @@
     <packaging>pom</packaging>
     <modules>
         <module>org.eclipse.modisco.infra.browser.ecore.core</module>
+        <module>org.eclipse.gmt.modisco.infra.browser</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.core</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.editor</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.uicore</module>
+        <module>org.eclipse.gmt.modisco.infra.browser.custom.ui</module>
     </modules>
 </project>

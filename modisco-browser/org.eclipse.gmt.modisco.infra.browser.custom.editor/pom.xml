@@ -4,27 +4,52 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.atlanmod.modisco.eclipse</groupId>
-        <artifactId>org.atlanmod.modisco.eclipse.bundles</artifactId>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-browser</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.editor</artifactId>
-    <packaging>eclipse-plugin</packaging>
+    <packaging>bundle</packaging>
+
     <build>
         <plugins>
             <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-compiler-plugin</artifactId>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
-                    <copyResources>true</copyResources>
-                    <useProjectSettings>false</useProjectSettings>
-                    <extraClasspathElements>
-
-                    </extraClasspathElements>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.ui,
+                            org.eclipse.core.runtime,
+                            org.eclipse.core.resources,
+                            org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+                            org.eclipse.ui.forms,
+                            org.eclipse.gmt.modisco.infra.browser;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.browser.custom;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.browser.custom.ui;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.common.ui;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query.ui;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.facet;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.facet.core;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.gmt.modisco.infra.browser.custom.editor.Activator
+                        </Bundle-Activator>
+                    </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
     <dependencies>
         <!--<dependency>
             <groupId>org.eclipse.platform</groupId>
@@ -32,33 +57,35 @@
         </dependency>-->
 
         <!-- Internal -->
+        <!--
         <dependency>
             <groupId>org.atlanmod.modisco.eclipse</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.query.ui</artifactId>
             <version>${project.version}</version>
         </dependency>
+        -->
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.custom.ui</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.gmt.modisco.infra.browser.uicore</artifactId>
             <version>${project.version}</version>
         </dependency>

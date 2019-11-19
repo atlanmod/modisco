@@ -20,6 +20,9 @@
          <module>org.eclipse.modisco.infra.discovery.benchmark.core</module>
         <module>org.eclipse.gmt.modisco.infra.query.edit</module>
         <module>org.eclipse.gmt.modisco.infra.query.core</module>
+        <module>org.eclipse.gmt.modisco.infra.common.ui</module>
+        <module>org.eclipse.gmt.modisco.infra.query.editor</module>
+        <module>org.eclipse.gmt.modisco.infra.query.ui</module>
     </modules>
 
 </project>

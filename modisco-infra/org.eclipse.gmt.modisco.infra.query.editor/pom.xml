@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-infra</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>org.eclipse.gmt.modisco.infra.query.editor</artifactId>
+
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Export-Package>
+                            ${project.artifactId}.*
+                        </Export-Package>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.core.resources;visibility:=reexport,
+                            org.eclipse.emf.ecore.xmi;bundle-version="2.5.0";visibility:=reexport,
+                            org.eclipse.emf.edit.ui;bundle-version="2.5.0";visibility:=reexport,
+                            org.eclipse.ui.ide;visibility:=reexport,
+                            org.eclipse.emf.ecore.edit;bundle-version="2.5.0";visibility:=reexport,
+                            org.eclipse.emf.ecore.editor;bundle-version="2.5.0",
+                            org.eclipse.jdt.core,
+                            org.eclipse.gmt.modisco.infra.common.ui;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.infra.query.edit;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryEditorPlugin$Implementation
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+   <dependencies>
+       <dependency>
+           <groupId>org.eclipse.platform</groupId>
+           <artifactId>${swt.artifactId}</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.eclipse.platform</groupId>
+           <artifactId>org.eclipse.ui</artifactId>
+       </dependency>
+      <dependency>
+         <groupId>org.eclipse.platform</groupId>
+         <artifactId>org.eclipse.jface</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.atlanmod.emf</groupId>
+          <artifactId>org.eclipse.emf.ecore</artifactId>
+          <type>pom</type>
+      </dependency>
+       <dependency>
+          <groupId>org.atlanmod.emf</groupId>
+          <artifactId>org.eclipse.emf.common</artifactId>
+          <type>pom</type>
+      </dependency>
+       <!-- Internal -->
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.common.ui</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.query</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.query.core</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.atlanmod.modisco</groupId>
+           <artifactId>org.eclipse.gmt.modisco.infra.query.edit</artifactId>
+           <version>${project.version}</version>
+       </dependency>
+
+   </dependencies>
+</project>
