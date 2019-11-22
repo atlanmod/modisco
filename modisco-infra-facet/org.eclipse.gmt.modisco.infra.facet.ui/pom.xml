@@ -41,6 +41,15 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>${swt.artifactId}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.edit</artifactId>
+            <type>pom</type>
+        </dependency>
         <!--
         <dependency>
             <groupId>org.eclipse.platform</groupId>
@@ -55,11 +64,7 @@
             <artifactId>org.eclipse.emf.facet</artifactId>
             <type>pom</type>
         </dependency>
-       <dependency>
-            <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf</artifactId>
-           <type>pom</type>
-        </dependency>
+
         -->
         <!-- Internal -->
         <dependency>

@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>modisco-infra-facet</artifactId>
         <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-discoverers</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>org.eclipse.gmt.modisco.infra.facet.edit</artifactId>
+    <artifactId>org.eclipse.modisco.properties.discoverer</artifactId>
     <packaging>bundle</packaging>
+
     <build>
         <plugins>
             <plugin>
@@ -18,19 +18,15 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Export-Package>
-                            !${project.artifactId}.*.internal.*,
-                            ${project.artifactId}.*
-                        </Export-Package>
                         <Require-Bundle>
                             org.eclipse.core.runtime,
-                            org.eclipse.emf.edit;visibility:=reexport,
-                            org.eclipse.emf.ecore;visibility:=reexport,
-                            org.eclipse.emf.ecore.edit;visibility:=reexport
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.gmt.modisco.omg.kdm;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery;bundle-version="[1.0.0,1.0.2]"
                         </Require-Bundle>
                         <Bundle-Activator>
-                            org.eclipse.gmt.modisco.infra.facet.edit.provider.FacetEditPlugin$Implementation
+                            org.eclipse.modisco.properties.discoverer.Activator
                         </Bundle-Activator>
                     </instructions>
                 </configuration>
@@ -44,24 +40,38 @@
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.core.resources</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore</artifactId>
+            <artifactId>org.eclipse.emf.common</artifactId>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.atlanmod.emf</groupId>
-            <artifactId>org.eclipse.emf.edit</artifactId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
             <type>pom</type>
         </dependency>
         <!-- Internal -->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.gmt.modisco.infra.facet</artifactId>
+            <artifactId>org.eclipse.gmt.modisco.infra.common.core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
-            <artifactId>org.eclipse.gmt.modisco.infra.query.edit</artifactId>
+            <artifactId>org.eclipse.gmt.modisco.omg.kdm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.infra.discovery</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

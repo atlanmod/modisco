@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.properties.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>

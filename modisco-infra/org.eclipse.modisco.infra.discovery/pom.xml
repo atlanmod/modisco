@@ -30,6 +30,9 @@
                             org.eclipse.gmt.modisco.infra.common.core,
                             org.eclipse.emf.facet.util.emf.core
                         </Require-Bundle>
+                        <Bundle-Activator>
+                            org.eclipse.modisco.infra.discovery.Activator
+                        </Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>

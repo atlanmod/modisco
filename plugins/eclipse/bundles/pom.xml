@@ -26,12 +26,9 @@
         <module>org.eclipse.modisco.java.discoverer.benchmark</module>
         <module>org.eclipse.modisco.kdm.uml2converter</module>
         <module>org.eclipse.modisco.workflow.ui</module>
-        <module>org.eclipse.modisco.kdm.source.extension.plugin</module>
         <module>org.eclipse.modisco.java.discoverer.cdo</module>
         <module>org.eclipse.modisco.eclipseplugin.discoverer</module>
         <module>org.eclipse.modisco.java.composition.discoverer</module>
-        <module>org.eclipse.modisco.properties.discoverer</module>
-        <module>org.eclipse.modisco.manifest.discoverer</module>
         <module>org.eclipse.modisco.jee.jsp.browser.customization</module>
         <module>org.eclipse.gmt.modisco.infra.capabilities</module>
         <module>org.eclipse.gmt.modisco.xml.browser.customization</module>

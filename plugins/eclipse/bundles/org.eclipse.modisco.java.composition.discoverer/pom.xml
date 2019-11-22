@@ -45,7 +45,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.kdm.source.extension.plugin</artifactId>
             <version>${project.version}</version>
         </dependency>

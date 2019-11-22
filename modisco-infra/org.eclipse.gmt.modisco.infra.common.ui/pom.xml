@@ -74,6 +74,11 @@
             <artifactId>org.eclipse.emf.common</artifactId>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>org.atlanmod.emf</groupId>
+            <artifactId>org.eclipse.emf.edit</artifactId>
+            <type>pom</type>
+        </dependency>
 
         <!-- Internal -->
         <dependency>

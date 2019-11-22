@@ -13,21 +13,7 @@
     <artifactId>org.eclipse.modisco.java.discoverer.benchmark</artifactId>
 
     <packaging>eclipse-plugin</packaging>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-compiler-plugin</artifactId>
-                <configuration>
-                    <copyResources>true</copyResources>
-                    <useProjectSettings>false</useProjectSettings>
-                    <extraClasspathElements>
 
-                    </extraClasspathElements>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     
     <dependencies>
         <!--

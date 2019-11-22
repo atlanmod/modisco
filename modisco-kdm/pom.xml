@@ -17,5 +17,6 @@
         <module>org.eclipse.gmt.modisco.omg.kdm.edit</module>
         <module>org.eclipse.modisco.kdm.source.discoverer</module>
         <module>org.eclipse.modisco.kdm.source.extension</module>
+        <module>org.eclipse.modisco.kdm.source.extension.plugin</module>
     </modules>
 </project>

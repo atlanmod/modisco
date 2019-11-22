@@ -37,6 +37,11 @@
             <artifactId>org.eclipse.modisco.kdm.source.extension</artifactId>
             <version>${project.version}</version>
         </dependency>
+       <dependency>
+            <groupId>org.atlanmod.modisco</groupId>
+            <artifactId>org.eclipse.modisco.kdm.source.extension.plugin</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.omg.smm</artifactId>

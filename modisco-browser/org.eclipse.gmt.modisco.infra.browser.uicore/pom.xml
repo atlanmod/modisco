@@ -50,6 +50,10 @@
     <dependencies>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
+            <artifactId>${swt.artifactId}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
         <dependency>

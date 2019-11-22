@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.atlanmod.modisco.eclipse</groupId>
+            <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.manifest.discoverer</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -83,21 +83,21 @@
             <artifactId>org.eclipse.modisco.manifest</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.manifest.discoverer</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.manifest.discoverer.ui</artifactId>
             <version>${project.version}</version>
         </dependency>-->
-        <!--<dependency>
+        <dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.properties.discoverer</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <!--<dependency>
             <groupId>org.atlanmod.modisco</groupId>
             <artifactId>org.eclipse.modisco.properties.discoverer.ui</artifactId>

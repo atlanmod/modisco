@@ -4,31 +4,36 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.atlanmod.modisco.eclipse</groupId>
-        <artifactId>org.atlanmod.modisco.eclipse.bundles</artifactId>
+        <groupId>org.atlanmod.modisco</groupId>
+        <artifactId>modisco-discoverers</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>org.eclipse.modisco.manifest.discoverer</artifactId>
-    <packaging>eclipse-plugin</packaging>
+    <packaging>bundle</packaging>
+
     <build>
         <plugins>
             <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-compiler-plugin</artifactId>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
-                    <copyResources>true</copyResources>
-                    <useProjectSettings>false</useProjectSettings>
-                    <extraClasspathElements>
-
-                    </extraClasspathElements>
+                    <instructions>
+                        <Require-Bundle>
+                            org.eclipse.core.runtime,
+                            org.eclipse.emf.facet.util.core,
+                            org.eclipse.gmt.modisco.infra.common.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.manifest;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery.core;bundle-version="[1.0.0,1.0.2]",
+                            org.eclipse.modisco.infra.discovery;bundle-version="[1.0.0,1.0.2]"
+                        </Require-Bundle>
+                    </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
         </dependency>
@@ -40,7 +45,8 @@
             <groupId>org.atlanmod.emf</groupId>
             <artifactId>org.eclipse.emf.facet</artifactId>
            <type>pom</type>
-        </dependency>-->
+           <scope>provided</scope>
+        </dependency>
         <!-- Internal -->
         <dependency>
             <groupId>org.atlanmod.modisco</groupId>

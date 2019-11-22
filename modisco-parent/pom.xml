@@ -278,24 +278,28 @@
                 <artifactId>org.eclipse.emf.common</artifactId>
                 <type>pom</type>
                 <version>${atlanmod.emf.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.atlanmod.emf</groupId>
                 <artifactId>org.eclipse.emf.ecore</artifactId>
                 <type>pom</type>
                 <version>${atlanmod.emf.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.atlanmod.emf</groupId>
                 <artifactId>org.eclipse.emf.edit</artifactId>
                 <type>pom</type>
                 <version>${atlanmod.emf.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.atlanmod.emf</groupId>
                 <artifactId>org.eclipse.emf.codegen</artifactId>
                 <type>pom</type>
                 <version>${atlanmod.emf.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -312,6 +316,7 @@
                         <artifactId>org.eclipse.swt.gtk.linux.arm</artifactId>
                     </exclusion>
                 </exclusions>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
@@ -327,6 +332,7 @@
                         <artifactId>org.eclipse.swt.gtk.linux.arm</artifactId>
                     </exclusion>
                 </exclusions>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

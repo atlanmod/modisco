@@ -101,10 +101,15 @@
                     <manifestLocation>${project.build.directory}/META-INF/</manifestLocation>
                     <exportScr>true</exportScr>
                     <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>1.0.0.qualifier</Bundle-Version>
                         <!--Bundle-Version>
                             2.0.1.${maven.build.timestamp}
                         </Bundle-Version-->
+                        <Export-Package>
+                            !${project.artifactId}.*.internal.*,
+                            ${project.artifactId}.*
+                        </Export-Package>
                         <Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
                         <Import-Package />
                         <Embed-Dependency><!-- Inherited -->
@@ -114,6 +119,11 @@
                             groupId=!${project.groupId}|org.atlanmod.commons|org.eclipse.emf
                         </Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
+                        <!--
+                        <Bundle-Activator>
+                            ${project.artifactId}.internal.Activator
+                        </Bundle-Activator>
+                        -->
                     </instructions>
                 </configuration>
             </plugin>
