@@ -14,7 +14,7 @@
 		    <dependency>
 			      <groupId>org.apache.ant</groupId>
 			      <artifactId>ant</artifactId>
-			      <version>1.8.3</version>
+			      <version>1.9.15</version>
 		    </dependency>
 		    <dependency>
 			      <groupId>junit</groupId>
@@ -39,7 +39,7 @@
 					the tycho repository for the right one) -->
 				<tycho.extras.version>0.21.0</tycho.extras.version>
 				        <!-- Ant version to used (SEE: API use) -->
-				<ant.version.number>1.8.3</ant.version.number>
+				<ant.version.number>1.9.15</ant.version.number>
 				        <!-- We provide a way to customize the build directory name in case of 
 					conflict with one of others dir.Here we change the name of the target directory 
 					to avoid any conflict with an existing directory. Because the plug-in developer 
